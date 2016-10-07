@@ -1,6 +1,6 @@
 name: Parade
 description: Easy and flexible page creation using Paragraphs.
-package: BRAINSUM
+package: Paragraphs
 type: module
 core: 8.x
 

@@ -157,23 +157,6 @@ function parade_preprocess_paragraph__text_boxes(&$variables) {
 }
 
 /**
- * Implements hook_language_switch_links_alter().
- */
-function parade_language_switch_links_alter(array &$links, $type, $path) {
-
-  // Alter language links in Language Switcher block on node pages.
-  // Display only those, which are node translated. If there is only one
-  // language, the switcher will not be shown.
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    $translations = $node->getTranslationLanguages();
-    $links = array_intersect_key($links, $translations);
-    if (count($links) <= 1) {
-      $links = [];
-    }
-  }
-}
-
-/**
  * Implements hook_field_widget_form_alter().
  */
 function parade_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
@@ -208,6 +191,8 @@ function parade_theme() {
 
 /**
  * Implements hook_form_alter().
+ *
+ * @todo  use more specific hook.
  */
 function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (in_array($form_id, ['node_parade_form', 'node_parade_edit_form'])) {
