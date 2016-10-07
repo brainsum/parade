@@ -1,0 +1,6 @@
+parade.admin:
+  title: 'Parade settings'
+  description: 'Basic settings for Parade module.'
+  parent: system.admin_config_content
+  route_name: parade.settings
+  weight: 100

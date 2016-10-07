@@ -1,0 +1,26 @@
+{
+  "name": "parade",
+  "description": "Easy and flexible page creation using Paragraphs.",
+  "private": true,
+  "scripts": {
+    "dev": "gulp",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.0",
+    "laravel-elixir": "^6.0.0-9",
+    "laravel-elixir-browsersync-official": "^1.0.0",
+    "laravel-elixir-rollup-official": "^1.0.4"
+  },
+  "dependencies": {
+    "iphone-inline-video": "^1.9.3",
+    "rellax": "^0.1.0",
+    "responsive-tabs": "^1.6.1"
+  }
+}

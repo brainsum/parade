@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_text_boxes_layout
+field_name: field_text_boxes_layout
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: None
+    -
+      value: 1
+      label: Smallinfo
+    -
+      value: 2
+      label: 'Lot of infos'
+    -
+      value: 3
+      label: 'Lot of infos - Light Grey'
+    -
+      value: 4
+      label: 'Text with an icon'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

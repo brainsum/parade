@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_simple_layout
+    - paragraphs.paragraphs_type.simple
+  module:
+    - options
+id: paragraph.simple.field_simple_layout
+field_name: field_simple_layout
+entity_type: paragraph
+bundle: simple
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

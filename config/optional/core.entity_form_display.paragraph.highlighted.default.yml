@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlighted.field_anchor
+    - field.field.paragraph.highlighted.field_background
+    - field.field.paragraph.highlighted.field_enable_parallax
+    - field.field.paragraph.highlighted.field_highlighted_layout
+    - field.field.paragraph.highlighted.field_text
+    - field.field.paragraph.highlighted.field_title
+    - paragraphs.paragraphs_type.highlighted
+  module:
+    - file
+    - text
+id: paragraph.highlighted.default
+targetEntityType: paragraph
+bundle: highlighted
+mode: default
+content:
+  field_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_background:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_enable_parallax:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_highlighted_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  translation:
+    weight: 10
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.highlighted.field_anchor
+    - field.field.paragraph.highlighted.field_background
+    - field.field.paragraph.highlighted.field_enable_parallax
+    - field.field.paragraph.highlighted.field_highlighted_layout
+    - field.field.paragraph.highlighted.field_text
+    - field.field.paragraph.highlighted.field_title
+    - paragraphs.paragraphs_type.highlighted
+  module:
+    - options
+id: paragraph.highlighted.preview
+targetEntityType: paragraph
+bundle: highlighted
+mode: preview
+content:
+  field_highlighted_layout:
+    type: list_key
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_anchor: true
+  field_background: true
+  field_enable_parallax: true
+  field_text: true
+  uid: true

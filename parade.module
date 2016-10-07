@@ -1,0 +1,201 @@
+<?php
+
+/**
+ * @file
+ * Contains parade.module
+ */
+
+use Drupal\Core\Url;
+use Drupal\file\Entity\File;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function parade_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the parade module.
+    case 'help.page.parade':
+      $output = '';
+      $output .= '<h3>' . t('This is the best way to generate sites for your site') . '</h3>';
+      $output .= '<blockqote>' . t('Vincent we happy?') . '<br>' . t('Yeah, we happy.') . '</blockqote>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function parade_page_attachments_alter(array &$attachments) {
+  $attributes = \Drupal::request()->attributes;
+  if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
+    if ($machine_name = $node->get('field_machine_name')->value) {
+      $css_file_name = \Drupal::theme()->getActiveTheme()->getPath() . '/css/campaign/' . $machine_name . '.css';
+      if (file_exists($css_file_name)) {
+        $attachments['#attached']['html_head'][] = [
+          // The data.
+          [
+            '#type' => 'html_tag',
+            '#tag' => 'style',
+            '#value' => '@import url("/' . $css_file_name . '");',
+            '#attributes' => array('media' => 'all'),
+            '#weight' => 1000,
+
+          ],
+          'parade_css'
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Add layout--[LAYOUT] as class to paragraphs.
+ */
+function parade_preprocess_paragraph(&$variables) {
+  $paragraph = &$variables['paragraph'];
+
+  // Set Anchor variable for the template.
+  if ($paragraph->hasField('field_anchor')) {
+    $variables['attributes']['id'] = Html::getId($paragraph->field_anchor->value);
+  }
+
+  // Define layout CSS classes.
+  $layouts = [
+    'field_highlighted_layout' => [
+      0 => 'text_1st',
+      1 => 'image_1st',
+    ],
+    'field_image_text_layout' => [
+      0 => 'image_1st',
+      1 => 'text_1st',
+      2 => 'text_1st_enhanced',
+    ],
+    'field_simple_layout' => [
+      0 => 'one-column-clean',
+      1 => 'one-column-grey',
+      2 => 'one-column-shaded',
+      3 => 'two-column-title-1st-inverse',
+      4 => 'two-column-content-1st-inverse',
+      5 => 'separator-clean',
+    ],
+    'field_text_boxes_layout' => [
+      0 => 'none',
+      1 => 'smallinfo',
+      2 => 'lot_infos',
+      3 => 'lot_infos-grey',
+      4 => 'text_icon',
+    ],
+  ];
+
+  // Set CSS class for the selected layout.
+  foreach ($layouts as $field => $classes) {
+    if ($paragraph->hasField($field)) {
+      $layout_id = $paragraph->{$field}->value;
+      if (isset($layout_id)) {
+        $variables['attributes']['class'][] = 'layout--' . $classes[$layout_id];
+      }
+    }
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Preprocess for Header paragraph type.
+ */
+function parade_preprocess_paragraph__header(&$variables) {
+  $paragraph = &$variables['paragraph'];
+
+  // Get background file info.
+  $file = File::load($paragraph->field_background->target_id);
+  $file_uri = $file->getFileUri();
+  $file_mime = $file->getMimeType();
+  $file_path = parse_url(file_create_url($file_uri))['path'];
+
+  if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
+    $type = 'image';
+  }
+  if (in_array($file_mime, ['video/mp4', 'application/mp4', 'video/webm'])) {
+    $type = 'video';
+  }
+
+  // Add variables to theme.
+  parade_add_template_variable($variables, [
+    'background' => [
+      'type' => $type ?? 'image',
+      'url' => $file_path,
+      'mime' => $file_mime,
+    ],
+
+    'enable_parallax' => $paragraph->field_enable_parallax->value,
+  ]);
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Preprocess for Text Box paragraph type.
+ */
+function parade_preprocess_paragraph__text_box(&$variables) {
+  $paragraph = &$variables['paragraph'];
+
+  parade_add_template_variable($variables, [
+    'columns' => $paragraph->getParentEntity()->field_boxes_per_row->value,
+  ]);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Preprocess for Text Boxes paragraph type.
+ */
+function parade_preprocess_paragraph__text_boxes(&$variables) {
+  $paragraph = &$variables['paragraph'];
+
+  parade_add_template_variable($variables, [
+    'columns' => $paragraph->field_boxes_per_row->value,
+  ]);
+}
+
+/**
+ * Appends a parade related variable to the same place:
+ * $variables['campaign'][...]
+ * @internal
+ *
+ * @param array &$variables
+ *   The core $variables passed by reference.
+ *
+ * @param array $data
+ *   New data in array format, which will be passed to the template.
+ *
+ * @return array
+ *   The new data.
+ */
+function parade_add_template_variable(&$variables, $data = null) {
+  if (!$data) {
+    return FALSE;
+  }
+
+  // Root of parade related data in TWIG.
+  // Example usage:
+  // {{ campaign.background.url }}
+  // {{ campaign.layout }}
+  static $key = 'campaign';
+
+  if (!isset($variables[$key])) {
+    $variables[$key] = $data;
+  }
+  else {
+    $variables[$key][] = $data;
+  }
+
+  return $data;
+}

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.parallax.field_anchor
+    - field.field.paragraph.parallax.field_background
+    - field.field.paragraph.parallax.field_enable_parallax
+    - field.field.paragraph.parallax.field_image
+    - field.field.paragraph.parallax.field_minimum_height
+    - field.field.paragraph.parallax.field_text
+    - paragraphs.paragraphs_type.parallax
+  module:
+    - text
+id: paragraph.parallax.default
+targetEntityType: paragraph
+bundle: parallax
+mode: default
+content:
+  field_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  field_anchor: true
+  field_background: true
+  field_enable_parallax: true
+  field_image: true
+  field_minimum_height: true
+  uid: true

@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.marketo_form.field_anchor
+    - field.field.paragraph.marketo_form.field_enable_confirm_message
+    - field.field.paragraph.marketo_form.field_image
+    - field.field.paragraph.marketo_form.field_lead_text
+    - field.field.paragraph.marketo_form.field_marketo_form
+    - field.field.paragraph.marketo_form.field_marketo_form_layout
+    - field.field.paragraph.marketo_form.field_text
+    - field.field.paragraph.marketo_form.field_title
+    - paragraphs.paragraphs_type.marketo_form
+  module:
+    - options
+id: paragraph.marketo_form.preview
+targetEntityType: paragraph
+bundle: marketo_form
+mode: preview
+content:
+  field_marketo_form_layout:
+    type: list_default
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_anchor: true
+  field_enable_confirm_message: true
+  field_image: true
+  field_lead_text: true
+  field_marketo_form: true
+  field_text: true
+  uid: true

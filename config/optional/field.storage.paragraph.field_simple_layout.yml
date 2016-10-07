@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_simple_layout
+field_name: field_simple_layout
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: 'One column - Clean'
+    -
+      value: 1
+      label: 'One column - Light Grey'
+    -
+      value: 2
+      label: 'One column - Shaded'
+    -
+      value: 3
+      label: 'Two column (Title first) - Inverse'
+    -
+      value: 4
+      label: 'Two column (Content first) - Inverse'
+    -
+      value: 5
+      label: 'Separator (Title only) - Clean'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

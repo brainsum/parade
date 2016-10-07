@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_anchor
+    - field.field.paragraph.header.field_background
+    - field.field.paragraph.header.field_call_to_action
+    - field.field.paragraph.header.field_enable_parallax
+    - field.field.paragraph.header.field_lead_text
+    - field.field.paragraph.header.field_secondary_title
+    - field.field.paragraph.header.field_title
+    - paragraphs.paragraphs_type.header
+  module:
+    - link
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_call_to_action:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: nofollow
+      url_only: false
+      url_plain: false
+      target: '0'
+    third_party_settings: {  }
+    type: link
+  field_lead_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_secondary_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_anchor: true
+  field_background: true
+  field_enable_parallax: true
+  uid: true

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_boxes_layout
+    - paragraphs.paragraphs_type.text_boxes
+  module:
+    - options
+id: paragraph.text_boxes.field_text_boxes_layout
+field_name: field_text_boxes_layout
+entity_type: paragraph
+bundle: text_boxes
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_anchor
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.field_anchor
+field_name: field_anchor
+entity_type: paragraph
+bundle: header
+label: Anchor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
