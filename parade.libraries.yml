@@ -25,17 +25,13 @@ buttons:
     component:
       css/buttons.css: {}
 
-# @see https://github.com/dixonandmoe/rellax
-parallax:
+paragraphs.header:
   version: VERSION
   js:
-    js/parallax.js: {}
-
-# @see https://github.com/bfred-it/iphone-inline-video
-inline-video:
-  version: VERSION
-  js:
-    js/inline-video.js: {}
+    js/header.js: {}
+  dependencies:
+    - parade/vendor.rellax
+    - parade/vendor.inline-video
 
 # @see https://github.com/jellekralt/Responsive-Tabs
 tabs:
@@ -61,3 +57,23 @@ scrollspy:
     js/scrollspy.js: {}
   dependencies:
     - core/jquery
+
+vendor.rellax:
+  remote: https://github.com/dixonandmoe/rellax
+  version: 0.1.0
+  license:
+    name: MIT
+    url: https://github.com/dixonandmoe/rellax/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/rellax/0.1.0/rellax.min.js: { type: external, minified: true }
+
+vendor.iphone-inline-video:
+  remote: https://github.com/bfred-it/iphone-inline-video
+  version: 1.9.4
+  license:
+    name: MIT
+    url: https://github.com/bfred-it/iphone-inline-video/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://raw.githubusercontent.com/bfred-it/iphone-inline-video/master/dist/iphone-inline-video.browser.js: { type: external, minified: true }

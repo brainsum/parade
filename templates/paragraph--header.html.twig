@@ -19,10 +19,7 @@ set classes = [
 
 {# Attach library if Parallax is enabled #}
 {% if parallax %}
-  {{ attach_library('parade/parallax') }}
-{% endif %}
-{% if parade.background.type == 'video' %}
-  {{ attach_library('parade/iphone-inline-video') }}
+  {{ attach_library('parade/paragraphs.header') }}
 {% endif %}
 
 <div{{ attributes.addClass(classes) }}>
