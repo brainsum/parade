@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styles for Paragraphs Previewer modal dialog.
+ */
+body.dialog-active {
+  overflow: hidden;
+}
+
+.ui-dialog.dialog-preview-paragraph .ui-dialog-content.ui-widget-content {
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ui-dialog.dialog-preview-paragraph .ui-dialog-content.ui-widget-content > div {
+  height: 100%;
+}
