@@ -1,10 +1,10 @@
 preview:
   version: VERSION
   js:
-    js/parade.preview.js: {}
+    js/preview.js: {}
   css:
     component:
-      css/parade.preview.css: {}
+      css/preview.css: {}
   dependencies:
     - core/jquery
     - core/jquery.ui.resizable
@@ -17,10 +17,47 @@ admin:
   version: VERSION
   css:
     component:
-      css/parade.admin.css: {}
+      css/admin.css: {}
 
 buttons:
   version: VERSION
   css:
     component:
-      css/parade.buttons.css: {}
+      css/buttons.css: {}
+
+# @see https://github.com/dixonandmoe/rellax
+parallax:
+  version: VERSION
+  js:
+    js/parallax.js: {}
+
+# @see https://github.com/bfred-it/iphone-inline-video
+inline-video:
+  version: VERSION
+  js:
+    js/inline-video.js: {}
+
+# @see https://github.com/jellekralt/Responsive-Tabs
+tabs:
+  version: VERSION
+  css:
+    base:
+      css/responsive-tabs.css: {}
+  js:
+    js/responsive-tabs.js: {}
+  dependencies:
+    - core/jquery
+
+smooth-scroll:
+  version: VERSION
+  js:
+    js/smooth-scroll.js: {}
+  dependencies:
+    - core/jquery
+
+scrollspy:
+  version: VERSION
+  js:
+    js/scrollspy.js: {}
+  dependencies:
+    - core/jquery

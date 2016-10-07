@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Contains hook implementations for Parade.
@@ -78,6 +77,16 @@ function parade_preprocess_paragraph__header(&$variables) {
     $file_uri = $file->getFileUri();
     $file_mime = $file->getMimeType();
     $file_path = parse_url(file_create_url($file_uri))['path'];
+
+    // @todo Maybe use this...?
+    //
+    // if (isset($vars['elements']['field_video'])) {
+    //   $video_path = $vars['elements']['field_video'][0]['#markup'];
+    //   $vars['video'] = array(
+    //     'path' => file_create_url($video_path),
+    //     'mime' => Drupal::service('file.mime_type.guesser')->guess($video_path)
+    //   );
+    // }
 
     if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
       $type = 'image';
@@ -217,6 +226,66 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
         $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
       }
     }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ *
+ * @todo  Is page__node__TYPE really needed?
+ */
+function parade_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add content type suggestions based on machine_name field and content type.
+  // e.g. page--node--parade.html.twig
+  //      page--node--parade--my-awesome-page.html.twig
+  $attributes = Drupal::request()->attributes;
+  if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
+    if (method_exists($node, 'getType')) {
+      $type = $node->getType();
+      array_splice($suggestions, 1, 0, 'page__node__' . $type);
+      if ($type == 'parade' && $machine_name = $node->field_machine_name->value) {
+        $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function parade_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  // Add custom suggestions for Paragraph types with machine name.
+  if ($hook === 'paragraph') {
+    $attributes = Drupal::request()->attributes;
+    if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
+      if (method_exists($node, 'getType') && $node->getType() === 'parade' && $machine_name = $node->field_machine_name->value) {
+        foreach ($suggestions as $suggestion) {
+          $my_suggestions[] = $suggestion;
+          $my_suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
+        }
+        $suggestions = $my_suggestions;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field__field_marketo_form().
+ *
+ * @todo  load Marketo library here?
+ */
+function parade_preprocess_field__field_marketo_form(&$variables) {
+  // Add rendered_confirmation_message to field variables.
+  $element = &$variables['element']['#object'];
+
+  // Get the field's raw value and format.
+  list($markup, $format) = [
+    $element->field_text->value,
+    $element->field_text->format,
+  ];
+
+  if (isset($markup) && isset($format)) {
+    $element->rendered_confirmation_message = check_markup($markup, $format);
   }
 }
 
