@@ -2,70 +2,30 @@
 
 /**
  * @file
- * Contains parade.module
+ * Contains hook implementations for Parade.
+ *
+ * @todo  Make the whole thing dynamic, do not rely on Parade content type.
  */
 
-use Drupal\Core\Url;
 use Drupal\file\Entity\File;
+use FFMpeg\Coordinate\TimeCode;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_help().
- */
-function parade_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the parade module.
-    case 'help.page.parade':
-      $output = '';
-      $output .= '<h3>' . t('This is the best way to generate sites for your site') . '</h3>';
-      $output .= '<blockqote>' . t('Vincent we happy?') . '<br>' . t('Yeah, we happy.') . '</blockqote>';
-      return $output;
-
-    default:
-  }
-}
-
-/**
- * Implements hook_page_attachments_alter().
- */
-function parade_page_attachments_alter(array &$attachments) {
-  $attributes = \Drupal::request()->attributes;
-  if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    if ($machine_name = $node->get('field_machine_name')->value) {
-      $css_file_name = \Drupal::theme()->getActiveTheme()->getPath() . '/css/campaign/' . $machine_name . '.css';
-      if (file_exists($css_file_name)) {
-        $attachments['#attached']['html_head'][] = [
-          // The data.
-          [
-            '#type' => 'html_tag',
-            '#tag' => 'style',
-            '#value' => '@import url("/' . $css_file_name . '");',
-            '#attributes' => array('media' => 'all'),
-            '#weight' => 1000,
-
-          ],
-          'parade_css'
-        ];
-      }
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- *
- * Add layout--[LAYOUT] as class to paragraphs.
+ * Implements hook_preprocess_paragraph().
  */
 function parade_preprocess_paragraph(&$variables) {
   $paragraph = &$variables['paragraph'];
 
-  // Set Anchor variable for the template.
-  if ($paragraph->hasField('field_anchor')) {
-    $variables['attributes']['id'] = Html::getId($paragraph->field_anchor->value);
+  // Pass the Anchor field value for the template.
+  if ($paragraph->hasField('field_anchor') && $anchor = $paragraph->field_anchor->value) {
+    $variables['attributes']['id'] = Html::getId($anchor);
   }
 
-  // Define layout CSS classes.
+  // Pass the Layout field values to each corresponding Paragraph.
+  // @todo Refactor!
   $layouts = [
     'field_highlighted_layout' => [
       0 => 'text_1st',
@@ -91,84 +51,180 @@ function parade_preprocess_paragraph(&$variables) {
       3 => 'lot_infos-grey',
       4 => 'text_icon',
     ],
+    'field_marketo_form_layout' => [
+      0 => 'clean',
+      1 => 'download',
+    ],
   ];
 
   // Set CSS class for the selected layout.
   foreach ($layouts as $field => $classes) {
-    if ($paragraph->hasField($field)) {
-      $layout_id = $paragraph->{$field}->value;
-      if (isset($layout_id)) {
-        $variables['attributes']['class'][] = 'layout--' . $classes[$layout_id];
-      }
+    if ($paragraph->hasField($field) && $layout_class = $paragraph->{$field}->value) {
+      $variables['attributes']['class'][] = 'layout--' . $classes[$layout_class];
     }
   }
 
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- *
- * Preprocess for Header paragraph type.
+ * Implements hook_preprocess_paragraph__header().
  */
 function parade_preprocess_paragraph__header(&$variables) {
   $paragraph = &$variables['paragraph'];
 
   // Get background file info.
-  $file = File::load($paragraph->field_background->target_id);
-  $file_uri = $file->getFileUri();
-  $file_mime = $file->getMimeType();
-  $file_path = parse_url(file_create_url($file_uri))['path'];
+  if ($paragraph->hasField('field_background') && $target_id = $paragraph->field_background->target_id) {
+    $file = File::load($target_id);
+    $file_uri = $file->getFileUri();
+    $file_mime = $file->getMimeType();
+    $file_path = parse_url(file_create_url($file_uri))['path'];
 
-  if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
-    $type = 'image';
+    if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
+      $type = 'image';
+    }
+    if (in_array($file_mime, ['video/mp4', 'application/mp4', 'video/webm'])) {
+      $type = 'video';
+
+      // Generate poster image for video if not exist.
+      // @todo Move this to post node save!
+      $video_filename = pathinfo($file_path)['filename'];
+      // @todo Get the image path from 'field_background' info.
+      $poster = '/sites/default/files/paragraphs/background/' . $video_filename . '_poster.jpg';
+
+      // @todo Don't try to run ffmpeg, if not available on the system.
+      if (! file_exists(DRUPAL_ROOT . $poster)) {
+        $ffmpeg = Drupal::service('php_ffmpeg')->create([
+          'loglevel' => 'quiet',
+        ]);
+        $video = $ffmpeg->open(drupal_realpath($file_uri));
+
+        $video->frame(TimeCode::fromSeconds(0))->save(DRUPAL_ROOT . $poster);
+      }
+    }
+
+    // Add variables to theme.
+    _parade_add_template_variable($variables, [
+      'background' => [
+        'type' => $type ?? 'image',
+        'url' => $file_path,
+        'mime' => $file_mime,
+        'poster' => $type === 'video' ? $poster : null,
+      ],
+
+      'enable_parallax' => $paragraph->field_enable_parallax->value,
+    ]);
   }
-  if (in_array($file_mime, ['video/mp4', 'application/mp4', 'video/webm'])) {
-    $type = 'video';
-  }
-
-  // Add variables to theme.
-  parade_add_template_variable($variables, [
-    'background' => [
-      'type' => $type ?? 'image',
-      'url' => $file_path,
-      'mime' => $file_mime,
-    ],
-
-    'enable_parallax' => $paragraph->field_enable_parallax->value,
-  ]);
-
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- *
- * Preprocess for Text Box paragraph type.
+ * Implements hook_preprocess_paragraph__text_box().
  */
 function parade_preprocess_paragraph__text_box(&$variables) {
   $paragraph = &$variables['paragraph'];
+  $parent = $paragraph->getParentEntity();
 
-  parade_add_template_variable($variables, [
-    'columns' => $paragraph->getParentEntity()->field_boxes_per_row->value,
-  ]);
+  // Pass the number of Columns field value.
+  if ($parent->hasField('field_boxes_per_row')) {
+    if ($columns = $parent->field_boxes_per_row->value) {
+      _parade_add_template_variable($variables, [
+        'columns' => $columns,
+      ]);
+    }
+  }
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- *
- * Preprocess for Text Boxes paragraph type.
+ * Implements hook_preprocess_paragraph__text_boxes().
  */
 function parade_preprocess_paragraph__text_boxes(&$variables) {
   $paragraph = &$variables['paragraph'];
 
-  parade_add_template_variable($variables, [
-    'columns' => $paragraph->field_boxes_per_row->value,
-  ]);
+  // Pass the number of Columns field value.
+  if ($columns = $paragraph->field_boxes_per_row->value) {
+    _parade_add_template_variable($variables, [
+      'columns' => $columns,
+    ]);
+  }
 }
 
 /**
- * Appends a parade related variable to the same place:
- * $variables['campaign'][...]
- * @internal
+ * Implements hook_language_switch_links_alter().
+ */
+function parade_language_switch_links_alter(array &$links, $type, $path) {
+
+  // Alter language links in Language Switcher block on node pages.
+  // Display only those, which are node translated. If there is only one
+  // language, the switcher will not be shown.
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $translations = $node->getTranslationLanguages();
+    $links = array_intersect_key($links, $translations);
+    if (count($links) <= 1) {
+      $links = [];
+    }
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function parade_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // @fixme check for field Type, not name.
+  // @todo also check for Parade content type!
+  $field_name = $context['items']->getFieldDefinition()->getName();
+
+  // Change dropbuttons to normal list in Paragraphs inline forms.
+  if ($field_name === 'field_paragraphs') {
+    unset($element['top']['links']['#theme_wrappers']);
+    $element['top']['links']['prefix']['#markup'] = '<ul class="parade-actions">';
+  }
+
+  // Changes to Menu field.
+  if ($field_name === 'field_menu') {
+    $element['uri']['#description'] = NULL;
+    $element['uri']['#title_display'] = 'none';
+    $element['title']['#title_display'] = 'none';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function parade_theme() {
+  return [
+    'parade_preview' => [
+      'variables' => ['paragraph' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['node_parade_form', 'node_parade_edit_form'])) {
+    $form['field_menu']['widget']['add_more']['#value'] = t('New menu link');
+
+    // Modify the Paragraphs field.
+    if (isset($form['field_paragraphs'])) {
+      $form['#attached']['library'][] = 'parade/buttons';
+
+      foreach ($form['field_paragraphs']['widget']['add_more'] as $key => $item) {
+        if (strpos($key, 'add_more') === FALSE) {
+          continue;
+        }
+        $type = Html::getClass($item['#bundle_machine_name']);
+        $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
+        $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+      }
+    }
+  }
+}
+
+/**
+ * Populates TWIG variables with Parade related data.
+ *
+ * e.g.: $variables['parade']['test'] becomes
+ * {{ parade.test }} in the templates.
  *
  * @param array &$variables
  *   The core $variables passed by reference.
@@ -178,17 +234,19 @@ function parade_preprocess_paragraph__text_boxes(&$variables) {
  *
  * @return array
  *   The new data.
+ *
+ * @internal
  */
-function parade_add_template_variable(&$variables, $data = null) {
+function _parade_add_template_variable(&$variables, $data = NULL) {
   if (!$data) {
     return FALSE;
   }
 
-  // Root of parade related data in TWIG.
+  // Array root of Parade related data in TWIG.
   // Example usage:
-  // {{ campaign.background.url }}
-  // {{ campaign.layout }}
-  static $key = 'campaign';
+  // {{ parade.background.url }}
+  // {{ parade.layout }}
+  static $key = 'parade';
 
   if (!isset($variables[$key])) {
     $variables[$key] = $data;
