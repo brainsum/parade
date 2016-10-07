@@ -1,17 +1,19 @@
 /**
  * @file
  * Styles for Paragraphs Previewer modal dialog.
+ *
+ * @todo use core dialog CSS?
  */
 body.dialog-active {
   overflow: hidden;
 }
 
-.ui-dialog.dialog-preview-paragraph .ui-dialog-content.ui-widget-content {
+.ui-dialog.parade-preview-dialog .ui-dialog-content.ui-widget-content {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-.ui-dialog.dialog-preview-paragraph .ui-dialog-content.ui-widget-content > div {
+.ui-dialog.parade-preview-dialog .ui-dialog-content.ui-widget-content > div {
   height: 100%;
 }

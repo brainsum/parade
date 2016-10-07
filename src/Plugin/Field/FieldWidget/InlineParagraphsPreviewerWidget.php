@@ -1,28 +1,23 @@
 <?php
-
 /**
  * @file
  * Paragraphs Previewer widget implementation for paragraphs.
+ *
+ * @todo  Credit paragraphs_previewer:
+ * https://www.drupal.org/project/paragraphs_previewer
  */
 
 namespace Drupal\parade\Plugin\Field\FieldWidget;
 
-use Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget;
-use Drupal\Core\Field\FieldDefinitionInterface;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\OpenModalDialogCommand;
-use Drupal\Core\Ajax\AlertCommand;
-use Drupal\Component\Utility\NestedArray;
-use Drupal\Core\Controller\ControllerBase;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Field\WidgetBase;
+use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityBase;
-use Drupal\Core\Entity\Entity\EntityViewDisplay;
-use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget;
 
 /**
  * Plugin implementation of the 'Paragraphs with preview' widget.
@@ -100,7 +95,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       '#prefix' => '<li class="preview">',
       '#suffix' => '</li>',
       '#attached' => [
-        'library' => ['parade/dialog'],
+        'library' => ['parade/preview'],
       ],
       '#attributes' => [
         'class' => ['button'],
@@ -144,8 +139,9 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $paragraph = NULL;
     $preview_button = $form_state->getTriggeringElement();
 
+    // @todo Export these options to Admin UI.
     $dialog_options = array(
-      'dialogClass' => 'dialog-preview-paragraph',
+      'dialogClass' => 'parade-preview-dialog',
       'minWidth' => 480,
       'width' => '80%',
       // 'minHeight' => 100,
@@ -174,7 +170,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
 
     // Build modal content.
     $dialog_content = [
-      '#theme' => 'paragraph_preview_modal',
+      '#theme' => 'parade_preview',
       '#paragraph' => $paragraph,
     ];
 
