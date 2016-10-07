@@ -1,0 +1,68 @@
+/**
+ * @file
+ * Better paragraph buttons.
+ *
+ * @todo @fixme clean up!
+ */
+
+.paragraphs-button-wrapper {
+  text-align: center;
+
+  .button {
+    width: 23%;
+    padding: 80px 0 .7em;
+    margin-right: .5em;
+    background-repeat: no-repeat !important;
+    background-position: center .7em !important;
+    background-size: 65px;
+
+    &[disabled] {
+      background-size: 50px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJsb2FkZXItMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiICAgICB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgNTAgNTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBmaWxsPSIjNjNiM2UzIiBkPSJNNDMuOTM1LDI1LjE0NWMwLTEwLjMxOC04LjM2NC0xOC42ODMtMTguNjgzLTE4LjY4M2MtMTAuMzE4LDAtMTguNjgzLDguMzY1LTE4LjY4MywxOC42ODNoNC4wNjhjMC04LjA3MSw2LjU0My0xNC42MTUsMTQuNjE1LTE0LjYxNWM4LjA3MiwwLDE0LjYxNSw2LjU0MywxNC42MTUsMTQuNjE1SDQzLjkzNXoiPiAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVUeXBlPSJ4bWwiICAgICAgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiAgICAgIHR5cGU9InJvdGF0ZSIgICAgICBmcm9tPSIwIDI1IDI1IiAgICAgIHRvPSIzNjAgMjUgMjUiICAgICAgZHVyPSIwLjZzIiAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+ICAgIDwvcGF0aD4gIDwvc3ZnPg==") !important;
+    }
+
+    &.paragraph-add-image-text {
+      background-image: url('../images/text-and-image.png');
+    }
+    &.paragraph-add-marketo-form {
+      background-image: url('../images/form.png');
+    }
+    &.paragraph-add-header {
+      background-image: url('../images/header.png');
+    }
+    &.paragraph-add-text-boxes {
+      background-image: url('../images/textboxes.png');
+    }
+    &.paragraph-add-text-box {
+      display: none;
+    }
+    &.paragraph-add-simple {
+      background-image: url('../images/simple.png');
+    }
+    &.paragraph-add-images {
+      background-image: url('../images/images.png');
+    }
+
+    + .ajax-progress {
+      display: none;
+    }
+
+    &:first-child {
+      margin-right: .5em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

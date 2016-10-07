@@ -7,22 +7,22 @@
  *       that supports both images and video!
  */
 #}
-{% set parallax = campaign.enable_parallax %}
+{% set parallax = parade.enable_parallax %}
 {%
 set classes = [
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'paragraph--background-' ~ campaign.background.type|clean_class,
+  'paragraph--background-' ~ parade.background.type|clean_class,
 ]
 %}
 
 {# Attach library if Parallax is enabled #}
 {% if parallax %}
-  {{ attach_library('tieto_admin/parallax') }}
+  {{ attach_library('parade/parallax') }}
 {% endif %}
-{% if campaign.background.type == 'video' %}
-  {{ attach_library('tieto_admin/iphone-inline-video') }}
+{% if parade.background.type == 'video' %}
+  {{ attach_library('parade/iphone-inline-video') }}
 {% endif %}
 
 <div{{ attributes.addClass(classes) }}>
@@ -35,10 +35,10 @@ set classes = [
     <div class="background-wrapper">
     {% endif %}
 
-      {% if campaign.background.type == 'image' %}
-        <div class="background-image" style="background-image: url({{- campaign.background.url -}})"></div>
-      {% elseif campaign.background.type == 'video' %}
-        <video class="background-video" autoplay muted loop webkit-playsinline src="{{ campaign.background.url }}" poster="{{ campaign.background.poster }}"></video>
+      {% if parade.background.type == 'image' %}
+        <div class="background-image" style="background-image: url({{- parade.background.url -}})"></div>
+      {% elseif parade.background.type == 'video' %}
+        <video class="background-video" autoplay muted loop webkit-playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
       {% endif %}
 
     </div>
