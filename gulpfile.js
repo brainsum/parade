@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * @file
  * Gulpfile for automatizing some tasks.
@@ -15,7 +16,7 @@ gulp.task('sass', function () {
   return gulp
     .src('./css/sass/**/*.{scss,sass}')
     .pipe(sass({
-      outputStyle: 'expanded',
+      outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(csscomb())
