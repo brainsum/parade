@@ -89,7 +89,6 @@ function parade_preprocess_paragraph__header(&$variables) {
     //   );
     // }
     // @endcode
-
     if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
       $type = 'image';
     }
