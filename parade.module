@@ -101,7 +101,7 @@ function parade_preprocess_paragraph__header(&$variables) {
       $poster = '/sites/default/files/paragraphs/background/' . $video_filename . '_poster.jpg';
 
       // @todo Don't try to run ffmpeg, if not available on the system.
-      if (! file_exists(DRUPAL_ROOT . $poster)) {
+      if (!file_exists(DRUPAL_ROOT . $poster)) {
         $ffmpeg = Drupal::service('php_ffmpeg')->create([
           'loglevel' => 'quiet',
         ]);
@@ -117,7 +117,7 @@ function parade_preprocess_paragraph__header(&$variables) {
         'type' => $type ?? 'image',
         'url' => $file_path,
         'mime' => $file_mime,
-        'poster' => $type === 'video' ? $poster : null,
+        'poster' => $type === 'video' ? $poster : NULL,
       ],
 
       'enable_parallax' => $paragraph->field_enable_parallax->value,
