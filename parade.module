@@ -114,7 +114,7 @@ function parade_preprocess_paragraph__header(&$variables) {
     // Add variables to theme.
     _parade_add_template_variable($variables, [
       'background' => [
-        'type' => $type ?? 'image',
+        'type' => $type ? $type : 'image',
         'url' => $file_path,
         'mime' => $file_mime,
         'poster' => $type === 'video' ? $poster : NULL,
