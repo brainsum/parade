@@ -9,11 +9,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-csscomb": "^3.0.8",
     "gulp-sass": "^2.3.2"
-  },
-  "dependencies": {
-    "iphone-inline-video": "^1.9.3",
-    "rellax": "^0.1.0",
-    "responsive-tabs": "^1.6.1"
   }
 }
