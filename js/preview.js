@@ -4,7 +4,6 @@
  */
 
 (function ($, Drupal, drupalSettings) {
-
   'use strict';
 
   var previewer = {};
@@ -12,7 +11,7 @@
   /**
    * Reset extended dialog properties.
    *
-   * @param Drupal.dialog dialog
+   * @param {Drupal.dialog} dialog
    *   The dialog object
    */
   previewer.dialogReset = function (dialog) {
@@ -24,11 +23,11 @@
   /**
    * Set the initial dialog settings based on client side information.
    *
-   * @param Drupal.dialog dialog
+   * @param {Drupal.dialog} dialog
    *   The dialog object
-   * @param jQuery $element
+   * @param {jQuery} $element
    *   The element jQuery object.
-   * @param object $settings
+   * @param {Object} settings
    *   Optional The combined dialog settings.
    */
   previewer.dialogInitialize = function (dialog, $element, settings) {
@@ -48,11 +47,11 @@
   /**
    * Set the dialog settings based on the content.
    *
-   * @param Drupal.dialog dialog
+   * @param {Drupal.dialog} dialog
    *   The dialog object
-   * @param jQuery $element
+   * @param {jQuery} $element
    *   The element jQuery object.
-   * @param object $settings
+   * @param {Object} settings
    *   The combined dialog settings.
    */
   previewer.dialogUpdateForContent = function (dialog, $element, settings) {
@@ -67,8 +66,8 @@
         var fitHeight;
         if (contentHeight < modalContentContainerHeight) {
           var modalHeight = $element.parent().outerHeight();
-          var modalNonContentHeight = modalHeight - modalContentContainerHeight
-          fitHeight = contentHeight + modalNonContentHeight
+          var modalNonContentHeight = modalHeight - modalContentContainerHeight;
+          fitHeight = contentHeight + modalNonContentHeight;
         }
         else {
           fitHeight = 0.98 * settings.maxHeight;
@@ -77,7 +76,7 @@
         // Set to the new height bounded by min and max.
         var newHeight = fitHeight;
         if (fitHeight < settings.minHeight) {
-           newHeight = settings.minHeight;
+          newHeight = settings.minHeight;
         }
         else if (fitHeight > settings.maxHeight) {
           newHeight = settings.maxHeight;
@@ -91,14 +90,14 @@
   /**
    * Determine if an dialog event is a previewer dialog.
    *
-   * @param Drupal.dialog dialog
+   * @param {Drupal.dialog} dialog
    *   The dialog object
-   * @param jQuery $element
+   * @param {jQuery} $element
    *   The element jQuery object.
-   * @param object $settings
+   * @param {Object} settings
    *   Optional. The combined dialog settings.
    *
-   * @return bool
+   * @return {Boolean}
    *   TRUE if the dialog is a previewer dialog.
    */
   previewer.dialogIsPreviewer = function (dialog, $element, settings) {
@@ -118,18 +117,18 @@
    *
    * To prevent users accidentally clicking on them.
    *
-   * @param Drupal.dialog dialog
+   * @param {Drupal.dialog} dialog
    *   The dialog object
-   * @param jQuery $element
+   * @param {jQuery} $element
    *   The element jQuery object.
    *
-   * @return void
+   * @return {void}
    */
   previewer.disableLinks = function (dialog, $element) {
     $element.find('a:not([href^="#"]), input[type="submit"], button[type="submit"]').on('click', function (e) {
       e.preventDefault();
       return false;
-    })
+    });
   };
 
   // Dialog listeners.

@@ -4,6 +4,7 @@
  */
 
 (function ($) {
+  'use strict';
 
   /**
    * Speed of the smooth scroll.
@@ -29,6 +30,7 @@
    * Update the hash in the URL without jumping to the element.
    *
    * @param {String} hash
+   *   The window location hash.
    *
    * @return {void}
    */
@@ -39,18 +41,22 @@
     else {
       window.location.hash = hash;
     }
-  }
+  };
 
   /**
    * Applying the animation to all anchors.
-   *
    * Format should be: <a href="#my-anchor"> format.
+   *
+   * @param {Object} e
+   *   The event object.
+   *
+   * @return {void}
    */
   var smoothScroll = function (e) {
     e.preventDefault();
     updateHash(this.hash);
 
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 
       // Calculate admin toolbar height.
       // Both Toolbar and its Tray are 39px in default Drupal theme.
@@ -73,7 +79,7 @@
         return false;
       }
     }
-  }
+  };
 
   $('a[href*="#"]:not([href="#"]):not([href^="#tab-"]').on('click', smoothScroll);
 
