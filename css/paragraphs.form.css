@@ -1,0 +1,70 @@
+.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-title, .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-title {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-title, .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-title {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-title,
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-lead-text,
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-marketo-form,
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-text, .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-title,
+  .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-lead-text,
+  .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-marketo-form,
+  .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-text {
+    width: 50%;
+    float: left;
+    clear: left;
+  }
+}
+
+.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-text, .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-text {
+  display: none;
+}
+
+.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-image, .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-image {
+  text-align: right;
+  padding: 1em;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-image, .paragraph--type--marketo-form.paragraph--view-mode--default.layout--clean .field--name-field-image {
+    text-align: right;
+    width: 50%;
+    float: right;
+  }
+}
+
+.paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm, .paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm * {
+  font-family: inherit !important;
+}
+
+.paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm .mktoLabel, .paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm .mktoRequiredField label.mktoLabel {
+  width: auto !important;
+  display: inline-block;
+  float: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: bold !important;
+}
+
+.paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm input.mktoField, .paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm textarea.mktoField {
+  min-height: inherit !important;
+  padding: 10px !important;
+  line-height: 1.5 !important;
+  font-size: 16px !important;
+}
+
+.paragraph--type--marketo-form.paragraph--view-mode--default .mktoForm textarea.mktoField {
+  resize: vertical !important;
+  height: auto !important;
+  min-height: inherit !important;
+}

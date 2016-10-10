@@ -1,0 +1,46 @@
+.paragraph--type--tabs.paragraph--view-mode--default {
+  padding: 30px;
+}
+
+.paragraph--type--tabs.paragraph--view-mode--default .field--name-field-title {
+  color: white;
+}
+
+.paragraph--type--tabs.paragraph--view-mode--default .field--name-field-lead-text {
+  margin-bottom: 1em;
+}
+
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-panel {
+  clear: both;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab {
+    float: left;
+    width: 33.333%;
+  }
+}
+
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a {
+  font-size: 1.4em;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+  display: block;
+  padding: .5em 0;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a {
+    padding: .5em;
+    text-align: center;
+  }
+}
+
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:hover, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:focus, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:active, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:hover, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:focus, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:active {
+  text-decoration: none;
+}
+
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title.r-tabs-state-active a, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab.r-tabs-state-active a {
+  border-color: white;
+  color: white;
+}

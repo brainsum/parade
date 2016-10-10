@@ -1,0 +1,14 @@
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--smallinfo .paragraph--type--text-box, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--text_icon .paragraph--type--text-box {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box {
+    text-align: left;
+  }
+}
+
+.paragraph--type--text-box.paragraph--view-mode--default {
+  padding: 2em 1em;
+  background: inherit;
+}

@@ -1,0 +1,127 @@
+/**
+ * @file
+ * HEADER paragraph
+ */
+$parade-header-height: 600px;
+$parade-header-overlay-bg: rgba(103, 175, 225, .5);
+
+.paragraph--type--header.paragraph--view-mode--default {
+    padding: 0;
+
+    // Diagonal edge for the next paragraph.
+    + .paragraph {
+        ~ .paragraph {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .background {
+        position: relative;
+        overflow: hidden;
+        height: $parade-header-height;
+        max-height: 100vh;
+
+        // Overlay over the background image/video.
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 1;
+            background-color: $parade-header-overlay-bg;
+        }
+
+        .background-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .background-video, .background-image {
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .background-image {
+            background: {
+                repeat: no-repeat;
+                position: center center;
+                size: cover;
+            }
+        }
+
+        .IIV::-webkit-media-controls-play-button,
+        .IIV::-webkit-media-controls-start-playback-button {
+            opacity: 0;
+            pointer-events: none;
+            width: 5px;
+        }
+    }
+
+    // Title, Secondary title.
+    .field--name-field-title {
+        font-size: 4em;
+        margin-bottom: 0;
+        display: inline-block;
+        font-weight: 800;
+        letter-spacing: -2px;
+        @media screen and (max-width: 768px) {
+            font-size: 2.8em;
+        }
+    }
+
+    .field--name-field-secondary-title,
+    .field--name-field-lead-text {
+        font-size: 1.5em;
+        margin-bottom: .5em;
+        @media screen and (max-width: 768px) {
+            font-size: 1.2em;
+        }
+    }
+
+    .field--name-field-title,
+    .field--name-field-secondary-title {
+        line-height: normal;
+    }
+
+    // Call to action buttons.
+    .field--name-field-call-to-action {
+        .field__item {
+            display: inline-block;
+        }
+        a {
+            color: white;
+            display: inline-block;
+            padding: .7em 1.4em;
+            margin-right: .5em;
+            // background: $tieto-blue;
+            border-radius: 3px;
+            transition: background .3s;
+            &:hover, &:focus, &:active {
+                text-decoration: none;
+                // background: lighten($tieto-blue, 5%);
+            }
+        }
+    }
+
+    // Content wrapper.
+    .paragraph-inner {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        width: 100%;
+        color: white;
+        padding: 2em 1em;
+        z-index: 20;
+        @media screen and (max-width: 768px) {
+            transform: translateY(-50%);
+            text-align: center;
+        }
+    }
+
+}

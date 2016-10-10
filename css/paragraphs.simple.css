@@ -1,0 +1,30 @@
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-title,
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-title,
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-title,
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-title,
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-title {
+    float: right;
+    text-align: right;
+  }
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text {
+    float: left;
+  }
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-title {
+    float: left;
+    text-align: left;
+  }
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
+    float: right;
+  }
+}

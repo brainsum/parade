@@ -25,14 +25,6 @@ buttons:
     component:
       css/buttons.css: {}
 
-paragraphs.header:
-  version: VERSION
-  js:
-    js/header.js: {}
-  dependencies:
-    - parade/vendor.rellax
-    - parade/vendor.inline-video
-
 smooth-scroll:
   version: VERSION
   js:
@@ -40,6 +32,74 @@ smooth-scroll:
   dependencies:
     - core/jquery
 
+# Parade Paragraph types.
+paragraphs:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.css: {}
+
+paragraphs.header:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.header.css: {}
+  js:
+    js/header.js: {}
+  dependencies:
+    - parade/paragraphs
+    - parade/vendor.rellax
+    - parade/vendor.inline-video
+
+paragraphs.simple:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.simple.css: {}
+  dependencies:
+    - parade/paragraphs
+
+paragraphs.form:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.form.css: {}
+  dependencies:
+    - parade/paragraphs
+
+paragraphs.tabs:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.tabs.css: {}
+  dependencies:
+    - parade/paragraphs
+
+paragraphs.image-text:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.image-text.css: {}
+  dependencies:
+    - parade/paragraphs
+
+paragraphs.images:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.images.css: {}
+  dependencies:
+    - parade/paragraphs
+
+paragraphs.text-boxes:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.text-boxes.css: {}
+  dependencies:
+    - parade/paragraphs
+
+# Vendor libraries needed for some paragraph types.
 vendor.rellax:
   remote: https://github.com/dixonandmoe/rellax
   version: 0.1.0

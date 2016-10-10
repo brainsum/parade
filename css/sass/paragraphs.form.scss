@@ -1,0 +1,80 @@
+.paragraph--type--marketo-form.paragraph--view-mode--default {
+
+	// .image-style-whitepaper-a4 {
+	// 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	// }
+
+	&, // temp
+	&.layout--clean {
+		// background: $tieto-lightgrey;
+
+		.field--name-field-title {
+			// @include campaign-headline;
+			text-align: center;
+			margin-bottom: .5em;
+			// color: $text-color-strong;
+			@media screen and (max-width: 768px) {
+				text-align: left;
+			}
+		}
+
+		// .field--name-field-lead-text {
+		// 	@include campaign-lead;
+		// }
+
+		.field--name-field-title,
+		.field--name-field-lead-text,
+		.field--name-field-marketo-form,
+		.field--name-field-text {
+			@media screen and (max-width: 768px) {
+				width: 50%;
+				float: left;
+				clear: left;
+			}
+		}
+
+		// Display thank you message later.
+		.field--name-field-text {
+			display: none;
+		}
+
+		.field--name-field-image {
+			text-align: right;
+			padding: 1em;
+			text-align: center;
+			@media screen and (max-width: 768px) {
+		    text-align: right;
+				width: 50%;
+				float: right;
+			}
+		}
+	}
+
+	// Marketo overrides.
+	.mktoForm {
+		&, * {
+			font-family: inherit !important;
+		}
+		.mktoLabel, .mktoRequiredField label.mktoLabel {
+			width: auto !important;
+			display: inline-block;
+			float: none;
+			padding: 0;
+			margin: 0;
+			line-height: 1.5;
+			font-size: 16px;
+			font-weight: bold !important;
+		}
+		input.mktoField, textarea.mktoField {
+			min-height: inherit !important;
+			padding: 10px !important;
+			line-height: 1.5 !important;
+			font-size: 16px !important;
+		}
+		textarea.mktoField {
+			resize: vertical !important;
+			height: auto !important;
+			min-height: inherit !important;
+		}
+	}
+}

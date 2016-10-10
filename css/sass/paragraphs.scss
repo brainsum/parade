@@ -1,0 +1,139 @@
+.node-parade-form,
+.node-parade-edit-form {
+
+  // Ugly hacks
+  .field--name-field-menu {
+    .field-multiple-table {
+      td {
+        padding: .5em 0;
+
+      }
+      .form-item {
+        width: 50%;
+        float: left;
+        padding-left: .5em;
+
+      }
+      a.tabledrag-handle {
+        margin-left: 0;
+        top: 10px;
+      }
+    }
+  }
+
+  .paragraph-type-top {
+    clear: none;
+    float: none;
+    margin-bottom: .5em;
+  }
+
+  .paragraphs-subform > .form-wrapper {
+    margin: 1em 0;
+  }
+
+  .tabledrag-toggle-weight-wrapper, td.tabledrag-hide {
+    display: none !important;
+  }
+
+  .field-multiple-table {
+    width: 100%;
+
+    th.field-label {
+      text-align: left;
+    }
+
+    tr {
+      border-bottom: 1px solid #e3e3e3;
+    }
+
+    .drag, .drag-previous {
+      background-color: #f3f3f3;
+    }
+
+    td {
+      padding: 1.2em 0 1.2em .5em;
+    }
+
+    .field-multiple-drag {
+      position: relative;
+      padding: 1.2em 0;
+      abbr.tabledrag-changed {
+        position: absolute;
+        color: transparent;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #f3f3f3;
+      }
+    }
+
+    a.tabledrag-handle {
+      position: absolute;
+      top: 1em;
+      z-index: 1;
+      margin-left: 0;
+      .handle {
+        background-position: 0 0;
+        height: 17px;
+        margin: 5px;
+      }
+    }
+  }
+
+  .paragraph-type-title {
+    float: left;
+  }
+
+  .paragraphs-button-wrapper {
+    margin: 2em 0;
+  }
+
+  .paragraph-actions {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+    margin-left: 1em;
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    .button {
+      padding: 5px 1em;
+      // border: 1px solid darken($tieto-lightgrey, 10%);
+      box-shadow: 0;
+      // &:hover, &:focus {
+      //   background: lighten($tieto-lightgrey, 10%);
+      // }
+    }
+
+    > li {
+      margin-left: 1em;
+      display: inline-block;
+    }
+  }
+}
+
+.paragraph.paragraph--view-mode--default {
+	clear: both;
+	padding: 40px 1em;
+	background-color: #fff;
+
+	// Some fixes for WYSIWYG fields.
+	.field.text-formatted {
+		.align-right {
+			margin-left: 1.5em;
+		}
+		.align-left {
+			margin-right: 1.5em;
+		}
+	}
+
+  .paragraph-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+}

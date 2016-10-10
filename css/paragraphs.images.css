@@ -1,0 +1,9 @@
+.paragraph--type--images.paragraph--view-mode--default .field--name-field-images {
+  text-align: left;
+}
+
+.paragraph--type--images.paragraph--view-mode--default .field--name-field-images .field__item {
+  padding: 1em 2em;
+  vertical-align: middle;
+  display: inline-block;
+}

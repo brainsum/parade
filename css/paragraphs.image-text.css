@@ -1,0 +1,117 @@
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+    width: 50%;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  text-align: center;
+  margin: 1em 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+    margin: 0;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
+    text-align: left;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action {
+  clear: both;
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action .field__item {
+  display: inline-block;
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action a {
+  color: white;
+  display: inline-block;
+  padding: .7em 1.4em;
+  margin-right: .5em;
+  border-radius: 3px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action a:hover, .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action a:focus, .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action a:active {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text {
+    float: left;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image {
+    float: right;
+    padding-left: 1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
+    float: right;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+    float: left;
+    padding-right: 1.5em;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
+    width: 50%;
+    float: right;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+  padding: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+    padding-right: 4em;
+    width: 60%;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+  text-align: center;
+  padding: 2em 0 0;
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image img, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image img {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+    text-align: left;
+    background: 0;
+    padding: 0;
+    margin: 2em 0 0 0;
+    -webkit-transform: translateX(-2em);
+            transform: translateX(-2em);
+    width: 40%;
+    float: right;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-call-to-action {
+  text-align: center;
+  width: 40%;
+  float: right;
+  margin-top: -1.5em;
+}

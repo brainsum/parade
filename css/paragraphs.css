@@ -1,0 +1,148 @@
+.node-parade-form .field--name-field-menu .field-multiple-table td,
+.node-parade-edit-form .field--name-field-menu .field-multiple-table td {
+  padding: .5em 0;
+}
+
+.node-parade-form .field--name-field-menu .field-multiple-table .form-item,
+.node-parade-edit-form .field--name-field-menu .field-multiple-table .form-item {
+  width: 50%;
+  float: left;
+  padding-left: .5em;
+}
+
+.node-parade-form .field--name-field-menu .field-multiple-table a.tabledrag-handle,
+.node-parade-edit-form .field--name-field-menu .field-multiple-table a.tabledrag-handle {
+  margin-left: 0;
+  top: 10px;
+}
+
+.node-parade-form .paragraph-type-top,
+.node-parade-edit-form .paragraph-type-top {
+  clear: none;
+  float: none;
+  margin-bottom: .5em;
+}
+
+.node-parade-form .paragraphs-subform > .form-wrapper,
+.node-parade-edit-form .paragraphs-subform > .form-wrapper {
+  margin: 1em 0;
+}
+
+.node-parade-form .tabledrag-toggle-weight-wrapper, .node-parade-form td.tabledrag-hide,
+.node-parade-edit-form .tabledrag-toggle-weight-wrapper,
+.node-parade-edit-form td.tabledrag-hide {
+  display: none !important;
+}
+
+.node-parade-form .field-multiple-table,
+.node-parade-edit-form .field-multiple-table {
+  width: 100%;
+}
+
+.node-parade-form .field-multiple-table th.field-label,
+.node-parade-edit-form .field-multiple-table th.field-label {
+  text-align: left;
+}
+
+.node-parade-form .field-multiple-table tr,
+.node-parade-edit-form .field-multiple-table tr {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.node-parade-form .field-multiple-table .drag, .node-parade-form .field-multiple-table .drag-previous,
+.node-parade-edit-form .field-multiple-table .drag,
+.node-parade-edit-form .field-multiple-table .drag-previous {
+  background-color: #f3f3f3;
+}
+
+.node-parade-form .field-multiple-table td,
+.node-parade-edit-form .field-multiple-table td {
+  padding: 1.2em 0 1.2em .5em;
+}
+
+.node-parade-form .field-multiple-table .field-multiple-drag,
+.node-parade-edit-form .field-multiple-table .field-multiple-drag {
+  position: relative;
+  padding: 1.2em 0;
+}
+
+.node-parade-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
+.node-parade-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
+  position: absolute;
+  color: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f3f3f3;
+}
+
+.node-parade-form .field-multiple-table a.tabledrag-handle,
+.node-parade-edit-form .field-multiple-table a.tabledrag-handle {
+  position: absolute;
+  top: 1em;
+  z-index: 1;
+  margin-left: 0;
+}
+
+.node-parade-form .field-multiple-table a.tabledrag-handle .handle,
+.node-parade-edit-form .field-multiple-table a.tabledrag-handle .handle {
+  background-position: 0 0;
+  height: 17px;
+  margin: 5px;
+}
+
+.node-parade-form .paragraph-type-title,
+.node-parade-edit-form .paragraph-type-title {
+  float: left;
+}
+
+.node-parade-form .paragraphs-button-wrapper,
+.node-parade-edit-form .paragraphs-button-wrapper {
+  margin: 2em 0;
+}
+
+.node-parade-form .paragraph-actions,
+.node-parade-edit-form .paragraph-actions {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+  margin-left: 1em;
+}
+
+.node-parade-form .paragraph-actions li:first-child,
+.node-parade-edit-form .paragraph-actions li:first-child {
+  margin-left: 0;
+}
+
+.node-parade-form .paragraph-actions .button,
+.node-parade-edit-form .paragraph-actions .button {
+  padding: 5px 1em;
+  box-shadow: 0;
+}
+
+.node-parade-form .paragraph-actions > li,
+.node-parade-edit-form .paragraph-actions > li {
+  margin-left: 1em;
+  display: inline-block;
+}
+
+.paragraph.paragraph--view-mode--default {
+  clear: both;
+  padding: 40px 1em;
+  background-color: #fff;
+}
+
+.paragraph.paragraph--view-mode--default .field.text-formatted .align-right {
+  margin-left: 1.5em;
+}
+
+.paragraph.paragraph--view-mode--default .field.text-formatted .align-left {
+  margin-right: 1.5em;
+}
+
+.paragraph.paragraph--view-mode--default .paragraph-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
