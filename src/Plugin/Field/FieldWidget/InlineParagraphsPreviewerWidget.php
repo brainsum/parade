@@ -242,8 +242,6 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     }
 
     if ($parent_entity && ($parent_entity instanceof ContentEntityBase)) {
-      $parent_class = get_class($parent_entity);
-      $parent_entity_type = $parent_entity->getEntityTypeId();
 
       if ($parent_entity->hasField($parent_field_name)) {
 
