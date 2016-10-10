@@ -11,5 +11,5 @@ type: parade_demo
 description: 'Dynamic onepage sites with predefined Paragraph types and styles.'
 help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

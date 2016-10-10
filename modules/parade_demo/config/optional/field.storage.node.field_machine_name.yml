@@ -5,6 +5,9 @@ dependencies:
     - machine_name
     - node
     - parade_demo
+  enforced:
+    module:
+      - parade_demo
 id: node.field_machine_name
 field_name: field_machine_name
 entity_type: node

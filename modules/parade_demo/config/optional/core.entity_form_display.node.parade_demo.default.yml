@@ -4,12 +4,9 @@ dependencies:
   config:
     - field.field.node.parade_demo.field_machine_name
     - field.field.node.parade_demo.field_menu
-    - field.field.node.parade_demo.field_paragraphs
+    - field.field.node.parade_demo.field_parade_demo
     - node.type.parade_demo
   module:
-    - entity_reference_revisions
-    - link
-    - path
     - parade
   enforced:
     module:
@@ -31,14 +28,16 @@ content:
       placeholder_title: 'Link text'
     third_party_settings: {  }
     type: link_default
-  field_paragraphs:
+  field_parade_demo:
+    type: entity_reference_paragraphs_preview
     weight: 26
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Section
+      title_plural: Sections
+      edit_mode: preview
+      add_mode: button
+      form_display_mode: default
     third_party_settings: {  }
-    type: entity_reference_paragraphs_preview
   langcode:
     type: language_select
     weight: 2

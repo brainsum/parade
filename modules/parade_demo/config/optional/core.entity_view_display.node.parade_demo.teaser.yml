@@ -5,11 +5,13 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.parade_demo.field_machine_name
     - field.field.node.parade_demo.field_menu
-    - field.field.node.parade_demo.field_paragraphs
+    - field.field.node.parade_demo.field_parade_demo
     - node.type.parade_demo
   module:
     - user
-    - parade
+  enforced:
+    module:
+      - parade_demo
 id: node.parade_demo.teaser
 targetEntityType: node
 bundle: parade_demo
@@ -17,6 +19,6 @@ mode: teaser
 hidden:
   field_machine_name: true
   field_menu: true
-  field_paragraphs: true
+  field_parade_demo: true
   langcode: true
   links: true

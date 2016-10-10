@@ -4,13 +4,15 @@ dependencies:
   config:
     - field.field.node.parade_demo.field_machine_name
     - field.field.node.parade_demo.field_menu
-    - field.field.node.parade_demo.field_paragraphs
+    - field.field.node.parade_demo.field_parade_demo
     - node.type.parade_demo
   module:
     - entity_reference_revisions
     - link
     - user
-    - parade
+  enforced:
+    module:
+      - parade_demo
 id: node.parade_demo.default
 targetEntityType: node
 bundle: parade_demo
@@ -27,7 +29,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-  field_paragraphs:
+  field_parade_demo:
     weight: 1
     label: hidden
     settings:

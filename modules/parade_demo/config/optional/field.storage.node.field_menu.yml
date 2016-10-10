@@ -5,6 +5,9 @@ dependencies:
     - link
     - node
     - parade_demo
+  enforced:
+    module:
+      - parade_demo
 id: node.field_menu
 field_name: field_menu
 entity_type: node

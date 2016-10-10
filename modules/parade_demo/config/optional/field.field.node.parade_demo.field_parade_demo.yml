@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_paragraphs
+    - field.storage.node.field_parade_demo
     - node.type.parade_demo
     - paragraphs.paragraphs_type.header
     - paragraphs.paragraphs_type.image_text
@@ -12,14 +12,12 @@ dependencies:
     - paragraphs.paragraphs_type.text_boxes
   module:
     - entity_reference_revisions
-    - parade
     - parade_demo
   enforced:
     module:
-      - parade
       - parade_demo
-id: node.parade_demo.field_paragraphs
-field_name: field_paragraphs
+id: node.parade_demo.field_parade_demo
+field_name: field_parade_demo
 entity_type: node
 bundle: parade_demo
 label: Sections
