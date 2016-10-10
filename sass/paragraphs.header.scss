@@ -5,22 +5,18 @@
 $parade-header-height: 600px;
 $parade-header-overlay-bg: rgba(103, 175, 225, .5);
 
-.paragraph--type--header.paragraph--view-mode--default
-{
+.paragraph--type--header.paragraph--view-mode--default {
     padding: 0;
 
     // Diagonal edge for the next paragraph.
-    + .paragraph
-    {
-        ~ .paragraph
-        {
+    + .paragraph {
+        ~ .paragraph {
             position: relative;
             z-index: 1;
         }
     }
 
-    .background
-    {
+    .background {
         position: relative;
 
         overflow: hidden;
@@ -29,19 +25,17 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
         max-height: 100vh;
 
         // Overlay over the background image/video.
-        &::before
-        {
+        &::before {
             position: absolute;
             z-index: 1;
-            top: 0; right: 0; bottom: 0;left: 0; 
+            top: 0; right: 0; bottom: 0;left: 0;
 
             content: ' ';
 
             background-color: $parade-header-overlay-bg;
         }
 
-        .background-wrapper
-        {
+        .background-wrapper {
             position: absolute;
             top: 0;
             right: 0;
@@ -52,16 +46,13 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
         }
 
         .background-video,
-        .background-image
-        {
+        .background-image {
             min-width: 100%;
             min-height: 100%;
         }
 
-        .background-image
-        {
-            background: 
-            {
+        .background-image {
+            background:  {
                 position: center center;
 
                 repeat: no-repeat;
@@ -70,8 +61,7 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
         }
 
         .IIV::-webkit-media-controls-play-button,
-        .IIV::-webkit-media-controls-start-playback-button
-        {
+        .IIV::-webkit-media-controls-start-playback-button {
             width: 5px;
 
             pointer-events: none;
@@ -81,8 +71,7 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
     }
 
     // Title, Secondary title.
-    .field--name-field-title
-    {
+    .field--name-field-title {
         font-size: 4em;
         font-weight: 800;
 
@@ -91,39 +80,32 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
         margin-bottom: 0;
 
         letter-spacing: -2px;
-        @media screen and (max-width: 768px)
-        {
+        @media screen and (max-width: 768px) {
             font-size: 2.8em;
         }
     }
 
     .field--name-field-secondary-title,
-    .field--name-field-lead-text
-    {
+    .field--name-field-lead-text {
         font-size: 1.5em;
 
         margin-bottom: .5em;
-        @media screen and (max-width: 768px)
-        {
+        @media screen and (max-width: 768px) {
             font-size: 1.2em;
         }
     }
 
     .field--name-field-title,
-    .field--name-field-secondary-title
-    {
+    .field--name-field-secondary-title {
         line-height: normal;
     }
 
     // Call to action buttons.
-    .field--name-field-call-to-action
-    {
-        .field__item
-        {
+    .field--name-field-call-to-action {
+        .field__item {
             display: inline-block;
         }
-        a
-        {
+        a {
             display: inline-block;
 
             margin-right: .5em;
@@ -136,8 +118,7 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
             border-radius: 3px;
             &:hover,
             &:focus,
-            &:active
-            {
+            &:active {
                 text-decoration: none;
                 // background: lighten($tieto-blue, 5%);
             }
@@ -145,8 +126,7 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
     }
 
     // Content wrapper.
-    .paragraph-inner
-    {
+    .paragraph-inner {
         position: relative;
         z-index: 20;
         top: 50%;
@@ -159,8 +139,7 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
         transform: translateY(-50%);
 
         color: white;
-        @media screen and (max-width: 768px)
-        {
+        @media screen and (max-width: 768px) {
             transform: translateY(-50%);
             text-align: center;
         }

@@ -1,8 +1,6 @@
 // Text Boxes
-.paragraph--type--text-boxes.paragraph--view-mode--default
-{
-    // Main Title
-    // .field--name-field-title {
+.paragraph--type--text-boxes.paragraph--view-mode--default {
+    // Main Title // .field--name-field-title {
     //  @include campaign-title;
     //  color: $text-color-strong;
     // }
@@ -10,36 +8,29 @@
     // Layouts
     &.layout--smallinfo,
     &.layout--lot_infos,
-    &.layout--text_icon
-    {
-        .paragraph--type--text-box
-        {
+    &.layout--text_icon {
+        .paragraph--type--text-box {
             text-align: center;
         }
     }
-
     // &.layout--lot_infos-grey {
     //  background-color: $tieto-lightgrey;
     // }
 
-    @media screen and (max-width: 768px)
-    {
-        &.layout--lot_infos .paragraph--type--text-box
-        {
+    @media screen and (max-width: 768px) {
+        &.layout--lot_infos .paragraph--type--text-box {
             text-align: left;
         }
     }
 }
 
 // Text Boxes -> Text Box
-.paragraph--type--text-box.paragraph--view-mode--default
-{
+.paragraph--type--text-box.paragraph--view-mode--default {
     padding: 2em 1em;
 
     background: inherit;
 
-    // Text Box item title
-    // .field--name-field-title {
+    // Text Box item title // .field--name-field-title {
     //  @include campaign-title-item;
     // }
 }

@@ -1,0 +1,3 @@
+**/js_test_files/**/*
+**/tests/**/*.js
+gulpfile.js

@@ -1,33 +1,26 @@
-.paragraph--type--tabs.paragraph--view-mode--default
-{
+.paragraph--type--tabs.paragraph--view-mode--default {
     padding: 30px;
     // background: $tieto-green;
 
-    .field--name-field-title
-    {
+    .field--name-field-title {
         color: white;
     }
 
-    .field--name-field-lead-text
-    {
+    .field--name-field-lead-text {
         margin-bottom: 1em;
     }
 
-    .r-tabs-panel
-    {
+    .r-tabs-panel {
         clear: both;
     }
     .r-tabs-accordion-title,
-    .r-tabs-tab
-    {
-        @media screen and (min-width: 768px)
-        {
+    .r-tabs-tab {
+        @media screen and (min-width: 768px) {
             float: left;
 
             width: 33.333%;
         }
-        a
-        {
+        a {
             font-size: 1.4em;
             font-weight: bold;
 
@@ -36,22 +29,19 @@
             padding: .5em 0;
 
             border-bottom: 3px solid black;
-            @media screen and (min-width: 768px)
-            {
+            @media screen and (min-width: 768px) {
                 padding: .5em;
 
                 text-align: center;
             }
             &:hover,
             &:focus,
-            &:active
-            {
+            &:active {
                 text-decoration: none;
             }
         }
 
-        &.r-tabs-state-active a
-        {
+        &.r-tabs-state-active a {
             color: white;
             border-color: white;
         }

@@ -1,12 +1,4 @@
-/**
- * @file
- * Gulpfile for automatizing some tasks.
- *
- * @todo Add Linting for JS, TWIG, Drupal CS.
- */
-
-/* eslint-disable */
-
+// @codingStandardsIgnoreFile
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var csscomb = require('gulp-csscomb');
@@ -15,7 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
   return gulp
-    .src('./css/sass/**/*.{scss,sass}')
+    .src('sass/**/*.{scss,sass}')
     .pipe(sass({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
@@ -24,23 +16,25 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('lint:css', function () {
+gulp.task('csscomb', function () {
   return gulp
-    .src('./css/*.css')
-    .pipe(csscomb());
+    .src('css/**/*.css')
+    .pipe(csscomb())
+    .pipe(gulp.dest('css'));
 });
 
-gulp.task('lint:js', function () {
+gulp.task('eslint', function () {
   return gulp
-    .src('./js/**/*.js')
+    .src('js/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format());
 });
 
-gulp.task('lint', ['lint:css', 'lint:js']);
+gulp.task('lint', ['csscomb', 'eslint']);
 
-gulp.task('watch', function () {
-  gulp.watch('./css/sass/**/*.{scss,sass}', ['sass']);
+gulp.task('watch', ['lint'], function () {
+  gulp.watch('sass/**/*.{scss,sass}', ['sass']);
+  gulp.watch('js/**/*.js', ['eslint']);
 });
 
 gulp.task('default', ['watch']);

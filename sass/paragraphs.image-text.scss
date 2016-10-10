@@ -1,9 +1,8 @@
-.paragraph--type--image-text.paragraph--view-mode--default
-{
+.paragraph--type--image-text.paragraph--view-mode--default {
     // Layout: Common styles
     &.layout--text_1st,
-    &.layout--image_1st
-    {
+    &.layout--image_1st {
+
         // .field--name-field-title {
         //     @include campaign-headline;
         //     color: $text-color-strong;
@@ -11,47 +10,36 @@
 
         .field--name-field-title,
         .field--name-field-text,
-        .field--name-field-image
-        {
-            @media screen and (min-width: 768px)
-            {
+        .field--name-field-image {
+            @media screen and (min-width: 768px) {
                 width: 50%;
             }
         }
 
-        .field--name-field-image
-        {
+        .field--name-field-image {
             margin: 1em 0 0;
-
             text-align: center;
-            @media screen and (min-width: 768px)
-            {
+            @media screen and (min-width: 768px) {
                 margin: 0;
-
                 text-align: right;
             }
         }
 
-        @media screen and (min-width: 768px)
-        {
+        @media screen and (min-width: 768px) {
             .field--name-field-title,
-            .field--name-field-text
-            {
+            .field--name-field-text {
                 text-align: left;
             }
         }
     }
 
     // Call to action buttons.
-    .field--name-field-call-to-action
-    {
+    .field--name-field-call-to-action {
         clear: both;
-        .field__item
-        {
+        .field__item {
             display: inline-block;
         }
-        a
-        {
+        a {
             display: inline-block;
 
             margin-right: .5em;
@@ -64,8 +52,7 @@
             border-radius: 3px;
             &:hover,
             &:focus,
-            &:active
-            {
+            &:active {
                 text-decoration: none;
                 // background: lighten($tieto-blue, 5%);
             }
@@ -73,19 +60,15 @@
     }
 
     // Layout: Text first
-    &.layout--text_1st
-    {
-        @media screen and (min-width: 768px)
-        {
+    &.layout--text_1st {
+        @media screen and (min-width: 768px) {
             // Title and Text
             .field--name-field-title,
-            .field--name-field-text
-            {
+            .field--name-field-text {
                 float: left;
             }
             // Image
-            .field--name-field-image
-            {
+            .field--name-field-image {
                 float: right;
 
                 padding-left: 1.5em;
@@ -94,26 +77,21 @@
     }
 
     // Layout: Image first
-    &.layout--image_1st
-    {
-        @media screen and (min-width: 768px)
-        {
+    &.layout--image_1st {
+        @media screen and (min-width: 768px) {
             // Title and Text
             .field--name-field-title,
-            .field--name-field-text
-            {
+            .field--name-field-text {
                 float: right;
             }
             // Image
-            .field--name-field-image
-            {
+            .field--name-field-image {
                 float: left;
 
                 padding-right: 1.5em;
             }
             // Call to action buttons.
-            .field--name-field-call-to-action
-            {
+            .field--name-field-call-to-action {
                 float: right;
 
                 width: 50%;
@@ -123,41 +101,34 @@
 
     // Layout: Enhanced
     &.layout--text_1st_enhanced,
-    &.layout--image_1st_enhanced
-    {
-        // Title
-        // .field--name-field-title {
+    &.layout--image_1st_enhanced {
+        // Title // .field--name-field-title {
         //     @include campaign-title-center;
         // }
 
         // Text
-        .field--name-field-text
-        {
+        .field--name-field-text {
             padding: 2em;
             // background: $tieto-lightblue;
 
-            @media screen and (min-width: 768px)
-            {
+            @media screen and (min-width: 768px) {
                 width: 60%;
                 padding-right: 4em;
             }
         }
 
         // Image
-        .field--name-field-image
-        {
+        .field--name-field-image {
             // background: $tieto-lightblue;
             padding: 2em 0 0;
 
             text-align: center;
 
-            img
-            {
+            img {
                 display: block;
             }
 
-            @media screen and (min-width: 768px)
-            {
+            @media screen and (min-width: 768px) {
                 float: right;
 
                 width: 40%;
@@ -171,13 +142,10 @@
             }
         }
         // Call to action buttons.
-        .field--name-field-call-to-action
-        {
+        .field--name-field-call-to-action {
             float: right;
-
             width: 40%;
             margin-top: -1.5em;
-
             text-align: center;
         }
     }

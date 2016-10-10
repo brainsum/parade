@@ -1,24 +1,17 @@
 .node-parade-form,
-.node-parade-edit-form
-{
-    // Ugly hacks
-    .field--name-field-menu
-    {
-        .field-multiple-table
-        {
-            td
-            {
+.node-parade-edit-form {
+    .field--name-field-menu {
+        .field-multiple-table {
+            td {
                 padding: .5em 0;
             }
-            .form-item
-            {
+            .form-item {
                 float: left;
 
                 width: 50%;
                 padding-left: .5em;
             }
-            a.tabledrag-handle
-            {
+            a.tabledrag-handle {
                 top: 10px;
 
                 margin-left: 0;
@@ -26,57 +19,47 @@
         }
     }
 
-    .paragraph-type-top
-    {
+    .paragraph-type-top {
         float: none;
         clear: none;
 
         margin-bottom: .5em;
     }
 
-    .paragraphs-subform > .form-wrapper
-    {
+    .paragraphs-subform > .form-wrapper {
         margin: 1em 0;
     }
 
     .tabledrag-toggle-weight-wrapper,
-    td.tabledrag-hide
-    {
+    td.tabledrag-hide {
         display: none !important;
     }
 
-    .field-multiple-table
-    {
+    .field-multiple-table {
         width: 100%;
 
-        th.field-label
-        {
+        th.field-label {
             text-align: left;
         }
 
-        tr
-        {
+        tr {
             border-bottom: 1px solid #e3e3e3;
         }
 
         .drag,
-        .drag-previous
-        {
+        .drag-previous {
             background-color: #f3f3f3;
         }
 
-        td
-        {
+        td {
             padding: 1.2em 0 1.2em .5em;
         }
 
-        .field-multiple-drag
-        {
+        .field-multiple-drag {
             position: relative;
 
             padding: 1.2em 0;
-            abbr.tabledrag-changed
-            {
+            abbr.tabledrag-changed {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -88,15 +71,13 @@
             }
         }
 
-        a.tabledrag-handle
-        {
+        a.tabledrag-handle {
             position: absolute;
             z-index: 1;
             top: 1em;
 
             margin-left: 0;
-            .handle
-            {
+            .handle {
                 height: 17px;
                 margin: 5px;
 
@@ -105,18 +86,15 @@
         }
     }
 
-    .paragraph-type-title
-    {
+    .paragraph-type-title {
         float: left;
     }
 
-    .paragraphs-button-wrapper
-    {
+    .paragraphs-button-wrapper {
         margin: 2em 0;
     }
 
-    .paragraph-actions
-    {
+    .paragraph-actions {
         display: inline-block;
 
         margin: 0;
@@ -125,24 +103,20 @@
 
         list-style: none;
 
-        li:first-child
-        {
+        li:first-child {
             margin-left: 0;
         }
 
-        .button
-        {
+        .button {
             padding: 5px 1em;
             // border: 1px solid darken($tieto-lightgrey, 10%);
 
-            box-shadow: 0;
-            // &:hover, &:focus {
+            box-shadow: 0; // &:hover, &:focus {
             //   background: lighten($tieto-lightgrey, 10%);
             // }
         }
 
-        > li
-        {
+        > li {
             display: inline-block;
 
             margin-left: 1em;
@@ -150,8 +124,7 @@
     }
 }
 
-.paragraph.paragraph--view-mode--default
-{
+.paragraph.paragraph--view-mode--default {
     clear: both;
 
     padding: 40px 1em;
@@ -159,20 +132,16 @@
     background-color: #fff;
 
     // Some fixes for WYSIWYG fields.
-    .field.text-formatted
-    {
-        .align-right
-        {
+    .field.text-formatted {
+        .align-right {
             margin-left: 1.5em;
         }
-        .align-left
-        {
+        .align-left {
             margin-right: 1.5em;
         }
     }
 
-    .paragraph-inner
-    {
+    .paragraph-inner {
         max-width: 1200px;
         margin: 0 auto;
     }
