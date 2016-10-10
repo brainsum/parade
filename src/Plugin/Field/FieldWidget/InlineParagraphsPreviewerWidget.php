@@ -263,9 +263,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
         // Create field item values.
         $parent_field_item_value = ['entity' => $paragraph_clone];
 
-        // Based on \Drupal\Core\Entity\EntityViewBuilder to allow arbitrary
-        // field data to be rendered.
-        // See https://www.drupal.org/node/2274169
+        /*
+        Based on \Drupal\Core\Entity\EntityViewBuilder to allow arbitrary
+        field data to be rendered.
+        See https://www.drupal.org/node/2274169
+        */
 
         // Push the item as the single value for the field, and defer to
         // FieldItemBase::view() to build the render array.
