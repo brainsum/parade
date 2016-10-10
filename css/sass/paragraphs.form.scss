@@ -1,80 +1,106 @@
-.paragraph--type--marketo-form.paragraph--view-mode--default {
+.paragraph--type--marketo-form.paragraph--view-mode--default
+{
+    // .image-style-whitepaper-a4 {
+    // 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    // }
 
-	// .image-style-whitepaper-a4 {
-	// 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-	// }
+    &,
+    // temp
+    &.layout--clean
+    {
+        // background: $tieto-lightgrey;
 
-	&, // temp
-	&.layout--clean {
-		// background: $tieto-lightgrey;
+        .field--name-field-title
+        {
+            margin-bottom: .5em;
+            // @include campaign-headline;
 
-		.field--name-field-title {
-			// @include campaign-headline;
-			text-align: center;
-			margin-bottom: .5em;
-			// color: $text-color-strong;
-			@media screen and (max-width: 768px) {
-				text-align: left;
-			}
-		}
+            text-align: center;
+            // color: $text-color-strong;
+            @media screen and (max-width: 768px)
+            {
+                text-align: left;
+            }
+        }
 
-		// .field--name-field-lead-text {
-		// 	@include campaign-lead;
-		// }
+        // .field--name-field-lead-text {
+        // 	@include campaign-lead;
+        // }
 
-		.field--name-field-title,
-		.field--name-field-lead-text,
-		.field--name-field-marketo-form,
-		.field--name-field-text {
-			@media screen and (max-width: 768px) {
-				width: 50%;
-				float: left;
-				clear: left;
-			}
-		}
+        .field--name-field-title,
+        .field--name-field-lead-text,
+        .field--name-field-marketo-form,
+        .field--name-field-text
+        {
+            @media screen and (max-width: 768px)
+            {
+                float: left;
+                clear: left;
 
-		// Display thank you message later.
-		.field--name-field-text {
-			display: none;
-		}
+                width: 50%;
+            }
+        }
 
-		.field--name-field-image {
-			text-align: right;
-			padding: 1em;
-			text-align: center;
-			@media screen and (max-width: 768px) {
-		    text-align: right;
-				width: 50%;
-				float: right;
-			}
-		}
-	}
+        // Display thank you message later.
+        .field--name-field-text
+        {
+            display: none;
+        }
 
-	// Marketo overrides.
-	.mktoForm {
-		&, * {
-			font-family: inherit !important;
-		}
-		.mktoLabel, .mktoRequiredField label.mktoLabel {
-			width: auto !important;
-			display: inline-block;
-			float: none;
-			padding: 0;
-			margin: 0;
-			line-height: 1.5;
-			font-size: 16px;
-			font-weight: bold !important;
-		}
-		input.mktoField, textarea.mktoField {
-			min-height: inherit !important;
-			padding: 10px !important;
-			line-height: 1.5 !important;
-			font-size: 16px !important;
-		}
-		textarea.mktoField {
-			resize: vertical !important;
-			height: auto !important;
-			min-height: inherit !important;
-		}
-	}
+        .field--name-field-image
+        {
+            padding: 1em;
+
+            text-align: right;
+            text-align: center;
+            @media screen and (max-width: 768px)
+            {
+                float: right;
+
+                width: 50%;
+
+                text-align: right;
+            }
+        }
+    }
+
+    // Marketo overrides.
+    .mktoForm
+    {
+        &,
+        *
+        {
+            font-family: inherit !important;
+        }
+        .mktoLabel,
+        .mktoRequiredField label.mktoLabel
+        {
+            font-size: 16px;
+            font-weight: bold !important;
+            line-height: 1.5;
+
+            display: inline-block;
+            float: none;
+
+            width: auto !important;
+            margin: 0;
+            padding: 0;
+        }
+        input.mktoField,
+        textarea.mktoField
+        {
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+
+            min-height: inherit !important;
+            padding: 10px !important;
+        }
+        textarea.mktoField
+        {
+            height: auto !important;
+            min-height: inherit !important;
+
+            resize: vertical !important;
+        }
+    }
 }

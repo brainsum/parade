@@ -1,4 +1,6 @@
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--smallinfo .paragraph--type--text-box, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--text_icon .paragraph--type--text-box {
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--smallinfo .paragraph--type--text-box,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--text_icon .paragraph--type--text-box {
   text-align: center;
 }
 

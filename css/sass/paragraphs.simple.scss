@@ -1,65 +1,77 @@
-.paragraph--type--simple.paragraph--view-mode--default {
+.paragraph--type--simple.paragraph--view-mode--default
+{
+    // &.layout--one-column-clean,
+    // &.layout--one-column-shaded,
+    // &.layout--one-column-grey {
+    // 	.field--name-field-title {
+    // 		@include campaign-title-center;
+    // 	}
+    // }
 
-	// &.layout--one-column-clean,
-	// &.layout--one-column-shaded,
-	// &.layout--one-column-grey {
-	// 	.field--name-field-title {
-	// 		@include campaign-title-center;
-	// 	}
-	// }
+    // &.layout--one-column-shaded {
+    // 	background-color: $tieto-lightblue;
+    // }
 
-	// &.layout--one-column-shaded {
-	// 	background-color: $tieto-lightblue;
-	// }
+    // &.layout--one-column-grey {
+    // 	background-color: $tieto-lightgrey;
+    // }
 
-	// &.layout--one-column-grey {
-	// 	background-color: $tieto-lightgrey;
-	// }
+    // &.layout--separator-clean {
+    // 	.field--name-field-title {
+    // 		@include campaign-title-separator;
+    // 	}
+    // }
 
-	// &.layout--separator-clean {
-	// 	.field--name-field-title {
-	// 		@include campaign-title-separator;
-	// 	}
-	// }
+    // Inverse layout
+    &.layout--two-column-content-1st-inverse,
+    &.layout--two-column-title-1st-inverse
+    {
+        // background: $tieto-blue;
 
-	// Inverse layout
-	&.layout--two-column-content-1st-inverse,
-	&.layout--two-column-title-1st-inverse {
-		// background: $tieto-blue;
+        .field--name-field-title,
+        .field--name-field-text
+        {
+            color: white;
+            @media screen and (min-width: 768px)
+            {
+                width: 50%;
+            }
+        }
 
-		.field--name-field-title,
-		.field--name-field-text {
-			color: white;
-			@media screen and (min-width: 768px) {
-				width: 50%;
-			}
-		}
+        // .field--name-field-title {
+        // 	@include campaign-headline;
+        // 	color: white;
+        // }
+    }
 
-		// .field--name-field-title {
-		// 	@include campaign-headline;
-		// 	color: white;
-		// }
-	}
+    @media screen and (min-width: 768px)
+    {
+        &.layout--two-column-content-1st-inverse
+        {
+            .field--name-field-title
+            {
+                float: right;
 
-	@media screen and (min-width: 768px) {
-		&.layout--two-column-content-1st-inverse {
-			.field--name-field-title {
-				float: right;
-				text-align: right;
-			}
-			.field--name-field-text {
-				float: left;
-			}
-		}
+                text-align: right;
+            }
+            .field--name-field-text
+            {
+                float: left;
+            }
+        }
 
-		&.layout--two-column-title-1st-inverse {
-			.field--name-field-title {
-				float: left;
-				text-align: left;
-			}
-			.field--name-field-text {
-				float: right;
-			}
-		}
-	}
+        &.layout--two-column-title-1st-inverse
+        {
+            .field--name-field-title
+            {
+                float: left;
+
+                text-align: left;
+            }
+            .field--name-field-text
+            {
+                float: right;
+            }
+        }
+    }
 }

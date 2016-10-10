@@ -4,23 +4,22 @@
  *
  * @todo @fixme clean up!
  */
-
 .paragraphs-button-wrapper {
   text-align: center;
 }
 
 .parade-button {
   width: 23%;
-  padding: 80px 0 .7em;
-  margin-right: .5em;
+  margin-right: 0.5em;
+  padding: 80px 0 0.7em;
   background-repeat: no-repeat !important;
-  background-position: center .7em !important;
+  background-position: center 0.7em !important;
   background-size: 65px;
 }
 
 .parade-button[disabled] {
-  background-size: 50px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJsb2FkZXItMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiICAgICB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgNTAgNTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBmaWxsPSIjNjNiM2UzIiBkPSJNNDMuOTM1LDI1LjE0NWMwLTEwLjMxOC04LjM2NC0xOC42ODMtMTguNjgzLTE4LjY4M2MtMTAuMzE4LDAtMTguNjgzLDguMzY1LTE4LjY4MywxOC42ODNoNC4wNjhjMC04LjA3MSw2LjU0My0xNC42MTUsMTQuNjE1LTE0LjYxNWM4LjA3MiwwLDE0LjYxNSw2LjU0MywxNC42MTUsMTQuNjE1SDQzLjkzNXoiPiAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVUeXBlPSJ4bWwiICAgICAgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiAgICAgIHR5cGU9InJvdGF0ZSIgICAgICBmcm9tPSIwIDI1IDI1IiAgICAgIHRvPSIzNjAgMjUgMjUiICAgICAgZHVyPSIwLjZzIiAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+ICAgIDwvcGF0aD4gIDwvc3ZnPg==") !important;
+  background-size: 50px;
 }
 
 .parade-button-image-text {
@@ -56,5 +55,5 @@
 }
 
 .parade-button:first-child {
-  margin-right: .5em;
+  margin-right: 0.5em;
 }

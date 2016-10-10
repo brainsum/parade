@@ -13,12 +13,6 @@ preview:
     - core/drupal.ajax
     - core/drupal.dialog.ajax
 
-admin:
-  version: VERSION
-  css:
-    component:
-      css/admin.css: {}
-
 buttons:
   version: VERSION
   css:

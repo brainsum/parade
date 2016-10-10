@@ -15,32 +15,41 @@
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab {
+  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title,
+  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab {
     float: left;
     width: 33.333%;
   }
 }
 
-.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a {
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a {
+  display: block;
+  padding: 0.5em 0;
+  border-bottom: 3px solid black;
   font-size: 1.4em;
   font-weight: bold;
-  border-bottom: 3px solid black;
-  display: block;
-  padding: .5em 0;
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a {
-    padding: .5em;
+  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a,
+  .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a {
+    padding: 0.5em;
     text-align: center;
   }
 }
 
-.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:hover, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:focus, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:active, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:hover, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:focus, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:active {
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:hover,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:focus,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title a:active,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:hover,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:focus,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab a:active {
   text-decoration: none;
 }
 
-.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title.r-tabs-state-active a, .paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab.r-tabs-state-active a {
-  border-color: white;
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-accordion-title.r-tabs-state-active a,
+.paragraph--type--tabs.paragraph--view-mode--default .r-tabs-tab.r-tabs-state-active a {
   color: white;
+  border-color: white;
 }

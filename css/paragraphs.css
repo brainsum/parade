@@ -1,26 +1,26 @@
 .node-parade-form .field--name-field-menu .field-multiple-table td,
 .node-parade-edit-form .field--name-field-menu .field-multiple-table td {
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 .node-parade-form .field--name-field-menu .field-multiple-table .form-item,
 .node-parade-edit-form .field--name-field-menu .field-multiple-table .form-item {
-  width: 50%;
   float: left;
-  padding-left: .5em;
+  width: 50%;
+  padding-left: 0.5em;
 }
 
 .node-parade-form .field--name-field-menu .field-multiple-table a.tabledrag-handle,
 .node-parade-edit-form .field--name-field-menu .field-multiple-table a.tabledrag-handle {
-  margin-left: 0;
   top: 10px;
+  margin-left: 0;
 }
 
 .node-parade-form .paragraph-type-top,
 .node-parade-edit-form .paragraph-type-top {
-  clear: none;
   float: none;
-  margin-bottom: .5em;
+  clear: none;
+  margin-bottom: 0.5em;
 }
 
 .node-parade-form .paragraphs-subform > .form-wrapper,
@@ -28,7 +28,8 @@
   margin: 1em 0;
 }
 
-.node-parade-form .tabledrag-toggle-weight-wrapper, .node-parade-form td.tabledrag-hide,
+.node-parade-form .tabledrag-toggle-weight-wrapper,
+.node-parade-form td.tabledrag-hide,
 .node-parade-edit-form .tabledrag-toggle-weight-wrapper,
 .node-parade-edit-form td.tabledrag-hide {
   display: none !important;
@@ -49,7 +50,8 @@
   border-bottom: 1px solid #e3e3e3;
 }
 
-.node-parade-form .field-multiple-table .drag, .node-parade-form .field-multiple-table .drag-previous,
+.node-parade-form .field-multiple-table .drag,
+.node-parade-form .field-multiple-table .drag-previous,
 .node-parade-edit-form .field-multiple-table .drag,
 .node-parade-edit-form .field-multiple-table .drag-previous {
   background-color: #f3f3f3;
@@ -57,7 +59,7 @@
 
 .node-parade-form .field-multiple-table td,
 .node-parade-edit-form .field-multiple-table td {
-  padding: 1.2em 0 1.2em .5em;
+  padding: 1.2em 0 1.2em 0.5em;
 }
 
 .node-parade-form .field-multiple-table .field-multiple-drag,
@@ -69,27 +71,27 @@
 .node-parade-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
 .node-parade-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
   position: absolute;
-  color: transparent;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  color: transparent;
   background: #f3f3f3;
 }
 
 .node-parade-form .field-multiple-table a.tabledrag-handle,
 .node-parade-edit-form .field-multiple-table a.tabledrag-handle {
   position: absolute;
-  top: 1em;
   z-index: 1;
+  top: 1em;
   margin-left: 0;
 }
 
 .node-parade-form .field-multiple-table a.tabledrag-handle .handle,
 .node-parade-edit-form .field-multiple-table a.tabledrag-handle .handle {
-  background-position: 0 0;
   height: 17px;
   margin: 5px;
+  background-position: 0 0;
 }
 
 .node-parade-form .paragraph-type-title,
@@ -104,11 +106,11 @@
 
 .node-parade-form .paragraph-actions,
 .node-parade-edit-form .paragraph-actions {
-  margin: 0;
-  padding: 0;
   display: inline-block;
-  list-style: none;
+  margin: 0;
   margin-left: 1em;
+  padding: 0;
+  list-style: none;
 }
 
 .node-parade-form .paragraph-actions li:first-child,
@@ -124,8 +126,8 @@
 
 .node-parade-form .paragraph-actions > li,
 .node-parade-edit-form .paragraph-actions > li {
-  margin-left: 1em;
   display: inline-block;
+  margin-left: 1em;
 }
 
 .paragraph.paragraph--view-mode--default {

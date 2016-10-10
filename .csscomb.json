@@ -24,7 +24,6 @@
 	"strip-spaces": true,
 	"tab-size": 2,
 	"unitless-zero": true,
-	"vendor-prefix-align": true,
 	"sort-order": [
 		[
 			"$variable",
