@@ -33,28 +33,10 @@ paragraphs.header:
     - parade/vendor.rellax
     - parade/vendor.inline-video
 
-# @see https://github.com/jellekralt/Responsive-Tabs
-tabs:
-  version: VERSION
-  css:
-    base:
-      css/responsive-tabs.css: {}
-  js:
-    js/responsive-tabs.js: {}
-  dependencies:
-    - core/jquery
-
 smooth-scroll:
   version: VERSION
   js:
     js/smooth-scroll.js: {}
-  dependencies:
-    - core/jquery
-
-scrollspy:
-  version: VERSION
-  js:
-    js/scrollspy.js: {}
   dependencies:
     - core/jquery
 
