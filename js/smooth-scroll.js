@@ -14,6 +14,7 @@
 
   /**
    * Additional offset in pixels.
+   *
    * DON'T worry about Drupal Admin toolbar, it is already calculated in. :)
    *
    *   negative: scroll past the item.
@@ -27,17 +28,23 @@
   /**
    * Update the hash in the URL without jumping to the element.
    *
-   * @param  {String} hash
+   * @param {String} hash
+   *
    * @return {void}
    */
-  var updateHash = (hash) => {
-    if (history.pushState) history.pushState(null, null, hash);
-    else window.location.hash = hash;
+  var updateHash = function (hash) {
+    if (history.pushState) {
+      history.pushState(null, null, hash);
+    }
+    else {
+      window.location.hash = hash;
+    }
   }
 
   /**
-   * Applying the animation to all anchors, which have
-   * <a href="#my-anchor"> format.
+   * Applying the animation to all anchors.
+   *
+   * Format should be: <a href="#my-anchor"> format.
    */
   var smoothScroll = function (e) {
     e.preventDefault();

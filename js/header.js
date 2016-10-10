@@ -2,6 +2,7 @@
  * @file
  * JavaScript for paragraph type Header.
  */
+
 (function (inlineVideo, Rellax, drupalSettings) {
   'use strict';
 

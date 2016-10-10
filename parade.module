@@ -1,15 +1,15 @@
 <?php
+
 /**
  * @file
  * Contains hook implementations for Parade.
  *
- * @todo  Make the whole thing dynamic, do not rely on Parade content type.
+ * @todo Make the whole thing dynamic, do not rely on Parade content type.
  */
 
 use Drupal\file\Entity\File;
 use FFMpeg\Coordinate\TimeCode;
 use Drupal\Component\Utility\Html;
-use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -80,13 +80,15 @@ function parade_preprocess_paragraph__header(&$variables) {
 
     // @todo Maybe use this...?
     //
+    // @code
     // if (isset($vars['elements']['field_video'])) {
     //   $video_path = $vars['elements']['field_video'][0]['#markup'];
     //   $vars['video'] = array(
-    //     'path' => file_create_url($video_path),
-    //     'mime' => Drupal::service('file.mime_type.guesser')->guess($video_path)
+    //   'path' => file_create_url($video_path),
+    //   'mime' => Drupal::service('file.mime_type.guesser')->guess($video_path)
     //   );
     // }
+    // @endcode
 
     if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
       $type = 'image';
@@ -192,7 +194,7 @@ function parade_theme() {
 /**
  * Implements hook_form_alter().
  *
- * @todo  use more specific hook.
+ * @todo Use more specific hook.
  */
 function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (in_array($form_id, ['node_parade_form', 'node_parade_edit_form'])) {
@@ -217,12 +219,12 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 /**
  * Implements hook_theme_suggestions_page_alter().
  *
- * @todo  Is page__node__TYPE really needed?
+ * @todo Is page__node__TYPE really needed?
  */
 function parade_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add content type suggestions based on machine_name field and content type.
   // e.g. page--node--parade.html.twig
-  //      page--node--parade--my-awesome-page.html.twig
+  // page--node--parade--my-awesome-page.html.twig.
   $attributes = Drupal::request()->attributes;
   if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
     if (method_exists($node, 'getType')) {
@@ -257,7 +259,7 @@ function parade_theme_suggestions_alter(array &$suggestions, array $variables, $
 /**
  * Implements hook_preprocess_field__field_marketo_form().
  *
- * @todo  load Marketo library here?
+ * @todo load Marketo library here?
  */
 function parade_preprocess_field__field_marketo_form(&$variables) {
   // Add rendered_confirmation_message to field variables.
@@ -277,12 +279,11 @@ function parade_preprocess_field__field_marketo_form(&$variables) {
 /**
  * Populates TWIG variables with Parade related data.
  *
- * e.g.: $variables['parade']['test'] becomes
+ * E.g.: $variables['parade']['test'] becomes
  * {{ parade.test }} in the templates.
  *
  * @param array &$variables
  *   The core $variables passed by reference.
- *
  * @param array $data
  *   New data in array format, which will be passed to the template.
  *
@@ -299,7 +300,7 @@ function _parade_add_template_variable(&$variables, $data = NULL) {
   // Array root of Parade related data in TWIG.
   // Example usage:
   // {{ parade.background.url }}
-  // {{ parade.layout }}
+  // {{ parade.layout }}.
   static $key = 'parade';
 
   if (!isset($variables[$key])) {

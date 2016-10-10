@@ -1,13 +1,12 @@
 <?php
-/**
- * @file
- * Contains \Drupal\parade\Controller\ParadeController.
- */
 
 namespace Drupal\parade\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
+/**
+ * Controller for Parade.
+ */
 class ParadeController extends ControllerBase {
 
   /**

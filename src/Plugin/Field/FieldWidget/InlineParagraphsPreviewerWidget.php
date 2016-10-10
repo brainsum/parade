@@ -1,11 +1,4 @@
 <?php
-/**
- * @file
- * Paragraphs Previewer widget implementation for paragraphs.
- *
- * @todo  Credit paragraphs_previewer:
- * https://www.drupal.org/project/paragraphs_previewer
- */
 
 namespace Drupal\parade\Plugin\Field\FieldWidget;
 
@@ -24,6 +17,8 @@ use Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget;
  *
  * We hide add / remove buttons when translating to avoid accidental loss of
  * data because these actions effect all languages.
+ *
+ * @todo Credit paragraphs_previewer: https://www.drupal.org/project/paragraphs_previewer
  *
  * @FieldWidget(
  *   id = "entity_reference_paragraphs_preview",
@@ -144,8 +139,6 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       'dialogClass' => 'parade-preview-dialog',
       'minWidth' => 480,
       'width' => '80%',
-      // 'minHeight' => 100,
-      // 'height' => 400,
       'autoOpen' => TRUE,
       'modal' => TRUE,
       'draggable' => TRUE,
@@ -263,12 +256,9 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
         // Create field item values.
         $parent_field_item_value = ['entity' => $paragraph_clone];
 
-        /*
-        Based on \Drupal\Core\Entity\EntityViewBuilder to allow arbitrary
-        field data to be rendered.
-        See https://www.drupal.org/node/2274169
-        */
-
+        // Based on \Drupal\Core\Entity\EntityViewBuilder to allow arbitrary
+        // field data to be rendered.
+        // See https://www.drupal.org/node/2274169
         // Push the item as the single value for the field, and defer to
         // FieldItemBase::view() to build the render array.
         $parent_clone->{$parent_field_name}->setValue([$parent_field_item_value]);

@@ -15,7 +15,7 @@
    * @param Drupal.dialog dialog
    *   The dialog object
    */
-  previewer.dialogReset = function(dialog) {
+  previewer.dialogReset = function (dialog) {
     dialog.isLoading = false;
     dialog.loadedCount = 0;
     dialog.loadableCount = 0;
@@ -31,7 +31,7 @@
    * @param object $settings
    *   Optional The combined dialog settings.
    */
-  previewer.dialogInitialize = function(dialog, $element, settings) {
+  previewer.dialogInitialize = function (dialog, $element, settings) {
     dialog.isLoading = true;
     dialog.loadedCount = 0;
     dialog.loadableCount = 0;
@@ -55,7 +55,7 @@
    * @param object $settings
    *   The combined dialog settings.
    */
-  previewer.dialogUpdateForContent = function(dialog, $element, settings) {
+  previewer.dialogUpdateForContent = function (dialog, $element, settings) {
     if (!dialog.isLoading && settings.maxHeight) {
       var $content = $('.paragraphs-previewer-iframe', $element).contents().find('body');
 
@@ -101,7 +101,7 @@
    * @return bool
    *   TRUE if the dialog is a previewer dialog.
    */
-  previewer.dialogIsPreviewer = function(dialog, $element, settings) {
+  previewer.dialogIsPreviewer = function (dialog, $element, settings) {
     var dialogClass = '';
     if (typeof settings == 'object' && ('dialogClass' in settings)) {
       dialogClass = settings.dialogClass;
@@ -114,8 +114,9 @@
   };
 
   /**
-   * Disable redirect links and submit buttons in preview modal,
-   * to prevent users accidentally clicking on them.
+   * Disable redirect links and submit buttons in preview modal.
+   *
+   * To prevent users accidentally clicking on them.
    *
    * @param Drupal.dialog dialog
    *   The dialog object
@@ -124,7 +125,7 @@
    *
    * @return void
    */
-  previewer.disableLinks = function(dialog, $element) {
+  previewer.disableLinks = function (dialog, $element) {
     $element.find('a:not([href^="#"]), input[type="submit"], button[type="submit"]').on('click', function (e) {
       e.preventDefault();
       return false;
