@@ -10,10 +10,15 @@ use Drupal\Core\Controller\ControllerBase;
 
 class ParadeController extends ControllerBase {
 
+  /**
+   * Parade settings.
+   *
+   * @todo
+   */
   public function settings() {
     return array(
-        '#type' => 'markup',
-        '#markup' => $this->t('Hello, World!'),
+      '#type' => 'markup',
+      '#markup' => 'In progress',
     );
   }
 
