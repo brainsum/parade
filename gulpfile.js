@@ -1,10 +1,11 @@
-/* eslint-disable */
 /**
  * @file
  * Gulpfile for automatizing some tasks.
  *
  * @todo Add Linting for JS, TWIG, Drupal CS.
  */
+
+/* eslint-disable */
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');

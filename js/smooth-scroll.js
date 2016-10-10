@@ -45,6 +45,7 @@
 
   /**
    * Applying the animation to all anchors.
+   *
    * Format should be: <a href="#my-anchor"> format.
    *
    * @param {Object} e
