@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_boxes.field_anchor
+    - field.field.paragraph.text_boxes.field_boxes_per_row
+    - field.field.paragraph.text_boxes.field_paragraphs
+    - field.field.paragraph.text_boxes.field_text_boxes_layout
+    - field.field.paragraph.text_boxes.field_title
+    - paragraphs.paragraphs_type.text_boxes
+  module:
+    - parade
+id: paragraph.text_boxes.default
+targetEntityType: paragraph
+bundle: text_boxes
+mode: default
+content:
+  field_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_boxes_per_row:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_text_boxes_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  translation:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

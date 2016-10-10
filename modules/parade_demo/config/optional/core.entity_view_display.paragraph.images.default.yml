@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.images.field_anchor
+    - field.field.paragraph.images.field_images
+    - field.field.paragraph.images.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.images
+  module:
+    - image
+    - parade
+id: paragraph.images.default
+targetEntityType: paragraph
+bundle: images
+mode: default
+content:
+  field_images:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_anchor: true
+  uid: true

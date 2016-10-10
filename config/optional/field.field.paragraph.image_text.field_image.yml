@@ -5,14 +5,7 @@ dependencies:
     - field.storage.paragraph.field_image
     - paragraphs.paragraphs_type.image_text
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
 id: paragraph.image_text.field_image
 field_name: field_image
 entity_type: paragraph

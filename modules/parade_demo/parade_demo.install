@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * @file
+ * Remove content type and content added by the demo.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function parade_demo_install() {
+}
