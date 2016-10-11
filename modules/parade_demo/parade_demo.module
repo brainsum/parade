@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Code for Parade Demo.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function parade_demo_theme($existing, $type, $theme, $path) {
+  return [
+    'page__node__parade_demo' => [],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function parade_demo_page_attachments(array &$page) {
+  $attributes = Drupal::request()->attributes;
+  if ($attributes->has('node') && $attributes->get('node')->getType() == 'parade_demo') {
+    $page['#attached']['library'][] = 'parade_demo/parade_demo';
+  }
+}

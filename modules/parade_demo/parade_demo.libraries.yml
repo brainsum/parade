@@ -1,0 +1,5 @@
+parade_demo:
+  version: VERSION
+  css:
+    theme:
+      css/parade.demo.css: {}

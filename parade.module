@@ -50,10 +50,6 @@ function parade_preprocess_paragraph(&$variables) {
       3 => 'lot_infos-grey',
       4 => 'text_icon',
     ],
-    'field_marketo_form_layout' => [
-      0 => 'clean',
-      1 => 'download',
-    ],
   ];
 
   // Set CSS class for the selected layout.
@@ -184,6 +180,7 @@ function parade_field_widget_form_alter(&$element, FormStateInterface $form_stat
  */
 function parade_theme() {
   return [
+    'paragraphs_dropbutton_wrapper' => [],
     'parade_preview' => [
       'variables' => ['paragraph' => NULL],
     ],
@@ -217,21 +214,18 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
 /**
  * Implements hook_theme_suggestions_page_alter().
- *
- * @todo Is page__node__TYPE really needed?
  */
 function parade_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add content type suggestions based on machine_name field and content type.
   // e.g. page--node--parade.html.twig
   // page--node--parade--my-awesome-page.html.twig.
+  // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
   $attributes = Drupal::request()->attributes;
-  if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    if (method_exists($node, 'getType')) {
-      $type = $node->getType();
-      array_splice($suggestions, 1, 0, 'page__node__' . $type);
-      if ($type == 'parade' && $machine_name = $node->field_machine_name->value) {
-        $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
-      }
+  if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
+    $type = $node->getType();
+    array_unshift($suggestions, 'page__node__' . $type);
+    if ($type == 'parade_demo' && $machine_name = $node->field_machine_name->value) {
+      $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
     }
   }
 }
@@ -252,26 +246,6 @@ function parade_theme_suggestions_alter(array &$suggestions, array $variables, $
         $suggestions = $my_suggestions;
       }
     }
-  }
-}
-
-/**
- * Implements hook_preprocess_field__field_marketo_form().
- *
- * @todo load Marketo library here?
- */
-function parade_preprocess_field__field_marketo_form(&$variables) {
-  // Add rendered_confirmation_message to field variables.
-  $element = &$variables['element']['#object'];
-
-  // Get the field's raw value and format.
-  list($markup, $format) = [
-    $element->field_text->value,
-    $element->field_text->format,
-  ];
-
-  if (isset($markup) && isset($format)) {
-    $element->rendered_confirmation_message = check_markup($markup, $format);
   }
 }
 
