@@ -195,8 +195,8 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
   $attributes = Drupal::request()->attributes;
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
     $type = $node->getType();
-    foreach ($suggestions as $suggestion) {
-      if ($machine_name = $node->field_machine_name->value) {
+    if ($machine_name = $node->field_machine_name->value) {
+      foreach ($suggestions as $suggestion) {
         $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
       }
     }
