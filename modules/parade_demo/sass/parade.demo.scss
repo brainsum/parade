@@ -1,17 +1,82 @@
 .page-node-type-parade-demo {
 
   .paragraph.paragraph--view-mode--default {
-    clear: both;
-    padding: 40px 1em;
-    background-color: #fff;
+    background: #fff;
+    padding: 30px;
 
     .paragraph-inner {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .field--name-field-title {
+      font-size: 2em;
+      font-weight: bold;
     }
   }
 
   .paragraph--type--header.paragraph--view-mode--default {
     padding: 0;
+
+    .background {
+      &::before {
+        background-color: rgba(103, 175, 225, .5);
+      }
+    }
+
+    .field--name-field-title {
+      font-size: 4em;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 0;
+      letter-spacing: -2px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2.8em;
+      }
+    }
+
+    .field--name-field-secondary-title,
+    .field--name-field-lead-text {
+      font-size: 1.5em;
+      margin-bottom: .5em;
+      @media screen and (max-width: 768px) {
+        font-size: 1.2em;
+      }
+    }
+
+    // Call to action buttons.
+    .field--name-field-call-to-action a {
+      border: 1px solid white;
+      color: white;
+      border-radius: 3px;
+      padding: .5em 1em;
+    }
+
+    .paragraph-inner {
+      color: white;
+    }
+  }
+
+  .paragraph--type--simple.paragraph--view-mode--default {
+    clear: both;
+    &.layout--one-column-grey {
+      background: #f3f3f3;
+    }
+    &.layout--one-column-shaded {
+      background: #292929;
+      color: white;
+    }
+    &.layout--two-column-title-1st-inverse {
+      background: #292929;
+      color: white;
+    }
+    &.layout--two-column-content-1st-inverse {
+      background: #292929;
+      color: white;
+    }
+    &.layout--separator-clean {
+
+    }
   }
 }

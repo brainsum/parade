@@ -1,14 +1,83 @@
 .page-node-type-parade-demo .paragraph.paragraph--view-mode--default {
-  clear: both;
-  padding: 40px 1em;
-  background-color: #fff;
+  padding: 30px;
+  background: #fff;
 }
 
 .page-node-type-parade-demo .paragraph.paragraph--view-mode--default .paragraph-inner {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.page-node-type-parade-demo .paragraph.paragraph--view-mode--default .field--name-field-title {
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default {
   padding: 0;
+}
+
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .background::before {
+  background-color: rgba(103, 175, 225, 0.5);
+}
+
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-title {
+  display: inline-block;
+  margin-bottom: 0;
+  letter-spacing: -2px;
+  font-size: 4em;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-title {
+    font-size: 2.8em;
+  }
+}
+
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+  .page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+    font-size: 1.2em;
+  }
+}
+
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
+  padding: 0.5em 1em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
+  color: white;
+}
+
+.page-node-type-parade-demo .paragraph--type--simple.paragraph--view-mode--default {
+  clear: both;
+}
+
+.page-node-type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-grey {
+  background: #f3f3f3;
+}
+
+.page-node-type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded {
+  color: white;
+  background: #292929;
+}
+
+.page-node-type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse {
+  color: white;
+  background: #292929;
+}
+
+.page-node-type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse {
+  color: white;
+  background: #292929;
 }

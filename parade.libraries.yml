@@ -66,14 +66,6 @@ paragraphs.simple:
   dependencies:
     - parade/paragraphs
 
-paragraphs.form:
-  version: VERSION
-  css:
-    component:
-      css/paragraphs.form.css: {}
-  dependencies:
-    - parade/paragraphs
-
 paragraphs.tabs:
   version: VERSION
   css:

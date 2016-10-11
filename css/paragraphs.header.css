@@ -2,10 +2,6 @@
  * @file
  * HEADER paragraph
  */
-.paragraph--type--header.paragraph--view-mode--default {
-  padding: 0;
-}
-
 .paragraph--type--header.paragraph--view-mode--default .background {
   position: relative;
   overflow: hidden;
@@ -21,7 +17,6 @@
   bottom: 0;
   left: 0;
   content: " ";
-  background-color: rgba(103, 175, 225, 0.5);
 }
 
 .paragraph--type--header.paragraph--view-mode--default .background .background-wrapper {
@@ -49,56 +44,9 @@
   background-size: cover;
 }
 
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-title {
-  display: inline-block;
-  margin-bottom: 0;
-  letter-spacing: -2px;
-  font-size: 4em;
-  font-weight: 800;
-}
-
-@media screen and (max-width: 768px) {
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-title {
-    font-size: 2.8em;
-  }
-}
-
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
-  margin-bottom: 0.5em;
-  font-size: 1.5em;
-}
-
-@media screen and (max-width: 768px) {
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
-    font-size: 1.2em;
-  }
-}
-
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-title,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title {
-  line-height: normal;
-}
-
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item {
-  display: inline-block;
-}
-
+.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item,
 .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
   display: inline-block;
-  margin-right: 0.5em;
-  padding: 0.7em 1.4em;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-  color: white;
-  border-radius: 3px;
-}
-
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a:hover,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a:focus,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a:active {
-  text-decoration: none;
 }
 
 .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
@@ -111,7 +59,6 @@
   padding: 2em 1em;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: white;
 }
 
 @media screen and (max-width: 768px) {
