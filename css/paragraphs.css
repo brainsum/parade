@@ -129,22 +129,3 @@
   display: inline-block;
   margin-left: 1em;
 }
-
-.paragraph.paragraph--view-mode--default {
-  clear: both;
-  padding: 40px 1em;
-  background-color: #fff;
-}
-
-.paragraph.paragraph--view-mode--default .field.text-formatted .align-right {
-  margin-left: 1.5em;
-}
-
-.paragraph.paragraph--view-mode--default .field.text-formatted .align-left {
-  margin-right: 1.5em;
-}
-
-.paragraph.paragraph--view-mode--default .paragraph-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}

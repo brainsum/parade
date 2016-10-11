@@ -10,7 +10,6 @@
 use Drupal\file\Entity\File;
 use FFMpeg\Coordinate\TimeCode;
 use Drupal\Component\Utility\Html;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_preprocess_paragraph().
@@ -154,32 +153,14 @@ function parade_preprocess_paragraph__text_boxes(&$variables) {
 }
 
 /**
- * Implements hook_field_widget_form_alter().
- */
-function parade_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
-  // @fixme check for field Type, not name.
-  // @todo also check for Parade content type!
-  $field_name = $context['items']->getFieldDefinition()->getName();
-
-  // Change dropbuttons to normal list in Paragraphs inline forms.
-  if ($field_name === 'field_paragraphs') {
-    unset($element['top']['links']['#theme_wrappers']);
-    $element['top']['links']['prefix']['#markup'] = '<ul class="parade-actions">';
-  }
-
-  // Changes to Menu field.
-  if ($field_name === 'field_menu') {
-    $element['uri']['#description'] = NULL;
-    $element['uri']['#title_display'] = 'none';
-    $element['title']['#title_display'] = 'none';
-  }
-}
-
-/**
  * Implements hook_theme().
  */
-function parade_theme() {
+function parade_theme($existing, $type, $theme, $path) {
   return [
+    'paragraph' => [],
+    'paragraph__header' => [
+      'base hook' => 'paragraph',
+    ],
     'paragraphs_dropbutton_wrapper' => [],
     'parade_preview' => [
       'variables' => ['paragraph' => NULL],
@@ -188,32 +169,7 @@ function parade_theme() {
 }
 
 /**
- * Implements hook_form_alter().
- *
- * @todo Use more specific hook.
- */
-function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (in_array($form_id, ['node_parade_form', 'node_parade_edit_form'])) {
-    $form['field_menu']['widget']['add_more']['#value'] = t('New menu link');
-
-    // Modify the Paragraphs field.
-    if (isset($form['field_paragraphs'])) {
-      $form['#attached']['library'][] = 'parade/buttons';
-
-      foreach ($form['field_paragraphs']['widget']['add_more'] as $key => $item) {
-        if (strpos($key, 'add_more') === FALSE) {
-          continue;
-        }
-        $type = Html::getClass($item['#bundle_machine_name']);
-        $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
-        $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
-      }
-    }
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_page_alter().
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
 function parade_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Add content type suggestions based on machine_name field and content type.
@@ -224,26 +180,24 @@ function parade_theme_suggestions_page_alter(array &$suggestions, array $variabl
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
     $type = $node->getType();
     array_unshift($suggestions, 'page__node__' . $type);
-    if ($type == 'parade_demo' && $machine_name = $node->field_machine_name->value) {
+    if ($machine_name = $node->field_machine_name->value) {
       $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
     }
   }
 }
 
 /**
- * Implements hook_theme_suggestions_alter().
+ * Implements hook_theme_suggestions_HOOK_alter().
  */
-function parade_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
   // Add custom suggestions for Paragraph types with machine name.
-  if ($hook === 'paragraph') {
-    $attributes = Drupal::request()->attributes;
-    if ($attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-      if (method_exists($node, 'getType') && $node->getType() === 'parade' && $machine_name = $node->field_machine_name->value) {
-        foreach ($suggestions as $suggestion) {
-          $my_suggestions[] = $suggestion;
-          $my_suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
-        }
-        $suggestions = $my_suggestions;
+  // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
+  $attributes = Drupal::request()->attributes;
+  if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
+    $type = $node->getType();
+    foreach ($suggestions as $suggestion) {
+      if ($machine_name = $node->field_machine_name->value) {
+        $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
       }
     }
   }

@@ -1,3 +1,10 @@
-.page-node-type-parade-demo {
-  background: #fff;
+.page-node-type-parade-demo .paragraph.paragraph--view-mode--default {
+  clear: both;
+  padding: 40px 1em;
+  background-color: #fff;
+}
+
+.page-node-type-parade-demo .paragraph.paragraph--view-mode--default .paragraph-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
