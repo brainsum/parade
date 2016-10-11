@@ -176,6 +176,23 @@ function parade_theme($existing, $type, $theme, $path) {
       'template' => 'paragraph',
       'base hook' => 'paragraph',
     ],
+    'paragraph__text_box' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__text_boxes' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__images' => [
+      'template' => 'paragraph',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__image_text' => [
+      'template' => 'paragraph',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__tabs' => [
+      'base hook' => 'paragraph',
+    ],
     'paragraphs_dropbutton_wrapper' => [],
     'parade_preview' => [
       'variables' => ['paragraph' => NULL],
