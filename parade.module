@@ -17,6 +17,9 @@ use Drupal\Component\Utility\Html;
 function parade_preprocess_paragraph(&$variables) {
   $paragraph = &$variables['paragraph'];
 
+  // Attach libraries for each paragraph type.
+  $variables['#attached']['library'][] = 'parade/paragraphs.' . $paragraph->getType();
+
   // Pass the Anchor field value for the template.
   if ($paragraph->hasField('field_anchor') && $anchor = $paragraph->field_anchor->value) {
     $variables['attributes']['id'] = Html::getId($anchor);
@@ -73,6 +76,11 @@ function parade_preprocess_paragraph__header(&$variables) {
     $file_mime = $file->getMimeType();
     $file_path = parse_url(file_create_url($file_uri))['path'];
 
+    // Attach parallax library if the user enabled the effect.
+    if ($paragraph->hasField('field_enable_parallax') && $paragraph->field_enable_parallax->value == TRUE) {
+      $variables['#attached']['library'][] = 'parade/parallax';
+    }
+
     // @todo Maybe use this...?
     //
     // @code
@@ -89,6 +97,9 @@ function parade_preprocess_paragraph__header(&$variables) {
     }
     if (in_array($file_mime, ['video/mp4', 'application/mp4', 'video/webm'])) {
       $type = 'video';
+
+      // Attach video related libraries.
+      $variables['#attached']['library'][] = 'parade/inline-video';
 
       // Generate poster image for video if not exist.
       // @todo Move this to post node save!
@@ -194,7 +205,6 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
   // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
   $attributes = Drupal::request()->attributes;
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    $type = $node->getType();
     if ($machine_name = $node->field_machine_name->value) {
       foreach ($suggestions as $suggestion) {
         $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);

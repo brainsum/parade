@@ -13,5 +13,8 @@
     "gulp-eslint": "^3.0.1",
     "gulp-sass": "^2.3.2",
     "merge-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "iphone-inline-video": "^1.9.4"
   }
 }

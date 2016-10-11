@@ -8,3 +8,7 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.page-node-type-parade-demo .paragraph--type--header.paragraph--view-mode--default {
+  padding: 0;
+}

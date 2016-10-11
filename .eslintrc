@@ -14,7 +14,7 @@
     "Backbone": true,
     "Modernizr": true,
     "CKEDITOR": true,
-    "inlineVideo": true,
+    "makeVideoPlayableInline": true,
     "Rellax": true
   },
   "rules": {

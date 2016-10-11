@@ -8,19 +8,9 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
 .paragraph--type--header.paragraph--view-mode--default {
     padding: 0;
 
-    // Diagonal edge for the next paragraph.
-    + .paragraph {
-        ~ .paragraph {
-            position: relative;
-            z-index: 1;
-        }
-    }
-
     .background {
         position: relative;
-
         overflow: hidden;
-
         height: $parade-header-height;
         max-height: 100vh;
 
@@ -28,10 +18,11 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
         &::before {
             position: absolute;
             z-index: 1;
-            top: 0; right: 0; bottom: 0;left: 0;
-
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             content: ' ';
-
             background-color: $parade-header-overlay-bg;
         }
 
@@ -41,8 +32,10 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
             right: 0;
             bottom: 0;
             left: 0;
-
             text-align: center;
+            &.parallax {
+              top: -20%;
+            }
         }
 
         .background-video,
@@ -58,15 +51,6 @@ $parade-header-overlay-bg: rgba(103, 175, 225, .5);
                 repeat: no-repeat;
                 size: cover;
             }
-        }
-
-        .IIV::-webkit-media-controls-play-button,
-        .IIV::-webkit-media-controls-start-playback-button {
-            width: 5px;
-
-            pointer-events: none;
-
-            opacity: 0;
         }
     }
 

@@ -26,6 +26,23 @@ smooth-scroll:
   dependencies:
     - core/jquery
 
+inline-video:
+  version: VERSION
+  css:
+    base:
+      css/inline-video.css: {}
+  js:
+    js/inline-video.js: {}
+  dependencies:
+    - parade/vendor.iphone-inline-video
+
+parallax:
+  version: VERSION
+  js:
+    js/parallax.js: {}
+  dependencies:
+    - parade/vendor.rellax
+
 # Parade Paragraph types.
 paragraphs:
   version: VERSION
@@ -38,12 +55,8 @@ paragraphs.header:
   css:
     component:
       css/paragraphs.header.css: {}
-  js:
-    js/header.js: {}
   dependencies:
     - parade/paragraphs
-    - parade/vendor.rellax
-    - parade/vendor.inline-video
 
 paragraphs.simple:
   version: VERSION
@@ -112,4 +125,4 @@ vendor.iphone-inline-video:
     url: https://github.com/bfred-it/iphone-inline-video/blob/master/LICENSE
     gpl-compatible: true
   js:
-    https://raw.githubusercontent.com/bfred-it/iphone-inline-video/master/dist/iphone-inline-video.browser.js: { type: external, minified: true }
+    js/lib/iphone-inline-video.browser.js: { minified: true }

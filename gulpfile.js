@@ -6,21 +6,21 @@ var eslint = require('gulp-eslint');
 var autoprefixer = require('gulp-autoprefixer');
 var merge = require('merge-stream');
 
+var sassOptions = {
+  outputStyle: 'expanded'
+};
+
 gulp.task('sass', function () {
   var parade = gulp
     .src('sass/**/*.{scss,sass}')
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(csscomb())
     .pipe(gulp.dest('css'));
 
   var parade_demo = gulp
     .src('modules/parade_demo/sass/**/*.{scss,sass}')
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(csscomb())
     .pipe(gulp.dest('modules/parade_demo/css'));
@@ -54,6 +54,12 @@ gulp.task('eslint', function () {
     .pipe(eslint.format());
 
   return merge(parade, parade_demo);
+});
+
+gulp.task('copy', function () {
+  return gulp
+    .src('node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js')
+    .pipe(gulp.dest('js/lib'));
 });
 
 gulp.task('lint', ['csscomb', 'eslint']);

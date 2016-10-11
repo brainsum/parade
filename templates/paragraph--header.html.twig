@@ -7,7 +7,6 @@
  *       that supports both images and video!
  */
 #}
-{% set parallax = parade.enable_parallax %}
 {%
 set classes = [
   'paragraph',
@@ -17,27 +16,16 @@ set classes = [
 ]
 %}
 
-{# Attach library if Parallax is enabled #}
-{% if parallax %}
-  {{ attach_library('parade/paragraphs.header') }}
-{% endif %}
-
 <div{{ attributes.addClass(classes) }}>
   <div class="background">
 
     {# Header background #}
-    {% if parallax %}
-    <div class="background-wrapper parallax" data-rellax-speed="-7">
-    {% else %}
-    <div class="background-wrapper">
-    {% endif %}
-
+    <div class="background-wrapper{{ parade.enable_parallax ? ' parallax' : '' }}">
       {% if parade.background.type == 'image' %}
         <div class="background-image" style="background-image: url({{- parade.background.url -}})"></div>
       {% elseif parade.background.type == 'video' %}
-        <video class="background-video" autoplay muted loop webkit-playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
+        <video class="background-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
       {% endif %}
-
     </div>
 
     {# Header content within the container #}
