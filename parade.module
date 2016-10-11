@@ -193,7 +193,6 @@ function parade_theme($existing, $type, $theme, $path) {
     'paragraph__tabs' => [
       'base hook' => 'paragraph',
     ],
-    'paragraphs_dropbutton_wrapper' => [],
     'parade_preview' => [
       'variables' => ['paragraph' => NULL],
     ],
