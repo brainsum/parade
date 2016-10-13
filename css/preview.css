@@ -12,8 +12,3 @@ body.dialog-active {
   overflow-y: auto;
   padding: 0;
 }
-
-.ui-dialog.parade-preview-dialog > div,
-.ui-dialog-content.ui-widget-content > div {
-  height: 100%;
-}
