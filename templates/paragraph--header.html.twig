@@ -20,13 +20,15 @@ set classes = [
   <div class="background">
 
     {# Header background #}
-    <div class="background-wrapper{{ parade.enable_parallax ? ' parallax' : '' }}">
-      {% if parade.background.type == 'image' %}
-        <div class="background-image" style="background-image: url({{- parade.background.url -}})"></div>
-      {% elseif parade.background.type == 'video' %}
-        <video class="background-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
-      {% endif %}
-    </div>
+    {% if view_mode != 'preview' %}
+      <div class="background-wrapper{{ parade.enable_parallax ? ' parallax' : '' }}">
+        {% if parade.background.type == 'image' %}
+          <div class="background-image" style="background-image: url({{- parade.background.url -}})"></div>
+        {% elseif parade.background.type == 'video' %}
+          <video class="background-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
+        {% endif %}
+      </div>
+    {% endif %}
 
     {# Header content within the container #}
     <div class="paragraph-inner">
