@@ -28,10 +28,6 @@
   text-align: center;
 }
 
-.paragraph--type--header.paragraph--view-mode--default .background .background-wrapper.parallax {
-  top: -20%;
-}
-
 .paragraph--type--header.paragraph--view-mode--default .background .background-video,
 .paragraph--type--header.paragraph--view-mode--default .background .background-image {
   min-width: 100%;
