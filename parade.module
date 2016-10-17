@@ -59,6 +59,9 @@ function parade_preprocess_paragraph(&$variables) {
     if ($paragraph->hasField($field) && $layout_class = $paragraph->{$field}->value) {
       $variables['attributes']['class'][] = 'layout--' . $classes[$layout_class];
     }
+    else {
+      $variables['attributes']['class'][] = 'layout--none';
+    }
   }
 
 }
