@@ -51,6 +51,7 @@ function parade_preprocess_paragraph(&$variables) {
       2 => 'lot_infos',
       3 => 'lot_infos-grey',
       4 => 'text_icon',
+      5 => 'rounded_image',
     ],
   ];
 

@@ -25,6 +25,9 @@ settings:
     -
       value: 4
       label: 'Text with an icon'
+    -
+      value: 5
+      label: 'Rounded image'
   allowed_values_function: ''
 module: options
 locked: false
