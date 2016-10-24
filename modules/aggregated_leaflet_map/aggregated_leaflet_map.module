@@ -1,0 +1,40 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Load all Leaflet required client files and return markup for a map.
+ *
+ * @param array $map
+ * @param array $features
+ * @param string $height
+ *
+ * @return array render array
+ */
+function aggregated_leaflet_map_render_map($map, $features = array(), $height = '400px') {
+  /*
+   * @todo: @note
+   *  leaflet_render_map is called elsewhere, that could cause problems!
+   */
+  $map_id = Html::getUniqueId('leaflet_map');
+
+  $settings[$map_id] = array(
+    'mapId' => $map_id,
+    'map' => $map,
+  // JS only works with arrays, make sure we have one with numeric keys.
+    'features' => array_values($features),
+  );
+  return array(
+    '#theme' => 'leaflet_map',
+    '#map_id' => $map_id,
+    '#height' => $height,
+    '#map' => $map,
+    '#attached' => array(
+      // Customized JS for displaying features in a single map.
+      'library' => array('aggregated_leaflet_map/aggregated-leaflet-drupal'),
+      'drupalSettings' => array(
+        'leaflet' => $settings,
+      ),
+    ),
+  );
+}

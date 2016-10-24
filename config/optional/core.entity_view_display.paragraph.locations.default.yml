@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.locations.field_anchor
+    - field.field.paragraph.locations.field_geofield
+    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.field_text
+    - field.field.paragraph.locations.field_title
+    - paragraphs.paragraphs_type.locations
+  module:
+    - aggregated_leaflet_map
+    - text
+id: paragraph.locations.default
+targetEntityType: paragraph
+bundle: locations
+mode: default
+content:
+  field_geofield:
+    weight: 2
+    label: hidden
+    settings:
+      leaflet_map: 'OSM Mapnik'
+      zoom: '5'
+      minZoom: '0'
+      maxZoom: '18'
+      height: '400'
+      popup: '1'
+      icon:
+        icon_url: ''
+        shadow_url: ''
+        icon_size:
+          x: '0'
+          'y': '0'
+        icon_anchor:
+          x: '0'
+          'y': '0'
+        shadow_anchor:
+          x: '0'
+          'y': '0'
+        popup_anchor:
+          x: '0'
+          'y': '0'
+      minPossibleZoom: 0
+      maxPossibleZoom: 18
+    third_party_settings: {  }
+    type: leaflet_formatter_aggregated
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_anchor: true
+  field_location: true
+  uid: true

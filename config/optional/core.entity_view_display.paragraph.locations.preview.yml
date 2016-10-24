@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.locations.field_anchor
+    - field.field.paragraph.locations.field_geofield
+    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.field_text
+    - field.field.paragraph.locations.field_title
+    - paragraphs.paragraphs_type.locations
+id: paragraph.locations.preview
+targetEntityType: paragraph
+bundle: locations
+mode: preview
+content:
+  field_anchor:
+    type: string
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_geofield: true
+  field_location: true
+  field_text: true
+  uid: true
