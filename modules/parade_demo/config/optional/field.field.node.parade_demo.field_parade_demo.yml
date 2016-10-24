@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.header
     - paragraphs.paragraphs_type.image_text
     - paragraphs.paragraphs_type.images
+    - paragraphs.paragraphs_type.locations
     - paragraphs.paragraphs_type.simple
     - paragraphs.paragraphs_type.text_box
     - paragraphs.paragraphs_type.text_boxes
@@ -36,6 +37,7 @@ settings:
       text_box: text_box
       text_boxes: text_boxes
       images: images
+      locations: locations
     target_bundles_drag_drop:
       header:
         enabled: true
@@ -64,4 +66,7 @@ settings:
       parallax:
         weight: -12
         enabled: false
+      locations:
+        weight: -11
+        enabled: true
 field_type: entity_reference_revisions
