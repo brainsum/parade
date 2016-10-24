@@ -2,7 +2,7 @@ name: Aggregated leaflet map
 type: module
 description: Leaflet module formatter extension.
 core: 8.x
-package: Leaflet
+package: Parade
 
 dependencies:
   - leaflet
