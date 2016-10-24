@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\campaign_pages\Plugin\Field\FieldWidget;
+namespace Drupal\parade\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
