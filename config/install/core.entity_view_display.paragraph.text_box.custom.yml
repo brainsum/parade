@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.custom
+    - field.field.paragraph.text_box.field_image
+    - field.field.paragraph.text_box.field_text
+    - field.field.paragraph.text_box.field_title
+    - paragraphs.paragraphs_type.text_box
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: H-onrh08AtNhHMXwBh86qCwRo4Gxx5VcpwyE_kd76Ng
+id: paragraph.text_box.custom
+targetEntityType: paragraph
+bundle: text_box
+mode: custom
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true
