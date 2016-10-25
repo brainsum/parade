@@ -68,7 +68,7 @@ class ParadeEntityReferenceEntityFormatter extends EntityReferenceRevisionsEntit
       $view_mode = 'default';
       $field = 'field_text_boxes_layout';
       $entity = $items->getEntity();
-      // 5 - 'rounded_image'
+      // 5 - 'rounded_image'.
       if ($entity->hasField($field) && $entity->{$field}->value == 5) {
         $view_mode = 'custom';
       }
