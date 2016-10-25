@@ -1,0 +1,13 @@
+{
+  "name": "drupal/parade",
+  "description": "Provides the parade module",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/geocoder": "2.x-dev",
+    "drupal/geofield": "1.x-dev",
+    "drupal/leaflet": "1.x-dev",
+    "drupal/geocoder_autocomplete": "1.x-dev"
+  }
+}
