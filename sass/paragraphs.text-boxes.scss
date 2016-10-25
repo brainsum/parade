@@ -17,6 +17,72 @@
     //  background-color: $tieto-lightgrey;
     // }
 
+    &.layout--rounded_image {
+
+        .field--name-field-paragraphs {
+
+            .field--name-field-image {
+                float: left;
+                width: 34%;
+                padding: 20px 15px 0;
+                img {
+                    border-radius: 100%;
+                }
+            }
+            .field--name-field-title,
+            .field--name-field-text {
+                float: right;
+                width: 66%;
+            }
+            .field--name-field-title {
+                padding: 20px 15px 0;
+                margin-top: 0;
+            }
+            .field--name-field-text {
+                padding: 0 15px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .paragraph--type--text-box {
+                clear: both;
+                margin-bottom: 2rem;
+                &:after {
+                    visibility: hidden;
+                    display: block;
+                    font-size: 0;
+                    content: " ";
+                    clear: both;
+                    height: 0;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .field--name-field-paragraphs {
+
+                .field--name-field-image {
+                    float: none;
+                    width: 150px;
+                    margin: 0 auto;
+                }
+
+                .field--name-field-title,
+                .field--name-field-text {
+                    float: none;
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+    }
+
     @media screen and (max-width: 768px) {
         &.layout--lot_infos .paragraph--type--text-box {
             text-align: left;

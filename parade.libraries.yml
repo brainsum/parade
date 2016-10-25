@@ -90,11 +90,19 @@ paragraphs.images:
   dependencies:
     - parade/paragraphs
 
-paragraphs.text-boxes:
+paragraphs.text_boxes:
   version: VERSION
   css:
     component:
       css/paragraphs.text-boxes.css: {}
+  dependencies:
+    - parade/paragraphs
+
+paragraphs.locations:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.locations.css: {}
   dependencies:
     - parade/paragraphs
 

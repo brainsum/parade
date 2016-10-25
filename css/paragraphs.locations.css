@@ -1,0 +1,31 @@
+@media (min-width: 767px) {
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-title,
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-text,
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
+    width: 50%;
+  }
+}
+
+.paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
+  margin: 1em 0 0;
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
+    margin: 0;
+    text-align: right;
+  }
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-title,
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-text {
+    float: left;
+    text-align: left;
+  }
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
+    float: right;
+    padding-left: 1.5em;
+  }
+}

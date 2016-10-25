@@ -4,6 +4,59 @@
   text-align: center;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-image {
+  float: left;
+  width: 34%;
+  padding: 20px 15px 0;
+}
+
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-image img {
+  border-radius: 100%;
+}
+
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-title,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-text {
+  float: right;
+  width: 66%;
+}
+
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-title {
+  margin-top: 0;
+  padding: 20px 15px 0;
+}
+
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-text {
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .paragraph--type--text-box {
+    clear: both;
+    margin-bottom: 2rem;
+  }
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .paragraph--type--text-box:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-image {
+    float: none;
+    width: 150px;
+    margin: 0 auto;
+  }
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-title,
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-text {
+    float: none;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box {
     text-align: left;
