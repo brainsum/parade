@@ -9,7 +9,6 @@ dependencies:
     - field.field.paragraph.locations.field_title
     - paragraphs.paragraphs_type.locations
   module:
-    - content_moderation
     - geocoder_autocomplete
     - text
 id: paragraph.locations.default
