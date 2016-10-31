@@ -57,8 +57,8 @@ function parade_preprocess_paragraph(&$variables) {
 
   // Set CSS class for the selected layout.
   foreach ($layouts as $field => $classes) {
-    if ($paragraph->hasField($field) && $layout_class = $paragraph->{$field}->value) {
-      $variables['attributes']['class'][] = 'layout--' . $classes[$layout_class];
+    if ($paragraph->hasField($field) && isset($classes[$paragraph->{$field}->value])) {
+      $variables['attributes']['class'][] = 'layout--' . $classes[$paragraph->{$field}->value];
     }
     else {
       $variables['attributes']['class'][] = 'layout--none';
