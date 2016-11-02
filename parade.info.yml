@@ -16,3 +16,5 @@ dependencies:
   - aggregated_leaflet_map
   - geocoder_field
   - geocoder_geofield
+  - link
+  - options
