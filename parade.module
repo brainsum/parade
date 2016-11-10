@@ -279,3 +279,40 @@ function _parade_add_template_variable(&$variables, $data = NULL) {
 
   return $data;
 }
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Modify "Add sections".
+ */
+function parade_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['node_campaign_form', 'node_campaign_edit_form'])) {
+    // @todo get actual display mode instead of default
+    $settings = entity_get_form_display('node', 'campaign', 'default')->getComponent('field_paragraphs')['settings'];
+
+    if ($settings['add_mode'] === 'button') {
+      // Add title to the section
+      $form['field_paragraphs']['widget']['add_more']['title'] = [
+        '#type' => 'table',
+        // @todo get field label from content type.
+        '#header' => [t('Add @type', ['@type' => $form['field_paragraphs']['widget']['#title']])],
+        '#attributes' => [
+          'class' => ['paragraphs-add-sections-title'],
+        ],
+        '#weight' => -1,
+      ];
+
+      // Removes the "Add" word from the button values.
+      if (isset($form['field_paragraphs']['widget']['add_more'])) {
+        foreach ($form['field_paragraphs']['widget']['add_more'] as $key => &$item) {
+          if (strpos($key, 'add_more_button_') === 0) {
+            $arguments = $item['#value']->getArguments();
+            // Adding a context, so it's translatable separatly.
+            $options = ['context' => 'add_paragraph_type'];
+            $item['#value'] = t('@type', $arguments, $options);
+          }
+        }
+      }
+    }
+  }
+}

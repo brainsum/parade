@@ -4,11 +4,13 @@
  */
 
 .paragraphs-dropbutton-wrapper {
+  margin-top: 1em;
   text-align: center;
 
   .button.parade-button {
-    width: 23%;
-    margin-right: .5em;
+    width: calc(25% - .5em);
+    margin-left: .25em;
+    margin-right: .25em;
     padding: 80px 0 .7em;
     background-repeat: no-repeat !important;
     background-position: center .7em !important;
@@ -43,10 +45,6 @@
 
     + .ajax-progress {
       display: none;
-    }
-
-    &:first-child {
-      margin-right: .5em;
     }
   }
 }
