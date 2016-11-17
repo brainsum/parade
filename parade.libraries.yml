@@ -40,6 +40,9 @@ parallax:
   version: VERSION
   js:
     js/parallax.js: {}
+  css:
+    component:
+      css/parallax.css: {}
   dependencies:
     - parade/vendor.rellax
 
@@ -57,6 +60,15 @@ paragraphs.header:
       css/paragraphs.header.css: {}
   dependencies:
     - parade/paragraphs
+
+paragraphs.parallax:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.parallax.css: {}
+  dependencies:
+    - parade/paragraphs
+    - parade/parallax
 
 paragraphs.simple:
   version: VERSION

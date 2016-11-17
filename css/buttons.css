@@ -20,6 +20,10 @@
   background-size: 50px;
 }
 
+.paragraphs-dropbutton-wrapper .button.parade-button-parallax {
+  background-image: url("../images/parallax.png");
+}
+
 .paragraphs-dropbutton-wrapper .button.parade-button-image-text {
   background-image: url("../images/text-and-image.png");
 }

@@ -10,6 +10,7 @@
 {%
 set classes = [
   'paragraph',
+  parade.enable_parallax ? 'paragraph--parallax',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   'paragraph--background-' ~ parade.background.type|clean_class,

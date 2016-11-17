@@ -176,6 +176,9 @@ function parade_theme($existing, $type, $theme, $path) {
     'paragraph__header' => [
       'base hook' => 'paragraph',
     ],
+    'paragraph__parallax' => [
+      'base hook' => 'paragraph',
+    ],
     'paragraph__simple' => [
       'template' => 'paragraph',
       'base hook' => 'paragraph',
