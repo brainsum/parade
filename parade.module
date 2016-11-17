@@ -220,7 +220,7 @@ function parade_theme_suggestions_page_alter(array &$suggestions, array $variabl
   // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
   $attributes = Drupal::request()->attributes;
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    $type = $node->getType();
+    $type = is_object($node) && method_exists($node, 'getType') ? $node->getType() : 'parade';
     array_unshift($suggestions, 'page__node__' . $type);
     if ($machine_name = $node->field_machine_name->value) {
       $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
@@ -236,9 +236,11 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
   // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
   $attributes = Drupal::request()->attributes;
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    if ($machine_name = $node->field_machine_name->value) {
-      foreach ($suggestions as $suggestion) {
-        $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
+    if (is_object($node)) {
+      if ($machine_name = $node->field_machine_name->value) {
+        foreach ($suggestions as $suggestion) {
+          $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
+        }
       }
     }
   }
@@ -279,4 +281,41 @@ function _parade_add_template_variable(&$variables, $data = NULL) {
   }
 
   return $data;
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Modify "Add sections".
+ */
+function parade_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['node_campaign_form', 'node_campaign_edit_form'])) {
+    // @todo get actual display mode instead of default
+    $settings = entity_get_form_display('node', 'campaign', 'default')->getComponent('field_paragraphs')['settings'];
+
+    if ($settings['add_mode'] === 'button') {
+      // Add title to the section
+      $form['field_paragraphs']['widget']['add_more']['title'] = [
+        '#type' => 'table',
+        // @todo get field label from content type.
+        '#header' => [t('Add @type', ['@type' => $form['field_paragraphs']['widget']['#title']])],
+        '#attributes' => [
+          'class' => ['paragraphs-add-sections-title'],
+        ],
+        '#weight' => -1,
+      ];
+
+      // Removes the "Add" word from the button values.
+      if (isset($form['field_paragraphs']['widget']['add_more'])) {
+        foreach ($form['field_paragraphs']['widget']['add_more'] as $key => &$item) {
+          if (strpos($key, 'add_more_button_') === 0) {
+            $arguments = $item['#value']->getArguments();
+            // Adding a context, so it's translatable separatly.
+            $options = ['context' => 'add_paragraph_type'];
+            $item['#value'] = t('@type', $arguments, $options);
+          }
+        }
+      }
+    }
+  }
 }

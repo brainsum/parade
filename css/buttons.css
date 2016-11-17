@@ -3,12 +3,14 @@
  * Better paragraph buttons.
  */
 .paragraphs-dropbutton-wrapper {
+  margin-top: 1em;
   text-align: center;
 }
 
 .paragraphs-dropbutton-wrapper .button.parade-button {
-  width: 23%;
-  margin-right: 0.5em;
+  width: calc(25% - 0.5em);
+  margin-right: 0.25em;
+  margin-left: 0.25em;
   padding: 80px 0 0.7em;
   background-repeat: no-repeat !important;
   background-position: center 0.7em !important;
@@ -54,8 +56,4 @@
 
 .paragraphs-dropbutton-wrapper .button.parade-button + .ajax-progress {
   display: none;
-}
-
-.paragraphs-dropbutton-wrapper .button.parade-button:first-child {
-  margin-right: 0.5em;
 }
