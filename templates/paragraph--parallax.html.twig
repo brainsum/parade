@@ -1,14 +1,23 @@
+{#
+/**
+ * @file
+ */
+#}
 {%
 set classes = [
-	'paragraph',
+  'paragraph',
   'paragraph--parallax',
-	'paragraph--type--' ~ paragraph.bundle|clean_class,
-	view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  'paragraph--background-' ~ parade.background.type|clean_class,
 ]
 %}
-
-<div{{ attributes.addClass(classes) }} data-parallax="scroll" data-image-src="{{ file_url(content.field_background['#items'].entity.uri.value) }}" style="min-height: {{ content.field_minimum_height[0]['#markup'] }}">
+{% if view_mode != 'preview' %}
+<div{{ attributes.addClass(classes) }} data-parallax="scroll" data-image-src="{{- parade.background.url -}}">
+{% else %}
+<div{{ attributes.addClass(classes) }}>
+{% endif %}
   <section class="paragraph-inner">
-    {{ content.field_text }}
+    {{ content }}
   </section>
 </div>

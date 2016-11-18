@@ -2,27 +2,35 @@
  * @file
  * HEADER paragraph
  */
+.paragraph--type--header.paragraph--view-mode--default .bg-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.paragraph--type--header.paragraph--view-mode--default .bg-video,
+.paragraph--type--header.paragraph--view-mode--default .bg-image {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.paragraph--type--header.paragraph--view-mode--default .bg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.paragraph--type--header.paragraph--view-mode--default .IIV::-webkit-media-controls-play-button,
+.paragraph--type--header.paragraph--view-mode--default .IIV::-webkit-media-controls-start-playback-button {
+  width: 5px;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item,
 .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
   display: inline-block;
-}
-
-.paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
-  position: relative;
-  z-index: 20;
-  top: 50%;
-  right: 0;
-  left: 0;
-  width: 100%;
-  padding: 2em 1em;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-@media screen and (max-width: 768px) {
-  .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-  }
 }

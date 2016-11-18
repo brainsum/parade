@@ -65,16 +65,14 @@ function parade_preprocess_paragraph(&$variables) {
     }
   }
 
-}
+  // Parallax and background stuff for Header and Parallax types.
+  if (in_array($paragraph->getType(), ['header', 'parallax']) && $paragraph->hasField('field_background')) {
+    $target_id = $paragraph->field_background->target_id;
+    if (!$target_id) {
+      return;
+    }
 
-/**
- * Implements hook_preprocess_paragraph__header().
- */
-function parade_preprocess_paragraph__header(&$variables) {
-  $paragraph = &$variables['paragraph'];
-
-  // Get background file info.
-  if ($paragraph->hasField('field_background') && $target_id = $paragraph->field_background->target_id) {
+    // Get background file info.
     $file = File::load($target_id);
     $file_uri = $file->getFileUri();
     $file_mime = $file->getMimeType();
@@ -112,15 +110,18 @@ function parade_preprocess_paragraph__header(&$variables) {
       $poster = '/sites/default/files/paragraphs/background/' . $video_filename . '_poster.jpg';
 
       // @todo Don't try to run ffmpeg, if not available on the system.
-      if (!file_exists(DRUPAL_ROOT . $poster)) {
-        $ffmpeg = Drupal::service('php_ffmpeg')->create([
-          'loglevel' => 'quiet',
-        ]);
-        $video = $ffmpeg->open(drupal_realpath($file_uri));
+      // if (!file_exists(DRUPAL_ROOT . $poster)) {
+      //   $ffmpeg = Drupal::service('php_ffmpeg')->create([
+      //     'loglevel' => 'quiet',
+      //   ]);
+      //   $video = $ffmpeg->open(drupal_realpath($file_uri));
 
-        $video->frame(TimeCode::fromSeconds(0))->save(DRUPAL_ROOT . $poster);
-      }
+      //   $video->frame(TimeCode::fromSeconds(0))->save(DRUPAL_ROOT . $poster);
+      // }
     }
+
+    // Check field_enable_parallax field.
+    $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->field_enable_parallax->value : TRUE;
 
     // Add variables to theme.
     _parade_add_template_variable($variables, [
@@ -131,10 +132,18 @@ function parade_preprocess_paragraph__header(&$variables) {
         'poster' => $type === 'video' ? $poster : NULL,
       ],
 
-      'enable_parallax' => $paragraph->field_enable_parallax->value,
+      'enable_parallax' => $enable_parallax,
     ]);
   }
 }
+
+/**
+ * Implements hook_preprocess_paragraph__header().
+ */
+// function parade_preprocess_paragraph__header(&$variables) {
+//   $paragraph = &$variables['paragraph'];
+
+// }
 
 /**
  * Implements hook_preprocess_paragraph__text_box().

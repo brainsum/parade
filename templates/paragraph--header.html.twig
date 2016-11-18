@@ -17,24 +17,25 @@ set classes = [
 ]
 %}
 
+{% if parade.enable_parallax and parade.background.type != 'video' and view_mode != 'preview' %}
+{# @fixme alloww video parallax #}
+<div{{ attributes.addClass(classes) }} data-parallax="scroll" data-image-src="{{- parade.background.url -}}">
+{% else %}
 <div{{ attributes.addClass(classes) }}>
-  <div class="background">
-
-    {# Header background #}
-    {% if view_mode != 'preview' %}
-      <div class="background-wrapper{{ parade.enable_parallax ? ' parallax' : '' }}">
+{% endif %}
+  {% if view_mode != 'preview' %}
+    <div class="bg-wrapper">
+      {% if not parade.enable_parallax %}
         {% if parade.background.type == 'image' %}
-          <div class="background-image" style="background-image: url({{- parade.background.url -}})"></div>
-        {% elseif parade.background.type == 'video' %}
-          <video class="background-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
+          <div class="bg-image" style="background-image: url({{- parade.background.url -}});"></div>
         {% endif %}
-      </div>
-    {% endif %}
-
-    {# Header content within the container #}
-    <div class="paragraph-inner">
-      {{ content }}
+      {% endif %}
+      {% if parade.background.type == 'video' %}
+        <video class="bg-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
+      {% endif %}
     </div>
-
-  </div>
+  {% endif %}
+  <section class="paragraph-inner">
+    {{ content }}
+  </section>
 </div>

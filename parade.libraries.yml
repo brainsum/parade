@@ -38,13 +38,11 @@ inline-video:
 
 parallax:
   version: VERSION
-  js:
-    js/parallax.js: {}
   css:
     component:
       css/parallax.css: {}
   dependencies:
-    - parade/vendor.rellax
+    - parade/vendor.parallax
 
 # Parade Paragraph types.
 paragraphs:
@@ -119,15 +117,15 @@ paragraphs.locations:
     - parade/paragraphs
 
 # Vendor libraries needed for some paragraph types.
-vendor.rellax:
-  remote: https://github.com/dixonandmoe/rellax
-  version: 0.1.0
+vendor.parallax:
+  remote: https://github.com/pixelcog/parallax.js/
+  version: 1.4.2
   license:
     name: MIT
-    url: https://github.com/dixonandmoe/rellax/blob/master/LICENSE
+    url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
     gpl-compatible: true
   js:
-    //cdnjs.cloudflare.com/ajax/libs/rellax/0.1.0/rellax.min.js: { type: external, minified: true }
+    //cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js: { type: external, minified: true }
 
 vendor.iphone-inline-video:
   remote: https://github.com/bfred-it/iphone-inline-video
