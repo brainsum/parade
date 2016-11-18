@@ -53,15 +53,19 @@ function parade_preprocess_paragraph(&$variables) {
       4 => 'text_icon',
       5 => 'rounded_image',
     ],
+    'field_text_box_layout' => [
+      0 => 'normal',
+      1 => 'blue',
+      2 => 'red',
+      3 => 'orange',
+      4 => 'green',
+    ],
   ];
 
   // Set CSS class for the selected layout.
   foreach ($layouts as $field => $classes) {
     if ($paragraph->hasField($field) && isset($classes[$paragraph->{$field}->value])) {
       $variables['attributes']['class'][] = 'layout--' . $classes[$paragraph->{$field}->value];
-    }
-    else {
-      $variables['attributes']['class'][] = 'layout--none';
     }
   }
 
