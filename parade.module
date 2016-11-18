@@ -52,6 +52,7 @@ function parade_preprocess_paragraph(&$variables) {
       3 => 'lot_infos-grey',
       4 => 'text_icon',
       5 => 'rounded_image',
+      6 => 'contacts',
     ],
     'field_text_box_layout' => [
       0 => 'normal',
