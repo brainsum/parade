@@ -144,14 +144,6 @@ function parade_preprocess_paragraph(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_paragraph__header().
- */
-// function parade_preprocess_paragraph__header(&$variables) {
-//   $paragraph = &$variables['paragraph'];
-
-// }
-
-/**
  * Implements hook_preprocess_paragraph__text_box().
  */
 function parade_preprocess_paragraph__text_box(&$variables) {
