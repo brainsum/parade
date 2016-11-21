@@ -81,13 +81,13 @@ paragraphs.simple:
   dependencies:
     - parade/paragraphs
 
-# paragraphs.tabs:
-#   version: VERSION
-#   css:
-#     component:
-#       css/paragraphs.tabs.css: {}
-#   dependencies:
-#     - parade/paragraphs
+paragraphs.social_links:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.social-links.css: {}
+  dependencies:
+    - parade/paragraphs
 
 paragraphs.image-text:
   version: VERSION

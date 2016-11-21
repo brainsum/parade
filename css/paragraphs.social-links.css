@@ -1,0 +1,50 @@
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link {
+  text-align: center;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .field__item {
+  display: inline-block;
+  color: transparent;
+  border: 0;
+  background-color: transparent;
+  text-shadow: none;
+  font: 0/0 a;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .field__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social {
+  display: block;
+  width: 42px;
+  height: 42px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  border-radius: 50%;
+  background-color: #aaa;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social:hover {
+  -webkit-transform: scale(1.1) translateZ(0);
+  transform: scale(1.1) translateZ(0);
+  background-color: #ddd;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-facebook {
+  background: url("../images/facebook.svg") no-repeat center center;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-twitter {
+  background: url("../images/twitter.svg") no-repeat center center;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-linkedin {
+  background: url("../images/linkedin.svg") no-repeat center center;
+}
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-google {
+  background: url("../images/gplus.svg") no-repeat center center;
+}
