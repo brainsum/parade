@@ -19,15 +19,20 @@ set classes = [
 <div{{ attributes.addClass(classes) }} >
 
   {% if view_mode != 'preview' %}
-    <div class="bg-wrapper">
+    <div class="bg-wrapper bg-fullsize">
+
       {% if parade.background.type == 'image' %}
+        {# For responsive parallax effect and fixed height, we need this wrapper #}
         {% if parade.enable_parallax %}
-          <img class="bg-image bg-parallax" src="{{- parade.background.url -}}">
-        {% else %}
-          <div class="bg-image bg-static" style="background-image: url({{- parade.background.url -}});"></div>
+        <div class="bg-fullsize bg-parallax">
         {% endif %}
+          <div class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
+        {% if parade.enable_parallax %}
+        </div>
+        {% endif %}
+
       {% elseif parade.background.type == 'video' %}
-        <video class="bg-video bg-parallax" autoplay muted loop playsinline poster="{{ parade.background.poster }}">
+        <video class="bg-video bg-fullsize{{ parade.enable_parallax ? ' bg-parallax' }}" autoplay muted loop playsinline poster="{{ parade.background.poster }}">
           <source src="{{ parade.background.url }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
           <img src="{{ parade.background.poster }}" title="Your browser does not support the <video> tag">
         </video>

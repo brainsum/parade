@@ -5,36 +5,26 @@
 
 .paragraph--type--header.paragraph--view-mode--default {
 
-  // @todo move these, not needed to all paragraphs
-  // .bg-wrapper {
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   top: 0;
-  //   right: 0;
-  // }
+  .bg-fullsize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
-  .bg-video {
-    &.bg-static {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+  .bg-video, .bg-image {
+    min-width: 100%;
+    min-height: 100%;
   }
 
   .bg-image {
-    &.bg-static {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    &.bg-parallax {
-      display: block;
-      // max-height: 100%;
-    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
+  // iPhone inline video stuff.
   .IIV::-webkit-media-controls-play-button,
   .IIV::-webkit-media-controls-start-playback-button {
     opacity: 0;
