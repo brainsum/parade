@@ -1,6 +1,7 @@
 # README.md
 
 Parade is a module to create pre-customized paragraphs in your content.
+It's based on https://www.drupal.org/project/paragraphs .
 
 ## INSTALLATION
 
