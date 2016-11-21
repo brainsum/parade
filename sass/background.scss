@@ -1,4 +1,8 @@
 .paragraph.paragraph--view-mode--default {
+  .bg-wrapper {
+      overflow: hidden;
+  }
+  
   .bg-fullsize {
     position: absolute;
     top: 0;
