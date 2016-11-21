@@ -60,7 +60,7 @@ gulp.task('copy', function () {
   return gulp
     .src([
       'node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js',
-      'node_modules/background-video/dist/backgroundVideo.js',
+      'node_modules/rellax/rellax.min.js',
     ])
     .pipe(gulp.dest('js/lib'));
 });

@@ -6,20 +6,24 @@
 {%
 set classes = [
   'paragraph',
-  'paragraph--parallax',
+  parade.enable_parallax ? 'paragraph--parallax',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<section{{ attributes.addClass(classes) }}>
 
   {% if view_mode != 'preview' %}
-    <div class="bg-wrapper">
-      <img class="bg-image bg-parallax" src="{{- parade.background.url -}}">
+    {% if parade.enable_parallax %}
+    <div class="bg-fullsize bg-parallax">
+    {% endif %}
+      <div class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
+    {% if parade.enable_parallax %}
     </div>
+    {% endif %}
   {% endif %}
 
-  <section class="paragraph-inner">
+  <div class="paragraph-inner">
     {{ content }}
-  </section>
-</div>
+  </div>
+</section>

@@ -16,7 +16,7 @@ set classes = [
 ]
 %}
 
-<div{{ attributes.addClass(classes) }} >
+<section{{ attributes.addClass(classes) }} >
 
   {% if view_mode != 'preview' %}
     <div class="bg-wrapper bg-fullsize">
@@ -40,7 +40,7 @@ set classes = [
     </div>
   {% endif %}
 
-  <section class="paragraph-inner">
+  <div class="paragraph-inner">
     {{ content }}
-  </section>
-</div>
+  </div>
+</section>

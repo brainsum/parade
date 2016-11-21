@@ -2,9 +2,6 @@
   min-height: 200px;
 }
 
-.paragraph--type--parallax.paragraph--view-mode--default .bg-wrapper {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.paragraph--type--parallax.paragraph--view-mode--default .paragraph-inner {
+  position: relative;
 }

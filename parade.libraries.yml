@@ -1,3 +1,4 @@
+# Admin UI
 preview:
   version: VERSION
   js:
@@ -19,6 +20,7 @@ buttons:
     component:
       css/buttons.css: {}
 
+# Utilities and UX
 smooth-scroll:
   version: VERSION
   js:
@@ -38,13 +40,17 @@ inline-video:
 
 parallax:
   version: VERSION
-  css:
-    component:
-      css/parallax.css: {}
   js:
     js/parallax.js: {}
   dependencies:
     - parade/vendor.rellax
+    - parade/background
+
+background:
+  version: VERSION
+  css:
+    theme:
+      css/background.css: {}
 
 # Parade Paragraph types.
 paragraphs:
@@ -60,18 +66,16 @@ paragraphs.header:
       css/paragraphs.header.css: {}
   dependencies:
     - parade/paragraphs
+    - parade/background
 
 paragraphs.parallax:
   version: VERSION
   css:
     component:
       css/paragraphs.parallax.css: {}
-  js:
-    js/parallax.js: {}
   dependencies:
     - parade/paragraphs
-    - parade/parallax
-    - parade/vendor.stellar
+    - parade/background
 
 paragraphs.simple:
   version: VERSION
@@ -123,14 +127,14 @@ paragraphs.locations:
 
 # Vendor libraries needed for some paragraph types.
 vendor.rellax:
-  remote: https://github.com/pixelcog/parallax.js/
-  version: 1.4.2
+  remote: https://github.com/dixonandmoe/rellax
+  version: 0.1.0
   license:
     name: MIT
-    url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
+    url: https://github.com/dixonandmoe/rellax/blob/master/LICENSE
     gpl-compatible: true
   js:
-    //cdnjs.cloudflare.com/ajax/libs/rellax/0.1.0/rellax.min.js: { type: external, minified: true }
+    js/lib/rellax.min.js: { minified: true }
 
 vendor.iphone-inline-video:
   remote: https://github.com/bfred-it/iphone-inline-video
@@ -142,14 +146,3 @@ vendor.iphone-inline-video:
   js:
     js/lib/iphone-inline-video.browser.js: { minified: true }
 
-# vendor.stellar:
-#   remote: https://github.com/pixelcog/parallax.js/
-#   version: 0.6.2
-#   license:
-#     name: MIT
-#     url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
-#     gpl-compatible: true
-#   js:
-#     //cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js: { type: external, minified: true }
-#   dependencies:
-#     - core/jquery

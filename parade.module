@@ -127,7 +127,8 @@ function parade_preprocess_paragraph(&$variables) {
       }
 
       // Check field_enable_parallax field.
-      $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->field_enable_parallax->value : TRUE;
+      $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->field_enable_parallax->value : FALSE;
+
       // Add variables to theme.
       _parade_add_template_variable($variables, [
         'background' => [
