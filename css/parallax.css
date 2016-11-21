@@ -1,0 +1,7 @@
+.paragraph--parallax.paragraph--view-mode--default {
+  overflow: hidden;
+}
+
+.paragraph--parallax.paragraph--view-mode--default .paragraph-inner {
+  position: relative;
+}

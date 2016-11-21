@@ -9,14 +9,16 @@ set classes = [
   'paragraph--parallax',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'paragraph--background-' ~ parade.background.type|clean_class,
 ]
 %}
-{% if view_mode != 'preview' %}
-<div{{ attributes.addClass(classes) }} data-parallax="scroll" data-image-src="{{- parade.background.url -}}">
-{% else %}
 <div{{ attributes.addClass(classes) }}>
-{% endif %}
+
+  {% if view_mode != 'preview' %}
+    <div class="bg-wrapper">
+      <img class="bg-image bg-parallax" src="{{- parade.background.url -}}">
+    </div>
+  {% endif %}
+
   <section class="paragraph-inner">
     {{ content }}
   </section>

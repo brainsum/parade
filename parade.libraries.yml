@@ -41,8 +41,10 @@ parallax:
   css:
     component:
       css/parallax.css: {}
+  js:
+    js/parallax.js: {}
   dependencies:
-    - parade/vendor.parallax
+    - parade/vendor.rellax
 
 # Parade Paragraph types.
 paragraphs:
@@ -64,9 +66,12 @@ paragraphs.parallax:
   css:
     component:
       css/paragraphs.parallax.css: {}
+  js:
+    js/parallax.js: {}
   dependencies:
     - parade/paragraphs
     - parade/parallax
+    - parade/vendor.stellar
 
 paragraphs.simple:
   version: VERSION
@@ -76,13 +81,13 @@ paragraphs.simple:
   dependencies:
     - parade/paragraphs
 
-paragraphs.tabs:
-  version: VERSION
-  css:
-    component:
-      css/paragraphs.tabs.css: {}
-  dependencies:
-    - parade/paragraphs
+# paragraphs.tabs:
+#   version: VERSION
+#   css:
+#     component:
+#       css/paragraphs.tabs.css: {}
+#   dependencies:
+#     - parade/paragraphs
 
 paragraphs.image-text:
   version: VERSION
@@ -117,7 +122,7 @@ paragraphs.locations:
     - parade/paragraphs
 
 # Vendor libraries needed for some paragraph types.
-vendor.parallax:
+vendor.rellax:
   remote: https://github.com/pixelcog/parallax.js/
   version: 1.4.2
   license:
@@ -125,7 +130,7 @@ vendor.parallax:
     url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
     gpl-compatible: true
   js:
-    //cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js: { type: external, minified: true }
+    //cdnjs.cloudflare.com/ajax/libs/rellax/0.1.0/rellax.min.js: { type: external, minified: true }
 
 vendor.iphone-inline-video:
   remote: https://github.com/bfred-it/iphone-inline-video
@@ -136,3 +141,15 @@ vendor.iphone-inline-video:
     gpl-compatible: true
   js:
     js/lib/iphone-inline-video.browser.js: { minified: true }
+
+# vendor.stellar:
+#   remote: https://github.com/pixelcog/parallax.js/
+#   version: 0.6.2
+#   license:
+#     name: MIT
+#     url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
+#     gpl-compatible: true
+#   js:
+#     //cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js: { type: external, minified: true }
+#   dependencies:
+#     - core/jquery

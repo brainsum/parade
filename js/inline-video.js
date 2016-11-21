@@ -6,7 +6,7 @@
 (function (makeVideoPlayableInline) {
   'use strict';
 
-  var video = document.querySelector('.background-video');
+  var video = document.querySelector('.bg-video');
   makeVideoPlayableInline(video, !video.hasAttribute('muted'));
 
 })(makeVideoPlayableInline);

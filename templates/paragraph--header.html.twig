@@ -13,28 +13,28 @@ set classes = [
   parade.enable_parallax ? 'paragraph--parallax',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'paragraph--background-' ~ parade.background.type|clean_class,
 ]
 %}
 
-{% if parade.enable_parallax and parade.background.type != 'video' and view_mode != 'preview' %}
-{# @fixme alloww video parallax #}
-<div{{ attributes.addClass(classes) }} data-parallax="scroll" data-image-src="{{- parade.background.url -}}">
-{% else %}
-<div{{ attributes.addClass(classes) }}>
-{% endif %}
+<div{{ attributes.addClass(classes) }} >
+
   {% if view_mode != 'preview' %}
     <div class="bg-wrapper">
-      {% if not parade.enable_parallax %}
-        {% if parade.background.type == 'image' %}
-          <div class="bg-image" style="background-image: url({{- parade.background.url -}});"></div>
+      {% if parade.background.type == 'image' %}
+        {% if parade.enable_parallax %}
+          <img class="bg-image bg-parallax" src="{{- parade.background.url -}}">
+        {% else %}
+          <div class="bg-image bg-static" style="background-image: url({{- parade.background.url -}});"></div>
         {% endif %}
-      {% endif %}
-      {% if parade.background.type == 'video' %}
-        <video class="bg-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
+      {% elseif parade.background.type == 'video' %}
+        <video class="bg-video bg-parallax" autoplay muted loop playsinline poster="{{ parade.background.poster }}">
+          <source src="{{ parade.background.url }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+          <img src="{{ parade.background.poster }}" title="Your browser does not support the <video> tag">
+        </video>
       {% endif %}
     </div>
   {% endif %}
+
   <section class="paragraph-inner">
     {{ content }}
   </section>

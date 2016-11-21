@@ -58,7 +58,10 @@ gulp.task('eslint', function () {
 
 gulp.task('copy', function () {
   return gulp
-    .src('node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js')
+    .src([
+      'node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js',
+      'node_modules/background-video/dist/backgroundVideo.js',
+    ])
     .pipe(gulp.dest('js/lib'));
 });
 
@@ -69,4 +72,5 @@ gulp.task('watch', ['lint'], function () {
   gulp.watch('**/js/**/*.js', ['eslint']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('compile', ['sass', 'lint']);
+gulp.task('default', ['compile']);

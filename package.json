@@ -15,6 +15,7 @@
     "merge-stream": "^1.0.0"
   },
   "dependencies": {
-    "iphone-inline-video": "^1.9.4"
+    "iphone-inline-video": "^1.9.4",
+    "rellax": "^0.1.0"
   }
 }

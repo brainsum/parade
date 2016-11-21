@@ -1,4 +1,10 @@
 .paragraph--type--parallax.paragraph--view-mode--default {
   min-height: 200px;
-  background: 0 !important;
+}
+
+.paragraph--type--parallax.paragraph--view-mode--default .bg-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
