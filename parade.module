@@ -312,10 +312,10 @@ function parade_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_st
 
     if ($settings['add_mode'] === 'button') {
       // Add title to the section
+      $field_label = $form['field_paragraphs']['widget']['title']['#value'] ?? $form['field_paragraphs']['widget']['#title'];
       $form['field_paragraphs']['widget']['add_more']['title'] = [
         '#type' => 'table',
-        // @todo get field label from content type.
-        '#header' => [t('Add @type', ['@type' => $form['field_paragraphs']['widget']['#title']])],
+        '#header' => [t('Add @type', ['@type' => $field_label])],
         '#attributes' => [
           'class' => ['paragraphs-add-sections-title'],
         ],
