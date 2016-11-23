@@ -66,7 +66,14 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       return $element;
     }
 
+    /** @var Paragraph $paragraphs_entity */
     $paragraphs_entity = $widget_state['paragraphs'][$delta]['entity'];
+
+    // Locations paragraph type review is bugged.
+    if ('locations' == $paragraphs_entity->getType()) {
+      return $element;
+    }
+
     $element_parents = array_merge($parents, [$field_name, $delta]);
     $id_prefix = implode('-', $element_parents);
 
