@@ -8,15 +8,19 @@ dependencies:
     - paragraphs.paragraphs_type.image_text
     - paragraphs.paragraphs_type.images
     - paragraphs.paragraphs_type.locations
+    - paragraphs.paragraphs_type.marketo_form
+    - paragraphs.paragraphs_type.marketo_poll
     - paragraphs.paragraphs_type.simple
     - paragraphs.paragraphs_type.text_box
     - paragraphs.paragraphs_type.text_boxes
-  module:
-    - entity_reference_revisions
-    - parade_demo
   enforced:
     module:
       - parade_demo
+  module:
+    - entity_reference_revisions
+    - parade
+_core:
+  default_config_hash: QSRQMFtTCFCbCAbrorUeTATJLIC8WxbImP-8mEWxlus
 id: node.parade_demo.field_parade_demo
 field_name: field_parade_demo
 entity_type: node
@@ -38,6 +42,8 @@ settings:
       text_boxes: text_boxes
       images: images
       locations: locations
+      marketo_form: marketo_form
+      marketo_poll: marketo_poll
     target_bundles_drag_drop:
       header:
         enabled: true
@@ -67,6 +73,12 @@ settings:
         weight: -12
         enabled: false
       locations:
-        weight: -11
         enabled: true
+        weight: -11
+      marketo_form:
+        enabled: true
+        weight: -10
+      marketo_poll:
+        enabled: true
+        weight: -9
 field_type: entity_reference_revisions
