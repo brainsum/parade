@@ -9,6 +9,7 @@ dependencies:
   - machine_name
   - php_ffmpeg
   - image
+  - text
   - geocoder
   - geocoder_autocomplete
   - geofield

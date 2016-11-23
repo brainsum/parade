@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a marketo_form field.
+ *
+ * Available variables:
+ * - forms: field items:
+      - subscription_url
+      - munchkin_id
+      - form_id
+ * - entity: items getEntity
+ *
+ * @ingroup themeable
+ */
+#}
+{% for form in forms %}
+    <script src="//{{ form.subscription_url }}/js/forms2/js/forms2.js"></script>
+    <form id="mktoForm_{{ form.form_id }}"></form>
+    <script>
+        MktoForms2.loadForm("//{{ form.subscription_url }}", "{{ form.munchkin_id }}", {{ form.form_id }});
+    </script>
+{% endfor %}

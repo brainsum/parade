@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Defines Marketo Form field type.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function marketo_poll_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'marketo_poll.page.link':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>Marketo Poll integration</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function marketo_poll_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__marketo_poll' => [
+      'template' => 'paragraph',
+      'base hook' => 'paragraph',
+      'path' => drupal_get_path('module', 'parade') . '/templates',
+    ],
+    'marketo_poll_field' => [
+      'variables' => [
+        'polls' => NULL,
+        'entity' => NULL,
+      ],
+    ],
+  ];
+}
