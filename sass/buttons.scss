@@ -45,6 +45,12 @@
     &-locations {
       background-image: url('../images/locations.png');
     }
+    &-marketo-form {
+      background-image: url('../images/form.png');
+    }
+    &-marketo-poll {
+      background-image: url('../images/poll.png');
+    }
 
     + .ajax-progress {
       display: none;

@@ -54,6 +54,14 @@
   background-image: url("../images/locations.png");
 }
 
+.paragraphs-dropbutton-wrapper .button.parade-button-marketo-form {
+  background-image: url("../images/form.png");
+}
+
+.paragraphs-dropbutton-wrapper .button.parade-button-marketo-poll {
+  background-image: url("../images/poll.png");
+}
+
 .paragraphs-dropbutton-wrapper .button.parade-button + .ajax-progress {
   display: none;
 }
