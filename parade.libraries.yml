@@ -134,6 +134,8 @@ vendor.rellax:
     url: https://github.com/dixonandmoe/rellax/blob/master/LICENSE
     gpl-compatible: true
   js:
+    //cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js: { external: true, browsers: { IE: 'lte IE 11' }, minified: true }
+    //cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-sham.min.js: { external: true, browsers: { IE: 'lte IE 11' }, minified: true }
     js/lib/rellax.min.js: { minified: true }
 
 vendor.iphone-inline-video:
