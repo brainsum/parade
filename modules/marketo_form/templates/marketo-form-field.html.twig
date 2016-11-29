@@ -16,7 +16,20 @@
 {% for form in forms %}
     <script src="//{{ form.subscription_url }}/js/forms2/js/forms2.js"></script>
     <form id="mktoForm_{{ form.form_id }}"></form>
-    <script>
-        MktoForms2.loadForm("//{{ form.subscription_url }}", "{{ form.munchkin_id }}", {{ form.form_id }});
-    </script>
+    {% if entity.field_enable_confirm_message.value and entity.rendered_confirmation_message %}
+        <script>
+            MktoForms2.loadForm("//{{ form.subscription_url }}", "{{ form.munchkin_id }}", {{ form.form_id }}, function(form) {
+                form.onSuccess(function(values, followUpUrl) {
+                    form.getFormElem().hide();
+                    document.getElementById('marketo_confirmform_{{ form.form_id }}').style.visibility = 'visible';
+                    return false;
+                });
+            });
+        </script>
+        <div id="marketo_confirmform_{{ form.form_id }}" style="visibility: hidden;">{{ entity.rendered_confirmation_message }}</div>
+    {% else %}
+        <script>
+            MktoForms2.loadForm("//{{ form.subscription_url }}", "{{ form.munchkin_id }}", {{ form.form_id }});
+        </script>
+    {% endif %}
 {% endfor %}

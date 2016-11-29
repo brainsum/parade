@@ -5,13 +5,6 @@
  * Functionality for LinkedIn Autofill.
  */
 
-/*
- * @todo: CLEANUP
- * tieto_admin/template/field/marketoformfield
- * tieto_admin.libraries.yml
- * tieto_admin.theme
- */
-
 /**
  * Implements hook_preprocess_paragraph__marketo_form().
  *
