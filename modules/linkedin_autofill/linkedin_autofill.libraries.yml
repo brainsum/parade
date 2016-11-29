@@ -1,0 +1,13 @@
+add-tag-to-head:
+  js:
+    js/add_tag_to_head.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+# LinkedIn Autofill
+# https://developer.linkedin.com/plugins/autofill#!
+# You can't add a remote field witout adding a license, and LinkedIn doesn't provide information about license
+vendor.linkedin-autofill:
+  js:
+    https://www.linkedin.com/autofill/js/autofill.js: { type: external, attributes: { async: true } }

@@ -1,0 +1,8 @@
+name: LinkedIn Autofill
+type: module
+description: LinkedIn Autofill functionality
+core: 8.x
+package: Paragraphs
+
+dependencies:
+  - marketo_form

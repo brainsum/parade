@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Functionality for LinkedIn Autofill.
+ */
+
+/*
+ * @todo: CLEANUP
+ * tieto_admin/template/field/marketoformfield
+ * tieto_admin.libraries.yml
+ * tieto_admin.theme
+ */
+
+/**
+ * Implements hook_preprocess_paragraph__marketo_form().
+ *
+ * {@inheritdoc}
+ */
+function linkedin_autofill_preprocess_paragraph__marketo_form(&$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $entity */
+  $entity = $variables['paragraph'];
+  $marketoFormId = $entity->get('field_marketo_form')->getValue()[0]['form_id'];
+
+  // Attach LinkedIn autofill library.
+  $variables['#attached']['library'][] = 'linkedin_autofill/vendor.linkedin-autofill';
+  $variables['#attached']['library'][] = 'linkedin_autofill/add-tag-to-head';
+  $variables['#attached']['drupalSettings']['addTagToHead']['dataFormId'] = $marketoFormId;
+}
