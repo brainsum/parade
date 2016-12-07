@@ -1,0 +1,11 @@
+uuid: fa364cea-be86-4c6b-82dc-c8a6b187c210
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.color_schemes
+id: taxonomy_term.color_schemes
+target_entity_type_id: taxonomy_term
+target_bundle: color_schemes
+default_langcode: site_default
+language_alterable: false

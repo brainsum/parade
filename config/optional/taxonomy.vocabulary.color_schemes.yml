@@ -1,0 +1,9 @@
+uuid: 35eab81f-a210-4213-a76d-a12e4185cada
+langcode: en
+status: true
+dependencies: {  }
+name: 'Color Schemes'
+vid: color_schemes
+description: 'Predefined color settings which are based on Tieto corporative styleguides.'
+hierarchy: 0
+weight: 0
