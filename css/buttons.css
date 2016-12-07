@@ -62,6 +62,14 @@
   background-image: url("../images/poll.png");
 }
 
+.paragraphs-dropbutton-wrapper .button.parade-button-parallax {
+  background-image: url("../images/background.png");
+}
+
+.paragraphs-dropbutton-wrapper .button.parade-button-social-links {
+  background-image: url("../images/social-links.png");
+}
+
 .paragraphs-dropbutton-wrapper .button.parade-button + .ajax-progress {
   display: none;
 }
