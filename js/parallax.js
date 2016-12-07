@@ -6,6 +6,11 @@
 (function ($) {
   'use strict';
 
-  var rellax = new Rellax('.bg-parallax', { speed: -4 });
+  try {
+    var rellax = new Rellax('.bg-parallax', { speed: -4 });
+  }
+  catch (e) {
+    // Sshhh...
+  }
 
 })(jQuery);
