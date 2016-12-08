@@ -19,7 +19,7 @@
         return;
       }
 
-      var $colorpickers = $('input.colorpicker');
+      var $colorpickers = $('input[type="color"]');
 
       // @todo Make the options extendable by the theme.
       $colorpickers.spectrum({

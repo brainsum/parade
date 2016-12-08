@@ -87,9 +87,6 @@ class ParadeSettingsForm extends ConfigFormBase {
         '#title' => $this->t('Background color'),
         '#title_display' => 'invisible',
         '#default_value' => '#ffffff',
-        '#attributes' => [
-          'class' => ['colorpicker'],
-        ],
       );
 
       // Text color field.
@@ -98,9 +95,6 @@ class ParadeSettingsForm extends ConfigFormBase {
         '#title' => $this->t('Text color'),
         '#title_display' => 'invisible',
         '#default_value' => '#ffffff',
-        '#attributes' => [
-          'class' => ['colorpicker'],
-        ],
       );
 
       // Link color field.
@@ -109,9 +103,6 @@ class ParadeSettingsForm extends ConfigFormBase {
         '#title' => $this->t('Link color'),
         '#title_display' => 'invisible',
         '#default_value' => '#ffffff',
-        '#attributes' => [
-          'class' => ['colorpicker'],
-        ],
       );
 
       // Preview.
