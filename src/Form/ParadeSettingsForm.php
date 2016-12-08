@@ -59,43 +59,101 @@ class ParadeSettingsForm extends ConfigFormBase {
       '#open' => TRUE,
     );
 
-    $form['color_schemes']['color_picker'] = array(
-      '#type' => 'color',
-      '#default_value' => '#ffffff',
-      '#attributes' => [
-        'class' => ['colorpicker'],
+    $form['color_schemes']['colors'] = array(
+      '#type' => 'table',
+      '#header' => [
+        $this->t('Name'),
+        $this->t('Background'),
+        $this->t('Text'),
+        $this->t('Link'),
+        $this->t('Preview'),
       ],
     );
 
-    $form['palette'] = array(
-      '#type' => 'vertical_tabs',
-      '#prefix' => '[TODO] Write help text here for the color palette. This will list all the loaded SASS colors found in the default theme.',
-    );
+    // @todo Populate the form with data from parade.settings config object.
+    for ($i = 0; $i < 10; ++$i) {
 
-    $test_colors = [
-      'blue' => [1,2,3,4],
-      'red' => [5,6,7,8],
-    ];
-
-    $i = 0;
-    foreach ($test_colors as $group => $items) {
-      $form["palette[$i]"] = array(
-        '#type' => 'details',
-        '#title' => $group,
-        '#tab_summary' => 'asdasdf',
-        '#group' => 'palette',
-        '#open' => TRUE,
+      // Name field.
+      $form['color_schemes']['colors'][$i]['name'] = array(
+        '#type' => 'textfield',
+        '#size' => 20,
+        '#title' => $this->t('Scheme name'),
+        '#title_display' => 'invisible',
       );
-      $j = 0;
-      foreach ($items as $item) {
-        $form["palette[$i]"][$j] = array(
-          '#type' => 'markup',
-          '#markup' => $item,
-        );
-        $j++;
-      }
-      $i++;
+
+      // Background color field.
+      $form['color_schemes']['colors'][$i]['background'] = array(
+        '#type' => 'color',
+        '#title' => $this->t('Background color'),
+        '#title_display' => 'invisible',
+        '#default_value' => '#ffffff',
+        '#attributes' => [
+          'class' => ['colorpicker'],
+        ],
+      );
+
+      // Text color field.
+      $form['color_schemes']['colors'][$i]['text'] = array(
+        '#type' => 'color',
+        '#title' => $this->t('Text color'),
+        '#title_display' => 'invisible',
+        '#default_value' => '#ffffff',
+        '#attributes' => [
+          'class' => ['colorpicker'],
+        ],
+      );
+
+      // Link color field.
+      $form['color_schemes']['colors'][$i]['link'] = array(
+        '#type' => 'color',
+        '#title' => $this->t('Link color'),
+        '#title_display' => 'invisible',
+        '#default_value' => '#ffffff',
+        '#attributes' => [
+          'class' => ['colorpicker'],
+        ],
+      );
+
+      // Preview.
+      // @todo This should be updated whenever the user changes a color.
+      // @todo Render a default Paragraph entity in modal
+      // with InlineParagraphsPreviewerWidget.
+      $form['color_schemes']['colors'][$i]['preview'] = array(
+        '#type' => 'markup',
+        '#markup' => 'Sample <a>link</a> and text.',
+      );
     }
+
+    // Color palette.
+    // $form['palette'] = array(
+    //   '#type' => 'vertical_tabs',
+    //   '#prefix' => '[TODO] Write help text here for the color palette. This will list all the loaded SASS colors found in the default theme.',
+    // );
+
+    // $test_colors = [
+    //   'blue' => [1,2,3,4],
+    //   'red' => [5,6,7,8],
+    // ];
+
+    // $i = 0;
+    // foreach ($test_colors as $group => $items) {
+    //   $form["palette[$i]"] = array(
+    //     '#type' => 'details',
+    //     '#title' => $group,
+    //     '#tab_summary' => 'asdasdf',
+    //     '#group' => 'palette',
+    //     '#open' => TRUE,
+    //   );
+    //   $j = 0;
+    //   foreach ($items as $item) {
+    //     $form["palette[$i]"][$j] = array(
+    //       '#type' => 'markup',
+    //       '#markup' => $item,
+    //     );
+    //     $j++;
+    //   }
+    //   $i++;
+    // }
 
     // Build the parent form and make changes.
     $form = parent::buildForm($form, $form_state);
