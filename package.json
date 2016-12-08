@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "iphone-inline-video": "^1.9.4",
-    "rellax": "^0.1.0"
+    "rellax": "^0.1.0",
+    "spectrum-colorpicker": "^1.8.0"
   }
 }
