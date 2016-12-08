@@ -15,7 +15,7 @@
     attach: function (context, settings) {
 
       // If the browser supports `<input type="color">` use that instead.
-      if (!Modernizr.inputtypes.color) {
+      if (Modernizr.inputtypes.color) {
         return;
       }
 
