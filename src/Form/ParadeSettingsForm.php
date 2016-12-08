@@ -52,20 +52,50 @@ class ParadeSettingsForm extends ConfigFormBase {
     //   '#description' => 'asdasdasd',
     // );
 
-    $form['styling'] = array(
+    $form['color_schemes'] = array(
       '#type' => 'details',
       '#title' => $this->t('Color Schemes'),
+      '#description' => '[TODO] Write help text here.',
       '#open' => TRUE,
     );
 
-    $form['styling']['color_picker'] = array(
+    $form['color_schemes']['color_picker'] = array(
       '#type' => 'color',
       '#default_value' => '#ffffff',
-      '#title' => $this->t('Choose color...'),
       '#attributes' => [
         'class' => ['colorpicker'],
       ],
     );
+
+    $form['palette'] = array(
+      '#type' => 'vertical_tabs',
+      '#prefix' => '[TODO] Write help text here for the color palette. This will list all the loaded SASS colors found in the default theme.',
+    );
+
+    $test_colors = [
+      'blue' => [1,2,3,4],
+      'red' => [5,6,7,8],
+    ];
+
+    $i = 0;
+    foreach ($test_colors as $group => $items) {
+      $form["palette[$i]"] = array(
+        '#type' => 'details',
+        '#title' => $group,
+        '#tab_summary' => 'asdasdf',
+        '#group' => 'palette',
+        '#open' => TRUE,
+      );
+      $j = 0;
+      foreach ($items as $item) {
+        $form["palette[$i]"][$j] = array(
+          '#type' => 'markup',
+          '#markup' => $item,
+        );
+        $j++;
+      }
+      $i++;
+    }
 
     // Build the parent form and make changes.
     $form = parent::buildForm($form, $form_state);
