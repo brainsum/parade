@@ -1,5 +1,5 @@
 quality: null
-binaries: graphicsmagick
+binaries: imagemagick
 path_to_binaries: ''
 prepend: ''
 log_warnings: true
