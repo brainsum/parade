@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations for Image optimalization submodule for Parade.
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\imagemagick\Plugin\ImageToolkit\ImagemagickToolkit;
+
+/**
+ * Implements hook_preprocess_paragraph().
+ *
+ * Apply image styles in Header and Background paragraph types.
+ * The reason behind this is here that these images are coming from a file upload field
+ * and can contain videos also.
+ */
+function image_optimalization_preprocess_paragraph(&$variables) {
+  $paragraph = &$variables['paragraph'];
+
+  if (in_array($paragraph->getType(), ['header', 'parallax']) && $paragraph->hasField('field_background')) {
+    $target_id = $paragraph->field_background->target_id;
+    if (!$target_id) {
+      return;
+    }
+
+    // Get background file info.
+    $file = File::load($target_id);
+    if (is_object($file)) {
+      $file_uri = $file->getFileUri();
+      $file_mime = $file->getMimeType();
+
+      if (in_array($file_mime, ['image/jpeg'])) {
+        // Get file path for image style.
+        $style = entity_load('image_style', 'parade_full_hd_width');
+        $file_path = $style->buildUrl($file_uri);
+
+        // @todo - use parent module's _parade_add_template_variable somehow.
+        $variables['parade']['background']['url'] = $file_path;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_imagemagick_arguments_alter().
+ *
+ * Removes quality argument if it's NULL.
+ * It's neccessary to avoid errors when quality is empty in the config.
+ */
+function image_optimalization_imagemagick_arguments_alter(ImagemagickToolkit $toolkit, $command) {
+  if ($command == 'convert' || $command = 'gm') {
+    $index = $toolkit->findArgument('-quality');
+
+    if ($index !== FALSE) {
+      $quality = $toolkit->getArguments()[$index];
+
+      // Space at the and because NULL casts to an empty string.
+      if ($quality === '-quality ') {
+        $toolkit->removeArgument($index);
+      }
+    }
+  }
+}

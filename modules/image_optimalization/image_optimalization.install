@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Installation file for Image optimalization submodule for Parade
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Sets module weight
+ */
+function image_optimalization_install() {
+    // Get weight of Parade
+    // @todo Replace these two lines when module_get_weight implemented
+    $extension_config = Drupal::configFactory()->getEditable('core.extension');
+    $parade_weight = $extension_config->get('module.parade');
+    $imagemagick_weight = $extension_config->get('module.imagemagick');
+
+    // Set weight of this module
+    module_set_weight('image_optimalization', max($parade_weight, $imagemagick_weight) + 1);
+}
