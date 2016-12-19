@@ -19,3 +19,4 @@ dependencies:
   - geocoder_geofield
   - link
   - options
+  - classy_paragraphs

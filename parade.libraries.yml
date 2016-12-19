@@ -20,6 +20,7 @@ buttons:
     component:
       css/buttons.css: {}
 
+# @todo Move colorpicker to tieto_base, for later use.
 colorpicker:
   version: VERSION
   css:
