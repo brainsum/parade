@@ -1,0 +1,17 @@
+{
+  "name": "durpal/parade_image_optimalization",
+  "description": "Provides image optimalization for the parade module",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/imageapi_optimize": "2.0.0-alpha1",
+    "drupal/imagemagick": "1.0-alpha5"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  }
+}
