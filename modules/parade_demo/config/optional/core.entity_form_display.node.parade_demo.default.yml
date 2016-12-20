@@ -27,7 +27,7 @@ content:
       placeholder_url: 'Anchor or URL'
       placeholder_title: 'Link text'
     third_party_settings: {  }
-    type: link_with_selected_attribute
+    type: link
   field_parade_demo:
     type: entity_reference_paragraphs_preview
     weight: 26
