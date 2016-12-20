@@ -26,9 +26,6 @@ settings:
       header:
         weight: 10
         enabled: false
-      highlighted:
-        weight: 11
-        enabled: false
       image_text:
         weight: 12
         enabled: false
@@ -40,9 +37,6 @@ settings:
         enabled: false
       simple:
         weight: 15
-        enabled: false
-      tabs:
-        weight: 16
         enabled: false
       text_box:
         enabled: true

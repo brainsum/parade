@@ -28,10 +28,6 @@ function parade_preprocess_paragraph(&$variables) {
   // Pass the Layout field values to each corresponding Paragraph.
   // @todo Refactor!
   $layouts = [
-    'field_highlighted_layout' => [
-      0 => 'text_1st',
-      1 => 'image_1st',
-    ],
     'field_image_text_layout' => [
       0 => 'image_1st',
       1 => 'text_1st',
@@ -208,9 +204,6 @@ function parade_theme($existing, $type, $theme, $path) {
     ],
     'paragraph__image_text' => [
       'template' => 'paragraph',
-      'base hook' => 'paragraph',
-    ],
-    'paragraph__tabs' => [
       'base hook' => 'paragraph',
     ],
     'paragraph__locations' => [
