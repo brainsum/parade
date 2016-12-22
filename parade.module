@@ -119,7 +119,6 @@ function parade_preprocess_paragraph(&$variables) {
           'type' => $type ? $type : 'image',
           'url' => $file_path,
           'mime' => $file_mime,
-          'poster' => $type === 'video' ? $poster : NULL,
         ],
 
         'enable_parallax' => $enable_parallax,

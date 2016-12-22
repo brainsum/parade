@@ -32,9 +32,8 @@ set classes = [
         {% endif %}
 
       {% elseif parade.background.type == 'video' %}
-        <video class="bg-video bg-fullsize{{ parade.enable_parallax ? ' bg-parallax' }}" autoplay muted loop playsinline poster="{{ parade.background.poster }}">
+        <video class="bg-video bg-fullsize{{ parade.enable_parallax ? ' bg-parallax' }}" autoplay muted loop playsinline>
           <source src="{{ parade.background.url }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-          <img src="{{ parade.background.poster }}" title="Your browser does not support the <video> tag">
         </video>
       {% endif %}
     </div>
