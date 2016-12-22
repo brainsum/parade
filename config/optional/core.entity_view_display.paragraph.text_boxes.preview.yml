@@ -2,31 +2,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
-    - field.field.paragraph.text_boxes.field_parade_demo
+    - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_text_boxes_layout
     - field.field.paragraph.text_boxes.field_title
     - paragraphs.paragraphs_type.text_boxes
   module:
-    - entity_reference_revisions
+    - options
     - parade
-id: paragraph.text_boxes.default
+id: paragraph.text_boxes.preview
 targetEntityType: paragraph
 bundle: text_boxes
-mode: default
+mode: preview
 content:
-  field_parade_demo:
-    type: entity_reference_revisions_entity_view
-    weight: 4
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
+  field_text_boxes_layout:
+    type: list_default
+    weight: 1
+    label: inline
+    settings: {  }
     third_party_settings: {  }
   field_title:
     weight: 0
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -35,5 +34,5 @@ hidden:
   created: true
   field_anchor: true
   field_boxes_per_row: true
-  field_text_boxes_layout: true
+  field_paragraphs: true
   uid: true

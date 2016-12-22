@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
-    - field.field.paragraph.text_boxes.field_parade_demo
+    - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_text_boxes_layout
     - field.field.paragraph.text_boxes.field_title
     - paragraphs.paragraphs_type.text_boxes
@@ -28,7 +28,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-  field_parade_demo:
+  field_paragraphs:
     type: entity_reference_paragraphs_preview
     weight: 5
     settings:
