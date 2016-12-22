@@ -8,7 +8,6 @@
  */
 
 use Drupal\file\Entity\File;
-use FFMpeg\Coordinate\TimeCode;
 use Drupal\Component\Utility\Html;
 
 /**
@@ -109,22 +108,6 @@ function parade_preprocess_paragraph(&$variables) {
 
         // Attach video related libraries.
         $variables['#attached']['library'][] = 'parade/inline-video';
-
-        // Generate poster image for video if not exist.
-        // @todo Move this to post node save!
-        $video_filename = pathinfo($file_path)['filename'];
-        // @todo Get the image path from 'field_background' info.
-        $poster = '/sites/default/files/paragraphs/background/' . $video_filename . '_poster.jpg';
-
-        // @todo Don't try to run ffmpeg, if not available on the system.
-        // if (!file_exists(DRUPAL_ROOT . $poster)) {
-        //   $ffmpeg = Drupal::service('php_ffmpeg')->create([
-        //     'loglevel' => 'quiet',
-        //   ]);
-        //   $video = $ffmpeg->open(drupal_realpath($file_uri));
-
-        //   $video->frame(TimeCode::fromSeconds(0))->save(DRUPAL_ROOT . $poster);
-        // }
       }
 
       // Check field_enable_parallax field.
