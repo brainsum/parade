@@ -7,6 +7,7 @@
  * @todo Make the whole thing dynamic, do not rely on Parade content type.
  */
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 
@@ -280,7 +281,7 @@ function _parade_add_template_variable(&$variables, $data = NULL) {
  *
  * Modify "Add sections".
  */
-function parade_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the Paragraphs field.
   // @todo Check the field formatter instead!
   if (isset($form['field_paragraphs'])) {
