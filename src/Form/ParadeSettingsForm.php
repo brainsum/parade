@@ -32,9 +32,7 @@ class ParadeSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, Request $request = NULL) {
     // @todo Remove when form works.
-    drupal_set_message('This page is heavily under development, and it may break.', 'warning', FALSE);
-
-    $config = $this->config('parade.settings');
+    drupal_set_message($this->t('This page is heavily under development, and it may break.'), 'warning', FALSE);
 
     // @todo Are these needed?
     $form['result'] = $form_state->get('result');
@@ -56,7 +54,6 @@ class ParadeSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $values = $form_state->getValues();
     $this->config('parade.settings')->save();
 
     parent::submitForm($form, $form_state);
