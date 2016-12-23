@@ -2,6 +2,7 @@
 
 /**
  * @file
+ * Leaflet module formatter extension.
  */
 
 use Drupal\Component\Utility\Html;

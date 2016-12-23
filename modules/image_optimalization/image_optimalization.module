@@ -5,7 +5,6 @@
  * Contains hook implementations for Image optimalization submodule for Parade.
  */
 
-use Drupal\file\Entity\File;
 use Drupal\imagemagick\Plugin\ImageToolkit\ImagemagickToolkit;
 
 /**

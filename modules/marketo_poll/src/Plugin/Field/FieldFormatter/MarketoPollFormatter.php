@@ -26,7 +26,7 @@ class MarketoPollFormatter extends FormatterBase {
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = array();
     $polls = [];
-    foreach ($items as $delta => $item) {
+    foreach ($items as $item) {
       $polls[] = [
         'subscription_url' => $item->subscription_url,
         'poll_class' => $item->poll_class,
