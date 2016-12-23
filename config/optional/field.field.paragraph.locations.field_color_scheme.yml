@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_scheme
+    - paragraphs.paragraphs_type.locations
+id: paragraph.locations.field_color_scheme
+field_name: field_color_scheme
+entity_type: paragraph
+bundle: locations
+label: 'Color Scheme'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:classy_paragraphs_style'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference
