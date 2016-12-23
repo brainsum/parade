@@ -199,7 +199,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    * @return array
    *   The render array.
    */
-  public static function paragraphsPreviewRenderField($form_build_id, $element_parents) {
+  public static function paragraphsPreviewRenderField($form_build_id, array $element_parents) {
 
     // Initialize render array.
     $output = array();

@@ -268,7 +268,7 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
  *
  * @internal
  */
-function _parade_add_template_variable(&$variables, $data = NULL) {
+function _parade_add_template_variable(array &$variables, array $data = NULL) {
   if (!$data) {
     return FALSE;
   }

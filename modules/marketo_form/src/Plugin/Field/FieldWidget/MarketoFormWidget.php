@@ -28,7 +28,7 @@ class MarketoFormWidget extends WidgetBase {
     $element['subscription_url'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Subscription Domain'),
-      '#description' => 'E.g.: app-e.marketo.com',
+      '#description' => $this->t('E.g.: app-e.marketo.com'),
       '#default_value' => $item->subscription_url,
       '#maxlength' => 2048,
       '#required' => $element['#required'],
@@ -36,7 +36,7 @@ class MarketoFormWidget extends WidgetBase {
     $element['munchkin_id'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Munchkin ID'),
-      '#description' => 'E.g.: 517-ITT-285',
+      '#description' => $this->t('E.g.: 517-ITT-285'),
       '#default_value' => $item->munchkin_id,
       '#maxlength' => 255,
       '#required' => $element['#required'],
@@ -44,7 +44,7 @@ class MarketoFormWidget extends WidgetBase {
     $element['form_id'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Form ID'),
-      '#description' => 'E.g.: 2865',
+      '#description' => $this->t('E.g.: 2865'),
       '#default_value' => $item->form_id,
       '#maxlength' => 255,
       '#required' => $element['#required'],
