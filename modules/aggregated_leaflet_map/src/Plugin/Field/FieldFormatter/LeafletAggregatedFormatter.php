@@ -40,7 +40,7 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
       $features = leaflet_process_geofield($item->value);
 
       // If only a single feature, set the popup content to the entity title.
-      if ($settings['popup'] && count($items) == 1) {
+      if ($settings['popup'] && count($items) === 1) {
         $features[0]['popup'] = $items->getEntity()->label();
       }
       if (!empty($icon_url)) {

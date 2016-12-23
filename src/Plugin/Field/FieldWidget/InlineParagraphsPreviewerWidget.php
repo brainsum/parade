@@ -5,6 +5,7 @@ namespace Drupal\parade\Plugin\Field\FieldWidget;
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\TypedData\Exception\ReadOnlyException;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityBase;
@@ -155,12 +156,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       'closeText' => t('Close preview'),
     );
 
+    $dialog_title = t('Preview');
+
     // Get dialog title.
     if (isset($preview_button['#dialog_title'])) {
       $dialog_title = $preview_button['#dialog_title'];
-    }
-    else {
-      $dialog_title = t('Preview');
     }
 
     // Render current paragraph entity.
@@ -236,7 +236,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    *   The paragraph entity.
    * @param string $parent_field_name
    *   The field name of the paragraph reference field on the parent entity.
-   * @param ContentEntityBase $parent_entity
+   * @param ContentEntityBase|null|\Drupal\Core\Entity\EntityInterface $parent_entity
    *   Optional. The parent entity. This is used when on a form to allow
    *   rendering with un-saved parents.
    *
@@ -259,14 +259,21 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
         $parent_clone = clone $parent_entity;
 
         // Create field item values.
-        $parent_field_item_value = ['entity' => $paragraph_clone];
+        $parent_field_entity = ['entity' => $paragraph_clone];
 
         // Based on \Drupal\Core\Entity\EntityViewBuilder to allow arbitrary
         // field data to be rendered.
         // See https://www.drupal.org/node/2274169
         // Push the item as the single value for the field, and defer to
         // FieldItemBase::view() to build the render array.
-        $parent_clone->{$parent_field_name}->setValue([$parent_field_item_value]);
+        try {
+          $parent_clone->{$parent_field_name}->setValue([$parent_field_entity]);
+        }
+        catch (\Exception $e) {
+          if ($e instanceof ReadOnlyException || $e instanceof \InvalidArgumentException) {
+            return NULL;
+          }
+        }
 
         // TODO: This clones the parent again and uses
         // EntityViewBuilder::viewFieldItem().
@@ -281,6 +288,8 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
         return $output;
       }
     }
+
+    return NULL;
   }
 
 }
