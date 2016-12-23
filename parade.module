@@ -106,18 +106,16 @@ function parade_preprocess_paragraph(&$variables) {
       //   );
       // }
       // @endcode
-
       // Image is the default.
       $type = 'image';
 
-      if (in_array($file_mime, [
-        'video/mp4',
-        'application/mp4',
-        'video/webm',
-      ], FALSE)
-      ) {
+      // Compress images with an image style, if Image Optimalization is enabled.
+      if ($file_mime === 'image/jpeg' && \Drupal::service('module_handler')->moduleExists('image_optimalization')) {
+        $style = \Drupal::entityTypeManager()->getStorage('image_style')->load('parade_full_hd_width');
+        $file_path = $style->buildUrl($file_uri);
+      }
+      elseif (in_array($file_mime, ['video/mp4', 'application/mp4', 'video/webm'])) {
         $type = 'video';
-
         // Attach video related libraries.
         $variables['#attached']['library'][] = 'parade/inline-video';
       }

@@ -13,7 +13,6 @@ License: MIT
   left: 0;
   display: inline-block;
   overflow: hidden;
-
   *display: inline;
   *zoom: 1;
 }
@@ -136,7 +135,6 @@ License: MIT
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
   user-select: none;
-
   -o-user-select: none;
 }
 
@@ -169,9 +167,8 @@ License: MIT
   background-image: -o-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
   background-image: -ms-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
   background-image: linear-gradient(to right, #fff, rgba(204, 154, 129, 0));
-
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#FFFFFFFF, endColorstr=#00CC9A81)";
-  filter : progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#FFFFFFFF', endColorstr='#00CC9A81');
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#FFFFFFFF', endColorstr='#00CC9A81');
 }
 .sp-val {
   background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#000), to(rgba(204, 154, 129, 0)));
@@ -180,9 +177,8 @@ License: MIT
   background-image: -o-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
   background-image: -ms-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
   background-image: linear-gradient(to top, #000, rgba(204, 154, 129, 0));
-
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00CC9A81, endColorstr=#FF000000)";
-  filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#00CC9A81', endColorstr='#FF000000');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00CC9A81', endColorstr='#FF000000');
 }
 
 .sp-hue {
@@ -200,32 +196,26 @@ License: MIT
  */
 .sp-1 {
   height: 17%;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#ffff00');
 }
 .sp-2 {
   height: 16%;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff00', endColorstr='#00ff00');
 }
 .sp-3 {
   height: 17%;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ff00', endColorstr='#00ffff');
 }
 .sp-4 {
   height: 17%;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffff', endColorstr='#0000ff');
 }
 .sp-5 {
   height: 16%;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000ff', endColorstr='#ff00ff');
 }
 .sp-6 {
   height: 17%;
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00ff', endColorstr='#ff0000');
 }
 
@@ -303,7 +293,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font: normal 12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-
   -ms-box-sizing: border-box;
 }
 .sp-top {
@@ -416,7 +405,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   color: #333;
   border: solid 1px #91765d;
   background: #eee;
-
   *display: inline;
   *zoom: 1;
 }
@@ -449,7 +437,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 
 .sp-palette {
   max-width: 220px;
-
   *width: 220px;
 }
 .sp-palette .sp-thumb-el {
@@ -501,7 +488,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   -webkit-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
   -moz-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
   box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
-
   -ms-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
   -o-box-shadow: inset 0 0 5px 2px #aaa, 0 1px 0 0 #eee;
 }
