@@ -16,13 +16,14 @@ use Drupal\image\Entity\ImageStyle;
  * Implements hook_preprocess_paragraph().
  */
 function parade_preprocess_paragraph(&$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = &$variables['paragraph'];
 
   // Attach libraries for each paragraph type.
   $variables['#attached']['library'][] = 'parade/paragraphs.' . $paragraph->getType();
 
   // Pass the Anchor field value for the template.
-  if ($paragraph->hasField('field_anchor') && $anchor = $paragraph->field_anchor->value) {
+  if ($paragraph->hasField('field_anchor') && $anchor = $paragraph->get('field_anchor')->value) {
     $variables['attributes']['id'] = Html::getId($anchor);
   }
 
@@ -73,8 +74,11 @@ function parade_preprocess_paragraph(&$variables) {
   }
 
   // Parallax and background stuff for Header and Parallax types.
-  if (in_array($paragraph->getType(), ['header', 'parallax']) && $paragraph->hasField('field_background')) {
-    $target_id = $paragraph->field_background->target_id;
+  if (
+    $paragraph->hasField('field_background') &&
+    in_array($paragraph->getType(), ['header', 'parallax'], FALSE)
+  ) {
+    $target_id = $paragraph->get('field_background')->target_id;
     if (!$target_id) {
       return;
     }
@@ -87,7 +91,7 @@ function parade_preprocess_paragraph(&$variables) {
       $file_path = parse_url(file_create_url($file_uri))['path'];
 
       // Attach parallax library if the user enabled the effect.
-      if ($paragraph->hasField('field_enable_parallax') && $paragraph->field_enable_parallax->value == TRUE) {
+      if ($paragraph->hasField('field_enable_parallax') && TRUE === $paragraph->get('field_enable_parallax')->value) {
         $variables['#attached']['library'][] = 'parade/parallax';
       }
 
@@ -98,20 +102,23 @@ function parade_preprocess_paragraph(&$variables) {
       //   $video_path = $vars['elements']['field_video'][0]['#markup'];
       //   $vars['video'] = array(
       //   'path' => file_create_url($video_path),
-      //   'mime' => Drupal::service('file.mime_type.guesser')->guess($video_path)
+      //   'mime' => Drupal::service('file.mime_type.guesser')
+      //                ->guess($video_path)
       //   );
       // }
       // @endcode
-      if (in_array($file_mime, ['image/jpeg', 'image/svg+xml'])) {
-        $type = 'image';
+      // Image is the default.
+      $type = 'image';
 
-        // Compress images with an image style, if Image Optimalization is enabled.
-        if ($file_mime == 'image/jpeg' && \Drupal::service('module_handler')
-            ->moduleExists('image_optimalization')
-        ) {
-          $style = ImageStyle::load('parade_full_hd_width');
-          $file_path = $style->buildUrl($file_uri);
-        }
+      // Compress images with an image style,
+      // if Image Optimalization is enabled.
+      if (
+        $file_mime === 'image/jpeg' &&
+        \Drupal::service('module_handler')->moduleExists('image_optimalization')
+      ) {
+        /** @var Drupal\image\Entity\ImageStyle $style */
+        $style = ImageStyle::load('parade_full_hd_width');
+        $file_path = $style->buildUrl($file_uri);
       }
       elseif (in_array($file_mime, [
         'video/mp4',
@@ -119,18 +126,17 @@ function parade_preprocess_paragraph(&$variables) {
         'video/webm',
       ])) {
         $type = 'video';
-
         // Attach video related libraries.
         $variables['#attached']['library'][] = 'parade/inline-video';
       }
 
       // Check field_enable_parallax field.
-      $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->field_enable_parallax->value : FALSE;
+      $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->get('field_enable_parallax')->value : FALSE;
 
       // Add variables to theme.
       _parade_add_template_variable($variables, [
         'background' => [
-          'type' => $type ? $type : 'image',
+          'type' => $type,
           'url' => $file_path,
           'mime' => $file_mime,
         ],
@@ -145,16 +151,16 @@ function parade_preprocess_paragraph(&$variables) {
  * Implements hook_preprocess_paragraph__text_box().
  */
 function parade_preprocess_paragraph__text_box(&$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = &$variables['paragraph'];
+  /** @var Drupal\paragraphs\Entity\Paragraph $parent */
   $parent = $paragraph->getParentEntity();
 
   // Pass the number of Columns field value.
-  if ($parent->hasField('field_boxes_per_row')) {
-    if ($columns = $parent->field_boxes_per_row->value) {
-      _parade_add_template_variable($variables, [
-        'columns' => $columns,
-      ]);
-    }
+  if ($parent->hasField('field_boxes_per_row') && ($columns = $parent->get('field_boxes_per_row')->value)) {
+    _parade_add_template_variable($variables, [
+      'columns' => $columns,
+    ]);
   }
 }
 
@@ -162,10 +168,11 @@ function parade_preprocess_paragraph__text_box(&$variables) {
  * Implements hook_preprocess_paragraph__text_boxes().
  */
 function parade_preprocess_paragraph__text_boxes(&$variables) {
+  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = &$variables['paragraph'];
 
   // Pass the number of Columns field value.
-  if ($columns = $paragraph->field_boxes_per_row->value) {
+  if ($columns = $paragraph->get('field_boxes_per_row')->value) {
     _parade_add_template_variable($variables, [
       'columns' => $columns,
     ]);
@@ -219,16 +226,16 @@ function parade_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function parade_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function parade_theme_suggestions_page_alter(&$suggestions, $variables) {
   // Add content type suggestions based on machine_name field and content type.
   // e.g. page--node--parade.html.twig
   // page--node--parade--my-awesome-page.html.twig.
   // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
   $attributes = Drupal::request()->attributes;
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    $type = is_object($node) && method_exists($node, 'getType') ? $node->getType() : 'parade';
+    $type = (is_object($node) && method_exists($node, 'getType')) ? $node->getType() : 'parade';
     array_unshift($suggestions, 'page__node__' . $type);
-    if ($machine_name = $node->field_machine_name->value) {
+    if ($machine_name = $node->get('field_machine_name')->value) {
       $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
     }
   }
@@ -241,12 +248,15 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
   // Add custom suggestions for Paragraph types with machine name.
   // @todo Check for any nodes which has Parade field (entity_revisions_paragraphs_preview).
   $attributes = Drupal::request()->attributes;
-  if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
-    if (is_object($node)) {
-      if ($machine_name = $node->field_machine_name->value) {
-        foreach ($suggestions as $suggestion) {
-          $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
-        }
+  if (
+    !$attributes->has('_entity_form') &&
+    $attributes->get('_entity_form') !== "node.edit" &&
+    $node = $attributes->get('node')
+  ) {
+    if (is_object($node) && ($machine_name = $node->get('field_machine_name')->value)) {
+      /** @var string[] $suggestions */
+      foreach ($suggestions as $suggestion) {
+        $suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
       }
     }
   }
@@ -263,7 +273,7 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
  * @param array $data
  *   New data in array format, which will be passed to the template.
  *
- * @return array
+ * @return bool|array
  *   The new data.
  *
  * @internal
@@ -297,6 +307,7 @@ function _parade_add_template_variable(array &$variables, array $data = NULL) {
 function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the Paragraphs field.
   // @todo Check the field formatter instead!
+  /** @var FormStateInterface $form */
   if (isset($form['field_paragraphs'])) {
     $form['#attached']['library'][] = 'parade/buttons';
 
@@ -332,6 +343,9 @@ function parade_preprocess_field__field_social_link(&$variables) {
     else {
       $type = 'unknown';
     }
-    $variables['items'][$key]['content']['#options']['attributes']['class'] = ['social', 'social-' . $type];
+    $variables['items'][$key]['content']['#options']['attributes']['class'] = [
+      'social',
+      'social-' . $type,
+    ];
   }
 }
