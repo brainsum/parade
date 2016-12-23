@@ -10,6 +10,7 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
+use Drupal\image\Entity\ImageStyle;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
@@ -111,10 +112,15 @@ function parade_preprocess_paragraph(&$variables) {
 
       // Compress images with an image style, if Image Optimalization is enabled.
       if ($file_mime === 'image/jpeg' && \Drupal::service('module_handler')->moduleExists('image_optimalization')) {
+        /** @var ImageStyle $style */
         $style = \Drupal::entityTypeManager()->getStorage('image_style')->load('parade_full_hd_width');
         $file_path = $style->buildUrl($file_uri);
       }
-      elseif (in_array($file_mime, ['video/mp4', 'application/mp4', 'video/webm'])) {
+      elseif (in_array($file_mime, [
+        'video/mp4',
+        'application/mp4',
+        'video/webm',
+      ])) {
         $type = 'video';
         // Attach video related libraries.
         $variables['#attached']['library'][] = 'parade/inline-video';
