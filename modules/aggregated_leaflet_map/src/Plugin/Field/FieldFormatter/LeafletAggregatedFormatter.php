@@ -35,7 +35,7 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     $elements = array();
     // We collect all features in a single array.
     $aggregated_features = array();
-    foreach ($items as $delta => $item) {
+    foreach ($items as $item) {
 
       $features = leaflet_process_geofield($item->value);
 

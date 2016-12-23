@@ -26,7 +26,7 @@ class MarketoFormFormatter extends FormatterBase {
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = array();
     $forms = [];
-    foreach ($items as $delta => $item) {
+    foreach ($items as $item) {
       $forms[] = [
         'subscription_url' => $item->subscription_url,
         'munchkin_id' => $item->munchkin_id,

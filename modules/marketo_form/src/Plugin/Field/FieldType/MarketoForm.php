@@ -27,17 +27,17 @@ class MarketoForm extends FieldItemBase {
     return array(
       'columns' => array(
         'subscription_url' => array(
-          'description' => 'Subscription base URL',
+          'description' => t('Subscription base URL'),
           'type' => 'varchar',
           'length' => 2048,
         ),
         'munchkin_id' => array(
-          'description' => 'The Munchkin ID.',
+          'description' => t('The Munchkin ID.'),
           'type' => 'varchar',
           'length' => 255,
         ),
         'form_id' => array(
-          'description' => 'The form ID.',
+          'description' => t('The form ID.'),
           'type' => 'varchar',
           'length' => 255,
         ),
