@@ -11,7 +11,7 @@ use Drupal\imagemagick\Plugin\ImageToolkit\ImagemagickToolkit;
  * Implements hook_imagemagick_arguments_alter().
  *
  * Removes quality argument if it's NULL.
- * It's neccessary to avoid errors when quality is empty in the config.
+ * It's necessary to avoid errors when quality is empty in the config.
  */
 function image_optimalization_imagemagick_arguments_alter(ImagemagickToolkit $toolkit, $command) {
   if ($command == 'convert' || $command = 'gm') {
