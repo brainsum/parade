@@ -4,16 +4,15 @@
   "type": "drupal-module",
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
-  "prefer-stable": true,
   "require": {
-    "drupal/paragraphs": "1.0",
-    "drupal/machine_name": "1.x-dev",
-    "drupal/geocoder": "2.x-dev",
-    "drupal/geofield": "1.x-dev",
-    "drupal/leaflet": "^1.0",
-    "drupal/geocoder_autocomplete": "1.x-dev",
-    "drupal/imageapi_optimize": "2.0.0-alpha1",
-    "drupal/imagemagick": "1.0-alpha5",
-    "drupal/classy_paragraphs": "^1.0@beta"
+    "drupal/paragraphs": "~1.0",
+    "drupal/machine_name": "~1.x-dev",
+    "drupal/geocoder": "~2.0",
+    "drupal/geofield": "~1.0",
+    "drupal/leaflet": "~1.0",
+    "drupal/geocoder_autocomplete": "~1.0",
+    "drupal/imageapi_optimize": "~2.0",
+    "drupal/imagemagick": "~1.0-alpha5",
+    "drupal/classy_paragraphs": "~1.0"
   }
 }
