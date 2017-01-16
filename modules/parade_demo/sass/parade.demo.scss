@@ -1,4 +1,26 @@
 .page-node-type-parade-demo {
+  background: 0;
+
+  // @todo better solution. Hide blocks in config install?
+  .block-core {
+    display: none;
+  }
+}
+
+.node--type-parade-demo {
+  position: relative;
+
+  .field--name-field-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    z-index: 1;
+
+    a {
+      color: white;
+    }
+  }
 
   .paragraph.paragraph--view-mode--default {
     background: #fff;
@@ -8,23 +30,13 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-
-    .field--name-field-title {
-      font-size: 2em;
-      font-weight: bold;
-    }
   }
 
   .paragraph--type--header.paragraph--view-mode--default {
     padding: 0;
+    position: relative;
 
-    .background {
-      &::before {
-        background-color: rgba(103, 175, 225, .5);
-      }
-    }
-
-    .field--name-field-title {
+    .paragraph__title {
       font-size: 4em;
       font-weight: 800;
       display: inline-block;
@@ -65,15 +77,21 @@
     }
     &.layout--one-column-shaded {
       background: #292929;
-      color: white;
+      &, .paragraph__title {
+        color: white;
+      }
     }
     &.layout--two-column-title-1st-inverse {
       background: #292929;
-      color: white;
+      &, .paragraph__title {
+        color: white;
+      }
     }
     &.layout--two-column-content-1st-inverse {
       background: #292929;
-      color: white;
+      &, .paragraph__title {
+        color: white;
+      }
     }
     &.layout--separator-clean {
 

@@ -13,7 +13,21 @@ use Drupal\Component\Utility\Html;
  */
 function parade_demo_theme($existing, $type, $theme, $path) {
   return [
-    'page__node__parade_demo' => [],
+    'page__node__parade_demo' => [
+      'base hook' => 'page',
+    ],
+    'field__node__field_parade_demo__parade_demo' => [
+      'base hook' => 'field',
+    ],
+    'field__paragraph__field_title' => [
+      'base hook' => 'field',
+    ],
+    'field__node__field_menu__parade_demo' => [
+      'base hook' => 'field',
+    ],
+    'node__parade_demo' => [
+      'base hook' => 'node',
+    ],
   ];
 }
 
