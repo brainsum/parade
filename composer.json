@@ -9,13 +9,10 @@
     "drupal/machine_name": "1.x-dev",
     "drupal/geocoder": "2.x-dev",
     "drupal/geofield": "1.x-dev",
-    "drupal/leaflet": "1.x-dev",
+    "drupal/leaflet": "^1.0@beta",
     "drupal/geocoder_autocomplete": "1.x-dev",
     "drupal/imageapi_optimize": "2.0.0-alpha1",
     "drupal/imagemagick": "1.0-alpha5",
     "drupal/classy_paragraphs": "^1.0@beta"
-  },
-  "conflict": {
-    "leaflet/leaflet": "*"
   }
 }
