@@ -13,7 +13,6 @@ dependencies:
   - geocoder_autocomplete
   - geofield
   - leaflet
-  - aggregated_leaflet_map
   - geocoder_field
   - geocoder_geofield
   - link
