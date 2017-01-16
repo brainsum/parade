@@ -1,16 +1,16 @@
-.page-node-type-parade-demo {
+.page-node-type-parade-onepage {
   background: 0;
 }
 
-.page-node-type-parade-demo .block-core {
+.page-node-type-parade-onepage .block-core {
   display: none;
 }
 
-.node--type-parade-demo {
+.node--type-parade-onepage {
   position: relative;
 }
 
-.node--type-parade-demo .field--name-field-parade-onepage-menu {
+.node--type-parade-onepage .field--name-field-parade-onepage-menu {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -18,26 +18,26 @@
   margin: 1em;
 }
 
-.node--type-parade-demo .field--name-field-parade-onepage-menu a {
+.node--type-parade-onepage .field--name-field-parade-onepage-menu a {
   color: white;
 }
 
-.node--type-parade-demo .paragraph.paragraph--view-mode--default {
+.node--type-parade-onepage .paragraph.paragraph--view-mode--default {
   padding: 30px;
   background: #fff;
 }
 
-.node--type-parade-demo .paragraph.paragraph--view-mode--default .paragraph-inner {
+.node--type-parade-onepage .paragraph.paragraph--view-mode--default .paragraph-inner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default {
   position: relative;
   padding: 0;
 }
 
-.node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
   display: inline-block;
   margin-bottom: 0;
   letter-spacing: -2px;
@@ -46,142 +46,142 @@
 }
 
 @media screen and (max-width: 768px) {
-  .node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
     font-size: 2.8em;
   }
 }
 
-.node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
-.node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
   margin-bottom: 0.5em;
   font-size: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
-  .node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
-  .node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
     font-size: 1.2em;
   }
 }
 
-.node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
   padding: 0.5em 1em;
   color: white;
   border: 1px solid white;
   border-radius: 3px;
 }
 
-.node--type-parade-demo .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
   color: white;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default {
   clear: both;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-grey {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-grey {
   background: #f3f3f3;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded {
   background: #292929;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded,
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded .paragraph__title {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded,
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded .paragraph__title {
   color: white;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse {
   background: #292929;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse,
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse,
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
   color: white;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse {
   background: #292929;
 }
 
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse,
-.node--type-parade-demo .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title {
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse,
+.node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title {
   color: white;
 }
 
-.node-parade-demo-form .field--name-field-parade-onepage-menu .field-multiple-table td,
-.node-parade-demo-edit-form .field--name-field-parade-onepage-menu .field-multiple-table td {
+.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table td,
+.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table td {
   padding: 0.5em 0;
 }
 
-.node-parade-demo-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item,
-.node-parade-demo-edit-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item {
+.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item,
+.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item {
   float: left;
   width: 50%;
   padding-left: 0.5em;
 }
 
-.node-parade-demo-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle,
-.node-parade-demo-edit-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle {
+.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle,
+.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle {
   top: 10px;
   margin-left: 0;
 }
 
-.node-parade-demo-form .paragraph-type-top,
-.node-parade-demo-edit-form .paragraph-type-top {
+.node-parade-onepage-form .paragraph-type-top,
+.node-parade-onepage-edit-form .paragraph-type-top {
   float: none;
   clear: none;
   margin-bottom: 0.5em;
 }
 
-.node-parade-demo-form .paragraphs-subform > .form-wrapper,
-.node-parade-demo-edit-form .paragraphs-subform > .form-wrapper {
+.node-parade-onepage-form .paragraphs-subform > .form-wrapper,
+.node-parade-onepage-edit-form .paragraphs-subform > .form-wrapper {
   margin: 1em 0;
 }
 
-.node-parade-demo-form .tabledrag-toggle-weight-wrapper,
-.node-parade-demo-form td.tabledrag-hide,
-.node-parade-demo-edit-form .tabledrag-toggle-weight-wrapper,
-.node-parade-demo-edit-form td.tabledrag-hide {
+.node-parade-onepage-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-form td.tabledrag-hide,
+.node-parade-onepage-edit-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-edit-form td.tabledrag-hide {
   display: none !important;
 }
 
-.node-parade-demo-form .field-multiple-table,
-.node-parade-demo-edit-form .field-multiple-table {
+.node-parade-onepage-form .field-multiple-table,
+.node-parade-onepage-edit-form .field-multiple-table {
   width: 100%;
 }
 
-.node-parade-demo-form .field-multiple-table th.field-label,
-.node-parade-demo-edit-form .field-multiple-table th.field-label {
+.node-parade-onepage-form .field-multiple-table th.field-label,
+.node-parade-onepage-edit-form .field-multiple-table th.field-label {
   text-align: left;
 }
 
-.node-parade-demo-form .field-multiple-table tr,
-.node-parade-demo-edit-form .field-multiple-table tr {
+.node-parade-onepage-form .field-multiple-table tr,
+.node-parade-onepage-edit-form .field-multiple-table tr {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.node-parade-demo-form .field-multiple-table .drag,
-.node-parade-demo-form .field-multiple-table .drag-previous,
-.node-parade-demo-edit-form .field-multiple-table .drag,
-.node-parade-demo-edit-form .field-multiple-table .drag-previous {
+.node-parade-onepage-form .field-multiple-table .drag,
+.node-parade-onepage-form .field-multiple-table .drag-previous,
+.node-parade-onepage-edit-form .field-multiple-table .drag,
+.node-parade-onepage-edit-form .field-multiple-table .drag-previous {
   background-color: #f3f3f3;
 }
 
-.node-parade-demo-form .field-multiple-table td,
-.node-parade-demo-edit-form .field-multiple-table td {
+.node-parade-onepage-form .field-multiple-table td,
+.node-parade-onepage-edit-form .field-multiple-table td {
   padding: 1.2em 0 1.2em 0.5em;
 }
 
-.node-parade-demo-form .field-multiple-table .field-multiple-drag,
-.node-parade-demo-edit-form .field-multiple-table .field-multiple-drag {
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag {
   position: relative;
   padding: 1.2em 0;
 }
 
-.node-parade-demo-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
-.node-parade-demo-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
   position: absolute;
   top: 0;
   right: 0;
@@ -191,33 +191,33 @@
   background: #f3f3f3;
 }
 
-.node-parade-demo-form .field-multiple-table a.tabledrag-handle,
-.node-parade-demo-edit-form .field-multiple-table a.tabledrag-handle {
+.node-parade-onepage-form .field-multiple-table a.tabledrag-handle,
+.node-parade-onepage-edit-form .field-multiple-table a.tabledrag-handle {
   position: absolute;
   z-index: 1;
   top: 1em;
   margin-left: 0;
 }
 
-.node-parade-demo-form .field-multiple-table a.tabledrag-handle .handle,
-.node-parade-demo-edit-form .field-multiple-table a.tabledrag-handle .handle {
+.node-parade-onepage-form .field-multiple-table a.tabledrag-handle .handle,
+.node-parade-onepage-edit-form .field-multiple-table a.tabledrag-handle .handle {
   height: 17px;
   margin: 5px;
   background-position: 0 0;
 }
 
-.node-parade-demo-form .paragraph-type-title,
-.node-parade-demo-edit-form .paragraph-type-title {
+.node-parade-onepage-form .paragraph-type-title,
+.node-parade-onepage-edit-form .paragraph-type-title {
   float: left;
 }
 
-.node-parade-demo-form .paragraphs-button-wrapper,
-.node-parade-demo-edit-form .paragraphs-button-wrapper {
+.node-parade-onepage-form .paragraphs-button-wrapper,
+.node-parade-onepage-edit-form .paragraphs-button-wrapper {
   margin: 2em 0;
 }
 
-.node-parade-demo-form .paragraph-actions,
-.node-parade-demo-edit-form .paragraph-actions {
+.node-parade-onepage-form .paragraph-actions,
+.node-parade-onepage-edit-form .paragraph-actions {
   display: inline-block;
   margin: 0;
   margin-left: 1em;
@@ -225,19 +225,19 @@
   list-style: none;
 }
 
-.node-parade-demo-form .paragraph-actions li:first-child,
-.node-parade-demo-edit-form .paragraph-actions li:first-child {
+.node-parade-onepage-form .paragraph-actions li:first-child,
+.node-parade-onepage-edit-form .paragraph-actions li:first-child {
   margin-left: 0;
 }
 
-.node-parade-demo-form .paragraph-actions .button,
-.node-parade-demo-edit-form .paragraph-actions .button {
+.node-parade-onepage-form .paragraph-actions .button,
+.node-parade-onepage-edit-form .paragraph-actions .button {
   padding: 5px 1em;
   box-shadow: 0;
 }
 
-.node-parade-demo-form .paragraph-actions > li,
-.node-parade-demo-edit-form .paragraph-actions > li {
+.node-parade-onepage-form .paragraph-actions > li,
+.node-parade-onepage-edit-form .paragraph-actions > li {
   display: inline-block;
   margin-left: 1em;
 }

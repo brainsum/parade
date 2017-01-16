@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_parade_onepage_menu
-    - node.type.parade_demo
+    - node.type.parade_onepage
   module:
     - link
     - parade_demo
   enforced:
     module:
       - parade_demo
-id: node.parade_demo.field_parade_onepage_menu
+id: node.parade_onepage.field_parade_onepage_menu
 field_name: field_parade_onepage_menu
 entity_type: node
-bundle: parade_demo
+bundle: parade_onepage
 label: Menu
 description: 'You can set anchor links (e.g. <strong>#contact-us</strong>) or external links (e.g. <strong>https://google.com</strong>). Be sure that the anchor link matches with one of the section''s <em>Anchor</em> field.'
 required: false

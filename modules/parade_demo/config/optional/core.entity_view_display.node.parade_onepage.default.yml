@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.parade_demo.field_parade_onepage_id
-    - field.field.node.parade_demo.field_parade_onepage_menu
-    - field.field.node.parade_demo.field_parade_onepage_sections
-    - node.type.parade_demo
+    - field.field.node.parade_onepage.field_parade_onepage_id
+    - field.field.node.parade_onepage.field_parade_onepage_menu
+    - field.field.node.parade_onepage.field_parade_onepage_sections
+    - node.type.parade_onepage
   module:
     - entity_reference_revisions
     - link
@@ -13,9 +13,9 @@ dependencies:
   enforced:
     module:
       - parade_demo
-id: node.parade_demo.default
+id: node.parade_onepage.default
 targetEntityType: node
-bundle: parade_demo
+bundle: parade_onepage
 mode: default
 content:
   field_parade_onepage_menu:

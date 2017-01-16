@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_parade_onepage_sections
-    - node.type.parade_demo
+    - node.type.parade_onepage
     - paragraphs.paragraphs_type.header
     - paragraphs.paragraphs_type.image_text
     - paragraphs.paragraphs_type.images
@@ -19,10 +19,10 @@ dependencies:
   module:
     - entity_reference_revisions
     - parade
-id: node.parade_demo.field_parade_onepage_sections
+id: node.parade_onepage.field_parade_onepage_sections
 field_name: field_parade_onepage_sections
 entity_type: node
-bundle: parade_demo
+bundle: parade_onepage
 label: Sections
 description: ''
 required: false

@@ -3,17 +3,17 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_parade_onepage_id
-    - node.type.parade_demo
+    - node.type.parade_onepage
   module:
     - machine_name
     - parade_demo
   enforced:
     module:
       - parade_demo
-id: node.parade_demo.field_parade_onepage_id
+id: node.parade_onepage.field_parade_onepage_id
 field_name: field_parade_onepage_id
 entity_type: node
-bundle: parade_demo
+bundle: parade_onepage
 label: 'Machine name'
 description: ''
 required: false

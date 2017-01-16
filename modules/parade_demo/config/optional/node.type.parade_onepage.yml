@@ -6,8 +6,8 @@ dependencies:
       - parade_demo
 langcode: en
 status: true
-name: Parade Demo
-type: parade_demo
+name: Parade Onepage
+type: parade_onepage
 description: 'Dynamic onepage sites with predefined Paragraph types and styles.'
 help: ''
 new_revision: true

@@ -1,4 +1,4 @@
-.page-node-type-parade-demo {
+.page-node-type-parade-onepage {
   background: 0;
 
   // @todo better solution. Hide blocks in config install?
@@ -7,7 +7,7 @@
   }
 }
 
-.node--type-parade-demo {
+.node--type-parade-onepage {
   position: relative;
 
   .field--name-field-parade-onepage-menu {
@@ -99,8 +99,8 @@
   }
 }
 
-.node-parade-demo-form,
-.node-parade-demo-edit-form {
+.node-parade-onepage-form,
+.node-parade-onepage-edit-form {
     .field--name-field-parade-onepage-menu {
         .field-multiple-table {
             td {
