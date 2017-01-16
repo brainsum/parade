@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_parade_demo
+    - field.storage.node.field_parade_onepage_sections
     - node.type.parade_demo
     - paragraphs.paragraphs_type.header
     - paragraphs.paragraphs_type.image_text
@@ -19,10 +19,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - parade
-_core:
-  default_config_hash: QSRQMFtTCFCbCAbrorUeTATJLIC8WxbImP-8mEWxlus
-id: node.parade_demo.field_parade_demo
-field_name: field_parade_demo
+id: node.parade_demo.field_parade_onepage_sections
+field_name: field_parade_onepage_sections
 entity_type: node
 bundle: parade_demo
 label: Sections

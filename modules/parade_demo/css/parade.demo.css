@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.node--type-parade-demo .field--name-field-menu {
+.node--type-parade-demo .field--name-field-parade-onepage-menu {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -18,7 +18,7 @@
   margin: 1em;
 }
 
-.node--type-parade-demo .field--name-field-menu a {
+.node--type-parade-demo .field--name-field-parade-onepage-menu a {
   color: white;
 }
 
@@ -110,20 +110,20 @@
   color: white;
 }
 
-.node-parade-demo-form .field--name-field-menu .field-multiple-table td,
-.node-parade-demo-edit-form .field--name-field-menu .field-multiple-table td {
+.node-parade-demo-form .field--name-field-parade-onepage-menu .field-multiple-table td,
+.node-parade-demo-edit-form .field--name-field-parade-onepage-menu .field-multiple-table td {
   padding: 0.5em 0;
 }
 
-.node-parade-demo-form .field--name-field-menu .field-multiple-table .form-item,
-.node-parade-demo-edit-form .field--name-field-menu .field-multiple-table .form-item {
+.node-parade-demo-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item,
+.node-parade-demo-edit-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item {
   float: left;
   width: 50%;
   padding-left: 0.5em;
 }
 
-.node-parade-demo-form .field--name-field-menu .field-multiple-table a.tabledrag-handle,
-.node-parade-demo-edit-form .field--name-field-menu .field-multiple-table a.tabledrag-handle {
+.node-parade-demo-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle,
+.node-parade-demo-edit-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle {
   top: 10px;
   margin-left: 0;
 }

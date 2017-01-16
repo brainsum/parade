@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.parade_demo.field_machine_name
-    - field.field.node.parade_demo.field_menu
-    - field.field.node.parade_demo.field_parade_demo
+    - field.field.node.parade_demo.field_parade_onepage_id
+    - field.field.node.parade_demo.field_parade_onepage_menu
+    - field.field.node.parade_demo.field_parade_onepage_sections
     - node.type.parade_demo
   module:
     - parade
@@ -21,14 +21,14 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
-  field_menu:
+  field_parade_onepage_menu:
     weight: 3
     settings:
       placeholder_url: 'Anchor or URL'
       placeholder_title: 'Link text'
     third_party_settings: {  }
     type: link_with_selected_attribute
-  field_parade_demo:
+  field_parade_onepage_sections:
     type: entity_reference_paragraphs_preview
     weight: 26
     settings:
@@ -80,4 +80,4 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
-  field_machine_name: true
+  field_parade_onepage_id: true

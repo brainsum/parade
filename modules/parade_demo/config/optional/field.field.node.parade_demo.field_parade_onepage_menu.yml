@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_menu
+    - field.storage.node.field_parade_onepage_menu
     - node.type.parade_demo
   module:
     - link
@@ -10,8 +10,8 @@ dependencies:
   enforced:
     module:
       - parade_demo
-id: node.parade_demo.field_menu
-field_name: field_menu
+id: node.parade_demo.field_parade_onepage_menu
+field_name: field_parade_onepage_menu
 entity_type: node
 bundle: parade_demo
 label: Menu
