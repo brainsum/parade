@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_parade_onepage_sections
+    - node.type.parade_onepage
+id: node.parade_onepage.field_parade_onepage_sections
+field_name: field_parade_onepage_sections
+entity_type: node
+bundle: parade_onepage
+label: Sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      header: header
+      simple: simple
+      image_text: image_text
+      text_box: text_box
+      text_boxes: text_boxes
+      images: images
+      locations: locations
+      marketo_form: marketo_form
+      marketo_poll: marketo_poll
+field_type: entity_reference_revisions

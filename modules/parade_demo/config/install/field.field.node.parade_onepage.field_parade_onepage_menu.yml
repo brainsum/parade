@@ -4,12 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_parade_onepage_menu
     - node.type.parade_onepage
-  module:
-    - link
-    - parade_demo
-  enforced:
-    module:
-      - parade_demo
 id: node.parade_onepage.field_parade_onepage_menu
 field_name: field_parade_onepage_menu
 entity_type: node
