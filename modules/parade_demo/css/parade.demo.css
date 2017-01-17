@@ -1,3 +1,17 @@
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title,
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-secondary-title,
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-call-to-action {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title,
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-secondary-title,
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-call-to-action {
+    text-align: left;
+  }
+}
+
 .node--type-parade-onepage {
   position: relative;
   background: rgba(0, 0, 0, 0.1);
@@ -39,6 +53,10 @@
   z-index: -2 !important;
 }
 
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
+  padding: 0 10px;
+}
+
 .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:before,
 .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:after {
   display: table;
@@ -49,18 +67,24 @@
   clear: both;
 }
 
+@media screen and (min-width: 1024px) {
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
+    padding: 0;
+  }
+}
+
 .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title {
-  display: inline-block;
+  display: block;
   margin-bottom: 0;
   letter-spacing: -2px;
   color: white;
-  font-size: 4em;
+  font-size: 2.8em;
   font-weight: 800;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title {
-    font-size: 2.8em;
+    font-size: 4em;
   }
 }
 
