@@ -20,20 +20,6 @@ buttons:
     component:
       css/buttons.css: {}
 
-# @todo Move colorpicker to tieto_base, for later use.
-colorpicker:
-  version: VERSION
-  css:
-    component:
-      css/colorpicker.css: {}
-  js:
-    js/colorpicker.js: {}
-  dependencies:
-    - core/drupal
-    - core/modernizr
-    - core/jquery
-    - parade/vendor.spectrum
-
 # Utilities and UX
 smooth-scroll:
   version: VERSION
@@ -159,16 +145,3 @@ vendor.iphone-inline-video:
     gpl-compatible: true
   js:
     js/lib/iphone-inline-video.browser.js: { minified: true }
-
-vendor.spectrum:
-  remote: http://bgrins.github.io/spectrum
-  version: 1.8.0
-  license:
-    name: GPL-2.0
-    url: https://github.com/bgrins/spectrum/blob/master/LICENSE
-    gpl-compatible: true
-  css:
-    component:
-      css/spectrum.css: {}
-  js:
-    js/lib/spectrum.js: {}

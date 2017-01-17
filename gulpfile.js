@@ -61,17 +61,8 @@ gulp.task('copy:js', function () {
     .src([
       'node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js',
       'node_modules/rellax/rellax.min.js',
-      'node_modules/spectrum-colorpicker/spectrum.js',
     ])
     .pipe(gulp.dest('js/lib'));
-});
-
-gulp.task('copy:css', function () {
-  return gulp
-    .src([
-      'node_modules/spectrum-colorpicker/spectrum.css',
-    ])
-    .pipe(gulp.dest('css'));
 });
 
 gulp.task('copy', ['copy:js', 'copy:css']);
