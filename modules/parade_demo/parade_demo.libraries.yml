@@ -3,3 +3,6 @@ parade_onepage:
   css:
     theme:
       css/parade.demo.css: {}
+  js:
+    ../../js/parallax.js: {}
+    ../../js/lib/rellax.min.js: {}
