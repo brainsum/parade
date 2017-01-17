@@ -6,6 +6,3 @@ core: 8.x
 
 dependencies:
   - parade
-  - marketo_form
-  - marketo_poll
-  - field_ui
