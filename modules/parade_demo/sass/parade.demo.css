@@ -1,0 +1,226 @@
+/* line 3, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.page-node-type-parade-onepage {
+  background: rgba(0, 0, 0, 0.1); }
+  /* line 6, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .page-node-type-parade-onepage .block-core {
+    display: none; }
+
+/* line 11, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node--type-parade-onepage {
+  position: relative; }
+  /* line 13, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node--type-parade-onepage .field--name-field-parade-onepage-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    z-index: 1; }
+    /* line 19, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .field--name-field-parade-onepage-menu a {
+      color: white; }
+  /* line 23, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node--type-parade-onepage .paragraph.paragraph--view-mode--default {
+    background: #fff;
+    padding: 30px; }
+    /* line 26, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph.paragraph--view-mode--default .paragraph-inner {
+      max-width: 1000px;
+      margin: 0 auto; }
+  /* line 31, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default {
+    padding: 0;
+    position: relative;
+    z-index: -2; }
+    /* line 36, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .bg-wrapper {
+      z-index: -1; }
+    /* line 2, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/base/_mixins.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:before, .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:after {
+      content: " ";
+      display: table; }
+    /* line 7, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/base/_mixins.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:after {
+      clear: both; }
+    /* line 42, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title {
+      font-size: 4em;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 0;
+      letter-spacing: -2px;
+      color: white; }
+      @media screen and (max-width: 768px) {
+        /* line 42, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+        .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title {
+          font-size: 2.8em; } }
+    /* line 53, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-secondary-title,
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-lead-text {
+      font-size: 1.5em;
+      margin-bottom: .5em; }
+      @media screen and (max-width: 768px) {
+        /* line 53, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+        .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-secondary-title,
+        .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-lead-text {
+          font-size: 1.2em; } }
+    /* line 62, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-call-to-action a {
+      border: 1px solid white;
+      border-radius: 3px;
+      padding: .5em 1em; }
+    /* line 67, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field {
+      color: white; }
+      /* line 69, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+      .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field:last-child {
+        margin-bottom: 1em; }
+  /* line 75, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default {
+    clear: both; }
+    /* line 77, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-grey {
+      background: #f3f3f3; }
+    /* line 80, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded {
+      background: #292929; }
+      /* line 82, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+      .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded,
+      .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded .paragraph__title {
+        color: white; }
+    /* line 87, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse {
+      background: #292929; }
+      /* line 89, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+      .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse,
+      .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
+        color: white; }
+    /* line 94, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse {
+      background: #292929; }
+      /* line 96, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+      .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse,
+      .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title {
+        color: white; }
+
+/* line 109, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table td,
+.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table td {
+  padding: .5em 0; }
+
+/* line 112, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item,
+.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table .form-item {
+  float: left;
+  width: 50%;
+  padding-left: .5em; }
+
+/* line 117, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle,
+.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table a.tabledrag-handle {
+  top: 10px;
+  margin-left: 0; }
+
+/* line 123, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .paragraph-type-top,
+.node-parade-onepage-edit-form .paragraph-type-top {
+  float: none;
+  clear: none;
+  margin-bottom: .5em; }
+
+/* line 128, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .paragraphs-subform > .form-wrapper,
+.node-parade-onepage-edit-form .paragraphs-subform > .form-wrapper {
+  margin: 1em 0; }
+
+/* line 131, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-form td.tabledrag-hide,
+.node-parade-onepage-edit-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-edit-form td.tabledrag-hide {
+  display: none !important; }
+
+/* line 135, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .field-multiple-table,
+.node-parade-onepage-edit-form .field-multiple-table {
+  width: 100%; }
+  /* line 137, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .field-multiple-table th.field-label,
+  .node-parade-onepage-edit-form .field-multiple-table th.field-label {
+    text-align: left; }
+  /* line 140, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .field-multiple-table tr,
+  .node-parade-onepage-edit-form .field-multiple-table tr {
+    border-bottom: 1px solid #e3e3e3; }
+  /* line 143, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .field-multiple-table .drag,
+  .node-parade-onepage-form .field-multiple-table .drag-previous,
+  .node-parade-onepage-edit-form .field-multiple-table .drag,
+  .node-parade-onepage-edit-form .field-multiple-table .drag-previous {
+    background-color: #f3f3f3; }
+  /* line 147, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .field-multiple-table td,
+  .node-parade-onepage-edit-form .field-multiple-table td {
+    padding: 1.2em 0 1.2em .5em; }
+  /* line 150, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .field-multiple-table .field-multiple-drag,
+  .node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag {
+    position: relative;
+    padding: 1.2em 0; }
+    /* line 153, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node-parade-onepage-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
+    .node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: transparent;
+      background: #f3f3f3; }
+  /* line 163, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .field-multiple-table a.tabledrag-handle,
+  .node-parade-onepage-edit-form .field-multiple-table a.tabledrag-handle {
+    position: absolute;
+    z-index: 1;
+    top: 1em;
+    margin-left: 0; }
+    /* line 168, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+    .node-parade-onepage-form .field-multiple-table a.tabledrag-handle .handle,
+    .node-parade-onepage-edit-form .field-multiple-table a.tabledrag-handle .handle {
+      height: 17px;
+      margin: 5px;
+      background-position: 0 0; }
+
+/* line 175, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .paragraph-type-title,
+.node-parade-onepage-edit-form .paragraph-type-title {
+  float: left; }
+
+/* line 178, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .paragraphs-button-wrapper,
+.node-parade-onepage-edit-form .paragraphs-button-wrapper {
+  margin: 2em 0; }
+
+/* line 181, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+.node-parade-onepage-form .paragraph-actions,
+.node-parade-onepage-edit-form .paragraph-actions {
+  display: inline-block;
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+  list-style: none; }
+  /* line 187, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .paragraph-actions li:first-child,
+  .node-parade-onepage-edit-form .paragraph-actions li:first-child {
+    margin-left: 0; }
+  /* line 190, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .paragraph-actions .button,
+  .node-parade-onepage-edit-form .paragraph-actions .button {
+    padding: 5px 1em;
+    box-shadow: 0; }
+  /* line 194, /Users/malatenszkidavid/Documents/WWW/parade/web/modules/contrib/parade/modules/parade_demo/sass/parade.demo.scss */
+  .node-parade-onepage-form .paragraph-actions > li,
+  .node-parade-onepage-edit-form .paragraph-actions > li {
+    display: inline-block;
+    margin-left: 1em; }
+
+/*# sourceMappingURL=parade.demo.css.map */

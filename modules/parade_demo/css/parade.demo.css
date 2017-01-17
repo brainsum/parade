@@ -1,5 +1,5 @@
 .page-node-type-parade-onepage {
-  background: 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .page-node-type-parade-onepage .block-core {
@@ -34,45 +34,64 @@
 
 .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default {
   position: relative;
+  z-index: -2;
   padding: 0;
 }
 
-.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .bg-wrapper {
+  z-index: -1;
+}
+
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:before,
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:after {
+  display: table;
+  content: " ";
+}
+
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner:after {
+  clear: both;
+}
+
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title {
   display: inline-block;
   margin-bottom: 0;
   letter-spacing: -2px;
+  color: white;
   font-size: 4em;
   font-weight: 800;
 }
 
 @media screen and (max-width: 768px) {
-  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .paragraph__title {
     font-size: 2.8em;
   }
 }
 
-.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
-.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-secondary-title,
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-lead-text {
   margin-bottom: 0.5em;
   font-size: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
-  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
-  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-secondary-title,
+  .node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-lead-text {
     font-size: 1.2em;
   }
 }
 
-.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field--name-field-call-to-action a {
   padding: 0.5em 1em;
-  color: white;
   border: 1px solid white;
   border-radius: 3px;
 }
 
-.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field {
   color: white;
+}
+
+.node--type-parade-onepage .paragraph--type--header.paragraph--view-mode--default .paragraph-inner .field:last-child {
+  margin-bottom: 1em;
 }
 
 .node--type-parade-onepage .paragraph--type--simple.paragraph--view-mode--default {

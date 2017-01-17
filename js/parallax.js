@@ -12,5 +12,4 @@
   catch (e) {
     // Sshhh...
   }
-
 })(jQuery);
