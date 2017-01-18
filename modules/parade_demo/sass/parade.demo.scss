@@ -1,7 +1,9 @@
 @import "base/variables";
 @import "base/mixins";
+@import "components/hamburger";
 //########################
-.node--type-parade-onepage {
+.page-node-type-parade-onepage {
+  font-family: $font-family;
   position: relative;
   background: rgba(black, 0.1);
   // @todo better solution. Hide blocks in config install?
@@ -10,10 +12,13 @@
   }
   .field--name-field-parade-onepage-menu {
     position: absolute;
-    top: 0;
+    top: 32px;
     right: 0;
     margin: 1em;
     z-index: 1;
+    @include md {
+      top: 0;
+    }
     a {
       color: white;
     }
@@ -43,7 +48,7 @@
     .paragraph-inner {
       @include clearfix;
       padding: 0 10px;
-      @media screen and (min-width: $wide) {
+      @include lg {
         padding: 0;
       }
       .paragraph__title {
@@ -53,7 +58,7 @@
         letter-spacing: -2px;
         color: white;
         display: block;
-        @media screen and (min-width: $narrow) {
+        @include breakpoint-max(lg) {
           font-size: 4em;
         }
         @include mobile-center;
@@ -63,9 +68,10 @@
       }
       .field--name-field-secondary-title,
       .field--name-field-lead-text {
+        @include mobile-center;
         font-size: 1.5em;
         margin-bottom: .5em;
-        @media screen and (max-width: $wide) {
+        @include breakpoint-max(lg) {
           font-size: 1.2em;
         }
       }

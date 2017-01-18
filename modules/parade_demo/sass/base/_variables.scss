@@ -1,5 +1,5 @@
-@import "susy";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext');
 
-$narrow: 560px;
-$wide: 851px;
-$extra-wide: 1600px;
+$font-family: 'Open Sans', sans-serif;
+
+$color-blue: #68afd1;

@@ -1,3 +1,5 @@
+@import "susy";
+
 @mixin clearfix() {
   &:before,
   &:after {
@@ -9,9 +11,56 @@
   }
 }
 
-@mixin mobile-center {
-  text-align: center;
-  @media screen and (min-width: $narrow) {
-    text-align: left;
+
+$narrow: 560px;
+$wide: 851px;
+
+// Breakpoints
+
+@mixin breakpoint($class) {
+  @if $class == md {
+    @media (min-width: 560px) {
+      @content;
+    }
   }
+  @else if $class == lg {
+    @media (min-width: 851px) {
+      @content;
+    }
+  }
+}
+
+@mixin md() {
+  @include breakpoint(md) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @include breakpoint(lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($class) {
+  @if $class == md {
+    @media (max-width: 850px) {
+      @content;
+    }
+  }
+  @else if $class == lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+}
+
+
+// center on mobile
+
+@mixin mobile-center {
+    text-align: center;
+    @media screen and (min-width: $narrow) {
+        text-align: left;
+    }
 }

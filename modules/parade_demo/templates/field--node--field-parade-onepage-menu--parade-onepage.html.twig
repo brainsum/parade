@@ -45,8 +45,15 @@
     'field--label-' ~ label_display,
   ]
 %}
+<button id="hamburger" class="hamburger hamburger--collapse" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
 <nav{{ attributes.addClass(classes) }}>
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
+  <ul class="list-reset">
+    {% for item in items %}
+      <li{{ item.attributes.addClass('parade-onepage-menu-link') }}>{{ item.content }}</li>
+    {% endfor %}
+  </ul>
 </nav>

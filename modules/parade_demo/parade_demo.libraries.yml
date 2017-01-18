@@ -1,5 +1,7 @@
 parade_onepage:
-	version: VERSION
-	css:
-  	theme:
-    	css/parade.demo.css: {}
+  version: VERSION
+  css:
+    theme:
+      css/parade.demo.css: {}
+  js:
+    js/parade_demo.js: {}
