@@ -56,10 +56,10 @@
         @media screen and (min-width: $narrow) {
           font-size: 4em;
         }
-        @extend %mobile-center;
+        @include mobile-center;
       }
       .field--name-field-secondary-title {
-        @extend %mobile-center;
+        @include mobile-center;
       }
       .field--name-field-secondary-title,
       .field--name-field-lead-text {
@@ -71,7 +71,7 @@
       }
       // Call to action buttons.
       .field--name-field-call-to-action {
-        @extend %mobile-center;
+        @include mobile-center;
         a {
           border: 1px solid white;
           border-radius: 3px;

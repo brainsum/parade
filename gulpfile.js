@@ -8,9 +8,9 @@ var merge = require('merge-stream');
 
 var sassOptions = {
   outputStyle: 'expanded',
-	includePaths: [
+  includePaths: [
       process.cwd() + '/node_modules',
-      process.cwd() + '/node_modules/susy/sass', 
+      process.cwd() + '/node_modules/susy/sass',
 	]
 };
 
