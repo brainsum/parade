@@ -1,8 +1,5 @@
 parade_onepage:
-  version: VERSION
-  css:
-    theme:
-      css/parade.demo.css: {}
-  js:
-    ../../js/parallax.js: {}
-    ../../js/lib/rellax.min.js: {}
+	version: VERSION
+	css:
+  	theme:
+    	css/parade.demo.css: {}
