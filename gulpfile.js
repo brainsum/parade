@@ -7,7 +7,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var merge = require('merge-stream');
 
 var sassOptions = {
-  outputStyle: 'expanded'
+  outputStyle: 'expanded',
+	includePaths: [
+      process.cwd() + '/node_modules',
+      process.cwd() + '/node_modules/susy/sass', 
+	]
 };
 
 gulp.task('sass', function () {

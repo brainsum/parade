@@ -1,228 +1,227 @@
 @import "base/variables";
 @import "base/mixins";
 //########################
-
 .node--type-parade-onepage {
-    position: relative;
-    background: rgba(black, 0.1);
-    // @todo better solution. Hide blocks in config install?
-    .block-core {
-        display: none;
-    }
-    .field--name-field-parade-onepage-menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 1em;
-        z-index: 1;
-        a {
-            color: white;
-        }
-    }
-    .paragraph.paragraph--view-mode--default {
-        background: #fff;
-        padding: 30px;
-        .paragraph-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-    }
-    .paragraph--type--header.paragraph--view-mode--default {
-        padding: 0;
-        position: relative;
-        background: transparent;
-        .bg-wrapper {
-            .bg-fullsize {
-                z-index: -2 !important;
-            }
-            .bg-parallax {
-                .bg-image {
-                    //background-attachment: fixed;
-                }
-            }
-        }
-        .paragraph-inner {
-            @include clearfix;
-            padding: 0 10px;
-            @media screen and (min-width: $normal) {
-                padding: 0;
-            }
-            .paragraph__title {
-                font-size: 2.8em;
-                font-weight: 800;
-                margin-bottom: 0;
-                letter-spacing: -2px;
-                color: white;
-                display: block;
-                @media screen and (min-width: $narrow) {
-                    font-size: 4em;
-                }
-                @extend %mobile-center;
-            }
-            .field--name-field-secondary-title {
-                @extend %mobile-center;
-            }
-            .field--name-field-secondary-title,
-            .field--name-field-lead-text {
-                font-size: 1.5em;
-                margin-bottom: .5em;
-                @media screen and (max-width: $narrow) {
-                    font-size: 1.2em;
-                }
-            }
-            // Call to action buttons.
-            .field--name-field-call-to-action {
-                @extend %mobile-center;
-                a {
-                    border: 1px solid white;
-                    border-radius: 3px;
-                    padding: .5em 1em;
-                    color: white;
-                    transition: all .25s;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: rgba(white, 0.1);
-                    }
-                }
-            }
-            .field {
-                color: white;
-                &:last-child {
-                    margin-bottom: 1em;
-                }
-            }
-        }
-    }
-    .paragraph--type--simple.paragraph--view-mode--default {
-        @include clearfix;
-        &.layout--one-column-clean {}
-        &.layout--one-column-grey {
-            background: #f3f3f3;
-        }
-        &.layout--one-column-shaded {
-            background: #292929;
-            .paragraph__title {
-                color: white;
-            }
-        }
-        &.layout--two-column-title-1st-inverse {
-            background: #292929;
-            .paragraph__title {
-                color: white;
-                @include span(11 of 24);
-            }
-            .field {
-                color: white;
-                @include span(last 11 of 24);
-            }
-        }
-        &.layout--two-column-content-1st-inverse {
-            background: #292929;
-            .paragraph__title {
-                color: white;
-                @include span(last 11 of 24);
-            }
-            .field {
-                color: white;
-                @include span(11 of 24);
-            }
-        }
-        &.layout--separator-clean {}
-    }
+	position: relative;
+	background: rgba(black, 0.1);
+	// @todo better solution. Hide blocks in config install?
+	.block-core {
+		display: none;
+	}
+	.field--name-field-parade-onepage-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 1em;
+		z-index: 1;
+		a {
+			color: white;
+		}
+	}
+	.paragraph.paragraph--view-mode--default {
+		background: #fff;
+		padding: 30px;
+		.paragraph-inner {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+	}
+	.paragraph--type--header.paragraph--view-mode--default {
+		padding: 0;
+		position: relative;
+		background: transparent;
+		.bg-wrapper {
+			.bg-fullsize {
+				z-index: -2 !important;
+			}
+			.bg-parallax {
+				.bg-image {
+					//background-attachment: fixed;
+				}
+			}
+		}
+		.paragraph-inner {
+			@include clearfix;
+			padding: 0 10px;
+			@media screen and (min-width: $wide) {
+				padding: 0;
+			}
+			.paragraph__title {
+				font-size: 2.8em;
+				font-weight: 800;
+				margin-bottom: 0;
+				letter-spacing: -2px;
+				color: white;
+				display: block;
+				@media screen and (min-width: $narrow) {
+					font-size: 4em;
+				}
+				@extend %mobile-center;
+			}
+			.field--name-field-secondary-title {
+				@extend %mobile-center;
+			}
+			.field--name-field-secondary-title,
+			.field--name-field-lead-text {
+				font-size: 1.5em;
+				margin-bottom: .5em;
+				@media screen and (max-width: $wide) {
+					font-size: 1.2em;
+				}
+			}
+			// Call to action buttons.
+			.field--name-field-call-to-action {
+				@extend %mobile-center;
+				a {
+					border: 1px solid white;
+					border-radius: 3px;
+					padding: .5em 1em;
+					color: white;
+					transition: all .25s;
+					cursor: pointer;
+					&:hover {
+						background-color: rgba(white, 0.1);
+					}
+				}
+			}
+			.field {
+				color: white;
+				&:last-child {
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+	.paragraph--type--simple.paragraph--view-mode--default {
+		@include clearfix;
+		&.layout--one-column-clean {}
+		&.layout--one-column-grey {
+			background: #f3f3f3;
+		}
+		&.layout--one-column-shaded {
+			background: #292929;
+			.paragraph__title {
+				color: white;
+			}
+		}
+		&.layout--two-column-title-1st-inverse {
+			background: #292929;
+			.paragraph__title {
+				color: white;
+				@include span(11 of 24);
+			}
+			.field {
+				color: white;
+				@include span(last 11 of 24);
+			}
+		}
+		&.layout--two-column-content-1st-inverse {
+			background: #292929;
+			.paragraph__title {
+				color: white;
+				@include span(last 11 of 24);
+			}
+			.field {
+				color: white;
+				@include span(11 of 24);
+			}
+		}
+		&.layout--separator-clean {}
+	}
 }
 
 .node-parade-onepage-form,
 .node-parade-onepage-edit-form {
-    .field--name-field-parade-onepage-menu {
-        .field-multiple-table {
-            td {
-                padding: .5em 0;
-            }
-            .form-item {
-                float: left;
-                width: 50%;
-                padding-left: .5em;
-            }
-            a.tabledrag-handle {
-                top: 10px;
-                margin-left: 0;
-            }
-        }
-    }
-    .paragraph-type-top {
-        float: none;
-        clear: none;
-        margin-bottom: .5em;
-    }
-    .paragraphs-subform > .form-wrapper {
-        margin: 1em 0;
-    }
-    .tabledrag-toggle-weight-wrapper,
-    td.tabledrag-hide {
-        display: none !important;
-    }
-    .field-multiple-table {
-        width: 100%;
-        th.field-label {
-            text-align: left;
-        }
-        tr {
-            border-bottom: 1px solid #e3e3e3;
-        }
-        .drag,
-        .drag-previous {
-            background-color: #f3f3f3;
-        }
-        td {
-            padding: 1.2em 0 1.2em .5em;
-        }
-        .field-multiple-drag {
-            position: relative;
-            padding: 1.2em 0;
-            abbr.tabledrag-changed {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                color: transparent;
-                background: #f3f3f3;
-            }
-        }
-        a.tabledrag-handle {
-            position: absolute;
-            z-index: 1;
-            top: 1em;
-            margin-left: 0;
-            .handle {
-                height: 17px;
-                margin: 5px;
-                background-position: 0 0;
-            }
-        }
-    }
-    .paragraph-type-title {
-        float: left;
-    }
-    .paragraphs-button-wrapper {
-        margin: 2em 0;
-    }
-    .paragraph-actions {
-        display: inline-block;
-        margin: 0;
-        margin-left: 1em;
-        padding: 0;
-        list-style: none;
-        li:first-child {
-            margin-left: 0;
-        }
-        .button {
-            padding: 5px 1em;
-            box-shadow: 0;
-        }
-        > li {
-            display: inline-block;
-            margin-left: 1em;
-        }
-    }
+	.field--name-field-parade-onepage-menu {
+		.field-multiple-table {
+			td {
+				padding: .5em 0;
+			}
+			.form-item {
+				float: left;
+				width: 50%;
+				padding-left: .5em;
+			}
+			a.tabledrag-handle {
+				top: 10px;
+				margin-left: 0;
+			}
+		}
+	}
+	.paragraph-type-top {
+		float: none;
+		clear: none;
+		margin-bottom: .5em;
+	}
+	.paragraphs-subform > .form-wrapper {
+		margin: 1em 0;
+	}
+	.tabledrag-toggle-weight-wrapper,
+	td.tabledrag-hide {
+		display: none !important;
+	}
+	.field-multiple-table {
+		width: 100%;
+		th.field-label {
+			text-align: left;
+		}
+		tr {
+			border-bottom: 1px solid #e3e3e3;
+		}
+		.drag,
+		.drag-previous {
+			background-color: #f3f3f3;
+		}
+		td {
+			padding: 1.2em 0 1.2em .5em;
+		}
+		.field-multiple-drag {
+			position: relative;
+			padding: 1.2em 0;
+			abbr.tabledrag-changed {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				color: transparent;
+				background: #f3f3f3;
+			}
+		}
+		a.tabledrag-handle {
+			position: absolute;
+			z-index: 1;
+			top: 1em;
+			margin-left: 0;
+			.handle {
+				height: 17px;
+				margin: 5px;
+				background-position: 0 0;
+			}
+		}
+	}
+	.paragraph-type-title {
+		float: left;
+	}
+	.paragraphs-button-wrapper {
+		margin: 2em 0;
+	}
+	.paragraph-actions {
+		display: inline-block;
+		margin: 0;
+		margin-left: 1em;
+		padding: 0;
+		list-style: none;
+		li:first-child {
+			margin-left: 0;
+		}
+		.button {
+			padding: 5px 1em;
+			box-shadow: 0;
+		}
+		> li {
+			display: inline-block;
+			margin-left: 1em;
+		}
+	}
 }
