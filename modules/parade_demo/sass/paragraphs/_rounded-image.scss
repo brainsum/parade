@@ -1,0 +1,21 @@
+// @todo move this to text-boxes.scss!
+.paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default {
+    background: $tieto-lightblue;
+
+    .field--name-field-paragraphs {
+        margin: 0 -15px;
+    }
+
+    .field--name-field-paragraphs {
+
+        .field--name-field-title {
+            font-weight: bold;
+            margin: 0 0 .5em;
+            line-height: 27px;
+            font-size: 20px;
+            letter-spacing: -.5px;
+            color: $text-color;
+        }
+
+    }
+}

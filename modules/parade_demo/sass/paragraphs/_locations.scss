@@ -1,0 +1,8 @@
+.paragraph--type--locations.paragraph--view-mode--default {
+
+    .field--name-field-title {
+        @include campaign-headline;
+        color: $text-color-strong;
+    }
+
+}

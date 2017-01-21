@@ -1,0 +1,57 @@
+/**
+ * Tieto logo.
+ */
+.logo {
+	display: block;
+	z-index: 501;
+	position: fixed;
+	top: 0; left: 0;
+	padding-left: 14px;
+	width: 100%;
+
+  img {
+    margin: 5px 0;
+  }
+
+	&::after {
+		transform: $tieto-logo-transform;
+		will-change: transform, width;
+
+		background: $tieto-blue;
+		content: " ";
+		position: absolute;
+		display: block;
+		z-index: -1;
+
+		top: -84px;
+		left: -60px;
+
+	    width: 200px;
+		height: 200px;
+	}
+
+	&.not-fixed::after {
+		transition: width .2s, transform .2s ease .2s;
+		transform: $tieto-logo-transform;
+	}
+
+	&.fixed::after {
+		transition: transform .2s, width .2s ease .2s;
+		transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
+		width: 100%;
+	}
+
+	// Make horizontal bar and logo smaller on mobile
+	@include breakpoint-max(md) {
+		&::after {
+			top: -105px;
+		}
+
+		img {
+			width: 80px;
+			height: 53px;
+      margin: 0;
+		}
+	}
+}
+

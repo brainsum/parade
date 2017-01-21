@@ -2,7 +2,6 @@ parade_onepage:
   version: VERSION
   css:
     theme:
-      //fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext: { type: external }
       css/parade.demo.css: {}
   js:
-    js/parade_demo.js: {}
+    js/global.js: {}

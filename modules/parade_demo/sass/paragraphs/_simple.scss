@@ -1,0 +1,65 @@
+.paragraph--type--simple.paragraph--view-mode--default {
+
+  .paragraph__title {
+    @include campaign-title-center;
+  }
+
+	&.layout--one-column-clean {
+    text-align: center;
+	}
+
+	&.layout--one-column-shaded {
+		background-color: $tieto-lightblue;
+	}
+
+	&.layout--one-column-grey {
+		background-color: $tieto-lightgrey;
+	}
+
+	&.layout--separator-clean {
+		.paragraph__title {
+			@include campaign-title-separator;
+		}
+	}
+
+	// Inverse layout
+	&.layout--two-column-content-1st-inverse,
+	&.layout--two-column-title-1st-inverse {
+		background: $tieto-blue;
+
+		.paragraph__title,
+		.field--name-field-text {
+			color: white;
+			@include md {
+				width: 50%;
+			}
+		}
+
+		.paragraph__title {
+			@include campaign-headline;
+			color: white;
+		}
+	}
+
+	@include md {
+		&.layout--two-column-content-1st-inverse {
+			.paragraph__title {
+				float: right;
+				text-align: right;
+			}
+			.field--name-field-text {
+				float: left;
+			}
+		}
+
+		&.layout--two-column-title-1st-inverse {
+			.paragraph__title {
+				float: left;
+				text-align: left;
+			}
+			.field--name-field-text {
+				float: right;
+			}
+		}
+	}
+}

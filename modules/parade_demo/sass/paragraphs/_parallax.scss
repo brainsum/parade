@@ -1,0 +1,27 @@
+.paragraph--type--parallax.paragraph--view-mode--default {
+  text-align: center;
+  color: white;
+  min-height: 340px;
+  display: table;
+  width: 100%;
+
+  .paragraph-inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 60%;
+  }
+
+  .bg-image {
+    // Fallback for when the background image is not available.
+    background-color: $text-color-strong;
+  }
+
+  .field--name-field-title {
+    @include campaign-title;
+    margin-bottom: .5em;
+  }
+
+  .field--name-field-text {
+    font-size: 1.2em;
+  }
+}
