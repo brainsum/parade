@@ -139,7 +139,7 @@
   }
 }
 
-.paragraph.paragraph--view-mode--default {
+.paragraph.paragraph--view-mode--default, .node-parade-onepage-edit-form {
 	@include clearfix;
 	padding: 40px 1em;
 	background-color: #fff;
@@ -207,7 +207,7 @@
     border: 1px solid transparent;
     padding: 0.25rem 1rem;
     font-size: 1rem;
-    border-radius: 2px;
+    border-radius: 2px !important;
     transition: all 0.2s ease-in-out;
     color: #5e5e5e;
     background-color: #eeeeee;
@@ -455,5 +455,10 @@
     border-color: #e56385;
   }
 
+
+}
+
+
+.paragraphs-dropbutton-wrapper{
 
 }
