@@ -1,5 +1,5 @@
-.node-campaign-form,
-.node-campaign-edit-form {
+.node-parade-onepage-form,
+.node-parade-onepage-edit-form {
 
   // Ugly hacks
   .field--name-field-menu {
@@ -53,6 +53,9 @@
 
     tr {
       border-bottom: 1px solid #e3e3e3;
+      &.even{
+        background-color: darken(white,  7%);
+      }
     }
 
     .drag, .drag-previous {
@@ -106,7 +109,7 @@
     background-image: url('../../images/form.png');
   }
 
-  .paragraph-actions {
+  .parade-actions {
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -123,6 +126,7 @@
       background: $parade-lightgrey;
       border: 1px solid darken($parade-lightgrey, 10%);
       box-shadow: 0;
+      border-radius: 2px;
       &:hover, &:focus {
         background: lighten($parade-lightgrey, 10%);
       }

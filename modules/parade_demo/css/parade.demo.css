@@ -2336,92 +2336,97 @@ body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.fo
   text-decoration: underline;
 }
 
-.node-campaign-form .field--name-field-menu .field-multiple-table td,
-.node-campaign-edit-form .field--name-field-menu .field-multiple-table td {
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table td,
+.node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table td {
   padding: 0.5em 0;
 }
 
-.node-campaign-form .field--name-field-menu .field-multiple-table .form-item,
-.node-campaign-edit-form .field--name-field-menu .field-multiple-table .form-item {
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-item,
+.node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-item {
   float: left;
   width: 50%;
   padding-left: 0.5em;
 }
 
-.node-campaign-form .field--name-field-menu .field-multiple-table .form-item input[type="text"],
-.node-campaign-edit-form .field--name-field-menu .field-multiple-table .form-item input[type="text"] {
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-item input[type="text"],
+.node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-item input[type="text"] {
   width: 100%;
 }
 
-.node-campaign-form .field--name-field-menu .field-multiple-table .form-type-checkbox,
-.node-campaign-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox {
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox,
+.node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox {
   width: 100%;
   margin-top: 0.5em;
   font-size: 13px;
 }
 
-.node-campaign-form .field--name-field-menu .field-multiple-table .form-type-checkbox input,
-.node-campaign-form .field--name-field-menu .field-multiple-table .form-type-checkbox label,
-.node-campaign-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox input,
-.node-campaign-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox label {
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox input,
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox label,
+.node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox input,
+.node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox label {
   vertical-align: middle;
 }
 
-.node-campaign-form .paragraph-type-top,
-.node-campaign-edit-form .paragraph-type-top {
+.node-parade-onepage-form .paragraph-type-top,
+.node-parade-onepage-edit-form .paragraph-type-top {
   float: none;
   clear: none;
   margin-bottom: 0.5em;
 }
 
-.node-campaign-form .paragraphs-subform > .form-wrapper,
-.node-campaign-edit-form .paragraphs-subform > .form-wrapper {
+.node-parade-onepage-form .paragraphs-subform > .form-wrapper,
+.node-parade-onepage-edit-form .paragraphs-subform > .form-wrapper {
   margin: 1em 0;
 }
 
-.node-campaign-form .tabledrag-toggle-weight-wrapper,
-.node-campaign-form td.tabledrag-hide,
-.node-campaign-edit-form .tabledrag-toggle-weight-wrapper,
-.node-campaign-edit-form td.tabledrag-hide {
+.node-parade-onepage-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-form td.tabledrag-hide,
+.node-parade-onepage-edit-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-edit-form td.tabledrag-hide {
   display: none !important;
 }
 
-.node-campaign-form .field-multiple-table,
-.node-campaign-edit-form .field-multiple-table {
+.node-parade-onepage-form .field-multiple-table,
+.node-parade-onepage-edit-form .field-multiple-table {
   width: 100%;
 }
 
-.node-campaign-form .field-multiple-table th.field-label,
-.node-campaign-edit-form .field-multiple-table th.field-label {
+.node-parade-onepage-form .field-multiple-table th.field-label,
+.node-parade-onepage-edit-form .field-multiple-table th.field-label {
   text-align: left;
 }
 
-.node-campaign-form .field-multiple-table tr,
-.node-campaign-edit-form .field-multiple-table tr {
+.node-parade-onepage-form .field-multiple-table tr,
+.node-parade-onepage-edit-form .field-multiple-table tr {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.node-campaign-form .field-multiple-table .drag,
-.node-campaign-form .field-multiple-table .drag-previous,
-.node-campaign-edit-form .field-multiple-table .drag,
-.node-campaign-edit-form .field-multiple-table .drag-previous {
+.node-parade-onepage-form .field-multiple-table tr.even,
+.node-parade-onepage-edit-form .field-multiple-table tr.even {
+  background-color: #ededed;
+}
+
+.node-parade-onepage-form .field-multiple-table .drag,
+.node-parade-onepage-form .field-multiple-table .drag-previous,
+.node-parade-onepage-edit-form .field-multiple-table .drag,
+.node-parade-onepage-edit-form .field-multiple-table .drag-previous {
   background-color: #f3f3f3;
 }
 
-.node-campaign-form .field-multiple-table td,
-.node-campaign-edit-form .field-multiple-table td {
+.node-parade-onepage-form .field-multiple-table td,
+.node-parade-onepage-edit-form .field-multiple-table td {
   padding: 1.2em 0 1.2em 0.5em;
 }
 
-.node-campaign-form .field-multiple-table .field-multiple-drag,
-.node-campaign-edit-form .field-multiple-table .field-multiple-drag {
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag {
   position: relative;
   width: auto;
   padding: 1.2em 0;
 }
 
-.node-campaign-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
-.node-campaign-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
   position: absolute;
   top: 0;
   right: 0;
@@ -2431,8 +2436,8 @@ body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.fo
   background: #cde8f6;
 }
 
-.node-campaign-form .field-multiple-table .field-multiple-drag a.tabledrag-handle,
-.node-campaign-edit-form .field-multiple-table .field-multiple-drag a.tabledrag-handle {
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag a.tabledrag-handle,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag a.tabledrag-handle {
   position: relative;
   z-index: 1;
   z-index: 1;
@@ -2442,30 +2447,30 @@ body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.fo
   padding-right: 0;
 }
 
-.node-campaign-form .field-multiple-table .field-multiple-drag a.tabledrag-handle .handle,
-.node-campaign-edit-form .field-multiple-table .field-multiple-drag a.tabledrag-handle .handle {
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag a.tabledrag-handle .handle,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag a.tabledrag-handle .handle {
   height: 17px;
   margin: 5px;
   background-position: 0 0;
 }
 
-.node-campaign-form .paragraph-type-title,
-.node-campaign-edit-form .paragraph-type-title {
+.node-parade-onepage-form .paragraph-type-title,
+.node-parade-onepage-edit-form .paragraph-type-title {
   float: left;
 }
 
-.node-campaign-form .paragraphs-button-wrapper,
-.node-campaign-edit-form .paragraphs-button-wrapper {
+.node-parade-onepage-form .paragraphs-button-wrapper,
+.node-parade-onepage-edit-form .paragraphs-button-wrapper {
   margin: 2em 0;
 }
 
-.node-campaign-form .parade-button-marketo-form,
-.node-campaign-edit-form .parade-button-marketo-form {
+.node-parade-onepage-form .parade-button-marketo-form,
+.node-parade-onepage-edit-form .parade-button-marketo-form {
   background-image: url("../../images/form.png");
 }
 
-.node-campaign-form .paragraph-actions,
-.node-campaign-edit-form .paragraph-actions {
+.node-parade-onepage-form .parade-actions,
+.node-parade-onepage-edit-form .parade-actions {
   display: inline-block;
   margin: 0;
   margin-left: 1em;
@@ -2473,29 +2478,30 @@ body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.fo
   list-style: none;
 }
 
-.node-campaign-form .paragraph-actions li:first-child,
-.node-campaign-edit-form .paragraph-actions li:first-child {
+.node-parade-onepage-form .parade-actions li:first-child,
+.node-parade-onepage-edit-form .parade-actions li:first-child {
   margin-left: 0;
 }
 
-.node-campaign-form .paragraph-actions .button,
-.node-campaign-edit-form .paragraph-actions .button {
+.node-parade-onepage-form .parade-actions .button,
+.node-parade-onepage-edit-form .parade-actions .button {
   padding: 5px 1em;
   color: #777;
   border: 1px solid #c6c6c6;
+  border-radius: 2px;
   background: #dfdfdf;
   box-shadow: 0;
 }
 
-.node-campaign-form .paragraph-actions .button:hover,
-.node-campaign-form .paragraph-actions .button:focus,
-.node-campaign-edit-form .paragraph-actions .button:hover,
-.node-campaign-edit-form .paragraph-actions .button:focus {
+.node-parade-onepage-form .parade-actions .button:hover,
+.node-parade-onepage-form .parade-actions .button:focus,
+.node-parade-onepage-edit-form .parade-actions .button:hover,
+.node-parade-onepage-edit-form .parade-actions .button:focus {
   background: #f9f9f9;
 }
 
-.node-campaign-form .paragraph-actions > li,
-.node-campaign-edit-form .paragraph-actions > li {
+.node-parade-onepage-form .parade-actions > li,
+.node-parade-onepage-edit-form .parade-actions > li {
   display: inline-block;
   margin-left: 1em;
 }
