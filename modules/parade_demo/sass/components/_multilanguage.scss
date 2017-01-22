@@ -11,7 +11,7 @@
         display: block;
         position: relative;
         a {
-          color: $tieto-blue;
+          color: $parade-blue;
         }
         :after {
           content: " ";
@@ -22,13 +22,13 @@
           width: .5em;
           height: .5em;
           transform: rotate(135deg);
-          border-right: .1em solid $tieto-blue;
-          border-top: .1em solid $tieto-blue;
+          border-right: .1em solid $parade-blue;
+          border-top: .1em solid $parade-blue;
         }
       }
     }
     &:hover {
-      background: $tieto-blue;
+      background: $parade-blue;
       position: absolute;
       bottom: -1.6em;
       z-index: 99;

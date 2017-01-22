@@ -14,10 +14,9 @@
   }
 
 	&::after {
-		transform: $tieto-logo-transform;
+		transform: $parade-logo-transform;
 		will-change: transform, width;
-
-		background: $tieto-blue;
+		background: $parade-blue;
 		content: " ";
 		position: absolute;
 		display: block;
@@ -32,7 +31,7 @@
 
 	&.not-fixed::after {
 		transition: width .2s, transform .2s ease .2s;
-		transform: $tieto-logo-transform;
+		transform: $parade-logo-transform;
 	}
 
 	&.fixed::after {

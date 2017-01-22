@@ -16,12 +16,12 @@
         //     display: inline-block;
         //     padding: .7em 1.4em;
         //     margin-right: .5em;
-        //     background: $tieto-blue;
+        //     background: $parade-blue;
         //     border-radius: 3px;
         //     transition: background .3s;
         //     &:hover, &:focus, &:active {
         //         text-decoration: none;
-        //         background: lighten($tieto-blue, 5%);
+        //         background: lighten($parade-blue, 5%);
         //     }
         // }
     }
@@ -123,7 +123,7 @@
         // Text
         .field--name-field-text {
             padding: 2em;
-            background: $tieto-lightblue;
+            background: $parade-lightblue;
 
             @include md {
                 padding-right: 4em;
@@ -134,7 +134,7 @@
         // Image
         .field--name-field-image {
             text-align: center;
-            background: $tieto-lightblue;
+            background: $parade-lightblue;
             padding: 2em 0 0;
 
             img {

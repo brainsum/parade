@@ -1,7 +1,9 @@
 // Colors
-$tieto-blue: #67afe1;
-$brand-primary: $tieto-blue;
+$parade-blue: #679fd1;
+$brand-primary: $parade-blue;
 $brand-danger: #E62600;
+
+
 
 $messages-error-color: #a51b00;
 $messages-error-bg: #fcf4f2;
@@ -87,13 +89,15 @@ $pulp-yellow: #fdd706;
 $pulp-red: #d03428;
 
 
-$tieto-lightblue: #cde6f5;
-$tieto-lightgrey: #efefef;
-$tieto-green: #b2eb95;
+$parade-lightblue: #cde8f6;
+$parade-lightgrey: #dfdfdf;
+$parade-green: #b2eb85;
 $header-height: 50px;
 $page-max-width: 1000px;
-$tieto-logo-transform: rotate(16.5deg) skew(-29deg);
-$tieto-red: #d51067;
-$tieto-orange: #F78D2D;
-$link-color: $tieto-blue;
-$link-color-hover: $tieto-red;
+$parade-logo-transform: rotate(16.5deg) skew(-29deg);
+$parade-red: #d41057;
+$parade-orange: #F88D2C;
+$link-color: $parade-blue;
+$link-color-hover: $parade-red;
+
+

@@ -9,11 +9,11 @@
 	}
 
 	&.layout--one-column-shaded {
-		background-color: $tieto-lightblue;
+		background-color: $parade-lightblue;
 	}
 
 	&.layout--one-column-grey {
-		background-color: $tieto-lightgrey;
+		background-color: $parade-lightgrey;
 	}
 
 	&.layout--separator-clean {
@@ -25,7 +25,7 @@
 	// Inverse layout
 	&.layout--two-column-content-1st-inverse,
 	&.layout--two-column-title-1st-inverse {
-		background: $tieto-blue;
+		background: $parade-blue;
 
 		.paragraph__title,
 		.field--name-field-text {

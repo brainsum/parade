@@ -8,7 +8,7 @@
 
 .savings-calculator {
     padding: 2em;
-    background: $tieto-lightgrey;
+    background: $parade-lightgrey;
 
     @media (min-width: 850px) {
         display: flex;
@@ -53,7 +53,7 @@
 
     &__result-container {
         text-align: center;
-        color: $tieto-blue;
+        color: $parade-blue;
         font-size: 1.5rem;
         font-weight: 700;
     }
