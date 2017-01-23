@@ -19,32 +19,30 @@ gulp.task('sass', function () {
     .src('sass/**/*.{scss,sass}')
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(csscomb())
     .pipe(gulp.dest('css'));
 
   var parade_demo = gulp
     .src('modules/parade_demo/sass/**/*.{scss,sass}')
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(csscomb())
     .pipe(gulp.dest('modules/parade_demo/css'));
 
   return merge(parade, parade_demo);
 });
 
-gulp.task('csscomb', function () {
-  var parade = gulp
-    .src('css/**/*.css')
-    .pipe(csscomb())
-    .pipe(gulp.dest('css'));
+// gulp.task('csscomb', function () {
+//   var parade = gulp
+//     .src('css/**/*.css')
+//     .pipe(csscomb())
+//     .pipe(gulp.dest('css'));
 
-  var parade_demo = gulp
-    .src('modules/parade_demo/css/**/*.css')
-    .pipe(csscomb())
-    .pipe(gulp.dest('modules/parade_demo/css'));
+//   var parade_demo = gulp
+//     .src('modules/parade_demo/css/**/*.css')
+//     .pipe(csscomb())
+//     .pipe(gulp.dest('modules/parade_demo/css'));
 
-  return merge(parade, parade_demo);
-});
+//   return merge(parade, parade_demo);
+// });
 
 gulp.task('eslint', function () {
   var parade = gulp
@@ -72,10 +70,10 @@ gulp.task('copy:js', function () {
 gulp.task('copy', ['copy:js', 'copy:css']);
 gulp.task('lint', ['csscomb', 'eslint']);
 
-gulp.task('watch', ['lint'], function () {
+gulp.task('watch', ['sass'], function () {
   gulp.watch('**/sass/**/*.{scss,sass}', ['sass']);
-  gulp.watch('**/js/**/*.js', ['eslint']);
+  // gulp.watch('**/js/**/*.js', ['eslint']);
 });
 
-gulp.task('compile', ['sass', 'lint']);
+gulp.task('compile', ['sass']);
 gulp.task('default', ['compile']);
