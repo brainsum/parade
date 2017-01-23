@@ -7,6 +7,8 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\Html;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Implements hook_theme().
@@ -185,11 +187,3 @@ function parade_demo_preprocess_field__field_call_to_action(&$variables) {
     $variables['items'][$key]['content']['#options']['attributes']['class'] = $classes;
   }
 }
-
-/**
- * Implements hook_preprocess_paragraph__savings_calculator().
- * Load saving calculator's script.
- */
-// function parade_demo_preprocess_paragraph__savings_calculator(&$variables) {
-//   $variables['#attached']['library'][] = 'tieto_admin/savings-calculator';
-// }

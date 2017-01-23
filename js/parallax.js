@@ -3,7 +3,6 @@
  * JavaScript for paragraph type Header.
  */
 
-/*
 (function ($) {
   'use strict';
 
@@ -14,4 +13,3 @@
     // Sshhh...
   }
 })(jQuery);
-*/
