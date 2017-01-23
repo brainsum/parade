@@ -166,6 +166,7 @@
     // @fixme After tieto_base merge, remove this.
     .button {
       padding: .75em 1.4em;
+      background-image: none;
       &:hover, &:active, &:focus {
         color: #fff;
       }

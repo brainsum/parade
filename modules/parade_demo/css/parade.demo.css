@@ -2052,11 +2052,11 @@ li.tabs__tab a {
   }
 }
 
-.page-node-type-parade-onepage {
+.node--type-parade-onepage {
   position: static !important;
 }
 
-.page-node-type-parade-onepage .content-moderation-entity-moderation-form {
+.node--type-parade-onepage .content-moderation-entity-moderation-form {
   background: white;
   position: absolute;
   z-index: 501;
@@ -2065,7 +2065,7 @@ li.tabs__tab a {
   margin: 80px 1em 0 0;
 }
 
-.page-node-type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form {
+.node--type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form {
   padding: 0;
   margin: 1em;
   border: 0;
@@ -2073,70 +2073,70 @@ li.tabs__tab a {
   font-size: .9em;
 }
 
-.page-node-type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form li {
+.node--type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form li {
   display: table-cell;
   vertical-align: top;
 }
 
-.page-node-type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form li > .form-item {
+.node--type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form li > .form-item {
   margin: 0 1em 0 0;
   width: auto;
 }
 
-.page-node-type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form .form-submit {
+.node--type-parade-onepage .content-moderation-entity-moderation-form .entity-moderation-form .form-submit {
   margin: 25px 0 0 0;
 }
 
-.page-node-type-parade-onepage .hamburger {
-  position: fixed;
+.node--type-parade-onepage .hamburger {
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 501;
 }
 
 @media (min-width: 767px) {
-  .page-node-type-parade-onepage .hamburger {
+  .node--type-parade-onepage .hamburger {
     display: none;
   }
 }
 
 @media (max-width: 766px) {
-  .page-node-type-parade-onepage .hamburger.is-active + .field--name-field-parade-onepage-menu {
+  .node--type-parade-onepage .hamburger.is-active + .campaign-menu {
     opacity: 1;
     visibility: visible;
   }
 }
 
-.page-node-type-parade-onepage .hamburger:active, .page-node-type-parade-onepage .hamburger:focus {
+.node--type-parade-onepage .hamburger:active, .node--type-parade-onepage .hamburger:focus {
   outline: none;
 }
 
-.page-node-type-parade-onepage .hamburger .hamburger-inner, .page-node-type-parade-onepage .hamburger .hamburger-inner::before, .page-node-type-parade-onepage .hamburger .hamburger-inner::after {
+.node--type-parade-onepage .hamburger .hamburger-inner, .node--type-parade-onepage .hamburger .hamburger-inner::before, .node--type-parade-onepage .hamburger .hamburger-inner::after {
   width: 30px;
   background-color: white;
 }
 
-.page-node-type-parade-onepage .hamburger .hamburger-box {
+.node--type-parade-onepage .hamburger .hamburger-box {
   width: 30px;
   height: 29px;
 }
 
-.page-node-type-parade-onepage .hamburger .hamburger-toggle {
+.node--type-parade-onepage .hamburger .hamburger-toggle {
   color: white;
 }
 
-.page-node-type-parade-onepage .hamburger .hamburger-toggle:hover, .page-node-type-parade-onepage .hamburger .hamburger-toggle:active, .page-node-type-parade-onepage .hamburger .hamburger-toggle:focus {
+.node--type-parade-onepage .hamburger .hamburger-toggle:hover, .node--type-parade-onepage .hamburger .hamburger-toggle:active, .node--type-parade-onepage .hamburger .hamburger-toggle:focus {
   text-decoration: none;
 }
 
 @media (min-width: 767px) {
-  .page-node-type-parade-onepage .hamburger .hamburger-toggle {
+  .node--type-parade-onepage .hamburger .hamburger-toggle {
     display: none;
   }
 }
 
-.page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu {
-  position: fixed;
+.node--type-parade-onepage .campaign-menu {
+  position: absolute;
   top: 70px;
   right: 1em;
   padding: 10px;
@@ -2144,7 +2144,7 @@ li.tabs__tab a {
 }
 
 @media (max-width: 766px) {
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu {
+  .node--type-parade-onepage .campaign-menu {
     background: #679fd1;
     padding: 1em;
     opacity: 0;
@@ -2156,7 +2156,7 @@ li.tabs__tab a {
     min-width: 50%;
     font-size: 1.2em;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu::before {
+  .node--type-parade-onepage .campaign-menu::before {
     content: " ";
     display: block;
     position: absolute;
@@ -2169,7 +2169,7 @@ li.tabs__tab a {
   }
 }
 
-.page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu a {
+.node--type-parade-onepage .campaign-menu a {
   color: white;
   text-decoration: none;
   display: block;
@@ -2179,46 +2179,45 @@ li.tabs__tab a {
   padding: .5em;
 }
 
-.page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu a:hover {
+.node--type-parade-onepage .campaign-menu a:hover {
   background: white;
   color: #679fd1;
 }
 
 @media (min-width: 767px) {
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu {
-    position: fixed;
+  .node--type-parade-onepage .campaign-menu {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     text-align: right;
     -webkit-transition: background .2s;
     transition: background .2s;
-    background-color: #679fd1;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu a {
+  .node--type-parade-onepage .campaign-menu a {
     font-size: 15px;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu .parade-onepage-menu-link {
+  .node--type-parade-onepage .campaign-menu .campaign-menu-link {
     display: inline-block;
     padding: .5em;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu .parade-onepage-menu-link a[data-selected="0"] {
+  .node--type-parade-onepage .campaign-menu .campaign-menu-link a[data-selected="0"] {
     border-bottom: 2px solid transparent;
     -webkit-transition: border-color .2s;
     transition: border-color .2s;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu .parade-onepage-menu-link a[data-selected="0"]:hover {
+  .node--type-parade-onepage .campaign-menu .campaign-menu-link a[data-selected="0"]:hover {
     background: 0;
     color: white;
     border-color: white;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu .parade-onepage-menu-link a[data-selected="1"] {
+  .node--type-parade-onepage .campaign-menu .campaign-menu-link a[data-selected="1"] {
     display: block;
     padding: .5em 1.5em;
     border: 2px solid white;
     border-radius: 3px;
   }
-  .page-node-type-parade-onepage nav.field--name-field-parade-onepage-menu .parade-onepage-menu-link a[data-selected="1"]:hover {
+  .node--type-parade-onepage .campaign-menu .campaign-menu-link a[data-selected="1"]:hover {
     background: white;
     color: #679fd1;
   }
@@ -2285,14 +2284,12 @@ body.page-node-type-parade-onepage .region-pre-content .block {
   margin: 1em;
 }
 
-body.page-node-type-parade-onepage.toolbar-fixed .tieto-campaign-page {
+body.page-node-type-parade-onepage.toolbar-fixed .parade-campaign-page {
   position: relative;
   overflow-y: hidden;
 }
 
-body.page-node-type-parade-onepage.toolbar-fixed .logo,
-body.page-node-type-parade-onepage.toolbar-fixed .hamburger,
-body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.form-wrapper) {
+body.page-node-type-parade-onepage.toolbar-fixed .logo, body.page-node-type-parade-onepage.toolbar-fixed .hamburger, body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.form-wrapper) {
   position: absolute;
   top: 0;
 }
@@ -2510,6 +2507,7 @@ body.page-node-type-parade-onepage.toolbar-fixed .field--name-field-menu:not(.fo
 
 .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button, .node-parade-onepage-edit-form .field--name-field-call-to-action .button {
   padding: .75em 1.4em;
+  background-image: none;
 }
 
 .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:hover, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:active, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:focus, .node-parade-onepage-edit-form .field--name-field-call-to-action .button:hover, .node-parade-onepage-edit-form .field--name-field-call-to-action .button:active, .node-parade-onepage-edit-form .field--name-field-call-to-action .button:focus {

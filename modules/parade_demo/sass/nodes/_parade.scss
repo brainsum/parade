@@ -1,6 +1,7 @@
-.page-node-type-parade-onepage {
+.node--type-parade-onepage {
   // Contextual links adds a position: relative...
   position: static !important;
+
   .content-moderation-entity-moderation-form {
     background: white;
     position: absolute;
@@ -8,60 +9,67 @@
     right: 0;
     top: 0;
     margin: 80px 1em 0 0;
+
     .entity-moderation-form {
       padding: 0;
       margin: 1em;
       border: 0;
       display: table;
       font-size: .9em;
+
       li {
         display: table-cell;
         vertical-align: top;
+
         > .form-item {
           margin: 0 1em 0 0;
           width: auto;
         }
       }
+
+
       .form-submit {
         margin: 25px 0 0 0;
       }
     }
   }
+
   .hamburger {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 501;
+
     @include md {
       display: none;
     }
+
     @include breakpoint-max(md) {
-      &.is-active + .field--name-field-parade-onepage-menu {
+      &.is-active + .campaign-menu {
         opacity: 1;
         visibility: visible;
       }
     }
-    &:active,
-    &:focus {
+
+    &:active, &:focus {
       outline: none;
     }
+
     .hamburger-inner {
-      &,
-      &::before,
-      &::after {
+      &, &::before, &::after {
         width: 30px;
         background-color: white;
       }
     }
+
     .hamburger-box {
       width: 30px;
       height: 29px;
     }
+
     .hamburger-toggle {
       color: white;
-      &:hover,
-      &:active,
-      &:focus {
+      &:hover, &:active, &:focus {
         text-decoration: none;
       }
       @include md {
@@ -69,13 +77,15 @@
       }
     }
   }
+
   // Menu field wrapper.
-  nav.field--name-field-parade-onepage-menu {
-    position: fixed;
+  .campaign-menu {
+    position: absolute;
     top: 70px;
     right: 1em;
     padding: 10px;
     z-index: 501;
+
     // Mobile styles for Menu field wrapper.
     @include breakpoint-max(md) {
       background: $parade-blue;
@@ -87,6 +97,7 @@
       box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
       min-width: 50%;
       font-size: 1.2em;
+
       // Arrow for the dropdown.
       &::before {
         content: " ";
@@ -100,6 +111,7 @@
         box-sizing: content-box;
       }
     }
+
     // Menu links <a> tags
     a {
       color: white;
@@ -109,43 +121,50 @@
       font-size: 1em;
       letter-spacing: .5px;
       padding: .5em;
+
       &:hover {
         background: white;
         color: $parade-blue;
       }
     }
+
     // Desktop styles for Menu field wrapper.
     @include md {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       text-align: right;
       transition: background .2s;
-      background-color: $parade-blue;
+
       a {
         font-size: 15px;
       }
+
       // Menu link wrappers (<li> items)
-      .parade-onepage-menu-link {
+      .campaign-menu-link {
         display: inline-block;
         padding: .5em;
+
         // On desktop, the links have a bottom border on :hover
         a[data-selected="0"] {
           border-bottom: 2px solid transparent;
           transition: border-color .2s;
+
           &:hover {
             background: 0;
             color: white;
             border-color: white;
           }
         }
+
         // Highlighted elements look like a button.
         a[data-selected="1"] {
           display: block;
           padding: .5em 1.5em;
           border: 2px solid white;
           border-radius: 3px;
+
           &:hover {
             background: white;
             color: $parade-blue;
@@ -153,6 +172,7 @@
         }
       }
     }
+
   }
 }
 
@@ -160,7 +180,6 @@
 /**
  * Paragraph blocks
  */
-
 .diagonal-after {
   @include slope(after)
 }
@@ -170,25 +189,26 @@
 }
 
 body.page-node-type-parade-onepage {
+
   .region-pre-content {
     margin: 0;
     .block {
       margin: 1em;
     }
   }
+
   // Fixed for toolbar.
   &.toolbar-fixed {
-    .tieto-campaign-page {
+    .parade-campaign-page {
       position: relative;
       overflow-y: hidden;
     }
-    .logo,
-    .hamburger,
-    .field--name-field-menu:not(.form-wrapper) {
+    .logo, .hamburger, .field--name-field-menu:not(.form-wrapper) {
       position: absolute;
       top: 0;
     }
   }
+
 }
 
 .node-preview-container {
@@ -205,10 +225,11 @@ body.page-node-type-parade-onepage {
 // Super ugly hack for correctly displaying the fucking
 // admin toolbar with the fucking logo and the fucking responsive hamburger shit.
 // body.toolbar-vertical, body.toolbar-horizontal {
-//   .tieto-campaign-page {
+//   .parade-campaign-page {
 //     position: relative;
 //   }
 // }
+
 // body.toolbar-vertical {
 //   @include breakpoint-max(md) {
 //     #toolbar-administration {
@@ -218,7 +239,7 @@ body.page-node-type-parade-onepage {
 //       right: 0;
 //     }
 //   }
-//   .tieto-campaign-page {
+//   .parade-campaign-page {
 //     .logo {
 //       top: $toolbar-height;
 //     }
@@ -230,13 +251,15 @@ body.page-node-type-parade-onepage {
 //     }
 //   }
 // }
+
 // body.toolbar-horizontal {
-//   .tieto-campaign-page {
+//   .parade-campaign-page {
 //     .logo, .campaign-menu {
 //       top: $toolbar-height;
 //     }
 //   }
-//   &.toolbar-tray-open .tieto-campaign-page {
+
+//   &.toolbar-tray-open .parade-campaign-page {
 //     .logo, .campaign-menu {
 //       top: $toolbar-height * 2;
 //     }
