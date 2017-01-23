@@ -1,4 +1,7 @@
-($ => {
+(function (exports) {
+'use strict';
+
+(function ($) {
     $.fn.savingsCalculator = function(settings) {
       /**
         * Default result calculation.
@@ -53,7 +56,11 @@
           $result.text(result);
         });
       });
-    }
+    };
 
     $('form.savings-calculator').savingsCalculator();
 })(jQuery);
+
+}((this.LaravelElixirBundle = this.LaravelElixirBundle || {})));
+
+//# sourceMappingURL=savings-calculator.js.map
