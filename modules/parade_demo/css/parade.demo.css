@@ -2995,36 +2995,6 @@ body.page-node-type-parade-onepage.toolbar-fixed .logo, body.page-node-type-para
   background-color: rgba(103, 175, 225, 0.5);
 }
 
-.paragraph--type--header.paragraph--view-mode--default + .paragraph {
-  position: relative;
-  z-index: 1;
-}
-
-.paragraph--type--header.paragraph--view-mode--default + .paragraph::before {
-  background: inherit;
-  content: ' ';
-  display: block;
-  height: 1000px;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  -webkit-transform: skewY(3.5deg) translateZ(0);
-          transform: skewY(3.5deg) translateZ(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  outline: 1px solid transparent;
-  top: 0;
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
-}
-
-.paragraph--type--header.paragraph--view-mode--default + .paragraph ~ .paragraph {
-  position: relative;
-  z-index: 1;
-}
-
 .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
   font-size: 1.8em;
   margin-bottom: .5rem;

@@ -20,13 +20,13 @@ $paragraph-header-overlay-bg: rgba(103, 175, 225, .5); // @todo move to variable
   }
 
   // Diagonal edge for the next paragraph.
-  + .paragraph {
-    @include slope(before, 3.5deg, false);
-    ~ .paragraph {
-      position: relative;
-      z-index: 1;
-    }
-  }
+  // + .paragraph {
+  //   @include slope(before, 3.5deg, false);
+  //   ~ .paragraph {
+  //     position: relative;
+  //     z-index: 1;
+  //   }
+  // }
 
   // Title, Secondary title.
   .paragraph__title {
