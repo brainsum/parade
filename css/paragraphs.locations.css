@@ -7,8 +7,8 @@
 }
 
 .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
-  margin: 1em 0 0;
   text-align: center;
+  margin: 1em 0 0;
 }
 
 @media (min-width: 767px) {
@@ -21,8 +21,8 @@
 @media (min-width: 767px) {
   .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-title,
   .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-text {
-    float: left;
     text-align: left;
+    float: left;
   }
   .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
     float: right;

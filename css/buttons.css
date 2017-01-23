@@ -8,12 +8,12 @@
 }
 
 .paragraphs-dropbutton-wrapper .button.parade-button {
-  width: calc(25% - 0.5em);
-  margin-right: 0.25em;
-  margin-left: 0.25em;
-  padding: 80px 0 0.7em;
+  width: calc(25% - .5em);
+  margin-left: .25em;
+  margin-right: .25em;
+  padding: 80px 0 .7em;
   background-repeat: no-repeat !important;
-  background-position: center 0.7em !important;
+  background-position: center .7em !important;
   background-size: 65px;
 }
 

@@ -4,11 +4,11 @@
 
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .field__item {
   display: inline-block;
-  color: transparent;
-  border: 0;
-  background-color: transparent;
-  text-shadow: none;
   font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .field__item:not(:last-child) {
@@ -19,17 +19,17 @@
   display: block;
   width: 42px;
   height: 42px;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  border-radius: 50%;
   background-color: #aaa;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social:hover {
   -webkit-transform: scale(1.1) translateZ(0);
-  transform: scale(1.1) translateZ(0);
+          transform: scale(1.1) translateZ(0);
   background-color: #ddd;
 }
 

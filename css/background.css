@@ -5,26 +5,25 @@
 .paragraph.paragraph--view-mode--default .bg-fullsize {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
 }
 
-.paragraph.paragraph--view-mode--default .bg-video,
-.paragraph.paragraph--view-mode--default .bg-image {
+.paragraph.paragraph--view-mode--default .bg-video, .paragraph.paragraph--view-mode--default .bg-image {
   min-width: 100%;
   min-height: 100%;
 }
 
 .paragraph.paragraph--view-mode--default .bg-image {
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .paragraph.paragraph--view-mode--default .IIV::-webkit-media-controls-play-button,
 .paragraph.paragraph--view-mode--default .IIV::-webkit-media-controls-start-playback-button {
-  width: 5px;
-  pointer-events: none;
   opacity: 0;
+  pointer-events: none;
+  width: 5px;
 }

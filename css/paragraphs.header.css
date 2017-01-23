@@ -2,7 +2,6 @@
  * @file
  * HEADER paragraph
  */
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
+.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item, .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
   display: inline-block;
 }
