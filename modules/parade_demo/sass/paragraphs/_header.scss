@@ -3,7 +3,7 @@
  * HEADER paragraph
  */
 $paragraph-header-height: 600px;
-$paragraph-header-overlay-bg: rgba(103, 175, 225, .3); // @todo move to variables (e.g. $parade-lightblue)
+$paragraph-header-overlay-bg: rgba(123,123,123, 0.4); // @todo move to variables (e.g. $parade-lightblue)
 
 .paragraph--type--header.paragraph--view-mode--default {
   padding: 0;
