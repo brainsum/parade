@@ -6,7 +6,6 @@ parade_onepage:
   js:
     js/global.js: {}
 
-
 # Parallax, using Rellax.
 # @see https://github.com/dixonandmoe/rellax
 parallax:

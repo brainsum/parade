@@ -1,14 +1,12 @@
-/**
- * Tieto logo.
- */
-.logo {
+// Parade logo
+.logo, .site-branding__logo {
 	display: block;
 	z-index: 501;
 	position: fixed;
 	top: 0; left: 0;
 	padding-left: 14px;
 	width: 100%;
-
+  border-bottom: 0;
   img {
     margin: 5px 0;
   }

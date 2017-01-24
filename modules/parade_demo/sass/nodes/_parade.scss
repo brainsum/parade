@@ -1,4 +1,13 @@
+.page-node-type-parade-onepage{
+  .block > .content{
+    margin-top: 0;
+  }
+}
 .node--type-parade-onepage {
+
+  > .node__content{
+    margin-top: 0;
+  }
   // Contextual links adds a position: relative...
   position: static !important;
 
@@ -80,7 +89,7 @@
 
   // Menu field wrapper.
   .campaign-menu {
-    position: absolute;
+    position: fixed;
     top: 70px;
     right: 1em;
     padding: 10px;
@@ -130,7 +139,7 @@
 
     // Desktop styles for Menu field wrapper.
     @include md {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -203,7 +212,7 @@ body.page-node-type-parade-onepage {
       position: relative;
       overflow-y: hidden;
     }
-    .logo, .hamburger, .field--name-field-menu:not(.form-wrapper) {
+    .logo, .site-branding__logo, .hamburger, .field--name-field-menu:not(.form-wrapper) {
       position: absolute;
       top: 0;
     }
@@ -221,7 +230,7 @@ body.page-node-type-parade-onepage {
     }
   }
 }
-
+//
 // Super ugly hack for correctly displaying the fucking
 // admin toolbar with the fucking logo and the fucking responsive hamburger shit.
 // body.toolbar-vertical, body.toolbar-horizontal {
@@ -229,7 +238,7 @@ body.page-node-type-parade-onepage {
 //     position: relative;
 //   }
 // }
-
+//
 // body.toolbar-vertical {
 //   @include breakpoint-max(md) {
 //     #toolbar-administration {
@@ -240,7 +249,7 @@ body.page-node-type-parade-onepage {
 //     }
 //   }
 //   .parade-campaign-page {
-//     .logo {
+//     .logo, .site-branding__logo {
 //       top: $toolbar-height;
 //     }
 //     .campaign-menu {
@@ -251,16 +260,16 @@ body.page-node-type-parade-onepage {
 //     }
 //   }
 // }
-
+//
 // body.toolbar-horizontal {
 //   .parade-campaign-page {
-//     .logo, .campaign-menu {
+//     .logo, .site-branding__logo, .campaign-menu {
 //       top: $toolbar-height;
 //     }
 //   }
-
+//
 //   &.toolbar-tray-open .parade-campaign-page {
-//     .logo, .campaign-menu {
+//     .logo, .site-branding__logo, .campaign-menu {
 //       top: $toolbar-height * 2;
 //     }
 //   }

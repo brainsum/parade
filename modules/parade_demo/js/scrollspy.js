@@ -276,7 +276,7 @@
 
 (function ($) {
 
-    var targets = $('.field--name-field-menu, .tieto-campaign-page > .logo, #hamburger');
+    var targets = $('.campaign-menu, .parade-campaign-page .site-branding__logo, #hamburger');
 
     targets.scrollspy({
         min: 490,

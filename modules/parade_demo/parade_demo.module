@@ -40,6 +40,8 @@ function parade_demo_page_attachments(array &$page) {
   $attributes = Drupal::request()->attributes;
   if ($attributes->has('node') && $attributes->get('node')->getType() == 'parade_onepage') {
     $page['#attached']['library'][] = 'parade_demo/parade_onepage';
+    $page['#attached']['library'][] = 'parade_demo/scrollspy';
+    $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
   }
 }
 
