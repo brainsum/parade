@@ -2991,7 +2991,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   right: 0;
   bottom: 0;
   z-index: 1;
-  background-color: rgba(103, 175, 225, 0.5);
+  background-color: rgba(103, 175, 225, 0.3);
 }
 
 .paragraph--type--header.paragraph--view-mode--default .paragraph__title {
@@ -3217,6 +3217,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title {
     float: right;
     text-align: right;
+    padding-left: 20px;
   }
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text {
     float: left;
@@ -3224,6 +3225,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
     float: left;
     text-align: left;
+    padding-right: 20px;
   }
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
     float: right;
