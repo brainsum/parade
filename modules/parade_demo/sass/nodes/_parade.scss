@@ -213,7 +213,7 @@ body.page-node-type-parade-onepage {
       overflow-y: hidden;
     }
     .logo, .site-branding__logo, .hamburger, .field--name-field-menu:not(.form-wrapper) {
-      position: absolute;
+      position: fixed;
       top: 0;
     }
   }
@@ -233,44 +233,44 @@ body.page-node-type-parade-onepage {
 //
 // Super ugly hack for correctly displaying the fucking
 // admin toolbar with the fucking logo and the fucking responsive hamburger shit.
-// body.toolbar-vertical, body.toolbar-horizontal {
-//   .parade-campaign-page {
-//     position: relative;
-//   }
-// }
-//
-// body.toolbar-vertical {
-//   @include breakpoint-max(md) {
-//     #toolbar-administration {
-//       position: fixed;
-//       top: 0;
-//       left: 0;
-//       right: 0;
-//     }
-//   }
-//   .parade-campaign-page {
-//     .logo, .site-branding__logo {
-//       top: $toolbar-height;
-//     }
-//     .campaign-menu {
-//       top: $header-height;
-//       @include md {
-//         top: $toolbar-height;
-//       }
-//     }
-//   }
-// }
-//
-// body.toolbar-horizontal {
-//   .parade-campaign-page {
-//     .logo, .site-branding__logo, .campaign-menu {
-//       top: $toolbar-height;
-//     }
-//   }
-//
-//   &.toolbar-tray-open .parade-campaign-page {
-//     .logo, .site-branding__logo, .campaign-menu {
-//       top: $toolbar-height * 2;
-//     }
-//   }
-// }
+ body.toolbar-vertical, body.toolbar-horizontal {
+   .parade-campaign-page {
+     position: relative;
+   }
+ }
+
+ body.toolbar-vertical {
+   @include breakpoint-max(md) {
+     #toolbar-administration {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+     }
+   }
+   .parade-campaign-page {
+     .logo, .site-branding__logo {
+       top: $toolbar-height;
+     }
+     .campaign-menu {
+       top: $header-height;
+       @include md {
+         top: $toolbar-height;
+       }
+     }
+   }
+ }
+
+ body.toolbar-horizontal {
+   .parade-campaign-page {
+     .logo, .site-branding__logo, .campaign-menu {
+       top: $toolbar-height;
+     }
+   }
+
+   &.toolbar-tray-open .parade-campaign-page {
+     .logo, .site-branding__logo,.campaign-menu {
+       top: $toolbar-height * 2;
+     }
+   }
+ }
