@@ -1776,60 +1776,94 @@ li.tabs__tab a {
   border-bottom-color: #008ee6;
 }
 
-.logo, .site-branding__logo {
+.logo,
+.site-branding__logo {
   display: block;
   z-index: 501;
   position: fixed;
   top: 0;
   left: 0;
-  padding-left: 14px;
+  padding-left: 15px;
   width: 100%;
   border-bottom: 0;
+  margin-right: 0;
+  padding-right: 1em;
+  -webkit-transition: all .2s ease, -webkit-transform .2s;
+  transition: all .2s ease, -webkit-transform .2s;
+  transition: transform .2s, all .2s ease;
+  transition: transform .2s, all .2s ease, -webkit-transform .2s;
 }
 
-.logo img, .site-branding__logo img {
-  margin: 5px 0;
+.logo img,
+.site-branding__logo img {
+  margin: 15px 0;
+  -webkit-transition: all .2s ease, -webkit-transform .2s;
+  transition: all .2s ease, -webkit-transform .2s;
+  transition: transform .2s, all .2s ease;
+  transition: transform .2s, all .2s ease, -webkit-transform .2s;
+  max-width: 120px;
+  box-sizing: border-box;
 }
 
-.logo::after, .site-branding__logo::after {
-  -webkit-transform: rotate(16.5deg) skew(-29deg);
-          transform: rotate(16.5deg) skew(-29deg);
+.logo::after,
+.site-branding__logo::after {
   will-change: transform, width;
   background: #679fd1;
   content: " ";
   position: absolute;
   display: block;
   z-index: -1;
-  top: -84px;
-  left: -60px;
-  width: 200px;
-  height: 200px;
+  top: 5px;
+  left: 5px;
+  width: 140px;
+  height: 100px;
 }
 
-.logo.not-fixed::after, .site-branding__logo.not-fixed::after {
+.logo.not-fixed img,
+.site-branding__logo.not-fixed img {
+  -webkit-transition: all .2s ease .2s, -webkit-transform .2s;
+  transition: all .2s ease .2s, -webkit-transform .2s;
+  transition: transform .2s, all .2s ease .2s;
+  transition: transform .2s, all .2s ease .2s, -webkit-transform .2s;
+}
+
+.logo.not-fixed:after,
+.site-branding__logo.not-fixed:after {
   -webkit-transition: width .2s, -webkit-transform .2s ease .2s;
   transition: width .2s, -webkit-transform .2s ease .2s;
   transition: width .2s, transform .2s ease .2s;
   transition: width .2s, transform .2s ease .2s, -webkit-transform .2s ease .2s;
-  -webkit-transform: rotate(16.5deg) skew(-29deg);
-          transform: rotate(16.5deg) skew(-29deg);
 }
 
-.logo.fixed::after, .site-branding__logo.fixed::after {
+.logo.fixed,
+.site-branding__logo.fixed {
+  padding-left: 5px;
+}
+
+.logo.fixed img,
+.site-branding__logo.fixed img {
+  margin: 5px 0;
+  padding: 0 40px 20px 0;
+}
+
+.logo.fixed:after,
+.site-branding__logo.fixed:after {
   -webkit-transition: width .2s ease .2s, -webkit-transform .2s;
   transition: width .2s ease .2s, -webkit-transform .2s;
   transition: transform .2s, width .2s ease .2s;
   transition: transform .2s, width .2s ease .2s, -webkit-transform .2s;
-  -webkit-transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
-          transform: rotate(0) skew(0) translate3d(60px, -40px, 0);
+  -webkit-transform: rotate(0) skew(0) translate3d(-5px, -40px, 0);
+          transform: rotate(0) skew(0) translate3d(-5px, -40px, 0);
   width: 100%;
 }
 
 @media (max-width: 766px) {
-  .logo::after, .site-branding__logo::after {
+  .logo::after,
+  .site-branding__logo::after {
     top: -105px;
   }
-  .logo img, .site-branding__logo img {
+  .logo img,
+  .site-branding__logo img {
     width: 80px;
     height: 53px;
     margin: 0;

@@ -94,7 +94,6 @@
     right: 1em;
     padding: 10px;
     z-index: 501;
-
     // Mobile styles for Menu field wrapper.
     @include breakpoint-max(md) {
       background: $parade-blue;
