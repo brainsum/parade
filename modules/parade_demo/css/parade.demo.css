@@ -2156,6 +2156,9 @@ li.tabs__tab a {
     border-color: transparent transparent #0678BE transparent;
     box-sizing: content-box;
   }
+  .node--type-parade-onepage .campaign-menu a {
+    border-bottom: 0;
+  }
 }
 
 .node--type-parade-onepage .campaign-menu a {
@@ -2981,7 +2984,6 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
   text-align: center;
   background: #53B0EB;
-  padding: 2em 0 0;
 }
 
 .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image img, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image img {
@@ -3077,7 +3079,12 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action {
   margin: 0;
-  text-align: left;
+}
+
+@media (min-width: 1200px) {
+  .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action {
+    text-align: left;
+  }
 }
 
 .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item {

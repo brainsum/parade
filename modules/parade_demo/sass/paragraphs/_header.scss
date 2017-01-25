@@ -2,23 +2,24 @@
  * @file
  * HEADER paragraph
  */
-$paragraph-header-height: 600px;
-$paragraph-header-overlay-bg: rgba(123,123,123, 0.4); // @todo move to variables (e.g. $parade-lightblue)
 
+$paragraph-header-height: 600px;
+$paragraph-header-overlay-bg: rgba(123, 123, 123, 0.4); // @todo move to variables (e.g. $parade-lightblue)
 .paragraph--type--header.paragraph--view-mode--default {
   padding: 0;
   position: relative;
   min-height: 82vh;
-
   // Background overlay
   .bg-wrapper::before {
     content: " ";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1;
     background-color: $paragraph-header-overlay-bg;
   }
-
   // Diagonal edge for the next paragraph.
   // + .paragraph {
   //   @include slope(before, 3.5deg, false);
@@ -27,7 +28,6 @@ $paragraph-header-overlay-bg: rgba(123,123,123, 0.4); // @todo move to variables
   //     z-index: 1;
   //   }
   // }
-
   // Title, Secondary title.
   .paragraph__title {
     font-size: 1.8em;
@@ -39,17 +39,14 @@ $paragraph-header-overlay-bg: rgba(123,123,123, 0.4); // @todo move to variables
     @include breakpoint(md) {
       font-size: 2.8em;
     }
-
     @include breakpoint(lg) {
       font-size: 4em;
     }
   }
-
   .field--name-field-secondary-title,
   .field--name-field-lead-text {
     font-size: 1em;
     margin-bottom: .5em;
-
     @include breakpoint(md) {
       font-size: 1.2em;
     }
@@ -57,22 +54,20 @@ $paragraph-header-overlay-bg: rgba(123,123,123, 0.4); // @todo move to variables
       font-size: 1.5em;
     }
   }
-
   .paragraph__title,
   .field--name-field-secondary-title {
     line-height: normal;
   }
-
   // Call to action buttons.
   .field--name-field-call-to-action {
     margin: 0;
-    text-align: left;
-
+    @include breakpoint(lg) {
+      text-align: left;
+    }
     .field__item {
       display: inline-block;
     }
   }
-
   // Content wrapper.
   .paragraph-inner {
     position: absolute;
@@ -89,5 +84,4 @@ $paragraph-header-overlay-bg: rgba(123,123,123, 0.4); // @todo move to variables
       text-align: center;
     }
   }
-
 }

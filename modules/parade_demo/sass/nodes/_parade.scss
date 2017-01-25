@@ -118,6 +118,9 @@
         border-color: transparent transparent $parade-blue transparent;
         box-sizing: content-box;
       }
+      a{
+        border-bottom: 0;
+      }
     }
 
     // Menu links <a> tags
