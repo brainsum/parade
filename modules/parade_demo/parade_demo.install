@@ -2,5 +2,19 @@
 
 /**
  * @file
- * Remove content type and content added by the demo.
+ * Install hooks for Parade Demo.
  */
+
+/**
+ * Implements hook_uninstall().
+ */
+function parade_demo_uninstall() {
+  // Remove content created by this module.
+  $nodes = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadByProperties(['type' => 'parade_onepage']);
+
+  foreach ($nodes as $node) {
+    $node->delete();
+  }
+}
