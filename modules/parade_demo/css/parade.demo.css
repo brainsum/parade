@@ -170,6 +170,7 @@ h1,
 h1.paragraph__title,
 .heading-a.paragraph__title {
   margin-top: 0;
+  margin-bottom: 10px;
 }
 
 h2,
