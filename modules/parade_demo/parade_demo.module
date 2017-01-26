@@ -24,6 +24,9 @@ function parade_demo_theme($existing, $type, $theme, $path) {
     'field__paragraph__field_title' => [
       'base hook' => 'field',
     ],
+    'field__paragraph__text_boxes' => [
+      'base hook' => 'field',
+    ],
     'field__node__field_parade_onepage_menu__parade_onepage' => [
       'base hook' => 'field',
     ],
