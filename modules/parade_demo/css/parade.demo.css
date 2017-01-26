@@ -377,6 +377,48 @@ details summary:hover {
   margin-bottom: 6.152rem;
 }
 
+@media (min-width: 767px) {
+  .col {
+    float: left;
+  }
+  .columns-1 .col {
+    width: 100%;
+  }
+  .columns-1 .col:nth-child(1n+1) {
+    clear: left;
+  }
+  .columns-2 .col {
+    width: 50%;
+  }
+  .columns-2 .col:nth-child(2n+1) {
+    clear: left;
+  }
+  .columns-3 .col {
+    width: 33.33333%;
+  }
+  .columns-3 .col:nth-child(3n+1) {
+    clear: left;
+  }
+  .columns-4 .col {
+    width: 25%;
+  }
+  .columns-4 .col:nth-child(4n+1) {
+    clear: left;
+  }
+  .columns-5 .col {
+    width: 20%;
+  }
+  .columns-5 .col:nth-child(5n+1) {
+    clear: left;
+  }
+  .columns-6 .col {
+    width: 16.66667%;
+  }
+  .columns-6 .col:nth-child(6n+1) {
+    clear: left;
+  }
+}
+
 /**
  * @file
  * Structural styles for Seven’s UI buttons
@@ -3346,6 +3388,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (min-width: 767px) {
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box {
     text-align: left;
+  }
+  .paragraph--type--text-boxes.paragraph--view-mode--default[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs > .col > .paragraph-inner {
+    height: 100%;
   }
 }
 

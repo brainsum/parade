@@ -72,14 +72,14 @@
 		}
 
 		// Equal height columns
-//		&[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs {
+		&[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs {
 //			display: flex;
 //			flex-wrap: wrap;
-//
-//			> .col > .paragraph-inner {
-//				height: 100%;
-//			}
-//		}
+
+			> .col > .paragraph-inner {
+				height: 100%;
+			}
+		}
 	}
 
 }
