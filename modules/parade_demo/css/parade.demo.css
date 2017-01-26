@@ -377,48 +377,6 @@ details summary:hover {
   margin-bottom: 6.152rem;
 }
 
-@media (min-width: 767px) {
-  .col {
-    float: left;
-  }
-  .columns-1 .col {
-    width: 100%;
-  }
-  .columns-1 .col:nth-child(1n+1) {
-    clear: left;
-  }
-  .columns-2 .col {
-    width: 50%;
-  }
-  .columns-2 .col:nth-child(2n+1) {
-    clear: left;
-  }
-  .columns-3 .col {
-    width: 33.33333%;
-  }
-  .columns-3 .col:nth-child(3n+1) {
-    clear: left;
-  }
-  .columns-4 .col {
-    width: 25%;
-  }
-  .columns-4 .col:nth-child(4n+1) {
-    clear: left;
-  }
-  .columns-5 .col {
-    width: 20%;
-  }
-  .columns-5 .col:nth-child(5n+1) {
-    clear: left;
-  }
-  .columns-6 .col {
-    width: 16.66667%;
-  }
-  .columns-6 .col:nth-child(6n+1) {
-    clear: left;
-  }
-}
-
 /**
  * @file
  * Structural styles for Seven’s UI buttons
@@ -3389,29 +3347,72 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box {
     text-align: left;
   }
-  .paragraph--type--text-boxes.paragraph--view-mode--default[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .paragraph--type--text-boxes.paragraph--view-mode--default[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs > .col > .paragraph-inner {
-    height: 100%;
-  }
 }
 
 .paragraph--type--text-box.paragraph--view-mode--default {
   background: inherit;
-  padding: 40px 2em 40px 0;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--text-box.paragraph--view-mode--default.col-2:nth-child(2n+1), .paragraph--type--text-box.paragraph--view-mode--default.col-3:nth-child(3n+1), .paragraph--type--text-box.paragraph--view-mode--default.col-4:nth-child(4n+1) {
-    padding-left: 0;
+  .paragraph--type--text-box.paragraph--view-mode--default.col-2 {
+    width: 47.36842%;
+    float: left;
   }
-  .paragraph--type--text-box.paragraph--view-mode--default.col-2:nth-child(2n+2), .paragraph--type--text-box.paragraph--view-mode--default.col-3:nth-child(3n+3), .paragraph--type--text-box.paragraph--view-mode--default.col-4:nth-child(4n+4) {
-    padding-right: 0;
+  .paragraph--type--text-box.paragraph--view-mode--default.col-2:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-2:nth-child(2n + 2) {
+    margin-left: 52.63158%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-3 {
+    width: 31.03448%;
+    float: left;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-3:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-3:nth-child(3n + 2) {
+    margin-left: 34.48276%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-3:nth-child(3n + 3) {
+    margin-left: 68.96552%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-4 {
+    width: 23.07692%;
+    float: left;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-4:nth-child(4n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-4:nth-child(4n + 2) {
+    margin-left: 25.64103%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-4:nth-child(4n + 3) {
+    margin-left: 51.28205%;
+    margin-right: -100%;
+    clear: none;
+  }
+  .paragraph--type--text-box.paragraph--view-mode--default.col-4:nth-child(4n + 4) {
+    margin-left: 76.92308%;
+    margin-right: -100%;
+    clear: none;
   }
 }
 
