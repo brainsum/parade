@@ -13,6 +13,8 @@
 	&.layout--text_icon {
 		.paragraph--type--image-text {
 			text-align: center;
+      float: none;
+      margin-right: 0;
 		}
 	}
 
@@ -87,6 +89,16 @@
 // Text Boxes -> Text Box
 .paragraph--type--text-box.paragraph--view-mode--default {
 	background: inherit;
+
+  .field--name-field-image{
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    img{
+      margin-bottom: 0;
+    }
+  }
 
   // Some padding trickery.
   // @fixme Remove after merging tieto_base

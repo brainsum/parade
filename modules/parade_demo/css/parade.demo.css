@@ -3334,6 +3334,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--smallinfo .paragraph--type--image-text, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--image-text, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--text_icon .paragraph--type--image-text {
   text-align: center;
+  float: none;
+  margin-right: 0;
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos-grey {
@@ -3396,6 +3398,17 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--text-box.paragraph--view-mode--default {
   background: inherit;
+}
+
+.paragraph--type--text-box.paragraph--view-mode--default .field--name-field-image {
+  width: 100%;
+  float: none;
+  margin-right: 0;
+  text-align: center;
+}
+
+.paragraph--type--text-box.paragraph--view-mode--default .field--name-field-image img {
+  margin-bottom: 0;
 }
 
 @media (min-width: 767px) {
