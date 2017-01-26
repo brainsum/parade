@@ -3701,6 +3701,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   color: #777;
 }
 
+.paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-field-image {
+  margin-right: 0;
+}
+
 .paragraph--type--savings-calculator.paragraph--view-mode--default .field--name-field-title {
   margin-bottom: 1em;
   font-weight: 800;
