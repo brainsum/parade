@@ -2858,6 +2858,12 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   display: inline-block;
 }
 
+@media (min-width: 1200px) {
+  .paragraph--type--images.paragraph--view-mode--default .field--name-field-images .field__item:first-child {
+    padding-left: 0;
+  }
+}
+
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-title {
   margin-bottom: 1em;
   font-weight: 800;
@@ -3397,6 +3403,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--text-box.paragraph--view-mode--default {
   background: inherit;
+  padding: 40px 2em 40px 0;
 }
 
 @media (min-width: 767px) {
