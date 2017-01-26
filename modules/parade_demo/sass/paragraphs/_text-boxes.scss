@@ -114,6 +114,9 @@
 //    &.col-4:nth-child(4n+4) {
 //      padding-right: 0;
 //    }
+    &.col {
+      padding: 40px 0;
+    }
     &.col-2{
       @include gallery(2 of 4);
     }

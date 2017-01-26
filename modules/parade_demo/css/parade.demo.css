@@ -3412,6 +3412,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
+  .paragraph--type--text-box.paragraph--view-mode--default.col {
+    padding: 40px 0;
+  }
   .paragraph--type--text-box.paragraph--view-mode--default.col-2 {
     width: 47.36842%;
     float: left;
