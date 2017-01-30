@@ -11,6 +11,11 @@
 			padding: 1em 2em;
 			vertical-align: middle;
 			display: inline-block;
+      &:first-child{
+        @include breakpoint(lg) {
+          padding-left: 0;
+        }
+      }
 		}
 	}
 }

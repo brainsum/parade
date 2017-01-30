@@ -13,6 +13,8 @@
 	&.layout--text_icon {
 		.paragraph--type--image-text {
 			text-align: center;
+      float: none;
+      margin-right: 0;
 		}
 	}
 
@@ -73,8 +75,8 @@
 
 		// Equal height columns
 		&[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs {
-			display: flex;
-			flex-wrap: wrap;
+//			display: flex;
+//			flex-wrap: wrap;
 
 			> .col > .paragraph-inner {
 				height: 100%;
@@ -88,18 +90,41 @@
 .paragraph--type--text-box.paragraph--view-mode--default {
 	background: inherit;
 
+  .field--name-field-image{
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    img{
+      margin-bottom: 0;
+    }
+  }
+
   // Some padding trickery.
   // @fixme Remove after merging tieto_base
+
   @include md {
-    &.col-2:nth-child(2n+1),
-    &.col-3:nth-child(3n+1),
-    &.col-4:nth-child(4n+1) {
-      padding-left: 0;
+//    &.col-2:nth-child(2n+1),
+//    &.col-3:nth-child(3n+1),
+//    &.col-4:nth-child(4n+1) {
+//      padding-left: 0;
+//    }
+//    &.col-2:nth-child(2n+2),
+//    &.col-3:nth-child(3n+3),
+//    &.col-4:nth-child(4n+4) {
+//      padding-right: 0;
+//    }
+    &.col {
+      padding: 40px 0;
     }
-    &.col-2:nth-child(2n+2),
-    &.col-3:nth-child(3n+3),
-    &.col-4:nth-child(4n+4) {
-      padding-right: 0;
+    &.col-2{
+      @include gallery(2 of 4);
+    }
+    &.col-3{
+      @include gallery(2 of 6);
+    }
+    &.col-4{
+      @include gallery(2 of 8);
     }
   }
 
