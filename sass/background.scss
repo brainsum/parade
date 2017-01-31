@@ -1,6 +1,6 @@
 .paragraph.paragraph--view-mode--default {
   .bg-wrapper {
-      overflow: hidden;
+    overflow: hidden;
   }
 
   .bg-fullsize {
@@ -17,16 +17,8 @@
   }
 
   .bg-image {
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  // iPhone inline video stuff.
-  .IIV::-webkit-media-controls-play-button,
-  .IIV::-webkit-media-controls-start-playback-button {
-    opacity: 0;
-    pointer-events: none;
-    width: 5px;
   }
 }
