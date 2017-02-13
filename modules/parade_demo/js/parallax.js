@@ -19,7 +19,7 @@ var rellax = createCommonjsModule(function (module) {
 // MIT license
 //
 // Thanks to Paraxify.js and Jaime Cabllero
-// for parallax concepts 
+// for parallax concepts
 // ------------------------------------------
 
 (function (root, factory) {
@@ -36,7 +36,7 @@ var rellax = createCommonjsModule(function (module) {
         root.Rellax = factory();
   }
 }(commonjsGlobal, function () {
-  var Rellax = function(el, options){ 
+  var Rellax = function(el, options){
     "use strict";
 
     var self = Object.create(Rellax.prototype);
@@ -47,7 +47,7 @@ var rellax = createCommonjsModule(function (module) {
     var posY = 0; // set it to -1 so the animate function gets called at least once
     var screenY = 0;
     var blocks = [];
-    
+
     // check what requestAnimationFrame to use, and if
     // it's not supported, use the onscroll event
     var loop = window.requestAnimationFrame ||
@@ -109,14 +109,14 @@ var rellax = createCommonjsModule(function (module) {
         var block = createBlock(self.elems[i]);
         blocks.push(block);
       }
-			
+
 			window.addEventListener('resize', function(){
 			  animate();
 			});
-			
+
 			// Start the loop
       update();
-      
+
       // The loop does nothing if the scrollPosition did not change
       // so call animate to make sure every element has their transforms
       animate();
@@ -160,18 +160,18 @@ var rellax = createCommonjsModule(function (module) {
     // returns true if the scroll changed, false if nothing happened
     var setPosition = function() {
     	var oldY = posY;
-    	
+
       if (window.pageYOffset !== undefined) {
         posY = window.pageYOffset;
       } else {
         posY = (document.documentElement || document.body.parentNode || document.body).scrollTop;
       }
-      
+
       if (oldY != posY) {
       	// scroll changed, return true
       	return true;
       }
-      
+
       // scroll did not change
       return false;
     };
@@ -190,11 +190,11 @@ var rellax = createCommonjsModule(function (module) {
 			if (setPosition()) {
 				animate();
 	    }
-	    
+
 	    // loop again
 	    loop(update);
 		};
-		
+
     // Transform3d on parallax element
     var animate = function() {
     	for (var i = 0; i < self.elems.length; i++){
@@ -226,7 +226,7 @@ var rellax = createCommonjsModule(function (module) {
  */
 
 (function () {
-	var rellax$$1 = new rellax('.parallax');
+	var rellax = new rellax('.parallax');
 })();
 
 }((this.LaravelElixirBundle = this.LaravelElixirBundle || {})));

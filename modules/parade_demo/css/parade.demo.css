@@ -3282,6 +3282,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   min-height: 340px;
   display: table;
   width: 100%;
+  position: relative;
 }
 
 .paragraph--type--parallax.paragraph--view-mode--default .paragraph-inner {
