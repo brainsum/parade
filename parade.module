@@ -19,8 +19,16 @@ function parade_preprocess_paragraph(&$variables) {
   /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = &$variables['paragraph'];
 
+  if (!method_exists($paragraph, 'getType')) {
+    return;
+  }
+
   // Attach libraries for each paragraph type.
   $variables['#attached']['library'][] = 'parade/paragraphs.' . $paragraph->getType();
+
+  if (!method_exists($paragraph, 'hasField')) {
+    return;
+  }
 
   // Pass the Anchor field value for the template.
   if ($paragraph->hasField('field_anchor') && $anchor = $paragraph->get('field_anchor')->value) {
@@ -157,7 +165,7 @@ function parade_preprocess_paragraph__text_box(&$variables) {
   $parent = $paragraph->getParentEntity();
 
   // Pass the number of Columns field value.
-  if ($parent->hasField('field_boxes_per_row') && ($columns = $parent->get('field_boxes_per_row')->value)) {
+  if (method_exists($parent, 'hasField') && $parent->hasField('field_boxes_per_row') && ($columns = $parent->get('field_boxes_per_row')->value)) {
     _parade_add_template_variable($variables, [
       'columns' => $columns,
     ]);
@@ -254,7 +262,9 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
   if (
     !$attributes->has('_entity_form') &&
     $attributes->get('_entity_form') !== "node.edit" &&
-    $attributes->has('node') && $node->hasField('field_machine_name')
+    $attributes->has('node') &&
+    method_exists($node, 'hasField') &&
+    $node->hasField('field_machine_name')
   ) {
     if (is_object($node) && ($machine_name = $node->get('field_machine_name')->value)) {
       /** @var string[] $suggestions */
