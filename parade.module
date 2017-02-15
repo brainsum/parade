@@ -235,7 +235,7 @@ function parade_theme_suggestions_page_alter(&$suggestions, $variables) {
   if (!$attributes->has('_entity_form') && $attributes->get('_entity_form') !== "node.edit" && $node = $attributes->get('node')) {
     $type = (is_object($node) && method_exists($node, 'getType')) ? $node->getType() : 'parade';
     array_unshift($suggestions, 'page__node__' . $type);
-    if ($node->hasField('field_machine_name')) {
+    if (method_exists($node, 'hasField') && $node->hasField('field_machine_name')) {
       if ($machine_name = $node->get('field_machine_name')->value) {
         $suggestions[] = 'page__node__' . $type . '__' . $machine_name;
       }
