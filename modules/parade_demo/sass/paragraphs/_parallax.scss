@@ -1,7 +1,12 @@
 .paragraph--type--parallax.paragraph--view-mode--default {
   text-align: center;
   color: white;
-  min-height: 340px;
+  min-height: 200px;
+  max-height: 200px;
+  @include breakpoint(md) {
+    min-height: 340px;
+    max-height: inherit;
+  }
   display: table;
   width: 100%;
   position: relative;
@@ -10,18 +15,31 @@
     vertical-align: middle;
     width: 60%;
   }
-
   .bg-image {
     // Fallback for when the background image is not available.
     background-color: $text-color-strong;
   }
-
   .field--name-field-title {
     @include campaign-title;
     margin-bottom: .5em;
   }
-
   .field--name-field-text {
     font-size: 1.2em;
+  }
+}
+
+@include breakpoint-max(md) {
+  .paragraph.paragraph--parallax.parallax-bg-image {
+    padding: 5px;
+    .bg-image {
+      min-height: 200px;
+      max-height: 200px;
+      background-position: center !important;
+    }
+    .paragraph-inner {
+      width: 100%;
+      display: block !important;
+      top: 0 !important;
+    }
   }
 }

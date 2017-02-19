@@ -3279,10 +3279,18 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .paragraph--type--parallax.paragraph--view-mode--default {
   text-align: center;
   color: white;
-  min-height: 340px;
+  min-height: 200px;
+  max-height: 200px;
   display: table;
   width: 100%;
   position: relative;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--parallax.paragraph--view-mode--default {
+    min-height: 340px;
+    max-height: inherit;
+  }
 }
 
 .paragraph--type--parallax.paragraph--view-mode--default .paragraph-inner {
@@ -3314,6 +3322,22 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--parallax.paragraph--view-mode--default .field--name-field-text {
   font-size: 1.2em;
+}
+
+@media (max-width: 766px) {
+  .paragraph.paragraph--parallax.parallax-bg-image {
+    padding: 5px;
+  }
+  .paragraph.paragraph--parallax.parallax-bg-image .bg-image {
+    min-height: 200px;
+    max-height: 200px;
+    background-position: center !important;
+  }
+  .paragraph.paragraph--parallax.parallax-bg-image .paragraph-inner {
+    width: 100%;
+    display: block !important;
+    top: 0 !important;
+  }
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--default .field--name-field-title {

@@ -6,7 +6,7 @@
 {%
 set classes = [
   'paragraph',
-  parade.enable_parallax ? 'paragraph--parallax',
+  parade.enable_parallax ? 'paragraph--parallax parallax-bg-image',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ]
@@ -15,15 +15,16 @@ set classes = [
 
   {% if view_mode != 'preview' %}
     {% if parade.enable_parallax %}
-    <div class="bg-fullsize bg-img-parallax">
-    {% endif %}
+      <div data-stellar-background-ratio="0.5" data-natural-width="1920" data-natural-height="1080" class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
+    {% else %}
       <div class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
-    {% if parade.enable_parallax %}
-    </div>
     {% endif %}
   {% endif %}
 
-  <div class="paragraph-inner">
-    {{ content }}
-  </div>
+  {% if parade.enable_parallax %}
+    <div data-stellar-ratio="0.8" class="paragraph-inner">{{ content }}</div>
+  {% else %}
+    <div class="paragraph-inner">{{ content }}</div>
+  {% endif %}
 </section>
+

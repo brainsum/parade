@@ -42,8 +42,10 @@ parallax:
   version: VERSION
   js:
     js/parallax.js: {}
+    js/bg-parallax.js: {}
   dependencies:
     - parade/vendor.rellax
+    - parade/vendor.stellar
     - parade/background
 
 background:
@@ -135,6 +137,16 @@ vendor.rellax:
     gpl-compatible: true
   js:
     js/lib/rellax.min.js: { minified: true }
+
+vendor.stellar:
+  remote: https://github.com/markdalgleish/stellar.js
+  version: 0.4
+  license:
+    name: MIT
+    url: https://github.com/markdalgleish/stellar.js/blob/master/LICENSE-MIT
+    gpl-compatible: true
+  js:
+    js/lib/jquery.stellar.min.js: { minified: true }
 
 vendor.iphone-inline-video:
   remote: https://github.com/bfred-it/iphone-inline-video
