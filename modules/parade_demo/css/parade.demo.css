@@ -2884,6 +2884,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action {
   clear: both;
+  text-align: center;
 }
 
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action .field__item {
@@ -2898,9 +2899,12 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-call-to-action {
     width: 60.666%;
   }
 }
@@ -2928,8 +2932,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-call-to-action {
     float: left;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image {
@@ -2937,14 +2943,15 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
     text-align: left;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-call-to-action {
-    text-align: left;
+    text-align: center;
     clear: left;
   }
 }
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
     float: right;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
@@ -2952,7 +2959,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
     text-align: right;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
-    text-align: right;
+    text-align: center;
     clear: right;
   }
 }
@@ -3011,7 +3018,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-call-to-action {
   text-align: center;
-  width: 40%;
+  width: 46%;
   float: right;
   margin-top: -1.5em;
 }

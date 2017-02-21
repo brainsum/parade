@@ -8,6 +8,7 @@
     // Call to action buttons.
     .field--name-field-call-to-action {
         clear: both;
+      text-align: center;
         .field__item {
             display: inline-block;
         }
@@ -38,7 +39,8 @@
       }
 
       .field--name-field-title,
-      .field--name-field-text{
+      .field--name-field-text,
+      .field--name-field-call-to-action{
           @include md {
               width: 60.666%;
           }
@@ -71,7 +73,8 @@
         @include md {
             // Title and Text
             .field--name-field-title,
-            .field--name-field-text {
+            .field--name-field-text,
+            .field--name-field-call-to-action{
                 float: left;
             }
             // Image
@@ -81,7 +84,7 @@
                 text-align: left;
             }
             .field--name-field-call-to-action {
-                text-align: left;
+                text-align: center;
                 clear: left;
             }
         }
@@ -89,11 +92,11 @@
 
     // Layout: Image first
     &.layout--image_1st {
-
         @include md {
             // Title and Text
             .field--name-field-title,
-            .field--name-field-text {
+            .field--name-field-text,
+          .field--name-field-call-to-action{
                 float: right;
             }
             // Image
@@ -104,7 +107,7 @@
             }
             // Call to action buttons.
             .field--name-field-call-to-action {
-                text-align: right;
+                text-align: center;
                 clear: right;
             }
         }
@@ -154,7 +157,7 @@
         // Call to action buttons.
         .field--name-field-call-to-action {
             text-align: center;
-            width: 40%;
+            width: 46%;
             float: right;
             margin-top: -1.5em;
         }
