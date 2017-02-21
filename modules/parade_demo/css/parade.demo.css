@@ -2358,7 +2358,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   font-size: 13px;
 }
 
-.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox input, .node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox label,
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox input,
+.node-parade-onepage-form .field--name-field-menu .field-multiple-table .form-type-checkbox label,
 .node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox input,
 .node-parade-onepage-edit-form .field--name-field-menu .field-multiple-table .form-type-checkbox label {
   vertical-align: middle;
@@ -2376,7 +2377,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   margin: 1em 0;
 }
 
-.node-parade-onepage-form .tabledrag-toggle-weight-wrapper, .node-parade-onepage-form td.tabledrag-hide,
+.node-parade-onepage-form .tabledrag-toggle-weight-wrapper,
+.node-parade-onepage-form td.tabledrag-hide,
 .node-parade-onepage-edit-form .tabledrag-toggle-weight-wrapper,
 .node-parade-onepage-edit-form td.tabledrag-hide {
   display: none !important;
@@ -2402,7 +2404,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   background-color: #ededed;
 }
 
-.node-parade-onepage-form .field-multiple-table .drag, .node-parade-onepage-form .field-multiple-table .drag-previous,
+.node-parade-onepage-form .field-multiple-table .drag,
+.node-parade-onepage-form .field-multiple-table .drag-previous,
 .node-parade-onepage-edit-form .field-multiple-table .drag,
 .node-parade-onepage-edit-form .field-multiple-table .drag-previous {
   background-color: #f3f3f3;
@@ -2481,17 +2484,19 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .node-parade-onepage-form .parade-actions .button,
 .node-parade-onepage-edit-form .parade-actions .button {
   padding: 5px 1em;
-  color: #777;
+  color: white;
   background: #dfdfdf;
   border: 1px solid #c6c6c6;
-  box-shadow: 0;
+  box-shadow: none;
   border-radius: 2px;
+  text-shadow: none;
 }
 
 .node-parade-onepage-form .parade-actions .button:hover, .node-parade-onepage-form .parade-actions .button:focus,
 .node-parade-onepage-edit-form .parade-actions .button:hover,
 .node-parade-onepage-edit-form .parade-actions .button:focus {
   background: #f9f9f9;
+  color: white;
 }
 
 .node-parade-onepage-form .parade-actions > li,
@@ -2500,52 +2505,95 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   display: inline-block;
 }
 
-.paragraph.paragraph--view-mode--default, .node-parade-onepage-edit-form, .node-parade-onepage-form {
+.node-parade-onepage-form .parade-actions > li.edit .button,
+.node-parade-onepage-edit-form .parade-actions > li.edit .button {
+  background-color: #0678BE;
+}
+
+.node-parade-onepage-form .parade-actions > li.remove .button,
+.node-parade-onepage-edit-form .parade-actions > li.remove .button {
+  background-color: gray;
+}
+
+.node-parade-onepage-form .parade-actions > li.preview .button,
+.node-parade-onepage-edit-form .parade-actions > li.preview .button {
+  background-color: #bfbfbf;
+}
+
+.paragraph.paragraph--view-mode--default,
+.node-parade-onepage-edit-form,
+.node-parade-onepage-form {
   padding: 40px 1em;
   background-color: #fff;
 }
 
-.paragraph.paragraph--view-mode--default:before, .paragraph.paragraph--view-mode--default:after, .node-parade-onepage-edit-form:before, .node-parade-onepage-edit-form:after, .node-parade-onepage-form:before, .node-parade-onepage-form:after {
+.paragraph.paragraph--view-mode--default:before, .paragraph.paragraph--view-mode--default:after,
+.node-parade-onepage-edit-form:before,
+.node-parade-onepage-edit-form:after,
+.node-parade-onepage-form:before,
+.node-parade-onepage-form:after {
   content: "";
   display: table;
 }
 
-.paragraph.paragraph--view-mode--default:after, .node-parade-onepage-edit-form:after, .node-parade-onepage-form:after {
+.paragraph.paragraph--view-mode--default:after,
+.node-parade-onepage-edit-form:after,
+.node-parade-onepage-form:after {
   clear: both;
 }
 
-.paragraph.paragraph--view-mode--default .field.text-formatted .align-right, .node-parade-onepage-edit-form .field.text-formatted .align-right, .node-parade-onepage-form .field.text-formatted .align-right {
+.paragraph.paragraph--view-mode--default .field.text-formatted .align-right,
+.node-parade-onepage-edit-form .field.text-formatted .align-right,
+.node-parade-onepage-form .field.text-formatted .align-right {
   margin-left: 1.5em;
 }
 
-.paragraph.paragraph--view-mode--default .field.text-formatted .align-left, .node-parade-onepage-edit-form .field.text-formatted .align-left, .node-parade-onepage-form .field.text-formatted .align-left {
+.paragraph.paragraph--view-mode--default .field.text-formatted .align-left,
+.node-parade-onepage-edit-form .field.text-formatted .align-left,
+.node-parade-onepage-form .field.text-formatted .align-left {
   margin-right: 1.5em;
 }
 
-.paragraph.paragraph--view-mode--default .paragraph-inner, .node-parade-onepage-edit-form .paragraph-inner, .node-parade-onepage-form .paragraph-inner {
+.paragraph.paragraph--view-mode--default .paragraph-inner,
+.node-parade-onepage-edit-form .paragraph-inner,
+.node-parade-onepage-form .paragraph-inner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action, .node-parade-onepage-edit-form .field--name-field-call-to-action, .node-parade-onepage-form .field--name-field-call-to-action {
+.paragraph.paragraph--view-mode--default .field--name-field-call-to-action,
+.node-parade-onepage-edit-form .field--name-field-call-to-action,
+.node-parade-onepage-form .field--name-field-call-to-action {
   text-align: center;
   margin: 2em 0;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button, .node-parade-onepage-edit-form .field--name-field-call-to-action .button, .node-parade-onepage-form .field--name-field-call-to-action .button {
+.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button,
+.node-parade-onepage-edit-form .field--name-field-call-to-action .button,
+.node-parade-onepage-form .field--name-field-call-to-action .button {
   padding: .75em 1.4em;
   background-image: none;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:hover, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:active, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:focus, .node-parade-onepage-edit-form .field--name-field-call-to-action .button:hover, .node-parade-onepage-edit-form .field--name-field-call-to-action .button:active, .node-parade-onepage-edit-form .field--name-field-call-to-action .button:focus, .node-parade-onepage-form .field--name-field-call-to-action .button:hover, .node-parade-onepage-form .field--name-field-call-to-action .button:active, .node-parade-onepage-form .field--name-field-call-to-action .button:focus {
+.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:hover, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:active, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:focus,
+.node-parade-onepage-edit-form .field--name-field-call-to-action .button:hover,
+.node-parade-onepage-edit-form .field--name-field-call-to-action .button:active,
+.node-parade-onepage-edit-form .field--name-field-call-to-action .button:focus,
+.node-parade-onepage-form .field--name-field-call-to-action .button:hover,
+.node-parade-onepage-form .field--name-field-call-to-action .button:active,
+.node-parade-onepage-form .field--name-field-call-to-action .button:focus {
   color: #fff;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button + .button, .node-parade-onepage-edit-form .field--name-field-call-to-action .button + .button, .node-parade-onepage-form .field--name-field-call-to-action .button + .button {
+.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button + .button,
+.node-parade-onepage-edit-form .field--name-field-call-to-action .button + .button,
+.node-parade-onepage-form .field--name-field-call-to-action .button + .button {
   margin-left: 1em;
 }
 
-.paragraph.paragraph--view-mode--default .button, .node-parade-onepage-edit-form .button, .node-parade-onepage-form .button {
+.paragraph.paragraph--view-mode--default .button,
+.node-parade-onepage-edit-form .button,
+.node-parade-onepage-form .button {
   display: inline-block;
   font-weight: bold;
   font-family: sans-serif;
@@ -2570,34 +2618,52 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button:focus, .paragraph.paragraph--view-mode--default .button:active:focus, .node-parade-onepage-edit-form .button:focus, .node-parade-onepage-edit-form .button:active:focus, .node-parade-onepage-form .button:focus, .node-parade-onepage-form .button:active:focus {
+.paragraph.paragraph--view-mode--default .button:focus,
+.paragraph.paragraph--view-mode--default .button:active:focus,
+.node-parade-onepage-edit-form .button:focus,
+.node-parade-onepage-edit-form .button:active:focus,
+.node-parade-onepage-form .button:focus,
+.node-parade-onepage-form .button:active:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-.paragraph.paragraph--view-mode--default .button:focus, .paragraph.paragraph--view-mode--default .button:hover, .node-parade-onepage-edit-form .button:focus, .node-parade-onepage-edit-form .button:hover, .node-parade-onepage-form .button:focus, .node-parade-onepage-form .button:hover {
+.paragraph.paragraph--view-mode--default .button:focus,
+.paragraph.paragraph--view-mode--default .button:hover,
+.node-parade-onepage-edit-form .button:focus,
+.node-parade-onepage-edit-form .button:hover,
+.node-parade-onepage-form .button:focus,
+.node-parade-onepage-form .button:hover {
   text-decoration: none;
 }
 
-.paragraph.paragraph--view-mode--default .button:active, .node-parade-onepage-edit-form .button:active, .node-parade-onepage-form .button:active {
+.paragraph.paragraph--view-mode--default .button:active,
+.node-parade-onepage-edit-form .button:active,
+.node-parade-onepage-form .button:active {
   background-image: none;
   outline: 0;
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button:hover, .node-parade-onepage-edit-form .button:hover, .node-parade-onepage-form .button:hover {
+.paragraph.paragraph--view-mode--default .button:hover,
+.node-parade-onepage-edit-form .button:hover,
+.node-parade-onepage-form .button:hover {
   color: #5e5e5e;
   background-color: #d5d5d5;
   border-color: #7a7a7a;
 }
 
-.paragraph.paragraph--view-mode--default .button:focus, .node-parade-onepage-edit-form .button:focus, .node-parade-onepage-form .button:focus {
+.paragraph.paragraph--view-mode--default .button:focus,
+.node-parade-onepage-edit-form .button:focus,
+.node-parade-onepage-form .button:focus {
   color: #5e5e5e;
   background-color: #d5d5d5;
   border-color: #7a7a7a;
 }
 
-.paragraph.paragraph--view-mode--default .button:active, .node-parade-onepage-edit-form .button:active, .node-parade-onepage-form .button:active {
+.paragraph.paragraph--view-mode--default .button:active,
+.node-parade-onepage-edit-form .button:active,
+.node-parade-onepage-form .button:active {
   color: #5e5e5e;
   background-color: #d5d5d5;
   border-color: #7a7a7a;
@@ -2605,23 +2671,43 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button:active:hover, .paragraph.paragraph--view-mode--default .button:active:focus, .node-parade-onepage-edit-form .button:active:hover, .node-parade-onepage-edit-form .button:active:focus, .node-parade-onepage-form .button:active:hover, .node-parade-onepage-form .button:active:focus {
+.paragraph.paragraph--view-mode--default .button:active:hover,
+.paragraph.paragraph--view-mode--default .button:active:focus,
+.node-parade-onepage-edit-form .button:active:hover,
+.node-parade-onepage-edit-form .button:active:focus,
+.node-parade-onepage-form .button:active:hover,
+.node-parade-onepage-form .button:active:focus {
   color: #5e5e5e;
   background-color: #c3c3c3;
   border-color: #595959;
 }
 
-.paragraph.paragraph--view-mode--default .button.disabled:focus, .paragraph.paragraph--view-mode--default .button:disabled:focus, .node-parade-onepage-edit-form .button.disabled:focus, .node-parade-onepage-edit-form .button:disabled:focus, .node-parade-onepage-form .button.disabled:focus, .node-parade-onepage-form .button:disabled:focus {
+.paragraph.paragraph--view-mode--default .button.disabled:focus,
+.paragraph.paragraph--view-mode--default .button:disabled:focus,
+.node-parade-onepage-edit-form .button.disabled:focus,
+.node-parade-onepage-edit-form .button:disabled:focus,
+.node-parade-onepage-form .button.disabled:focus,
+.node-parade-onepage-form .button:disabled:focus {
   background-color: #eeeeee;
   border-color: #999999;
 }
 
-.paragraph.paragraph--view-mode--default .button.disabled:hover, .paragraph.paragraph--view-mode--default .button:disabled:hover, .node-parade-onepage-edit-form .button.disabled:hover, .node-parade-onepage-edit-form .button:disabled:hover, .node-parade-onepage-form .button.disabled:hover, .node-parade-onepage-form .button:disabled:hover {
+.paragraph.paragraph--view-mode--default .button.disabled:hover,
+.paragraph.paragraph--view-mode--default .button:disabled:hover,
+.node-parade-onepage-edit-form .button.disabled:hover,
+.node-parade-onepage-edit-form .button:disabled:hover,
+.node-parade-onepage-form .button.disabled:hover,
+.node-parade-onepage-form .button:disabled:hover {
   background-color: #eeeeee;
   border-color: #999999;
 }
 
-.paragraph.paragraph--view-mode--default .button.disabled, .paragraph.paragraph--view-mode--default .button:disabled, .node-parade-onepage-edit-form .button.disabled, .node-parade-onepage-edit-form .button:disabled, .node-parade-onepage-form .button.disabled, .node-parade-onepage-form .button:disabled {
+.paragraph.paragraph--view-mode--default .button.disabled,
+.paragraph.paragraph--view-mode--default .button:disabled,
+.node-parade-onepage-edit-form .button.disabled,
+.node-parade-onepage-edit-form .button:disabled,
+.node-parade-onepage-form .button.disabled,
+.node-parade-onepage-form .button:disabled {
   background: #eeeeee;
   border-color: #eeeeee;
   color: #c1c1c1;
@@ -2630,8 +2716,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--primary,
-.paragraph.paragraph--view-mode--default .button--blue, .node-parade-onepage-edit-form .button--primary,
-.node-parade-onepage-edit-form .button--blue, .node-parade-onepage-form .button--primary,
+.paragraph.paragraph--view-mode--default .button--blue,
+.node-parade-onepage-edit-form .button--primary,
+.node-parade-onepage-edit-form .button--blue,
+.node-parade-onepage-form .button--primary,
 .node-parade-onepage-form .button--blue {
   color: #fff;
   background-color: #62b3e5;
@@ -2640,8 +2728,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--primary:hover,
-.paragraph.paragraph--view-mode--default .button--blue:hover, .node-parade-onepage-edit-form .button--primary:hover,
-.node-parade-onepage-edit-form .button--blue:hover, .node-parade-onepage-form .button--primary:hover,
+.paragraph.paragraph--view-mode--default .button--blue:hover,
+.node-parade-onepage-edit-form .button--primary:hover,
+.node-parade-onepage-edit-form .button--blue:hover,
+.node-parade-onepage-form .button--primary:hover,
 .node-parade-onepage-form .button--blue:hover {
   color: #fff;
   background-color: #369ede;
@@ -2649,8 +2739,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--primary:focus,
-.paragraph.paragraph--view-mode--default .button--blue:focus, .node-parade-onepage-edit-form .button--primary:focus,
-.node-parade-onepage-edit-form .button--blue:focus, .node-parade-onepage-form .button--primary:focus,
+.paragraph.paragraph--view-mode--default .button--blue:focus,
+.node-parade-onepage-edit-form .button--primary:focus,
+.node-parade-onepage-edit-form .button--blue:focus,
+.node-parade-onepage-form .button--primary:focus,
 .node-parade-onepage-form .button--blue:focus {
   color: #fff;
   background-color: #369ede;
@@ -2658,8 +2750,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--primary:active,
-.paragraph.paragraph--view-mode--default .button--blue:active, .node-parade-onepage-edit-form .button--primary:active,
-.node-parade-onepage-edit-form .button--blue:active, .node-parade-onepage-form .button--primary:active,
+.paragraph.paragraph--view-mode--default .button--blue:active,
+.node-parade-onepage-edit-form .button--primary:active,
+.node-parade-onepage-edit-form .button--blue:active,
+.node-parade-onepage-form .button--primary:active,
 .node-parade-onepage-form .button--blue:active {
   color: #fff;
   background-color: #369ede;
@@ -2668,11 +2762,16 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--primary:active:hover, .paragraph.paragraph--view-mode--default .button--primary:active:focus,
+.paragraph.paragraph--view-mode--default .button--primary:active:hover,
+.paragraph.paragraph--view-mode--default .button--primary:active:focus,
 .paragraph.paragraph--view-mode--default .button--blue:active:hover,
-.paragraph.paragraph--view-mode--default .button--blue:active:focus, .node-parade-onepage-edit-form .button--primary:active:hover, .node-parade-onepage-edit-form .button--primary:active:focus,
+.paragraph.paragraph--view-mode--default .button--blue:active:focus,
+.node-parade-onepage-edit-form .button--primary:active:hover,
+.node-parade-onepage-edit-form .button--primary:active:focus,
 .node-parade-onepage-edit-form .button--blue:active:hover,
-.node-parade-onepage-edit-form .button--blue:active:focus, .node-parade-onepage-form .button--primary:active:hover, .node-parade-onepage-form .button--primary:active:focus,
+.node-parade-onepage-edit-form .button--blue:active:focus,
+.node-parade-onepage-form .button--primary:active:hover,
+.node-parade-onepage-form .button--primary:active:focus,
 .node-parade-onepage-form .button--blue:active:hover,
 .node-parade-onepage-form .button--blue:active:focus {
   color: #fff;
@@ -2680,48 +2779,66 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   border-color: #15405b;
 }
 
-.paragraph.paragraph--view-mode--default .button--primary.disabled:focus, .paragraph.paragraph--view-mode--default .button--primary:disabled:focus,
+.paragraph.paragraph--view-mode--default .button--primary.disabled:focus,
+.paragraph.paragraph--view-mode--default .button--primary:disabled:focus,
 .paragraph.paragraph--view-mode--default .button--blue.disabled:focus,
-.paragraph.paragraph--view-mode--default .button--blue:disabled:focus, .node-parade-onepage-edit-form .button--primary.disabled:focus, .node-parade-onepage-edit-form .button--primary:disabled:focus,
+.paragraph.paragraph--view-mode--default .button--blue:disabled:focus,
+.node-parade-onepage-edit-form .button--primary.disabled:focus,
+.node-parade-onepage-edit-form .button--primary:disabled:focus,
 .node-parade-onepage-edit-form .button--blue.disabled:focus,
-.node-parade-onepage-edit-form .button--blue:disabled:focus, .node-parade-onepage-form .button--primary.disabled:focus, .node-parade-onepage-form .button--primary:disabled:focus,
+.node-parade-onepage-edit-form .button--blue:disabled:focus,
+.node-parade-onepage-form .button--primary.disabled:focus,
+.node-parade-onepage-form .button--primary:disabled:focus,
 .node-parade-onepage-form .button--blue.disabled:focus,
 .node-parade-onepage-form .button--blue:disabled:focus {
   background-color: #62b3e5;
   border-color: #2c89c3;
 }
 
-.paragraph.paragraph--view-mode--default .button--primary.disabled:hover, .paragraph.paragraph--view-mode--default .button--primary:disabled:hover,
+.paragraph.paragraph--view-mode--default .button--primary.disabled:hover,
+.paragraph.paragraph--view-mode--default .button--primary:disabled:hover,
 .paragraph.paragraph--view-mode--default .button--blue.disabled:hover,
-.paragraph.paragraph--view-mode--default .button--blue:disabled:hover, .node-parade-onepage-edit-form .button--primary.disabled:hover, .node-parade-onepage-edit-form .button--primary:disabled:hover,
+.paragraph.paragraph--view-mode--default .button--blue:disabled:hover,
+.node-parade-onepage-edit-form .button--primary.disabled:hover,
+.node-parade-onepage-edit-form .button--primary:disabled:hover,
 .node-parade-onepage-edit-form .button--blue.disabled:hover,
-.node-parade-onepage-edit-form .button--blue:disabled:hover, .node-parade-onepage-form .button--primary.disabled:hover, .node-parade-onepage-form .button--primary:disabled:hover,
+.node-parade-onepage-edit-form .button--blue:disabled:hover,
+.node-parade-onepage-form .button--primary.disabled:hover,
+.node-parade-onepage-form .button--primary:disabled:hover,
 .node-parade-onepage-form .button--blue.disabled:hover,
 .node-parade-onepage-form .button--blue:disabled:hover {
   background-color: #62b3e5;
   border-color: #2c89c3;
 }
 
-.paragraph.paragraph--view-mode--default .button--green, .node-parade-onepage-edit-form .button--green, .node-parade-onepage-form .button--green {
+.paragraph.paragraph--view-mode--default .button--green,
+.node-parade-onepage-edit-form .button--green,
+.node-parade-onepage-form .button--green {
   color: #fff;
   background-color: #6cc04a;
   border-color: #6cc04a;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--green:hover, .node-parade-onepage-edit-form .button--green:hover, .node-parade-onepage-form .button--green:hover {
+.paragraph.paragraph--view-mode--default .button--green:hover,
+.node-parade-onepage-edit-form .button--green:hover,
+.node-parade-onepage-form .button--green:hover {
   color: #fff;
   background-color: #559f38;
   border-color: #519835;
 }
 
-.paragraph.paragraph--view-mode--default .button--green:focus, .node-parade-onepage-edit-form .button--green:focus, .node-parade-onepage-form .button--green:focus {
+.paragraph.paragraph--view-mode--default .button--green:focus,
+.node-parade-onepage-edit-form .button--green:focus,
+.node-parade-onepage-form .button--green:focus {
   color: #fff;
   background-color: #559f38;
   border-color: #519835;
 }
 
-.paragraph.paragraph--view-mode--default .button--green:active, .node-parade-onepage-edit-form .button--green:active, .node-parade-onepage-form .button--green:active {
+.paragraph.paragraph--view-mode--default .button--green:active,
+.node-parade-onepage-edit-form .button--green:active,
+.node-parade-onepage-form .button--green:active {
   color: #fff;
   background-color: #559f38;
   border-color: #519835;
@@ -2729,42 +2846,65 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--green:active:hover, .paragraph.paragraph--view-mode--default .button--green:active:focus, .node-parade-onepage-edit-form .button--green:active:hover, .node-parade-onepage-edit-form .button--green:active:focus, .node-parade-onepage-form .button--green:active:hover, .node-parade-onepage-form .button--green:active:focus {
+.paragraph.paragraph--view-mode--default .button--green:active:hover,
+.paragraph.paragraph--view-mode--default .button--green:active:focus,
+.node-parade-onepage-edit-form .button--green:active:hover,
+.node-parade-onepage-edit-form .button--green:active:focus,
+.node-parade-onepage-form .button--green:active:hover,
+.node-parade-onepage-form .button--green:active:focus {
   color: #fff;
   background-color: #47852e;
   border-color: #376724;
 }
 
-.paragraph.paragraph--view-mode--default .button--green.disabled:focus, .paragraph.paragraph--view-mode--default .button--green:disabled:focus, .node-parade-onepage-edit-form .button--green.disabled:focus, .node-parade-onepage-edit-form .button--green:disabled:focus, .node-parade-onepage-form .button--green.disabled:focus, .node-parade-onepage-form .button--green:disabled:focus {
+.paragraph.paragraph--view-mode--default .button--green.disabled:focus,
+.paragraph.paragraph--view-mode--default .button--green:disabled:focus,
+.node-parade-onepage-edit-form .button--green.disabled:focus,
+.node-parade-onepage-edit-form .button--green:disabled:focus,
+.node-parade-onepage-form .button--green.disabled:focus,
+.node-parade-onepage-form .button--green:disabled:focus {
   background-color: #6cc04a;
   border-color: #6cc04a;
 }
 
-.paragraph.paragraph--view-mode--default .button--green.disabled:hover, .paragraph.paragraph--view-mode--default .button--green:disabled:hover, .node-parade-onepage-edit-form .button--green.disabled:hover, .node-parade-onepage-edit-form .button--green:disabled:hover, .node-parade-onepage-form .button--green.disabled:hover, .node-parade-onepage-form .button--green:disabled:hover {
+.paragraph.paragraph--view-mode--default .button--green.disabled:hover,
+.paragraph.paragraph--view-mode--default .button--green:disabled:hover,
+.node-parade-onepage-edit-form .button--green.disabled:hover,
+.node-parade-onepage-edit-form .button--green:disabled:hover,
+.node-parade-onepage-form .button--green.disabled:hover,
+.node-parade-onepage-form .button--green:disabled:hover {
   background-color: #6cc04a;
   border-color: #6cc04a;
 }
 
-.paragraph.paragraph--view-mode--default .button--orange, .node-parade-onepage-edit-form .button--orange, .node-parade-onepage-form .button--orange {
+.paragraph.paragraph--view-mode--default .button--orange,
+.node-parade-onepage-edit-form .button--orange,
+.node-parade-onepage-form .button--orange {
   color: #fff;
   background-color: #f78d2d;
   border-color: #f78d2d;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--orange:hover, .node-parade-onepage-edit-form .button--orange:hover, .node-parade-onepage-form .button--orange:hover {
+.paragraph.paragraph--view-mode--default .button--orange:hover,
+.node-parade-onepage-edit-form .button--orange:hover,
+.node-parade-onepage-form .button--orange:hover {
   color: #fff;
   background-color: #e87309;
   border-color: #de6e08;
 }
 
-.paragraph.paragraph--view-mode--default .button--orange:focus, .node-parade-onepage-edit-form .button--orange:focus, .node-parade-onepage-form .button--orange:focus {
+.paragraph.paragraph--view-mode--default .button--orange:focus,
+.node-parade-onepage-edit-form .button--orange:focus,
+.node-parade-onepage-form .button--orange:focus {
   color: #fff;
   background-color: #e87309;
   border-color: #de6e08;
 }
 
-.paragraph.paragraph--view-mode--default .button--orange:active, .node-parade-onepage-edit-form .button--orange:active, .node-parade-onepage-form .button--orange:active {
+.paragraph.paragraph--view-mode--default .button--orange:active,
+.node-parade-onepage-edit-form .button--orange:active,
+.node-parade-onepage-form .button--orange:active {
   color: #fff;
   background-color: #e87309;
   border-color: #de6e08;
@@ -2772,42 +2912,65 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--orange:active:hover, .paragraph.paragraph--view-mode--default .button--orange:active:focus, .node-parade-onepage-edit-form .button--orange:active:hover, .node-parade-onepage-edit-form .button--orange:active:focus, .node-parade-onepage-form .button--orange:active:hover, .node-parade-onepage-form .button--orange:active:focus {
+.paragraph.paragraph--view-mode--default .button--orange:active:hover,
+.paragraph.paragraph--view-mode--default .button--orange:active:focus,
+.node-parade-onepage-edit-form .button--orange:active:hover,
+.node-parade-onepage-edit-form .button--orange:active:focus,
+.node-parade-onepage-form .button--orange:active:hover,
+.node-parade-onepage-form .button--orange:active:focus {
   color: #fff;
   background-color: #c66208;
   border-color: #9e4e06;
 }
 
-.paragraph.paragraph--view-mode--default .button--orange.disabled:focus, .paragraph.paragraph--view-mode--default .button--orange:disabled:focus, .node-parade-onepage-edit-form .button--orange.disabled:focus, .node-parade-onepage-edit-form .button--orange:disabled:focus, .node-parade-onepage-form .button--orange.disabled:focus, .node-parade-onepage-form .button--orange:disabled:focus {
+.paragraph.paragraph--view-mode--default .button--orange.disabled:focus,
+.paragraph.paragraph--view-mode--default .button--orange:disabled:focus,
+.node-parade-onepage-edit-form .button--orange.disabled:focus,
+.node-parade-onepage-edit-form .button--orange:disabled:focus,
+.node-parade-onepage-form .button--orange.disabled:focus,
+.node-parade-onepage-form .button--orange:disabled:focus {
   background-color: #f78d2d;
   border-color: #f78d2d;
 }
 
-.paragraph.paragraph--view-mode--default .button--orange.disabled:hover, .paragraph.paragraph--view-mode--default .button--orange:disabled:hover, .node-parade-onepage-edit-form .button--orange.disabled:hover, .node-parade-onepage-edit-form .button--orange:disabled:hover, .node-parade-onepage-form .button--orange.disabled:hover, .node-parade-onepage-form .button--orange:disabled:hover {
+.paragraph.paragraph--view-mode--default .button--orange.disabled:hover,
+.paragraph.paragraph--view-mode--default .button--orange:disabled:hover,
+.node-parade-onepage-edit-form .button--orange.disabled:hover,
+.node-parade-onepage-edit-form .button--orange:disabled:hover,
+.node-parade-onepage-form .button--orange.disabled:hover,
+.node-parade-onepage-form .button--orange:disabled:hover {
   background-color: #f78d2d;
   border-color: #f78d2d;
 }
 
-.paragraph.paragraph--view-mode--default .button--red, .node-parade-onepage-edit-form .button--red, .node-parade-onepage-form .button--red {
+.paragraph.paragraph--view-mode--default .button--red,
+.node-parade-onepage-edit-form .button--red,
+.node-parade-onepage-form .button--red {
   color: #fff;
   background-color: #e56385;
   border-color: #e56385;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--red:hover, .node-parade-onepage-edit-form .button--red:hover, .node-parade-onepage-form .button--red:hover {
+.paragraph.paragraph--view-mode--default .button--red:hover,
+.node-parade-onepage-edit-form .button--red:hover,
+.node-parade-onepage-form .button--red:hover {
   color: #fff;
   background-color: #de3763;
   border-color: #dc2f5c;
 }
 
-.paragraph.paragraph--view-mode--default .button--red:focus, .node-parade-onepage-edit-form .button--red:focus, .node-parade-onepage-form .button--red:focus {
+.paragraph.paragraph--view-mode--default .button--red:focus,
+.node-parade-onepage-edit-form .button--red:focus,
+.node-parade-onepage-form .button--red:focus {
   color: #fff;
   background-color: #de3763;
   border-color: #dc2f5c;
 }
 
-.paragraph.paragraph--view-mode--default .button--red:active, .node-parade-onepage-edit-form .button--red:active, .node-parade-onepage-form .button--red:active {
+.paragraph.paragraph--view-mode--default .button--red:active,
+.node-parade-onepage-edit-form .button--red:active,
+.node-parade-onepage-form .button--red:active {
   color: #fff;
   background-color: #de3763;
   border-color: #dc2f5c;
@@ -2815,18 +2978,33 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-.paragraph.paragraph--view-mode--default .button--red:active:hover, .paragraph.paragraph--view-mode--default .button--red:active:focus, .node-parade-onepage-edit-form .button--red:active:hover, .node-parade-onepage-edit-form .button--red:active:focus, .node-parade-onepage-form .button--red:active:hover, .node-parade-onepage-form .button--red:active:focus {
+.paragraph.paragraph--view-mode--default .button--red:active:hover,
+.paragraph.paragraph--view-mode--default .button--red:active:focus,
+.node-parade-onepage-edit-form .button--red:active:hover,
+.node-parade-onepage-edit-form .button--red:active:focus,
+.node-parade-onepage-form .button--red:active:hover,
+.node-parade-onepage-form .button--red:active:focus {
   color: #fff;
   background-color: #cf2250;
   border-color: #ac1d42;
 }
 
-.paragraph.paragraph--view-mode--default .button--red.disabled:focus, .paragraph.paragraph--view-mode--default .button--red:disabled:focus, .node-parade-onepage-edit-form .button--red.disabled:focus, .node-parade-onepage-edit-form .button--red:disabled:focus, .node-parade-onepage-form .button--red.disabled:focus, .node-parade-onepage-form .button--red:disabled:focus {
+.paragraph.paragraph--view-mode--default .button--red.disabled:focus,
+.paragraph.paragraph--view-mode--default .button--red:disabled:focus,
+.node-parade-onepage-edit-form .button--red.disabled:focus,
+.node-parade-onepage-edit-form .button--red:disabled:focus,
+.node-parade-onepage-form .button--red.disabled:focus,
+.node-parade-onepage-form .button--red:disabled:focus {
   background-color: #e56385;
   border-color: #e56385;
 }
 
-.paragraph.paragraph--view-mode--default .button--red.disabled:hover, .paragraph.paragraph--view-mode--default .button--red:disabled:hover, .node-parade-onepage-edit-form .button--red.disabled:hover, .node-parade-onepage-edit-form .button--red:disabled:hover, .node-parade-onepage-form .button--red.disabled:hover, .node-parade-onepage-form .button--red:disabled:hover {
+.paragraph.paragraph--view-mode--default .button--red.disabled:hover,
+.paragraph.paragraph--view-mode--default .button--red:disabled:hover,
+.node-parade-onepage-edit-form .button--red.disabled:hover,
+.node-parade-onepage-edit-form .button--red:disabled:hover,
+.node-parade-onepage-form .button--red.disabled:hover,
+.node-parade-onepage-form .button--red:disabled:hover {
   background-color: #e56385;
   border-color: #e56385;
 }
