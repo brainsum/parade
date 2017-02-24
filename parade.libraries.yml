@@ -95,7 +95,7 @@ paragraphs.social_links:
   dependencies:
     - parade/paragraphs
 
-paragraphs.image-text:
+paragraphs.image_text:
   version: VERSION
   css:
     component:
