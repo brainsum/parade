@@ -14,7 +14,7 @@ use Drupal\imagemagick\Plugin\ImageToolkit\ImagemagickToolkit;
  * It's necessary to avoid errors when quality is empty in the config.
  */
 function image_optimalization_imagemagick_arguments_alter(ImagemagickToolkit $toolkit, $command) {
-  if ($command == 'convert' || $command = 'gm') {
+  if ($command === 'convert' || $command === 'gm') {
     $index = $toolkit->findArgument('-quality');
 
     if ($index !== FALSE) {
