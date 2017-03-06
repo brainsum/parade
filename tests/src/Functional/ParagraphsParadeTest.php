@@ -16,27 +16,13 @@ class ParagraphsParadeTest extends BrowserTestBase {
    *
    * @var array
    */
-  public static $modules = ['parade_demo'];
+  public static $modules = ['parade'];
 
   /**
    * {@inheritdoc}
    */
   protected function setUp() {
     parent::setUp();
-
-//    $this->installSchema('geocoder');
-//     \Drupal::moduleHandler()->loadInclude('geocoder', 'install');
-
-    // Create paragraphs and article content types.
-    /*$values = ['type' => 'article', 'name' => 'Article'];
-    $node_type = NodeType::create($values);
-    $node_type->save();
-    $this->installEntitySchema('user');
-    $this->installEntitySchema('node');
-    $this->installEntitySchema('paragraph');
-    $this->installSchema('system', ['sequences']);
-    $this->installSchema('node', ['node_access']);
-    \Drupal::moduleHandler()->loadInclude('paragraphs', 'install');*/
   }
 
   /**
