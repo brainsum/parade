@@ -13,8 +13,14 @@ After this, you just have to use "composer require drupal/parade"
 to get the module and the dependencies,
 and "drush en parade" to enable it in your site.
 
-The required geocoder module has a typo in its schema. Use this patch:
-"https://www.drupal.org/files/issues/2824802-geocoder-schema-fix-2.patch"
+
+The required geocoder module has a typo in its schema.
+See: https://www.drupal.org/node/2824802
+Use this patch: https://www.drupal.org/files/issues/2824802-geocoder-schema-fix-2.patch
+
+The required geocoder_autocomplete has a missing schema.
+See: https://www.drupal.org/node/2858115
+Use this patch: https://www.drupal.org/files/issues/missing-schema-2858115-2.patch
 
 ### Without composer
 @todo
