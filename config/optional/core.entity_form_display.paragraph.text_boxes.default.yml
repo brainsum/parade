@@ -32,10 +32,10 @@ content:
     type: entity_reference_paragraphs_preview
     weight: 5
     settings:
-      title: Section
-      title_plural: Sections
-      edit_mode: preview
-      add_mode: button
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
   field_text_boxes_layout:
