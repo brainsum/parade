@@ -4,11 +4,13 @@
  */
 
 .paragraphs-dropbutton-wrapper {
+  margin-top: 1em;
   text-align: center;
 
   .button.parade-button {
-    width: 23%;
-    margin-right: .5em;
+    width: calc(25% - .5em);
+    margin-left: .25em;
+    margin-right: .25em;
     padding: 80px 0 .7em;
     background-repeat: no-repeat !important;
     background-position: center .7em !important;
@@ -19,6 +21,9 @@
       background-size: 50px;
     }
 
+    &-parallax {
+      background-image: url('../images/parallax.png');
+    }
     &-image-text {
       background-image: url('../images/text-and-image.png');
     }
@@ -40,13 +45,21 @@
     &-locations {
       background-image: url('../images/locations.png');
     }
+    &-marketo-form {
+      background-image: url('../images/form.png');
+    }
+    &-marketo-poll {
+      background-image: url('../images/poll.png');
+    }
+    &-parallax {
+      background-image: url('../images/background.png');
+    }
+    &-social-links {
+      background-image: url('../images/social-links.png');
+    }
 
     + .ajax-progress {
       display: none;
-    }
-
-    &:first-child {
-      margin-right: .5em;
     }
   }
 }

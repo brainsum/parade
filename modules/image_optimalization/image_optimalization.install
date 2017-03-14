@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Installation file for Image optimalization submodule for Parade.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Sets module weight.
+ */
+function image_optimalization_install() {
+  // Get weight of Parade.
+  // @todo Replace these two lines when module_get_weight implemented
+  $extension_config = Drupal::configFactory()->getEditable('core.extension');
+  $parade_weight = $extension_config->get('module.parade');
+  $imagemagick_weight = $extension_config->get('module.imagemagick');
+
+  // Set weight of this module.
+  module_set_weight('image_optimalization', max($parade_weight, $imagemagick_weight) + 1);
+}
+
+/**
+ * Fix imageapi_optimize.processor.local_binaries - advdpng to advpng.
+ */
+function image_optimalization_update_8001() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('imageapi_optimize.processor.local_binaries');
+  $processors = $config->get('processors');
+  $processors['0a8a85c1-2ccc-4cde-844c-97a7588f006c']['id'] = 'advpng';
+  $config->set('processors', $processors);
+  $config->save(TRUE);
+}

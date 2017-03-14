@@ -1,0 +1,23 @@
+field.widget.settings.entity_reference_paragraphs_preview:
+  type: mapping
+  mapping:
+    title:
+      type: string
+    title_plural:
+      type: string
+    edit_mode:
+      type: string
+    add_mode:
+      type: string
+    form_display_mode:
+      type: string
+    default_paragraph_type:
+      type: string
+
+field.formatter.settings.parade_entity_reference_revisions_entity_view:
+  type: mapping
+  mapping:
+    view_mode:
+      type: string
+    link:
+      type: boolean

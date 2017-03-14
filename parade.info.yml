@@ -7,14 +7,14 @@ core: 8.x
 dependencies:
   - paragraphs
   - machine_name
-  - php_ffmpeg
   - image
+  - text
   - geocoder
   - geocoder_autocomplete
   - geofield
   - leaflet
-  - aggregated_leaflet_map
   - geocoder_field
   - geocoder_geofield
   - link
   - options
+  - classy_paragraphs

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: parade_text_and_image
+label: 'Parade (Text and Image)'
+effects:
+  73595eb2-7492-42f5-93b1-0791317b000b:
+    uuid: 73595eb2-7492-42f5-93b1-0791317b000b
+    id: image_scale
+    weight: 1
+    data:
+      width: 768
+      height: null
+      upscale: false
+pipeline: __default__

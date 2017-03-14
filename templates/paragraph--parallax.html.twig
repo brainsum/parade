@@ -1,15 +1,30 @@
+{#
+/**
+ * @file
+ */
+#}
 {%
 set classes = [
-	'paragraph',
-	'paragraph--type--' ~ paragraph.bundle|clean_class,
-	view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  'paragraph',
+  parade.enable_parallax ? 'paragraph--parallax parallax-bg-image',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ]
 %}
+<section{{ attributes.addClass(classes) }}>
 
-{{ attach_library('parade/parallax') }}
+  {% if view_mode != 'preview' %}
+    {% if parade.enable_parallax %}
+      <div data-stellar-background-ratio="0.5" data-natural-width="1920" data-natural-height="1080" class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
+    {% else %}
+      <div class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
+    {% endif %}
+  {% endif %}
 
-<div{{ attributes.addClass(classes) }} data-parallax="scroll" data-image-src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" style="min-height: {{ content.field_minimum_height[0]['#markup'] }}">
-  <section class="paragraph-inner">
-    {{ content.field_text_demo }}
-  </section>
-</div>
+  {% if parade.enable_parallax %}
+    <div data-stellar-ratio="0.8" class="paragraph-inner">{{ content }}</div>
+  {% else %}
+    <div class="paragraph-inner">{{ content }}</div>
+  {% endif %}
+</section>
+

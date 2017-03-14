@@ -1,3 +1,4 @@
+# Admin UI
 preview:
   version: VERSION
   js:
@@ -19,6 +20,7 @@ buttons:
     component:
       css/buttons.css: {}
 
+# Utilities and UX
 smooth-scroll:
   version: VERSION
   js:
@@ -40,8 +42,17 @@ parallax:
   version: VERSION
   js:
     js/parallax.js: {}
+    js/bg-parallax.js: {}
   dependencies:
     - parade/vendor.rellax
+    - parade/vendor.stellar
+    - parade/background
+
+background:
+  version: VERSION
+  css:
+    theme:
+      css/background.css: {}
 
 # Parade Paragraph types.
 paragraphs:
@@ -57,6 +68,16 @@ paragraphs.header:
       css/paragraphs.header.css: {}
   dependencies:
     - parade/paragraphs
+    - parade/background
+
+paragraphs.parallax:
+  version: VERSION
+  css:
+    component:
+      css/paragraphs.parallax.css: {}
+  dependencies:
+    - parade/paragraphs
+    - parade/background
 
 paragraphs.simple:
   version: VERSION
@@ -66,15 +87,15 @@ paragraphs.simple:
   dependencies:
     - parade/paragraphs
 
-paragraphs.tabs:
+paragraphs.social_links:
   version: VERSION
   css:
     component:
-      css/paragraphs.tabs.css: {}
+      css/paragraphs.social-links.css: {}
   dependencies:
     - parade/paragraphs
 
-paragraphs.image-text:
+paragraphs.image_text:
   version: VERSION
   css:
     component:
@@ -115,7 +136,17 @@ vendor.rellax:
     url: https://github.com/dixonandmoe/rellax/blob/master/LICENSE
     gpl-compatible: true
   js:
-    //cdnjs.cloudflare.com/ajax/libs/rellax/0.1.0/rellax.min.js: { type: external, minified: true }
+    js/lib/rellax.min.js: { minified: true }
+
+vendor.stellar:
+  remote: https://github.com/markdalgleish/stellar.js
+  version: 0.4
+  license:
+    name: MIT
+    url: https://github.com/markdalgleish/stellar.js/blob/master/LICENSE-MIT
+    gpl-compatible: true
+  js:
+    js/lib/jquery.stellar.min.js: { minified: true }
 
 vendor.iphone-inline-video:
   remote: https://github.com/bfred-it/iphone-inline-video

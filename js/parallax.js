@@ -3,11 +3,13 @@
  * JavaScript for paragraph type Header.
  */
 
-(function (Rellax) {
+(function ($) {
   'use strict';
 
-  new Rellax('.parallax', {
-    speed: -7
-  });
-
-})(Rellax);
+  try {
+    var rellax = new Rellax('.bg-parallax', { speed: -4 });
+  }
+  catch (e) {
+    // Sshhh...
+  }
+})(jQuery);

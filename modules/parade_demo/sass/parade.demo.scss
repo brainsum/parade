@@ -1,82 +1,72 @@
-.page-node-type-parade-demo {
+// Base
+@import "susy";
 
-  .paragraph.paragraph--view-mode--default {
-    background: #fff;
-    padding: 30px;
+@import "base/vars"; //note: valotozok megvaltoztatasa
+@import "base/mixins"; // note: ok
+@import "base/fonts";
+@import "base/elements";
+@import "base/typography";
+// @import "base/icons";
+@import "base/grid";
 
-    .paragraph-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+// Components
+// @import "components/admin-list";
+// @import "components/breadcrumb";
+@import "components/buttons";
+// @import "components/book";
+// @import "components/colors";
+// @import "components/messages";
+@import "components/dropbutton.component";
+// @import "components/entity-meta";
+// @import "components/field-ui";
+@import "components/form";
+// @import "components/help";
+// @import "components/menus-and-lists";
+// @import "components/modules-page";
+// @import "components/multilanguage";
+// @import "components/node";
+// @import "components/page-title";
+// @import "components/pager";
+// @import "components/panel";
+// @import "components/skip-link";
+@import "components/tables";
+// @import "components/search-admin-settings";
+// @import "components/tablesort-indicator";
+// @import "components/system-status-report";
+@import "components/tabs";
+// @import "components/views-ui";
 
-    .field--name-field-title {
-      font-size: 2em;
-      font-weight: bold;
-    }
-  }
+// Layout
+@import "layout/header";
+@import "layout/layout";
+// @import "layout/views";
+// @import "layout/login";
 
-  .paragraph--type--header.paragraph--view-mode--default {
-    padding: 0;
+// Nodes
+@import "nodes/parade";
 
-    .background {
-      &::before {
-        background-color: rgba(103, 175, 225, .5);
-      }
-    }
+// Paragraphs
+@import "paragraphs/common";
+@import "paragraphs/images";
+@import "paragraphs/image-text";
+@import "paragraphs/header";
+@import "paragraphs/tabs";
+@import "paragraphs/simple";
+@import "paragraphs/parallax";
+@import "paragraphs/text-boxes";
+@import "paragraphs/form";
+@import "paragraphs/locations";
+@import "paragraphs/social-links";
+@import "paragraphs/rounded-image";
+@import "paragraphs/savings-calculator";
 
-    .field--name-field-title {
-      font-size: 4em;
-      font-weight: 800;
-      display: inline-block;
-      margin-bottom: 0;
-      letter-spacing: -2px;
+// Theme
+@import "theme/wysiwyg";
+@import "theme/error-pages";
 
-      @media screen and (max-width: 768px) {
-        font-size: 2.8em;
-      }
-    }
+// Vendor
+@import "vendor/hamburgers";
 
-    .field--name-field-secondary-title,
-    .field--name-field-lead-text {
-      font-size: 1.5em;
-      margin-bottom: .5em;
-      @media screen and (max-width: 768px) {
-        font-size: 1.2em;
-      }
-    }
+@import "vendor/eucooke";
 
-    // Call to action buttons.
-    .field--name-field-call-to-action a {
-      border: 1px solid white;
-      color: white;
-      border-radius: 3px;
-      padding: .5em 1em;
-    }
 
-    .paragraph-inner {
-      color: white;
-    }
-  }
-
-  .paragraph--type--simple.paragraph--view-mode--default {
-    clear: both;
-    &.layout--one-column-grey {
-      background: #f3f3f3;
-    }
-    &.layout--one-column-shaded {
-      background: #292929;
-      color: white;
-    }
-    &.layout--two-column-title-1st-inverse {
-      background: #292929;
-      color: white;
-    }
-    &.layout--two-column-content-1st-inverse {
-      background: #292929;
-      color: white;
-    }
-    &.layout--separator-clean {
-
-    }
-  }
-}

@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.marketo_poll.field_anchor
+    - field.field.paragraph.marketo_poll.field_marketo_poll
+    - field.field.paragraph.marketo_poll.field_title
+    - paragraphs.paragraphs_type.marketo_poll
+  module:
+    - marketo_poll
+  enforced:
+    module:
+      - marketo_poll
+id: paragraph.marketo_poll.default
+targetEntityType: paragraph
+bundle: marketo_poll
+mode: default
+content:
+  field_marketo_poll:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: marketo_poll
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  field_anchor: true
+  uid: true

@@ -7,7 +7,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var merge = require('merge-stream');
 
 var sassOptions = {
-  outputStyle: 'expanded'
+  outputStyle: 'expanded',
+  includePaths: [
+      process.cwd() + '/node_modules',
+      process.cwd() + '/node_modules/susy/sass',
+	]
 };
 
 gulp.task('sass', function () {
@@ -15,32 +19,30 @@ gulp.task('sass', function () {
     .src('sass/**/*.{scss,sass}')
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(csscomb())
     .pipe(gulp.dest('css'));
 
   var parade_demo = gulp
     .src('modules/parade_demo/sass/**/*.{scss,sass}')
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(csscomb())
     .pipe(gulp.dest('modules/parade_demo/css'));
 
   return merge(parade, parade_demo);
 });
 
-gulp.task('csscomb', function () {
-  var parade = gulp
-    .src('css/**/*.css')
-    .pipe(csscomb())
-    .pipe(gulp.dest('css'));
+// gulp.task('csscomb', function () {
+//   var parade = gulp
+//     .src('css/**/*.css')
+//     .pipe(csscomb())
+//     .pipe(gulp.dest('css'));
 
-  var parade_demo = gulp
-    .src('modules/parade_demo/css/**/*.css')
-    .pipe(csscomb())
-    .pipe(gulp.dest('modules/parade_demo/css'));
+//   var parade_demo = gulp
+//     .src('modules/parade_demo/css/**/*.css')
+//     .pipe(csscomb())
+//     .pipe(gulp.dest('modules/parade_demo/css'));
 
-  return merge(parade, parade_demo);
-});
+//   return merge(parade, parade_demo);
+// });
 
 gulp.task('eslint', function () {
   var parade = gulp
@@ -56,17 +58,22 @@ gulp.task('eslint', function () {
   return merge(parade, parade_demo);
 });
 
-gulp.task('copy', function () {
+gulp.task('copy:js', function () {
   return gulp
-    .src('node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js')
+    .src([
+      'node_modules/iphone-inline-video/dist/iphone-inline-video.browser.js',
+      'node_modules/rellax/rellax.min.js',
+    ])
     .pipe(gulp.dest('js/lib'));
 });
 
+gulp.task('copy', ['copy:js', 'copy:css']);
 gulp.task('lint', ['csscomb', 'eslint']);
 
-gulp.task('watch', ['lint'], function () {
+gulp.task('watch', ['sass'], function () {
   gulp.watch('**/sass/**/*.{scss,sass}', ['sass']);
-  gulp.watch('**/js/**/*.js', ['eslint']);
+  // gulp.watch('**/js/**/*.js', ['eslint']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('compile', ['sass']);
+gulp.task('default', ['compile']);

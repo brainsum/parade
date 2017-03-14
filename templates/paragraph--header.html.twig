@@ -10,30 +10,36 @@
 {%
 set classes = [
   'paragraph',
+  parade.enable_parallax ? 'paragraph--parallax',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'paragraph--background-' ~ parade.background.type|clean_class,
 ]
 %}
 
-<div{{ attributes.addClass(classes) }}>
-  <div class="background">
+<section{{ attributes.addClass(classes) }} >
 
-    {# Header background #}
-    {% if view_mode != 'preview' %}
-      <div class="background-wrapper{{ parade.enable_parallax ? ' parallax' : '' }}">
-        {% if parade.background.type == 'image' %}
-          <div class="background-image" style="background-image: url({{- parade.background.url -}})"></div>
-        {% elseif parade.background.type == 'video' %}
-          <video class="background-video" autoplay muted loop playsinline src="{{ parade.background.url }}" poster="{{ parade.background.poster }}"></video>
+  {% if view_mode != 'preview' %}
+    <div class="bg-wrapper bg-fullsize">
+
+      {% if parade.background.type == 'image' %}
+        {# For responsive parallax effect and fixed height, we need this wrapper #}
+        {% if parade.enable_parallax %}
+        <div class="bg-fullsize bg-parallax">
         {% endif %}
-      </div>
-    {% endif %}
+          <div class="bg-image bg-fullsize" style="background-image: url({{- parade.background.url -}});"></div>
+        {% if parade.enable_parallax %}
+        </div>
+        {% endif %}
 
-    {# Header content within the container #}
-    <div class="paragraph-inner">
-      {{ content }}
+      {% elseif parade.background.type == 'video' %}
+        <video class="bg-video bg-fullsize{{ parade.enable_parallax ? ' bg-parallax' }}" autoplay muted loop playsinline>
+          <source src="{{ parade.background.url }}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+      {% endif %}
     </div>
+  {% endif %}
 
+  <div class="paragraph-inner">
+    {{ content }}
   </div>
-</div>
+</section>

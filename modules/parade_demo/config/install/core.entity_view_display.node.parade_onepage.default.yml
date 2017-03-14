@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.parade_onepage.field_parade_onepage_id
+    - field.field.node.parade_onepage.field_parade_onepage_menu
+    - field.field.node.parade_onepage.field_parade_onepage_sections
+    - node.type.parade_onepage
+  module:
+    - entity_reference_revisions
+    - link
+    - user
+  enforced:
+    module:
+      - parade_demo
+id: node.parade_onepage.default
+targetEntityType: node
+bundle: parade_onepage
+mode: default
+content:
+  field_parade_onepage_menu:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_parade_onepage_sections:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden:
+  field_parade_onepage_id: true
+  langcode: true
+  links: true

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: parade_full_hd_width
+label: 'Parade full HD width'
+effects:
+  80c38604-a69a-4cae-867d-2c80d7c6559f:
+    uuid: 80c38604-a69a-4cae-867d-2c80d7c6559f
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: false
+pipeline: __default__

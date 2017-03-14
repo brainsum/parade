@@ -5,30 +5,14 @@
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
   "require": {
-    "drupal/paragraphs": "1.0",
-    "drupal/machine_name": "1.x-dev",
-    "drupal/php_ffmpeg": "1.0",
-    "drupal/geocoder": "2.x-dev",
-    "drupal/geofield": "1.x-dev",
-    "drupal/leaflet": "1.x-dev",
-    "drupal/geocoder_autocomplete": "1.x-dev"
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    "leaflet": {
-      "type": "package",
-      "package": {
-        "name": "leaflet/leaflet",
-        "version": "v0.7.7",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/Leaflet/Leaflet/archive/v0.7.7.zip",
-          "type": "zip"
-        }
-      }
-    }
+    "drupal/paragraphs": "~1.0",
+    "drupal/machine_name": "~1.0",
+    "drupal/geocoder": "~2.0",
+    "drupal/geofield": "~1.0",
+    "drupal/leaflet": "~1.0",
+    "drupal/geocoder_autocomplete": "~1.0",
+    "drupal/imageapi_optimize": "~2.0",
+    "drupal/imagemagick": "~1.0",
+    "drupal/classy_paragraphs": "~1.0"
   }
 }
