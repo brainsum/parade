@@ -105,12 +105,24 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     return $elements;
   }
 
-  private function getBundleFieldDefinitions($entity, $bundle) {
-    /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $tmp */
+  /**
+   * Get the field definitions for an entity type's bundle.
+   *
+   * @param string $entityType
+   *   The entity type.
+   * @param string $bundle
+   *   The bundle.
+   *
+   * @return \Drupal\Core\Field\FieldDefinitionInterface[]
+   *   Array of field definitions.
+   */
+  private function getBundleFieldDefinitions($entityType, $bundle) {
+    // @todo: Use dependency injection.
+    /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $fieldManager */
     $fieldManager = \Drupal::service('entity_field.manager');
     /** @var \Drupal\Core\Field\FieldDefinitionInterface[] $bundleFields */
     $bundleFields = $fieldManager->getFieldDefinitions(
-      $entity,
+      $entityType,
       $bundle
     );
 
