@@ -21,3 +21,19 @@ field.formatter.settings.parade_entity_reference_revisions_entity_view:
       type: string
     link:
       type: boolean
+
+field.widget.settings.link_with_selected_attribute:
+  type: mapping
+  mapping:
+    placeholder_url:
+      type: string
+    placeholder_title:
+      type: label
+
+field.widget.settings.link_cta:
+  type: mapping
+  mapping:
+    placeholder_url:
+      type: string
+    placeholder_title:
+      type: label
