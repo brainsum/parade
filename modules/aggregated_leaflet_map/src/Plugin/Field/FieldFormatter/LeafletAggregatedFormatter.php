@@ -25,6 +25,7 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
   public static function defaultSettings() {
     return [
       'source_field' => '',
+      'auto_zoom' => FALSE,
     ] + parent::defaultSettings();
   }
 
@@ -43,6 +44,17 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
 
       $options[$field] = $bundleFields[$field]->getLabel();
     }
+
+    $elements['auto_zoom'] = [
+      '#title' => $this->t('Automatic zoom'),
+      '#type' => 'select',
+      '#options' => [
+        FALSE => $this->t('Disabled'),
+        TRUE => $this->t('Enabled'),
+      ],
+      '#default_value' => $this->getSetting('auto_zoom'),
+      '#required' => TRUE,
+    ];
 
     $elements['source_field'] = [
       '#title' => $this->t('Source field'),
@@ -65,9 +77,9 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     $icon_url = $settings['icon']['icon_url'];
 
     $map = leaflet_map_get_info($settings['leaflet_map']);
-    $map['settings']['zoom'] = isset($settings['zoom']) ? $settings['zoom'] : NULL;
+    $map['settings']['zoom'] = (TRUE === (bool) $settings['auto_zoom'] || !isset($settings['zoom'])) ? NULL : $settings['zoom'];
     $map['settings']['minZoom'] = isset($settings['minZoom']) ? $settings['minZoom'] : NULL;
-    $map['settings']['maxZoom'] = isset($settings['zoom']) ? $settings['maxZoom'] : NULL;
+    $map['settings']['maxZoom'] = isset($settings['maxZoom']) ? $settings['maxZoom'] : NULL;
 
     // We collect all features in a single array.
     $aggregated_features = array();
