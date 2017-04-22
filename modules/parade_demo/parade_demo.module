@@ -130,7 +130,7 @@ function parade_demo_form_node_form_alter(&$form, FormStateInterface $form_state
   $node = $form_state->getFormObject()->getEntity();
 
   $form['#theme'] = array('node_edit_form');
-  $form['#attached']['library'][] = 'tieto_admin/node-form';
+  // $form['#attached']['library'][] = 'tieto_admin/node-form';
 
   $form['advanced']['#type'] = 'container';
   $is_new = !$node->isNew() ? format_date($node->getChangedTime(), 'short') : t('Not saved yet');
