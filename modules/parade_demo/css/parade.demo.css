@@ -4384,11 +4384,11 @@ h3.tieto-lead {
 }
 
 .error-page--404 {
-  background-image: url(/modules/parade/modules/parade_demo/images/404.jpg);
+  background-image: url(../images/404.jpg);
 }
 
 .error-page--403 {
-  background-image: url(/modules/parade/modules/parade_demo/images/403.jpg);
+  background-image: url(../images/403.jpg);
 }
 
 /*!
