@@ -1,12 +1,4 @@
-@mixin breakpoint-max($class) {
-  @if $class == md {
-    @media (max-width: 766px) {
-      @content;
-    }
-  }
-}
-
-@include breakpoint-max(md) {
+@media (max-width: 766px) {
   .paragraph.paragraph--parallax.parallax-bg-image {
     padding: 5px;
     .bg-image {

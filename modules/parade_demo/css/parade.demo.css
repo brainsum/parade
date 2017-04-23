@@ -378,9 +378,6 @@ details summary:hover {
 }
 
 @media (min-width: 767px) {
-  .col {
-    float: left;
-  }
   .columns-1 .col {
     width: 100%;
   }
@@ -3186,20 +3183,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
  * @file
  * HEADER paragraph
  */
-.paragraph--type--header.paragraph--view-mode--default {
-  padding: 0;
-  position: relative;
-  min-height: 82vh;
-}
-
 .paragraph--type--header.paragraph--view-mode--default .bg-wrapper::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
   background-color: rgba(123, 123, 123, 0.4);
 }
 
@@ -3264,16 +3248,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  width: 100%;
   color: white;
-  padding: 2em 1em;
-  z-index: 20;
 }
 
 @media (max-width: 1199px) {
@@ -3447,9 +3422,6 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   color: white;
   min-height: 200px;
   max-height: 200px;
-  display: table;
-  width: 100%;
-  position: relative;
 }
 
 @media (min-width: 767px) {
@@ -3460,13 +3432,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--parallax.paragraph--view-mode--default .paragraph-inner {
-  display: table-cell;
-  vertical-align: middle;
   width: 60%;
-}
-
-.paragraph--type--parallax.paragraph--view-mode--default .bg-image {
-  background-color: #333;
 }
 
 .paragraph--type--parallax.paragraph--view-mode--default .field--name-field-title {
@@ -3476,7 +3442,6 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   font-size: 26px;
   line-height: 1.2;
   word-break: break-word;
-  margin-bottom: .5em;
 }
 
 @media (min-width: 767px) {
@@ -3488,22 +3453,6 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--parallax.paragraph--view-mode--default .field--name-field-text {
   font-size: 1.2em;
-}
-
-@media (max-width: 766px) {
-  .paragraph.paragraph--parallax.parallax-bg-image {
-    padding: 5px;
-  }
-  .paragraph.paragraph--parallax.parallax-bg-image .bg-image {
-    min-height: 200px;
-    max-height: 200px;
-    background-position: center !important;
-  }
-  .paragraph.paragraph--parallax.parallax-bg-image .paragraph-inner {
-    width: 100%;
-    display: block !important;
-    top: 0 !important;
-  }
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--default .field--name-field-title {
@@ -3585,10 +3534,6 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--text-boxes.paragraph--view-mode--default[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs > .col > .paragraph-inner {
     height: 100%;
   }
-}
-
-.paragraph--type--text-box.paragraph--view-mode--default {
-  background: inherit;
 }
 
 .paragraph--type--text-box.paragraph--view-mode--default .field--name-field-image {

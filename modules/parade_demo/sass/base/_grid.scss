@@ -5,9 +5,6 @@ $col-widths: ();
 
 // Cols are only on desktop
 @include md {
-	.col {
-		float: left;
-	}
 	@for $i from 1 through $max-cols {
 	    $w: (1/$i);
 
