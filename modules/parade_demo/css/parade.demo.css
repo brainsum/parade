@@ -3900,7 +3900,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-field-image {
-  margin-right: 0;
+  width: 34%;
+}
+
+@media (max-width: 480px) {
+  .paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-field-image {
+    width: 150px;
+  }
 }
 
 .paragraph--type--savings-calculator.paragraph--view-mode--default .field--name-field-title {

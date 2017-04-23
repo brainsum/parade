@@ -73,12 +73,14 @@ $sidePadding: 1em !default;
   background: inherit;
 }
 
-.col {
-  float: left;
-}
+@media (min-width: 767px) {
+  .col {
+    float: left;
+  }
 
-@for $i from 1 through 5 {
-  .col-#{$i} {
-    width: calc(100% / #{$i} - 2 * #{$sidePadding})
+  @for $i from 1 through 5 {
+    .col-#{$i} {
+      width: calc(100% / #{$i} - 2 * #{$sidePadding})
+    }
   }
 }

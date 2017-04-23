@@ -14,7 +14,10 @@
       color: $text-color;
     }
     .field--name-field-image {
-      margin-right: 0;
+      width: 34%;
+      @include breakpoint-max(sm) {
+        width: 150px;
+      }
     }
   }
 }
