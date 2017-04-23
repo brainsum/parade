@@ -4,7 +4,7 @@
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
-    width: 50%;
+    width: calc(50% - 0.8em);
   }
 }
 

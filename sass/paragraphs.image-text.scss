@@ -2,17 +2,11 @@
     // Layout: Common styles
     &.layout--text_1st,
     &.layout--image_1st {
-
-        // .field--name-field-title {
-        //     @include campaign-headline;
-        //     color: $text-color-strong;
-        // }
-
         .field--name-field-title,
         .field--name-field-text,
         .field--name-field-image {
             @media screen and (min-width: 768px) {
-                width: 50%;
+                width: calc(50% - 0.8em);
             }
         }
 
@@ -54,7 +48,6 @@
             &:focus,
             &:active {
                 text-decoration: none;
-                // background: lighten($tieto-blue, 5%);
             }
         }
     }
@@ -102,14 +95,9 @@
     // Layout: Enhanced
     &.layout--text_1st_enhanced,
     &.layout--image_1st_enhanced {
-        // Title // .field--name-field-title {
-        //     @include campaign-title-center;
-        // }
-
         // Text
         .field--name-field-text {
             padding: 2em;
-            // background: $tieto-lightblue;
 
             @media screen and (min-width: 768px) {
                 width: 60%;
@@ -119,7 +107,6 @@
 
         // Image
         .field--name-field-image {
-            // background: $tieto-lightblue;
             padding: 2em 0 0;
 
             text-align: center;
