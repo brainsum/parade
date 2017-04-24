@@ -47,3 +47,7 @@
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-google {
   background: url("../images/gplus.svg") no-repeat center center;
 }
+
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-youtube {
+  background: url("../images/youtube.svg") no-repeat center center;
+}

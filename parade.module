@@ -355,6 +355,9 @@ function parade_preprocess_field__field_social_link(&$variables) {
     elseif (strpos($link['content']['#title'], 'linkedin') !== FALSE) {
       $type = 'linkedin';
     }
+    elseif (strpos($link['content']['#title'], 'youtube') !== FALSE) {
+      $type = 'youtube';
+    }
     else {
       $type = 'unknown';
     }
