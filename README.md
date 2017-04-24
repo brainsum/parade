@@ -5,14 +5,29 @@ It's based on https://www.drupal.org/project/paragraphs .
 
 ## INSTALLATION
 ### With composer
-You need to install the dependencies first. To do this,
-look at the composer.json of the Parade module,
-look for the 'repositories' key and copy the contents
-of the 'repositories' to the composer.json of your own project.
+You need to add the following repositories to your composer.json:
+
+    "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    },
+    "leaflet": {
+        "type": "package",
+        "package": {
+            "name": "leaflet/leaflet",
+            "version": "v0.7.7",
+            "type": "drupal-library",
+            "dist": {
+                "url": "https://github.com/Leaflet/Leaflet/archive/v0.7.7.zip",
+                "type": "zip"
+            }
+        }
+    }
+
+Composer can't resolve repositories of the dependencies, that's why you have to use this workaround.
 After this, you just have to use "composer require drupal/parade"
 to get the module and the dependencies,
 and "drush en parade" to enable it in your site.
-
 
 The required geocoder module has a typo in its schema.
 See: https://www.drupal.org/node/2824802
