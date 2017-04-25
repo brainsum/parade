@@ -2,6 +2,30 @@
  * @file
  * HEADER paragraph
  */
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item, .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action a {
-  display: inline-block;
+.paragraph--type--header.paragraph--view-mode--default {
+  padding: 0;
+  position: relative;
+  min-height: 82vh;
+}
+
+.paragraph--type--header.paragraph--view-mode--default .bg-wrapper::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 2em 1em;
+  z-index: 20;
 }

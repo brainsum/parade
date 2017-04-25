@@ -22,7 +22,12 @@
 }
 
 @mixin breakpoint-max($class) {
-  @if $class == md {
+  @if $class == sm {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+  @else if $class == md {
     @media (max-width: 766px) {
       @content;
     }

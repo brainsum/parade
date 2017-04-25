@@ -1,3 +1,38 @@
-.paragraph--type--parallax.paragraph--view-mode--default .paragraph-inner {
+@media (max-width: 766px) {
+  .paragraph.paragraph--parallax.parallax-bg-image {
+    padding: 5px;
+  }
+  .paragraph.paragraph--parallax.parallax-bg-image .bg-image {
+    min-height: 200px;
+    max-height: 200px;
+    background-position: center !important;
+  }
+  .paragraph.paragraph--parallax.parallax-bg-image .paragraph-inner {
+    width: 100%;
+    display: block !important;
+    top: 0 !important;
+  }
+}
+
+.paragraph--type--parallax.paragraph--view-mode--default {
+  min-height: 340px;
+  max-height: inherit;
+  display: table;
+  width: 100%;
   position: relative;
+  overflow: hidden;
+}
+
+.paragraph--type--parallax.paragraph--view-mode--default .paragraph-inner {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+
+.paragraph--type--parallax.paragraph--view-mode--default .bg-image {
+  background-color: #333;
+}
+
+.paragraph--type--parallax.paragraph--view-mode--default .field--name-field-title {
+  margin-bottom: .5em;
 }

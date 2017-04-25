@@ -11,11 +11,12 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-eslint": "^3.0.1",
-    "gulp-sass": "^2.3.2",
-    "merge-stream": "^1.0.0"
+    "gulp-sass": "^3.1.0",
+    "merge-stream": "^1.0.0",
+    "susy": "^2.2.12"
   },
   "dependencies": {
     "iphone-inline-video": "^1.9.4",
-    "rellax": "^0.1.0"
+    "rellax": "^1.0.0"
   }
 }

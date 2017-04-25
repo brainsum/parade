@@ -1,5 +1,4 @@
 .paragraph--type--social-links.paragraph--view-mode--default {
-
   .field--name-field-social-link {
     text-align: center;
 
@@ -46,6 +45,10 @@
 
     .social-google {
       background: url('../images/gplus.svg') no-repeat center center;
+    }
+
+    .social-youtube {
+      background: url('../images/youtube.svg') no-repeat center center;
     }
   }
 }

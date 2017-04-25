@@ -44,6 +44,7 @@ parallax:
     js/parallax.js: {}
     js/bg-parallax.js: {}
   dependencies:
+    - core/jquery
     - parade/vendor.rellax
     - parade/vendor.stellar
     - parade/background
@@ -147,6 +148,8 @@ vendor.stellar:
     gpl-compatible: true
   js:
     js/lib/jquery.stellar.min.js: { minified: true }
+  dependencies:
+    - core/jquery
 
 vendor.iphone-inline-video:
   remote: https://github.com/bfred-it/iphone-inline-video
