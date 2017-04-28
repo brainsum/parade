@@ -4,30 +4,44 @@ dependencies:
   config:
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
+    - field.field.paragraph.text_boxes.field_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_text_boxes_layout
     - field.field.paragraph.text_boxes.field_title
     - paragraphs.paragraphs_type.text_boxes
   module:
     - parade
+_core:
+  default_config_hash: 8F9XVb0x2bNTrHnaUur8k9OdPat74sSfLWHmiwqsSAs
 id: paragraph.text_boxes.default
 targetEntityType: paragraph
 bundle: text_boxes
 mode: default
 content:
   field_anchor:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_boxes_per_row:
-    weight: 2
+    weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_color_scheme:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_paragraphs:
     type: entity_reference_paragraphs_preview
     weight: 5
@@ -37,23 +51,28 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_text_boxes_layout:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_title:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   translation:
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

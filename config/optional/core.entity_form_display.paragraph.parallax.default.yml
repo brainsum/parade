@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.parallax.field_anchor
     - field.field.paragraph.parallax.field_background
+    - field.field.paragraph.parallax.field_color_scheme
     - field.field.paragraph.parallax.field_enable_parallax
     - field.field.paragraph.parallax.field_image
     - field.field.paragraph.parallax.field_minimum_height
@@ -12,44 +13,59 @@ dependencies:
   module:
     - file
     - text
-    - parade
+_core:
+  default_config_hash: rkOcVM8KudOPLMka_oOVQxEQTU40e0IE0ThaoeRCBmU
 id: paragraph.parallax.default
 targetEntityType: paragraph
 bundle: parallax
 mode: default
 content:
   field_anchor:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_background:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_color_scheme:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_enable_parallax:
-    weight: 3
+    weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
   field_minimum_height:
-    weight: 4
+    weight: 5
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_text:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
 hidden:
   created: true
   field_image: true
