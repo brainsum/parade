@@ -14,8 +14,6 @@ dependencies:
   module:
     - file
     - link
-_core:
-  default_config_hash: NE3khnUpqBt5xatrpl3dsI4zyjwbJHRVb-nFuKK3Aus
 id: paragraph.header.default
 targetEntityType: paragraph
 bundle: header

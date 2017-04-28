@@ -15,8 +15,6 @@ dependencies:
     - image
     - link
     - text
-_core:
-  default_config_hash: 80EibL89ejKqsjICrt8aIBLWvcfVVvGVcfCXcKGE97Q
 id: paragraph.image_text.default
 targetEntityType: paragraph
 bundle: image_text

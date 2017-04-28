@@ -11,8 +11,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_boxes
   module:
     - parade
-_core:
-  default_config_hash: 8F9XVb0x2bNTrHnaUur8k9OdPat74sSfLWHmiwqsSAs
 id: paragraph.text_boxes.default
 targetEntityType: paragraph
 bundle: text_boxes

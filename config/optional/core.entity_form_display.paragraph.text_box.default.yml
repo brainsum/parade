@@ -11,8 +11,6 @@ dependencies:
   module:
     - image
     - text
-_core:
-  default_config_hash: PqCwQct1E2dxWhI5P-wpAv0QJydUcwMugh3na0VgD0s
 id: paragraph.text_box.default
 targetEntityType: paragraph
 bundle: text_box

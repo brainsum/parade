@@ -12,8 +12,6 @@ dependencies:
   module:
     - geocoder_autocomplete
     - text
-_core:
-  default_config_hash: UM-I31V_Gl35onXev3GfYgcftziioSWR5TK-vnQwrtg
 id: paragraph.locations.default
 targetEntityType: paragraph
 bundle: locations

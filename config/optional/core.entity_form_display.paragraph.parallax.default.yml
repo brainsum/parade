@@ -13,8 +13,6 @@ dependencies:
   module:
     - file
     - text
-_core:
-  default_config_hash: rkOcVM8KudOPLMka_oOVQxEQTU40e0IE0ThaoeRCBmU
 id: paragraph.parallax.default
 targetEntityType: paragraph
 bundle: parallax
