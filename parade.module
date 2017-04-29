@@ -437,6 +437,9 @@ function parade_form_node_form_alter(&$form, FormState $form_state, $form_id) {
       $form['actions']['submit']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
       $form['actions']['publish']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
       $form['actions']['unpublish']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
+
+      // Add library.
+      $form['#attached']['library'][] = 'parade/domain.front-page';
     }
   }
 }

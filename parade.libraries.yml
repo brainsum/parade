@@ -55,6 +55,13 @@ background:
     theme:
       css/background.css: {}
 
+domain.front-page:
+  version: VERSION
+  js:
+    js/domain-front-page.js: {}
+  dependencies:
+    - core/jquery
+
 # Parade Paragraph types.
 paragraphs:
   version: VERSION
