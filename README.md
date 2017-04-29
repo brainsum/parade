@@ -45,6 +45,15 @@ Use this patch: https://www.drupal.org/files/issues/missing-schema-2858115-2.pat
 
 @todo
 
+### MULTIDOMAIN SETTINGS
+
+Benefits: You will be able to set front page per domain.
+
+You can use domain module with parade, however it can work without it. If you want to use,
+you need to install it separatly the domain domain_access and domain_config, than make sure 
+at /admin/config/domain/domain_access the "Move Domain Access fields to advanced node settings." 
+is chacked. You will find the front page settings at the node edit pages right under "DOMAIN SETTINGS".
+
 ## ISSUES
 
 @todo
