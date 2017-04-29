@@ -7,6 +7,7 @@
  * @todo Make the whole thing dynamic, do not rely on Parade content type.
  */
 
+use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
@@ -365,5 +366,160 @@ function parade_preprocess_field__field_social_link(&$variables) {
       'social',
       'social-' . $type,
     ];
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for \Drupal\node\NodeForm.
+ *
+ * Move Parade domain front fields to an advanced tab like other node settings.
+ */
+function parade_form_node_form_alter(&$form, FormState $form_state, $form_id) {
+  if (isset($form['domain'])) {
+    $module_handler = \Drupal::moduleHandler();
+    if ($module_handler->moduleExists('domain') && $module_handler->moduleExists('domain_access') && $module_handler->moduleExists('domain_config')) {
+      $default_value = [];
+      $options = ['none' => t('None')->render()];
+      $options_dyn = [];
+      $config_factory = \Drupal::configFactory();
+      $node = \Drupal::routeMatch()->getParameter('node');
+      $path_array = ['alias'  => $node->toUrl()->toString(),
+                     'source' => '/node/' . $node->id()
+      ];
+      $domains = \Drupal::service('domain.loader')->loadMultiple();
+      foreach ($domains as $domain) {
+        $key = $domain->id();
+        $options_dyn[$key] = $domain->get('name');
+
+        $front_url = $config_factory->get('domain.config.' . $key . '.system.site')
+          ->get('page.front');
+        if ($front_url == $path_array['alias'] || $front_url == $path_array['source']) {
+          $default_value[] = $key;
+        }
+      }
+      asort($options_dyn);
+      $options += $options_dyn;
+      if (empty($default_value)) {
+        $default_value[] = 'none';
+      }
+
+      // Put out checkboxes for front page selection.
+      $form['field_domains_front_page'] = [
+        '#type'              => 'container',
+        '#parents'           => [
+          'field_domain_front_page_wrapper',
+        ],
+        'domains_front_page' => [
+          '#type'          => 'checkboxes',
+          '#title'         => t('Select which domains\' frontpage will be this node'),
+          '#options'       => $options,
+          '#cache'         => [
+            'contexts' => [],
+            'tags'     => [],
+            'max-age'  => -1,
+          ],
+          '#attributes'    => [
+            'class' => [
+              'field--type-entity-reference',
+              'field--name-field-domain-front-page',
+              'field--widget-options-buttons',
+            ],
+          ],
+          '#field_name'    => 'domains_front_page',
+          '#default_value' => $default_value,
+        ],
+        '#group'             => "domain",
+        '#weight'            => 50,
+        '#access'            => TRUE,
+      ];
+
+      // Set a custom submit function
+      $form['actions']['submit']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
+      $form['actions']['publish']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
+      $form['actions']['unpublish']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
+    }
+  }
+}
+
+/**
+ * Custom form action handler.
+ *
+ * This sets front page values.
+ */
+function parade_domain_front_page_form_submit_handler($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  if($form_state->hasValue('domains_front_page')) {
+    $domains = $form_state->getValue('domains_front_page');
+    $path_array = reset($form_state->getValue('path'));
+    $path = $path_array['alias'] ? $path_array['alias'] : $path_array['source'];
+
+    if (!empty($domains['none'])) {
+      parade_delete_all_domain_front_page($path_array);
+    }
+    else {
+      unset($domains['none']);
+      $config_factory = \Drupal::configFactory();
+      foreach ($domains as $key => $value) {
+        if (empty($value)) {
+          $conf_path = $config_factory->get('domain.config.' . $key . '.system.site')
+            ->get('page.front');
+          if ($conf_path == $path_array['alias'] || $conf_path == $path_array['source']) {
+            $config_factory->getEditable('domain.config.' . $key . '.system.site')
+              ->set('page.front', '/')
+              ->save();
+          }
+        }
+        else {
+          $config_factory->getEditable('domain.config.' . $key . '.system.site')
+            ->set('page.front', $path)
+            ->save();
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Delete all domains' front pages.
+ *
+ * @param $path_array
+ *   A path array with an alias and a source key.
+ *
+ * @use
+ *   Domain.
+ */
+function parade_delete_all_domain_front_page($path_array) {
+  $domains = \Drupal::service('domain.loader')->loadMultiple();
+
+  $config_factory = \Drupal::configFactory();
+  foreach (array_keys($domains) as $domain_id) {
+    $conf_path = $config_factory->get('domain.config.' . $domain_id . '.system.site')->get('page.front');
+    if ($conf_path == $path_array['alias'] || $conf_path == $path_array['source']) {
+      $config_factory->getEditable('domain.config.' . $domain_id . '.system.site')
+        ->set('page.front', '/')
+        ->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete() for node entities.
+ *
+ * Delete front page link if node is delete.
+ *
+ * @use
+ *   Domain.
+ */
+function parade_node_delete(EntityInterface $node) {
+  $domains = \Drupal::service('domain.loader')->loadMultiple();
+  $path_array = ['alias' => $node->toUrl()->toString(), 'source' => '/node/'.$node->id()];
+
+  $config_factory = \Drupal::configFactory();
+  foreach (array_keys($domains) as $domain_id) {
+    $conf_path = $config_factory->get('domain.config.' . $domain_id . '.system.site')->get('page.front');
+    if ($conf_path == $path_array['alias'] || $conf_path == $path_array['source']) {
+      $config_factory->getEditable('domain.config.' . $domain_id . '.system.site')
+        ->set('page.front', '/')
+        ->save();
+    }
   }
 }
