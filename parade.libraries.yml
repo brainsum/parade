@@ -62,6 +62,13 @@ domain.front-page:
   dependencies:
     - core/jquery
 
+domain.ga:
+  version: VERSION
+  js:
+    js/domain-ga.js: {}
+  dependencies:
+    - core/jquery
+
 # Parade Paragraph types.
 paragraphs:
   version: VERSION

@@ -7,6 +7,7 @@
  * @todo Make the whole thing dynamic, do not rely on Parade content type.
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
@@ -336,6 +337,103 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
     }
   }
+  // If this is a GA admin settings page, we add our UI for handling domain
+  // specific GA account IDs.
+  if ($form_id == "google_analytics_admin_settings" && !empty($form['general'])) {
+    $module_handler = \Drupal::moduleHandler();
+    if ($module_handler->moduleExists('domain') && $module_handler->moduleExists('domain_config') && $module_handler->moduleExists('google_analytics')) {
+      /* @var Drupal\domain\Entity\Domain[] $domains */
+      $domains = \Drupal::service('domain.loader')->loadMultipleSorted();
+
+      // Add new tab under General settings.
+      $index_for_split = array_search("general", array_keys($form)) + 1;
+      $form = array_merge(
+        array_slice($form, 0, $index_for_split, TRUE),
+        [
+          "domain_specific" => [
+            '#type'                            => 'details',
+            '#title'                           => t('Domain specific settings'),
+            '#open'                            => TRUE,
+            '#description'                     => t('Set these values to override the General settings.'),
+            'google_analytics_account_domains' => [
+              '#tree' => TRUE,
+            ],
+          ]
+        ],
+        array_slice($form, $index_for_split, count($form) - $index_for_split, TRUE)
+      );
+
+      $config_factory = \Drupal::configFactory();
+      $cicle_count = 0;
+      // Add Web property ID field / domain.
+      foreach ($domains as $domain) {
+        $domain_id = $domain->id();
+
+        $config = $config_factory->get('domain.config.' . $domain_id . '.google_analytics.settings');
+        $form['domain_specific']['google_analytics_account_domains'][$domain_id] = [
+          '#type'       => 'container',
+          '#attributes' => [
+            'class' => [
+              'google-analytics-account-domains',
+              'google-analytics-account-domains-' . $cicle_count,
+              ($cicle_count % 2 == 0 ? "odd" : "even"),
+            ],
+          ],
+        ];
+        $form['domain_specific']['google_analytics_account_domains'][$domain_id]['value'] = [
+          '#default_value' => $config->get('account'),
+          '#maxlength'     => 20,
+          '#placeholder'   => 'UA-',
+          '#size'          => 15,
+          '#title'         => t('Overwrite Web Property ID for %website_url', array('%website_url' => $domain->getPath() . ($domain->isDefault() ? " (" . t("default domain") . ")" : ""))),
+          '#description'   => $form['general']['google_analytics_account']['#description'],
+          '#type'          => 'textfield',
+        ];
+        $form['domain_specific']['google_analytics_account_domains'][$domain_id]['use_default_value'] = [
+          '#type'          => 'checkbox',
+          '#title'         => t('Use value from General settings'),
+          '#description'   => t('Check this to use default value from under General settings for this domain. If this isn\'t checked, but the textfield is empty, the GA won\'t be used for this domain.'),
+          '#default_value' => (($config->get('account_use_default_value') !== NULL) ? $config->get('account_use_default_value') : "1"),
+        ];
+
+        $cicle_count++;
+      }
+
+      // Add custom event handler for Web property ID field / domain.
+      $form['#submit'][] = "parade_save_google_analytics_domain_settings_handler";
+
+      // Add library.
+      $form['#attached']['library'][] = 'parade/domain.ga';
+    }
+  }
+}
+
+/**
+ * Custom event handler for Web property ID field / domain.
+ */
+function parade_save_google_analytics_domain_settings_handler($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // If has Web property ID field / domain data submited.
+  if ($form_state->hasValue('google_analytics_account_domains')) {
+    $gaa_domains = $form_state->getValue('google_analytics_account_domains');
+
+    // Go throw all the specific domain settings.
+    $config_factory = \Drupal::configFactory();
+    foreach ($gaa_domains as $domain_id => $domain_values) {
+      $config_factory_edit = $config_factory->getEditable('domain.config.' . $domain_id . '.google_analytics.settings');
+      // Set back default value.
+      if ($domain_values['use_default_value'] == "1") {
+        $config_factory_edit->clear('account')
+          ->set('account_use_default_value', $domain_values['use_default_value'])
+          ->save();
+      }
+      // Set custom value.
+      else {
+        $config_factory_edit->set('account', $domain_values['value'])
+          ->set('account_use_default_value', $domain_values['use_default_value'])
+          ->save();
+      }
+    }
+  }
 }
 
 /**
@@ -383,22 +481,26 @@ function parade_form_node_form_alter(&$form, FormState $form_state, $form_id) {
       $options_dyn = [];
       $config_factory = \Drupal::configFactory();
       $node = \Drupal::routeMatch()->getParameter('node');
-      $path_array = ['alias'  => $node->toUrl()->toString(),
-                     'source' => '/node/' . $node->id()
+      $path_array = [
+        'alias'  => $node->toUrl()->toString(),
+        'source' => '/node/' . $node->id()
       ];
-      $domains = \Drupal::service('domain.loader')->loadMultiple();
+      /* @var Drupal\domain\Entity\Domain[] $domains */
+      $domains = \Drupal::service('domain.loader')->loadMultipleSorted();
       foreach ($domains as $domain) {
         $key = $domain->id();
+        // Collecting selectable values.
         $options_dyn[$key] = $domain->get('name');
 
+        // Collecting default values.
         $front_url = $config_factory->get('domain.config.' . $key . '.system.site')
           ->get('page.front');
         if ($front_url == $path_array['alias'] || $front_url == $path_array['source']) {
           $default_value[] = $key;
         }
       }
-      asort($options_dyn);
-      $options += $options_dyn;
+      $options = array_merge($options, $options_dyn);
+      // If we didn't found any default value to this node, we set the 'none'.
       if (empty($default_value)) {
         $default_value[] = 'none';
       }
@@ -433,10 +535,13 @@ function parade_form_node_form_alter(&$form, FormState $form_state, $form_id) {
         '#access'            => TRUE,
       ];
 
-      // Set a custom submit function
-      $form['actions']['submit']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
-      $form['actions']['publish']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
-      $form['actions']['unpublish']['#submit'][] = 'parade_domain_front_page_form_submit_handler';
+      // Set a custom submit function.
+      foreach ($form['actions'] as $key => $element) {
+        // Redirect submit handlers, but not the preview button.
+        if ($key != 'preview' && isset($element['#type']) && $element['#type'] == 'submit') {
+          $form['actions'][$key]['#submit'][] = 'parade_domain_front_page_form_submit_handler';
+        }
+      }
 
       // Add library.
       $form['#attached']['library'][] = 'parade/domain.front-page';
@@ -450,18 +555,27 @@ function parade_form_node_form_alter(&$form, FormState $form_state, $form_id) {
  * This sets front page values.
  */
 function parade_domain_front_page_form_submit_handler($form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  if($form_state->hasValue('domains_front_page')) {
+  // If domain front page checkbox values was sent.
+  if ($form_state->hasValue('domains_front_page')) {
     $domains = $form_state->getValue('domains_front_page');
     $path_array = reset($form_state->getValue('path'));
     $path = $path_array['alias'] ? $path_array['alias'] : $path_array['source'];
 
+    // If none is selected, we delete all those front page settings, where this
+    // node is the front page.
     if (!empty($domains['none'])) {
       parade_delete_all_domain_front_page($path_array);
     }
+    // If not none is selected.
     else {
+      // Here isn't needed the none value, so delete it.
       unset($domains['none']);
+
+      // Go throw the domains and set the config files.
       $config_factory = \Drupal::configFactory();
       foreach ($domains as $key => $value) {
+        // If the value is 0 (or empty) we need to set to the default page
+        // (original front page), if this node is set to this domain.
         if (empty($value)) {
           $conf_path = $config_factory->get('domain.config.' . $key . '.system.site')
             ->get('page.front');
@@ -471,6 +585,7 @@ function parade_domain_front_page_form_submit_handler($form, \Drupal\Core\Form\F
               ->save();
           }
         }
+        // If the value is not empty, we set the new front page.
         else {
           $config_factory->getEditable('domain.config.' . $key . '.system.site')
             ->set('page.front', $path)
@@ -484,6 +599,9 @@ function parade_domain_front_page_form_submit_handler($form, \Drupal\Core\Form\F
 /**
  * Delete all domains' front pages.
  *
+ * Delete all domains' front page where the current node is set as the front
+ * page.
+ *
  * @param $path_array
  *   A path array with an alias and a source key.
  *
@@ -491,11 +609,13 @@ function parade_domain_front_page_form_submit_handler($form, \Drupal\Core\Form\F
  *   Domain.
  */
 function parade_delete_all_domain_front_page($path_array) {
+  /* @var Drupal\domain\Entity\Domain[] $domains */
   $domains = \Drupal::service('domain.loader')->loadMultiple();
 
   $config_factory = \Drupal::configFactory();
   foreach (array_keys($domains) as $domain_id) {
-    $conf_path = $config_factory->get('domain.config.' . $domain_id . '.system.site')->get('page.front');
+    $conf_path = $config_factory->get('domain.config.' . $domain_id . '.system.site')
+      ->get('page.front');
     if ($conf_path == $path_array['alias'] || $conf_path == $path_array['source']) {
       $config_factory->getEditable('domain.config.' . $domain_id . '.system.site')
         ->set('page.front', '/')
@@ -511,14 +631,21 @@ function parade_delete_all_domain_front_page($path_array) {
  *
  * @use
  *   Domain.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $node
+ *   It will delete those front page links, which is connects to this node.
  */
 function parade_node_delete(EntityInterface $node) {
+  /* @var Drupal\domain\Entity\Domain[] $domains */
   $domains = \Drupal::service('domain.loader')->loadMultiple();
-  $path_array = ['alias' => $node->toUrl()->toString(), 'source' => '/node/'.$node->id()];
+  $path_array = ['alias'  => $node->toUrl()->toString(),
+                 'source' => '/node/' . $node->id()
+  ];
 
   $config_factory = \Drupal::configFactory();
   foreach (array_keys($domains) as $domain_id) {
-    $conf_path = $config_factory->get('domain.config.' . $domain_id . '.system.site')->get('page.front');
+    $conf_path = $config_factory->get('domain.config.' . $domain_id . '.system.site')
+      ->get('page.front');
     if ($conf_path == $path_array['alias'] || $conf_path == $path_array['source']) {
       $config_factory->getEditable('domain.config.' . $domain_id . '.system.site')
         ->set('page.front', '/')
