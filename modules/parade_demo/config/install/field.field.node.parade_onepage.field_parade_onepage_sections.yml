@@ -25,6 +25,7 @@ settings:
       text_boxes: text_boxes
       images: images
       locations: locations
+      parallax: parallax
       marketo_form: marketo_form
       marketo_poll: marketo_poll
 field_type: entity_reference_revisions
