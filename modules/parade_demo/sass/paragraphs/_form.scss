@@ -104,3 +104,87 @@
         }
 	}
 }
+
+/**
+ * Menu on edit page.
+ */
+.node-parade-onepage-form,
+.node-parade-onepage-edit-form {
+  .field--name-field-parade-onepage-menu {
+    background-color: #bed7eb;
+    padding: 20px 40px;
+    .field-multiple-table {
+      th {
+        background-color: transparent;
+        border-bottom: none;
+        border-top: none;
+      }
+
+      tr {
+        border-bottom: none;
+
+        td {
+          div {
+            &.js-form-type-entity-autocomplete {
+              float: left;
+              width: 38%;
+            }
+
+            &.js-form-type-textfield {
+              float: left;
+              width: 38%;
+            }
+
+            &.js-form-type-checkbox {
+              float: left;
+            }
+
+            &:nth-child(2) {
+              margin: 0 10px;
+            }
+          }
+
+          input.form-checkbox {
+            margin-top: 3px;
+            vertical-align: middle;
+          }
+
+          label {
+            vertical-align: middle;
+          }
+        }
+
+        &.even {
+          background-color: transparent;
+
+          &.drag,
+          &.drag-previous {
+            background-color: #f3f3f3;
+          }
+        }
+
+        &:hover {
+          background-color: #f7fcff;
+        }
+      }
+    }
+
+    .field-add-more-submit {
+      background: #337ab7;
+      text-transform: uppercase;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      width: 159px;
+      height: 39px;
+      font-size: 12px;
+
+      &:hover,
+      &:active {
+        background: #337ab7;
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
