@@ -45,14 +45,32 @@ Use this patch: https://www.drupal.org/files/issues/missing-schema-2858115-2.pat
 
 @todo
 
-### MULTIDOMAIN SETTINGS
+### MULTIDOMAIN SETTINGS (opcional)
 
-Benefits: You will be able to set front page per domain.
+You need to use domain module to set these settings, however if you don't need multidomain
+settings you don't need to install domain module. If you install domain module we detect this
+and some optional settings will be appear.
 
-You can use domain module with parade, however it can work without it. If you want to use,
-you need to install it separatly the domain domain_access and domain_config, than make sure 
-at /admin/config/domain/domain_access the "Move Domain Access fields to advanced node settings." 
-is chacked. You will find the front page settings at the node edit pages right under "DOMAIN SETTINGS".
+Benefits: 
+- You will be able to set front page per domain from UI.
+- You will be able to set GA account per domain from UI.
+
+#### Front page per domain
+If you want to use this, you need to install the domain, domain_access and domain_config
+modules, than make sure at /admin/config/domain/domain_access the "Move Domain Access fields
+to advanced node settings." is chacked. You will find the front page settings at the node 
+edit pages right under "DOMAIN SETTINGS".
+
+#### GA account per domain
+To use this, you need to install the domain, domain_config and google_analytics modules. 
+After you did it, go to /admin/config/system/google-analytics page and you will find a new 
+settings tab called "DOMAIN SPECIFIC SETTINGS". Under this tab, you will be able to:
+- turn off GA for a specific domain (empty text field, unchecked "Use value from General 
+settings" checkbox)
+- overwrite GA account ID for a specific domain (filled text field, unchecked "Use value 
+from General settings" checkbox)
+- let it use the default value (from General Settings tab (empty text field, checked "Use 
+value from General settings" checkbox)) - when you install the module this is the default.
 
 ## ISSUES
 
