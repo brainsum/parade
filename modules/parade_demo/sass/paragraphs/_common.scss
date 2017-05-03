@@ -205,12 +205,28 @@
     border: 1px solid transparent;
     padding: 0.25rem 1rem;
     font-size: 1rem;
-    border-radius: 2px !important;
+    border-radius: 2px;
     transition: all 0.2s ease-in-out;
     color: #5e5e5e;
     background-color: #eeeeee;
     border-color: #999999;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+
+    // Overwrite seven theme stuff.
+    &.button--danger {
+      text-decoration: none;
+      background-image: linear-gradient(to bottom, #f6f6f3, #e7e7df);
+
+      &:hover,
+      &:focus,
+      &:active {
+        padding: 0.25rem 1rem;
+        border: 1px solid #595959;
+        box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.125);
+        background-color: #c3c3c3;
+        color: #5e5e5e;
+      }
+    }
   }
   .button:focus,
   .button:active:focus {
@@ -435,4 +451,29 @@
   }
 }
 
-.paragraphs-dropbutton-wrapper {}
+.field--type-entity-reference-revisions .field--name-field-paragraphs {
+  .paragraph-type-top .paragraphs-dropbutton-wrapper {
+    margin-top: 0;
+
+    .button.form-submit {
+      background-color: grey;
+      background-image: none;
+      color: white;
+      border: 1px solid #c6c6c6;
+      box-shadow: none;
+      border-radius: 2px;
+      text-shadow: none;
+      display: inline-block;
+      margin-left: 1em;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+
+      &.preview .button {
+        background-color: #bfbfbf;
+      }
+    }
+  }
+}

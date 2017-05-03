@@ -4,3 +4,19 @@
  * @file
  * Installation file for Parade.
  */
+
+/**
+ * Changes name of 'Text and Image' to 'Text & Image'.
+ */
+function parade_update_8101() {
+  $config_factory = \Drupal::configFactory();
+  $label = $config_factory->get('paragraphs.paragraphs_type.image_text')
+    ->get('label');
+
+  // Check if the site's owner doesn't renamed it by itself.
+  if ($label === "Text and Image") {
+    $config_factory->getEditable('paragraphs.paragraphs_type.image_text')
+      ->set('label', 'Text & Image')
+      ->save();
+  }
+}
