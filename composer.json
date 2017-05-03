@@ -13,6 +13,7 @@
     "drupal/geocoder_autocomplete": "~1.0",
     "drupal/imageapi_optimize": "~2.0",
     "drupal/imagemagick": "~1.0",
-    "drupal/classy_paragraphs": "~1.0"
+    "drupal/classy_paragraphs": "~1.0",
+    "drupal/view_mode_selector": "~1.0"
   }
 }

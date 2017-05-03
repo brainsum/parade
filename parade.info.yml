@@ -19,3 +19,5 @@ dependencies:
   - link
   - options
   - classy_paragraphs
+  - view_mode_selector
+
