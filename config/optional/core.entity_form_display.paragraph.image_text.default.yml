@@ -6,22 +6,23 @@ dependencies:
     - field.field.paragraph.image_text.field_call_to_action
     - field.field.paragraph.image_text.field_color_scheme
     - field.field.paragraph.image_text.field_image
-    - field.field.paragraph.image_text.field_image_text_layout
     - field.field.paragraph.image_text.field_text
     - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.parade_view_mode
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_text
   module:
     - image
     - link
     - text
+    - view_mode_selector
 id: paragraph.image_text.default
 targetEntityType: paragraph
 bundle: image_text
 mode: default
 content:
   field_anchor:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -38,7 +39,7 @@ content:
     region: content
   field_color_scheme:
     type: entity_reference_autocomplete
-    weight: 0
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -52,12 +53,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_image_text_layout:
-    type: options_select
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
     region: content
   field_text:
     weight: 5
@@ -74,6 +69,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  parade_view_mode:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: view_mode_selector_radios
     region: content
   translation:
     weight: 6

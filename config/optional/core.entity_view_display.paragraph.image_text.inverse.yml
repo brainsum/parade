@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.inverse
     - field.field.paragraph.image_text.field_anchor
     - field.field.paragraph.image_text.field_call_to_action
     - field.field.paragraph.image_text.field_color_scheme
@@ -14,10 +15,10 @@ dependencies:
     - image
     - link
     - text
-id: paragraph.image_text.default
+id: paragraph.image_text.inverse
 targetEntityType: paragraph
 bundle: image_text
-mode: default
+mode: inverse
 content:
   field_call_to_action:
     weight: 3
@@ -32,7 +33,7 @@ content:
     type: link
     region: content
   field_image:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       image_style: ''
@@ -41,7 +42,7 @@ content:
     type: image
     region: content
   field_text:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
