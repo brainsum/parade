@@ -5,6 +5,7 @@ type: module
 core: 8.x
 
 dependencies:
+  - view_mode_selector
   - paragraphs
   - machine_name
   - image
@@ -19,5 +20,3 @@ dependencies:
   - link
   - options
   - classy_paragraphs
-  - view_mode_selector
-

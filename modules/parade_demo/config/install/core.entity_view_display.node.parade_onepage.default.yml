@@ -6,13 +6,13 @@ dependencies:
     - field.field.node.parade_onepage.field_parade_onepage_menu
     - field.field.node.parade_onepage.field_parade_onepage_sections
     - node.type.parade_onepage
+  enforced:
+    module:
+      - parade_demo
   module:
     - entity_reference_revisions
     - link
     - user
-  enforced:
-    module:
-      - parade_demo
 id: node.parade_onepage.default
 targetEntityType: node
 bundle: parade_onepage
@@ -29,6 +29,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
   field_parade_onepage_sections:
     weight: 1
     label: hidden
@@ -37,7 +38,7 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
 hidden:
   field_parade_onepage_id: true
-  langcode: true
   links: true

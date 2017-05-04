@@ -1,22 +1,31 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.preview
+    - core.entity_view_mode.paragraph.custom
     - field.field.paragraph.simple.field_anchor
     - field.field.paragraph.simple.field_color_scheme
     - field.field.paragraph.simple.field_text
     - field.field.paragraph.simple.field_title
     - field.field.paragraph.simple.parade_view_mode
     - paragraphs.paragraphs_type.simple
-id: paragraph.simple.preview
+  module:
+    - text
+id: paragraph.simple.custom
 targetEntityType: paragraph
 bundle: simple
-mode: preview
+mode: custom
 content:
-  field_title:
+  field_text:
     weight: 0
-    label: inline
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -26,6 +35,5 @@ hidden:
   created: true
   field_anchor: true
   field_color_scheme: true
-  field_text: true
   parade_view_mode: true
   uid: true
