@@ -1,4 +1,3 @@
-uuid: 51681806-e48f-4ed0-b4cc-057da315cbec
 langcode: en
 status: true
 dependencies:
@@ -22,7 +21,11 @@ default_value_callback: ''
 settings:
   view_modes:
     default:
-      enable: 0
+      enable: 1
+      hide_title: 0
+      icon: {  }
+    custom:
+      enable: 1
       hide_title: 0
       icon: {  }
     preview:
