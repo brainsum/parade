@@ -35,30 +35,6 @@ function parade_preprocess_paragraph(&$variables) {
     $variables['attributes']['id'] = Html::getId($anchor);
   }
 
-  // Pass the Layout field values to each corresponding Paragraph.
-  // @todo Refactor!
-  $layouts = [
-    'field_text_box_layout' => [
-      0 => 'normal',
-      1 => 'blue',
-      2 => 'red',
-      3 => 'orange',
-      4 => 'green',
-    ],
-  ];
-
-  // Set CSS class for the selected layout.
-  foreach ($layouts as $field => $classes) {
-    if ($paragraph->hasField($field)) {
-      if ($paragraph->{$field}->value === NULL) {
-        $variables['attributes']['class'][] = 'layout--none';
-      }
-      elseif (isset($classes[$paragraph->{$field}->value])) {
-        $variables['attributes']['class'][] = 'layout--' . $classes[$paragraph->{$field}->value];
-      }
-    }
-  }
-
   // Parallax and background stuff for Header and Parallax types.
   if (
     $paragraph->hasField('field_background') &&

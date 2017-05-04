@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.custom
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
     - field.field.paragraph.text_boxes.field_color_scheme
@@ -10,18 +11,18 @@ dependencies:
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
-    - entity_reference_revisions:
-id: paragraph.text_boxes.default
+    - entity_reference_revisions
+id: paragraph.text_boxes.custom
 targetEntityType: paragraph
 bundle: text_boxes
-mode: default
+mode: custom
 content:
   field_paragraphs:
     type: entity_reference_revisions_entity_view
     weight: 1
     label: hidden
     settings:
-      view_mode: default
+      view_mode: custom
       link: ''
     third_party_settings: {  }
     region: content
