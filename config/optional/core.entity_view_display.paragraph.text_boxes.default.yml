@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
+    - field.field.paragraph.text_boxes.field_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
-    - field.field.paragraph.text_boxes.field_text_boxes_layout
     - field.field.paragraph.text_boxes.field_title
     - paragraphs.paragraphs_type.text_boxes
   module:
@@ -23,6 +23,7 @@ content:
       view_mode: default_custom
       link: false
     third_party_settings: {  }
+    region: content
   field_title:
     type: string
     weight: 0
@@ -30,9 +31,10 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   field_anchor: true
   field_boxes_per_row: true
-  field_text_boxes_layout: true
+  field_color_scheme: true
   uid: true
