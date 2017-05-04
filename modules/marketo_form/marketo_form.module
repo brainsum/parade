@@ -40,30 +40,6 @@ function marketo_form_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- *
- * Add layout--[LAYOUT] as class to paragraphs.
- */
-function marketo_form_preprocess_paragraph__marketo_form(&$variables) {
-  /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
-  $paragraph = &$variables['paragraph'];
-
-  // Define layout CSS classes.
-  $classes = [
-    0 => 'clean',
-    1 => 'download',
-  ];
-
-  // Set CSS class for the selected layout.
-  if ($paragraph->hasField('field_marketo_form_layout')) {
-    $layout_id = $paragraph->field_marketo_form_layout->value;
-    if (isset($layout_id)) {
-      $variables['attributes']['class'][] = 'layout--' . $classes[$layout_id];
-    }
-  }
-}
-
-/**
  * Implements hook_preprocess_field__field_marketo_form().
  */
 function marketo_form_preprocess_field__field_marketo_form(&$variables) {

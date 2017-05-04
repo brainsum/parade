@@ -8,13 +8,9 @@ dependencies:
     - field.field.paragraph.marketo_form.field_image
     - field.field.paragraph.marketo_form.field_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
-    - field.field.paragraph.marketo_form.field_marketo_form_layout
     - field.field.paragraph.marketo_form.field_text
     - field.field.paragraph.marketo_form.field_title
     - paragraphs.paragraphs_type.marketo_form
-  module:
-    - options
-    - marketo_form
   enforced:
     module:
       - marketo_form
@@ -30,12 +26,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_marketo_form_layout:
-    type: list_default
-    weight: 1
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
+    region: content
   field_title:
     weight: 0
     label: inline
@@ -43,6 +34,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   field_enable_confirm_message: true
