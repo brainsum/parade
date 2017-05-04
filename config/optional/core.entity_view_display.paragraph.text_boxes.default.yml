@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
-    - entity_reference_revisions:
+    - entity_reference_revisions
 id: paragraph.text_boxes.default
 targetEntityType: paragraph
 bundle: text_boxes
