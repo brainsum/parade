@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.field.paragraph.parallax.field_anchor
     - field.field.paragraph.parallax.field_background
-    - field.field.paragraph.parallax.field_color_scheme
     - field.field.paragraph.parallax.field_enable_parallax
     - field.field.paragraph.parallax.field_image
     - field.field.paragraph.parallax.field_minimum_height
     - field.field.paragraph.parallax.field_text
+    - field.field.paragraph.parallax.parade_classes
     - paragraphs.paragraphs_type.parallax
   module:
     - file
@@ -19,7 +19,7 @@ bundle: parallax
 mode: default
 content:
   field_anchor:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -32,15 +32,6 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
-    region: content
-  field_color_scheme:
-    weight: 0
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_enable_parallax:
     weight: 4
@@ -63,6 +54,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  parade_classes:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
     region: content
 hidden:
   created: true
