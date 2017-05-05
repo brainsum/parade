@@ -2,4 +2,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: image_text
-label: 'Text & Image'
+label: 'Text & image'

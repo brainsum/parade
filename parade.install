@@ -6,7 +6,7 @@
  */
 
 /**
- * Changes name of 'Text and Image' to 'Text & Image'.
+ * Changes name of 'Text and Image' to 'Text & image'.
  */
 function parade_update_8101() {
   $config_factory = \Drupal::configFactory();
@@ -16,7 +16,7 @@ function parade_update_8101() {
   // Check if the site's owner doesn't renamed it by itself.
   if ($label === "Text and Image") {
     $config_factory->getEditable('paragraphs.paragraphs_type.image_text')
-      ->set('label', 'Text & Image')
+      ->set('label', 'Text & image')
       ->save();
   }
 }
