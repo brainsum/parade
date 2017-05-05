@@ -8,7 +8,7 @@ id: paragraph.parallax.field_minimum_height
 field_name: field_minimum_height
 entity_type: paragraph
 bundle: parallax
-label: 'Minimum Height'
+label: 'Minimum height'
 description: 'If you wish to use a background image only, you must provide this value (in pixels) to ensure the correct display of the image.'
 required: false
 translatable: false

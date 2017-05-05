@@ -282,7 +282,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage fields');
 
-    $expected_labels = ['Anchor', 'Background', 'Background', 'Enable parallax', 'Minimum Height', 'Text'];
+    $expected_labels = ['Anchor', 'Background', 'Background', 'Enable parallax', 'Minimum height', 'Text'];
     $expected_machine_names = ['field_anchor', 'field_background', 'field_image', 'field_enable_parallax', 'field_minimum_height', 'field_text'];
     $expected_types = ['Text (plain)', 'File', 'Image', 'Boolean', 'Number (integer)', 'Text (formatted, long)'];
 
@@ -295,7 +295,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
 
-    $expected_fields = ['Text', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Background', 'Enable parallax', 'Background', 'Minimum Height'];
+    $expected_fields = ['Text', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Background', 'Enable parallax', 'Background', 'Minimum height'];
     $expected_labels = ['- Hidden -', /*'Above', 'Above',*/ 'Above', 'Above', 'Above', 'Above', 'Above'];
     $expected_formats = ['Default', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -'];
     
