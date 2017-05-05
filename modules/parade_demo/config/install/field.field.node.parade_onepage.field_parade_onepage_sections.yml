@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_parade_onepage_sections
     - node.type.parade_onepage
+  module:
+    - entity_reference_revisions
 id: node.parade_onepage.field_parade_onepage_sections
 field_name: field_parade_onepage_sections
 entity_type: node
@@ -17,15 +19,39 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      header: header
-      simple: simple
-      image_text: image_text
-      text_box: text_box
-      text_boxes: text_boxes
-      images: images
-      locations: locations
-      parallax: parallax
-      marketo_form: marketo_form
-      marketo_poll: marketo_poll
+    target_bundles: null
+    target_bundles_drag_drop:
+      header:
+        weight: 12
+        enabled: false
+      images:
+        weight: 13
+        enabled: false
+      image_text:
+        weight: 14
+        enabled: false
+      locations:
+        weight: 15
+        enabled: false
+      marketo_form:
+        weight: 16
+        enabled: false
+      marketo_poll:
+        weight: 17
+        enabled: false
+      parallax:
+        weight: 18
+        enabled: false
+      simple:
+        weight: 19
+        enabled: false
+      social_links:
+        weight: 20
+        enabled: false
+      text_box:
+        weight: 21
+        enabled: false
+      text_boxes:
+        weight: 22
+        enabled: false
 field_type: entity_reference_revisions
