@@ -9,7 +9,7 @@ use Drupal\node\Entity\NodeType;
 use Drupal\block\Entity\Block;
 
 /**
- * Tests the Parade Onepage content type created by parade_demo.
+ * Tests the Parade onepage content type created by parade_demo.
  *
  * @group parade
  */
@@ -30,7 +30,7 @@ class ParadeDemoParadeTest extends BrowserTestBase {
 
     $this->drupalPlaceBlock('local_actions_block');
 
-    // Create a user with permissions to manage the Parade Onepage content type.
+    // Create a user with permissions to manage the Parade onepage content type.
     $permissions = array(
       'administer parade settings',
       'administer site configuration',
@@ -120,17 +120,17 @@ class ParadeDemoParadeTest extends BrowserTestBase {
   }
 
   /**
-   * Tests the Parade Onepage content type.
+   * Tests the Parade onepage content type.
    */
   public function testParadeOnepage() {
     $this->drupalGet('admin/structure/types');
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Content types');
 
-    $this->assertText('Parade Onepage', "The Parade Onepage content type exists.");
+    $this->assertText('Parade onepage', "The Parade onepage content type exists.");
     $this->assertText('Add content type', "Add content type exists.");
     
-    // Tests that the Parade Onepage content type is configured corectly - Fields.
+    // Tests that the Parade onepage content type is configured corectly - Fields.
     $this->drupalGet('admin/structure/types/manage/parade_onepage/fields');
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage fields');
@@ -143,7 +143,7 @@ class ParadeDemoParadeTest extends BrowserTestBase {
     $this->FieldMachineNames($expected_machine_names);
     $this->FieldTypes($expected_types);
 
-    // Tests that the Parade Onepage content type is configured corectly - Manage display.
+    // Tests that the Parade onepage content type is configured corectly - Manage display.
     $this->drupalGet('admin/structure/types/manage/parade_onepage/display');
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
@@ -162,7 +162,7 @@ class ParadeDemoParadeTest extends BrowserTestBase {
   }
 
 //   /**
-//    * Tests creating content with Parade Onepage content type.
+//    * Tests creating content with Parade onepage content type.
 //    */
 //   public function testCreateContentParadeOnepage() {
 //     $this->drupalGet('admin/content');
@@ -177,13 +177,13 @@ class ParadeDemoParadeTest extends BrowserTestBase {
 //     // $this->assertUrl('node/add');
 //     // $this->assertSession()->statusCodeEquals(200);
 //     // $this->assertSession()->pageTextContains('Add content');
-//     // $this->assertText('Parade Onepage', "The Parade Onepage content type exists.");
-//     // $this->clickLink('Parade Onepage');
+//     // $this->assertText('Parade onepage', "The Parade onepage content type exists.");
+//     // $this->clickLink('Parade onepage');
 
-//     // // Check if we got redirected to the add Parade Onepage content page.
+//     // // Check if we got redirected to the add Parade onepage content page.
 //     // $this->assertUrl('node/add/parade_onepage');
 //     // $this->assertSession()->statusCodeEquals(200);
-//     // $this->assertSession()->pageTextContains('Create Parade Onepage');
+//     // $this->assertSession()->pageTextContains('Create Parade onepage');
 
 
 //     //////     //div[@class='paragraphs-dropbutton-wrapper']/input/@name
