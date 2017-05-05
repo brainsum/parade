@@ -4,10 +4,10 @@ dependencies:
   config:
     - field.field.paragraph.image_text.field_anchor
     - field.field.paragraph.image_text.field_call_to_action
-    - field.field.paragraph.image_text.field_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
     - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.parade_classes
     - field.field.paragraph.image_text.parade_view_mode
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_text
@@ -37,15 +37,6 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_color_scheme:
-    type: entity_reference_autocomplete
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_image:
     weight: 4
     settings:
@@ -69,6 +60,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  parade_classes:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
     region: content
   parade_view_mode:
     weight: 1
