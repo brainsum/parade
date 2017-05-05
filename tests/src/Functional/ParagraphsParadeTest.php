@@ -240,7 +240,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage fields');
 
-    $expected_labels = ['Anchor', 'Color scheme', 'Geofield', 'Map Markers', 'Text', 'Title'];
+    $expected_labels = ['Anchor', 'Color scheme', 'Geofield', 'Map markers', 'Text', 'Title'];
     $expected_machine_names = ['field_anchor', 'field_color_scheme', 'field_geofield', 'field_location', 'field_text', 'field_title'];
     $expected_types = ['Text (plain)', 'Entity reference', 'Geofield', 'Text (plain)', 'Text (formatted, long)', 'Text (plain)'];
 
@@ -253,7 +253,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
 
-    $expected_fields = ['Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Color scheme', 'Geofield', 'Map Markers', 'Text', 'Title'];
+    $expected_fields = ['Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Color scheme', 'Geofield', 'Map markers', 'Text', 'Title'];
     $expected_labels = [/*'Above', 'Above',*/ 'Above', 'Above', 'Above', 'Above', 'Above', 'Above'];
     $expected_formats = [/*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -'];
     
@@ -266,7 +266,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
 
-    $expected_fields = ['Title', 'Anchor', 'Disabled', /*'Authored by', 'Authored on',*/ 'Color scheme', 'Geofield', 'Map Markers', 'Text'];
+    $expected_fields = ['Title', 'Anchor', 'Disabled', /*'Authored by', 'Authored on',*/ 'Color scheme', 'Geofield', 'Map markers', 'Text'];
     $expected_labels = ['Inline', 'Inline', /*'Above', 'Above',*/ 'Above', 'Above', 'Above', 'Above'];
     $expected_formats = ['Plain text', 'Plain text', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -'];
     $expected_settings_button_names = [' name="field_title_settings_edit"', ' name="field_anchor_settings_edit"'];
