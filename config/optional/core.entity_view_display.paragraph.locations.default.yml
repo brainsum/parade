@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.locations.field_location
     - field.field.paragraph.locations.field_text
     - field.field.paragraph.locations.field_title
+    - field.field.paragraph.locations.parade_classes
     - paragraphs.paragraphs_type.locations
   module:
     - aggregated_leaflet_map
@@ -43,14 +44,18 @@ content:
           'y': '0'
       minPossibleZoom: 0
       maxPossibleZoom: 18
+      source_field: ''
+      auto_zoom: false
     third_party_settings: {  }
     type: leaflet_formatter_aggregated
+    region: content
   field_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_title:
     weight: 0
     label: hidden
@@ -58,8 +63,10 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   field_anchor: true
   field_location: true
+  parade_classes: true
   uid: true
