@@ -11,9 +11,9 @@ use Drupal\Core\TypedData\DataDefinition;
  *
  * @FieldType(
  *   id = "marketo_poll",
- *   label = @Translation("Marketo Poll"),
+ *   label = @Translation("Marketo poll"),
  *   module = "marketo_poll",
- *   description = @Translation("Marketo Poll integration."),
+ *   description = @Translation("Marketo poll integration."),
  *   default_widget = "marketo_poll",
  *   default_formatter = "marketo_poll"
  * )

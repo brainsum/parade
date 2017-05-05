@@ -1,4 +1,4 @@
-name: Marketo Poll
+name: Marketo poll
 type: module
 description: Define marketo.com poll field
 core: 8.x

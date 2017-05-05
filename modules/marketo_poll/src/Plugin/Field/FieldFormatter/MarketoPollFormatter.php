@@ -10,7 +10,7 @@ use Drupal\Core\Field\FieldItemListInterface;
  *
  * @FieldFormatter(
  *   id = "marketo_poll",
- *   label = @Translation("Marketo Poll"),
+ *   label = @Translation("Marketo poll"),
  *   field_types = {
  *     "marketo_poll"
  *   }

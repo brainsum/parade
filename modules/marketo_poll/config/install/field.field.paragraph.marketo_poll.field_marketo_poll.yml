@@ -13,7 +13,7 @@ id: paragraph.marketo_poll.field_marketo_poll
 field_name: field_marketo_poll
 entity_type: paragraph
 bundle: marketo_poll
-label: 'Marketo Poll'
+label: 'Marketo poll'
 description: ''
 required: true
 translatable: false
