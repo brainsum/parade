@@ -10,7 +10,7 @@ id: paragraph.social_links.field_social_link
 field_name: field_social_link
 entity_type: paragraph
 bundle: social_links
-label: 'Social Links'
+label: 'Social links'
 description: 'List any number of social media links here.'
 required: false
 translatable: false
