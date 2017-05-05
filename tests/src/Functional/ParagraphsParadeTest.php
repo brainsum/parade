@@ -146,7 +146,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage fields');
 
-    $expected_labels = ['Anchor', 'Background', 'Call to Action', 'Classes', 'Enable Parallax', 'Lead text', 'Secondary title', 'Title'];
+    $expected_labels = ['Anchor', 'Background', 'Call to action', 'Classes', 'Enable Parallax', 'Lead text', 'Secondary title', 'Title'];
     $expected_machine_names = ['field_anchor', 'field_background', 'field_call_to_action', 'parade_classes', 'field_enable_parallax', 'field_lead_text', 'field_secondary_title', 'field_title'];
     $expected_types = ['Text (plain)', 'File', 'Link', 'Entity reference', 'Boolean', 'Text (plain, long)', 'Text (plain)', 'Text (plain)'];
 
@@ -161,7 +161,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
 
     $this->assertText('Lead text', "Authored by exists.");
 
-    $expected_fields = ['Title', 'Secondary title', 'Lead text', 'Call to Action', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Background', 'Color scheme', 'Enable Parallax'];
+    $expected_fields = ['Title', 'Secondary title', 'Lead text', 'Call to action', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Background', 'Color scheme', 'Enable Parallax'];
     $expected_labels = ['- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', /*'Above', 'Above',*/ 'Above', 'Above', 'Above', 'Above'];
     $expected_formats = ['Plain text', 'Plain text', 'Plain text', 'Link', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -'];
     $expected_plugin_summarys = ['Link text trimmed to 80 characters', 'Add rel="nofollow"'];
@@ -178,7 +178,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
 
-    $expected_fields = ['Title', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Background', 'Call to Action', 'Color scheme', 'Enable Parallax', 'Lead text', 'Secondary title'];
+    $expected_fields = ['Title', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Background', 'Call to action', 'Color scheme', 'Enable Parallax', 'Lead text', 'Secondary title'];
     $expected_labels = ['Inline', /*'Above', 'Above',*/ 'Above', 'Above', 'Above', 'Above', 'Above', 'Above', 'Above'];
     $expected_formats = ['Plain text', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -'];
     $expected_settings_button_names = [' name="field_title_settings_edit"'];
@@ -353,7 +353,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage fields');
 
-    $expected_labels = ['Anchor', 'Call to Action', 'Color scheme', 'Image', 'Layout', 'Text', 'Title'];
+    $expected_labels = ['Anchor', 'Call to action', 'Color scheme', 'Image', 'Layout', 'Text', 'Title'];
     $expected_machine_names = ['field_anchor', 'field_call_to_action', 'field_color_scheme', 'field_image', 'field_image_text_layout', 'field_text', 'field_title'];
     $expected_types = ['Text (plain)', 'Link', 'Entity reference', 'Image', 'List (integer)', 'Text (formatted, long)', 'Text (plain)'];
 
@@ -366,7 +366,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
 
-    $expected_fields = ['Title', 'Image', 'Text', 'Call to Action', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Color scheme', 'Layout'];
+    $expected_fields = ['Title', 'Image', 'Text', 'Call to action', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Color scheme', 'Layout'];
     $expected_labels = ['- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', /*'Above', 'Above',*/ 'Above', 'Above', 'Above'];
     $expected_formats = ['Plain text', 'Image', 'Default', 'Link', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -'];
     $expected_plugin_summarys = ['Original image', 'Link text trimmed to 80 characters', 'Add rel="nofollow"'];
@@ -383,7 +383,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage display');
 
-    $expected_fields = ['Title', 'Layout', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Call to Action', 'Color scheme', 'Image', 'Text'];
+    $expected_fields = ['Title', 'Layout', 'Disabled', /*'Authored by', 'Authored on',*/ 'Anchor', 'Call to action', 'Color scheme', 'Image', 'Text'];
     $expected_labels = ['Inline', 'Inline', /*'Above', 'Above',*/ 'Above', 'Above', 'Above', 'Above', 'Above'];
     $expected_formats = ['Plain text', 'Default', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -'];
     $expected_settings_button_names = [' name="field_title_settings_edit"'];

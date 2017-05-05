@@ -6,7 +6,7 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;
 
 /**
- * Custom field formatter for Call to Action links.
+ * Custom field formatter for Call to action links.
  *
  * It adds `target="_blank"` and `rel="noreferrer noopener"` to links.
  * The latter is needed because of a security flaw.
