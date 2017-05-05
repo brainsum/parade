@@ -1,0 +1,23 @@
+uuid: d04887c0-4ac7-4628-8f21-dd1584e3fe1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.parade_classes
+    - paragraphs.paragraphs_type.simple
+id: paragraph.simple.parade_classes
+field_name: parade_classes
+entity_type: paragraph
+bundle: simple
+label: Classes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:classy_paragraphs_style'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference
