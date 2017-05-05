@@ -5,10 +5,11 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.image_text.field_anchor
     - field.field.paragraph.image_text.field_call_to_action
-    - field.field.paragraph.image_text.field_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
     - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.parade_classes
+    - field.field.paragraph.image_text.parade_view_mode
     - paragraphs.paragraphs_type.image_text
 id: paragraph.image_text.preview
 targetEntityType: paragraph
@@ -27,7 +28,8 @@ hidden:
   created: true
   field_anchor: true
   field_call_to_action: true
-  field_color_scheme: true
   field_image: true
   field_text: true
+  parade_classes: true
+  parade_view_mode: true
   uid: true

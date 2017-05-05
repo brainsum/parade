@@ -11,8 +11,6 @@ dependencies:
     - field.field.paragraph.header.field_secondary_title
     - field.field.paragraph.header.field_title
     - paragraphs.paragraphs_type.header
-  module:
-    - parade
 id: paragraph.header.preview
 targetEntityType: paragraph
 bundle: header
@@ -25,6 +23,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   field_anchor: true

@@ -7,8 +7,6 @@ dependencies:
     - field.field.paragraph.images.field_images
     - field.field.paragraph.images.field_title
     - paragraphs.paragraphs_type.images
-  module:
-    - parade
 id: paragraph.images.preview
 targetEntityType: paragraph
 bundle: images
@@ -21,6 +19,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   field_anchor: true
