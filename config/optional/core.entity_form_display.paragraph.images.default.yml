@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.images.field_anchor
-    - field.field.paragraph.images.field_color_scheme
     - field.field.paragraph.images.field_images
     - field.field.paragraph.images.field_title
+    - field.field.paragraph.images.parade_classes
     - image.style.thumbnail
     - paragraphs.paragraphs_type.images
   module:
@@ -16,22 +16,13 @@ bundle: images
 mode: default
 content:
   field_anchor:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_color_scheme:
-    type: entity_reference_autocomplete
-    weight: 0
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_images:
     weight: 3
     settings:
@@ -47,6 +38,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  parade_classes:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
 hidden:
   created: true
