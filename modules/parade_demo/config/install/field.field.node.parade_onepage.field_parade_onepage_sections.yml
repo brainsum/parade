@@ -17,15 +17,5 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles:
-      header: header
-      simple: simple
-      image_text: image_text
-      text_box: text_box
-      text_boxes: text_boxes
-      images: images
-      locations: locations
-      parallax: parallax
-      marketo_form: marketo_form
-      marketo_poll: marketo_poll
+    target_bundles: null
 field_type: entity_reference_revisions
