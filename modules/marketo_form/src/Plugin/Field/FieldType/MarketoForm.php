@@ -11,9 +11,9 @@ use Drupal\Core\TypedData\DataDefinition;
  *
  * @FieldType(
  *   id = "marketo_form",
- *   label = @Translation("Marketo Form"),
+ *   label = @Translation("Marketo form"),
  *   module = "marketo_form",
- *   description = @Translation("Marketo Form integration."),
+ *   description = @Translation("Marketo form integration."),
  *   default_widget = "marketo_form",
  *   default_formatter = "marketo_form"
  * )

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Defines Marketo Form field type.
+ * Defines Marketo form field type.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;

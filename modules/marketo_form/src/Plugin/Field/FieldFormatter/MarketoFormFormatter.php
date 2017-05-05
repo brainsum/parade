@@ -10,7 +10,7 @@ use Drupal\Core\Field\FieldItemListInterface;
  *
  * @FieldFormatter(
  *   id = "marketo_form",
- *   label = @Translation("Marketo Form"),
+ *   label = @Translation("Marketo form"),
  *   field_types = {
  *     "marketo_form"
  *   }

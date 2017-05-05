@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Defines Marketo Form field type.
+ * Defines Marketo form field type.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -15,7 +15,7 @@ function marketo_form_help($route_name, RouteMatchInterface $route_match) {
     case 'marketo_form.page.link':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>Marketo Form integration</p>';
+      $output .= '<p>Marketo form integration</p>';
       return $output;
   }
 }

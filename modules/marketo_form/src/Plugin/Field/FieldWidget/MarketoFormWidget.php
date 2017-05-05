@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @FieldWidget(
  *   id = "marketo_form",
  *   module = "marketo_form",
- *   label = @Translation("Marketo Form"),
+ *   label = @Translation("Marketo form"),
  *   field_types = {
  *     "marketo_form"
  *   }

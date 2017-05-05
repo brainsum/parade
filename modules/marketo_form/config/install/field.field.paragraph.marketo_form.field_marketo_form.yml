@@ -13,7 +13,7 @@ id: paragraph.marketo_form.field_marketo_form
 field_name: field_marketo_form
 entity_type: paragraph
 bundle: marketo_form
-label: 'Marketo Form'
+label: 'Marketo form'
 description: ''
 required: true
 translatable: true
