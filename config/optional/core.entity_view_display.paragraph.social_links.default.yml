@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.social_links.field_color_scheme
     - field.field.paragraph.social_links.field_social_link
     - field.field.paragraph.social_links.field_title
+    - field.field.paragraph.social_links.parade_classes
     - paragraphs.paragraphs_type.social_links
   module:
     - link
@@ -24,6 +24,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
   field_title:
     weight: 0
     label: hidden
@@ -31,7 +32,8 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
-  field_color_scheme: true
+  parade_classes: true
   uid: true

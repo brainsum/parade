@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.social_links.field_color_scheme
     - field.field.paragraph.social_links.field_social_link
     - field.field.paragraph.social_links.field_title
+    - field.field.paragraph.social_links.parade_classes
     - paragraphs.paragraphs_type.social_links
   module:
     - link
@@ -13,11 +13,6 @@ targetEntityType: paragraph
 bundle: social_links
 mode: default
 content:
-  field_color_scheme:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_social_link:
     weight: 2
     settings:
@@ -25,6 +20,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_title:
     weight: 1
     settings:
@@ -32,6 +28,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  parade_classes:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
 hidden:
   created: true
   status: true
