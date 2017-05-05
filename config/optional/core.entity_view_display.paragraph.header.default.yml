@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.header.field_anchor
     - field.field.paragraph.header.field_background
     - field.field.paragraph.header.field_call_to_action
+    - field.field.paragraph.header.parade_classes
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
     - field.field.paragraph.header.field_secondary_title
@@ -12,7 +13,6 @@ dependencies:
     - paragraphs.paragraphs_type.header
   module:
     - link
-    - parade
 id: paragraph.header.default
 targetEntityType: paragraph
 bundle: header
@@ -29,12 +29,14 @@ content:
       target: '0'
     third_party_settings: {  }
     type: link
+    region: content
   field_lead_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   field_secondary_title:
     weight: 1
     label: hidden
@@ -42,6 +44,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_title:
     weight: 0
     label: hidden
@@ -49,9 +52,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   field_anchor: true
   field_background: true
+  parade_classes: true
   field_enable_parallax: true
   uid: true
