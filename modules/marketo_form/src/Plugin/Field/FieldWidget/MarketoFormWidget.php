@@ -27,7 +27,7 @@ class MarketoFormWidget extends WidgetBase {
     $item = $items[$delta];
     $element['subscription_url'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Subscription Domain'),
+      '#title' => $this->t('Subscription domain'),
       '#description' => $this->t('E.g.: app-e.marketo.com'),
       '#default_value' => $item->subscription_url,
       '#maxlength' => 2048,

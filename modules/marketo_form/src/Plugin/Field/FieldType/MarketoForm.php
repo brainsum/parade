@@ -32,7 +32,7 @@ class MarketoForm extends FieldItemBase {
           'length' => 2048,
         ),
         'munchkin_id' => array(
-          'description' => t('The Munchkin ID.'),
+          'description' => t('The munchkin ID.'),
           'type' => 'varchar',
           'length' => 255,
         ),
