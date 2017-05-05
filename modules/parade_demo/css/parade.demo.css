@@ -2500,6 +2500,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default,
+.paragraph.paragraph--view-mode--inverse,
 .node-parade-onepage-edit-form,
 .node-parade-onepage-form {
   padding: 40px 1em;
@@ -2507,6 +2508,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default:before, .paragraph.paragraph--view-mode--default:after,
+.paragraph.paragraph--view-mode--inverse:before,
+.paragraph.paragraph--view-mode--inverse:after,
 .node-parade-onepage-edit-form:before,
 .node-parade-onepage-edit-form:after,
 .node-parade-onepage-form:before,
@@ -2516,24 +2519,28 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default:after,
+.paragraph.paragraph--view-mode--inverse:after,
 .node-parade-onepage-edit-form:after,
 .node-parade-onepage-form:after {
   clear: both;
 }
 
 .paragraph.paragraph--view-mode--default .field.text-formatted .align-right,
+.paragraph.paragraph--view-mode--inverse .field.text-formatted .align-right,
 .node-parade-onepage-edit-form .field.text-formatted .align-right,
 .node-parade-onepage-form .field.text-formatted .align-right {
   margin-left: 1.5em;
 }
 
 .paragraph.paragraph--view-mode--default .field.text-formatted .align-left,
+.paragraph.paragraph--view-mode--inverse .field.text-formatted .align-left,
 .node-parade-onepage-edit-form .field.text-formatted .align-left,
 .node-parade-onepage-form .field.text-formatted .align-left {
   margin-right: 1.5em;
 }
 
 .paragraph.paragraph--view-mode--default .paragraph-inner,
+.paragraph.paragraph--view-mode--inverse .paragraph-inner,
 .node-parade-onepage-edit-form .paragraph-inner,
 .node-parade-onepage-form .paragraph-inner {
   max-width: 1000px;
@@ -2541,6 +2548,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .field--name-field-call-to-action,
+.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action,
 .node-parade-onepage-edit-form .field--name-field-call-to-action,
 .node-parade-onepage-form .field--name-field-call-to-action {
   text-align: center;
@@ -2548,6 +2556,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button,
+.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button,
 .node-parade-onepage-edit-form .field--name-field-call-to-action .button,
 .node-parade-onepage-form .field--name-field-call-to-action .button {
   padding: .75em 1.4em;
@@ -2555,6 +2564,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:hover, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:active, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:focus,
+.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button:hover,
+.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button:active,
+.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button:focus,
 .node-parade-onepage-edit-form .field--name-field-call-to-action .button:hover,
 .node-parade-onepage-edit-form .field--name-field-call-to-action .button:active,
 .node-parade-onepage-edit-form .field--name-field-call-to-action .button:focus,
@@ -2565,12 +2577,14 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button + .button,
+.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button + .button,
 .node-parade-onepage-edit-form .field--name-field-call-to-action .button + .button,
 .node-parade-onepage-form .field--name-field-call-to-action .button + .button {
   margin-left: 1em;
 }
 
 .paragraph.paragraph--view-mode--default .button,
+.paragraph.paragraph--view-mode--inverse .button,
 .node-parade-onepage-edit-form .button,
 .node-parade-onepage-form .button {
   display: inline-block;
@@ -2597,6 +2611,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button.button--danger,
+.paragraph.paragraph--view-mode--inverse .button.button--danger,
 .node-parade-onepage-edit-form .button.button--danger,
 .node-parade-onepage-form .button.button--danger {
   text-decoration: none;
@@ -2604,6 +2619,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button.button--danger:hover, .paragraph.paragraph--view-mode--default .button.button--danger:focus, .paragraph.paragraph--view-mode--default .button.button--danger:active,
+.paragraph.paragraph--view-mode--inverse .button.button--danger:hover,
+.paragraph.paragraph--view-mode--inverse .button.button--danger:focus,
+.paragraph.paragraph--view-mode--inverse .button.button--danger:active,
 .node-parade-onepage-edit-form .button.button--danger:hover,
 .node-parade-onepage-edit-form .button.button--danger:focus,
 .node-parade-onepage-edit-form .button.button--danger:active,
@@ -2619,6 +2637,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button:focus,
 .paragraph.paragraph--view-mode--default .button:active:focus,
+.paragraph.paragraph--view-mode--inverse .button:focus,
+.paragraph.paragraph--view-mode--inverse .button:active:focus,
 .node-parade-onepage-edit-form .button:focus,
 .node-parade-onepage-edit-form .button:active:focus,
 .node-parade-onepage-form .button:focus,
@@ -2629,6 +2649,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button:focus,
 .paragraph.paragraph--view-mode--default .button:hover,
+.paragraph.paragraph--view-mode--inverse .button:focus,
+.paragraph.paragraph--view-mode--inverse .button:hover,
 .node-parade-onepage-edit-form .button:focus,
 .node-parade-onepage-edit-form .button:hover,
 .node-parade-onepage-form .button:focus,
@@ -2637,6 +2659,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button:active,
+.paragraph.paragraph--view-mode--inverse .button:active,
 .node-parade-onepage-edit-form .button:active,
 .node-parade-onepage-form .button:active {
   background-image: none;
@@ -2645,6 +2668,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button:hover,
+.paragraph.paragraph--view-mode--inverse .button:hover,
 .node-parade-onepage-edit-form .button:hover,
 .node-parade-onepage-form .button:hover {
   color: #5e5e5e;
@@ -2653,6 +2677,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button:focus,
+.paragraph.paragraph--view-mode--inverse .button:focus,
 .node-parade-onepage-edit-form .button:focus,
 .node-parade-onepage-form .button:focus {
   color: #5e5e5e;
@@ -2661,6 +2686,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button:active,
+.paragraph.paragraph--view-mode--inverse .button:active,
 .node-parade-onepage-edit-form .button:active,
 .node-parade-onepage-form .button:active {
   color: #5e5e5e;
@@ -2672,6 +2698,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button:active:hover,
 .paragraph.paragraph--view-mode--default .button:active:focus,
+.paragraph.paragraph--view-mode--inverse .button:active:hover,
+.paragraph.paragraph--view-mode--inverse .button:active:focus,
 .node-parade-onepage-edit-form .button:active:hover,
 .node-parade-onepage-edit-form .button:active:focus,
 .node-parade-onepage-form .button:active:hover,
@@ -2683,6 +2711,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button.disabled:focus,
 .paragraph.paragraph--view-mode--default .button:disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button.disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button:disabled:focus,
 .node-parade-onepage-edit-form .button.disabled:focus,
 .node-parade-onepage-edit-form .button:disabled:focus,
 .node-parade-onepage-form .button.disabled:focus,
@@ -2693,6 +2723,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button.disabled:hover,
 .paragraph.paragraph--view-mode--default .button:disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button.disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button:disabled:hover,
 .node-parade-onepage-edit-form .button.disabled:hover,
 .node-parade-onepage-edit-form .button:disabled:hover,
 .node-parade-onepage-form .button.disabled:hover,
@@ -2703,6 +2735,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button.disabled,
 .paragraph.paragraph--view-mode--default .button:disabled,
+.paragraph.paragraph--view-mode--inverse .button.disabled,
+.paragraph.paragraph--view-mode--inverse .button:disabled,
 .node-parade-onepage-edit-form .button.disabled,
 .node-parade-onepage-edit-form .button:disabled,
 .node-parade-onepage-form .button.disabled,
@@ -2716,6 +2750,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--primary,
 .paragraph.paragraph--view-mode--default .button--blue,
+.paragraph.paragraph--view-mode--inverse .button--primary,
+.paragraph.paragraph--view-mode--inverse .button--blue,
 .node-parade-onepage-edit-form .button--primary,
 .node-parade-onepage-edit-form .button--blue,
 .node-parade-onepage-form .button--primary,
@@ -2728,6 +2764,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--primary:hover,
 .paragraph.paragraph--view-mode--default .button--blue:hover,
+.paragraph.paragraph--view-mode--inverse .button--primary:hover,
+.paragraph.paragraph--view-mode--inverse .button--blue:hover,
 .node-parade-onepage-edit-form .button--primary:hover,
 .node-parade-onepage-edit-form .button--blue:hover,
 .node-parade-onepage-form .button--primary:hover,
@@ -2739,6 +2777,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--primary:focus,
 .paragraph.paragraph--view-mode--default .button--blue:focus,
+.paragraph.paragraph--view-mode--inverse .button--primary:focus,
+.paragraph.paragraph--view-mode--inverse .button--blue:focus,
 .node-parade-onepage-edit-form .button--primary:focus,
 .node-parade-onepage-edit-form .button--blue:focus,
 .node-parade-onepage-form .button--primary:focus,
@@ -2750,6 +2790,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--primary:active,
 .paragraph.paragraph--view-mode--default .button--blue:active,
+.paragraph.paragraph--view-mode--inverse .button--primary:active,
+.paragraph.paragraph--view-mode--inverse .button--blue:active,
 .node-parade-onepage-edit-form .button--primary:active,
 .node-parade-onepage-edit-form .button--blue:active,
 .node-parade-onepage-form .button--primary:active,
@@ -2765,6 +2807,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .paragraph.paragraph--view-mode--default .button--primary:active:focus,
 .paragraph.paragraph--view-mode--default .button--blue:active:hover,
 .paragraph.paragraph--view-mode--default .button--blue:active:focus,
+.paragraph.paragraph--view-mode--inverse .button--primary:active:hover,
+.paragraph.paragraph--view-mode--inverse .button--primary:active:focus,
+.paragraph.paragraph--view-mode--inverse .button--blue:active:hover,
+.paragraph.paragraph--view-mode--inverse .button--blue:active:focus,
 .node-parade-onepage-edit-form .button--primary:active:hover,
 .node-parade-onepage-edit-form .button--primary:active:focus,
 .node-parade-onepage-edit-form .button--blue:active:hover,
@@ -2782,6 +2828,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .paragraph.paragraph--view-mode--default .button--primary:disabled:focus,
 .paragraph.paragraph--view-mode--default .button--blue.disabled:focus,
 .paragraph.paragraph--view-mode--default .button--blue:disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--primary.disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--primary:disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--blue.disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--blue:disabled:focus,
 .node-parade-onepage-edit-form .button--primary.disabled:focus,
 .node-parade-onepage-edit-form .button--primary:disabled:focus,
 .node-parade-onepage-edit-form .button--blue.disabled:focus,
@@ -2798,6 +2848,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .paragraph.paragraph--view-mode--default .button--primary:disabled:hover,
 .paragraph.paragraph--view-mode--default .button--blue.disabled:hover,
 .paragraph.paragraph--view-mode--default .button--blue:disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--primary.disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--primary:disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--blue.disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--blue:disabled:hover,
 .node-parade-onepage-edit-form .button--primary.disabled:hover,
 .node-parade-onepage-edit-form .button--primary:disabled:hover,
 .node-parade-onepage-edit-form .button--blue.disabled:hover,
@@ -2811,6 +2865,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--green,
+.paragraph.paragraph--view-mode--inverse .button--green,
 .node-parade-onepage-edit-form .button--green,
 .node-parade-onepage-form .button--green {
   color: #fff;
@@ -2820,6 +2875,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--green:hover,
+.paragraph.paragraph--view-mode--inverse .button--green:hover,
 .node-parade-onepage-edit-form .button--green:hover,
 .node-parade-onepage-form .button--green:hover {
   color: #fff;
@@ -2828,6 +2884,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--green:focus,
+.paragraph.paragraph--view-mode--inverse .button--green:focus,
 .node-parade-onepage-edit-form .button--green:focus,
 .node-parade-onepage-form .button--green:focus {
   color: #fff;
@@ -2836,6 +2893,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--green:active,
+.paragraph.paragraph--view-mode--inverse .button--green:active,
 .node-parade-onepage-edit-form .button--green:active,
 .node-parade-onepage-form .button--green:active {
   color: #fff;
@@ -2847,6 +2905,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--green:active:hover,
 .paragraph.paragraph--view-mode--default .button--green:active:focus,
+.paragraph.paragraph--view-mode--inverse .button--green:active:hover,
+.paragraph.paragraph--view-mode--inverse .button--green:active:focus,
 .node-parade-onepage-edit-form .button--green:active:hover,
 .node-parade-onepage-edit-form .button--green:active:focus,
 .node-parade-onepage-form .button--green:active:hover,
@@ -2858,6 +2918,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--green.disabled:focus,
 .paragraph.paragraph--view-mode--default .button--green:disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--green.disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--green:disabled:focus,
 .node-parade-onepage-edit-form .button--green.disabled:focus,
 .node-parade-onepage-edit-form .button--green:disabled:focus,
 .node-parade-onepage-form .button--green.disabled:focus,
@@ -2868,6 +2930,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--green.disabled:hover,
 .paragraph.paragraph--view-mode--default .button--green:disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--green.disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--green:disabled:hover,
 .node-parade-onepage-edit-form .button--green.disabled:hover,
 .node-parade-onepage-edit-form .button--green:disabled:hover,
 .node-parade-onepage-form .button--green.disabled:hover,
@@ -2877,6 +2941,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--orange,
+.paragraph.paragraph--view-mode--inverse .button--orange,
 .node-parade-onepage-edit-form .button--orange,
 .node-parade-onepage-form .button--orange {
   color: #fff;
@@ -2886,6 +2951,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--orange:hover,
+.paragraph.paragraph--view-mode--inverse .button--orange:hover,
 .node-parade-onepage-edit-form .button--orange:hover,
 .node-parade-onepage-form .button--orange:hover {
   color: #fff;
@@ -2894,6 +2960,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--orange:focus,
+.paragraph.paragraph--view-mode--inverse .button--orange:focus,
 .node-parade-onepage-edit-form .button--orange:focus,
 .node-parade-onepage-form .button--orange:focus {
   color: #fff;
@@ -2902,6 +2969,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--orange:active,
+.paragraph.paragraph--view-mode--inverse .button--orange:active,
 .node-parade-onepage-edit-form .button--orange:active,
 .node-parade-onepage-form .button--orange:active {
   color: #fff;
@@ -2913,6 +2981,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--orange:active:hover,
 .paragraph.paragraph--view-mode--default .button--orange:active:focus,
+.paragraph.paragraph--view-mode--inverse .button--orange:active:hover,
+.paragraph.paragraph--view-mode--inverse .button--orange:active:focus,
 .node-parade-onepage-edit-form .button--orange:active:hover,
 .node-parade-onepage-edit-form .button--orange:active:focus,
 .node-parade-onepage-form .button--orange:active:hover,
@@ -2924,6 +2994,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--orange.disabled:focus,
 .paragraph.paragraph--view-mode--default .button--orange:disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--orange.disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--orange:disabled:focus,
 .node-parade-onepage-edit-form .button--orange.disabled:focus,
 .node-parade-onepage-edit-form .button--orange:disabled:focus,
 .node-parade-onepage-form .button--orange.disabled:focus,
@@ -2934,6 +3006,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--orange.disabled:hover,
 .paragraph.paragraph--view-mode--default .button--orange:disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--orange.disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--orange:disabled:hover,
 .node-parade-onepage-edit-form .button--orange.disabled:hover,
 .node-parade-onepage-edit-form .button--orange:disabled:hover,
 .node-parade-onepage-form .button--orange.disabled:hover,
@@ -2943,6 +3017,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--red,
+.paragraph.paragraph--view-mode--inverse .button--red,
 .node-parade-onepage-edit-form .button--red,
 .node-parade-onepage-form .button--red {
   color: #fff;
@@ -2952,6 +3027,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--red:hover,
+.paragraph.paragraph--view-mode--inverse .button--red:hover,
 .node-parade-onepage-edit-form .button--red:hover,
 .node-parade-onepage-form .button--red:hover {
   color: #fff;
@@ -2960,6 +3036,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--red:focus,
+.paragraph.paragraph--view-mode--inverse .button--red:focus,
 .node-parade-onepage-edit-form .button--red:focus,
 .node-parade-onepage-form .button--red:focus {
   color: #fff;
@@ -2968,6 +3045,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph.paragraph--view-mode--default .button--red:active,
+.paragraph.paragraph--view-mode--inverse .button--red:active,
 .node-parade-onepage-edit-form .button--red:active,
 .node-parade-onepage-form .button--red:active {
   color: #fff;
@@ -2979,6 +3057,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--red:active:hover,
 .paragraph.paragraph--view-mode--default .button--red:active:focus,
+.paragraph.paragraph--view-mode--inverse .button--red:active:hover,
+.paragraph.paragraph--view-mode--inverse .button--red:active:focus,
 .node-parade-onepage-edit-form .button--red:active:hover,
 .node-parade-onepage-edit-form .button--red:active:focus,
 .node-parade-onepage-form .button--red:active:hover,
@@ -2990,6 +3070,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--red.disabled:focus,
 .paragraph.paragraph--view-mode--default .button--red:disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--red.disabled:focus,
+.paragraph.paragraph--view-mode--inverse .button--red:disabled:focus,
 .node-parade-onepage-edit-form .button--red.disabled:focus,
 .node-parade-onepage-edit-form .button--red:disabled:focus,
 .node-parade-onepage-form .button--red.disabled:focus,
@@ -3000,6 +3082,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph.paragraph--view-mode--default .button--red.disabled:hover,
 .paragraph.paragraph--view-mode--default .button--red:disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--red.disabled:hover,
+.paragraph.paragraph--view-mode--inverse .button--red:disabled:hover,
 .node-parade-onepage-edit-form .button--red.disabled:hover,
 .node-parade-onepage-edit-form .button--red:disabled:hover,
 .node-parade-onepage-form .button--red.disabled:hover,
@@ -3066,6 +3150,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
+.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-field-title,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-title {
   margin-bottom: 1em;
   font-weight: 800;
@@ -3078,23 +3163,26 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse .field--name-field-title,
   .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-title {
     line-height: 1;
     font-size: 48px;
   }
 }
 
+.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-field-call-to-action,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action {
   clear: both;
   text-align: center;
 }
 
+.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-field-call-to-action .field__item,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action .field__item {
   display: inline-block;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
     width: 33.333%;
   }
 }
@@ -3104,49 +3192,29 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
     width: 60.666%;
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
   text-align: center;
   margin: 1em 0 0;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
     margin: 0;
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
   text-align: justify;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-title, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-title, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title {
     text-align: left;
-  }
-}
-
-@media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-call-to-action {
-    float: left;
-  }
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image {
-    float: right;
-    text-align: left;
-  }
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-call-to-action {
-    text-align: center;
-    clear: left;
   }
 }
 
@@ -3166,7 +3234,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-title, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-title {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-title {
   margin-bottom: 1em;
   font-weight: 800;
   letter-spacing: -1px;
@@ -3178,35 +3246,35 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-title, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-title {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-title {
     line-height: 1;
     font-size: 48px;
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
   padding: 2em;
   background: #53B0EB;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
     padding-right: 4em;
     width: 60%;
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
   text-align: center;
   background: #53B0EB;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image img, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image img {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image img {
   display: block;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
     text-align: left;
     background: 0;
     padding: 0;
@@ -3218,7 +3286,121 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st_enhanced .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-call-to-action {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-call-to-action {
+  text-align: center;
+  width: 46%;
+  float: right;
+  margin-top: -1.5em;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
+    width: 60.666%;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+  text-align: center;
+  margin: 1em 0 0;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+    margin: 0;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text {
+  text-align: justify;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-title, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-title {
+    text-align: left;
+  }
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
+    float: left;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+    float: right;
+    text-align: left;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
+    text-align: center;
+    clear: left;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-title {
+  margin-bottom: 1em;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 26px;
+  line-height: 1.2;
+  word-break: break-word;
+  color: #333;
+  width: 100%;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-title {
+    line-height: 1;
+    font-size: 48px;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-text {
+  padding: 2em;
+  background: #53B0EB;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-text {
+    padding-right: 4em;
+    width: 60%;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image {
+  text-align: center;
+  background: #53B0EB;
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image img {
+  display: block;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image {
+    text-align: left;
+    background: 0;
+    padding: 0;
+    margin: 2em 0 0 0;
+    -webkit-transform: translateX(-2em);
+            transform: translateX(-2em);
+    width: 40%;
+    float: right;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-call-to-action {
   text-align: center;
   width: 46%;
   float: right;
@@ -3370,11 +3552,11 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--simple.paragraph--view-mode--default.layout--one-column-shaded {
+.paragraph--type--simple.paragraph--view-mode--default.style-shaded {
   background-color: #53B0EB;
 }
 
-.paragraph--type--simple.paragraph--view-mode--default.layout--one-column-grey {
+.paragraph--type--simple.paragraph--view-mode--default.color-light-grey {
   background-color: #dfdfdf;
 }
 
@@ -3408,25 +3590,23 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse {
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse {
   background: #0069b7;
 }
 
-.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title,
-.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title,
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title,
 .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
   color: white;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title,
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title,
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title,
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
     width: 50%;
   }
 }
 
-.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
   margin-bottom: 1em;
   font-weight: 800;
   letter-spacing: -1px;
@@ -3438,21 +3618,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title, .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
     line-height: 1;
     font-size: 48px;
   }
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .paragraph__title {
-    float: right;
-    text-align: right;
-    padding-left: 20px;
-  }
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-content-1st-inverse .field--name-field-text {
-    float: left;
-  }
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title {
     float: left;
     text-align: left;
@@ -3460,6 +3632,51 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
     float: right;
+  }
+}
+
+.paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse {
+  background: #0069b7;
+}
+
+.paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title,
+.paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-field-text {
+  color: white;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title,
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-field-text {
+    width: 50%;
+  }
+}
+
+.paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title {
+  margin-bottom: 1em;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 26px;
+  line-height: 1.2;
+  word-break: break-word;
+  margin-bottom: 0;
+  color: white;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title {
+    line-height: 1;
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title {
+    float: right;
+    text-align: right;
+    padding-left: 20px;
+  }
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-field-text {
+    float: left;
   }
 }
 
@@ -3501,6 +3718,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   font-size: 1.2em;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom .field--name-field-title,
 .paragraph--type--text-boxes.paragraph--view-mode--default .field--name-field-title {
   margin-bottom: 1em;
   font-weight: 800;
@@ -3512,60 +3730,75 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
+  .paragraph--type--text-boxes.paragraph--view-mode--custom .field--name-field-title,
   .paragraph--type--text-boxes.paragraph--view-mode--default .field--name-field-title {
     line-height: 1;
     font-size: 48px;
   }
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--smallinfo .paragraph--type--image-text, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--image-text, .paragraph--type--text-boxes.paragraph--view-mode--default.layout--text_icon .paragraph--type--image-text {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--smallinfo .paragraph--type--image-text, .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--lot_infos .paragraph--type--image-text, .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--text_icon .paragraph--type--image-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--smallinfo .paragraph--type--image-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--image-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--text_icon .paragraph--type--image-text {
   text-align: center;
   float: none;
   margin-right: 0;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--lot_infos-grey,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos-grey {
   background-color: #dfdfdf;
 }
 
 @media screen and (min-width: 768px) {
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts > .paragraph-inner > .field--name-field-title,
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts > .paragraph-inner > .field--name-field-title {
     width: 33%;
     float: left;
   }
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .field--name-field-paragraphs,
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .field--name-field-paragraphs {
     width: 66%;
     float: left;
   }
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box {
   position: relative;
   margin-bottom: 2em;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .paragraph-inner,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .paragraph-inner {
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-image,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-image {
   float: left;
   max-width: 30%;
   max-height: 100%;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-image img,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-image img {
   max-height: 100%;
   width: auto;
   border-radius: 50%;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-title,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-title {
   margin-bottom: 0;
 }
 
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-title,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-text,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-call-to-action,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-title,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-text,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-call-to-action {
@@ -3574,9 +3807,11 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--lot_infos .paragraph--type--text-box,
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--lot_infos .paragraph--type--text-box {
     text-align: left;
   }
+  .paragraph--type--text-boxes.paragraph--view-mode--custom[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs > .col > .paragraph-inner,
   .paragraph--type--text-boxes.paragraph--view-mode--default[class*="columns-"] > .paragraph-inner > .field--name-field-paragraphs > .col > .paragraph-inner {
     height: 100%;
   }

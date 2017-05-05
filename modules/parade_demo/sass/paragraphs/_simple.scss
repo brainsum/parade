@@ -4,63 +4,82 @@
     @include campaign-title-center;
   }
 
-//	&.layout--one-column-clean {
-//    text-align: center;
-//	}
+  //  &.layout-clean {
+  //    text-align: center;
+  //  }
 
-	&.layout--one-column-shaded {
-		background-color: $parade-lightblue;
-	}
+  &.style-shaded {
+    background-color: $parade-lightblue;
+  }
 
-	&.layout--one-column-grey {
-		background-color: $parade-lightgrey;
-	}
+  &.color-light-grey {
+    background-color: $parade-lightgrey;
+  }
 
-	&.layout--separator-clean {
-		.paragraph__title {
-			@include campaign-title-separator;
-		}
-	}
+  &.layout--separator-clean {
+    .paragraph__title {
+      @include campaign-title-separator;
+    }
+  }
 
-	// Inverse layout
-	&.layout--two-column-content-1st-inverse,
-	&.layout--two-column-title-1st-inverse {
-		background: $parade-dark-blue;
-		.paragraph__title,
-		.field--name-field-text {
-			color: white;
-			@include md {
-				width: 50%;
-			}
-		}
+  &.layout--two-column-title-1st-inverse {
+    background: $parade-dark-blue;
+    .paragraph__title,
+    .field--name-field-text {
+      color: white;
+      @include md {
+        width: 50%;
+      }
+    }
 
-		.paragraph__title {
-			@include campaign-headline;
-			color: white;
-		}
-	}
+    .paragraph__title {
+      @include campaign-headline;
+      color: white;
+    }
+  }
 
-	@include md {
-		&.layout--two-column-content-1st-inverse {
-			.paragraph__title {
-				float: right;
-				text-align: right;
-        padding-left: 20px;
-			}
-			.field--name-field-text {
-				float: left;
-			}
-		}
-
-		&.layout--two-column-title-1st-inverse {
-			.paragraph__title {
-				float: left;
-				text-align: left;
+  @include md {
+    &.layout--two-column-title-1st-inverse {
+      .paragraph__title {
+        float: left;
+        text-align: left;
         padding-right: 20px;
-			}
-			.field--name-field-text {
-				float: right;
-			}
-		}
-	}
+      }
+      .field--name-field-text {
+        float: right;
+      }
+    }
+  }
+}
+
+.paragraph--type--simple.paragraph--view-mode--inverse {
+  // Inverse layout
+  &.layout--two-column-content-1st-inverse {
+    background: $parade-dark-blue;
+    .paragraph__title,
+    .field--name-field-text {
+      color: white;
+      @include md {
+        width: 50%;
+      }
+    }
+
+    .paragraph__title {
+      @include campaign-headline;
+      color: white;
+    }
+  }
+
+  @include md {
+    &.layout--two-column-content-1st-inverse {
+      .paragraph__title {
+        float: right;
+        text-align: right;
+        padding-left: 20px;
+      }
+      .field--name-field-text {
+        float: left;
+      }
+    }
+  }
 }
