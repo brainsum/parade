@@ -32,12 +32,12 @@ class MarketoPoll extends FieldItemBase {
           'length' => 2048,
         ),
         'poll_class' => array(
-          'description' => 'The Poll Class.',
+          'description' => 'The poll class.',
           'type' => 'varchar',
           'length' => 255,
         ),
         'poll_id' => array(
-          'description' => 'The Poll ID.',
+          'description' => 'The poll ID.',
           'type' => 'varchar',
           'length' => 255,
         ),
@@ -65,7 +65,7 @@ class MarketoPoll extends FieldItemBase {
     $properties['subscription_url'] = DataDefinition::create('string')
       ->setLabel(t('Subscription base URL'));
     $properties['poll_class'] = DataDefinition::create('string')
-      ->setLabel(t('Poll Class'));
+      ->setLabel(t('Poll class'));
     $properties['poll_id'] = DataDefinition::create('string')
       ->setLabel(t('Poll ID'));
 

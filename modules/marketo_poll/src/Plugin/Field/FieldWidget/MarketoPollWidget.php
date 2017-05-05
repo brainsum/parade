@@ -27,7 +27,7 @@ class MarketoPollWidget extends WidgetBase {
     $item = $items[$delta];
     $element['subscription_url'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Subscription Domain'),
+      '#title' => $this->t('Subscription domain'),
       '#description' => $this->t('E.g.: b2c-msm.marketo.com'),
       '#default_value' => $item->subscription_url,
       '#maxlength' => 2048,
@@ -35,7 +35,7 @@ class MarketoPollWidget extends WidgetBase {
     );
     $element['poll_class'] = array(
       '#type' => 'textfield',
-      '#title' => $this->t('Poll Class'),
+      '#title' => $this->t('Poll class'),
       '#description' => $this->t('E.g.: cf_w_c94d14b3839540d99d68b9451eccad30_Poll'),
       '#default_value' => $item->poll_class,
       '#maxlength' => 255,
