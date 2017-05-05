@@ -8,7 +8,7 @@ id: paragraph.simple.field_color_scheme
 field_name: field_color_scheme
 entity_type: paragraph
 bundle: simple
-label: 'Color Scheme'
+label: 'Color scheme'
 description: ''
 required: false
 translatable: true
