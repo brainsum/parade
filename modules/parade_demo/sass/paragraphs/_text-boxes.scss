@@ -3,7 +3,7 @@
 .paragraph--type--text-boxes.paragraph--view-mode--default {
 
 	// Main Title
-	.field--name-field-title {
+	.field--name-parade-title {
 		@include campaign-title;
 		color: $text-color-strong;
 	}
@@ -26,7 +26,7 @@
   &.layout--contacts {
     // @fixme this is mess but was quick
     @media screen and (min-width: 768px) {
-      > .paragraph-inner > .field--name-field-title {
+      > .paragraph-inner > .field--name-parade-title {
         width: 33%;
         float: left;
       }
@@ -57,10 +57,10 @@
           border-radius: 50%;
         }
       }
-      .field--name-field-title {
+      .field--name-parade-title {
         margin-bottom: 0;
       }
-      .field--name-field-title,
+      .field--name-parade-title,
       .field--name-field-text,
       .field--name-field-call-to-action {
         width: 66%;
@@ -146,7 +146,7 @@
   }
 
   // Text Box item title
-  .field--name-field-title {
+  .field--name-parade-title {
     @include campaign-title-item;
   }
 
@@ -157,7 +157,7 @@
   &.layout--blue .paragraph-inner {
     color: white;
     background-color: $parade-blue;
-    .field--name-field-title {
+    .field--name-parade-title {
       color: white;
     }
   }
@@ -165,7 +165,7 @@
   &.layout--red .paragraph-inner {
     color: white;
     background-color: $parade-red;
-    .field--name-field-title {
+    .field--name-parade-title {
       color: white;
     }
   }
@@ -173,7 +173,7 @@
   &.layout--orange .paragraph-inner {
     color: white;
     background-color: $parade-orange;
-    .field--name-field-title {
+    .field--name-parade-title {
       color: white;
     }
   }
@@ -181,7 +181,7 @@
   &.layout--green .paragraph-inner {
     color: white;
     background: $parade-green;
-    .field--name-field-title {
+    .field--name-parade-title {
       color: white;
     }
   }

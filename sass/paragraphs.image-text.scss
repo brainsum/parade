@@ -3,7 +3,7 @@
   // Layout: Common styles
   &.layout--text_1st,
   &.layout--image_1st {
-    .field--name-field-title,
+    .field--name-parade-title,
     .field--name-field-text,
     .field--name-field-image {
       @media screen and (min-width: 768px) {
@@ -21,7 +21,7 @@
     }
 
     @media screen and (min-width: 768px) {
-      .field--name-field-title,
+      .field--name-parade-title,
       .field--name-field-text {
         text-align: left;
       }
@@ -59,7 +59,7 @@
   &.layout--text_1st {
     @media screen and (min-width: 768px) {
       // Title and Text
-      .field--name-field-title,
+      .field--name-parade-title,
       .field--name-field-text {
         float: left;
       }
@@ -122,7 +122,7 @@
   &.layout--image_1st {
     @media screen and (min-width: 768px) {
       // Title and Text
-      .field--name-field-title,
+      .field--name-parade-title,
       .field--name-field-text {
         float: right;
       }

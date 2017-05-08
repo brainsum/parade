@@ -5,7 +5,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .field--name-field-title {
+  .field--name-parade-title {
     @include campaign-headline;
     text-align: center;
     margin-bottom: .5em;
@@ -19,7 +19,7 @@
     @include campaign-lead;
   }
 
-  .field--name-field-title,
+  .field--name-parade-title,
   .field--name-field-lead-text,
   .field--name-field-marketo-form,
   .field--name-field-text {

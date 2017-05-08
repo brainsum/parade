@@ -1,5 +1,5 @@
 @media (min-width: 767px) {
-  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-title,
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-parade-title,
   .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-text,
   .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-geofield {
     width: 50%;
@@ -19,7 +19,7 @@
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-title,
+  .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-parade-title,
   .paragraph--type--locations.paragraph--view-mode--default.layout--none .field--name-field-text {
     text-align: left;
     float: left;

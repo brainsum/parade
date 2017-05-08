@@ -1,7 +1,7 @@
 .paragraph--type--image-text.paragraph--view-mode--inverse,
 .paragraph--type--image-text.paragraph--view-mode--default {
 
-  .field--name-field-title {
+  .field--name-parade-title {
     @include campaign-headline;
     color: $text-color-strong;
   }
@@ -39,7 +39,7 @@
       }
     }
 
-    .field--name-field-title,
+    .field--name-parade-title,
     .field--name-field-text,
     .field--name-field-call-to-action {
       @include md {
@@ -60,7 +60,7 @@
     }
 
     @include md {
-      .field--name-field-title {
+      .field--name-parade-title {
         text-align: left;
       }
     }
@@ -70,7 +70,7 @@
   &.layout--image_1st {
     @include md {
       // Title and Text
-      .field--name-field-title,
+      .field--name-parade-title,
       .field--name-field-text,
       .field--name-field-call-to-action{
         float: right;
@@ -92,7 +92,7 @@
   &.layout--image_1st_enhanced {
 
     // Title
-    .field--name-field-title {
+    .field--name-parade-title {
       @include campaign-title-center;
       width: 100%;
     }
@@ -148,7 +148,7 @@
       }
     }
 
-    .field--name-field-title,
+    .field--name-parade-title,
     .field--name-field-text,
     .field--name-field-call-to-action {
       @include md {
@@ -169,7 +169,7 @@
     }
 
     @include md {
-      .field--name-field-title {
+      .field--name-parade-title {
         text-align: left;
       }
     }
@@ -181,7 +181,7 @@
 
     @include md {
       // Title and Text
-      .field--name-field-title,
+      .field--name-parade-title,
       .field--name-field-text,
       .field--name-field-call-to-action {
         float: left;
@@ -203,7 +203,7 @@
   &.layout--text_1st_enhanced {
 
     // Title
-    .field--name-field-title {
+    .field--name-parade-title {
       @include campaign-title-center;
       width: 100%;
     }

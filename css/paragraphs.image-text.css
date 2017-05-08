@@ -1,13 +1,13 @@
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-image,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
     width: calc(50% - 0.8em);
@@ -31,12 +31,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
     text-align: left;
   }
@@ -70,7 +70,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text {
     float: left;
   }
@@ -121,7 +121,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
     float: right;
   }

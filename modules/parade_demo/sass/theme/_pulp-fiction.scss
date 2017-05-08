@@ -14,7 +14,7 @@
 
 	.paragraph--type--campaign-header-video {
 
-		.field--name-field-title,
+		.field--name-parade-title,
 		.field--name-field-secondary-title,
 		.field--name-field-lead-text {
 			width: 100%;
@@ -22,7 +22,7 @@
 			text-align: center;
 		}
 
-		.field--name-field-title,
+		.field--name-parade-title,
 		.field--name-field-secondary-title {
 			font-family: 'Pulp';
 			font-weight: normal;
@@ -31,7 +31,7 @@
 			text-shadow: 0 7px $pulp-red;
 		}
 
-		.field--name-field-title {
+		.field--name-parade-title {
 		    font-size: 3em;
 		}
 

@@ -1,7 +1,7 @@
 // Locations
 .paragraph--type--locations.paragraph--view-mode--default {
     &.layout--none {
-        .field--name-field-title,
+        .field--name-parade-title,
         .field--name-field-text,
         .field--name-field-geofield {
             @media (min-width: 767px) {
@@ -19,7 +19,7 @@
         }
 
         @media (min-width: 767px) {
-            .field--name-field-title,
+            .field--name-parade-title,
             .field--name-field-text {
                 text-align: left;
                 float: left;
