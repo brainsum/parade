@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.locations.parade_anchor
     - field.field.paragraph.locations.parade_color_scheme
     - field.field.paragraph.locations.parade_geofield
-    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.parade_location
     - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
@@ -34,7 +34,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_location:
+  parade_location:
     weight: 4
     settings:
       size: 60

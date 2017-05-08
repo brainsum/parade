@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_location
+    - field.storage.paragraph.parade_location
     - paragraphs.paragraphs_type.locations
-id: paragraph.locations.field_location
-field_name: field_location
+id: paragraph.locations.parade_location
+field_name: parade_location
 entity_type: paragraph
 bundle: locations
 label: 'Map markers'

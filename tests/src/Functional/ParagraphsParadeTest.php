@@ -241,7 +241,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Color scheme', 'Geofield', 'Map markers', 'Text', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'parade_geofield', 'field_location', 'parade_text', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'parade_geofield', 'parade_location', 'parade_text', 'parade_title'];
     $expected_types = ['Text (plain)', 'Entity reference', 'Geofield', 'Text (plain)', 'Text (formatted, long)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);

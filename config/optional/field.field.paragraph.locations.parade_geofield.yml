@@ -10,7 +10,7 @@ dependencies:
 third_party_settings:
   geocoder_field:
     method: source
-    field: field_location
+    field: parade_location
     plugins:
       - googlemaps
       - bingmaps
