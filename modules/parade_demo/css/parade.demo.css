@@ -3134,18 +3134,18 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--images.paragraph--view-mode--default .field--name-field-images {
+.paragraph--type--images.paragraph--view-mode--default .field--name-parade-images {
   text-align: left;
 }
 
-.paragraph--type--images.paragraph--view-mode--default .field--name-field-images .field__item {
+.paragraph--type--images.paragraph--view-mode--default .field--name-parade-images .field__item {
   padding: 1em 2em;
   vertical-align: middle;
   display: inline-block;
 }
 
 @media (min-width: 1200px) {
-  .paragraph--type--images.paragraph--view-mode--default .field--name-field-images .field__item:first-child {
+  .paragraph--type--images.paragraph--view-mode--default .field--name-parade-images .field__item:first-child {
     padding-left: 0;
   }
 }
@@ -3182,7 +3182,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     width: 33.333%;
   }
 }
@@ -3197,13 +3197,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
   text-align: center;
   margin: 1em 0 0;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     margin: 0;
   }
 }
@@ -3224,7 +3224,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-call-to-action {
     float: right;
   }
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     float: left;
     text-align: right;
   }
@@ -3264,17 +3264,17 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-image {
   text-align: center;
   background: #53B0EB;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image img {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-image img {
   display: block;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-image {
     text-align: left;
     background: 0;
     padding: 0;
@@ -3294,7 +3294,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image {
     width: 33.333%;
   }
 }
@@ -3309,13 +3309,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image {
   text-align: center;
   margin: 1em 0 0;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image {
     margin: 0;
   }
 }
@@ -3338,7 +3338,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-call-to-action {
     float: left;
   }
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image {
     float: right;
     text-align: left;
   }
@@ -3378,17 +3378,17 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-image {
   text-align: center;
   background: #53B0EB;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image img {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-image img {
   display: block;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-image {
     text-align: left;
     background: 0;
     padding: 0;
@@ -3777,15 +3777,15 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   overflow: hidden;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-image,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-image {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-image,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-image {
   float: left;
   max-width: 30%;
   max-height: 100%;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-image img,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-image img {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-image img,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-image img {
   max-height: 100%;
   width: auto;
   border-radius: 50%;
@@ -3817,14 +3817,14 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--text-box.paragraph--view-mode--default .field--name-field-image {
+.paragraph--type--text-box.paragraph--view-mode--default .field--name-parade-image {
   width: 100%;
   float: none;
   margin-right: 0;
   text-align: center;
 }
 
-.paragraph--type--text-box.paragraph--view-mode--default .field--name-field-image img {
+.paragraph--type--text-box.paragraph--view-mode--default .field--name-parade-image img {
   margin-bottom: 0;
 }
 
@@ -4044,14 +4044,14 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   display: none;
 }
 
-.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-image {
+.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-image {
   text-align: right;
   padding: 1em;
   text-align: center;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-image {
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-image {
     text-align: right;
     width: 50%;
     float: right;
@@ -4180,12 +4180,12 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   color: #777;
 }
 
-.paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-field-image {
+.paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-parade-image {
   width: 34%;
 }
 
 @media (max-width: 480px) {
-  .paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-field-image {
+  .paragraph--type--text-boxes.layout--rounded_image.paragraph--view-mode--default .field--name-field-paragraphs .field--name-parade-image {
     width: 150px;
   }
 }

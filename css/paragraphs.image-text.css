@@ -1,30 +1,30 @@
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-image,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     width: calc(50% - 0.8em);
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-image,
-.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image,
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
+.paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image,
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
   margin: 1em 0 0;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-image,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     margin: 0;
     text-align: right;
   }
@@ -74,7 +74,7 @@
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text {
     float: left;
   }
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image {
     float: right;
     padding-left: 1.5em;
   }
@@ -91,17 +91,17 @@
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-image {
   padding: 2em 0 0;
   text-align: center;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image img {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-image img {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-image {
     float: right;
     width: 40%;
     margin: 2em 0 0 0;
@@ -125,7 +125,7 @@
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text {
     float: right;
   }
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     float: left;
     padding-right: 1.5em;
   }
@@ -146,17 +146,17 @@
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-image {
   padding: 2em 0 0;
   text-align: center;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image img {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-image img {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-image {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-image {
     float: right;
     width: 40%;
     margin: 2em 0 0 0;

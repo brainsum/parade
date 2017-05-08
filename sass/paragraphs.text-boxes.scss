@@ -3,7 +3,7 @@
 .paragraph--type--text-boxes.paragraph--view-mode--default {
   &.layout--rounded_image {
     .field--name-field-paragraphs {
-      .field--name-field-image {
+      .field--name-parade-image {
         float: left;
         width: calc(26% - 2 * 15px);
         padding: 20px 15px 0;
@@ -43,7 +43,7 @@
 
     @media screen and (max-width: 480px) {
       .field--name-field-paragraphs {
-        .field--name-field-image {
+        .field--name-parade-image {
           float: none;
           width: 150px;
           margin: 0 auto;

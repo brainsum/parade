@@ -33,7 +33,7 @@
   &.layout--none,
   &.layout--image_1st {
 
-    .field--name-field-image {
+    .field--name-parade-image {
       @include md {
         width: 33.333%;
       }
@@ -47,7 +47,7 @@
       }
     }
 
-    .field--name-field-image {
+    .field--name-parade-image {
       text-align: center;
       margin: 1em 0 0;
       @include md {
@@ -76,7 +76,7 @@
         float: right;
       }
       // Image
-      .field--name-field-image {
+      .field--name-parade-image {
         float: left;
         // padding-right: 1.5em;
         text-align: right;
@@ -109,7 +109,7 @@
     }
 
     // Image
-    .field--name-field-image {
+    .field--name-parade-image {
       text-align: center;
       background: $parade-lightblue;
       //padding: 2em 0 0;
@@ -142,7 +142,7 @@
   &.layout--none,
   &.layout--text_1st {
 
-    .field--name-field-image {
+    .field--name-parade-image {
       @include md {
         width: 33.333%;
       }
@@ -156,7 +156,7 @@
       }
     }
 
-    .field--name-field-image {
+    .field--name-parade-image {
       text-align: center;
       margin: 1em 0 0;
       @include md {
@@ -187,7 +187,7 @@
         float: left;
       }
       // Image
-      .field--name-field-image {
+      .field--name-parade-image {
         float: right;
         // padding-left: 1.5em;
         text-align: left;
@@ -220,7 +220,7 @@
     }
 
     // Image
-    .field--name-field-image {
+    .field--name-parade-image {
       text-align: center;
       background: $parade-lightblue;
       //padding: 2em 0 0;
