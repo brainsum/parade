@@ -43,7 +43,7 @@
   Drupal.tableDrag = function (table, tableSettings, base) {
     var tableDrag = new TableDrag(table, tableSettings);
 
-    if (base.indexOf('field-paragraphs-values' === 0)) {
+    if (base.indexOf('parade-paragraphs-values' === 0)) {
       tableDrag.dragStart = dragStart;
     }
 
