@@ -277,16 +277,16 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the Paragraphs field.
   // @todo Check the field formatter instead!
   /** @var FormStateInterface $form */
-  if (isset($form['field_paragraphs'])) {
+  if (isset($form['parade_paragraphs'])) {
     $form['#attached']['library'][] = 'parade/buttons';
 
-    foreach ($form['field_paragraphs']['widget']['add_more'] as $key => $item) {
+    foreach ($form['parade_paragraphs']['widget']['add_more'] as $key => $item) {
       if (strpos($key, 'add_more') === FALSE) {
         continue;
       }
       $type = Html::getClass($item['#bundle_machine_name']);
-      $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
-      $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+      $form['parade_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
+      $form['parade_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
     }
   }
 }
