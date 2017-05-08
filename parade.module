@@ -119,7 +119,7 @@ function parade_preprocess_paragraph__text_box(&$variables) {
   $parent = $paragraph->getParentEntity();
 
   // Pass the number of Columns field value.
-  if (method_exists($parent, 'hasField') && $parent->hasField('field_boxes_per_row') && ($columns = $parent->get('field_boxes_per_row')->value)) {
+  if (method_exists($parent, 'hasField') && $parent->hasField('parade_boxes_per_row') && ($columns = $parent->get('parade_boxes_per_row')->value)) {
     _parade_add_template_variable($variables, [
       'columns' => $columns,
     ]);
@@ -134,7 +134,7 @@ function parade_preprocess_paragraph__text_boxes(&$variables) {
   $paragraph = &$variables['paragraph'];
 
   // Pass the number of Columns field value.
-  if ($columns = $paragraph->get('field_boxes_per_row')->value) {
+  if ($columns = $paragraph->get('parade_boxes_per_row')->value) {
     _parade_add_template_variable($variables, [
       'columns' => $columns,
     ]);
