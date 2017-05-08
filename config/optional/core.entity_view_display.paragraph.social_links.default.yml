@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.social_links.parade_color_scheme
-    - field.field.paragraph.social_links.field_social_link
+    - field.field.paragraph.social_links.parade_social_link
     - field.field.paragraph.social_links.parade_title
     - paragraphs.paragraphs_type.social_links
   module:
@@ -13,7 +13,7 @@ targetEntityType: paragraph
 bundle: social_links
 mode: default
 content:
-  field_social_link:
+  parade_social_link:
     weight: 1
     label: visually_hidden
     settings:
