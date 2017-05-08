@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.locations.parade_anchor
-    - field.field.paragraph.locations.field_color_scheme
+    - field.field.paragraph.locations.parade_color_scheme
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
     - field.field.paragraph.locations.field_text
@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_color_scheme:
+  parade_color_scheme:
     type: entity_reference_autocomplete
     weight: 0
     region: content

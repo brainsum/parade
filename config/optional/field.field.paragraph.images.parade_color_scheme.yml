@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_color_scheme
-    - paragraphs.paragraphs_type.header
-id: paragraph.header.field_color_scheme
-field_name: field_color_scheme
+    - field.storage.paragraph.parade_color_scheme
+    - paragraphs.paragraphs_type.images
+id: paragraph.images.parade_color_scheme
+field_name: parade_color_scheme
 entity_type: paragraph
-bundle: header
+bundle: images
 label: 'Color scheme'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

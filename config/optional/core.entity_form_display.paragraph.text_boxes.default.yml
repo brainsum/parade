@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.text_boxes.parade_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
-    - field.field.paragraph.text_boxes.field_color_scheme
+    - field.field.paragraph.text_boxes.parade_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_title
     - field.field.paragraph.text_boxes.parade_layout
@@ -33,7 +33,7 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_color_scheme:
+  parade_color_scheme:
     type: entity_reference_autocomplete
     weight: 3
     region: content

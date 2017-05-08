@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_color_scheme
-    - paragraphs.paragraphs_type.text_boxes
-id: paragraph.text_boxes.field_color_scheme
-field_name: field_color_scheme
+    - field.storage.paragraph.parade_color_scheme
+    - paragraphs.paragraphs_type.parallax
+id: paragraph.parallax.parade_color_scheme
+field_name: parade_color_scheme
 entity_type: paragraph
-bundle: text_boxes
+bundle: parallax
 label: 'Color scheme'
 description: ''
 required: false

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.social_links.field_color_scheme
+    - field.field.paragraph.social_links.parade_color_scheme
     - field.field.paragraph.social_links.field_social_link
     - field.field.paragraph.social_links.field_title
     - paragraphs.paragraphs_type.social_links
@@ -13,7 +13,7 @@ targetEntityType: paragraph
 bundle: social_links
 mode: default
 content:
-  field_color_scheme:
+  parade_color_scheme:
     weight: 0
     settings: {  }
     third_party_settings: {  }

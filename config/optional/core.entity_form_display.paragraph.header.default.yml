@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.header.parade_anchor
     - field.field.paragraph.header.field_background
     - field.field.paragraph.header.field_call_to_action
-    - field.field.paragraph.header.field_color_scheme
+    - field.field.paragraph.header.parade_color_scheme
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
     - field.field.paragraph.header.field_secondary_title
@@ -42,7 +42,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_color_scheme:
+  parade_color_scheme:
     type: entity_reference_autocomplete
     weight: 0
     region: content

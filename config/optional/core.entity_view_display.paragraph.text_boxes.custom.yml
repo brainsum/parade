@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.custom
     - field.field.paragraph.text_boxes.parade_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
-    - field.field.paragraph.text_boxes.field_color_scheme
+    - field.field.paragraph.text_boxes.parade_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_title
     - field.field.paragraph.text_boxes.parade_view_mode
@@ -38,6 +38,6 @@ hidden:
   created: true
   parade_anchor: true
   field_boxes_per_row: true
-  field_color_scheme: true
+  parade_color_scheme: true
   parade_view_mode: true
   uid: true

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.marketo_form.parade_anchor
-    - field.field.paragraph.marketo_form.field_color_scheme
+    - field.field.paragraph.marketo_form.parade_color_scheme
     - field.field.paragraph.marketo_form.field_enable_confirm_message
     - field.field.paragraph.marketo_form.field_image
     - field.field.paragraph.marketo_form.field_lead_text
@@ -66,7 +66,7 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_color_scheme: true
+  parade_color_scheme: true
   field_enable_confirm_message: true
   parade_layout: true
   uid: true

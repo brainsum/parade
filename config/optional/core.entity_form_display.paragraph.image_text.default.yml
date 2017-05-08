@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.field_call_to_action
-    - field.field.paragraph.image_text.field_color_scheme
+    - field.field.paragraph.image_text.parade_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
     - field.field.paragraph.image_text.field_title
@@ -38,7 +38,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_color_scheme:
+  parade_color_scheme:
     type: entity_reference_autocomplete
     weight: 3
     region: content

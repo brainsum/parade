@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.field_call_to_action
-    - field.field.paragraph.image_text.field_color_scheme
+    - field.field.paragraph.image_text.parade_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
     - field.field.paragraph.image_text.field_title
@@ -59,7 +59,7 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_color_scheme: true
+  parade_color_scheme: true
   parade_layout: true
   parade_view_mode: true
   uid: true

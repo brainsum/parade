@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.social_links.field_color_scheme
+    - field.field.paragraph.social_links.parade_color_scheme
     - field.field.paragraph.social_links.field_social_link
     - field.field.paragraph.social_links.field_title
     - paragraphs.paragraphs_type.social_links
@@ -33,5 +33,5 @@ content:
     type: string
 hidden:
   created: true
-  field_color_scheme: true
+  parade_color_scheme: true
   uid: true

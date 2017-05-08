@@ -4,8 +4,8 @@ dependencies:
   module:
     - classy_paragraphs
     - paragraphs
-id: paragraph.field_color_scheme
-field_name: field_color_scheme
+id: paragraph.parade_color_scheme
+field_name: parade_color_scheme
 entity_type: paragraph
 type: entity_reference
 settings:

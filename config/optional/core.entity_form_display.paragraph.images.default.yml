@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.images.parade_anchor
-    - field.field.paragraph.images.field_color_scheme
+    - field.field.paragraph.images.parade_color_scheme
     - field.field.paragraph.images.field_images
     - field.field.paragraph.images.field_title
     - image.style.thumbnail
@@ -23,7 +23,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_color_scheme:
+  parade_color_scheme:
     type: entity_reference_autocomplete
     weight: 0
     region: content

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.simple.parade_anchor
-    - field.field.paragraph.simple.field_color_scheme
+    - field.field.paragraph.simple.parade_color_scheme
     - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.field_text
     - field.field.paragraph.simple.field_title
@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_color_scheme:
+  parade_color_scheme:
     type: entity_reference_autocomplete
     weight: 3
     region: content
