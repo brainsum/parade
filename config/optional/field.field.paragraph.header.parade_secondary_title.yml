@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_secondary_title
+    - field.storage.paragraph.parade_secondary_title
     - paragraphs.paragraphs_type.header
-id: paragraph.header.field_secondary_title
-field_name: field_secondary_title
+id: paragraph.header.parade_secondary_title
+field_name: parade_secondary_title
 entity_type: paragraph
 bundle: header
 label: 'Secondary title'

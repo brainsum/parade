@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.header.parade_color_scheme
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
-    - field.field.paragraph.header.field_secondary_title
+    - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
   module:
@@ -66,7 +66,7 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_secondary_title:
+  parade_secondary_title:
     weight: 3
     settings:
       size: 60

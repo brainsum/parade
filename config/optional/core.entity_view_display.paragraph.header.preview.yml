@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.header.parade_call_to_action
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
-    - field.field.paragraph.header.field_secondary_title
+    - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
   module:
@@ -32,5 +32,5 @@ hidden:
   parade_call_to_action: true
   field_enable_parallax: true
   field_lead_text: true
-  field_secondary_title: true
+  parade_secondary_title: true
   uid: true

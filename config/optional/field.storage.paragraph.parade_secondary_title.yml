@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_secondary_title
-field_name: field_secondary_title
+id: paragraph.parade_secondary_title
+field_name: parade_secondary_title
 entity_type: paragraph
 type: string
 settings:

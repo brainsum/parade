@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.header.parade_call_to_action
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
-    - field.field.paragraph.header.field_secondary_title
+    - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
   module:
@@ -35,7 +35,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-  field_secondary_title:
+  parade_secondary_title:
     weight: 1
     label: hidden
     settings:
