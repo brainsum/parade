@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_minimum_height
-field_name: field_minimum_height
+id: paragraph.parade_minimum_height
+field_name: parade_minimum_height
 entity_type: paragraph
 type: integer
 settings:

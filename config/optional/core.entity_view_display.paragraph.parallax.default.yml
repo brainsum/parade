@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.parallax.parade_background
     - field.field.paragraph.parallax.parade_enable_parallax
     - field.field.paragraph.parallax.parade_image
-    - field.field.paragraph.parallax.field_minimum_height
+    - field.field.paragraph.parallax.parade_minimum_height
     - field.field.paragraph.parallax.parade_text
     - paragraphs.paragraphs_type.parallax
   module:
@@ -29,5 +29,5 @@ hidden:
   parade_background: true
   parade_enable_parallax: true
   parade_image: true
-  field_minimum_height: true
+  parade_minimum_height: true
   uid: true

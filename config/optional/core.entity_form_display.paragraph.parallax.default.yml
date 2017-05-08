@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.parallax.parade_color_scheme
     - field.field.paragraph.parallax.parade_enable_parallax
     - field.field.paragraph.parallax.parade_image
-    - field.field.paragraph.parallax.field_minimum_height
+    - field.field.paragraph.parallax.parade_minimum_height
     - field.field.paragraph.parallax.parade_text
     - paragraphs.paragraphs_type.parallax
   module:
@@ -49,7 +49,7 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_minimum_height:
+  parade_minimum_height:
     weight: 5
     settings:
       placeholder: ''
