@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.custom
-    - field.field.paragraph.text_boxes.field_anchor
+    - field.field.paragraph.text_boxes.parade_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
     - field.field.paragraph.text_boxes.field_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
@@ -36,7 +36,7 @@ content:
     region: content
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   field_boxes_per_row: true
   field_color_scheme: true
   parade_view_mode: true

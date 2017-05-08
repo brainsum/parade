@@ -31,7 +31,7 @@ function parade_preprocess_paragraph(&$variables) {
   }
 
   // Pass the Anchor field value for the template.
-  if ($paragraph->hasField('field_anchor') && $anchor = $paragraph->get('field_anchor')->value) {
+  if ($paragraph->hasField('parade_anchor') && $anchor = $paragraph->get('parade_anchor')->value) {
     $variables['attributes']['id'] = Html::getId($anchor);
   }
 

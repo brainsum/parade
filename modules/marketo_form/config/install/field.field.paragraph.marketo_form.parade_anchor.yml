@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_anchor
+    - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.marketo_form
   module:
     - marketo_form
   enforced:
     module:
       - marketo_form
-id: paragraph.marketo_form.field_anchor
-field_name: field_anchor
+id: paragraph.marketo_form.parade_anchor
+field_name: parade_anchor
 entity_type: paragraph
 bundle: marketo_form
 label: Anchor

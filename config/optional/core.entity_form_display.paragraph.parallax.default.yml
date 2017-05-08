@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.parallax.field_anchor
+    - field.field.paragraph.parallax.parade_anchor
     - field.field.paragraph.parallax.field_background
     - field.field.paragraph.parallax.field_color_scheme
     - field.field.paragraph.parallax.field_enable_parallax
@@ -18,7 +18,7 @@ targetEntityType: paragraph
 bundle: parallax
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 1
     settings:
       size: 60

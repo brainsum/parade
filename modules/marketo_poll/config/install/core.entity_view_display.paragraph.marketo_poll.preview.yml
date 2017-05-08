@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.marketo_poll.field_anchor
+    - field.field.paragraph.marketo_poll.parade_anchor
     - field.field.paragraph.marketo_poll.field_marketo_poll
     - field.field.paragraph.marketo_poll.field_title
     - paragraphs.paragraphs_type.marketo_poll
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: marketo_poll
 mode: preview
 content:
-  field_anchor:
+  parade_anchor:
     weight: 1
     label: inline
     settings:

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_text.field_anchor
+    - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.field_call_to_action
     - field.field.paragraph.image_text.field_color_scheme
     - field.field.paragraph.image_text.field_image
@@ -22,7 +22,7 @@ targetEntityType: paragraph
 bundle: image_text
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 0
     settings:
       size: 60

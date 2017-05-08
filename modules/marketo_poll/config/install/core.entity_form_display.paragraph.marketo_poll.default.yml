@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.marketo_poll.field_anchor
+    - field.field.paragraph.marketo_poll.parade_anchor
     - field.field.paragraph.marketo_poll.field_marketo_poll
     - field.field.paragraph.marketo_poll.field_title
     - paragraphs.paragraphs_type.marketo_poll
@@ -16,7 +16,7 @@ targetEntityType: paragraph
 bundle: marketo_poll
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 6
     settings:
       size: 60

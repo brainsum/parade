@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text_boxes.field_anchor
+    - field.field.paragraph.text_boxes.parade_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
     - field.field.paragraph.text_boxes.field_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
@@ -18,7 +18,7 @@ targetEntityType: paragraph
 bundle: text_boxes
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 0
     settings:
       size: 60

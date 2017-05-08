@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.marketo_poll.field_anchor
+    - field.field.paragraph.marketo_poll.parade_anchor
     - field.field.paragraph.marketo_poll.field_marketo_poll
     - field.field.paragraph.marketo_poll.field_title
     - paragraphs.paragraphs_type.marketo_poll
@@ -31,5 +31,5 @@ content:
     type: string
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   uid: true

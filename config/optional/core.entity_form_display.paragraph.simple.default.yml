@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.simple.field_anchor
+    - field.field.paragraph.simple.parade_anchor
     - field.field.paragraph.simple.field_color_scheme
     - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.field_text
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: simple
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 0
     settings:
       size: 60

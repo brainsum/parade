@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.images.field_anchor
+    - field.field.paragraph.images.parade_anchor
     - field.field.paragraph.images.field_images
     - field.field.paragraph.images.field_title
     - image.style.thumbnail
@@ -32,5 +32,5 @@ content:
     type: string
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   uid: true

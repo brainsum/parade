@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_anchor
-    - paragraphs.paragraphs_type.simple
-id: paragraph.simple.field_anchor
-field_name: field_anchor
+    - field.storage.paragraph.parade_anchor
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.parade_anchor
+field_name: parade_anchor
 entity_type: paragraph
-bundle: simple
+bundle: header
 label: Anchor
 description: ''
 required: false

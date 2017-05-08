@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.inverse
-    - field.field.paragraph.simple.field_anchor
+    - field.field.paragraph.simple.parade_anchor
     - field.field.paragraph.simple.field_color_scheme
     - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.field_text
@@ -34,7 +34,7 @@ content:
     region: content
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   field_color_scheme: true
   parade_layout: true
   parade_view_mode: true

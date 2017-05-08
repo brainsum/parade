@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_text.field_anchor
+    - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.field_call_to_action
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_image_text_layout
@@ -55,6 +55,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   field_image_text_layout: true
   uid: true

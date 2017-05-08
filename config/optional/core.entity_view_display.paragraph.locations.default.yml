@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.locations.field_anchor
+    - field.field.paragraph.locations.parade_anchor
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
     - field.field.paragraph.locations.field_text
@@ -60,6 +60,6 @@ content:
     type: string
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   field_location: true
   uid: true

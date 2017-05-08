@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.locations.field_anchor
+    - field.field.paragraph.locations.parade_anchor
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
     - field.field.paragraph.locations.field_text
@@ -14,7 +14,7 @@ targetEntityType: paragraph
 bundle: locations
 mode: preview
 content:
-  field_anchor:
+  parade_anchor:
     type: string
     weight: 1
     label: inline

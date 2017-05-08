@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.image_text.field_anchor
+    - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.field_call_to_action
     - field.field.paragraph.image_text.field_color_scheme
     - field.field.paragraph.image_text.field_image
@@ -27,7 +27,7 @@ content:
     region: content
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   field_call_to_action: true
   field_color_scheme: true
   field_image: true

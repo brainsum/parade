@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.header.field_anchor
+    - field.field.paragraph.header.parade_anchor
     - field.field.paragraph.header.field_background
     - field.field.paragraph.header.field_call_to_action
     - field.field.paragraph.header.field_color_scheme
@@ -19,7 +19,7 @@ targetEntityType: paragraph
 bundle: header
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 1
     settings:
       size: 60

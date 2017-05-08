@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.header.field_anchor
+    - field.field.paragraph.header.parade_anchor
     - field.field.paragraph.header.field_background
     - field.field.paragraph.header.field_call_to_action
     - field.field.paragraph.header.field_enable_parallax
@@ -51,7 +51,7 @@ content:
     type: string
 hidden:
   created: true
-  field_anchor: true
+  parade_anchor: true
   field_background: true
   field_enable_parallax: true
   uid: true

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.locations.field_anchor
+    - field.field.paragraph.locations.parade_anchor
     - field.field.paragraph.locations.field_color_scheme
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: locations
 mode: default
 content:
-  field_anchor:
+  parade_anchor:
     weight: 2
     settings:
       size: 60

@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_anchor
-    - paragraphs.paragraphs_type.locations
-id: paragraph.locations.field_anchor
-field_name: field_anchor
+    - field.storage.paragraph.parade_anchor
+    - paragraphs.paragraphs_type.image_text
+id: paragraph.image_text.parade_anchor
+field_name: parade_anchor
 entity_type: paragraph
-bundle: locations
+bundle: image_text
 label: Anchor
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
