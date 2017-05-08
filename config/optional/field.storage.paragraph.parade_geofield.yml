@@ -4,8 +4,8 @@ dependencies:
   module:
     - geofield
     - paragraphs
-id: paragraph.field_geofield
-field_name: field_geofield
+id: paragraph.parade_geofield
+field_name: parade_geofield
 entity_type: paragraph
 type: geofield
 settings: {  }
