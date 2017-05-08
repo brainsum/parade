@@ -18,13 +18,42 @@ function parade_demo_install() {
  * Implements hook_uninstall().
  */
 function parade_demo_uninstall() {
+  $entityTypeManager = \Drupal::entityTypeManager();
+
   // Remove content created by this module.
-  $nodes = \Drupal::entityTypeManager()
+  $nodes = $entityTypeManager
     ->getStorage('node')
     ->loadByProperties(['type' => 'parade_onepage']);
 
+  /** @var \Drupal\node\NodeInterface $node */
   foreach ($nodes as $node) {
     $node->delete();
+  }
+
+  /** @var \Drupal\Core\Entity\EntityInterface[] $classyStyles */
+  $classyStyles = $entityTypeManager
+    ->getStorage('classy_paragraphs_style')
+    ->loadMultiple([
+      'layout_one_column',
+      'layout_two_column_content_1st',
+      'layout_two_column_title_1st',
+      'layout_text_1st',
+      'layout_image_1st',
+      'layout_none',
+      'layout_rounded_image',
+      'layout_separator_clean',
+      'layout_text_1st_enhanced',
+      'layout_text_with_an_icon',
+      'color_clean',
+      'color_light_blue',
+      'color_light_grey',
+      'color_blue',
+      'color_shaded',
+    ]);
+
+  /** @var \Drupal\Core\Entity\EntityInterface $classyStyle */
+  foreach ($classyStyles as $classyStyle) {
+    $classyStyle->delete();
   }
 }
 
@@ -153,46 +182,46 @@ function _parade_demo_create_demo_content() {
   $paragraphsData = [
     [
       'type' => 'header',
-      'field_anchor' => '#home',
-      'field_background' => $headerBackgroundFile,
-      'field_title' => 'Parade',
-      'field_secondary_title' => 'One Page Site Demo no. 1',
-      'field_lead_text' => 'A package built on top of the awesome Paragraphs module, featuring common sections and onepage-site solutions.',
-      'field_call_to_action' => [
+      'parade_anchor' => '#home',
+      'parade_background' => $headerBackgroundFile,
+      'parade_title' => 'Parade',
+      'parade_secondary_title' => 'One Page Site Demo no. 1',
+      'parade_lead_text' => 'A package built on top of the awesome Paragraphs module, featuring common sections and onepage-site solutions.',
+      'parade_call_to_action' => [
         'uri' => 'internal:#builtonparade',
         'title' => 'Drupal project',
       ],
-      'field_enable_parallax' => TRUE,
+      'parade_enable_parallax' => TRUE,
     ],
     [
       'type' => 'simple',
-      'field_anchor' => '#simpleonecolumn',
-      'field_title' => 'Simple - One column - Clean',
-      'field_text' => [
+      'parade_anchor' => '#simpleonecolumn',
+      'parade_title' => 'Simple - One column - Clean',
+      'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         'format' => 'full_html',
       ],
       'parade_layout' => 'layout_one_column',
-      'field_color_scheme' => 'color_clean',
+      'parade_color_scheme' => 'color_clean',
     ],
     [
       'type' => 'simple',
-      'field_anchor' => '#simple2',
-      'field_title' => 'Simple  - One column - Light Grey',
-      'field_text' => [
+      'parade_anchor' => '#simple2',
+      'parade_title' => 'Simple  - One column - Light Grey',
+      'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         'format' => 'full_html',
       ],
       'parade_layout' => 'layout_one_column',
-      'field_color_scheme' => 'color_light_grey',
+      'parade_color_scheme' => 'color_light_grey',
     ],
     [
       'type' => 'simple',
-      'field_anchor' => '#simple3',
-      'field_title' => 'Simple - One Column - Shaded',
-      'field_text' => [
+      'parade_anchor' => '#simple3',
+      'parade_title' => 'Simple - One Column - Shaded',
+      'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -201,16 +230,16 @@ function _parade_demo_create_demo_content() {
         'format' => 'full_html',
       ],
       'parade_layout' => 'layout_one_column',
-      'field_color_scheme' => 'color_shaded',
+      'parade_color_scheme' => 'color_shaded',
     ],
     [
       'type' => 'parallax',
-      'field_title' => 'Parallax',
-      'field_anchor' => '#parallax',
-      'field_enable_parallax' => TRUE,
-      'field_minimum_height' => 300,
-      'field_background' => $headerBackgroundFile,
-      'field_text' => [
+      'parade_title' => 'Parallax',
+      'parade_anchor' => '#parallax',
+      'parade_enable_parallax' => TRUE,
+      'parade_minimum_height' => 300,
+      'parade_background' => $headerBackgroundFile,
+      'parade_text' => [
         'value' => "<h2>Parallax Background&nbsp;Image Type</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n</p>",
@@ -219,32 +248,32 @@ function _parade_demo_create_demo_content() {
     ],
     [
       'type' => 'simple',
-      'field_anchor' => '#simpletwocolumn',
-      'field_title' => 'Simple - Two column - Title first - Inverse',
-      'field_text' => [
+      'parade_anchor' => '#simpletwocolumn',
+      'parade_title' => 'Simple - Two column - Title first - Inverse',
+      'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         'format' => 'full_html',
       ],
       'parade_layout' => 'layout_two_column_title_1st',
-      'field_color_scheme' => 'color_clean',
+      'parade_color_scheme' => 'color_clean',
     ],
     [
       'type' => 'simple',
-      'field_anchor' => '#simple5',
-      'field_title' => 'Simple - Two column - Content first - inverse',
-      'field_text' => [
+      'parade_anchor' => '#simple5',
+      'parade_title' => 'Simple - Two column - Content first - inverse',
+      'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>",
         'format' => 'full_html',
       ],
       'parade_layout' => 'layout_two_column_content_1st',
-      'field_color_scheme' => 'color_clean',
+      'parade_color_scheme' => 'color_clean',
     ],
     [
       'type' => 'image_text',
-      'field_title' => 'This one page site',
-      'field_anchor' => '#builtonparade',
-      'field_image' => $headerBackgroundFile,
-      'field_text' => [
+      'parade_title' => 'This one page site',
+      'parade_anchor' => '#builtonparade',
+      'parade_image' => $headerBackgroundFile,
+      'parade_text' => [
         'value' => "<p><br />
 <strong>is built on <a href=\"https://www.drupal.org/project/parade\">parade module</a>&nbsp;without custom code or CSS.</strong></p>
 
@@ -254,19 +283,19 @@ function _parade_demo_create_demo_content() {
         'format' => 'basic_html',
       ],
       'parade_layout' => 'layout_text_1st',
-      'field_color_scheme' => 'color_clean',
+      'parade_color_scheme' => 'color_clean',
     ],
     [
       'type' => 'locations',
-      'field_anchor' => '#locations',
-      'field_title' => 'Locations',
-      'field_text' => [
+      'parade_anchor' => '#locations',
+      'parade_title' => 'Locations',
+      'parade_text' => [
         'value' => "<p>&nbsp;</p>
 
 <p>You can find BRAINSUM offices here.</p>",
         'format' => 'basic_html',
       ],
-      'field_location' => [
+      'parade_location' => [
         'Budapest, Vámház krt. 7, 1093 Hungary',
         '82108 Bratislava, "Páričkova 1127/18, 821 08 Bratislava, Slovakia',
       ],
@@ -282,7 +311,8 @@ function _parade_demo_create_demo_content() {
     [
       'type' => 'parade_onepage',
       'title' => 'Parade One Page Site Demo',
-      'field_parade_onepage_menu' => [
+      'parade_onepage_id' => 'parade_one_page_site_demo',
+      'parade_onepage_menu' => [
         [
           'uri' => 'internal:#home',
           'title' => 'Home',
@@ -309,11 +339,10 @@ function _parade_demo_create_demo_content() {
           'title' => 'Locations',
         ],
       ],
-      'field_parade_onepage_sections' => $paragraphs,
+      'parade_onepage_sections' => $paragraphs,
     ]
   );
 
   $demoContent->save();
-
   drupal_set_message('Demo content available at node/' . $demoContent->id(), 'status');
 }
