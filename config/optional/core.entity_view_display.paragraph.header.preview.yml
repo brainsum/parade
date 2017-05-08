@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
     - field.field.paragraph.header.field_secondary_title
-    - field.field.paragraph.header.field_title
+    - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
   module:
     - parade
@@ -18,7 +18,7 @@ targetEntityType: paragraph
 bundle: header
 mode: preview
 content:
-  field_title:
+  parade_title:
     weight: 0
     label: inline
     settings:

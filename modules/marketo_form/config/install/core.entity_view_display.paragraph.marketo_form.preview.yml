@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.marketo_form.field_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
     - field.field.paragraph.marketo_form.field_text
-    - field.field.paragraph.marketo_form.field_title
+    - field.field.paragraph.marketo_form.parade_title
     - field.field.paragraph.marketo_form.parade_layout
     - paragraphs.paragraphs_type.marketo_form
   enforced:
@@ -29,7 +29,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
-  field_title:
+  parade_title:
     weight: 0
     label: inline
     settings:

@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.images.parade_anchor
     - field.field.paragraph.images.field_images
-    - field.field.paragraph.images.field_title
+    - field.field.paragraph.images.parade_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.images
   module:
@@ -23,7 +23,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_title:
+  parade_title:
     weight: 0
     label: hidden
     settings:

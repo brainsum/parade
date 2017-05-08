@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
     - field.field.paragraph.header.field_secondary_title
-    - field.field.paragraph.header.field_title
+    - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
   module:
     - link
@@ -42,7 +42,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_title:
+  parade_title:
     weight: 0
     label: hidden
     settings:

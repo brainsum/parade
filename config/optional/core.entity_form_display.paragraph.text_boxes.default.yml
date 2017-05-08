@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.text_boxes.field_boxes_per_row
     - field.field.paragraph.text_boxes.parade_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
-    - field.field.paragraph.text_boxes.field_title
+    - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_layout
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
@@ -54,7 +54,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     region: content
-  field_title:
+  parade_title:
     weight: 5
     settings:
       size: 60

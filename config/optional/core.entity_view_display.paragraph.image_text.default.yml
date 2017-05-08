@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.image_text.parade_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
-    - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.parade_title
     - field.field.paragraph.image_text.parade_layout
     - field.field.paragraph.image_text.parade_view_mode
     - paragraphs.paragraphs_type.image_text
@@ -48,7 +48,7 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_title:
+  parade_title:
     type: string
     weight: 0
     label: hidden

@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.images.parade_anchor
     - field.field.paragraph.images.parade_color_scheme
     - field.field.paragraph.images.field_images
-    - field.field.paragraph.images.field_title
+    - field.field.paragraph.images.parade_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.images
   module:
@@ -40,7 +40,7 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_title:
+  parade_title:
     weight: 2
     settings:
       size: 60

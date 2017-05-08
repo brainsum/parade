@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_image_text_layout
     - field.field.paragraph.image_text.field_text
-    - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.parade_title
     - image.style.parade_text_and_image
     - paragraphs.paragraphs_type.image_text
   module:
@@ -46,7 +46,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_title:
+  parade_title:
     type: string
     weight: 1
     label: hidden

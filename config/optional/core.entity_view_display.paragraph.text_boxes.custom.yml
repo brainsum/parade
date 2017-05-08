@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.text_boxes.field_boxes_per_row
     - field.field.paragraph.text_boxes.parade_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
-    - field.field.paragraph.text_boxes.field_title
+    - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
@@ -26,7 +26,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_title:
+  parade_title:
     type: string
     weight: 0
     label: hidden

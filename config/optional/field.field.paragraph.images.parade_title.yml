@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.text_boxes
-id: paragraph.text_boxes.field_title
-field_name: field_title
+    - field.storage.paragraph.parade_title
+    - paragraphs.paragraphs_type.images
+id: paragraph.images.parade_title
+field_name: parade_title
 entity_type: paragraph
-bundle: text_boxes
+bundle: images
 label: Title
 description: ''
 required: false

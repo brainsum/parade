@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
+    - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.image_text
-id: paragraph.image_text.field_title
-field_name: field_title
+id: paragraph.image_text.parade_title
+field_name: parade_title
 entity_type: paragraph
 bundle: image_text
 label: Title

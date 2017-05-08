@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.marketo_poll.parade_anchor
     - field.field.paragraph.marketo_poll.field_marketo_poll
-    - field.field.paragraph.marketo_poll.field_title
+    - field.field.paragraph.marketo_poll.parade_title
     - paragraphs.paragraphs_type.marketo_poll
   module:
     - marketo_poll
@@ -24,7 +24,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_title:
+  parade_title:
     weight: 0
     label: inline
     settings:

@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
     - field.field.paragraph.locations.field_text
-    - field.field.paragraph.locations.field_title
+    - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
   module:
     - geocoder_autocomplete
@@ -51,7 +51,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_title:
+  parade_title:
     weight: 1
     settings:
       size: 60

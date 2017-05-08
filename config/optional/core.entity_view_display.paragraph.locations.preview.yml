@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
     - field.field.paragraph.locations.field_text
-    - field.field.paragraph.locations.field_title
+    - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
 id: paragraph.locations.preview
 targetEntityType: paragraph
@@ -21,7 +21,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_title:
+  parade_title:
     weight: 0
     label: inline
     settings:
