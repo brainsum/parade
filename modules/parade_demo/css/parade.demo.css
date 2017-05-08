@@ -4032,7 +4032,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (min-width: 767px) {
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-title,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-lead-text,
-  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-marketo-form,
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-marketo-form,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-text {
     width: 50%;
     float: left;
