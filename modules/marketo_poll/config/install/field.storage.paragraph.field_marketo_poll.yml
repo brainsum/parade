@@ -6,8 +6,8 @@ dependencies:
   enforced:
     module:
       - marketo_poll
-id: paragraph.field_marketo_poll
-field_name: field_marketo_poll
+id: paragraph.parade_marketo_poll
+field_name: parade_marketo_poll
 entity_type: paragraph
 type: marketo_poll
 settings: {  }
