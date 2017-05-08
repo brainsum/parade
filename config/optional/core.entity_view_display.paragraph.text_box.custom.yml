@@ -3,9 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.custom
+    - field.field.paragraph.text_box.field_color_scheme
     - field.field.paragraph.text_box.field_image
     - field.field.paragraph.text_box.field_text
     - field.field.paragraph.text_box.field_title
+    - field.field.paragraph.text_box.parade_layout
     - paragraphs.paragraphs_type.text_box
   module:
     - image
@@ -23,12 +25,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_title:
     weight: 1
     label: hidden
@@ -36,6 +40,9 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
+  field_color_scheme: true
+  parade_layout: true
   uid: true

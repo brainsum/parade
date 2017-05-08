@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.simple.field_anchor
     - field.field.paragraph.simple.field_color_scheme
+    - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.field_text
     - field.field.paragraph.simple.field_title
     - field.field.paragraph.simple.parade_view_mode
@@ -17,7 +18,7 @@ bundle: simple
 mode: default
 content:
   field_anchor:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -26,13 +27,22 @@ content:
     region: content
   field_color_scheme:
     type: entity_reference_autocomplete
-    weight: 0
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  parade_layout:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_text:
     weight: 5
     settings:
@@ -50,7 +60,7 @@ content:
     type: string_textfield
     region: content
   parade_view_mode:
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: view_mode_selector_select
