@@ -53,7 +53,7 @@ function parade_preprocess_paragraph(&$variables) {
       $file_path = parse_url(file_create_url($file_uri))['path'];
 
       // Attach parallax library if the user enabled the effect.
-      if ($paragraph->hasField('field_enable_parallax') && TRUE == $paragraph->get('field_enable_parallax')->value) {
+      if ($paragraph->hasField('parade_enable_parallax') && TRUE == $paragraph->get('parade_enable_parallax')->value) {
         $variables['#attached']['library'][] = 'parade/parallax';
       }
 
@@ -92,8 +92,8 @@ function parade_preprocess_paragraph(&$variables) {
         $variables['#attached']['library'][] = 'parade/inline-video';
       }
 
-      // Check field_enable_parallax field.
-      $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->get('field_enable_parallax')->value : FALSE;
+      // Check parade_enable_parallax field.
+      $enable_parallax = $paragraph->hasField('parade_enable_parallax') ? $paragraph->get('parade_enable_parallax')->value : FALSE;
 
       // Add variables to theme.
       _parade_add_template_variable($variables, [

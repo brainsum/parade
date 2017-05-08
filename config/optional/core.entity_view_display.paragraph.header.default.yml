@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.header.parade_anchor
     - field.field.paragraph.header.parade_background
     - field.field.paragraph.header.parade_call_to_action
-    - field.field.paragraph.header.field_enable_parallax
+    - field.field.paragraph.header.parade_enable_parallax
     - field.field.paragraph.header.parade_lead_text
     - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
@@ -53,5 +53,5 @@ hidden:
   created: true
   parade_anchor: true
   parade_background: true
-  field_enable_parallax: true
+  parade_enable_parallax: true
   uid: true

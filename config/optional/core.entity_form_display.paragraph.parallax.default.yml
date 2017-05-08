@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.parallax.parade_anchor
     - field.field.paragraph.parallax.parade_background
     - field.field.paragraph.parallax.parade_color_scheme
-    - field.field.paragraph.parallax.field_enable_parallax
+    - field.field.paragraph.parallax.parade_enable_parallax
     - field.field.paragraph.parallax.parade_image
     - field.field.paragraph.parallax.field_minimum_height
     - field.field.paragraph.parallax.parade_text
@@ -42,7 +42,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_enable_parallax:
+  parade_enable_parallax:
     weight: 4
     settings:
       display_label: true

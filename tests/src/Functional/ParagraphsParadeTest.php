@@ -147,7 +147,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Background', 'Call to Action', 'Color scheme', 'Enable Parallax', 'Lead text', 'Secondary title', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'parade_background', 'parade_call_to_action', 'parade_color_scheme', 'field_enable_parallax', 'parade_lead_text', 'parade_secondary_title', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'parade_background', 'parade_call_to_action', 'parade_color_scheme', 'parade_enable_parallax', 'parade_lead_text', 'parade_secondary_title', 'parade_title'];
     $expected_types = ['Text (plain)', 'File', 'Link', 'Entity reference', 'Boolean', 'Text (plain, long)', 'Text (plain)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -283,7 +283,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Background', 'Background', 'Enable parallax', 'Minimum height', 'Text'];
-    $expected_machine_names = ['parade_anchor', 'parade_background', 'parade_image', 'field_enable_parallax', 'field_minimum_height', 'parade_text'];
+    $expected_machine_names = ['parade_anchor', 'parade_background', 'parade_image', 'parade_enable_parallax', 'field_minimum_height', 'parade_text'];
     $expected_types = ['Text (plain)', 'File', 'Image', 'Boolean', 'Number (integer)', 'Text (formatted, long)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);

@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_enable_parallax
+    - field.storage.paragraph.parade_enable_parallax
     - paragraphs.paragraphs_type.parallax
-id: paragraph.parallax.field_enable_parallax
-field_name: field_enable_parallax
+id: paragraph.parallax.parade_enable_parallax
+field_name: parade_enable_parallax
 entity_type: paragraph
 bundle: parallax
 label: 'Enable parallax'

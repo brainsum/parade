@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.header.parade_background
     - field.field.paragraph.header.parade_call_to_action
     - field.field.paragraph.header.parade_color_scheme
-    - field.field.paragraph.header.field_enable_parallax
+    - field.field.paragraph.header.parade_enable_parallax
     - field.field.paragraph.header.parade_lead_text
     - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
@@ -51,7 +51,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_enable_parallax:
+  parade_enable_parallax:
     weight: 7
     settings:
       display_label: true
