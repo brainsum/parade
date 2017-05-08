@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text_box.field_color_scheme
     - field.field.paragraph.text_box.field_image
     - field.field.paragraph.text_box.field_text
     - field.field.paragraph.text_box.field_title
-    - field.field.paragraph.text_box.parade_classes
     - image.style.thumbnail
     - paragraphs.paragraphs_type.text_box
   module:
@@ -16,6 +16,15 @@ targetEntityType: paragraph
 bundle: text_box
 mode: default
 content:
+  field_color_scheme:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_image:
     weight: 2
     settings:
@@ -39,15 +48,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  parade_classes:
-    weight: 0
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
     region: content
   translation:
     weight: 10

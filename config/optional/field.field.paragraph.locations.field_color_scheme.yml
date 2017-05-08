@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.parade_classes
-    - paragraphs.paragraphs_type.text_boxes
-id: paragraph.text_boxes.parade_classes
-field_name: parade_classes
+    - field.storage.paragraph.field_color_scheme
+    - paragraphs.paragraphs_type.locations
+id: paragraph.locations.field_color_scheme
+field_name: field_color_scheme
 entity_type: paragraph
-bundle: text_boxes
-label: Classes
+bundle: locations
+label: 'Color Scheme'
 description: ''
 required: false
 translatable: true

@@ -4,9 +4,9 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.simple.field_anchor
+    - field.field.paragraph.simple.field_color_scheme
     - field.field.paragraph.simple.field_text
     - field.field.paragraph.simple.field_title
-    - field.field.paragraph.simple.parade_classes
     - field.field.paragraph.simple.parade_view_mode
     - paragraphs.paragraphs_type.simple
 id: paragraph.simple.preview
@@ -25,7 +25,7 @@ content:
 hidden:
   created: true
   field_anchor: true
+  field_color_scheme: true
   field_text: true
-  parade_classes: true
   parade_view_mode: true
   uid: true

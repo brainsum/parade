@@ -4,9 +4,9 @@ dependencies:
   config:
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
+    - field.field.paragraph.text_boxes.field_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_title
-    - field.field.paragraph.text_boxes.parade_classes
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
@@ -37,6 +37,6 @@ hidden:
   created: true
   field_anchor: true
   field_boxes_per_row: true
-  parade_classes: true
+  field_color_scheme: true
   parade_view_mode: true
   uid: true

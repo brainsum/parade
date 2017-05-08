@@ -146,8 +146,8 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     $this->assertSession()->pageTextContains('Manage fields');
 
-    $expected_labels = ['Anchor', 'Background', 'Call to action', 'Classes', 'Enable parallax', 'Lead text', 'Secondary title', 'Title'];
-    $expected_machine_names = ['field_anchor', 'field_background', 'field_call_to_action', 'parade_classes', 'field_enable_parallax', 'field_lead_text', 'field_secondary_title', 'field_title'];
+    $expected_labels = ['Anchor', 'Background', 'Call to Action', 'Color Scheme', 'Enable Parallax', 'Lead text', 'Secondary title', 'Title'];
+    $expected_machine_names = ['field_anchor', 'field_background', 'field_call_to_action', 'field_color_scheme', 'field_enable_parallax', 'field_lead_text', 'field_secondary_title', 'field_title'];
     $expected_types = ['Text (plain)', 'File', 'Link', 'Entity reference', 'Boolean', 'Text (plain, long)', 'Text (plain)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);

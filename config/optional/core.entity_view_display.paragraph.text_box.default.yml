@@ -5,11 +5,11 @@ dependencies:
     - field.field.paragraph.text_box.field_image
     - field.field.paragraph.text_box.field_text
     - field.field.paragraph.text_box.field_title
-    - field.field.paragraph.text_box.parade_classes
     - paragraphs.paragraphs_type.text_box
   module:
     - image
     - text
+    - parade
 id: paragraph.text_box.default
 targetEntityType: paragraph
 bundle: text_box
@@ -23,14 +23,12 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
   field_text:
     weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
   field_title:
     weight: 0
     label: hidden
@@ -38,8 +36,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
 hidden:
   created: true
-  parade_classes: true
   uid: true
