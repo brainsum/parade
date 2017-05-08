@@ -293,11 +293,11 @@ function _parade_demo_create_demo_content() {
         ],
         [
           'uri' => 'internal:#simpletwocolumn',
-          'title' => 'Simple Two Col',
+          'title' => 'Simple Two Col Title First',
         ],
         [
-          'uri' => 'internal:#simple3',
-          'title' => 'Simple Two Col',
+          'uri' => 'internal:#simple5',
+          'title' => 'Simple Two Col Content First',
           'options' => [
             'attributes' => [
               'data-selected' => TRUE,
