@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_parade_onepage_menu
+    - field.storage.node.parade_onepage_menu
     - node.type.parade_onepage
-id: node.parade_onepage.field_parade_onepage_menu
-field_name: field_parade_onepage_menu
+id: node.parade_onepage.parade_onepage_menu
+field_name: parade_onepage_menu
 entity_type: node
 bundle: parade_onepage
 label: Menu

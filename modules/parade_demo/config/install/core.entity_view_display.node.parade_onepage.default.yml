@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.parade_onepage.parade_onepage_id
-    - field.field.node.parade_onepage.field_parade_onepage_menu
+    - field.field.node.parade_onepage.parade_onepage_menu
     - field.field.node.parade_onepage.field_parade_onepage_sections
     - node.type.parade_onepage
   enforced:
@@ -18,7 +18,7 @@ targetEntityType: node
 bundle: parade_onepage
 mode: default
 content:
-  field_parade_onepage_menu:
+  parade_onepage_menu:
     weight: 0
     label: hidden
     settings:

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.parade_onepage.parade_onepage_id
-    - field.field.node.parade_onepage.field_parade_onepage_menu
+    - field.field.node.parade_onepage.parade_onepage_menu
     - field.field.node.parade_onepage.field_parade_onepage_sections
     - node.type.parade_onepage
   module:
@@ -21,7 +21,7 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
-  field_parade_onepage_menu:
+  parade_onepage_menu:
     weight: 3
     settings:
       placeholder_url: 'Anchor or URL'
