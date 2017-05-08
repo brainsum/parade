@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_text.parade_anchor
-    - field.field.paragraph.image_text.field_call_to_action
+    - field.field.paragraph.image_text.parade_call_to_action
     - field.field.paragraph.image_text.parade_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.parade_text
@@ -30,7 +30,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_call_to_action:
+  parade_call_to_action:
     weight: 7
     settings:
       placeholder_url: 'Button URL'

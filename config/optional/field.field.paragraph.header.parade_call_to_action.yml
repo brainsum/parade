@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_call_to_action
+    - field.storage.paragraph.parade_call_to_action
     - paragraphs.paragraphs_type.header
   module:
     - link
-id: paragraph.header.field_call_to_action
-field_name: field_call_to_action
+id: paragraph.header.parade_call_to_action
+field_name: parade_call_to_action
 entity_type: paragraph
 bundle: header
 label: 'Call to action'

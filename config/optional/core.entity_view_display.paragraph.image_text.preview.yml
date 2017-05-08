@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.image_text.parade_anchor
-    - field.field.paragraph.image_text.field_call_to_action
+    - field.field.paragraph.image_text.parade_call_to_action
     - field.field.paragraph.image_text.parade_color_scheme
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.parade_text
@@ -28,7 +28,7 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_call_to_action: true
+  parade_call_to_action: true
   parade_color_scheme: true
   field_image: true
   parade_text: true

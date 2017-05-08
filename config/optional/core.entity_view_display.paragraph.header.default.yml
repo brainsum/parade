@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.header.parade_anchor
     - field.field.paragraph.header.field_background
-    - field.field.paragraph.header.field_call_to_action
+    - field.field.paragraph.header.parade_call_to_action
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
     - field.field.paragraph.header.field_secondary_title
@@ -18,7 +18,7 @@ targetEntityType: paragraph
 bundle: header
 mode: default
 content:
-  field_call_to_action:
+  parade_call_to_action:
     weight: 3
     label: hidden
     settings:
