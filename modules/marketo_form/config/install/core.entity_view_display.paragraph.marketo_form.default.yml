@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.marketo_form.parade_enable_confirm_message
     - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.parade_lead_text
-    - field.field.paragraph.marketo_form.field_marketo_form
+    - field.field.paragraph.marketo_form.parade_marketo_form
     - field.field.paragraph.marketo_form.parade_text
     - field.field.paragraph.marketo_form.parade_title
     - field.field.paragraph.marketo_form.parade_layout
@@ -41,7 +41,7 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_marketo_form:
+  parade_marketo_form:
     weight: 3
     label: hidden
     settings: {  }
