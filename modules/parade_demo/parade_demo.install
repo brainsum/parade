@@ -56,6 +56,36 @@ function _parade_demo_create_demo_layout() {
       'id' => 'layout_text_1st',
       'classes' => 'layout--text_1st',
     ],
+    [
+      'label' => 'Layout image first',
+      'id' => 'layout_image_1st',
+      'classes' => 'layout--image_1st',
+    ],
+    [
+      'label' => 'Layout none',
+      'id' => 'layout_none',
+      'classes' => 'layout--none',
+    ],
+    [
+      'label' => 'Layout rounded image',
+      'id' => 'layout_rounded_image',
+      'classes' => 'layout--rounded_image',
+    ],
+    [
+      'label' => 'Layout separator title only',
+      'id' => 'layout_separator_clean',
+      'classes' => 'layout--separator-clean',
+    ],
+    [
+      'label' => 'Layout text first - enhanced',
+      'id' => 'layout_text_1st_enhanced',
+      'classes' => 'layout--text_1st_enhanced',
+    ],
+    [
+      'label' => 'Layout text with an icon',
+      'id' => 'layout_text_with_an_icon',
+      'classes' => 'layout--text_icon',
+    ],
   ];
 
   foreach ($layouts as $layout) {
@@ -65,7 +95,7 @@ function _parade_demo_create_demo_layout() {
 }
 
 /**
- * Helper function to create demo layouts.
+ * Helper function to create demo color schemes.
  */
 function _parade_demo_create_demo_color_schemes() {
   $entityTypeManager = \Drupal::entityTypeManager();
