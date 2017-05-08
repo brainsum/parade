@@ -3436,28 +3436,28 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+.paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title,
 .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
   font-size: 1em;
   margin-bottom: .5em;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+  .paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title,
   .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
     font-size: 1.2em;
   }
 }
 
 @media (min-width: 1200px) {
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title,
+  .paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title,
   .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
     font-size: 1.5em;
   }
 }
 
 .paragraph--type--header.paragraph--view-mode--default .paragraph__title,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-secondary-title {
+.paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title {
   line-height: normal;
 }
 
