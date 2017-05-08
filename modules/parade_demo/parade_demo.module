@@ -18,7 +18,7 @@ function parade_demo_theme($existing, $type, $theme, $path) {
     'page__node__parade_onepage' => [
       'base hook' => 'page',
     ],
-    'field__node__field_parade_onepage_sections__parade_onepage' => [
+    'field__node__parade_onepage_sections__parade_onepage' => [
       'base hook' => 'field',
     ],
     'field__paragraph__parade_title' => [
@@ -64,16 +64,16 @@ function parade_demo_form_alter(&$form, FormStateInterface $form_state, $form_id
     $form['parade_onepage_menu']['widget']['add_more']['#value'] = t('Add menu link');
 
     // Modify the Paragraphs field.
-    if (isset($form['field_parade_onepage_sections'])) {
+    if (isset($form['parade_onepage_sections'])) {
       $form['#attached']['library'][] = 'parade/buttons';
 
-      foreach ($form['field_parade_onepage_sections']['widget']['add_more'] as $key => $item) {
+      foreach ($form['parade_onepage_sections']['widget']['add_more'] as $key => $item) {
         if (strpos($key, 'add_more') === FALSE) {
           continue;
         }
         $type = Html::getClass($item['#bundle_machine_name']);
-        $form['field_parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
-        $form['field_parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+        $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
+        $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
       }
     }
   }
@@ -88,7 +88,7 @@ function parade_demo_field_widget_form_alter(&$element, FormStateInterface $form
   $field_name = $context['items']->getFieldDefinition()->getName();
 
   // Change dropbuttons to normal list in Paragraphs inline forms.
-  if ($field_name === 'field_parade_onepage_sections') {
+  if ($field_name === 'parade_onepage_sections') {
     unset($element['top']['links']['#theme_wrappers']);
     $element['top']['links']['prefix']['#markup'] = '<ul class="parade-actions">';
   }

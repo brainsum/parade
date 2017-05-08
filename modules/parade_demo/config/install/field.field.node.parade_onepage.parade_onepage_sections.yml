@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_parade_onepage_sections
+    - field.storage.node.parade_onepage_sections
     - node.type.parade_onepage
   module:
     - entity_reference_revisions
-id: node.parade_onepage.field_parade_onepage_sections
-field_name: field_parade_onepage_sections
+id: node.parade_onepage.parade_onepage_sections
+field_name: parade_onepage_sections
 entity_type: node
 bundle: parade_onepage
 label: Sections

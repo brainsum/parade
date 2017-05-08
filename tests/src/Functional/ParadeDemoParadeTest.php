@@ -136,7 +136,7 @@ class ParadeDemoParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Machine name', 'Menu', 'Sections'];
-    $expected_machine_names = ['parade_onepage_id', 'parade_onepage_menu', 'field_parade_onepage_sections'];
+    $expected_machine_names = ['parade_onepage_id', 'parade_onepage_menu', 'parade_onepage_sections'];
     $expected_types = ['Machine name', 'Link', 'Entity reference revisions'];
 
     $this->FieldLabels($expected_labels);
@@ -152,7 +152,7 @@ class ParadeDemoParadeTest extends BrowserTestBase {
     $expected_labels = ['- Hidden -', '- Hidden -', 'Above'];
     $expected_formats = ['Link', 'Rendered entity', '- Hidden -', '- Hidden -'];
     $expected_plugin_summarys = ['Link text trimmed to 80 characters', 'Rendered as Default'];
-    $expected_settings_button_names = [' name="parade_onepage_menu_settings_edit"', ' name="field_parade_onepage_sections_settings_edit"'];
+    $expected_settings_button_names = [' name="parade_onepage_menu_settings_edit"', ' name="parade_onepage_sections_settings_edit"'];
 
     $this->DisplayFields($expected_fields);
     $this->DisplayLabels($expected_labels);
@@ -188,12 +188,12 @@ class ParadeDemoParadeTest extends BrowserTestBase {
 
 //     //////     //div[@class='paragraphs-dropbutton-wrapper']/input/@name
 //     //Add text box - css diplay none
-//     // Attribute='name=field_parade_onepage_sections_header_add_more'
-//     // Attribute='name=field_parade_onepage_sections_images_add_more'
-//     // Attribute='name=field_parade_onepage_sections_image_text_add_more'
-//     // Attribute='name=field_parade_onepage_sections_locations_add_more'
-//     // Attribute='name=field_parade_onepage_sections_simple_add_more'
-//     // Attribute='name=field_parade_onepage_sections_text_box_add_more'
-//     // Attribute='name=field_parade_onepage_sections_text_boxes_add_more'
+//     // Attribute='name=parade_onepage_sections_header_add_more'
+//     // Attribute='name=parade_onepage_sections_images_add_more'
+//     // Attribute='name=parade_onepage_sections_image_text_add_more'
+//     // Attribute='name=parade_onepage_sections_locations_add_more'
+//     // Attribute='name=parade_onepage_sections_simple_add_more'
+//     // Attribute='name=parade_onepage_sections_text_box_add_more'
+//     // Attribute='name=parade_onepage_sections_text_boxes_add_more'
 //   }
 }

@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.node.parade_onepage.parade_onepage_id
     - field.field.node.parade_onepage.parade_onepage_menu
-    - field.field.node.parade_onepage.field_parade_onepage_sections
+    - field.field.node.parade_onepage.parade_onepage_sections
     - node.type.parade_onepage
   enforced:
     module:
@@ -30,7 +30,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_parade_onepage_sections:
+  parade_onepage_sections:
     weight: 1
     label: hidden
     settings:

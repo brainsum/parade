@@ -8,8 +8,8 @@ dependencies:
   enforced:
     module:
       - parade_demo
-id: node.field_parade_onepage_sections
-field_name: field_parade_onepage_sections
+id: node.parade_onepage_sections
+field_name: parade_onepage_sections
 entity_type: node
 type: entity_reference_revisions
 settings:

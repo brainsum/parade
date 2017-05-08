@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.node.parade_onepage.parade_onepage_id
     - field.field.node.parade_onepage.parade_onepage_menu
-    - field.field.node.parade_onepage.field_parade_onepage_sections
+    - field.field.node.parade_onepage.parade_onepage_sections
     - node.type.parade_onepage
   module:
     - parade
@@ -28,7 +28,7 @@ content:
       placeholder_title: 'Link text'
     third_party_settings: {  }
     type: link_with_selected_attribute
-  field_parade_onepage_sections:
+  parade_onepage_sections:
     type: entity_reference_paragraphs_preview
     weight: 26
     settings:
