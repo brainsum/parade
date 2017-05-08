@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.locations.parade_anchor
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
-    - field.field.paragraph.locations.field_text
+    - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
 id: paragraph.locations.preview
@@ -32,5 +32,5 @@ hidden:
   created: true
   field_geofield: true
   field_location: true
-  field_text: true
+  parade_text: true
   uid: true

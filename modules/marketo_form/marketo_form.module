@@ -48,8 +48,8 @@ function marketo_form_preprocess_field__field_marketo_form(&$variables) {
 
   // Get the field's raw value and format.
   list($markup, $format) = [
-    $element->field_text->value,
-    $element->field_text->format,
+    $element->parade_text->value,
+    $element->parade_text->format,
   ];
 
   if (isset($markup) && isset($format)) {

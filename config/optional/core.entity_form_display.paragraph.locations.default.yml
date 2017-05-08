@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.locations.parade_color_scheme
     - field.field.paragraph.locations.field_geofield
     - field.field.paragraph.locations.field_location
-    - field.field.paragraph.locations.field_text
+    - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
   module:
@@ -43,7 +43,7 @@ content:
     third_party_settings: {  }
     type: geocoder_autocomplete
     region: content
-  field_text:
+  parade_text:
     weight: 3
     settings:
       rows: 5

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text
+    - field.storage.paragraph.parade_text
     - paragraphs.paragraphs_type.marketo_form
   module:
     - text
@@ -10,8 +10,8 @@ dependencies:
   enforced:
     module:
       - marketo_form
-id: paragraph.marketo_form.field_text
-field_name: field_text
+id: paragraph.marketo_form.parade_text
+field_name: parade_text
 entity_type: paragraph
 bundle: marketo_form
 label: 'Confirmation message'

@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text
-    - paragraphs.paragraphs_type.parallax
+    - field.storage.paragraph.parade_text
+    - paragraphs.paragraphs_type.simple
   module:
     - text
-id: paragraph.parallax.field_text
-field_name: field_text
+id: paragraph.simple.parade_text
+field_name: parade_text
 entity_type: paragraph
-bundle: parallax
-label: Text
+bundle: simple
+label: Content
 description: ''
 required: false
 translatable: true

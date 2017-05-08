@@ -241,7 +241,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Color scheme', 'Geofield', 'Map markers', 'Text', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'field_geofield', 'field_location', 'field_text', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'field_geofield', 'field_location', 'parade_text', 'parade_title'];
     $expected_types = ['Text (plain)', 'Entity reference', 'Geofield', 'Text (plain)', 'Text (formatted, long)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -283,7 +283,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Background', 'Background', 'Enable parallax', 'Minimum height', 'Text'];
-    $expected_machine_names = ['parade_anchor', 'field_background', 'field_image', 'field_enable_parallax', 'field_minimum_height', 'field_text'];
+    $expected_machine_names = ['parade_anchor', 'field_background', 'field_image', 'field_enable_parallax', 'field_minimum_height', 'parade_text'];
     $expected_types = ['Text (plain)', 'File', 'Image', 'Boolean', 'Number (integer)', 'Text (formatted, long)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -310,7 +310,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Color scheme', 'Content', 'Layout', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'field_text', 'field_simple_layout', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'parade_text', 'field_simple_layout', 'parade_title'];
     $expected_types = ['Text (plain)', 'Entity reference', 'Text (formatted, long)', 'List (integer)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -354,7 +354,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Call to action', 'Color scheme', 'Image', 'Layout', 'Text', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'field_call_to_action', 'parade_color_scheme', 'field_image', 'field_image_text_layout', 'field_text', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'field_call_to_action', 'parade_color_scheme', 'field_image', 'field_image_text_layout', 'parade_text', 'parade_title'];
     $expected_types = ['Text (plain)', 'Link', 'Entity reference', 'Image', 'List (integer)', 'Text (formatted, long)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -400,7 +400,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Color scheme', 'Image', 'Text', 'Title'];
-    $expected_machine_names = ['parade_color_scheme', 'field_image', 'field_text', 'parade_title'];
+    $expected_machine_names = ['parade_color_scheme', 'field_image', 'parade_text', 'parade_title'];
     $expected_types = ['Entity reference', 'Image', 'Text (formatted, long)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -463,7 +463,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Boxes', 'Boxes per row', 'Color scheme', 'Layout', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'field_paragraphs', 'field_boxes_per_row', 'parade_color_scheme', 'field_text_boxes_layout', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'field_paragraphs', 'field_boxes_per_row', 'parade_color_scheme', 'parade_text_boxes_layout', 'parade_title'];
     $expected_types = ['Text (plain)', 'Entity reference revisions', 'Number (integer)', 'Entity reference', 'List (integer)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);

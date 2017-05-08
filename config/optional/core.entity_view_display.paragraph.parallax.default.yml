@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.parallax.field_enable_parallax
     - field.field.paragraph.parallax.field_image
     - field.field.paragraph.parallax.field_minimum_height
-    - field.field.paragraph.parallax.field_text
+    - field.field.paragraph.parallax.parade_text
     - paragraphs.paragraphs_type.parallax
   module:
     - text
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: parallax
 mode: default
 content:
-  field_text:
+  parade_text:
     weight: 3
     label: hidden
     settings: {  }

@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.image_text.field_call_to_action
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_image_text_layout
-    - field.field.paragraph.image_text.field_text
+    - field.field.paragraph.image_text.parade_text
     - field.field.paragraph.image_text.parade_title
     - image.style.parade_text_and_image
     - paragraphs.paragraphs_type.image_text
@@ -40,7 +40,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_text:
+  parade_text:
     weight: 4
     label: hidden
     settings: {  }

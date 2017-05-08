@@ -8,7 +8,7 @@ dependencies:
     - field.field.paragraph.marketo_form.field_image
     - field.field.paragraph.marketo_form.field_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
-    - field.field.paragraph.marketo_form.field_text
+    - field.field.paragraph.marketo_form.parade_text
     - field.field.paragraph.marketo_form.parade_title
     - field.field.paragraph.marketo_form.parade_layout
     - image.style.thumbnail
@@ -71,7 +71,7 @@ content:
     third_party_settings: {  }
     type: marketo_form
     region: content
-  field_text:
+  parade_text:
     weight: 8
     settings:
       rows: 3
