@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.parade_onepage.field_parade_onepage_id
+    - field.field.node.parade_onepage.parade_onepage_id
     - field.field.node.parade_onepage.field_parade_onepage_menu
     - field.field.node.parade_onepage.field_parade_onepage_sections
     - node.type.parade_onepage
@@ -40,5 +40,5 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
-  field_parade_onepage_id: true
+  parade_onepage_id: true
   links: true

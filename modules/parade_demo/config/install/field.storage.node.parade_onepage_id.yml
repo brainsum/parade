@@ -8,8 +8,8 @@ dependencies:
   enforced:
     module:
       - parade_demo
-id: node.field_parade_onepage_id
-field_name: field_parade_onepage_id
+id: node.parade_onepage_id
+field_name: parade_onepage_id
 entity_type: node
 type: machine_name
 settings: {  }

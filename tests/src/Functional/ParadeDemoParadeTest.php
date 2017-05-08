@@ -136,7 +136,7 @@ class ParadeDemoParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Machine name', 'Menu', 'Sections'];
-    $expected_machine_names = ['field_parade_onepage_id', 'field_parade_onepage_menu', 'field_parade_onepage_sections'];
+    $expected_machine_names = ['parade_onepage_id', 'field_parade_onepage_menu', 'field_parade_onepage_sections'];
     $expected_types = ['Machine name', 'Link', 'Entity reference revisions'];
 
     $this->FieldLabels($expected_labels);
