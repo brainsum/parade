@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_color_scheme
-    - paragraphs.paragraphs_type.marketo_form
-id: paragraph.marketo_form.field_color_scheme
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.field_color_scheme
 field_name: field_color_scheme
 entity_type: paragraph
-bundle: marketo_form
+bundle: header
 label: 'Color scheme'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

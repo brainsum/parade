@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.header.field_anchor
     - field.field.paragraph.header.field_background
     - field.field.paragraph.header.field_call_to_action
-    - field.field.paragraph.header.parade_classes
+    - field.field.paragraph.header.field_color_scheme
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
     - field.field.paragraph.header.field_secondary_title
@@ -20,7 +20,7 @@ bundle: header
 mode: default
 content:
   field_anchor:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -42,15 +42,15 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  parade_classes:
-    weight: 1
+  field_color_scheme:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   field_enable_parallax:
     weight: 7
     settings:

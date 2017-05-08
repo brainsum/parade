@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.simple.field_anchor
     - field.field.paragraph.simple.field_color_scheme
+    - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.field_text
     - field.field.paragraph.simple.field_title
     - field.field.paragraph.simple.parade_view_mode
@@ -34,5 +35,6 @@ hidden:
   created: true
   field_anchor: true
   field_color_scheme: true
+  parade_layout: true
   parade_view_mode: true
   uid: true

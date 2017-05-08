@@ -9,6 +9,8 @@ dependencies:
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
     - field.field.paragraph.image_text.field_title
+    - field.field.paragraph.image_text.parade_layout
+    - field.field.paragraph.image_text.parade_view_mode
     - paragraphs.paragraphs_type.image_text
 id: paragraph.image_text.preview
 targetEntityType: paragraph
@@ -30,4 +32,6 @@ hidden:
   field_color_scheme: true
   field_image: true
   field_text: true
+  parade_layout: true
+  parade_view_mode: true
   uid: true

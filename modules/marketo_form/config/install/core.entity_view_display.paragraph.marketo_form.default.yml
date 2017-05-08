@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.marketo_form.field_marketo_form
     - field.field.paragraph.marketo_form.field_text
     - field.field.paragraph.marketo_form.field_title
+    - field.field.paragraph.marketo_form.parade_layout
     - image.style.whitepaper_a4
     - paragraphs.paragraphs_type.marketo_form
   enforced:
@@ -67,4 +68,5 @@ hidden:
   field_anchor: true
   field_color_scheme: true
   field_enable_confirm_message: true
+  parade_layout: true
   uid: true

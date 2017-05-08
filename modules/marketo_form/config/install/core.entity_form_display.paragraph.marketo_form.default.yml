@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.marketo_form.field_marketo_form
     - field.field.paragraph.marketo_form.field_text
     - field.field.paragraph.marketo_form.field_title
+    - field.field.paragraph.marketo_form.parade_layout
     - image.style.thumbnail
     - paragraphs.paragraphs_type.marketo_form
   enforced:
@@ -33,7 +34,7 @@ content:
     type: string_textfield
     region: content
   field_color_scheme:
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -42,14 +43,14 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_enable_confirm_message:
-    weight: 6
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_image:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -57,7 +58,7 @@ content:
     type: image_image
     region: content
   field_lead_text:
-    weight: 4
+    weight: 5
     settings:
       rows: 3
       placeholder: ''
@@ -65,13 +66,13 @@ content:
     type: string_textarea
     region: content
   field_marketo_form:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: marketo_form
     region: content
   field_text:
-    weight: 7
+    weight: 8
     settings:
       rows: 3
       placeholder: ''
@@ -79,12 +80,21 @@ content:
     type: text_textarea
     region: content
   field_title:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  parade_layout:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
 hidden:
   created: true

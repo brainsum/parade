@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.text_boxes.field_color_scheme
     - field.field.paragraph.text_boxes.field_paragraphs
     - field.field.paragraph.text_boxes.field_title
+    - field.field.paragraph.text_boxes.parade_layout
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
@@ -26,7 +27,7 @@ content:
     type: string_textfield
     region: content
   field_boxes_per_row:
-    weight: 3
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -34,7 +35,7 @@ content:
     region: content
   field_color_scheme:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -43,7 +44,7 @@ content:
     third_party_settings: {  }
   field_paragraphs:
     type: entity_reference_paragraphs_preview
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -54,12 +55,21 @@ content:
     third_party_settings: {  }
     region: content
   field_title:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  parade_layout:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   parade_view_mode:
     weight: 1

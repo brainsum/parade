@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_color_scheme
-    - paragraphs.paragraphs_type.simple
-id: paragraph.simple.field_color_scheme
-field_name: field_color_scheme
+    - field.storage.paragraph.parade_layout
+    - paragraphs.paragraphs_type.marketo_form
+id: paragraph.marketo_form.parade_layout
+field_name: parade_layout
 entity_type: paragraph
-bundle: simple
-label: 'Color scheme'
+bundle: marketo_form
+label: Layout
 description: ''
 required: false
 translatable: true
