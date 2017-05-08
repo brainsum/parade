@@ -3189,9 +3189,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
     width: 60.666%;
   }
@@ -3208,7 +3208,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-text, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text {
   text-align: justify;
 }
 
@@ -3220,7 +3220,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
     float: right;
   }
@@ -3252,13 +3252,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-text {
   padding: 2em;
   background: #53B0EB;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-text {
     padding-right: 4em;
     width: 60%;
   }
@@ -3301,9 +3301,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
     width: 60.666%;
   }
@@ -3320,7 +3320,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text {
   text-align: justify;
 }
 
@@ -3332,9 +3332,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
     float: left;
   }
@@ -3366,13 +3366,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-text {
   padding: 2em;
   background: #53B0EB;
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-text {
     padding-right: 4em;
     width: 60%;
   }
@@ -3595,13 +3595,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title,
-.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
+.paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-parade-text {
   color: white;
 }
 
 @media (min-width: 767px) {
   .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .paragraph__title,
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-parade-text {
     width: 50%;
   }
 }
@@ -3630,7 +3630,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
     text-align: left;
     padding-right: 20px;
   }
-  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-field-text {
+  .paragraph--type--simple.paragraph--view-mode--default.layout--two-column-title-1st-inverse .field--name-parade-text {
     float: right;
   }
 }
@@ -3640,13 +3640,13 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title,
-.paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-field-text {
+.paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-parade-text {
   color: white;
 }
 
 @media (min-width: 767px) {
   .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .paragraph__title,
-  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-field-text {
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-parade-text {
     width: 50%;
   }
 }
@@ -3675,7 +3675,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
     text-align: right;
     padding-left: 20px;
   }
-  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-field-text {
+  .paragraph--type--simple.paragraph--view-mode--inverse.layout--two-column-content-1st-inverse .field--name-parade-text {
     float: left;
   }
 }
@@ -3714,7 +3714,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--parallax.paragraph--view-mode--default .field--name-field-text {
+.paragraph--type--parallax.paragraph--view-mode--default .field--name-parade-text {
   font-size: 1.2em;
 }
 
@@ -3797,10 +3797,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-text,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-text,
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-call-to-action,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-text,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-call-to-action {
   width: 66%;
   float: right;
@@ -4033,14 +4033,14 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-title,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-lead-text,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-marketo-form,
-  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-text {
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-text {
     width: 50%;
     float: left;
     clear: left;
   }
 }
 
-.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-text {
+.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-text {
   display: none;
 }
 

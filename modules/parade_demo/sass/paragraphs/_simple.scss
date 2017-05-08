@@ -25,7 +25,7 @@
   &.layout--two-column-title-1st-inverse {
     background: $parade-dark-blue;
     .paragraph__title,
-    .field--name-field-text {
+    .field--name-parade-text {
       color: white;
       @include md {
         width: 50%;
@@ -45,7 +45,7 @@
         text-align: left;
         padding-right: 20px;
       }
-      .field--name-field-text {
+      .field--name-parade-text {
         float: right;
       }
     }
@@ -57,7 +57,7 @@
   &.layout--two-column-content-1st-inverse {
     background: $parade-dark-blue;
     .paragraph__title,
-    .field--name-field-text {
+    .field--name-parade-text {
       color: white;
       @include md {
         width: 50%;
@@ -77,7 +77,7 @@
         text-align: right;
         padding-left: 20px;
       }
-      .field--name-field-text {
+      .field--name-parade-text {
         float: left;
       }
     }

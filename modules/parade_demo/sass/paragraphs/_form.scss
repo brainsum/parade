@@ -22,7 +22,7 @@
   .field--name-parade-title,
   .field--name-field-lead-text,
   .field--name-field-marketo-form,
-  .field--name-field-text {
+  .field--name-parade-text {
     @include md {
       width: 50%;
       float: left;
@@ -31,7 +31,7 @@
   }
 
   // Display thank you message later.
-  .field--name-field-text {
+  .field--name-parade-text {
     display: none;
   }
 

@@ -12,9 +12,9 @@
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-field-text,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-text {
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text {
   float: right;
   width: 66%;
 }
@@ -25,8 +25,8 @@
   margin-top: 0;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-field-text,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-text {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text {
   padding: 0 15px;
 }
 
@@ -55,9 +55,9 @@
     margin: 0 auto;
   }
   .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-field-text,
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text,
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-field-text {
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text {
     float: none;
     width: 100%;
   }

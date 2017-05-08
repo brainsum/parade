@@ -1,7 +1,7 @@
 .paragraph--type--simple.paragraph--view-mode--inverse {
   &.layout--two-column-title-1st-inverse {
     .field--name-parade-title,
-    .field--name-field-text {
+    .field--name-parade-text {
       @media screen and (min-width: 768px) {
         width: 50%;
       }
@@ -14,7 +14,7 @@
         float: left;
         text-align: left;
       }
-      .field--name-field-text {
+      .field--name-parade-text {
         float: right;
       }
     }
@@ -26,7 +26,7 @@
   // Inverse layout
   &.layout--two-column-content-1st-inverse {
     .field--name-parade-title,
-    .field--name-field-text {
+    .field--name-parade-text {
       @media screen and (min-width: 768px) {
         width: 50%;
       }
@@ -39,7 +39,7 @@
         float: right;
         text-align: right;
       }
-      .field--name-field-text {
+      .field--name-parade-text {
         float: left;
       }
     }

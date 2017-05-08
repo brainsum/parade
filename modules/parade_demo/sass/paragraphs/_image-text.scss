@@ -40,7 +40,7 @@
     }
 
     .field--name-parade-title,
-    .field--name-field-text,
+    .field--name-parade-text,
     .field--name-field-call-to-action {
       @include md {
         width: 60.666%;
@@ -55,7 +55,7 @@
       }
     }
 
-    .field--name-field-text {
+    .field--name-parade-text {
       text-align: justify;
     }
 
@@ -71,7 +71,7 @@
     @include md {
       // Title and Text
       .field--name-parade-title,
-      .field--name-field-text,
+      .field--name-parade-text,
       .field--name-field-call-to-action{
         float: right;
       }
@@ -98,7 +98,7 @@
     }
 
     // Text
-    .field--name-field-text {
+    .field--name-parade-text {
       padding: 2em;
       background: $parade-lightblue;
 
@@ -149,7 +149,7 @@
     }
 
     .field--name-parade-title,
-    .field--name-field-text,
+    .field--name-parade-text,
     .field--name-field-call-to-action {
       @include md {
         width: 60.666%;
@@ -164,7 +164,7 @@
       }
     }
 
-    .field--name-field-text {
+    .field--name-parade-text {
       text-align: justify;
     }
 
@@ -182,7 +182,7 @@
     @include md {
       // Title and Text
       .field--name-parade-title,
-      .field--name-field-text,
+      .field--name-parade-text,
       .field--name-field-call-to-action {
         float: left;
       }
@@ -209,7 +209,7 @@
     }
 
     // Text
-    .field--name-field-text {
+    .field--name-parade-text {
       padding: 2em;
       background: $parade-lightblue;
 

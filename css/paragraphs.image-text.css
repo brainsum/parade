@@ -1,14 +1,14 @@
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
     width: calc(50% - 0.8em);
   }
@@ -32,12 +32,12 @@
 
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-field-text,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text {
     text-align: left;
   }
 }
@@ -71,7 +71,7 @@
 
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text {
     float: left;
   }
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
@@ -80,12 +80,12 @@
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-text {
   padding: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-text {
     width: 60%;
     padding-right: 4em;
   }
@@ -122,7 +122,7 @@
 
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text {
     float: right;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
@@ -135,12 +135,12 @@
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-text {
   padding: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-text {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-text {
     width: 60%;
     padding-right: 4em;
   }

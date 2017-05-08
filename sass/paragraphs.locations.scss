@@ -2,7 +2,7 @@
 .paragraph--type--locations.paragraph--view-mode--default {
     &.layout--none {
         .field--name-parade-title,
-        .field--name-field-text,
+        .field--name-parade-text,
         .field--name-field-geofield {
             @media (min-width: 767px) {
                 width: 50%;
@@ -20,7 +20,7 @@
 
         @media (min-width: 767px) {
             .field--name-parade-title,
-            .field--name-field-text {
+            .field--name-parade-text {
                 text-align: left;
                 float: left;
             }
