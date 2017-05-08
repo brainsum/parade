@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
     - field.field.paragraph.marketo_form.field_enable_confirm_message
-    - field.field.paragraph.marketo_form.field_image
+    - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.field_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
     - field.field.paragraph.marketo_form.parade_text
@@ -49,7 +49,7 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_image:
+  parade_image:
     weight: 3
     settings:
       progress_indicator: throbber

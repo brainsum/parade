@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.custom
     - field.field.paragraph.text_box.parade_color_scheme
-    - field.field.paragraph.text_box.field_image
+    - field.field.paragraph.text_box.parade_image
     - field.field.paragraph.text_box.parade_text
     - field.field.paragraph.text_box.parade_title
     - field.field.paragraph.text_box.parade_layout
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: text_box
 mode: custom
 content:
-  field_image:
+  parade_image:
     weight: 0
     label: hidden
     settings:

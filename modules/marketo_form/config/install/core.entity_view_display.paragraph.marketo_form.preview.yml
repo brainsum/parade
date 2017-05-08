@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
     - field.field.paragraph.marketo_form.field_enable_confirm_message
-    - field.field.paragraph.marketo_form.field_image
+    - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.field_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
     - field.field.paragraph.marketo_form.parade_text
@@ -41,7 +41,7 @@ hidden:
   created: true
   parade_color_scheme: true
   field_enable_confirm_message: true
-  field_image: true
+  parade_image: true
   field_lead_text: true
   field_marketo_form: true
   parade_text: true

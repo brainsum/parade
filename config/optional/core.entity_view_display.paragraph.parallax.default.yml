@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.parallax.parade_anchor
     - field.field.paragraph.parallax.field_background
     - field.field.paragraph.parallax.field_enable_parallax
-    - field.field.paragraph.parallax.field_image
+    - field.field.paragraph.parallax.parade_image
     - field.field.paragraph.parallax.field_minimum_height
     - field.field.paragraph.parallax.parade_text
     - paragraphs.paragraphs_type.parallax
@@ -28,6 +28,6 @@ hidden:
   parade_anchor: true
   field_background: true
   field_enable_parallax: true
-  field_image: true
+  parade_image: true
   field_minimum_height: true
   uid: true

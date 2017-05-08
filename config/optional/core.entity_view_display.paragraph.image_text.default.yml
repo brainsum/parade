@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.parade_call_to_action
     - field.field.paragraph.image_text.parade_color_scheme
-    - field.field.paragraph.image_text.field_image
+    - field.field.paragraph.image_text.parade_image
     - field.field.paragraph.image_text.parade_text
     - field.field.paragraph.image_text.parade_title
     - field.field.paragraph.image_text.parade_layout
@@ -32,7 +32,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_image:
+  parade_image:
     weight: 1
     label: hidden
     settings:

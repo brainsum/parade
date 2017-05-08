@@ -1,12 +1,12 @@
-enforced: en
+langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
     - paragraphs
-id: paragraph.field_image
-field_name: field_image
+id: paragraph.parade_image
+field_name: parade_image
 entity_type: paragraph
 type: image
 settings:

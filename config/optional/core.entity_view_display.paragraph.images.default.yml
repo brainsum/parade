@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.images.parade_anchor
-    - field.field.paragraph.images.field_images
+    - field.field.paragraph.images.parade_images
     - field.field.paragraph.images.parade_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.images
@@ -15,7 +15,7 @@ targetEntityType: paragraph
 bundle: images
 mode: default
 content:
-  field_images:
+  parade_images:
     weight: 1
     label: hidden
     settings:

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_box.parade_color_scheme
-    - field.field.paragraph.text_box.field_image
+    - field.field.paragraph.text_box.parade_image
     - field.field.paragraph.text_box.parade_text
     - field.field.paragraph.text_box.parade_title
     - field.field.paragraph.text_box.parade_layout
@@ -26,7 +26,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_image:
+  parade_image:
     weight: 3
     settings:
       progress_indicator: throbber

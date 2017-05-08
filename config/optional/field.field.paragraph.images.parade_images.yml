@@ -1,23 +1,23 @@
-langcode: en
+enforced: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.text_box
+    - field.storage.paragraph.parade_images
+    - paragraphs.paragraphs_type.images
   module:
     - image
-id: paragraph.text_box.field_image
-field_name: field_image
+id: paragraph.images.parade_images
+field_name: parade_images
 entity_type: paragraph
-bundle: text_box
-label: Image
+bundle: images
+label: Images
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'image/box/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'images/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

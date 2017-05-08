@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.images.parade_anchor
     - field.field.paragraph.images.parade_color_scheme
-    - field.field.paragraph.images.field_images
+    - field.field.paragraph.images.parade_images
     - field.field.paragraph.images.parade_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.images
@@ -32,7 +32,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_images:
+  parade_images:
     weight: 3
     settings:
       progress_indicator: throbber

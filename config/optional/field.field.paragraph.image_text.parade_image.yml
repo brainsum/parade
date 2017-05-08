@@ -2,22 +2,22 @@ enforced: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_images
-    - paragraphs.paragraphs_type.images
+    - field.storage.paragraph.parade_image
+    - paragraphs.paragraphs_type.image_text
   module:
     - image
-id: paragraph.images.field_images
-field_name: field_images
+id: paragraph.image_text.parade_image
+field_name: parade_image
 entity_type: paragraph
-bundle: images
-label: Images
+bundle: image_text
+label: Image
 description: ''
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'images/[date:custom:Y]-[date:custom:m]'
+  file_directory: 'image/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

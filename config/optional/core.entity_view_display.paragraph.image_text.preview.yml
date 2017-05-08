@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.parade_call_to_action
     - field.field.paragraph.image_text.parade_color_scheme
-    - field.field.paragraph.image_text.field_image
+    - field.field.paragraph.image_text.parade_image
     - field.field.paragraph.image_text.parade_text
     - field.field.paragraph.image_text.parade_title
     - field.field.paragraph.image_text.parade_layout
@@ -30,7 +30,7 @@ hidden:
   parade_anchor: true
   parade_call_to_action: true
   parade_color_scheme: true
-  field_image: true
+  parade_image: true
   parade_text: true
   parade_layout: true
   parade_view_mode: true

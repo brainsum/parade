@@ -2,28 +2,32 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.parallax
+    - field.storage.paragraph.parade_image
+    - paragraphs.paragraphs_type.marketo_form
   module:
     - image
-id: paragraph.parallax.field_image
-field_name: field_image
+    - marketo_form
+  enforced:
+    module:
+      - marketo_form
+id: paragraph.marketo_form.parade_image
+field_name: parade_image
 entity_type: paragraph
-bundle: parallax
-label: Background
-description: ''
+bundle: marketo_form
+label: Cover
+description: 'Upload an image of the attached whitepaper.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'image/background/[date:custom:Y]-[date:custom:m]'
+  file_directory: paragraphs/whitepapers
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
-  alt_field_required: false
+  alt_field: true
+  alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:

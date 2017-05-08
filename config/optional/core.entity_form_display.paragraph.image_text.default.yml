@@ -5,7 +5,7 @@ dependencies:
     - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.parade_call_to_action
     - field.field.paragraph.image_text.parade_color_scheme
-    - field.field.paragraph.image_text.field_image
+    - field.field.paragraph.image_text.parade_image
     - field.field.paragraph.image_text.parade_text
     - field.field.paragraph.image_text.parade_title
     - field.field.paragraph.image_text.parade_layout
@@ -47,7 +47,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_image:
+  parade_image:
     weight: 5
     settings:
       progress_indicator: throbber

@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.text_box.parade_color_scheme
-    - field.field.paragraph.text_box.field_image
+    - field.field.paragraph.text_box.parade_image
     - field.field.paragraph.text_box.parade_text
     - field.field.paragraph.text_box.parade_title
     - field.field.paragraph.text_box.parade_layout
@@ -25,7 +25,7 @@ content:
 hidden:
   created: true
   parade_color_scheme: true
-  field_image: true
+  parade_image: true
   parade_text: true
   parade_layout: true
   uid: true

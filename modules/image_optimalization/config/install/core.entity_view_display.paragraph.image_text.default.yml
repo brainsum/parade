@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.field.paragraph.image_text.parade_anchor
     - field.field.paragraph.image_text.parade_call_to_action
-    - field.field.paragraph.image_text.field_image
-    - field.field.paragraph.image_text.field_image_text_layout
+    - field.field.paragraph.image_text.parade_image
+    - field.field.paragraph.image_text.parade_image_text_layout
     - field.field.paragraph.image_text.parade_text
     - field.field.paragraph.image_text.parade_title
     - image.style.parade_text_and_image
@@ -32,7 +32,7 @@ content:
       target: '0'
     third_party_settings: {  }
     type: link
-  field_image:
+  parade_image:
     weight: 3
     label: hidden
     settings:
@@ -56,5 +56,5 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_image_text_layout: true
+  parade_image_text_layout: true
   uid: true

@@ -195,7 +195,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Color scheme', 'Images', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'field_images', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'parade_color_scheme', 'parade_images', 'parade_title'];
     $expected_types = ['Text (plain)', 'Entity reference', 'Image', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -211,7 +211,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $expected_labels = ['- Hidden -', '- Hidden -', /*'Above', 'Above',*/ 'Above', 'Above'];
     $expected_formats = ['Plain text', 'Image', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -'];
     $expected_plugin_summarys = ['Image style: Thumbnail (100×100)'];
-    $expected_settings_button_names = [' name="parade_title_settings_edit"', ' name="field_images_settings_edit"'];
+    $expected_settings_button_names = [' name="parade_title_settings_edit"', ' name="parade_images_settings_edit"'];
 
     $this->ParagraphTypeDisplayFields($expected_fields);
     $this->ParagraphTypeDisplayLabels($expected_labels);
@@ -283,7 +283,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Background', 'Background', 'Enable parallax', 'Minimum height', 'Text'];
-    $expected_machine_names = ['parade_anchor', 'field_background', 'field_image', 'field_enable_parallax', 'field_minimum_height', 'parade_text'];
+    $expected_machine_names = ['parade_anchor', 'field_background', 'parade_image', 'field_enable_parallax', 'field_minimum_height', 'parade_text'];
     $expected_types = ['Text (plain)', 'File', 'Image', 'Boolean', 'Number (integer)', 'Text (formatted, long)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -354,7 +354,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Anchor', 'Call to action', 'Color scheme', 'Image', 'Layout', 'Text', 'Title'];
-    $expected_machine_names = ['parade_anchor', 'parade_call_to_action', 'parade_color_scheme', 'field_image', 'field_image_text_layout', 'parade_text', 'parade_title'];
+    $expected_machine_names = ['parade_anchor', 'parade_call_to_action', 'parade_color_scheme', 'parade_image', 'parade_image_text_layout', 'parade_text', 'parade_title'];
     $expected_types = ['Text (plain)', 'Link', 'Entity reference', 'Image', 'List (integer)', 'Text (formatted, long)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -370,7 +370,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $expected_labels = ['- Hidden -', '- Hidden -', '- Hidden -', '- Hidden -', /*'Above', 'Above',*/ 'Above', 'Above', 'Above'];
     $expected_formats = ['Plain text', 'Image', 'Default', 'Link', /*'- Hidden -', '- Hidden -',*/ '- Hidden -', '- Hidden -', '- Hidden -'];
     $expected_plugin_summarys = ['Original image', 'Link text trimmed to 80 characters', 'Add rel="nofollow"'];
-    $expected_settings_button_names = [' name="parade_title_settings_edit"', ' name="field_image_settings_edit"', ' name="parade_call_to_action_settings_edit"'];
+    $expected_settings_button_names = [' name="parade_title_settings_edit"', ' name="parade_image_settings_edit"', ' name="parade_call_to_action_settings_edit"'];
 
     $this->ParagraphTypeDisplayFields($expected_fields);
     $this->ParagraphTypeDisplayLabels($expected_labels);
@@ -400,7 +400,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $expected_labels = ['Color scheme', 'Image', 'Text', 'Title'];
-    $expected_machine_names = ['parade_color_scheme', 'field_image', 'parade_text', 'parade_title'];
+    $expected_machine_names = ['parade_color_scheme', 'parade_image', 'parade_text', 'parade_title'];
     $expected_types = ['Entity reference', 'Image', 'Text (formatted, long)', 'Text (plain)'];
 
     $this->ParagraphTypeFieldLabels($expected_labels);
@@ -416,7 +416,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $expected_labels = ['- Hidden -', '- Hidden -', '- Hidden -', /*'Above', 'Above',*/ 'Above'];
     $expected_formats = ['Plain text', 'Default', 'Image', /*'- Hidden -', '- Hidden -',*/ '- Hidden -'];
     $expected_plugin_summarys = ['Original image'];
-    $expected_settings_button_names = [' name="parade_title_settings_edit"', ' name="field_image_settings_edit"'];
+    $expected_settings_button_names = [' name="parade_title_settings_edit"', ' name="parade_image_settings_edit"'];
 
     $this->ParagraphTypeDisplayFields($expected_fields);
     $this->ParagraphTypeDisplayLabels($expected_labels);
@@ -433,7 +433,7 @@ class ParagraphsParadeTest extends BrowserTestBase {
     $expected_labels = ['- Hidden -', '- Hidden -', '- Hidden -', /*'Above', 'Above',*/ 'Above'];
     $expected_formats = ['Image', 'Plain text', 'Default', /*'- Hidden -', '- Hidden -',*/ '- Hidden -'];
     $expected_plugin_summarys = ['Original image'];
-    $expected_settings_button_names = [' name="field_image_settings_edit"', ' name="parade_title_settings_edit"'];
+    $expected_settings_button_names = [' name="parade_image_settings_edit"', ' name="parade_title_settings_edit"'];
 
     $this->ParagraphTypeDisplayFields($expected_fields);
     $this->ParagraphTypeDisplayLabels($expected_labels);
