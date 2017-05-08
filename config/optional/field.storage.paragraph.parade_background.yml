@@ -4,8 +4,8 @@ dependencies:
   module:
     - file
     - paragraphs
-id: paragraph.field_background
-field_name: field_background
+id: paragraph.parade_background
+field_name: parade_background
 entity_type: paragraph
 type: file
 settings:

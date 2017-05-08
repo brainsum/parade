@@ -37,10 +37,10 @@ function parade_preprocess_paragraph(&$variables) {
 
   // Parallax and background stuff for Header and Parallax types.
   if (
-    $paragraph->hasField('field_background') &&
+    $paragraph->hasField('parade_background') &&
     in_array($paragraph->getType(), ['header', 'parallax'], FALSE)
   ) {
-    $target_id = $paragraph->get('field_background')->target_id;
+    $target_id = $paragraph->get('parade_background')->target_id;
     if (!$target_id) {
       return;
     }

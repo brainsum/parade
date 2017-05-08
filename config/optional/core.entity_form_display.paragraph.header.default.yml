@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.header.parade_anchor
-    - field.field.paragraph.header.field_background
+    - field.field.paragraph.header.parade_background
     - field.field.paragraph.header.parade_call_to_action
     - field.field.paragraph.header.parade_color_scheme
     - field.field.paragraph.header.field_enable_parallax
@@ -27,7 +27,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_background:
+  parade_background:
     weight: 6
     settings:
       progress_indicator: throbber

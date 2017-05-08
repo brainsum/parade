@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_background
+    - field.storage.paragraph.parade_background
     - paragraphs.paragraphs_type.header
   module:
     - file
-id: paragraph.header.field_background
-field_name: field_background
+id: paragraph.header.parade_background
+field_name: parade_background
 entity_type: paragraph
 bundle: header
 label: Background

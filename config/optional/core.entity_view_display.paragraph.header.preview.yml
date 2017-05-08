@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.header.parade_anchor
-    - field.field.paragraph.header.field_background
+    - field.field.paragraph.header.parade_background
     - field.field.paragraph.header.parade_call_to_action
     - field.field.paragraph.header.field_enable_parallax
     - field.field.paragraph.header.field_lead_text
@@ -28,7 +28,7 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_background: true
+  parade_background: true
   parade_call_to_action: true
   field_enable_parallax: true
   field_lead_text: true
