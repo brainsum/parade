@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
-    - field.field.paragraph.marketo_form.field_enable_confirm_message
+    - field.field.paragraph.marketo_form.parade_enable_confirm_message
     - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.parade_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
@@ -42,7 +42,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_enable_confirm_message:
+  parade_enable_confirm_message:
     weight: 7
     settings:
       display_label: true

@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
-    - field.field.paragraph.marketo_form.field_enable_confirm_message
+    - field.field.paragraph.marketo_form.parade_enable_confirm_message
     - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.parade_lead_text
     - field.field.paragraph.marketo_form.field_marketo_form
@@ -40,7 +40,7 @@ content:
 hidden:
   created: true
   parade_color_scheme: true
-  field_enable_confirm_message: true
+  parade_enable_confirm_message: true
   parade_image: true
   parade_lead_text: true
   field_marketo_form: true
