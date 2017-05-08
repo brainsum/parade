@@ -3437,21 +3437,21 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 }
 
 .paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title,
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+.paragraph--type--header.paragraph--view-mode--default .field--name-parade-lead-text {
   font-size: 1em;
   margin-bottom: .5em;
 }
 
 @media (min-width: 767px) {
   .paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title,
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+  .paragraph--type--header.paragraph--view-mode--default .field--name-parade-lead-text {
     font-size: 1.2em;
   }
 }
 
 @media (min-width: 1200px) {
   .paragraph--type--header.paragraph--view-mode--default .field--name-parade-secondary-title,
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-lead-text {
+  .paragraph--type--header.paragraph--view-mode--default .field--name-parade-lead-text {
     font-size: 1.5em;
   }
 }
@@ -3496,7 +3496,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   color: white;
 }
 
-.paragraph--type--tabs.paragraph--view-mode--default .field--name-field-lead-text {
+.paragraph--type--tabs.paragraph--view-mode--default .field--name-parade-lead-text {
   margin-bottom: 1em;
 }
 
@@ -4022,7 +4022,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-lead-text {
+.paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-lead-text {
   line-height: 27px;
   font-size: 20px;
   letter-spacing: -.5px;
@@ -4031,7 +4031,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 767px) {
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-title,
-  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-lead-text,
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-lead-text,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-field-marketo-form,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-text {
     width: 50%;

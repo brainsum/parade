@@ -15,12 +15,12 @@
     }
   }
 
-  .field--name-field-lead-text {
+  .field--name-parade-lead-text {
     @include campaign-lead;
   }
 
   .field--name-parade-title,
-  .field--name-field-lead-text,
+  .field--name-parade-lead-text,
   .field--name-field-marketo-form,
   .field--name-parade-text {
     @include md {
