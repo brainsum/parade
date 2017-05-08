@@ -294,9 +294,9 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function parade_preprocess_field__field_social_link(&$variables) {
+function parade_preprocess_field__parade_social_link(&$variables) {print_r($variables);
   // @todo @fixme Sad but true.
-  foreach ($variables['items'] as $key => $link) {
+  foreach ($variables['items'] as $key => $link) {drupal_set_message($link['content']['#title']);
     if (strpos($link['content']['#title'], 'facebook') !== FALSE) {
       $type = 'facebook';
     }
