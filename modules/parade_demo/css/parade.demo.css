@@ -2547,39 +2547,39 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   margin: 0 auto;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action,
-.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action,
-.node-parade-onepage-edit-form .field--name-field-call-to-action,
-.node-parade-onepage-form .field--name-field-call-to-action {
+.paragraph.paragraph--view-mode--default .field--name-parade-call-to-action,
+.paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action,
+.node-parade-onepage-edit-form .field--name-parade-call-to-action,
+.node-parade-onepage-form .field--name-parade-call-to-action {
   text-align: center;
   margin: 2em 0;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button,
-.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button,
-.node-parade-onepage-edit-form .field--name-field-call-to-action .button,
-.node-parade-onepage-form .field--name-field-call-to-action .button {
+.paragraph.paragraph--view-mode--default .field--name-parade-call-to-action .button,
+.paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action .button,
+.node-parade-onepage-edit-form .field--name-parade-call-to-action .button,
+.node-parade-onepage-form .field--name-parade-call-to-action .button {
   padding: .75em 1.4em;
   background-image: none;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:hover, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:active, .paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button:focus,
-.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button:hover,
-.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button:active,
-.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button:focus,
-.node-parade-onepage-edit-form .field--name-field-call-to-action .button:hover,
-.node-parade-onepage-edit-form .field--name-field-call-to-action .button:active,
-.node-parade-onepage-edit-form .field--name-field-call-to-action .button:focus,
-.node-parade-onepage-form .field--name-field-call-to-action .button:hover,
-.node-parade-onepage-form .field--name-field-call-to-action .button:active,
-.node-parade-onepage-form .field--name-field-call-to-action .button:focus {
+.paragraph.paragraph--view-mode--default .field--name-parade-call-to-action .button:hover, .paragraph.paragraph--view-mode--default .field--name-parade-call-to-action .button:active, .paragraph.paragraph--view-mode--default .field--name-parade-call-to-action .button:focus,
+.paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action .button:hover,
+.paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action .button:active,
+.paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action .button:focus,
+.node-parade-onepage-edit-form .field--name-parade-call-to-action .button:hover,
+.node-parade-onepage-edit-form .field--name-parade-call-to-action .button:active,
+.node-parade-onepage-edit-form .field--name-parade-call-to-action .button:focus,
+.node-parade-onepage-form .field--name-parade-call-to-action .button:hover,
+.node-parade-onepage-form .field--name-parade-call-to-action .button:active,
+.node-parade-onepage-form .field--name-parade-call-to-action .button:focus {
   color: #fff;
 }
 
-.paragraph.paragraph--view-mode--default .field--name-field-call-to-action .button + .button,
-.paragraph.paragraph--view-mode--inverse .field--name-field-call-to-action .button + .button,
-.node-parade-onepage-edit-form .field--name-field-call-to-action .button + .button,
-.node-parade-onepage-form .field--name-field-call-to-action .button + .button {
+.paragraph.paragraph--view-mode--default .field--name-parade-call-to-action .button + .button,
+.paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action .button + .button,
+.node-parade-onepage-edit-form .field--name-parade-call-to-action .button + .button,
+.node-parade-onepage-form .field--name-parade-call-to-action .button + .button {
   margin-left: 1em;
 }
 
@@ -3170,14 +3170,14 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-field-call-to-action,
-.paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action {
+.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action,
+.paragraph--type--image-text.paragraph--view-mode--default .field--name-parade-call-to-action {
   clear: both;
   text-align: center;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-field-call-to-action .field__item,
-.paragraph--type--image-text.paragraph--view-mode--default .field--name-field-call-to-action .field__item {
+.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action .field__item,
+.paragraph--type--image-text.paragraph--view-mode--default .field--name-parade-call-to-action .field__item {
   display: inline-block;
 }
 
@@ -3190,9 +3190,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-call-to-action, .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-call-to-action {
     width: 60.666%;
   }
 }
@@ -3221,14 +3221,14 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-call-to-action {
     float: right;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-image {
     float: left;
     text-align: right;
   }
-  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-call-to-action {
     text-align: center;
     clear: right;
   }
@@ -3286,7 +3286,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-field-call-to-action {
+.paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st_enhanced .field--name-parade-call-to-action {
   text-align: center;
   width: 46%;
   float: right;
@@ -3302,9 +3302,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-call-to-action {
     width: 60.666%;
   }
 }
@@ -3333,16 +3333,16 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (min-width: 767px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-call-to-action {
     float: left;
   }
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-image {
     float: right;
     text-align: left;
   }
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-field-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-field-call-to-action {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-call-to-action, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-call-to-action {
     text-align: center;
     clear: left;
   }
@@ -3400,7 +3400,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-field-call-to-action {
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st_enhanced .field--name-parade-call-to-action {
   text-align: center;
   width: 46%;
   float: right;
@@ -3461,17 +3461,17 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   line-height: normal;
 }
 
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action {
+.paragraph--type--header.paragraph--view-mode--default .field--name-parade-call-to-action {
   margin: 0;
 }
 
 @media (min-width: 1200px) {
-  .paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action {
+  .paragraph--type--header.paragraph--view-mode--default .field--name-parade-call-to-action {
     text-align: left;
   }
 }
 
-.paragraph--type--header.paragraph--view-mode--default .field--name-field-call-to-action .field__item {
+.paragraph--type--header.paragraph--view-mode--default .field--name-parade-call-to-action .field__item {
   display: inline-block;
 }
 
@@ -3798,10 +3798,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-title,
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-text,
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-field-call-to-action,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--contacts .paragraph--type--text-box .field--name-parade-call-to-action,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-title,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-text,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-field-call-to-action {
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--contacts .paragraph--type--text-box .field--name-parade-call-to-action {
   width: 66%;
   float: right;
 }
@@ -3979,12 +3979,12 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   color: white;
 }
 
-.paragraph--type--text-box.paragraph--view-mode--default .field--name-field-call-to-action {
+.paragraph--type--text-box.paragraph--view-mode--default .field--name-parade-call-to-action {
   margin: 0;
   text-align: left;
 }
 
-.paragraph--type--text-box.paragraph--view-mode--default .field--name-field-call-to-action .button {
+.paragraph--type--text-box.paragraph--view-mode--default .field--name-parade-call-to-action .button {
   padding: 0.25rem 1rem;
 }
 

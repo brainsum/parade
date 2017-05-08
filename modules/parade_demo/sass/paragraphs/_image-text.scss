@@ -7,7 +7,7 @@
   }
 
   // Call to action buttons.
-  .field--name-field-call-to-action {
+  .field--name-parade-call-to-action {
     clear: both;
     text-align: center;
     .field__item {
@@ -41,7 +41,7 @@
 
     .field--name-parade-title,
     .field--name-parade-text,
-    .field--name-field-call-to-action {
+    .field--name-parade-call-to-action {
       @include md {
         width: 60.666%;
       }
@@ -72,7 +72,7 @@
       // Title and Text
       .field--name-parade-title,
       .field--name-parade-text,
-      .field--name-field-call-to-action{
+      .field--name-parade-call-to-action{
         float: right;
       }
       // Image
@@ -82,7 +82,7 @@
         text-align: right;
       }
       // Call to action buttons.
-      .field--name-field-call-to-action {
+      .field--name-parade-call-to-action {
         text-align: center;
         clear: right;
       }
@@ -129,7 +129,7 @@
       }
     }
     // Call to action buttons.
-    .field--name-field-call-to-action {
+    .field--name-parade-call-to-action {
       text-align: center;
       width: 46%;
       float: right;
@@ -150,7 +150,7 @@
 
     .field--name-parade-title,
     .field--name-parade-text,
-    .field--name-field-call-to-action {
+    .field--name-parade-call-to-action {
       @include md {
         width: 60.666%;
       }
@@ -183,7 +183,7 @@
       // Title and Text
       .field--name-parade-title,
       .field--name-parade-text,
-      .field--name-field-call-to-action {
+      .field--name-parade-call-to-action {
         float: left;
       }
       // Image
@@ -192,7 +192,7 @@
         // padding-left: 1.5em;
         text-align: left;
       }
-      .field--name-field-call-to-action {
+      .field--name-parade-call-to-action {
         text-align: center;
         clear: left;
       }
@@ -240,7 +240,7 @@
       }
     }
     // Call to action buttons.
-    .field--name-field-call-to-action {
+    .field--name-parade-call-to-action {
       text-align: center;
       width: 46%;
       float: right;

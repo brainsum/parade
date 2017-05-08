@@ -62,7 +62,7 @@
       }
       .field--name-parade-title,
       .field--name-parade-text,
-      .field--name-field-call-to-action {
+      .field--name-parade-call-to-action {
         width: 66%;
         float: right;
       }
@@ -186,7 +186,7 @@
     }
   }
 
-  .field--name-field-call-to-action {
+  .field--name-parade-call-to-action {
     // @fixme after tieto_base merge.
     margin: 0;
     text-align: left;
