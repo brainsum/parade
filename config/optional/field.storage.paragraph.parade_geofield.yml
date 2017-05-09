@@ -2,15 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
+    - geofield
     - paragraphs
-id: paragraph.field_paragraphs
-field_name: field_paragraphs
+id: paragraph.parade_geofield
+field_name: parade_geofield
 entity_type: paragraph
-type: entity_reference_revisions
-settings:
-  target_type: paragraph
-module: entity_reference_revisions
+type: geofield
+settings: {  }
+module: geofield
 locked: false
 cardinality: -1
 translatable: true

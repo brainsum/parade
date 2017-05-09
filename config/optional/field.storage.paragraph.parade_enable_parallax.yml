@@ -2,16 +2,13 @@ langcode: en
 status: true
 dependencies:
   module:
-    - marketo_poll
-  enforced:
-    module:
-      - marketo_poll
-id: paragraph.field_marketo_poll
-field_name: field_marketo_poll
+    - paragraphs
+id: paragraph.parade_enable_parallax
+field_name: parade_enable_parallax
 entity_type: paragraph
-type: marketo_poll
+type: boolean
 settings: {  }
-module: marketo_poll
+module: core
 locked: false
 cardinality: 1
 translatable: true

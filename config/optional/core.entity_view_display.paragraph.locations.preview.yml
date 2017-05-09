@@ -4,8 +4,8 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.locations.parade_anchor
-    - field.field.paragraph.locations.field_geofield
-    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.parade_geofield
+    - field.field.paragraph.locations.parade_location
     - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
@@ -30,7 +30,7 @@ content:
     type: string
 hidden:
   created: true
-  field_geofield: true
-  field_location: true
+  parade_geofield: true
+  parade_location: true
   parade_text: true
   uid: true

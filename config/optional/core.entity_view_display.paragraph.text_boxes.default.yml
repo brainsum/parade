@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_boxes.parade_anchor
-    - field.field.paragraph.text_boxes.field_boxes_per_row
+    - field.field.paragraph.text_boxes.parade_boxes_per_row
     - field.field.paragraph.text_boxes.parade_color_scheme
-    - field.field.paragraph.text_boxes.field_paragraphs
+    - field.field.paragraph.text_boxes.parade_paragraphs
     - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_layout
     - field.field.paragraph.text_boxes.parade_view_mode
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: text_boxes
 mode: default
 content:
-  field_paragraphs:
+  parade_paragraphs:
     type: entity_reference_revisions_entity_view
     weight: 1
     label: hidden
@@ -37,7 +37,7 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_boxes_per_row: true
+  parade_boxes_per_row: true
   parade_color_scheme: true
   parade_layout: true
   parade_view_mode: true

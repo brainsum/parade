@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.header.parade_anchor
-    - field.field.paragraph.header.field_background
+    - field.field.paragraph.header.parade_background
     - field.field.paragraph.header.parade_call_to_action
-    - field.field.paragraph.header.field_enable_parallax
-    - field.field.paragraph.header.field_lead_text
-    - field.field.paragraph.header.field_secondary_title
+    - field.field.paragraph.header.parade_enable_parallax
+    - field.field.paragraph.header.parade_lead_text
+    - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
   module:
@@ -29,13 +29,13 @@ content:
       target: '0'
     third_party_settings: {  }
     type: link
-  field_lead_text:
+  parade_lead_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-  field_secondary_title:
+  parade_secondary_title:
     weight: 1
     label: hidden
     settings:
@@ -52,6 +52,6 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_background: true
-  field_enable_parallax: true
+  parade_background: true
+  parade_enable_parallax: true
   uid: true

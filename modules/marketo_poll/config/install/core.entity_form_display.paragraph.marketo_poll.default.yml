@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.marketo_poll.parade_anchor
-    - field.field.paragraph.marketo_poll.field_marketo_poll
+    - field.field.paragraph.marketo_poll.parade_marketo_poll
     - field.field.paragraph.marketo_poll.parade_title
     - paragraphs.paragraphs_type.marketo_poll
   module:
@@ -23,7 +23,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_marketo_poll:
+  parade_marketo_poll:
     weight: 8
     settings: {  }
     third_party_settings: {  }

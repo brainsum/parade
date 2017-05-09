@@ -3,17 +3,14 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_tab_titles
-field_name: field_tab_titles
+id: paragraph.parade_enable_confirm_message
+field_name: parade_enable_confirm_message
 entity_type: paragraph
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: boolean
+settings: {  }
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

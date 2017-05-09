@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_enable_confirm_message
+    - field.storage.paragraph.parade_enable_confirm_message
     - paragraphs.paragraphs_type.marketo_form
   module:
     - marketo_form
   enforced:
     module:
       - marketo_form
-id: paragraph.marketo_form.field_enable_confirm_message
-field_name: field_enable_confirm_message
+id: paragraph.marketo_form.parade_enable_confirm_message
+field_name: parade_enable_confirm_message
 entity_type: paragraph
 bundle: marketo_form
 label: 'Display confirmation message'

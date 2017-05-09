@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.parallax.parade_anchor
-    - field.field.paragraph.parallax.field_background
+    - field.field.paragraph.parallax.parade_background
     - field.field.paragraph.parallax.parade_color_scheme
-    - field.field.paragraph.parallax.field_enable_parallax
+    - field.field.paragraph.parallax.parade_enable_parallax
     - field.field.paragraph.parallax.parade_image
-    - field.field.paragraph.parallax.field_minimum_height
+    - field.field.paragraph.parallax.parade_minimum_height
     - field.field.paragraph.parallax.parade_text
     - paragraphs.paragraphs_type.parallax
   module:
@@ -26,7 +26,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_background:
+  parade_background:
     weight: 3
     settings:
       progress_indicator: throbber
@@ -42,14 +42,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_enable_parallax:
+  parade_enable_parallax:
     weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_minimum_height:
+  parade_minimum_height:
     weight: 5
     settings:
       placeholder: ''

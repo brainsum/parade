@@ -3,14 +3,13 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_secondary_title
-field_name: field_secondary_title
+id: paragraph.parade_minimum_height
+field_name: parade_minimum_height
 entity_type: paragraph
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

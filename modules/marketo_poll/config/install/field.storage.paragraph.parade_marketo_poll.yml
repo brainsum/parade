@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
-    - marketo_form
+    - marketo_poll
   enforced:
     module:
-      - marketo_form
-id: paragraph.field_marketo_form
-field_name: field_marketo_form
+      - marketo_poll
+id: paragraph.parade_marketo_poll
+field_name: parade_marketo_poll
 entity_type: paragraph
-type: marketo_form
+type: marketo_poll
 settings: {  }
-module: marketo_form
+module: marketo_poll
 locked: false
 cardinality: 1
 translatable: true

@@ -2,16 +2,18 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-    - text
-id: paragraph.field_tab_contents
-field_name: field_tab_contents
+    - marketo_form
+  enforced:
+    module:
+      - marketo_form
+id: paragraph.parade_marketo_form
+field_name: parade_marketo_form
 entity_type: paragraph
-type: text_long
+type: marketo_form
 settings: {  }
-module: text
+module: marketo_form
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

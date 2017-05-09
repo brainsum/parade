@@ -1,32 +1,32 @@
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-image,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-image {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image {
   float: left;
   width: calc(26% - 2 * 15px);
   padding: 20px 15px 0;
   margin: auto;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-image img,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-image img {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image img,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image img {
   border-radius: 100%;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text {
   float: right;
   width: 66%;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title {
   padding: 20px 15px 0;
   margin-top: 0;
 }
 
-.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text,
-.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text {
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text {
   padding: 0 15px;
 }
 
@@ -48,16 +48,16 @@
 }
 
 @media screen and (max-width: 480px) {
-  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-image,
-  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-image {
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image,
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image {
     float: none;
     width: 150px;
     margin: 0 auto;
   }
-  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text,
-  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-title,
-  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-field-paragraphs .field--name-parade-text {
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text,
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text {
     float: none;
     width: 100%;
   }

@@ -4,10 +4,10 @@ dependencies:
   config:
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
-    - field.field.paragraph.marketo_form.field_enable_confirm_message
+    - field.field.paragraph.marketo_form.parade_enable_confirm_message
     - field.field.paragraph.marketo_form.parade_image
-    - field.field.paragraph.marketo_form.field_lead_text
-    - field.field.paragraph.marketo_form.field_marketo_form
+    - field.field.paragraph.marketo_form.parade_lead_text
+    - field.field.paragraph.marketo_form.parade_marketo_form
     - field.field.paragraph.marketo_form.parade_text
     - field.field.paragraph.marketo_form.parade_title
     - field.field.paragraph.marketo_form.parade_layout
@@ -34,14 +34,14 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_lead_text:
+  parade_lead_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_marketo_form:
+  parade_marketo_form:
     weight: 3
     label: hidden
     settings: {  }
@@ -67,6 +67,6 @@ hidden:
   created: true
   parade_anchor: true
   parade_color_scheme: true
-  field_enable_confirm_message: true
+  parade_enable_confirm_message: true
   parade_layout: true
   uid: true

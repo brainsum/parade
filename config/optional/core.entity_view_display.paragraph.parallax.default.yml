@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.parallax.parade_anchor
-    - field.field.paragraph.parallax.field_background
-    - field.field.paragraph.parallax.field_enable_parallax
+    - field.field.paragraph.parallax.parade_background
+    - field.field.paragraph.parallax.parade_enable_parallax
     - field.field.paragraph.parallax.parade_image
-    - field.field.paragraph.parallax.field_minimum_height
+    - field.field.paragraph.parallax.parade_minimum_height
     - field.field.paragraph.parallax.parade_text
     - paragraphs.paragraphs_type.parallax
   module:
@@ -26,8 +26,8 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_background: true
-  field_enable_parallax: true
+  parade_background: true
+  parade_enable_parallax: true
   parade_image: true
-  field_minimum_height: true
+  parade_minimum_height: true
   uid: true

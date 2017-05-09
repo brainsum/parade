@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.locations.parade_anchor
-    - field.field.paragraph.locations.field_geofield
-    - field.field.paragraph.locations.field_location
+    - field.field.paragraph.locations.parade_geofield
+    - field.field.paragraph.locations.parade_location
     - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
@@ -16,7 +16,7 @@ targetEntityType: paragraph
 bundle: locations
 mode: default
 content:
-  field_geofield:
+  parade_geofield:
     weight: 1
     label: hidden
     settings:
@@ -61,5 +61,5 @@ content:
 hidden:
   created: true
   parade_anchor: true
-  field_location: true
+  parade_location: true
   uid: true

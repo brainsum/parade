@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_minimum_height
+    - field.storage.paragraph.parade_minimum_height
     - paragraphs.paragraphs_type.parallax
-id: paragraph.parallax.field_minimum_height
-field_name: field_minimum_height
+id: paragraph.parallax.parade_minimum_height
+field_name: parade_minimum_height
 entity_type: paragraph
 bundle: parallax
 label: 'Minimum height'

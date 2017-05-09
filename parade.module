@@ -37,10 +37,10 @@ function parade_preprocess_paragraph(&$variables) {
 
   // Parallax and background stuff for Header and Parallax types.
   if (
-    $paragraph->hasField('field_background') &&
+    $paragraph->hasField('parade_background') &&
     in_array($paragraph->getType(), ['header', 'parallax'], FALSE)
   ) {
-    $target_id = $paragraph->get('field_background')->target_id;
+    $target_id = $paragraph->get('parade_background')->target_id;
     if (!$target_id) {
       return;
     }
@@ -53,7 +53,7 @@ function parade_preprocess_paragraph(&$variables) {
       $file_path = parse_url(file_create_url($file_uri))['path'];
 
       // Attach parallax library if the user enabled the effect.
-      if ($paragraph->hasField('field_enable_parallax') && TRUE == $paragraph->get('field_enable_parallax')->value) {
+      if ($paragraph->hasField('parade_enable_parallax') && TRUE == $paragraph->get('parade_enable_parallax')->value) {
         $variables['#attached']['library'][] = 'parade/parallax';
       }
 
@@ -92,8 +92,8 @@ function parade_preprocess_paragraph(&$variables) {
         $variables['#attached']['library'][] = 'parade/inline-video';
       }
 
-      // Check field_enable_parallax field.
-      $enable_parallax = $paragraph->hasField('field_enable_parallax') ? $paragraph->get('field_enable_parallax')->value : FALSE;
+      // Check parade_enable_parallax field.
+      $enable_parallax = $paragraph->hasField('parade_enable_parallax') ? $paragraph->get('parade_enable_parallax')->value : FALSE;
 
       // Add variables to theme.
       _parade_add_template_variable($variables, [
@@ -119,7 +119,7 @@ function parade_preprocess_paragraph__text_box(&$variables) {
   $parent = $paragraph->getParentEntity();
 
   // Pass the number of Columns field value.
-  if (method_exists($parent, 'hasField') && $parent->hasField('field_boxes_per_row') && ($columns = $parent->get('field_boxes_per_row')->value)) {
+  if (method_exists($parent, 'hasField') && $parent->hasField('parade_boxes_per_row') && ($columns = $parent->get('parade_boxes_per_row')->value)) {
     _parade_add_template_variable($variables, [
       'columns' => $columns,
     ]);
@@ -134,7 +134,7 @@ function parade_preprocess_paragraph__text_boxes(&$variables) {
   $paragraph = &$variables['paragraph'];
 
   // Pass the number of Columns field value.
-  if ($columns = $paragraph->get('field_boxes_per_row')->value) {
+  if ($columns = $paragraph->get('parade_boxes_per_row')->value) {
     _parade_add_template_variable($variables, [
       'columns' => $columns,
     ]);
@@ -277,16 +277,16 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the Paragraphs field.
   // @todo Check the field formatter instead!
   /** @var FormStateInterface $form */
-  if (isset($form['field_paragraphs'])) {
+  if (isset($form['parade_paragraphs'])) {
     $form['#attached']['library'][] = 'parade/buttons';
 
-    foreach ($form['field_paragraphs']['widget']['add_more'] as $key => $item) {
+    foreach ($form['parade_paragraphs']['widget']['add_more'] as $key => $item) {
       if (strpos($key, 'add_more') === FALSE) {
         continue;
       }
       $type = Html::getClass($item['#bundle_machine_name']);
-      $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
-      $form['field_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+      $form['parade_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
+      $form['parade_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
     }
   }
 }

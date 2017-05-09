@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_boxes.parade_anchor
-    - field.field.paragraph.text_boxes.field_boxes_per_row
+    - field.field.paragraph.text_boxes.parade_boxes_per_row
     - field.field.paragraph.text_boxes.parade_color_scheme
-    - field.field.paragraph.text_boxes.field_paragraphs
+    - field.field.paragraph.text_boxes.parade_paragraphs
     - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_layout
     - field.field.paragraph.text_boxes.parade_view_mode
@@ -26,7 +26,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_boxes_per_row:
+  parade_boxes_per_row:
     weight: 4
     settings:
       placeholder: ''
@@ -42,7 +42,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_paragraphs:
+  parade_paragraphs:
     type: entity_reference_paragraphs_preview
     weight: 6
     settings:
