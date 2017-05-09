@@ -42,7 +42,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    *   TRUE if the previewer is enabled.
    */
   public function isPreviewerEnabled($mode) {
-    return $mode != 'removed' && $mode != 'remove';
+    return $mode !== 'removed' && $mode !== 'remove';
   }
 
   /**
@@ -57,8 +57,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $parents = $element['#field_parents'];
 
     $widget_state = static::getWidgetState($parents, $field_name, $form_state);
-    if (!isset($widget_state['paragraphs'][$delta]['mode']) ||
-        !isset($widget_state['paragraphs'][$delta]['entity'])) {
+    if (!isset($widget_state['paragraphs'][$delta]['mode'], $widget_state['paragraphs'][$delta]['entity'])) {
       return $element;
     }
 
@@ -67,11 +66,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       return $element;
     }
 
-    /** @var Paragraph $paragraphs_entity */
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraphs_entity */
     $paragraphs_entity = $widget_state['paragraphs'][$delta]['entity'];
 
     // Locations paragraph type review is bugged.
-    if ('locations' == $paragraphs_entity->getType()) {
+    if ('locations' === $paragraphs_entity->getType()) {
       return $element;
     }
 
@@ -81,7 +80,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $preview_button = [
       '#type' => 'submit',
       '#value' => t('Preview'),
-      '#name' => strtr($id_prefix, '-', '_') . '_previewer',
+      '#name' => str_replace('-', '_', $id_prefix) . '_previewer',
       '#weight' => 99999,
       '#submit' => [[$this, 'submitPreviewerItem']],
       '#field_item_parents' => $element_parents,
@@ -90,7 +89,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       ],
       '#delta' => $delta,
       '#ajax' => [
-        'callback' => [get_class($this), 'ajaxSubmitPreviewerItem'],
+        'callback' => [InlineParagraphsPreviewerWidget::class, 'ajaxSubmitPreviewerItem'],
         'wrapper' => $widget_state['ajax_wrapper_id'],
         'effect' => 'fade',
       ],
@@ -121,7 +120,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    *
    * @param array $form
    *   The form array.
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
    */
   public function submitPreviewerItem(array $form, FormStateInterface $form_state) {
@@ -135,15 +134,18 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    *
    * @param array $form
    *   The form array.
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state.
+   *
+   * @return \Drupal\Core\Ajax\AjaxResponse
+   *   The AJAX response.
    */
-  public function ajaxSubmitPreviewerItem(array $form, FormStateInterface $form_state) {
+  public static function ajaxSubmitPreviewerItem(array $form, FormStateInterface $form_state) {
     $paragraph = NULL;
-    $preview_button = $form_state->getTriggeringElement();
+    $previewButton = $form_state->getTriggeringElement();
 
     // @todo Export these options to Admin UI.
-    $dialog_options = array(
+    $dialogOptions = array(
       'dialogClass' => 'parade-preview-dialog',
       'minWidth' => 480,
       'width' => '80%',
@@ -156,20 +158,20 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       'closeText' => t('Close preview'),
     );
 
-    $dialog_title = t('Preview');
+    $dialogTitle = t('Preview');
 
     // Get dialog title.
-    if (isset($preview_button['#dialog_title'])) {
-      $dialog_title = $preview_button['#dialog_title'];
+    if (isset($previewButton['#dialog_title'])) {
+      $dialogTitle = $previewButton['#dialog_title'];
     }
 
     // Render current paragraph entity.
-    if (!empty($preview_button['#field_item_parents']) && !empty($form['#build_id'])) {
-      $paragraph = static::paragraphsPreviewRenderField($form['#build_id'], $preview_button['#field_item_parents']);
+    if (!empty($previewButton['#field_item_parents']) && !empty($form['#build_id'])) {
+      $paragraph = static::paragraphsPreviewRenderField($form['#build_id'], $previewButton['#field_item_parents']);
     }
 
     // Build modal content.
-    $dialog_content = [
+    $dialogContent = [
       '#theme' => 'parade_preview',
       '#paragraph' => $paragraph,
     ];
@@ -183,7 +185,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $response->setAttachments($form['#attached']);
 
     // Add modal dialog.
-    $response->addCommand(new OpenModalDialogCommand($dialog_title, $dialog_content, $dialog_options));
+    $response->addCommand(new OpenModalDialogCommand($dialogTitle, $dialogContent, $dialogOptions));
 
     return $response;
   }
@@ -205,22 +207,22 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $output = array();
 
     if (!empty($element_parents) && count($element_parents) >= 2) {
-      $form_state = new FormState();
-      $form = \Drupal::formBuilder()->getCache($form_build_id, $form_state);
+      $formState = new FormState();
+      $form = \Drupal::formBuilder()->getCache($form_build_id, $formState);
 
-      if ($form && $parent_entity = $form_state->getFormObject()->getEntity()) {
-        $field_parents = $element_parents;
-        $field_delta = array_pop($field_parents);
+      if ($form && $parentEntity = $formState->getFormObject()->getEntity()) {
+        $fieldParents = $element_parents;
+        $fieldDelta = array_pop($fieldParents);
         // TODO: support langcode or is d8 always field_name:delta?
-        $field_name = array_pop($field_parents);
+        $fieldName = array_pop($fieldParents);
 
-        $widget_state = WidgetBase::getWidgetState($field_parents, $field_name, $form_state);
+        $widgetState = WidgetBase::getWidgetState($fieldParents, $fieldName, $formState);
 
-        if (!empty($widget_state['paragraphs'][$field_delta]['entity'])) {
-          $paragraph = $widget_state['paragraphs'][$field_delta]['entity'];
-          $field_render = static::paragraphsPreviewRenderParentField($paragraph, $field_name, $parent_entity);
-          if ($field_render) {
-            $output['paragraph'] = $field_render;
+        if (!empty($widgetState['paragraphs'][$fieldDelta]['entity'])) {
+          $paragraph = $widgetState['paragraphs'][$fieldDelta]['entity'];
+          $fieldRender = static::paragraphsPreviewRenderParentField($paragraph, $fieldName, $parentEntity);
+          if ($fieldRender) {
+            $output['paragraph'] = $fieldRender;
           }
         }
       }
@@ -232,11 +234,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
   /**
    * Render a single field on the parent entity for the given paragraph.
    *
-   * @param Paragraph $paragraph
+   * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
    *   The paragraph entity.
    * @param string $parent_field_name
    *   The field name of the paragraph reference field on the parent entity.
-   * @param ContentEntityBase|null|\Drupal\Core\Entity\EntityInterface $parent_entity
+   * @param \Drupal\Core\Entity\ContentEntityBase|null|\Drupal\Core\Entity\EntityInterface $parent_entity
    *   Optional. The parent entity. This is used when on a form to allow
    *   rendering with un-saved parents.
    *
@@ -280,7 +282,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
         $elements = $parent_clone->{$parent_field_name}->view('default');
 
         // Extract the part of the render array we need.
-        $output = isset($elements[0]) ? $elements[0] : [];
+        $output = [];
+        if (isset($elements[0])) {
+          $output = $elements[0];
+        }
+
         if (isset($elements['#access'])) {
           $output['#access'] = $elements['#access'];
         }
