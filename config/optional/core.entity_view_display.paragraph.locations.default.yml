@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.locations.parade_anchor
+    - field.field.paragraph.locations.parade_color_scheme
     - field.field.paragraph.locations.parade_geofield
     - field.field.paragraph.locations.parade_location
     - field.field.paragraph.locations.parade_text
@@ -41,16 +42,20 @@ content:
         popup_anchor:
           x: '0'
           'y': '0'
+      auto_zoom: false
+      source_field: parade_location
       minPossibleZoom: 0
       maxPossibleZoom: 18
     third_party_settings: {  }
     type: leaflet_formatter_aggregated
+    region: content
   parade_text:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   parade_title:
     weight: 0
     label: hidden
@@ -58,8 +63,10 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   parade_anchor: true
+  parade_color_scheme: true
   parade_location: true
   uid: true
