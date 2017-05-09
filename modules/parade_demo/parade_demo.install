@@ -322,6 +322,7 @@ function _parade_demo_create_demo_content() {
     [
       'type' => 'parade_onepage',
       'title' => 'Parade One Page Site Demo',
+      'promote' => FALSE,
       'parade_onepage_id' => 'parade_one_page_site_demo',
       'parade_onepage_menu' => [
         [
