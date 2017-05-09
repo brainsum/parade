@@ -1,15 +1,19 @@
+langcode: en
+status: true
 dependencies:
-  module:
-    - parade_demo
   enforced:
     module:
       - parade_demo
-langcode: en
-status: true
-name: Parade onepage
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Parade onepage'
 type: parade_onepage
 description: 'Dynamic onepage sites with predefined Paragraph types and styles.'
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 0
 display_submitted: false
