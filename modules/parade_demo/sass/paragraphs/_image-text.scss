@@ -136,6 +136,55 @@
       margin-top: -1.5em;
     }
   }
+
+  // Layout: Enhanced
+  &.layout--text_1st_enhanced {
+
+    // Title
+    .field--name-parade-title {
+      @include campaign-title-center;
+      width: 100%;
+    }
+
+    // Text
+    .field--name-parade-text {
+      padding: 2em;
+      background: $parade-lightblue;
+
+      @include md {
+        padding-right: 4em;
+        width: 60%;
+      }
+    }
+
+    // Image
+    .field--name-parade-image {
+      text-align: center;
+      background: $parade-lightblue;
+      //padding: 2em 0 0;
+
+      img {
+        display: block;
+      }
+
+      @include md {
+        text-align: left;
+        background: 0;
+        padding: 0;
+        margin: 2em 0 0 0;
+        transform: translateX(-2em);
+        width: 40%;
+        float: right;
+      }
+    }
+    // Call to action buttons.
+    .field--name-parade-call-to-action {
+      text-align: center;
+      width: 46%;
+      float: right;
+      margin-top: -1.5em;
+    }
+  }
 }
 
 .paragraph--type--image-text.paragraph--view-mode--inverse {
@@ -196,55 +245,6 @@
         text-align: center;
         clear: left;
       }
-    }
-  }
-
-  // Layout: Enhanced
-  &.layout--text_1st_enhanced {
-
-    // Title
-    .field--name-parade-title {
-      @include campaign-title-center;
-      width: 100%;
-    }
-
-    // Text
-    .field--name-parade-text {
-      padding: 2em;
-      background: $parade-lightblue;
-
-      @include md {
-        padding-right: 4em;
-        width: 60%;
-      }
-    }
-
-    // Image
-    .field--name-parade-image {
-      text-align: center;
-      background: $parade-lightblue;
-      //padding: 2em 0 0;
-
-      img {
-        display: block;
-      }
-
-      @include md {
-        text-align: left;
-        background: 0;
-        padding: 0;
-        margin: 2em 0 0 0;
-        transform: translateX(-2em);
-        width: 40%;
-        float: right;
-      }
-    }
-    // Call to action buttons.
-    .field--name-parade-call-to-action {
-      text-align: center;
-      width: 46%;
-      float: right;
-      margin-top: -1.5em;
     }
   }
 }

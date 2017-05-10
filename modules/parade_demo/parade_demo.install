@@ -360,6 +360,7 @@ function _parade_demo_create_demo_content() {
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>",
         'format' => 'full_html',
       ],
+      'parade_view_mode' => 'inverse',
       'parade_layout' => 'layout_two_column_content_1st',
       'parade_color_scheme' => 'color_clean',
     ],
@@ -434,7 +435,7 @@ function _parade_demo_create_demo_content() {
     [
       'type' => 'image_text',
       'parade_title' => 'Textbox - text first - enhanced',
-      'parade_anchor' => '#textfirst-enhanced',
+      'parade_anchor' => '#imagefirst-enhanced',
       'parade_image' => $textImageFile,
       'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
@@ -444,8 +445,7 @@ function _parade_demo_create_demo_content() {
         'uri' => 'internal:#home',
         'title' => 'Home',
       ],
-      'parade_view_mode' => 'inverse',
-      'parade_layout' => 'layout_text_1st_enhanced',
+      'parade_layout' => 'layout_image_1st',
       'parade_color_scheme' => 'color_clean',
     ],
     [
@@ -492,6 +492,7 @@ function _parade_demo_create_demo_content() {
 <p><strong>Powered by <a href=\"https://www.drupal.org/8/\">Drupal 8</a>.</strong></p>",
         'format' => 'basic_html',
       ],
+      'parade_view_mode' => 'inverse',
       'parade_layout' => 'layout_text_1st',
       'parade_color_scheme' => 'color_clean',
     ],
