@@ -360,6 +360,7 @@ function _parade_demo_create_demo_content() {
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>",
         'format' => 'full_html',
       ],
+      'parade_view_mode' => 'inverse',
       'parade_layout' => 'layout_two_column_content_1st',
       'parade_color_scheme' => 'color_clean',
     ],
