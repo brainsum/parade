@@ -445,7 +445,8 @@ function _parade_demo_create_demo_content() {
         'uri' => 'internal:#home',
         'title' => 'Home',
       ],
-      'parade_layout' => 'layout_image_1st',
+      'parade_view_mode' => 'default',
+      'parade_layout' => 'layout_text_1st_enhanced',
       'parade_color_scheme' => 'color_clean',
     ],
     [
