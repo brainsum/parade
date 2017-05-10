@@ -6,5 +6,6 @@ core: 8.x
 
 dependencies:
   - parade
+  - node
   - marketo_form
   - marketo_poll
