@@ -492,6 +492,7 @@ function _parade_demo_create_demo_content() {
 <p><strong>Powered by <a href=\"https://www.drupal.org/8/\">Drupal 8</a>.</strong></p>",
         'format' => 'basic_html',
       ],
+      'parade_view_mode' => 'inverse',
       'parade_layout' => 'layout_text_1st',
       'parade_color_scheme' => 'color_clean',
     ],
