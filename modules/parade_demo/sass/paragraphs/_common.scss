@@ -139,10 +139,7 @@
 }
 
 .paragraph.paragraph--view-mode--default,
-.paragraph.paragraph--view-mode--inverse,
-.node-parade-onepage-edit-form,
-.node-parade-onepage-form {
-  @include clearfix;
+.paragraph.paragraph--view-mode--inverse {
   padding: 40px 1em;
   background-color: #fff;
   // Some fixes for WYSIWYG fields.
@@ -154,6 +151,14 @@
       margin-right: 1.5em;
     }
   }
+}
+
+.paragraph.paragraph--view-mode--custom,
+.paragraph.paragraph--view-mode--default,
+.paragraph.paragraph--view-mode--inverse,
+.node-parade-onepage-edit-form,
+.node-parade-onepage-form {
+  @include clearfix;
   .paragraph-inner {
     max-width: $page-max-width;
     margin: 0 auto;

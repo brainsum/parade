@@ -1,3 +1,8 @@
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image {
+  padding: 40px 1em;
+}
+
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-image {
   float: left;

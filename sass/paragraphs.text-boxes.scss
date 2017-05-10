@@ -2,6 +2,8 @@
 .paragraph--type--text-boxes.paragraph--view-mode--custom,
 .paragraph--type--text-boxes.paragraph--view-mode--default {
   &.layout--rounded_image {
+    padding: 40px 1em;
+
     .field--name-parade-paragraphs {
       .field--name-parade-image {
         float: left;
