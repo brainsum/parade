@@ -4127,75 +4127,75 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 /**
  * Menu on edit page.
  */
-.node-parade-onepage-form .field--name-field-parade-onepage-menu,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu {
+.node-parade-onepage-form .field--name-parade-onepage-menu,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu {
   background-color: #bed7eb;
   padding: 20px 40px;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table th,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table th {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table th,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table th {
   background-color: transparent;
   border-bottom: none;
   border-top: none;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr {
   border-bottom: none;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div.js-form-type-entity-autocomplete,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div.js-form-type-entity-autocomplete {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td div.js-form-type-entity-autocomplete,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td div.js-form-type-entity-autocomplete {
   float: left;
   width: 38%;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div.js-form-type-textfield,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div.js-form-type-textfield {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td div.js-form-type-textfield,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td div.js-form-type-textfield {
   float: left;
   width: 38%;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div.js-form-type-checkbox,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div.js-form-type-checkbox {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td div.js-form-type-checkbox,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td div.js-form-type-checkbox {
   float: left;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div:nth-child(2),
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr td div:nth-child(2) {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td div:nth-child(2),
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td div:nth-child(2) {
   margin: 0 10px;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr td input.form-checkbox,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr td input.form-checkbox {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td input.form-checkbox,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td input.form-checkbox {
   margin-top: 3px;
   vertical-align: middle;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr td label,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr td label {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td label,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td label {
   vertical-align: middle;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr.even,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr.even {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr.even,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr.even {
   background-color: transparent;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr.even.drag, .node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr.even.drag-previous,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr.even.drag,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr.even.drag-previous {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag, .node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag-previous,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag-previous {
   background-color: #f3f3f3;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-multiple-table tr:hover,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-multiple-table tr:hover {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr:hover,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr:hover {
   background-color: #f7fcff;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-add-more-submit,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-add-more-submit {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-add-more-submit,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-add-more-submit {
   background: #337ab7;
   text-transform: uppercase;
   color: white;
@@ -4206,9 +4206,9 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   font-size: 12px;
 }
 
-.node-parade-onepage-form .field--name-field-parade-onepage-menu .field-add-more-submit:hover, .node-parade-onepage-form .field--name-field-parade-onepage-menu .field-add-more-submit:active,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-add-more-submit:hover,
-.node-parade-onepage-edit-form .field--name-field-parade-onepage-menu .field-add-more-submit:active {
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-add-more-submit:hover, .node-parade-onepage-form .field--name-parade-onepage-menu .field-add-more-submit:active,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-add-more-submit:hover,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-add-more-submit:active {
   background: #337ab7;
   color: white;
   border: none;
