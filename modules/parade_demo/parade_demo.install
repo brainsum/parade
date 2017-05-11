@@ -594,14 +594,29 @@ function _parade_demo_create_demo_content() {
         [
           'uri' => 'internal:#home',
           'title' => 'Home',
+          'options' => [
+            'attributes' => [
+              'data-selected' => 0,
+            ],
+          ],
         ],
         [
           'uri' => 'internal:#simpleonecolumn',
           'title' => 'Simple One Col',
+          'options' => [
+            'attributes' => [
+              'data-selected' => 0,
+            ],
+          ],
         ],
         [
           'uri' => 'internal:#simpletwocolumn',
           'title' => 'Simple Two Col Title First',
+          'options' => [
+            'attributes' => [
+              'data-selected' => 0,
+            ],
+          ],
         ],
         [
           'uri' => 'internal:#simple5',
@@ -615,6 +630,11 @@ function _parade_demo_create_demo_content() {
         [
           'uri' => 'internal:#locations',
           'title' => 'Locations',
+          'options' => [
+            'attributes' => [
+              'data-selected' => 0,
+            ],
+          ],
         ],
       ],
       'parade_onepage_sections' => $paragraphs,
