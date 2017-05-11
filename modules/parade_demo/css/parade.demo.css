@@ -1794,7 +1794,7 @@ li.tabs__tab a {
 
 .logo img,
 .site-branding__logo img {
-  margin: 15px 0;
+  margin: 20px 10px;
   -webkit-transition: all .2s ease, -webkit-transform .2s;
   transition: all .2s ease, -webkit-transform .2s;
   transition: transform .2s, all .2s ease;
@@ -1840,7 +1840,7 @@ li.tabs__tab a {
 
 .logo.fixed img,
 .site-branding__logo.fixed img {
-  margin: 20px 10px;
+  margin: 5px 0;
   padding: 0 40px 20px 0;
   max-height: 75px;
 }
