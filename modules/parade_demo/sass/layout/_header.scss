@@ -13,7 +13,8 @@
   padding-right: 1em;
   transition: transform .2s, all .2s ease ;
   img {
-    margin: 15px 0;
+    //margin: 15px 0;
+    margin: 20px 10px; //fix for druplicon
     transition: transform .2s, all .2s ease ;
     max-width: 120px;
     box-sizing: border-box;
@@ -28,7 +29,8 @@
     z-index: -1;
     top: 5px;
     left: 5px;
-    width: 140px;
+    //width: 140px;
+    width: 100px; //fix for duplicon
     height: 100px;
   }
   &.not-fixed {
@@ -45,6 +47,7 @@
     img {
       margin: 5px 0;
       padding: 0 40px 20px 0;
+      max-height: 75px;
     }
     &:after {
       transition: transform .2s, width .2s ease .2s;

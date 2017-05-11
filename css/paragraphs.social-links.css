@@ -21,6 +21,7 @@
   height: 42px;
   background-color: #aaa;
   border-radius: 50%;
+  -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s;
