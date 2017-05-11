@@ -5,4 +5,10 @@
         color: $text-color-strong;
     }
 
+    .leaflet-container {
+        a.leaflet-popup-close-button {
+            border-bottom: none;
+        }
+    }
+
 }

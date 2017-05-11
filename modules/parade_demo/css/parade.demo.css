@@ -460,6 +460,7 @@ details summary:hover {
   text-decoration: none;
   font-size: 0.875rem;
   /* 5 */
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;
   /* 6 */
@@ -478,6 +479,7 @@ details summary:hover {
 }
 
 .button:active {
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -753,6 +755,7 @@ details summary:hover {
   background: #0678BE;
   color: white;
   text-decoration: none;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;
   width: auto !important;
@@ -773,8 +776,10 @@ details summary:hover {
 
 .dropbutton-single .dropbutton-action a:active {
   background-color: #dfdfd9;
+  background-image: -webkit-linear-gradient(top, #f6f6f3, #e7e7df);
   background-image: linear-gradient(to bottom, #f6f6f3, #e7e7df);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: none;
   transition: none;
 }
 
@@ -1088,6 +1093,7 @@ textarea.form-textarea {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
   font-size: 1em;
   color: #595959;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
@@ -1134,6 +1140,7 @@ select.form-select {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
   font-size: 1em;
   color: #595959;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
@@ -1158,6 +1165,7 @@ select {
   /* LTR */
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
   font-size: 0.875rem;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;
   line-height: normal;
@@ -1354,6 +1362,7 @@ th > a:after {
   left: 0;
   right: 0;
   border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
@@ -1639,6 +1648,7 @@ li.tabs__tab a {
 
 .tabs.secondary .tabs__tab {
   display: block;
+  -webkit-transition: border-color 0.2s, background-color 0.2s;
   transition: border-color 0.2s, background-color 0.2s;
 }
 
@@ -1776,6 +1786,7 @@ li.tabs__tab a {
   border-bottom: 0;
   margin-right: 0;
   padding-right: 1em;
+  -webkit-transition: all .2s ease, -webkit-transform .2s;
   transition: all .2s ease, -webkit-transform .2s;
   transition: transform .2s, all .2s ease;
   transition: transform .2s, all .2s ease, -webkit-transform .2s;
@@ -1783,7 +1794,8 @@ li.tabs__tab a {
 
 .logo img,
 .site-branding__logo img {
-  margin: 15px 0;
+  margin: 20px 10px;
+  -webkit-transition: all .2s ease, -webkit-transform .2s;
   transition: all .2s ease, -webkit-transform .2s;
   transition: transform .2s, all .2s ease;
   transition: transform .2s, all .2s ease, -webkit-transform .2s;
@@ -1801,12 +1813,13 @@ li.tabs__tab a {
   z-index: -1;
   top: 5px;
   left: 5px;
-  width: 140px;
+  width: 100px;
   height: 100px;
 }
 
 .logo.not-fixed img,
 .site-branding__logo.not-fixed img {
+  -webkit-transition: all .2s ease .2s, -webkit-transform .2s;
   transition: all .2s ease .2s, -webkit-transform .2s;
   transition: transform .2s, all .2s ease .2s;
   transition: transform .2s, all .2s ease .2s, -webkit-transform .2s;
@@ -1814,6 +1827,7 @@ li.tabs__tab a {
 
 .logo.not-fixed:after,
 .site-branding__logo.not-fixed:after {
+  -webkit-transition: width .2s, -webkit-transform .2s ease .2s;
   transition: width .2s, -webkit-transform .2s ease .2s;
   transition: width .2s, transform .2s ease .2s;
   transition: width .2s, transform .2s ease .2s, -webkit-transform .2s ease .2s;
@@ -1828,10 +1842,12 @@ li.tabs__tab a {
 .site-branding__logo.fixed img {
   margin: 5px 0;
   padding: 0 40px 20px 0;
+  max-height: 75px;
 }
 
 .logo.fixed:after,
 .site-branding__logo.fixed:after {
+  -webkit-transition: width .2s ease .2s, -webkit-transform .2s;
   transition: width .2s ease .2s, -webkit-transform .2s;
   transition: transform .2s, width .2s ease .2s;
   transition: transform .2s, width .2s ease .2s, -webkit-transform .2s;
@@ -2121,6 +2137,7 @@ li.tabs__tab a {
     opacity: 0;
     visibility: hidden;
     will-change: opacity;
+    -webkit-transition: opacity .2s, visibility .2s;
     transition: opacity .2s, visibility .2s;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
     min-width: 50%;
@@ -2164,6 +2181,7 @@ li.tabs__tab a {
     left: 0;
     right: 0;
     text-align: right;
+    -webkit-transition: background .2s;
     transition: background .2s;
   }
   .node--type-parade-onepage .campaign-menu a {
@@ -2175,6 +2193,7 @@ li.tabs__tab a {
   }
   .node--type-parade-onepage .campaign-menu .campaign-menu-link a[data-selected="0"] {
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-color .2s;
     transition: border-color .2s;
   }
   .node--type-parade-onepage .campaign-menu .campaign-menu-link a[data-selected="0"]:hover {
@@ -2608,6 +2627,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   padding: 0.25rem 1rem;
   font-size: 1rem;
   border-radius: 2px;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #5e5e5e;
   background-color: #eeeeee;
@@ -2621,6 +2641,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .node-parade-onepage-edit-form .button.button--danger,
 .node-parade-onepage-form .button.button--danger {
   text-decoration: none;
+  background-image: -webkit-linear-gradient(top, #f6f6f3, #e7e7df);
   background-image: linear-gradient(to bottom, #f6f6f3, #e7e7df);
 }
 
@@ -4345,6 +4366,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
   }
 }
 
+.paragraph--type--locations.paragraph--view-mode--default .leaflet-container a.leaflet-popup-close-button {
+  border-bottom: none;
+}
+
 .paragraph--type--social-links.paragraph--view-mode--default {
   background-color: #dfdfdf;
 }
@@ -4570,6 +4595,7 @@ h3.tieto-lead {
   padding: 0.25rem 1rem;
   font-size: 1rem;
   border-radius: 2px;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #5e5e5e;
   background-color: #eeeeee;
@@ -4897,10 +4923,13 @@ h3.tieto-lead {
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, -webkit-filter;
+  -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
   transition-property: opacity, filter, -webkit-filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
   font: inherit;
   color: inherit;
   text-transform: none;
@@ -4934,10 +4963,13 @@ h3.tieto-lead {
   border-radius: 4px;
   position: absolute;
   transition-property: -webkit-transform;
+  -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .hamburger-inner::before, .hamburger-inner::after {
@@ -4959,18 +4991,23 @@ h3.tieto-lead {
 .hamburger--collapse .hamburger-inner {
   top: auto;
   bottom: 0;
-  transition-duration: 0.15s;
-  transition-delay: 0.15s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--collapse .hamburger-inner::after {
   top: -20px;
+  -webkit-transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
   transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
 }
 
 .hamburger--collapse .hamburger-inner::before {
   transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -4978,13 +5015,16 @@ h3.tieto-lead {
 .hamburger--collapse.is-active .hamburger-inner {
   -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
   transform: translate3d(0, -10px, 0) rotate(-45deg);
-  transition-delay: 0.32s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .hamburger--collapse.is-active .hamburger-inner::after {
   top: 0;
   opacity: 0;
+  -webkit-transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
   transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear;
 }
 
@@ -4993,6 +5033,7 @@ h3.tieto-lead {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -5016,6 +5057,7 @@ h3.tieto-lead {
 
 .cc_container a:link:hover {
   border-bottom: 2px solid #fff;
+  -webkit-transition: border-color .2s;
   transition: border-color .2s;
 }
 
