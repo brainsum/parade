@@ -475,7 +475,7 @@ function _parade_demo_create_demo_content() {
       'parade_anchor' => '#textbox-icons',
       'parade_boxes_per_row' => 2,
       'parade_paragraphs' => $roundedParagraphs,
-      'parade_view_mode' => 'default',
+      'parade_view_mode' => 'custom',
       'parade_layout' => 'layout_rounded_image',
       'parade_color_scheme' => 'color_clean',
     ],
