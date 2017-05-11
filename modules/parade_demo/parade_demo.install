@@ -5,7 +5,7 @@
  * Install hooks for Parade Demo.
  */
 
-use \Drupal\block\Entity\Block;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_install().
@@ -190,61 +190,74 @@ function _parade_demo_create_demo_content() {
     file_prepare_directory($dir, FILE_CREATE_DIRECTORY);
   }
 
-  $headerBackgroundUri = file_unmanaged_copy($paradeDemoPath . '/images/parade-default-header-video-cut-720p-web.mp4', 'public://paragraphs/background/parade-default-header-video-cut-720p-web.mp4', FILE_EXISTS_REPLACE);
+  $headerBackgroundUri = file_unmanaged_copy($paradeDemoPath . '/images/parade-default-header-video-cut-720p-web.mp4',
+    'public://paragraphs/background/parade-default-header-video-cut-720p-web.mp4',
+    FILE_EXISTS_REPLACE);
   $headerBackgroundFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $headerBackgroundUri,
   ]);
   $headerBackgroundFile->save();
 
-  $parallaxBackgroundUri = file_unmanaged_copy($paradeDemoPath . '/images/building.jpg', 'public://paragraphs/background/building.jpg', FILE_EXISTS_REPLACE);
+  $parallaxBackgroundUri = file_unmanaged_copy($paradeDemoPath . '/images/building.jpg',
+    'public://paragraphs/background/building.jpg', FILE_EXISTS_REPLACE);
   $parallaxBackgroundFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $parallaxBackgroundUri,
   ]);
   $parallaxBackgroundFile->save();
 
-  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/guitar.jpg', 'public://image/' . date('Y-m') . '/guitar.jpg', FILE_EXISTS_REPLACE);
+  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/guitar.jpg',
+    'public://image/' . date('Y-m') . '/guitar.jpg', FILE_EXISTS_REPLACE);
   $imageFile_1 = $entityTypeManager->getStorage('file')->create([
     'uri' => $imageUri,
   ]);
   $imageFile_1->save();
 
-  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/hut.jpg', 'public://image/' . date('Y-m') . '/hut.jpg', FILE_EXISTS_REPLACE);
+  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/hut.jpg',
+    'public://image/' . date('Y-m') . '/hut.jpg', FILE_EXISTS_REPLACE);
   $imageFile_2 = $entityTypeManager->getStorage('file')->create([
     'uri' => $imageUri,
   ]);
   $imageFile_2->save();
 
-  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/woman-sample.jpg', 'public://image/' . date('Y-m') . '/woman-sample.jpg', FILE_EXISTS_REPLACE);
+  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/woman-sample.jpg',
+    'public://image/' . date('Y-m') . '/woman-sample.jpg', FILE_EXISTS_REPLACE);
   $imageFile_3 = $entityTypeManager->getStorage('file')->create([
     'uri' => $imageUri,
   ]);
   $imageFile_3->save();
 
-  $textImageUri = file_unmanaged_copy($paradeDemoPath . '/images/melbourne.jpg', 'public://image/' . date('Y-m') . '/melbourne.jpg', FILE_EXISTS_REPLACE);
+  $textImageUri = file_unmanaged_copy($paradeDemoPath . '/images/melbourne.jpg',
+    'public://image/' . date('Y-m') . '/melbourne.jpg', FILE_EXISTS_REPLACE);
   $textImageFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $textImageUri,
   ]);
   $textImageFile->save();
 
-  $textBoxImageUri = file_unmanaged_copy($paradeDemoPath . '/images/guitar.jpg', 'public://image/box/' . date('Y-m') . '/guitar.jpg', FILE_EXISTS_REPLACE);
+  $textBoxImageUri = file_unmanaged_copy($paradeDemoPath . '/images/guitar.jpg',
+    'public://image/box/' . date('Y-m') . '/guitar.jpg', FILE_EXISTS_REPLACE);
   $textBoxImageFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $textBoxImageUri,
   ]);
   $textBoxImageFile->save();
 
-  $defaultIconUri = file_unmanaged_copy($paradeDemoPath . '/images/default-icon.png', 'public://image/box/' . date('Y-m') . '/default-icon.png', FILE_EXISTS_REPLACE);
+  $defaultIconUri = file_unmanaged_copy($paradeDemoPath . '/images/default-icon.png',
+    'public://image/box/' . date('Y-m') . '/default-icon.png',
+    FILE_EXISTS_REPLACE);
   $defaultIconFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $defaultIconUri,
   ]);
   $defaultIconFile->save();
 
-  $roundedImageUri = file_unmanaged_copy($paradeDemoPath . '/images/people-sample.jpg', 'public://image/box/' . date('Y-m') . '/people-sample.jpg', FILE_EXISTS_REPLACE);
+  $roundedImageUri = file_unmanaged_copy($paradeDemoPath . '/images/people-sample.jpg',
+    'public://image/box/' . date('Y-m') . '/people-sample.jpg',
+    FILE_EXISTS_REPLACE);
   $roundedImageFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $roundedImageUri,
   ]);
   $roundedImageFile->save();
 
-  $textImageDrupalUri = file_unmanaged_copy($paradeDemoPath . '/images/drupal-8.png', 'public://image/' . date('Y-m') . '/drupal-8.png', FILE_EXISTS_REPLACE);
+  $textImageDrupalUri = file_unmanaged_copy($paradeDemoPath . '/images/drupal-8.png',
+    'public://image/' . date('Y-m') . '/drupal-8.png', FILE_EXISTS_REPLACE);
   $textImageDrupalFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $textImageDrupalUri,
   ]);
@@ -253,7 +266,11 @@ function _parade_demo_create_demo_content() {
   $textBox = [
     'type' => 'text_box',
     'parade_title' => 'Textbox title',
-    'parade_image' => $textBoxImageFile,
+    'parade_image' => [
+      'target_id' => $textBoxImageFile->id(),
+      'alt' => 'Guitar',
+      'title' => 'Guitar',
+    ],
     'parade_text' => [
       'value' => "<p>Suspendisse potenti. Curabitur faucibus egestas eros. Donec euismod congue odio. Aliquam sagittis quam quis quam. Maecenas viverra. Donec sapien orci, facilisis quis, sagittis ac, laoreet nec, eros. Quisque sed diam non erat facilisis iaculis.</p>",
       'format' => 'basic_html',
@@ -267,7 +284,11 @@ function _parade_demo_create_demo_content() {
   $iconTextBox = [
     'type' => 'text_box',
     'parade_title' => 'Text with an icon',
-    'parade_image' => $defaultIconFile,
+    'parade_image' => [
+      'target_id' => $defaultIconFile->id(),
+      'alt' => 'Default icon',
+      'title' => 'Default icon',
+    ],
     'parade_text' => [
       'value' => "<p>Suspendisse potenti. Curabitur faucibus egestas eros. Donec euismod congue odio. Aliquam sagittis quam quis quam. Maecenas viverra. Donec sapien orci, facilisis quis, sagittis ac, laoreet nec, eros. Quisque sed diam non erat facilisis iaculis.</p>",
       'format' => 'basic_html',
@@ -281,7 +302,11 @@ function _parade_demo_create_demo_content() {
   $roundedTextBox = [
     'type' => 'text_box',
     'parade_title' => 'Rounded image title',
-    'parade_image' => $roundedImageFile,
+    'parade_image' => [
+      'target_id' => $roundedImageFile->id(),
+      'alt' => 'People',
+      'title' => 'People',
+    ],
     'parade_text' => [
       'value' => "<p>Suspendisse potenti. Curabitur faucibus egestas eros. Donec euismod congue odio. Aliquam sagittis quam quis quam. Maecenas viverra. Donec sapien orci, facilisis quis, sagittis ac, laoreet nec, eros. Quisque sed diam non erat facilisis iaculis.</p>",
       'format' => 'basic_html',
@@ -296,7 +321,11 @@ function _parade_demo_create_demo_content() {
     [
       'type' => 'header',
       'parade_anchor' => '#home',
-      'parade_background' => $headerBackgroundFile,
+      'parade_background' => [
+        'target_id' => $headerBackgroundFile->id(),
+        'alt' => 'Header background video',
+        'title' => 'Header background video',
+      ],
       'parade_title' => 'Parade',
       'parade_secondary_title' => 'One Page Site Demo no. 1',
       'parade_lead_text' => 'A package built on top of the awesome Paragraphs module, featuring common sections and onepage-site solutions.',
@@ -385,7 +414,11 @@ function _parade_demo_create_demo_content() {
       'parade_anchor' => '#parallax',
       'parade_enable_parallax' => TRUE,
       'parade_minimum_height' => 300,
-      'parade_background' => $parallaxBackgroundFile,
+      'parade_background' => [
+        'target_id' => $parallaxBackgroundFile->id(),
+        'alt' => 'Building',
+        'title' => 'Building',
+      ],
       'parade_text' => [
         'value' => "<h2>Parallax Background&nbsp;Image Type</h2>
 
@@ -398,16 +431,32 @@ function _parade_demo_create_demo_content() {
       'parade_title' => 'Images',
       'parade_anchor' => '#images',
       'parade_images' => [
-        $imageFile_1,
-        $imageFile_2,
-        $imageFile_3,
+        [
+          'target_id' => $imageFile_1->id(),
+          'alt' => 'Guitar',
+          'title' => 'Guitar',
+        ],
+        [
+          'target_id' => $imageFile_2->id(),
+          'alt' => 'Hut',
+          'title' => 'Hut',
+        ],
+        [
+          'target_id' => $imageFile_3->id(),
+          'alt' => 'Woman',
+          'title' => 'Woman',
+        ],
       ],
     ],
     [
       'type' => 'image_text',
       'parade_title' => 'Textbox image first',
       'parade_anchor' => '#imagefirst',
-      'parade_image' => $textImageFile,
+      'parade_image' => [
+        'target_id' => $textImageFile->id(),
+        'alt' => 'Melbourne',
+        'title' => 'Melbourne',
+      ],
       'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         'format' => 'basic_html',
@@ -423,7 +472,11 @@ function _parade_demo_create_demo_content() {
       'type' => 'image_text',
       'parade_title' => 'Textbox text first',
       'parade_anchor' => '#textfirst',
-      'parade_image' => $textImageFile,
+      'parade_image' => [
+        'target_id' => $textImageFile->id(),
+        'alt' => 'Melbourne',
+        'title' => 'Melbourne',
+      ],
       'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         'format' => 'basic_html',
@@ -440,7 +493,11 @@ function _parade_demo_create_demo_content() {
       'type' => 'image_text',
       'parade_title' => 'Textbox - text first - enhanced',
       'parade_anchor' => '#imagefirst-enhanced',
-      'parade_image' => $textImageFile,
+      'parade_image' => [
+        'target_id' => $textImageFile->id(),
+        'alt' => 'Melbourne',
+        'title' => 'Melbourne',
+      ],
       'parade_text' => [
         'value' => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         'format' => 'basic_html',
@@ -487,7 +544,11 @@ function _parade_demo_create_demo_content() {
       'type' => 'image_text',
       'parade_title' => 'This one page site',
       'parade_anchor' => '#builtonparade',
-      'parade_image' => $textImageDrupalFile,
+      'parade_image' => [
+        'target_id' => $textImageDrupalFile->id(),
+        'alt' => 'D8',
+        'title' => 'D8',
+      ],
       'parade_text' => [
         'value' => "<p><br />
 <strong>is built on <a href=\"https://www.drupal.org/project/parade\">parade module</a>&nbsp;without custom code or CSS.</strong></p>
@@ -561,7 +622,8 @@ function _parade_demo_create_demo_content() {
   );
 
   $demoContent->save();
-  drupal_set_message('Demo content available at node/' . $demoContent->id(), 'status');
+  drupal_set_message('Demo content available at node/' . $demoContent->id(),
+    'status');
 }
 
 /**
@@ -569,32 +631,32 @@ function _parade_demo_create_demo_content() {
  */
 function _parade_demo_add_system_branding_block() {
   $default_theme = \Drupal::config('system.theme')->get('default');
-  $values = array(
+  $values = [
     'id' => 'system_branding_block',
     'plugin' => 'system_branding_block',
     'region' => 'content',
-    'settings' => array(
+    'settings' => [
       'label' => 'Site branding - Parade demo',
       'label_display' => 0,
       'use_site_logo' => TRUE,
       'use_site_name' => FALSE,
       'use_site_slogan' => FALSE,
-    ),
+    ],
     'theme' => $default_theme,
-    'visibility' => array(
-      'node_type' => array(
+    'visibility' => [
+      'node_type' => [
         'id' => 'node_type',
-        'bundles' => array(
+        'bundles' => [
           'parade_onepage' => 'parade_onepage',
-        ),
+        ],
         'negate' => FALSE,
-        'context_mapping' => array(
+        'context_mapping' => [
           'node' => '@node.node_route_context:node',
-        ),
-      ),
-    ),
+        ],
+      ],
+    ],
     'weight' => -1,
-  );
+  ];
   $block = Block::create($values);
   $block->save();
 }
@@ -611,13 +673,13 @@ function _parade_demo_set_visibility_page_title_block() {
   if ($page_title_block->getRegion() === 'content') {
     $settings = [
       'id' => 'node_type',
-      'bundles' => array(
+      'bundles' => [
         'parade_onepage' => 'parade_onepage',
-      ),
+      ],
       'negate' => TRUE,
-      'context_mapping' => array(
+      'context_mapping' => [
         'node' => '@node.node_route_context:node',
-      ),
+      ],
     ];
     $page_title_block->setVisibilityConfig('node_type', $settings);
     $page_title_block->save();
