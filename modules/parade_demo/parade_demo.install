@@ -608,7 +608,7 @@ function _parade_demo_create_demo_content() {
           'title' => 'Simple Two Col Content First',
           'options' => [
             'attributes' => [
-              'data-selected' => TRUE,
+              'data-selected' => 1,
             ],
           ],
         ],
