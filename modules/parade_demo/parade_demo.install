@@ -5,6 +5,8 @@
  * Install hooks for Parade Demo.
  */
 
+use \Drupal\block\Entity\Block;
+
 /**
  * Implements hook_install().
  */
@@ -12,6 +14,7 @@ function parade_demo_install() {
   _parade_demo_create_demo_layout();
   _parade_demo_create_demo_color_schemes();
   _parade_demo_create_demo_content();
+  _parade_demo_add_system_branding_block();
 }
 
 /**
@@ -558,4 +561,39 @@ function _parade_demo_create_demo_content() {
 
   $demoContent->save();
   drupal_set_message('Demo content available at node/' . $demoContent->id(), 'status');
+}
+
+/**
+ * Helper function to add 'Site branding' block.
+ */
+function _parade_demo_add_system_branding_block() {
+  $default_theme = \Drupal::config('system.theme')->get('default');
+  $values = array(
+    'id' => 'system_branding_block',
+    'plugin' => 'system_branding_block',
+    'region' => 'content',
+    'settings' => array(
+      'label' => 'Site branding - Parade demo',
+      'label_display' => 0,
+      'use_site_logo' => TRUE,
+      'use_site_name' => FALSE,
+      'use_site_slogan' => FALSE,
+    ),
+    'theme' => $default_theme,
+    'visibility' => array(
+      'node_type' => array(
+        'id' => 'node_type',
+        'bundles' => array(
+          'parade_onepage' => 'parade_onepage',
+        ),
+        'negate' => FALSE,
+        'context_mapping' => array(
+          'node' => '@node.node_route_context:node',
+        ),
+      ),
+    ),
+    'weight' => -1,
+  );
+  $block = Block::create($values);
+  $block->save();
 }
