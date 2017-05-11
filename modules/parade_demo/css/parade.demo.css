@@ -1813,7 +1813,7 @@ li.tabs__tab a {
   z-index: -1;
   top: 5px;
   left: 5px;
-  width: 140px;
+  width: 100px;
   height: 100px;
 }
 
@@ -1840,7 +1840,7 @@ li.tabs__tab a {
 
 .logo.fixed img,
 .site-branding__logo.fixed img {
-  margin: 5px 0;
+  margin: 20px 10px;
   padding: 0 40px 20px 0;
   max-height: 75px;
 }
