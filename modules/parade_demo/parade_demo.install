@@ -677,7 +677,8 @@ function _parade_demo_add_system_branding_block() {
     ],
     'weight' => -1,
   ];
-  $block = Block::create($values);
+  $blockStorage = \Drupal::entityTypeManager()->getStorage('block');
+  $block = $blockStorage->create($values);
   $block->save();
 }
 
@@ -688,8 +689,10 @@ function _parade_demo_add_system_branding_block() {
  */
 function _parade_demo_set_visibility_page_title_block() {
   $default_theme = \Drupal::config('system.theme')->get('default');
+  $blockStorage = \Drupal::entityTypeManager()->getStorage('block');
+  /** @var \Drupal\block\BlockInterface $page_title_block */
+  $page_title_block = $blockStorage->load($default_theme . '_page_title');
 
-  $page_title_block = Block::load($default_theme . '_page_title');
   if ($page_title_block->getRegion() === 'content') {
     $settings = [
       'id' => 'node_type',
