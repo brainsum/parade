@@ -2,6 +2,8 @@
 
 namespace Drupal\Tests\parade\Functional;
 
+use Drupal\Component\Render\FormattableMarkup;
+
 require_once __DIR__ . '/Includes/ParadeOnepageContentTypeExpectedData.inc';
 
 
@@ -18,7 +20,6 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
    * @var array
    */
   public static $modules = [
-    'parade_demo',
     'field_ui',
     'block',
     'menu_ui',
@@ -30,7 +31,20 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
   protected function setUp() {
     parent::setUp();
 
+    \Drupal::service('theme_handler')->install(['bartik', 'seven']);
+    $this->config('system.theme')
+      ->set('default', 'bartik')
+      ->set('admin', 'seven')
+      ->save();
+
     $this->drupalPlaceBlock('local_actions_block');
+    $this->drupalPlaceBlock('bartik_page_title', [
+      'id' => 'bartik_page_title',
+      'region' => 'content',
+    ]);
+
+    $success = \Drupal::service('module_installer')->install(['parade_demo']);
+    self::assertTrue($success, new FormattableMarkup('Enabled module: %modules', ['%module' => 'parade_demo']));
 
     // Create a user with permissions to manage the Parade onepage content type.
     $permissions = [
@@ -96,6 +110,7 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
     self::assertSession()->statusCodeEquals(200);
     self::assertSession()->pageTextContains($contentName);
     self::assertSession()->pageTextContains('Parade');
+    self::assertSession()->elementExists('css', '.site-branding');
   }
 
   /**
