@@ -141,6 +141,7 @@ abstract class ParadeTestBase extends BrowserTestBase {
   protected function assertArraysAreEqual(array $expectedArray, array $actualArray) {
     self::assertCount(count($expectedArray), $actualArray, "Arrays don't have the same amount of values.");
 
+    /** @var array $row */
     foreach ($expectedArray as $rInd => $row) {
       foreach ($row as $cInd => $column) {
 

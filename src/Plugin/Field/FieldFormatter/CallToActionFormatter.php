@@ -10,6 +10,7 @@ use Drupal\link\Plugin\Field\FieldFormatter\LinkFormatter;
  *
  * It adds `target="_blank"` and `rel="noreferrer noopener"` to links.
  * The latter is needed because of a security flaw.
+ *
  * @see https://mathiasbynens.github.io/rel-noopener/
  *
  * @FieldFormatter(

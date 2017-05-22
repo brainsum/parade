@@ -7,6 +7,8 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\link\Plugin\Field\FieldWidget\LinkWidget;
 
 /**
+ * Call to action widget implementation.
+ *
  * @FieldWidget(
  *   id = "link_cta",
  *   label = @Translation("Call to action"),
@@ -37,7 +39,6 @@ class CallToActionWidget extends LinkWidget {
       $item = $items[$delta];
 
       $options = $item->get('options')->getValue();
-      $attributes = isset($options['attributes']) ? $options['attributes'] : [];
 
       $element['options']['open_on_new_tab'] = [
         '#type' => 'checkbox',

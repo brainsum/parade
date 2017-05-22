@@ -167,7 +167,7 @@ var rellax = createCommonjsModule(function (module) {
         posY = (document.documentElement || document.body.parentNode || document.body).scrollTop;
       }
 
-      if (oldY != posY) {
+      if (oldY !== posY) {
       	// scroll changed, return true
       	return true;
       }

@@ -7,6 +7,8 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\link\Plugin\Field\FieldWidget\LinkWidget;
 
 /**
+ * Link with selected attributes widget implementation.
+ *
  * @FieldWidget(
  *   id = "link_with_selected_attribute",
  *   label = @Translation("Link (with selected attribute)"),

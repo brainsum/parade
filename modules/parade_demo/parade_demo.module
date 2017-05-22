@@ -7,8 +7,6 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\Html;
-use Drupal\file\Entity\File;
-use Drupal\image\Entity\ImageStyle;
 
 /**
  * Implements hook_theme().
@@ -41,7 +39,7 @@ function parade_demo_theme($existing, $type, $theme, $path) {
  */
 function parade_demo_page_attachments(array &$page) {
   $attributes = Drupal::request()->attributes;
-  if ($attributes->has('node') && $attributes->get('node')->getType() == 'parade_onepage' && $attributes->get('_route') === 'entity.node.canonical') {
+  if ($attributes->has('node') &&  $attributes->get('_route') === 'entity.node.canonical' && $attributes->get('node')->getType() === 'parade_onepage') {
     $page['#attached']['library'][] = 'parade_demo/parade_onepage';
     $page['#attached']['library'][] = 'parade_demo/scrollspy';
     $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
@@ -55,7 +53,7 @@ function parade_demo_page_attachments(array &$page) {
  * @todo Use more specific hook.
  */
 function parade_demo_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (in_array($form_id, ['node_parade_onepage_form', 'node_parade_onepage_edit_form'])) {
+  if (in_array($form_id, ['node_parade_onepage_form', 'node_parade_onepage_edit_form'], FALSE)) {
     $form['#attached']['library'][] = 'parade_demo/parade_onepage';
     $page['#attached']['library'][] = 'parade_demo/scrollspy';
     $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
@@ -178,7 +176,7 @@ function parade_demo_form_node_form_alter(&$form, FormStateInterface $form_state
  */
 function parade_demo_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // @todo @fixme
-  if (in_array('page__node__campaign', $suggestions)) {
+  if (in_array('page__node__campaign', $suggestions, FALSE)) {
     $suggestions[] = 'page__node__campaign__revisions';
   }
   return $suggestions;
@@ -189,7 +187,7 @@ function parade_demo_theme_suggestions_page_alter(array &$suggestions, array $va
  */
 function parade_demo_preprocess_field__parade_call_to_action(&$variables) {
   foreach ($variables['items'] as $key => $link) {
-    if ($variables['element']['#entity_type'] == 'paragraph' && $variables['element']['#bundle'] == 'text_box') {
+    if ($variables['element']['#entity_type'] === 'paragraph' && $variables['element']['#bundle'] === 'text_box') {
       $classes = ['button', 'button--green'];
     }
     else {

@@ -53,8 +53,13 @@ function parade_preprocess_paragraph(&$variables) {
       $file_path = parse_url(file_create_url($file_uri))['path'];
 
       // Attach parallax library if the user enabled the effect.
-      if ($paragraph->hasField('parade_enable_parallax') && TRUE == $paragraph->get('parade_enable_parallax')->value) {
-        $variables['#attached']['library'][] = 'parade/parallax';
+      $enable_parallax = 0;
+      if ($paragraph->hasField('parade_enable_parallax')) {
+        // Check parade_enable_parallax field.
+        $enable_parallax = (int) $paragraph->get('parade_enable_parallax')->value;
+        if (1 === $enable_parallax) {
+          $variables['#attached']['library'][] = 'parade/parallax';
+        }
       }
 
       // @todo Maybe use this...?
@@ -86,14 +91,11 @@ function parade_preprocess_paragraph(&$variables) {
         'video/mp4',
         'application/mp4',
         'video/webm',
-      ])) {
+      ], FALSE)) {
         $type = 'video';
         // Attach video related libraries.
         $variables['#attached']['library'][] = 'parade/inline-video';
       }
-
-      // Check parade_enable_parallax field.
-      $enable_parallax = $paragraph->hasField('parade_enable_parallax') ? $paragraph->get('parade_enable_parallax')->value : FALSE;
 
       // Add variables to theme.
       _parade_add_template_variable($variables, [
@@ -276,7 +278,7 @@ function _parade_add_template_variable(array &$variables, array $data = NULL) {
 function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the Paragraphs field.
   // @todo Check the field formatter instead!
-  /** @var FormStateInterface $form */
+  /** @var \Drupal\Core\Form\FormStateInterface $form */
   if (isset($form['parade_paragraphs'])) {
     $form['#attached']['library'][] = 'parade/buttons';
 
@@ -294,9 +296,9 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function parade_preprocess_field__parade_social_link(&$variables) {print_r($variables);
+function parade_preprocess_field__parade_social_link(&$variables) {
   // @todo @fixme Sad but true.
-  foreach ($variables['items'] as $key => $link) {drupal_set_message($link['content']['#title']);
+  foreach ($variables['items'] as $key => $link) {
     if (strpos($link['content']['#title'], 'facebook') !== FALSE) {
       $type = 'facebook';
     }

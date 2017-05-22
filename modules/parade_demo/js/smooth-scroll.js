@@ -49,14 +49,15 @@
     e.preventDefault();
     updateHash(this.hash);
 
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 
       // Calculate admin toolbar height.
       // Both Toolbar and its Tray are 39px in default Drupal theme.
       var headerHeight = 0;
-      if ($('body').hasClass('toolbar-horizontal')) {
+      var body = $('body');
+      if (body.hasClass('toolbar-horizontal')) {
         headerHeight = 39;
-        if ($('body').hasClass('toolbar-tray-open')) {
+        if (body.hasClass('toolbar-tray-open')) {
           headerHeight += 39;
         }
       }
@@ -66,8 +67,9 @@
         $('html,body').animate({
           scrollTop: target.offset().top - headerHeight - offset
         }, scrollSpeed);
-        if ($(window).width() < 768 && $('#hamburger').hasClass('is-active')) {
-          $('#hamburger').removeClass('is-active');
+        var hamburger = $('#hamburger');
+        if ($(window).width() < 768 && hamburger.hasClass('is-active')) {
+          hamburger.removeClass('is-active');
         }
         return false
       }

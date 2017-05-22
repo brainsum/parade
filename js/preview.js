@@ -102,7 +102,7 @@
    */
   previewer.dialogIsPreviewer = function (dialog, $element, settings) {
     var dialogClass = '';
-    if (typeof settings == 'object' && ('dialogClass' in settings)) {
+    if (typeof settings === 'object' && ('dialogClass' in settings)) {
       dialogClass = settings.dialogClass;
     }
     else if ($element.length && !!$element.dialog) {

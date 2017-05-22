@@ -246,7 +246,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    *   A render array for the field.
    */
   public static function paragraphsPreviewRenderParentField(Paragraph $paragraph, $parent_field_name, ContentEntityBase $parent_entity = NULL) {
-    if (!isset($parent_entity)) {
+    if (NULL === $parent_entity) {
       $parent_entity = $paragraph->getParentEntity();
     }
 
