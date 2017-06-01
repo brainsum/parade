@@ -74,12 +74,18 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $settings = $this->getSettings();
-    $icon_url = $settings['icon']['icon_url'];
 
     $map = leaflet_map_get_info($settings['leaflet_map']);
     $map['settings']['zoom'] = (TRUE === (bool) $settings['auto_zoom'] || !isset($settings['zoom'])) ? NULL : $settings['zoom'];
     $map['settings']['minZoom'] = isset($settings['minZoom']) ? $settings['minZoom'] : NULL;
     $map['settings']['maxZoom'] = isset($settings['maxZoom']) ? $settings['maxZoom'] : NULL;
+    $normalizedSettings = [];
+    // The leaflet js requires the keys to be in camelCase.
+    foreach ($settings['icon'] as $key => $data) {
+      $camelCasedKey = $this->snakeCaseToCamelCase($key);
+      $normalizedSettings[$camelCasedKey] = $data;
+    }
+    $map['icon'] = empty($map['icon']) ? $normalizedSettings : $map['icon'];
 
     // We collect all features in a single array.
     $aggregated_features = array();
@@ -101,9 +107,9 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
         $features[0]['popup'] = $sourceField->getValue()[$delta]['value'];
       }
 
-      if (!empty($icon_url)) {
+      if (!empty($map['icon']['iconUrl'])) {
         foreach ($features as $key => $feature) {
-          $features[$key]['icon'] = $settings['icon'];
+          $features[$key]['icon'] = $map['icon'];
         }
       }
 
@@ -115,6 +121,24 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     $elements[0] = aggregated_leaflet_map_render_map($map, $aggregated_features, $settings['height'] . 'px');
 
     return $elements;
+  }
+
+  /**
+   * Convert a snake_case string to camelCase.
+   *
+   * @param $string
+   * @param bool $capitalizeFirstCharacter
+   *
+   * @return mixed
+   */
+  private function snakeCaseToCamelCase($string, $capitalizeFirstCharacter = FALSE) {
+    $str = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
+
+    if (!$capitalizeFirstCharacter) {
+      $str[0] = strtolower($str[0]);
+    }
+
+    return $str;
   }
 
   /**
