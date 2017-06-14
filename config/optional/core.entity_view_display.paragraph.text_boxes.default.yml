@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.text_boxes.field_anchor
     - field.field.paragraph.text_boxes.field_boxes_per_row
     - field.field.paragraph.text_boxes.field_paragraphs
+    - field.field.paragraph.text_boxes.field_text
     - field.field.paragraph.text_boxes.field_text_boxes_layout
     - field.field.paragraph.text_boxes.field_title
     - paragraphs.paragraphs_type.text_boxes
@@ -22,6 +23,13 @@ content:
     settings:
       view_mode: default_custom
       link: false
+    third_party_settings: {  }
+  field_text:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
   field_title:
     type: string
