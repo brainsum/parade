@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.text_boxes.parade_boxes_per_row
     - field.field.paragraph.text_boxes.parade_color_scheme
     - field.field.paragraph.text_boxes.parade_paragraphs
+    - field.field.paragraph.text_boxes.parade_text
     - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_layout
     - field.field.paragraph.text_boxes.parade_view_mode
@@ -24,6 +25,13 @@ content:
     settings:
       view_mode: default
       link: ''
+    third_party_settings: {  }
+  parade_text:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     region: content
   parade_title:
