@@ -7,6 +7,7 @@
  * @todo Make the whole thing dynamic, do not rely on Parade content type.
  */
 
+use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
@@ -289,6 +290,18 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       $type = Html::getClass($item['#bundle_machine_name']);
       $form['parade_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
       $form['parade_paragraphs']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+    }
+  }
+
+  // If it's a form, turn off 'Enable linkedin autofill' checkbox, if
+  // 'linkedin_autofill' module isn't installed.
+  if (isset($form['parade_onepage_sections'])) {
+    $autofill_module_enabled = \Drupal::moduleHandler()->moduleExists('linkedin_autofill');
+
+    foreach ($form['parade_onepage_sections']['widget'] as $key => $paragraph) {
+      if (is_numeric($key) && isset($paragraph['subform']) && isset($paragraph['subform']['parade_enable_linkedin_autofill']) && $autofill_module_enabled) {
+        $form['parade_onepage_sections']['widget'][$key]['subform']['parade_enable_linkedin_autofill']['#access'] = FALSE;
+      }
     }
   }
 }

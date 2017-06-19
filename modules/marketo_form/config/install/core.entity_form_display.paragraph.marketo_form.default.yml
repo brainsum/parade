@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
     - field.field.paragraph.marketo_form.parade_enable_confirm_message
+    - field.field.paragraph.marketo_form.parade_enable_linkedin_autofill
     - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.parade_lead_text
     - field.field.paragraph.marketo_form.parade_marketo_form
@@ -43,6 +44,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   parade_enable_confirm_message:
+    weight: 8
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  parade_enable_linkedin_autofill:
     weight: 7
     settings:
       display_label: true
@@ -72,7 +80,7 @@ content:
     type: marketo_form
     region: content
   parade_text:
-    weight: 8
+    weight: 9
     settings:
       rows: 3
       placeholder: ''

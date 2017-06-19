@@ -18,6 +18,11 @@ function linkedin_autofill_theme_registry_alter(&$theme_registry) {
  * {@inheritdoc}
  */
 function linkedin_autofill_preprocess_paragraph__marketo_form(&$variables) {
-  // Attach LinkedIn autofill library.
-  $variables['#attached']['library'][] = 'linkedin_autofill/vendor.linkedin-autofill';
+  /* @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+
+  if ($paragraph->parade_enable_linkedin_autofill->value) {
+    // Attach LinkedIn autofill library.
+    $variables['#attached']['library'][] = 'linkedin_autofill/vendor.linkedin-autofill';
+  }
 }

@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.marketo_form.parade_anchor
     - field.field.paragraph.marketo_form.parade_color_scheme
     - field.field.paragraph.marketo_form.parade_enable_confirm_message
+    - field.field.paragraph.marketo_form.parade_enable_linkedin_autofill
     - field.field.paragraph.marketo_form.parade_image
     - field.field.paragraph.marketo_form.parade_lead_text
     - field.field.paragraph.marketo_form.parade_marketo_form
@@ -68,5 +69,6 @@ hidden:
   parade_anchor: true
   parade_color_scheme: true
   parade_enable_confirm_message: true
+  parade_enable_linkedin_autofill: true
   parade_layout: true
   uid: true
