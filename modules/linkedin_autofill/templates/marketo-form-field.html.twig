@@ -32,7 +32,17 @@
         <div id="marketo_confirmform_{{ form.form_id }}" style="visibility: hidden;">{{ entity.rendered_confirmation_message }}</div>
     {% else %}
         <script>
-            MktoForms2.loadForm("//{{ form.subscription_url }}", "{{ form.munchkin_id }}", {{ form.form_id }});
+            try {
+                MktoForms2.loadForm("//{{ form.subscription_url }}", "{{ form.munchkin_id }}", {{ form.form_id }});
+            } catch (err) {
+                if (typeof MktoForms2 === "undefined") {
+                    if (typeof MktoForms2 === "undefined") {
+                        document.getElementById('mktoForm_{{ form.form_id }}').innerHTML = '<div role="contentinfo" aria-label="{{ "Status message"|t }}" class="messages messages--warning">' +
+                            '<h2 class="visually-hidden">{{ "Status message"|t }}</h2>{{ "If you see this message, your add blocker blocked this form. If you want to fill and send this form, please allow this url: %subscription_url or turn off you add blocker for that time."|t({'%subscription_url': form.subscription_url}) }}' +
+                            '</div>';
+                    }
+                }
+            }
         </script>
     {% endif %}
 {% endfor %}
