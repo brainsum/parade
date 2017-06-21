@@ -29,7 +29,7 @@
 
     // Enable or disable the two types of parallax
     parallaxBackgrounds: true,
-    parallaxElements: true,
+    parallaxElements: false,
 
     // Hide parallax elements that move outside the viewport
     hideDistantElements: true,
