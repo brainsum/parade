@@ -1,7 +1,7 @@
 .paragraph--type--locations.paragraph--view-mode--default {
 
     .field--name-parade-title {
-        @include campaign-headline;
+        @include campaign-title;
         color: $text-color-strong;
     }
 
