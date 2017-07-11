@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.chart_box.parade_value
+    - field.field.paragraph.chart_box.parade_color_scheme
+    - field.field.paragraph.chart_box.parade_layout
+    - field.field.paragraph.chart_box.parade_text
+    - field.field.paragraph.chart_box.parade_title
+    - paragraphs.paragraphs_type.chart_box
+id: paragraph.chart_box.preview
+targetEntityType: paragraph
+bundle: chart_box
+mode: preview
+content:
+  parade_title:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  parade_value: true
+  parade_color_scheme: true
+  parade_layout: true
+  parade_text: true

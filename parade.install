@@ -4,6 +4,7 @@
  * @file
  * Installation file for Parade.
  */
+use Drupal\Core\Config\FileStorage;
 
 /**
  * Changes name of 'Text and Image' to 'Text & image'.
@@ -108,5 +109,32 @@ function parade_update_8102() {
         'third_party_settings' => [],
       ])->set('dependencies.config', $dependencies)
       ->save();
+  }
+}
+
+/**
+ * Import 'chart_box' type related config.
+ */
+function parade_update_8201() {
+  $configPath = drupal_get_path('module', 'parade') . '/config/optional';
+  $source = new FileStorage($configPath);
+  $configStorage = \Drupal::service('config.storage');
+
+  $chartBoxConfigs = [
+    'paragraphs.paragraphs_type.chart_box',
+    'field.storage.paragraph.parade_value',
+    'field.field.paragraph.chart_box.parade_color_scheme',
+    'field.field.paragraph.chart_box.parade_layout',
+    'field.field.paragraph.chart_box.parade_text',
+    'field.field.paragraph.chart_box.parade_title',
+    'field.field.paragraph.chart_box.parade_value',
+    'core.entity_form_display.paragraph.chart_box.default',
+    'core.entity_view_display.paragraph.chart_box.default',
+    'core.entity_view_display.paragraph.chart_box.custom',
+    'core.entity_view_display.paragraph.chart_box.preview',
+  ];
+
+  foreach ($chartBoxConfigs as $boxConfig) {
+    $configStorage->write($boxConfig, $source->read($boxConfig));
   }
 }
