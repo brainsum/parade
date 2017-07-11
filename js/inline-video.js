@@ -7,6 +7,6 @@
   'use strict';
 
   var video = document.querySelector('.bg-video');
-  makeVideoPlayableInline(video, !video.hasAttribute('muted'));
+  if (video !== null) makeVideoPlayableInline(video, !video.hasAttribute('muted'));
 
 })(makeVideoPlayableInline);
