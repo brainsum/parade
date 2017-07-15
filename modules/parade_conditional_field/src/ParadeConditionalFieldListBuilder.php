@@ -13,7 +13,7 @@ class ParadeConditionalFieldListBuilder extends ConfigEntityListBuilder {
   /**
    * {@inheritdoc}
    *
-   * @todo remove route_match way, add
+   * @todo remove route_match way.
    */
   public function load() {
     $route_match = \Drupal::service('current_route_match');
@@ -48,7 +48,6 @@ class ParadeConditionalFieldListBuilder extends ConfigEntityListBuilder {
     $row['layouts'] = implode(', ', $entity->getLayouts());
     $row['view_mode'] = $entity->getViewMode();
     $row['classes'] = implode(', ', $entity->getClasses());
-    // You probably want a few more properties here...
     return $row + parent::buildRow($entity);
   }
 

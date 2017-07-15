@@ -43,13 +43,6 @@ class ParadeConditionalFieldForm extends EntityForm {
       $condition_id = $route_match->getParameter('paragraphs_type') . '_' . ($last_id + 1);
     }
 
-    $bundles = \Drupal::service('entity_type.bundle.info')->getBundleInfo('paragraph');
-    $bundle_options = [];
-    foreach ($bundles as $bundle_name => $bundle_info) {
-      $bundle_options[$bundle_name] = $bundle_info['label'];
-    }
-    natsort($bundle_options);
-
     $form['bundle'] = [
       '#type' => 'hidden',
       '#value' => $paragraphs_type,
