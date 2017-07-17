@@ -113,14 +113,13 @@ function parade_update_8102() {
 }
 
 /**
- * Import 'chart_box' type related config.
+ * Helper function for returning the chart box types.
+ *
+ * @return array
+ *   The configs.
  */
-function parade_update_8201() {
-  $configPath = drupal_get_path('module', 'parade') . '/config/optional';
-  $source = new FileStorage($configPath);
-  $configStorage = \Drupal::service('config.storage');
-
-  $chartBoxConfigs = [
+function _get_parade_chart_box_configs() {
+  return [
     'paragraphs.paragraphs_type.chart_box',
     'field.storage.paragraph.parade_value',
     'field.field.paragraph.chart_box.parade_color_scheme',
@@ -133,8 +132,37 @@ function parade_update_8201() {
     'core.entity_view_display.paragraph.chart_box.custom',
     'core.entity_view_display.paragraph.chart_box.preview',
   ];
+}
 
-  foreach ($chartBoxConfigs as $boxConfig) {
+/**
+ * Import 'chart_box' type related config.
+ */
+function parade_update_8201() {
+  $configPath = drupal_get_path('module', 'parade') . '/config/optional';
+  $source = new FileStorage($configPath);
+  /** @var Drupal\Core\Config\CachedStorage $configStorage */
+  $configStorage = \Drupal::service('config.storage');
+
+  foreach (_get_parade_chart_box_configs() as $boxConfig) {
     $configStorage->write($boxConfig, $source->read($boxConfig));
+  }
+}
+
+/**
+ * Fix chart_box type config UUIDs, if needed.
+ */
+function parade_update_8202() {
+  /** @var \Drupal\Component\Uuid\Php $uuidService */
+  $uuidService = \Drupal::service('uuid');
+  /** @var Drupal\Core\Config\CachedStorage $configStorage */
+  $configStorage = \Drupal::service('config.storage');
+
+  foreach (_get_parade_chart_box_configs() as $boxConfig) {
+    $config = $configStorage->read($boxConfig);
+
+    if (empty($config['uuid'])) {
+      $config = ['uuid' => $uuidService->generate()] + $config;
+      $configStorage->write($boxConfig, $config);
+    }
   }
 }
