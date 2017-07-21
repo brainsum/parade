@@ -13,7 +13,7 @@ interface ParadeConditionalFieldInterface extends ConfigEntityInterface {
    * Generate numeric ID from id.
    *
    * @return int
-   *    Number.
+   *   Number.
    */
   public function getNumericId();
 
