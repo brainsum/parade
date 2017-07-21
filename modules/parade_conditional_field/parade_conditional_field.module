@@ -16,7 +16,6 @@ use Drupal\parade_conditional_field\Entity\ParadeConditionalField;
  * Add parade conditional field settings if there is paragraphs reference field.
  */
 function parade_conditional_field_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  /** @var FormStateInterface $form */
   if (isset($form['parade_onepage_sections'])) {
     _parade_conditional_field_add_parade_field_conditions($form, $form_state);
   }
@@ -38,11 +37,13 @@ function parade_conditional_field_element_info_alter(array &$types) {
  * Add paragraphs bundle machine name to subform wrapper as class.
  */
 function parade_conditional_fields_element_after_build($element, FormStateInterface &$form_state) {
-  if (isset($element['subform']) && isset($element['top']['paragraph_type_title'])) {
+  if (isset($element['subform'], $element['top']['paragraph_type_title'])) {
     // Add paragraphs bundle machine name to wrapper as class.
-    $bundle = $form_state->getStorage()['field_storage']['#parents']['#fields']['parade_onepage_sections']['paragraphs'][$element['#weight']]['entity']->getType();
-    $element['#prefix'] = str_replace('<div ', '<div class="paragraphs-wrapper-bundle-' . $bundle . '" ', $element['#prefix']);
-    return $element;
+    $elementEntity = $form_state->getStorage()['field_storage']['#parents']['#fields']['parade_onepage_sections']['paragraphs'][$element['#weight']]['entity'];
+    if (!empty($elementEntity) && method_exists($elementEntity, 'getType')) {
+      $bundle = $elementEntity->getType();
+      $element['#prefix'] = str_replace('<div ', '<div class="paragraphs-wrapper-bundle-' . $bundle . '" ', $element['#prefix']);
+    }
   }
   return $element;
 }
@@ -55,7 +56,7 @@ function parade_conditional_fields_element_after_build($element, FormStateInterf
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   The current state of the form.
  */
-function _parade_conditional_field_add_parade_field_conditions(&$form, FormStateInterface $form_state) {
+function _parade_conditional_field_add_parade_field_conditions(array &$form, FormStateInterface $form_state) {
   $conditions = ParadeConditionalField::loadConditionsMultiple();
   if (!$conditions) {
     return;
