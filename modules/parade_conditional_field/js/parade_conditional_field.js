@@ -47,7 +47,6 @@ Drupal.behaviors.paradeConditionalFields = {
               }
               // Set enabled selectable value(s).
               if (typeof d_data.options != "undefined") {
-                setValueForField(element_selector, "_none");
                 $("#" + first_parent_wrapper_id + " :input[name*='[" + d_field + "]']" + " option").each(function () {
                   var option = $(this);
                   if (option.val() in d_data.options || option.val() == "_none") {
@@ -55,6 +54,9 @@ Drupal.behaviors.paradeConditionalFields = {
                   }
                   else {
                     option.hide();
+                    if (option.val() == $(element_selector).val()) {
+                      setValueForField(element_selector, "_none");
+                    }
                   }
                 });
               }
