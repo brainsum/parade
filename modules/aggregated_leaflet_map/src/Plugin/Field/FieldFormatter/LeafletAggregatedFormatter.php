@@ -99,7 +99,7 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
       $features = leaflet_process_geofield($item->value);
 
       // If the sourceField is not found, provide a fallback popup.
-      if (NULL === $sourceField) {
+      if (!isset($sourceField)) {
         $features[0]['popup'] = $this->t('Location @delta', ['@delta' => $delta]);
       }
       // Otherwise, get the value at $delta from the source field.
