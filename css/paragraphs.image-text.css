@@ -42,6 +42,21 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
+    padding-right: 1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image {
+    padding-left: 1.5em;
+  }
+}
+
 .paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-parade-call-to-action {
   clear: both;
