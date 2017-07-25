@@ -15,6 +15,7 @@ namespace Drupal\Tests\parade\Functional;
  */
 function get_parade_paragraphs_types_list() {
   return [
+    ['Chart box', 'chart_box'],
     ['Header', 'header'],
     ['Images', 'images'],
     ['Locations', 'locations'],
@@ -390,6 +391,7 @@ function get_parade_text_boxes_paragraphs_type_data() {
     ['Boxes', 'parade_paragraphs', 'Entity reference revisions'],
     ['Boxes per row', 'parade_boxes_per_row', 'Number (integer)'],
     ['Color scheme', 'parade_color_scheme', 'Entity reference'],
+    ['Description', 'parade_text', 'Text (formatted, long)'],
     ['Layout', 'parade_layout', 'Entity reference'],
     ['Title', 'parade_title', 'Text (plain)'],
     ['View mode', 'parade_view_mode', 'View Mode Selector'],
@@ -399,6 +401,7 @@ function get_parade_text_boxes_paragraphs_type_data() {
     'default' => [
       ['Title', '- Hidden -', 'Plain text'],
       ['Boxes', '- Hidden -', 'Rendered entity'],
+      ['Description', '- Hidden -', 'Default'],
       ['Anchor', 'Above', 'Plain text'],
       ['Boxes per row', 'Above', 'Unformatted'],
       ['Color scheme', 'Above', 'Label'],
@@ -412,6 +415,7 @@ function get_parade_text_boxes_paragraphs_type_data() {
       ['Boxes per row', 'Above', 'Unformatted'],
       ['Color scheme', 'Above', 'Label'],
       ['Layout', 'Above', 'Label'],
+      ['Description', 'Above', 'Default'],
       ['View mode', 'Above', 'Selected view mode name as text'],
     ],
     'preview' => [
@@ -421,6 +425,7 @@ function get_parade_text_boxes_paragraphs_type_data() {
       ['Color scheme', 'Above', 'Label'],
       ['Layout', 'Above', 'Label'],
       ['Boxes', 'Above', 'Rendered entity'],
+      ['Description', 'Above', 'Default'],
       ['View mode', 'Above', 'Selected view mode name as text'],
     ],
   ];
