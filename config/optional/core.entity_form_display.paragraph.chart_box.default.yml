@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.chart_box.parade_value
-    - field.field.paragraph.chart_box.parade_color_scheme
-    - field.field.paragraph.chart_box.parade_layout
     - field.field.paragraph.chart_box.parade_text
     - field.field.paragraph.chart_box.parade_title
     - paragraphs.paragraphs_type.chart_box
@@ -21,24 +19,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  parade_color_scheme:
-    weight: 0
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  parade_layout:
-    weight: 1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   parade_text:
     weight: 3

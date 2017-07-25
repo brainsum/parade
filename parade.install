@@ -4,6 +4,7 @@
  * @file
  * Installation file for Parade.
  */
+
 use Drupal\Core\Config\FileStorage;
 
 /**
@@ -122,8 +123,6 @@ function _get_parade_chart_box_configs() {
   return [
     'paragraphs.paragraphs_type.chart_box',
     'field.storage.paragraph.parade_value',
-    'field.field.paragraph.chart_box.parade_color_scheme',
-    'field.field.paragraph.chart_box.parade_layout',
     'field.field.paragraph.chart_box.parade_text',
     'field.field.paragraph.chart_box.parade_title',
     'field.field.paragraph.chart_box.parade_value',

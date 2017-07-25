@@ -4,8 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.chart_box.parade_value
-    - field.field.paragraph.chart_box.parade_color_scheme
-    - field.field.paragraph.chart_box.parade_layout
     - field.field.paragraph.chart_box.parade_text
     - field.field.paragraph.chart_box.parade_title
     - paragraphs.paragraphs_type.chart_box
@@ -24,6 +22,4 @@ content:
     region: content
 hidden:
   parade_value: true
-  parade_color_scheme: true
-  parade_layout: true
   parade_text: true
