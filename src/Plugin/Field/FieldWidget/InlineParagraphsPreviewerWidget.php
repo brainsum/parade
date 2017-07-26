@@ -70,7 +70,12 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $paragraphs_entity = $widget_state['paragraphs'][$delta]['entity'];
 
     // Locations paragraph type review is bugged.
-    if ('locations' === $paragraphs_entity->getType()) {
+    $previewBlacklist = [
+      'locations',
+      'text_box',
+      'chart_box',
+    ];
+    if (in_array($paragraphs_entity->getType(), $previewBlacklist, FALSE)) {
       return $element;
     }
 
