@@ -38,7 +38,7 @@
                 if (typeof MktoForms2 === "undefined") {
                     if (typeof MktoForms2 === "undefined") {
                         document.getElementById('mktoForm_{{ form.form_id }}').innerHTML = '<div role="contentinfo" aria-label="{{ "Status message"|t }}" class="messages messages--warning">' +
-                            '<h2 class="visually-hidden">{{ "Status message"|t }}</h2>{{ "In case when you see this notification, that's a possible sign of that you have an ad blocker feature enabled in your browser, which holds up loading this form properly. If you want to use this form to submit information to us, then we would kindly request you to take the time of changing the settings of your adblocker allowing %subscription_url. After this is done, the reloaded page should display the form properly."|t({'%subscription_url': form.subscription_url}) }}' +
+                            '<h2 class="visually-hidden">{{ "Status message"|t }}</h2>{{ "In case when you see this notification, that\\'s a possible sign of that you have an ad blocker feature enabled in your browser, which holds up loading this form properly. If you want to use this form to submit information to us, then we would kindly request you to take the time of changing the settings of your adblocker allowing %subscription_url. After this is done, the reloaded page should display the form properly."|t({'%subscription_url': form.subscription_url}) }}' +
                             '</div>';
                     }
                 }
