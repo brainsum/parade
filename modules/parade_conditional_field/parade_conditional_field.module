@@ -37,7 +37,7 @@ function parade_conditional_field_element_info_alter(array &$types) {
  * Add paragraphs bundle machine name to subform wrapper as class.
  */
 function parade_conditional_fields_element_after_build($element, FormStateInterface &$form_state) {
-  if (isset($element['subform'], $element['top']['paragraph_type_title'])) {
+  if (isset($element['subform'], $element['top']['paragraph_type_title']) && isset($form_state->getValues()['parade_onepage_sections'])) {
     // Add paragraphs bundle machine name to wrapper as class.
     $elementEntity = $form_state->getStorage()['field_storage']['#parents']['#fields']['parade_onepage_sections']['paragraphs'][$element['#weight']]['entity'];
     if (!empty($elementEntity) && method_exists($elementEntity, 'getType')) {
