@@ -5,18 +5,20 @@
  * Installation file for Marketo form.
  */
 
+use Drupal\field\Entity\FieldConfig;
+
 /**
- * Add description field for boxes paragraphs type.
+ * Add Linkedin autofill checkbox field for marketo form paragraphs type.
  */
 function marketo_form_update_8101() {
   $config_factory = \Drupal::configFactory();
   $label = $config_factory->get('core.entity_form_display.paragraph.marketo_form.default')->get('content.parade_enable_linkedin_autofill');
-  $load_desc_field = \Drupal\field\Entity\FieldConfig::loadByName('paragraph', 'marketo_form', 'parade_enable_linkedin_autofill');
+  $load_desc_field = FieldConfig::loadByName('paragraph', 'marketo_form', 'parade_enable_linkedin_autofill');
 
   // Check if the field is already exist.
   if (empty($label) && empty($load_desc_field)) {
     // Connect existing field to a bundle.
-    \Drupal\field\Entity\FieldConfig::create([
+    FieldConfig::create([
       'entity_type' => 'paragraph',
       'bundle'      => 'marketo_form',
       'field_name'  => 'parade_enable_linkedin_autofill',
@@ -79,7 +81,7 @@ function marketo_form_update_8101() {
     $editable->set('content.parade_enable_linkedin_autofill', [
       'weight' => 7,
       'settings' => [
-        'display_label' => true,
+        'display_label' => TRUE,
       ],
       'third_party_settings' => [],
       'type' => 'boolean_checkbox',
@@ -92,7 +94,7 @@ function marketo_form_update_8101() {
     $editable = $config_factory->getEditable('core.entity_view_display.paragraph.text_boxes.default');
     $dependencies = $editable->get('dependencies.config');
     $dependencies[] = 'field.field.paragraph.marketo_form.parade_enable_linkedin_autofill';
-    $editable->set('parade_enable_linkedin_autofill', true)
+    $editable->set('parade_enable_linkedin_autofill', TRUE)
       ->set('dependencies.config', $dependencies)
       ->save();
   }
