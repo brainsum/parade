@@ -7,7 +7,6 @@
  * @todo Make the whole thing dynamic, do not rely on Parade content type.
  */
 
-use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
