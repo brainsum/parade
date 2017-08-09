@@ -19,39 +19,52 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      header: header
+      images: images
+      image_text: image_text
+      locations: locations
+      marketo_form: marketo_form
+      marketo_poll: marketo_poll
+      parallax: parallax
+      simple: simple
+      social_links: social_links
+      text_boxes: text_boxes
     target_bundles_drag_drop:
       header:
+        enabled: true
         weight: 12
-        enabled: false
-      images:
+      chart_box:
         weight: 13
         enabled: false
+      images:
+        enabled: true
+        weight: 13
       image_text:
+        enabled: true
         weight: 14
-        enabled: false
       locations:
+        enabled: true
         weight: 15
-        enabled: false
       marketo_form:
+        enabled: true
         weight: 16
-        enabled: false
       marketo_poll:
+        enabled: true
         weight: 17
-        enabled: false
       parallax:
+        enabled: true
         weight: 18
-        enabled: false
       simple:
+        enabled: true
         weight: 19
-        enabled: false
       social_links:
+        enabled: true
         weight: 20
-        enabled: false
       text_box:
         weight: 21
         enabled: false
       text_boxes:
+        enabled: true
         weight: 22
-        enabled: false
 field_type: entity_reference_revisions

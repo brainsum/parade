@@ -5,6 +5,8 @@
  * Install hooks for Parade Demo.
  */
 
+use Drupal\Core\Config\FileStorage;
+
 /**
  * Implements hook_install().
  */
@@ -705,4 +707,23 @@ function _parade_demo_set_visibility_page_title_block() {
     $page_title_block->setVisibilityConfig('node_type', $settings);
     $page_title_block->save();
   }
+}
+
+/**
+ * Limit referenced paragraph types for campaign one page node.
+ */
+function parade_demo_update_8201() {
+  $fieldConfig = 'field.field.node.parade_onepage.parade_onepage_sections';
+
+  $configPath = drupal_get_path('module', 'parade_demo') . '/config/install';
+  $source = new FileStorage($configPath);
+  $installConfig = $source->read($fieldConfig);
+  $handlerSettings = $installConfig['settings']['handler_settings'];
+  kint($handlerSettings);
+
+  $config_factory = \Drupal::configFactory();
+  $editable = $config_factory->getEditable($fieldConfig);
+
+  $editable->set('settings.handler_settings', $handlerSettings)
+    ->save();
 }
