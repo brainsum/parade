@@ -287,9 +287,11 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       if (strpos($key, 'add_more') === FALSE) {
         continue;
       }
-      $type = Html::getClass($item['#bundle_machine_name']);
       $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
-      $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+      if (isset($item['#bundle_machine_name'])) {
+        $type = Html::getClass($item['#bundle_machine_name']);
+        $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+      }
     }
   }
 
