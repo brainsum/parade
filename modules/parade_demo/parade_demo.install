@@ -719,7 +719,6 @@ function parade_demo_update_8201() {
   $source = new FileStorage($configPath);
   $installConfig = $source->read($fieldConfig);
   $handlerSettings = $installConfig['settings']['handler_settings'];
-  kint($handlerSettings);
 
   $config_factory = \Drupal::configFactory();
   $editable = $config_factory->getEditable($fieldConfig);
