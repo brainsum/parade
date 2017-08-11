@@ -564,7 +564,7 @@ function _parade_demo_create_demo_content() {
     ],
   ];
 
-  if (!class_exists('Ivory\HttpAdapter\CurlHttpAdapter')) {
+  if (class_exists('Ivory\HttpAdapter\CurlHttpAdapter')) {
     $paragraphsData[] = [
       'type' => 'locations',
       'parade_anchor' => '#locations',
