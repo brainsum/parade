@@ -300,7 +300,7 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $autofill_module_enabled = \Drupal::moduleHandler()->moduleExists('linkedin_autofill');
 
     foreach ($form['parade_onepage_sections']['widget'] as $key => $paragraph) {
-      if (is_numeric($key) && isset($paragraph['subform']) && isset($paragraph['subform']['parade_enable_linkedin_autofill']) && $autofill_module_enabled) {
+      if (is_numeric($key) && isset($paragraph['subform']) && isset($paragraph['subform']['parade_enable_linkedin_autofill']) && !$autofill_module_enabled) {
         $form['parade_onepage_sections']['widget'][$key]['subform']['parade_enable_linkedin_autofill']['#access'] = FALSE;
       }
     }
