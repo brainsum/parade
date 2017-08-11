@@ -564,7 +564,9 @@ function _parade_demo_create_demo_content() {
     ],
   ];
 
-  if (class_exists('Ivory\HttpAdapter\CurlHttpAdapter')) {
+  $locationRequirementsCheck = class_exists('Ivory\HttpAdapter\CurlHttpAdapter');
+
+  if ($locationRequirementsCheck) {
     $paragraphsData[] = [
       'type' => 'locations',
       'parade_anchor' => '#locations',
@@ -587,62 +589,65 @@ function _parade_demo_create_demo_content() {
     $paragraphs[] = $paragraphStorage->create($data);
   }
 
-  $demoContent = $entityTypeManager->getStorage('node')->create(
-    [
-      'type' => 'parade_onepage',
-      'title' => 'Parade One Page Site Demo',
-      'promote' => FALSE,
-      'parade_onepage_id' => 'parade_one_page_site_demo',
-      'parade_onepage_menu' => [
-        [
-          'uri' => 'internal:#home',
-          'title' => 'Home',
-          'options' => [
-            'attributes' => [
-              'data-selected' => 0,
-            ],
-          ],
-        ],
-        [
-          'uri' => 'internal:#simpleonecolumn',
-          'title' => 'Simple One Col',
-          'options' => [
-            'attributes' => [
-              'data-selected' => 0,
-            ],
-          ],
-        ],
-        [
-          'uri' => 'internal:#simpletwocolumn',
-          'title' => 'Simple Two Col Title First',
-          'options' => [
-            'attributes' => [
-              'data-selected' => 0,
-            ],
-          ],
-        ],
-        [
-          'uri' => 'internal:#simple5',
-          'title' => 'Simple Two Col Content First',
-          'options' => [
-            'attributes' => [
-              'data-selected' => 1,
-            ],
-          ],
-        ],
-        [
-          'uri' => 'internal:#locations',
-          'title' => 'Locations',
-          'options' => [
-            'attributes' => [
-              'data-selected' => 0,
-            ],
+  $nodeData = [
+    'type' => 'parade_onepage',
+    'title' => 'Parade One Page Site Demo',
+    'promote' => FALSE,
+    'parade_onepage_id' => 'parade_one_page_site_demo',
+    'parade_onepage_menu' => [
+      [
+        'uri' => 'internal:#home',
+        'title' => 'Home',
+        'options' => [
+          'attributes' => [
+            'data-selected' => 0,
           ],
         ],
       ],
-      'parade_onepage_sections' => $paragraphs,
-    ]
-  );
+      [
+        'uri' => 'internal:#simpleonecolumn',
+        'title' => 'Simple One Col',
+        'options' => [
+          'attributes' => [
+            'data-selected' => 0,
+          ],
+        ],
+      ],
+      [
+        'uri' => 'internal:#simpletwocolumn',
+        'title' => 'Simple Two Col Title First',
+        'options' => [
+          'attributes' => [
+            'data-selected' => 0,
+          ],
+        ],
+      ],
+      [
+        'uri' => 'internal:#simple5',
+        'title' => 'Simple Two Col Content First',
+        'options' => [
+          'attributes' => [
+            'data-selected' => 1,
+          ],
+        ],
+      ],
+    ],
+    'parade_onepage_sections' => $paragraphs,
+  ];
+
+  if ($locationRequirementsCheck) {
+    $nodeData['parade_onepage_menu'][] = [
+      'uri' => 'internal:#locations',
+      'title' => 'Locations',
+      'options' => [
+        'attributes' => [
+          'data-selected' => 0,
+        ],
+      ],
+    ];
+  }
+
+  $demoContent = $entityTypeManager->getStorage('node')->create($nodeData);
 
   $demoContent->save();
   drupal_set_message('Demo content available at node/' . $demoContent->id(),
