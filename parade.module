@@ -292,16 +292,16 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
         $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
       }
     }
-  }
 
-  // If it's a form, turn off 'Enable linkedin autofill' checkbox, if
-  // 'linkedin_autofill' module isn't installed.
-  if (isset($form['parade_onepage_sections'])) {
+    // If it's a form with parade paragraphs, turn off
+    // 'Enable linkedin autofill' checkbox, if 'linkedin_autofill' module isn't
+    // installed.
     $autofill_module_enabled = \Drupal::moduleHandler()->moduleExists('linkedin_autofill');
-
-    foreach ($form['parade_onepage_sections']['widget'] as $key => $paragraph) {
-      if (is_numeric($key) && isset($paragraph['subform']) && isset($paragraph['subform']['parade_enable_linkedin_autofill']) && !$autofill_module_enabled) {
-        $form['parade_onepage_sections']['widget'][$key]['subform']['parade_enable_linkedin_autofill']['#access'] = FALSE;
+    if (!$autofill_module_enabled) {
+      foreach ($form['parade_onepage_sections']['widget'] as $key => $paragraph) {
+        if (is_numeric($key) && isset($paragraph['subform']) && isset($paragraph['subform']['parade_enable_linkedin_autofill'])) {
+          $form['parade_onepage_sections']['widget'][$key]['subform']['parade_enable_linkedin_autofill']['#access'] = FALSE;
+        }
       }
     }
   }
