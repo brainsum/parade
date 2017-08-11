@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains hook implementations for Image optimalization submodule for Parade.
+ * Contains hook implementations for Parade image optimize module.
  */
 
 use Drupal\imagemagick\Plugin\ImageToolkit\ImagemagickToolkit;
@@ -13,7 +13,7 @@ use Drupal\imagemagick\Plugin\ImageToolkit\ImagemagickToolkit;
  * Removes quality argument if it's NULL.
  * It's necessary to avoid errors when quality is empty in the config.
  */
-function image_optimalization_imagemagick_arguments_alter(ImagemagickToolkit $toolkit, $command) {
+function parade_image_optimize_imagemagick_arguments_alter(ImagemagickToolkit $toolkit, $command) {
   if ($command === 'convert' || $command === 'gm') {
     $index = $toolkit->findArgument('-quality');
 

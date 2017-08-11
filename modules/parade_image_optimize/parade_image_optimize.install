@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Installation file for Image optimize submodule for Parade.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Sets module weight.
+ */
+function parade_image_optimize_install() {
+  // Get weight of Parade.
+  // @todo Replace these two lines when module_get_weight implemented
+  $extension_config = Drupal::configFactory()->getEditable('core.extension');
+  $parade_weight = $extension_config->get('module.parade');
+  $imagemagick_weight = $extension_config->get('module.imagemagick');
+
+  // Set weight of this module.
+  module_set_weight('parade_image_optimize', max($parade_weight, $imagemagick_weight) + 1);
+
+  // Remove deleted old module.
+  \Drupal::database()->delete('key_value')
+    ->condition('collection', 'system.schema')
+    ->condition('name', 'image_optimalization')
+    ->execute();
+
+  // Set image toolkit to imagemagick.
+  $config_factory = \Drupal::configFactory();
+  $editable = $config_factory->getEditable('system.image');
+  $editable->set('toolkit', 'imagemagick')->save();
+
+  // Set imagemagick quality to NULL.
+  $config_factory = \Drupal::configFactory();
+  $editable = $config_factory->getEditable('imagemagick.settings');
+  $editable->set('quality', NULL)->save();
+}
