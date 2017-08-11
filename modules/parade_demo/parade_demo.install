@@ -562,7 +562,10 @@ function _parade_demo_create_demo_content() {
       'parade_layout' => 'layout_text_1st',
       'parade_color_scheme' => 'color_clean',
     ],
-    [
+  ];
+
+  if (!class_exists('Ivory\HttpAdapter\CurlHttpAdapter')) {
+    $paragraphsData[] = [
       'type' => 'locations',
       'parade_anchor' => '#locations',
       'parade_title' => 'Map with multiple markers',
@@ -576,8 +579,8 @@ function _parade_demo_create_demo_content() {
         'Budapest, Vámház krt. 7, 1093 Hungary',
         '82108 Bratislava, Páričkova 1127/18, 821 08 Bratislava, Slovakia',
       ],
-    ],
-  ];
+    ];
+  }
 
   $paragraphs = [];
   foreach ($paragraphsData as $data) {
