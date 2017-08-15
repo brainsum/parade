@@ -48,6 +48,7 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
 
     // Create a user with permissions to manage the Parade onepage content type.
     $permissions = [
+      'administer parade settings',
       'administer site configuration',
       'administer content types',
       'administer node fields',

@@ -1,0 +1,4 @@
+administer parade settings:
+  title: 'Administer Parade settings'
+  description: 'Set Parade settings.'
+  restrict access: true
