@@ -516,7 +516,7 @@ function _parade_demo_create_demo_content() {
       'parade_anchor' => '#textbox-icons',
       'parade_boxes_per_row' => 3,
       'parade_paragraphs' => $textBoxParagraphs,
-      'parade_view_mode' => 'inverse',
+      'parade_view_mode' => 'default',
       'parade_layout' => 'layout_none',
       'parade_color_scheme' => 'color_clean',
     ],
