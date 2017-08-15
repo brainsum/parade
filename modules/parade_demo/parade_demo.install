@@ -584,6 +584,29 @@ function _parade_demo_create_demo_content() {
     ];
   }
 
+  $paragraphsData[] = [
+    'type' => 'social_links',
+    'parade_title' => 'Social links',
+    'parade_social_link' => [
+      [
+        'uri' => 'https://twitter.com/brainsumCOM',
+        'title' => '',
+      ],
+      [
+        'uri' => 'https://www.linkedin.com/company-beta/2905177/',
+        'title' => '',
+      ],
+      [
+        'uri' => 'https://www.facebook.com/brainsum',
+        'title' => '',
+      ],
+      [
+        'uri' => 'https://plus.google.com/+Brainsum',
+        'title' => '',
+      ],
+    ],
+  ];
+
   $paragraphs = [];
   foreach ($paragraphsData as $data) {
     $paragraphs[] = $paragraphStorage->create($data);
