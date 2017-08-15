@@ -30,6 +30,13 @@ function parade_conditional_field_requirements($phase) {
 }
 
 /**
+ * Implements hook_install().
+ */
+function parade_conditional_field_install() {
+  _parade_conditional_field_change_field_to_select();
+}
+
+/**
  * Change form display for Layout, Color Scheme fields.
  *
  * Change default form display type to 'Select' in every paragraphs bundle.
@@ -39,6 +46,13 @@ function parade_conditional_field_update_8101() {
   if (!$class_exists = class_exists('Drupal\classy_paragraphs\Plugin\EntityReferenceSelection\ClassyParagraphsSelection')) {
     throw new UpdateException('Required Drupal\classy_paragraphs\Plugin\EntityReferenceSelection\ClassyParagraphsSelection is missing. For more information, see the Choose and order selectable styles issue (https://www.drupal.org/node/2830403) for Classy paragraphs style to apply patch #11.');
   }
+  _parade_conditional_field_change_field_to_select();
+}
+
+/**
+ * Helper function to Change form display for Layout, Color Scheme fields.
+ */
+function _parade_conditional_field_change_field_to_select() {
   $field_names = ['parade_layout', 'parade_color_scheme'];
 
   $properties = [
