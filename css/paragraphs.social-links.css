@@ -1,8 +1,8 @@
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link {
   text-align: center;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .field__item {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .field__item {
   display: inline-block;
   font: 0/0 a;
   color: transparent;
@@ -11,11 +11,11 @@
   border: 0;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .field__item:not(:last-child) {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .field__item:not(:last-child) {
   margin-right: 20px;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social {
   display: block;
   width: 42px;
   height: 42px;
@@ -26,28 +26,28 @@
   transition: transform .2s, -webkit-transform .2s;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social:hover {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social:hover {
   -webkit-transform: scale(1.1) translateZ(0);
-          transform: scale(1.1) translateZ(0);
+  transform: scale(1.1) translateZ(0);
   background-color: #ddd;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-facebook {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social-facebook {
   background: url("../images/facebook.svg") no-repeat center center;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-twitter {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social-twitter {
   background: url("../images/twitter.svg") no-repeat center center;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-linkedin {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social-linkedin {
   background: url("../images/linkedin.svg") no-repeat center center;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-google {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social-google {
   background: url("../images/gplus.svg") no-repeat center center;
 }
 
-.paragraph--type--social-links.paragraph--view-mode--default .field--name-field-social-link .social-youtube {
+.paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social-youtube {
   background: url("../images/youtube.svg") no-repeat center center;
 }

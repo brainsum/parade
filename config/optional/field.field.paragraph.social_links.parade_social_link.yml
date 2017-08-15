@@ -11,7 +11,7 @@ field_name: parade_social_link
 entity_type: paragraph
 bundle: social_links
 label: 'Social links'
-description: 'List any number of social media links here.'
+description: 'List any number of social media links here. Icons supported for: facebook, google+, linkedin, twitter, youtube.'
 required: false
 translatable: false
 default_value: {  }
