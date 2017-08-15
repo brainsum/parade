@@ -63,6 +63,20 @@ class ParadeConditionalFieldForm extends EntityForm {
       }
     }
 
+    // Restrict to enabled classy paragraph styles from field settings.
+    $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions('paragraph', $paragraphs_type);
+
+    $field_definition = $bundle_fields['parade_layout'];
+    if ($field_definition->getSetting('handler') === 'classy_paragraphs') {
+      $selectionHandler = \Drupal::getContainer()->get('plugin.manager.entity_reference_selection')->getSelectionHandler($field_definition);
+      $layout_options = $selectionHandler->getReferenceableEntities()['classy_paragraphs_style'];
+    }
+    $field_definition = $bundle_fields['parade_color_scheme'];
+    if ($field_definition->getSetting('handler') === 'classy_paragraphs') {
+      $selectionHandler = \Drupal::getContainer()->get('plugin.manager.entity_reference_selection')->getSelectionHandler($field_definition);
+      $color_options = $selectionHandler->getReferenceableEntities()['classy_paragraphs_style'];
+    }
+
     $form['layouts'] = [
       '#title' => t('Trigger on Layout value(s)'),
       '#type' => 'select',
