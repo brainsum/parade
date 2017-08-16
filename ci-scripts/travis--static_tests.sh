@@ -12,6 +12,8 @@ if [ -z "${CODE_REVIEW+x}" ] || [ "$CODE_REVIEW" -ne 1 ]; then
  exit 0;
 fi
 
+cd "${TRAVIS_BUILD_DIR}/docker"
+
 # Workaround for docker-compose not supporting adding host variables to the container directly.
 if [ -n "${REVIEW_STANDARD}" ]; then
   if [ "${REVIEW_STANDARD}" = "Drupal" ]; then
