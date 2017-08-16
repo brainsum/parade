@@ -10,6 +10,8 @@ sudo rm /usr/local/bin/docker-compose
 curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
 chmod +x docker-compose
 sudo mv docker-compose /usr/local/bin
+# Try speeding up composer build a bit.
+composer global require hirak/prestissimo
 # Install a drupal-composer project.
 composer create-project drupal-composer/drupal-project:8.x-dev docker --stability dev --no-interaction
 cd docker
