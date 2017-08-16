@@ -31,4 +31,6 @@ for dir in /var/www/html/web/modules/contrib/parade/*/ ; do
   code_review "$dir"
 done
 
+echo "Check for ${REVIEW_STANDARD} finished, exiting with ${HAS_ERRORS}"
+
 exit ${HAS_ERRORS}
