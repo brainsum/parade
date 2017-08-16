@@ -6,7 +6,7 @@ composer config repositories.leaflet '{"type": "package", "package": {"name": "l
   && composer config discard-changes true \
   && composer require drupal/parade drupal/coder \
   && composer install -n \
-  && phpcs --config-set installed_paths /var/www/html/vendor/drupal/coder/coder_sniffer \
+  && vendor/bin/phpcs --config-set installed_paths /var/www/html/vendor/drupal/coder/coder_sniffer \
   && cd web \
   && drush site-install --site-name="Test" --account-pass=123 --db-url=mysql://drupal:drupal@mariadb/drupal standard -y \
   && drush en parade_demo -y \
