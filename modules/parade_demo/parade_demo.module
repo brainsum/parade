@@ -35,25 +35,60 @@ function parade_demo_theme($existing, $type, $theme, $path) {
 }
 
 /**
+ * Implements hook_theme_registry_alter().
+ *
+ * Add 'field__node__parade_onepage_menu__' . $bundle theme hook depends on
+ * Parade settings.
+ */
+function parade_demo_theme_registry_alter(&$theme_registry) {
+  $bundles = array_keys(\Drupal::config('parade_demo.settings')->get('bundles'));
+  // The parade_onepage is already added in hook_theme().
+  unset($bundles['parade_onepage']);
+
+  foreach ($bundles as $bundle) {
+    $theme_registry['node__' . $bundle] = $theme_registry['node__parade_onepage'];
+    $theme_registry['node__' . $bundle]['template'] = 'node--parade-onepage';
+
+    $theme_registry['page__node__' . $bundle] = $theme_registry['page__node__parade_onepage'];
+    $theme_registry['page__node__' . $bundle]['template'] = 'page--node--parade-onepage';
+
+    $theme_registry['field__node__parade_onepage_menu__' . $bundle] = $theme_registry['field__node__parade_onepage_menu__parade_onepage'];
+    $theme_registry['field__node__parade_onepage_menu__' . $bundle]['template'] = 'field--node--parade-onepage-menu--parade-onepage';
+
+    $theme_registry['field__node__parade_onepage_sections__' . $bundle] = $theme_registry['field__node__parade_onepage_sections__parade_onepage'];
+    $theme_registry['field__node__parade_onepage_sections__' . $bundle]['template'] = 'field--node--parade-onepage-sections--parade-onepage';
+  }
+}
+
+/**
  * Implements hook_page_attachments().
  */
 function parade_demo_page_attachments(array &$page) {
   $attributes = Drupal::request()->attributes;
-  if ($attributes->has('node') &&  $attributes->get('_route') === 'entity.node.canonical' && $attributes->get('node')->getType() === 'parade_onepage') {
-    $page['#attached']['library'][] = 'parade_demo/parade_onepage';
-    $page['#attached']['library'][] = 'parade_demo/scrollspy';
-    $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
-    $page['#attached']['library'][] = 'parade_demo/smooth-scroll';
+  if ($attributes->has('node') &&  $attributes->get('_route') === 'entity.node.canonical') {
+    $bundles = array_keys(\Drupal::config('parade_demo.settings')->get('bundles'));
+    if (in_array($attributes->get('node')->getType(), $bundles)) {
+      $page['#attached']['library'][] = 'parade_demo/parade_onepage';
+      $page['#attached']['library'][] = 'parade_demo/scrollspy';
+      $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
+      $page['#attached']['library'][] = 'parade_demo/smooth-scroll';
+    }
   }
 }
 
 /**
  * Implements hook_form_alter().
- *
- * @todo Use more specific hook.
  */
 function parade_demo_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (in_array($form_id, ['node_parade_onepage_form', 'node_parade_onepage_edit_form'], FALSE)) {
+  $attach = FALSE;
+  $bundles = array_keys(\Drupal::config('parade_demo.settings')->get('bundles'));
+  foreach ($bundles as $bundle) {
+    if (!$attach && in_array($form_id, ['node_' . $bundle . '_form', 'node_' . $bundle . '_edit_form'], FALSE)) {
+      $attach = TRUE;
+    }
+  }
+  if ($attach) {
+    $form['#attributes']['class'][] = 'node-parade-onepage-form';
     $form['#attached']['library'][] = 'parade_demo/parade_onepage';
     $page['#attached']['library'][] = 'parade_demo/scrollspy';
     $page['#attached']['library'][] = 'parade_demo/responsive_tabs';

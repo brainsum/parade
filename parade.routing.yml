@@ -1,7 +1,0 @@
-parade.settings:
-  path: '/admin/config/content/parade'
-  defaults:
-    _form: '\Drupal\parade\Form\ParadeSettingsForm'
-    _title: 'Parade Settings'
-  requirements:
-    _permission: 'administer parade settings'
