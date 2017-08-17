@@ -24,7 +24,7 @@ class MarketoFormFormatter extends FormatterBase {
    * @todo - js library
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
-    $elements = array();
+    $elements = [];
     $forms = [];
     foreach ($items as $item) {
       $forms[] = [
@@ -34,11 +34,11 @@ class MarketoFormFormatter extends FormatterBase {
       ];
     }
 
-    $elements[] = array(
+    $elements[] = [
       '#theme' => 'marketo_form_field',
       '#forms' => $forms,
       '#entity' => $items->getEntity(),
-    );
+    ];
     return $elements;
   }
 

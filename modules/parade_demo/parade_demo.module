@@ -144,52 +144,46 @@ function parade_demo_preprocess_menu_local_action(array &$variables) {
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORM_ID_alter().
  *
  * Changes vertical tabs to container and adds meta information
- * and attach custom tabledrag library on campaign edit forms
+ * and attach custom tabledrag library on campaign edit forms.
  */
 function parade_demo_form_node_form_alter(&$form, FormStateInterface $form_state) {
   /** @var Drupal\node\NodeInterface $node */
   $node = $form_state->getFormObject()->getEntity();
 
-  $form['#theme'] = array('node_edit_form');
-  // $form['#attached']['library'][] = 'tieto_admin/node-form';
+  $form['#theme'] = ['node_edit_form'];
 
   $form['advanced']['#type'] = 'container';
   $is_new = !$node->isNew() ? format_date($node->getChangedTime(), 'short') : t('Not saved yet');
-  $form['meta'] = array(
-    '#attributes' => array('class' => array('entity-meta__header')),
+  $form['meta'] = [
+    '#attributes' => ['class' => ['entity-meta__header']],
     '#type' => 'container',
     '#group' => 'advanced',
     '#weight' => -100,
-    'published' => array(
+    'published' => [
       '#type' => 'html_tag',
       '#tag' => 'h3',
       '#value' => $node->isPublished() ? t('Published') : t('Not published'),
       '#access' => !$node->isNew(),
-      '#attributes' => array(
+      '#attributes' => [
         'class' => 'entity-meta__title',
-      ),
-    ),
-    'changed' => array(
+      ],
+    ],
+    'changed' => [
       '#type' => 'item',
-      '#wrapper_attributes' => array('class' => array('entity-meta__last-saved', 'container-inline')),
+      '#wrapper_attributes' => ['class' => ['entity-meta__last-saved', 'container-inline']],
       '#markup' => '<h4 class="label inline">' . t('Last saved') . '</h4> ' . $is_new,
-    ),
-    'author' => array(
+    ],
+    'author' => [
       '#type' => 'item',
-      '#wrapper_attributes' => array('class' => array('author', 'container-inline')),
+      '#wrapper_attributes' => ['class' => ['author', 'container-inline']],
       '#markup' => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()->getUsername(),
-    ),
-  );
+    ],
+  ];
   $form['revision_information']['#type'] = 'container';
   $form['revision_information']['#group'] = 'meta';
-
-  // Custom tabledrag library
-  // if ($form['form_id']['#id'] === 'edit-node-campaign-edit-form') {
-  //  $form['#attached']['library'][] = 'tieto_admin/tabledrag';
-  // }
 }
 
 /**

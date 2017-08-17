@@ -150,7 +150,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     $previewButton = $form_state->getTriggeringElement();
 
     // @todo Export these options to Admin UI.
-    $dialogOptions = array(
+    $dialogOptions = [
       'dialogClass' => 'parade-preview-dialog',
       'minWidth' => 480,
       'width' => '80%',
@@ -161,7 +161,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
       'resizable' => TRUE,
       'closeOnEscape' => TRUE,
       'closeText' => t('Close preview'),
-    );
+    ];
 
     $dialogTitle = t('Preview');
 
@@ -209,7 +209,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
   public static function paragraphsPreviewRenderField($form_build_id, array $element_parents) {
 
     // Initialize render array.
-    $output = array();
+    $output = [];
 
     if (!empty($element_parents) && count($element_parents) >= 2) {
       $formState = new FormState();

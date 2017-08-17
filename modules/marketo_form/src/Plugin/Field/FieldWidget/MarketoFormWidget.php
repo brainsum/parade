@@ -25,30 +25,30 @@ class MarketoFormWidget extends WidgetBase {
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $item = $items[$delta];
-    $element['subscription_url'] = array(
+    $element['subscription_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Subscription domain'),
       '#description' => $this->t('E.g.: app-e.marketo.com'),
       '#default_value' => $item->subscription_url,
       '#maxlength' => 2048,
       '#required' => $element['#required'],
-    );
-    $element['munchkin_id'] = array(
+    ];
+    $element['munchkin_id'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Munchkin ID'),
       '#description' => $this->t('E.g.: 517-ITT-285'),
       '#default_value' => $item->munchkin_id,
       '#maxlength' => 255,
       '#required' => $element['#required'],
-    );
-    $element['form_id'] = array(
+    ];
+    $element['form_id'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Form ID'),
       '#description' => $this->t('E.g.: 2865'),
       '#default_value' => $item->form_id,
       '#maxlength' => 255,
       '#required' => $element['#required'],
-    );
+    ];
     return $element;
   }
 

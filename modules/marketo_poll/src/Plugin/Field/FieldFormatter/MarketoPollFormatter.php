@@ -24,7 +24,7 @@ class MarketoPollFormatter extends FormatterBase {
    * @todo - js library
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
-    $elements = array();
+    $elements = [];
     $polls = [];
     foreach ($items as $item) {
       $polls[] = [
@@ -34,11 +34,11 @@ class MarketoPollFormatter extends FormatterBase {
       ];
     }
 
-    $elements[] = array(
+    $elements[] = [
       '#theme' => 'marketo_poll_field',
       '#polls' => $polls,
       '#entity' => $items->getEntity(),
-    );
+    ];
     return $elements;
   }
 

@@ -27,23 +27,23 @@ function aggregated_leaflet_map_render_map(array $map, array $features = array()
    */
   $map_id = Html::getUniqueId('leaflet_map');
 
-  $settings[$map_id] = array(
+  $settings[$map_id] = [
     'mapId' => $map_id,
     'map' => $map,
   // JS only works with arrays, make sure we have one with numeric keys.
     'features' => array_values($features),
-  );
-  return array(
+  ];
+  return [
     '#theme' => 'leaflet_map',
     '#map_id' => $map_id,
     '#height' => $height,
     '#map' => $map,
-    '#attached' => array(
+    '#attached' => [
       // Customized JS for displaying features in a single map.
-      'library' => array('aggregated_leaflet_map/aggregated-leaflet-drupal'),
-      'drupalSettings' => array(
+      'library' => ['aggregated_leaflet_map/aggregated-leaflet-drupal'],
+      'drupalSettings' => [
         'leaflet' => $settings,
-      ),
-    ),
-  );
+      ],
+    ],
+  ];
 }

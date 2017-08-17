@@ -24,25 +24,25 @@ class MarketoPoll extends FieldItemBase {
    * {@inheritdoc}
    */
   public static function schema(FieldStorageDefinitionInterface $field_definition) {
-    return array(
-      'columns' => array(
-        'subscription_url' => array(
+    return [
+      'columns' => [
+        'subscription_url' => [
           'description' => 'Subscription base URL',
           'type' => 'varchar',
           'length' => 2048,
-        ),
-        'poll_class' => array(
+        ],
+        'poll_class' => [
           'description' => 'The poll class.',
           'type' => 'varchar',
           'length' => 255,
-        ),
-        'poll_id' => array(
+        ],
+        'poll_id' => [
           'description' => 'The poll ID.',
           'type' => 'varchar',
           'length' => 255,
-        ),
-      ),
-    );
+        ],
+      ],
+    ];
   }
 
   /**

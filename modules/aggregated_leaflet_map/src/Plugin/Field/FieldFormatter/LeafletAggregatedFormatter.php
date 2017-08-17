@@ -88,7 +88,7 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     $map['icon'] = empty($map['icon']) ? $normalizedSettings : $map['icon'];
 
     // We collect all features in a single array.
-    $aggregated_features = array();
+    $aggregated_features = [];
     // Try to get the source_field from the entity.
     /** @var \Drupal\Core\Field\FieldItemList $sourceField */
     if ($items->getEntity()->hasField($settings['source_field'])) {

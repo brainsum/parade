@@ -78,13 +78,13 @@ class ParadeConditionalFieldForm extends EntityForm {
     }
 
     $form['layouts'] = [
-      '#title' => t('Trigger on Layout value(s)'),
+      '#title' => $this->t('Trigger on Layout value(s)'),
       '#type' => 'select',
       '#multiple' => TRUE,
       '#size' => count($layout_options) > 15 ? 15 : count($layout_options),
       '#options' => $layout_options,
       '#default_value' => $layouts,
-      '#description' => t('Trigger conditions when Layout have this value.'),
+      '#description' => $this->t('Trigger conditions when Layout have this value.'),
       '#required' => TRUE,
     ];
 
@@ -119,16 +119,16 @@ class ParadeConditionalFieldForm extends EntityForm {
       $view_mode_options[$view_mode_id] = $view_mode_label . ' (' . $view_mode_id . ')';
     }
     $form['view_mode'] = [
-      '#title' => t('View mode'),
+      '#title' => $this->t('View mode'),
       '#type' => 'radios',
       '#options' => $view_mode_options,
       '#default_value' => $view_mode,
-      '#description' => t('Paragraph will be rendered with this view mode.'),
+      '#description' => $this->t('Paragraph will be rendered with this view mode.'),
       '#required' => TRUE,
     ];
 
     $form['classes'] = [
-      '#title' => t('Restrict to the selected classy paragraph styles'),
+      '#title' => $this->t('Restrict to the selected classy paragraph styles'),
       '#type' => 'select',
       '#multiple' => TRUE,
       '#size' => count($color_options) > 15 ? 15 : count($color_options),

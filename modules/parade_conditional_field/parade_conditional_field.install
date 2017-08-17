@@ -43,7 +43,7 @@ function parade_conditional_field_install() {
  */
 function parade_conditional_field_update_8101() {
   // Check if needed ClassyParagraphsSelection exists.
-  if (!$class_exists = class_exists('Drupal\classy_paragraphs\Plugin\EntityReferenceSelection\ClassyParagraphsSelection')) {
+  if (!class_exists('Drupal\classy_paragraphs\Plugin\EntityReferenceSelection\ClassyParagraphsSelection')) {
     throw new UpdateException('Required Drupal\classy_paragraphs\Plugin\EntityReferenceSelection\ClassyParagraphsSelection is missing. For more information, see the Choose and order selectable styles issue (https://www.drupal.org/node/2830403) for Classy paragraphs style to apply patch #11.');
   }
   _parade_conditional_field_change_field_to_select();
@@ -85,9 +85,7 @@ function _parade_conditional_field_change_field_to_select() {
   foreach ($field_names as $field_name => $starts_with) {
     $fields = \Drupal::entityTypeManager()
       ->getStorage('field_config')
-      ->loadByProperties(array(
-        'field_name' => $field_name,
-      ));
+      ->loadByProperties(['field_name' => $field_name]);
 
     foreach ($fields as $field) {
       $new_field = $field->toArray();

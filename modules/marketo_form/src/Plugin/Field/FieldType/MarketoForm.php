@@ -24,25 +24,25 @@ class MarketoForm extends FieldItemBase {
    * {@inheritdoc}
    */
   public static function schema(FieldStorageDefinitionInterface $field_definition) {
-    return array(
-      'columns' => array(
-        'subscription_url' => array(
+    return [
+      'columns' => [
+        'subscription_url' => [
           'description' => t('Subscription base URL'),
           'type' => 'varchar',
           'length' => 2048,
-        ),
-        'munchkin_id' => array(
+        ],
+        'munchkin_id' => [
           'description' => t('The munchkin ID.'),
           'type' => 'varchar',
           'length' => 255,
-        ),
-        'form_id' => array(
+        ],
+        'form_id' => [
           'description' => t('The form ID.'),
           'type' => 'varchar',
           'length' => 255,
-        ),
-      ),
-    );
+        ],
+      ],
+    ];
   }
 
   /**
