@@ -77,17 +77,7 @@ function parade_preprocess_paragraph(&$variables) {
       // Image is the default.
       $type = 'image';
 
-      // Compress images with an image style,
-      // if Image Optimalization is enabled.
-      if (
-        $file_mime === 'image/jpeg' &&
-        \Drupal::service('module_handler')->moduleExists('image_optimalization')
-      ) {
-        /** @var Drupal\image\Entity\ImageStyle $style */
-        $style = ImageStyle::load('parade_full_hd_width');
-        $file_path = $style->buildUrl($file_uri);
-      }
-      elseif (in_array($file_mime, [
+      if (in_array($file_mime, [
         'video/mp4',
         'application/mp4',
         'video/webm',
