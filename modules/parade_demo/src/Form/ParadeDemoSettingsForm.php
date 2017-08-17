@@ -116,6 +116,19 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
 
         foreach ($field_names as $delta => $field_name) {
           $field_storage = FieldStorageConfig::loadByName('node', $field_name);
+
+          if (NULL === $field_storage) {
+            $config_name = 'field.storage.node.' . $field_name;
+            $config = $source->read($config_name);
+            $field_storage = FieldStorageConfig::create([
+              'field_name' => $field_name,
+              'entity_type' => $config['entity_type'],
+              'type' => $config['type'],
+              'cardinality' => $config['cardinality'],
+              'settings' => $config['settings'],
+            ])->save();
+          }
+
           $field = FieldConfig::loadByName('node', $bundle, $field_name);
           if (empty($field)) {
             // Load our base config data.
