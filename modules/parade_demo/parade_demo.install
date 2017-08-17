@@ -673,7 +673,7 @@ function _parade_demo_create_demo_content() {
   $demoContent = $entityTypeManager->getStorage('node')->create($nodeData);
 
   $demoContent->save();
-  drupal_set_message('Demo content available at node/' . $demoContent->id(),
+  drupal_set_message(t('Demo content available at node/@nid', ['@nid' => $demoContent->id()]),
     'status');
 }
 

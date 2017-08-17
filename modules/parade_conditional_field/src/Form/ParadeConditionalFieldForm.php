@@ -134,7 +134,7 @@ class ParadeConditionalFieldForm extends EntityForm {
       '#size' => count($color_options) > 15 ? 15 : count($color_options),
       '#options' => $color_options,
       '#default_value' => $classes,
-      '#description' => t('If no classy paragraph style are selected, all will be allowed.'),
+      '#description' => $this->t('If no classy paragraph style are selected, all will be allowed.'),
     ];
 
     return $form;

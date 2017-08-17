@@ -2,9 +2,11 @@
 
 Parade specific conditional fields to manage field dependencies:
 
-`if Layout has values [a, b, c] then set View mode to [v] and restrict Color schemes to [x, y, z]`
+`if Layout has values [a, b, c] then set View mode to [v] and restrict Color
+schemes to [x, y, z]`
 
-for Paragraphs bundle fields referenced with 'Sections' (parade_onepage_sections) paragraphs reference field: 
+for Paragraphs bundle fields referenced with 'Sections'
+(parade_onepage_sections) paragraphs reference field: 
 - Layout (parade_layout) - dependee field
   - Classy paragraph style with machine name starts with 'layout_'
 - View mode (parade_view_mode) - target field
@@ -23,7 +25,8 @@ View Mode Selector: https://www.drupal.org/project/view_mode_selector
 - Enable module
 
 ## How it works
-You can create multiple conditions per Paragraphs bundle on the admin UI under 'Parade field conditions' tab.
+You can create multiple conditions per Paragraphs bundle on the admin UI under
+'Parade field conditions' tab.
 
 If Layout has configured values then:
   - hide 'View mode' field
