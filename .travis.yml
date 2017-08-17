@@ -1,0 +1,21 @@
+sudo: required
+
+language: php
+
+php:
+  - 7.0
+
+env:
+  matrix:
+  - CODE_REVIEW=1 REVIEW_STANDARD="Drupal"
+  - CODE_REVIEW=1 REVIEW_STANDARD="DrupalPractice"
+
+services:
+  - docker
+
+before_install:
+  - sudo chmod +x ci-scripts -R
+  - "$TRAVIS_BUILD_DIR/ci-scripts/travis--before_install.sh"
+
+script:
+  - "$TRAVIS_BUILD_DIR/ci-scripts/travis--static_tests.sh"
