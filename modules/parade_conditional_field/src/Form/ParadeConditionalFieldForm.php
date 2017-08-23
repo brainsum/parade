@@ -2,10 +2,13 @@
 
 namespace Drupal\parade_conditional_field\Form;
 
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Entity\EntityReferenceSelection\SelectionPluginManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\classy_paragraphs\Entity\ClassyParagraphsStyle;
 use Drupal\Core\Url;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class ParadeConditionalFieldForm.
@@ -13,6 +16,58 @@ use Drupal\Core\Url;
  * @package Drupal\parade_conditional_field\Form
  */
 class ParadeConditionalFieldForm extends EntityForm {
+
+  /**
+   * Entity field manager service.
+   *
+   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
+   */
+  protected $entityFieldManager;
+
+  /**
+   * Entity reference selection plugin manager.
+   *
+   * @var \Drupal\Core\Entity\EntityReferenceSelection\SelectionPluginManagerInterface
+   */
+  protected $selectionPluginManager;
+
+  /**
+   * The entity display repository service.
+   *
+   * @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface
+   */
+  protected $entityDisplayRepository;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('entity_field.manager'),
+      $container->get('plugin.manager.entity_reference_selection'),
+      $container->get('entity_display.repository')
+    );
+  }
+
+  /**
+   * ParadeConditionalFieldForm constructor.
+   *
+   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entityFieldManager
+   *   Entity field manager service.
+   * @param \Drupal\Core\Entity\EntityReferenceSelection\SelectionPluginManagerInterface $selectionPluginManager
+   *   Entity reference selection plugin manager.
+   * @param \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository
+   *   The entity display repository service.
+   */
+  public function __construct(
+    EntityFieldManagerInterface $entityFieldManager,
+    SelectionPluginManagerInterface $selectionPluginManager,
+    EntityDisplayRepositoryInterface $entityDisplayRepository
+  ) {
+    $this->entityFieldManager = $entityFieldManager;
+    $this->selectionPluginManager = $selectionPluginManager;
+    $this->entityDisplayRepository = $entityDisplayRepository;
+  }
 
   /**
    * {@inheritdoc}
@@ -29,18 +84,15 @@ class ParadeConditionalFieldForm extends EntityForm {
     $classes = $condition->getClasses();
 
     if ($condition->isNew()) {
-      $route_match = \Drupal::service('current_route_match');
-      $paragraphs_type = $route_match->getParameter('paragraphs_type');
+      $paragraphs_type = $this->routeMatch->getParameter('paragraphs_type');
       $view_mode = 'default';
 
-      if ($last_condition = array_values(\Drupal::entityTypeManager()->getStorage('parade_conditional_field')->loadByProperties(['bundle' => $paragraphs_type]))) {
+      $last_id = 0;
+      if ($last_condition = array_values($this->entityTypeManager->getStorage('parade_conditional_field')->loadByProperties(['bundle' => $paragraphs_type]))) {
         $last_condition = end($last_condition);
         $last_id = $last_condition->getNumericId();
       }
-      else {
-        $last_id = 0;
-      }
-      $condition_id = $route_match->getParameter('paragraphs_type') . '_' . ($last_id + 1);
+      $condition_id = $this->routeMatch->getParameter('paragraphs_type') . '_' . ($last_id + 1);
     }
 
     $form['bundle'] = [
@@ -54,26 +106,26 @@ class ParadeConditionalFieldForm extends EntityForm {
     ];
 
     $color_options = $layout_options = [];
-    foreach (ClassyParagraphsStyle::loadMultiple() as $bundle_name => $bundle_info) {
-      if (strstr($bundle_name, 'layout_')) {
+    foreach ($this->entityTypeManager->getStorage('classy_paragraphs_style')->loadMultiple() as $bundle_name => $bundle_info) {
+      if (FALSE !== strpos($bundle_name, 'layout_')) {
         $layout_options[$bundle_name] = $bundle_info->label();
       }
-      elseif (strstr($bundle_name, 'color_')) {
+      elseif (FALSE !== strpos($bundle_name, 'color_')) {
         $color_options[$bundle_name] = $bundle_info->label();
       }
     }
 
     // Restrict to enabled classy paragraph styles from field settings.
-    $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions('paragraph', $paragraphs_type);
+    $bundle_fields = $this->entityFieldManager->getFieldDefinitions('paragraph', $paragraphs_type);
 
     $field_definition = $bundle_fields['parade_layout'];
     if ($field_definition->getSetting('handler') === 'classy_paragraphs') {
-      $selectionHandler = \Drupal::getContainer()->get('plugin.manager.entity_reference_selection')->getSelectionHandler($field_definition);
+      $selectionHandler = $this->selectionPluginManager->getSelectionHandler($field_definition);
       $layout_options = $selectionHandler->getReferenceableEntities()['classy_paragraphs_style'];
     }
     $field_definition = $bundle_fields['parade_color_scheme'];
     if ($field_definition->getSetting('handler') === 'classy_paragraphs') {
-      $selectionHandler = \Drupal::getContainer()->get('plugin.manager.entity_reference_selection')->getSelectionHandler($field_definition);
+      $selectionHandler = $this->selectionPluginManager->getSelectionHandler($field_definition);
       $color_options = $selectionHandler->getReferenceableEntities()['classy_paragraphs_style'];
     }
 
@@ -93,10 +145,10 @@ class ParadeConditionalFieldForm extends EntityForm {
     $view_mode_options = [];
 
     // Get all view modes for the current bundle.
-    $view_modes = \Drupal::service('entity_display.repository')->getViewModeOptionsByBundle($entity_type, $bundle);
+    $view_modes = $this->entityDisplayRepository->getViewModeOptionsByBundle($entity_type, $bundle);
 
     // Get field settings, check enabled view modes.
-    $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
+    $bundle_fields = $this->entityFieldManager->getFieldDefinitions($entity_type, $bundle);
     if (isset($bundle_fields['parade_view_mode']) && $field_definition = $bundle_fields['parade_view_mode']) {
       $field_settings = $field_definition->getSetting('view_modes');
     }
@@ -109,7 +161,7 @@ class ParadeConditionalFieldForm extends EntityForm {
     }
     // Show all view modes when no view modes are enabled.
     if (!count($view_modes)) {
-      $view_modes = \Drupal::service('entity_display.repository')->getViewModeOptionsByBundle($entity_type, $bundle);
+      $view_modes = $this->entityDisplayRepository->getViewModeOptionsByBundle($entity_type, $bundle);
     }
 
     // Remove Preview view mode - it's used only for preview.
@@ -147,8 +199,7 @@ class ParadeConditionalFieldForm extends EntityForm {
     $actions = parent::actions($form, $form_state);
 
     if (!$paragraphs_type = $this->entity->getBundle()) {
-      $route_match = \Drupal::service('current_route_match');
-      $paragraphs_type = $route_match->getParameter('paragraphs_type');
+      $paragraphs_type = $this->routeMatch->getParameter('paragraphs_type');
     }
 
     $url = new Url("entity.paragraph.parade_conditional_field", ['paragraphs_type' => $paragraphs_type]);

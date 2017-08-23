@@ -2,6 +2,7 @@
 
 namespace Drupal\aggregated_leaflet_map\Plugin\Field\FieldFormatter;
 
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\leaflet\Plugin\Field\FieldFormatter\LeafletDefaultFormatter;
@@ -18,6 +19,25 @@ use Drupal\leaflet\Plugin\Field\FieldFormatter\LeafletDefaultFormatter;
  * )
  */
 class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
+
+  /**
+   * The entity field manager.
+   *
+   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
+   */
+  protected $entityFieldManager;
+
+  /**
+   * LeafletAggregatedFormatter constructor.
+   *
+   * {@inheritdoc}
+   */
+  public function __construct($pluginId, $pluginDefinition, FieldDefinitionInterface $fieldDefinition, array $settings, $label, $viewMode, array $thirdPartySettings) {
+    parent::__construct($pluginId, $pluginDefinition, $fieldDefinition, $settings, $label, $viewMode, $thirdPartySettings);
+
+    // @todo: Proper dependency injection.
+    $this->entityFieldManager = \Drupal::service('entity_field.manager');
+  }
 
   /**
    * {@inheritdoc}
@@ -98,17 +118,16 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     foreach ($items as $delta => $item) {
       $features = leaflet_process_geofield($item->value);
 
-      // If the sourceField is not found, provide a fallback popup.
-      if (!isset($sourceField)) {
-        $features[0]['popup'] = $this->t('Location @delta', ['@delta' => $delta]);
-      }
+      // Set the fallback popup.
+      $features[0]['popup'] = $this->t('Location @delta', ['@delta' => $delta]);
       // Otherwise, get the value at $delta from the source field.
-      else {
+      if (NULL !== $sourceField) {
         $features[0]['popup'] = $sourceField->getValue()[$delta]['value'];
       }
 
       if (!empty($map['icon']['iconUrl'])) {
-        foreach ($features as $key => $feature) {
+        $featureKeys = array_keys($features);
+        foreach ($featureKeys as $key) {
           $features[$key]['icon'] = $map['icon'];
         }
       }
@@ -126,17 +145,16 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
   /**
    * Convert a snake_case string to camelCase.
    *
-   * @param $string
-   * @param bool $capitalizeFirstCharacter
+   * @param string $string
+   *   The string to be transformed.
    *
-   * @return mixed
+   * @return string
+   *   The transformed string.
    */
-  private function snakeCaseToCamelCase($string, $capitalizeFirstCharacter = FALSE) {
+  private function snakeCaseToCamelCase($string) {
     $str = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
-
-    if (!$capitalizeFirstCharacter) {
-      $str[0] = strtolower($str[0]);
-    }
+    // Set the first character to lowercase.
+    $str[0] = strtolower($str[0]);
 
     return $str;
   }
@@ -153,11 +171,8 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
    *   Array of field definitions.
    */
   private function getBundleFieldDefinitions($entityType, $bundle) {
-    // @todo: Use dependency injection.
-    /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $fieldManager */
-    $fieldManager = \Drupal::service('entity_field.manager');
     /** @var \Drupal\Core\Field\FieldDefinitionInterface[] $bundleFields */
-    $bundleFields = $fieldManager->getFieldDefinitions(
+    $bundleFields = $this->entityFieldManager->getFieldDefinitions(
       $entityType,
       $bundle
     );

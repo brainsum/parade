@@ -5,18 +5,18 @@ type: module
 core: 8.x
 
 dependencies:
-  - view_mode_selector
-  - paragraphs
-  - machine_name
-  - image
-  - text
-  - geocoder
-  - geocoder_autocomplete
-  - geofield
-  - leaflet
-  - aggregated_leaflet_map
-  - geocoder_field
-  - geocoder_geofield
-  - link
-  - options
-  - classy_paragraphs
+  - drupal:view_mode_selector
+  - drupal:paragraphs
+  - drupal:machine_name
+  - drupal:image
+  - drupal:text
+  - drupal:geocoder
+  - drupal:geocoder_autocomplete
+  - drupal:geofield
+  - drupal:leaflet
+  - drupal:aggregated_leaflet_map
+  - drupal:geocoder_field
+  - drupal:geocoder_geofield
+  - drupal:link
+  - drupal:options
+  - drupal:classy_paragraphs

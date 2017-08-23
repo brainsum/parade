@@ -2,18 +2,53 @@
 
 namespace Drupal\parade_demo\Form;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\ConfigFormBase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use Drupal\field\Entity\FieldConfig;
-use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\Core\Config\FileStorage;
 
 /**
  * Defines a form that configures Parade settings.
  */
 class ParadeDemoSettingsForm extends ConfigFormBase {
+
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.factory'),
+      $container->get('entity_type.manager')
+    );
+  }
+
+  /**
+   * ParadeDemoSettingsForm constructor.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   The config factory.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
+   *   The entity type manager.
+   */
+  public function __construct(
+    ConfigFactoryInterface $configFactory,
+    EntityTypeManagerInterface $entityTypeManager
+  ) {
+    parent::__construct($configFactory);
+
+    $this->entityTypeManager = $entityTypeManager;
+  }
 
   /**
    * {@inheritdoc}
@@ -50,30 +85,31 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
       ]),
     ];
 
-    $contentTypes = \Drupal::service('entity.manager')
+    $contentTypes = $this->entityTypeManager
       ->getStorage('node_type')
       ->loadMultiple();
     if (!empty($contentTypes)) {
       foreach ($contentTypes as $contentType) {
-        $form['bundles'][$contentType->id()] = [
+        $contentTypeId = $contentType->id();
+        $form['bundles'][$contentTypeId] = [
           'bundle' => ['#markup' => $contentType->label()],
           'enabled' => [
             '#title' => $this->t('Enabled'),
             '#type' => 'checkbox',
-            '#default_value' => isset($settings[$contentType->id()]) ? 1 : 0,
+            '#default_value' => isset($settings[$contentTypeId]) ? 1 : 0,
           ],
           // 'menu' => [
-          //            '#title' => 'Add menu field on Save',
-          //            '#type' => 'checkbox',
-          //            '#default_value' => (isset($settings[$contentType->id()]) && $settings[$contentType->id()]['menu']) ? 1 : 0,
-          //          ],.
+          //   '#title' => 'Add menu field on Save',
+          //   '#type' => 'checkbox',
+          //   '#default_value' => (isset($settings[$contentType->id()]) && $settings[$contentType->id()]['menu']) ? 1 : 0,
+          // ],.
         ];
       }
       if (isset($form['bundles']['parade_onepage'])) {
         $form['bundles']['parade_onepage']['enabled']['#value'] = 1;
         $form['bundles']['parade_onepage']['enabled']['#disabled'] = TRUE;
         // $form['bundles']['parade_onepage']['menu']['#value'] = 1;
-        //        $form['bundles']['parade_onepage']['menu']['#disabled'] = TRUE;.
+        // $form['bundles']['parade_onepage']['menu']['#disabled'] = TRUE;.
       }
 
       $form['description'] = [
@@ -109,18 +145,18 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
 
       $field_names = [
       // 'parade_onepage_id',
-      //        'parade_onepage_menu',.
+      // 'parade_onepage_menu',.
         'parade_onepage_sections',
       ];
       foreach ($just_enabled as $bundle => $data) {
 
         foreach ($field_names as $delta => $field_name) {
-          $field_storage = FieldStorageConfig::loadByName('node', $field_name);
+          $field_storage = $this->entityTypeManager->getStorage('field_storage_config')->load('node' . '.' . $field_name);
 
           if (NULL === $field_storage) {
             $config_name = 'field.storage.node.' . $field_name;
             $config = $source->read($config_name);
-            $field_storage = FieldStorageConfig::create([
+            $field_storage = $this->entityTypeManager->getStorage('field_storage_config')->create([
               'field_name' => $field_name,
               'entity_type' => $config['entity_type'],
               'type' => $config['type'],
@@ -129,13 +165,13 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             ])->save();
           }
 
-          $field = FieldConfig::loadByName('node', $bundle, $field_name);
-          if (empty($field)) {
+          $field = $this->entityTypeManager->getStorage('field_config')->load('node' . '.' . $bundle . '.' . $field_name);
+          if (NULL === $field) {
             // Load our base config data.
             $config_name = 'field.field.node.parade_onepage.' . $field_name;
             $config = $source->read($config_name);
 
-            $field = FieldConfig::create([
+            $field = $this->entityTypeManager->getStorage('field_config')->create([
               'field_storage' => $field_storage,
               'bundle' => $bundle,
               'label' => $config['label'],
@@ -147,7 +183,7 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             $config = $source->read($config_name);
 
             // Assign widget settings for the 'default' form mode.
-            $entity_form_display = \Drupal::entityTypeManager()
+            $entity_form_display = $this->entityTypeManager
               ->getStorage('entity_form_display')
               ->load('node.' . $bundle . '.default');
             $title_weight = $entity_form_display->getComponent('title')['weight'];
@@ -162,7 +198,7 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             $config = $source->read($config_name);
 
             // Assign display settings for the 'default' view mode.
-            \Drupal::entityTypeManager()
+            $this->entityTypeManager
               ->getStorage('entity_view_display')
               ->load('node.' . $bundle . '.default')
               ->setComponent($field_name, [

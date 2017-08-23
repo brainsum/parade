@@ -2,7 +2,8 @@
 
 namespace Drupal\parade_conditional_field\Routing;
 
-use Drupal\Core\Entity\EntityManagerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Drupal\Core\Routing\RoutingEvents;
 use Symfony\Component\Routing\Route;
@@ -21,39 +22,50 @@ class RouteSubscriber extends RouteSubscriberBase {
   protected $manager;
 
   /**
+   * Route matcher service.
+   *
+   * @var \Drupal\Core\Routing\CurrentRouteMatch
+   */
+  protected $routeMatch;
+
+  /**
    * Constructs a RouteSubscriber object.
    *
-   * @param \Drupal\Core\Entity\EntityManagerInterface $manager
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $manager
    *   The entity type manager.
+   * @param \Drupal\Core\Routing\CurrentRouteMatch $routeMatch
+   *   Route match service.
    */
-  public function __construct(EntityManagerInterface $manager) {
+  public function __construct(
+    EntityTypeManagerInterface $manager,
+    CurrentRouteMatch $routeMatch
+  ) {
     $this->manager = $manager;
+    $this->routeMatch = $routeMatch;
   }
 
   /**
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-    foreach ($this->manager->getDefinitions() as $entity_type_id => $entity_type) {
-      if ($entity_type_id == 'paragraph' && $route_name = $entity_type->get('field_ui_base_route')) {
+    foreach ($this->manager->getDefinitions() as $entityTypeId => $entityType) {
+      if ($entityTypeId === 'paragraph' && $routeName = $entityType->get('field_ui_base_route')) {
         // Try to get the route from the current collection.
-        if (!$entity_route = $collection->get($route_name)) {
+        if (!$entityRoute = $collection->get($routeName)) {
           continue;
         }
-        $path = $entity_route->getPath();
-
-        $options = $entity_route->getOptions();
-        if ($bundle_entity_type = $entity_type->getBundleEntityType()) {
-          $options['parameters'][$bundle_entity_type] = [
-            'type' => 'entity:' . $bundle_entity_type,
+        $path = $entityRoute->getPath();
+        $options = $entityRoute->getOptions();
+        if ($bundleEntityType = $entityType->getBundleEntityType()) {
+          $options['parameters'][$bundleEntityType] = [
+            'type' => 'entity:' . $bundleEntityType,
           ];
         }
         // @todo: pass paragraphs_type as bundle.
-        $route_match = \Drupal::service('current_route_match');
-        $bundle = $route_match->getParameter('paragraphs_type');
+        $bundle = $this->routeMatch->getParameter('paragraphs_type');
 
         $defaults = [
-          'entity_type_id' => $entity_type_id,
+          'entity_type_id' => $entityTypeId,
           'bundle' => $bundle,
         ];
 
@@ -66,7 +78,7 @@ class RouteSubscriber extends RouteSubscriberBase {
           ['_permission' => 'administer paragraphs types'],
           $options
         );
-        $collection->add("entity.{$entity_type_id}.parade_conditional_field", $route);
+        $collection->add("entity.{$entityTypeId}.parade_conditional_field", $route);
       }
     }
   }

@@ -19,7 +19,8 @@ Classy paragraph style: https://www.drupal.org/project/classy_paragraphs
 View Mode Selector: https://www.drupal.org/project/view_mode_selector 
 
 ## Requirements
-- Patch for Classy paragraphs style module: https://www.drupal.org/files/issues/choose_and_order-2830403-11.patch
+- Patch for Classy paragraphs style module:
+https://www.drupal.org/files/issues/choose_and_order-2830403-11.patch
 
 ## Installation
 - Enable module
