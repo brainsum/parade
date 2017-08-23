@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.marketo_poll
-  module:
-    - marketo_poll
   enforced:
     module:
       - marketo_poll
+_core:
+  default_config_hash: QXNjiYNXl0ry7JRwjkOk2SzefU346fqFEI3iq3D6rvA
 id: paragraph.marketo_poll.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph
@@ -16,7 +16,7 @@ bundle: marketo_poll
 label: Anchor
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -3,33 +3,41 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.marketo_poll.parade_anchor
+    - field.field.paragraph.marketo_poll.parade_color_scheme
     - field.field.paragraph.marketo_poll.parade_marketo_poll
     - field.field.paragraph.marketo_poll.parade_title
     - paragraphs.paragraphs_type.marketo_poll
-  module:
-    - marketo_poll
   enforced:
     module:
       - marketo_poll
+  module:
+    - marketo_poll
+_core:
+  default_config_hash: w5p1ytdlFD6z1WjFG4UYmKaQbXBlvs_d1rGZNUMVt4c
 id: paragraph.marketo_poll.default
 targetEntityType: paragraph
 bundle: marketo_poll
 mode: default
 content:
   parade_anchor:
-    weight: 6
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  parade_color_scheme:
+    type: options_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
   parade_marketo_poll:
-    weight: 8
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: marketo_poll
   parade_title:
-    weight: 7
+    weight: 2
     settings:
       size: 60
       placeholder: ''

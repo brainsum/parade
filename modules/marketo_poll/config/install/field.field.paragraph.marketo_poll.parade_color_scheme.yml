@@ -4,6 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.parade_color_scheme
     - paragraphs.paragraphs_type.marketo_poll
+  enforced:
+    module:
+      - marketo_poll
+_core:
+  default_config_hash: 9J_RNGsZe_rCn6LOylib2PqNhEjqW4JLwld9THjhujg
 id: paragraph.marketo_poll.parade_color_scheme
 field_name: parade_color_scheme
 entity_type: paragraph
@@ -11,12 +16,16 @@ bundle: marketo_poll
 label: 'Color scheme'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:classy_paragraphs_style'
+  handler: classy_paragraphs
   handler_settings:
-    target_bundles: null
-    auto_create: false
+    filter:
+      type: target_bundles
+      target_bundles: null
+      negate: 0
+    sort:
+      field: _none
 field_type: entity_reference

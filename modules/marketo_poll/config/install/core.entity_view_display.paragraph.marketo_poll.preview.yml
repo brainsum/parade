@@ -4,14 +4,15 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.marketo_poll.parade_anchor
+    - field.field.paragraph.marketo_poll.parade_color_scheme
     - field.field.paragraph.marketo_poll.parade_marketo_poll
     - field.field.paragraph.marketo_poll.parade_title
     - paragraphs.paragraphs_type.marketo_poll
-  module:
-    - marketo_poll
   enforced:
     module:
       - marketo_poll
+_core:
+  default_config_hash: 0GvfDEYpzL3dZxicLgqOHWm5veqnzoHUhiA7FR1KUDI
 id: paragraph.marketo_poll.preview
 targetEntityType: paragraph
 bundle: marketo_poll
@@ -24,6 +25,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  parade_color_scheme:
+    type: entity_reference_label
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   parade_title:
     weight: 0
     label: inline
