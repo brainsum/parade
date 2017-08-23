@@ -49,7 +49,6 @@
   };
 
   function setCorrectBGSize() {
-    console.log($('.paragraph--type--parallax > .bg-image'));
     $('.paragraph--type--parallax > .bg-image').each(function () {
       var imgWidth = $(this).data('naturalWidth');
       var windowWidth = window.innerWidth;

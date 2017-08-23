@@ -13,7 +13,6 @@ Drupal.behaviors.paradeConditionalFields = {
         $.each(condition, function (field_name, condition_data) {
           var wrapper = ".paragraphs-wrapper-bundle-" + bundle;
           $(wrapper + " :input[name*='[" + field_name + "]']", context).on("change", {bundle: bundle, wrapper: wrapper, field_name: field_name}, onChangeParadeField).trigger("change");
-          console.log("init for: " + wrapper + " :input[name*='[" + field_name + "]']");
           // Hide view mode selector.
           $(wrapper + " .field--type-view-mode-selector.field--name-parade-view-mode").hide();
         });
@@ -26,14 +25,14 @@ Drupal.behaviors.paradeConditionalFields = {
      */
     function onChangeParadeField(event) {
       var elm = $(this);
-      var value_set = default_value_set = false;
+      var value_set = false;
+      var default_value_set = false;
       var elm_value = elm.val();
       var match = elm_value.match(/ \((.*)\)$/);
       if (elm.hasClass("form-autocomplete") && match) {
         elm_value = match[1];
       }
       var first_parent_wrapper_id = elm.closest(event.data.wrapper).attr("id");
-      console.log('change triggered for: ' + event.data.bundle + '/' + first_parent_wrapper_id);
       $.each(conditionalFields[event.data.bundle], function (id, condition) {
         if (condition[event.data.field_name] && !value_set) {
           // Value was changed to value which is in 'on_values' - we should trigger.
@@ -64,10 +63,8 @@ Drupal.behaviors.paradeConditionalFields = {
           }
           // Set default values/show all options.
           else {
-            console.log(id);
             if (!default_value_set) {
               $.each(condition[event.data.field_name].dependents, function (d_field, d_data) {
-                console.log(event.data.field_name + "/" + d_field);
                 default_value_set = true;
                 var element_selector = "#" + first_parent_wrapper_id + " :input[name*='[" + d_field + "]']";
                 if (d_field == "parade_view_mode") {
@@ -79,9 +76,9 @@ Drupal.behaviors.paradeConditionalFields = {
               });
             }
           }
-        };
+        }
       });
-    };
+    }
 
     /**
      * Set value depends on type (radio or other)

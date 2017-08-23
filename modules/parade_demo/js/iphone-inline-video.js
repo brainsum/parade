@@ -41,7 +41,6 @@ function preventEvent(element, eventName, toggleProperty, preventWithProperty) {
 	function handler(e) {
 		if (Boolean(element[toggleProperty]) === Boolean(preventWithProperty)) {
 			e.stopImmediatePropagation();
-			// console.log(eventName, 'prevented on', element);
 		}
 		delete element[toggleProperty];
 	}
@@ -130,7 +129,6 @@ function isPlayerEnded(player) {
 
 function update(timeDiff) {
 	var player = this;
-	// console.log('update', player.video.readyState, player.video.networkState, player.driver.readyState, player.driver.networkState, player.driver.paused);
 	if (player.video.readyState >= player.video.HAVE_FUTURE_DATA) {
 		if (!player.hasAudio) {
 			player.driver.currentTime = player.video.currentTime + ((timeDiff * player.video.playbackRate) / 1000);
@@ -146,7 +144,6 @@ function update(timeDiff) {
 		// - it's not loading
 		// If it hasAudio, that will be loaded in the 'emptied' handler below
 		player.video.load();
-		// console.log('Will load');
 	}
 
 	// console.assert(player.video.currentTime === player.driver.currentTime, 'Video not updating!');
@@ -162,7 +159,6 @@ function update(timeDiff) {
  */
 
 function play() {
-	// console.log('play');
 	var video = this;
 	var player = video[ಠ];
 
@@ -173,7 +169,6 @@ function play() {
 	}
 
 	if (player.driver.src !== 'data:' && player.driver.src !== video.src) {
-		// console.log('src changed on play', video.src);
 		setTime(video, 0, true);
 		player.driver.src = video.src;
 	}
@@ -196,13 +191,11 @@ function play() {
 	if (!player.hasAudio) {
 		dispatchEventAsync(video, 'play');
 		if (player.video.readyState >= player.video.HAVE_ENOUGH_DATA) {
-			// console.log('onplay');
 			dispatchEventAsync(video, 'playing');
 		}
 	}
 }
 function pause(forceEvents) {
-	// console.log('pause');
 	var video = this;
 	var player = video[ಠ];
 
@@ -246,7 +239,6 @@ function addPlayer(video, hasAudio) {
 	} else {
 		video.addEventListener('canplay', function () {
 			if (!video.paused) {
-				// console.log('oncanplay');
 				dispatchEventAsync(video, 'playing');
 			}
 		});
@@ -272,10 +264,8 @@ function addPlayer(video, hasAudio) {
 
 	// .load() causes the emptied event
 	video.addEventListener('emptied', function () {
-		// console.log('driver src is', player.driver.src);
 		var wasEmpty = !player.driver.src || player.driver.src === 'data:';
 		if (player.driver.src && player.driver.src !== video.src) {
-			// console.log('src changed to', video.src);
 			setTime(video, 0, true);
 			player.driver.src = video.src;
 			// playing videos will only keep playing if no src was present when .play()’ed
@@ -312,7 +302,6 @@ function addPlayer(video, hasAudio) {
 		// allow seeking
 		video.addEventListener('seeking', function () {
 			if (lastRequests.indexOf(video.currentTime * 100 | 0 / 100) < 0) {
-				// console.log('User-requested seeking');
 				player.driver.currentTime = video.currentTime;
 			}
 		});
