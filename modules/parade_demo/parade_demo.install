@@ -23,20 +23,17 @@ function parade_demo_install() {
  */
 function parade_demo_uninstall() {
   $entityTypeManager = \Drupal::entityTypeManager();
+  $nodeStorage = $entityTypeManager
+    ->getStorage('node');
 
   // Remove content created by this module.
-  $nodes = $entityTypeManager
-    ->getStorage('node')
+  $nodes = $nodeStorage
     ->loadByProperties(['type' => 'parade_onepage']);
+  $nodeStorage->delete($nodes);
 
-  /** @var \Drupal\node\NodeInterface $node */
-  foreach ($nodes as $node) {
-    $node->delete();
-  }
-
+  $classyStorage = $entityTypeManager->getStorage('classy_paragraphs_style');
   /** @var \Drupal\Core\Entity\EntityInterface[] $classyStyles */
-  $classyStyles = $entityTypeManager
-    ->getStorage('classy_paragraphs_style')
+  $classyStyles = $classyStorage
     ->loadMultiple([
       'layout_one_column',
       'layout_two_column_content_1st',
@@ -54,11 +51,7 @@ function parade_demo_uninstall() {
       'color_blue',
       'color_shaded',
     ]);
-
-  /** @var \Drupal\Core\Entity\EntityInterface $classyStyle */
-  foreach ($classyStyles as $classyStyle) {
-    $classyStyle->delete();
-  }
+  $classyStorage->delete($classyStyles);
 
   // Remove the site branding block.
   $blockStorage = \Drupal::entityTypeManager()->getStorage('block');
