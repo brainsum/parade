@@ -38,7 +38,7 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
     $header = [
       'bundle' => $this->t('Content type'),
       'enabled' => $this->t('Parade feature'),
-//      'menu' => $this->t('Parade One-page menu'),
+    // 'menu' => $this->t('Parade One-page menu'),.
     ];
 
     $form['bundles'] = [
@@ -62,18 +62,18 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             '#type' => 'checkbox',
             '#default_value' => isset($settings[$contentType->id()]) ? 1 : 0,
           ],
-//          'menu' => [
-//            '#title' => 'Add menu field on Save',
-//            '#type' => 'checkbox',
-//            '#default_value' => (isset($settings[$contentType->id()]) && $settings[$contentType->id()]['menu']) ? 1 : 0,
-//          ],
+          // 'menu' => [
+          //            '#title' => 'Add menu field on Save',
+          //            '#type' => 'checkbox',
+          //            '#default_value' => (isset($settings[$contentType->id()]) && $settings[$contentType->id()]['menu']) ? 1 : 0,
+          //          ],.
         ];
       }
       if (isset($form['bundles']['parade_onepage'])) {
         $form['bundles']['parade_onepage']['enabled']['#value'] = 1;
         $form['bundles']['parade_onepage']['enabled']['#disabled'] = TRUE;
-//        $form['bundles']['parade_onepage']['menu']['#value'] = 1;
-//        $form['bundles']['parade_onepage']['menu']['#disabled'] = TRUE;
+        // $form['bundles']['parade_onepage']['menu']['#value'] = 1;
+        //        $form['bundles']['parade_onepage']['menu']['#disabled'] = TRUE;.
       }
 
       $form['description'] = [
@@ -108,8 +108,8 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
       $source = new FileStorage($configPath);
 
       $field_names = [
-//        'parade_onepage_id',
-//        'parade_onepage_menu',
+      // 'parade_onepage_id',
+      //        'parade_onepage_menu',.
         'parade_onepage_sections',
       ];
       foreach ($just_enabled as $bundle => $data) {

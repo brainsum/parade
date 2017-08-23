@@ -57,7 +57,6 @@ class RouteSubscriber extends RouteSubscriberBase {
           'bundle' => $bundle,
         ];
 
-
         $route = new Route(
           "$path/parade-conditional-fields",
           [
