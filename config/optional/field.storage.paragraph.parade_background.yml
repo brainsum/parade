@@ -4,6 +4,8 @@ dependencies:
   module:
     - file
     - paragraphs
+_core:
+  default_config_hash: Vk8cBn93UgUIG15_oScFAso14BGQ58ELWc_8BzNhe2A
 id: paragraph.parade_background
 field_name: parade_background
 entity_type: paragraph

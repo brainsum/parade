@@ -1,10 +1,12 @@
-enforced: en
+langcode: en
 status: true
 dependencies:
   module:
     - file
     - image
     - paragraphs
+_core:
+  default_config_hash: fgEh6il64jRMQUBWElusu4syfJGUphtS2yBgbRYnoo4
 id: paragraph.parade_images
 field_name: parade_images
 entity_type: paragraph

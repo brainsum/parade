@@ -3,15 +3,11 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: cdRbfs7Ni9ZzUkkmIR_MAI1XX9koDARGDnQX_qvZTBE
-id: paragraph.parade_boxes_per_row
-field_name: parade_boxes_per_row
+id: paragraph.parade_with_pie
+field_name: parade_with_pie
 entity_type: paragraph
-type: integer
-settings:
-  unsigned: false
-  size: normal
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

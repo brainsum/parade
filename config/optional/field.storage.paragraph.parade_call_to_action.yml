@@ -4,6 +4,8 @@ dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: aZuntLbj3uovTKWmsF8FfDuw9vWX-2M4rbsTrwqHsVI
 id: paragraph.parade_call_to_action
 field_name: parade_call_to_action
 entity_type: paragraph

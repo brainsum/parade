@@ -4,6 +4,8 @@ dependencies:
   module:
     - geofield
     - paragraphs
+_core:
+  default_config_hash: 4cex565rs7TctgTME2WyyAJKuzDFgzE_HUoPnpzpiiM
 id: paragraph.parade_geofield
 field_name: parade_geofield
 entity_type: paragraph

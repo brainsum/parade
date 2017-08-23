@@ -4,6 +4,8 @@ dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: X33HNuQUkUi6shi6yQhxfch0tetOZpP2_zKRStAw-iA
 id: paragraph.parade_social_link
 field_name: parade_social_link
 entity_type: paragraph

@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: zd4hy_7twYCJ4e4nRTSYjkA0laqCsZqZ3SzPOXLV-08
 id: paragraph.parade_location
 field_name: parade_location
 entity_type: paragraph
