@@ -6,10 +6,12 @@ dependencies:
     - field.field.paragraph.images.parade_color_scheme
     - field.field.paragraph.images.parade_images
     - field.field.paragraph.images.parade_title
-    - image.style.medium
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.images
   module:
     - image
+_core:
+  default_config_hash: TUi-O3slrMy0WqO7ZBSH_M6sOiEdE9l760hi-LAdKMs
 id: paragraph.images.default
 targetEntityType: paragraph
 bundle: images
@@ -19,7 +21,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      image_style: medium
+      image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
     type: image

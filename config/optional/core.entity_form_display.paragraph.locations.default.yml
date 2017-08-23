@@ -12,6 +12,8 @@ dependencies:
   module:
     - geocoder_autocomplete
     - text
+_core:
+  default_config_hash: p8cbHaB52Np3WPOWzoeEjNCSRkjLQqlxwGpQdCoaJpM
 id: paragraph.locations.default
 targetEntityType: paragraph
 bundle: locations
@@ -26,13 +28,10 @@ content:
     type: string_textfield
     region: content
   parade_color_scheme:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 0
     region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   parade_location:
     weight: 4
@@ -63,4 +62,5 @@ hidden:
   created: true
   parade_geofield: true
   status: true
+  translation: true
   uid: true

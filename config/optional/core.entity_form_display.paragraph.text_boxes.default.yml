@@ -4,23 +4,27 @@ dependencies:
   config:
     - field.field.paragraph.text_boxes.parade_anchor
     - field.field.paragraph.text_boxes.parade_boxes_per_row
+    - field.field.paragraph.text_boxes.parade_call_to_action
     - field.field.paragraph.text_boxes.parade_color_scheme
-    - field.field.paragraph.text_boxes.parade_paragraphs
-    - field.field.paragraph.text_boxes.parade_title
-    - field.field.paragraph.text_boxes.parade_text
     - field.field.paragraph.text_boxes.parade_layout
+    - field.field.paragraph.text_boxes.parade_paragraphs
+    - field.field.paragraph.text_boxes.parade_text
+    - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
     - parade
+    - text
     - view_mode_selector
+_core:
+  default_config_hash: 1ScQeg0q2n0S-OaIPDVH_pL9xqXAe5-bJN_nQOxCQj4
 id: paragraph.text_boxes.default
 targetEntityType: paragraph
 bundle: text_boxes
 mode: default
 content:
   parade_anchor:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -34,18 +38,29 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  parade_color_scheme:
-    type: entity_reference_autocomplete
-    weight: 3
-    region: content
+  parade_call_to_action:
+    weight: 7
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
+      open_on_new_tab: false
     third_party_settings: {  }
+    type: link_cta
+  parade_color_scheme:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  parade_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   parade_paragraphs:
     type: entity_reference_paragraphs_preview
-    weight: 6
+    weight: 8
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -56,7 +71,7 @@ content:
     third_party_settings: {  }
     region: content
   parade_text:
-    weight: 4
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -71,27 +86,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  parade_layout:
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   parade_view_mode:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: view_mode_selector_radios
     region: content
-  translation:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true
+  translation: true
   uid: true

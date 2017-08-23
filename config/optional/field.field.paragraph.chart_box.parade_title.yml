@@ -4,19 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.chart_box
-  module:
-    - geocoder_field
-third_party_settings:
-  geocoder_field:
-    method: none
-    field: parent_id
-    plugins: {  }
-    dumper: wkt
-    delta_handling: default
-    failure:
-      handling: preserve
-      status_message: true
-      log: true
+third_party_settings: {  }
+_core:
+  default_config_hash: uIRgDWUJyvIn_IP9axEPK1E6Jco3ydaJb3nsMeeOHI8
 id: paragraph.chart_box.parade_title
 field_name: parade_title
 entity_type: paragraph
@@ -24,7 +14,7 @@ bundle: chart_box
 label: Label
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

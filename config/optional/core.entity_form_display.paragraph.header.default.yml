@@ -14,6 +14,8 @@ dependencies:
   module:
     - file
     - link
+_core:
+  default_config_hash: cMOWA2pq_dpXP5zOVA0koa4aqlDGz_j9r758kCYCkR8
 id: paragraph.header.default
 targetEntityType: paragraph
 bundle: header
@@ -43,13 +45,10 @@ content:
     type: link_default
     region: content
   parade_color_scheme:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 0
     region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   parade_enable_parallax:
     weight: 7
@@ -67,7 +66,7 @@ content:
     type: string_textarea
     region: content
   parade_secondary_title:
-    weight: 3
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -75,7 +74,7 @@ content:
     type: string_textfield
     region: content
   parade_title:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''

@@ -6,19 +6,21 @@ dependencies:
     - paragraphs.paragraphs_type.parallax
   module:
     - file
+_core:
+  default_config_hash: E5DZPahIsfJ6HfQ9er_X5TVnRZXJKAIVXz1DCjKFCdY
 id: paragraph.parallax.parade_background
 field_name: parade_background
 entity_type: paragraph
 bundle: parallax
 label: Background
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: paragraphs/background
-  file_extensions: 'jpg jpeg svg webp mp4 ogg webm'
+  file_extensions: 'jpg jpeg png gif gifv svg webp'
   max_filesize: ''
   description_field: false
   handler: 'default:file'

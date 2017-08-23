@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.social_links
   module:
     - link
+_core:
+  default_config_hash: AvLRHS2giehk5NHllPr36-4I9uxpG8aAIsgKtCXTxvU
 id: paragraph.social_links.parade_social_link
 field_name: parade_social_link
 entity_type: paragraph
 bundle: social_links
 label: 'Social links'
-description: 'List any number of social media links here. Icons supported for: facebook, google+, linkedin, twitter, youtube.'
+description: 'List any number of social media links here.'
 required: false
 translatable: false
 default_value: {  }

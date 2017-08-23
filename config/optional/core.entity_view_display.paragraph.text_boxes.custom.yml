@@ -6,12 +6,16 @@ dependencies:
     - field.field.paragraph.text_boxes.parade_anchor
     - field.field.paragraph.text_boxes.parade_boxes_per_row
     - field.field.paragraph.text_boxes.parade_color_scheme
+    - field.field.paragraph.text_boxes.parade_layout
     - field.field.paragraph.text_boxes.parade_paragraphs
+    - field.field.paragraph.text_boxes.parade_text
     - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: WrTNNXLcpa7jx7Ntt8ZLbjBpU1VfLBTwionCQu8EGKg
 id: paragraph.text_boxes.custom
 targetEntityType: paragraph
 bundle: text_boxes
@@ -38,6 +42,9 @@ hidden:
   created: true
   parade_anchor: true
   parade_boxes_per_row: true
+  parade_call_to_action: true
   parade_color_scheme: true
+  parade_layout: true
+  parade_text: true
   parade_view_mode: true
   uid: true

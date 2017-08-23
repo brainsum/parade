@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.social_links
+_core:
+  default_config_hash: Isv-3riULD7WfOyuEWv-spa1NsM5QI_X9ZHrVllBORI
 id: paragraph.social_links.parade_title
 field_name: parade_title
 entity_type: paragraph
@@ -11,7 +13,7 @@ bundle: social_links
 label: Title
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

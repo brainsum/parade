@@ -4,19 +4,25 @@ dependencies:
   config:
     - field.storage.paragraph.parade_layout
     - paragraphs.paragraphs_type.image_text
+_core:
+  default_config_hash: bl5SgMX0rIszbERngheShe-xuF5e9VWQCWQ5_S3Akl8
 id: paragraph.image_text.parade_layout
 field_name: parade_layout
 entity_type: paragraph
 bundle: image_text
 label: Layout
-description: ''
+description: 'Select the order of the image and text.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:classy_paragraphs_style'
+  handler: classy_paragraphs
   handler_settings:
-    target_bundles: null
-    auto_create: false
+    filter:
+      type: target_bundles
+      target_bundles: null
+      negate: 0
+    sort:
+      field: _none
 field_type: entity_reference

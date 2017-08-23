@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_value
     - paragraphs.paragraphs_type.chart_box
+_core:
+  default_config_hash: I7eeTGwBZd8xtxDXL-JEzkEtogx5fyZJArDV3xNJy8g
 id: paragraph.chart_box.parade_value
 field_name: parade_value
 entity_type: paragraph

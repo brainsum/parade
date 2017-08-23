@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.simple
   module:
     - text
+_core:
+  default_config_hash: cTkQvEyOE7ikb0_0mZ-kRJ4Uac3FdxeUlkGRXBddvvo
 id: paragraph.simple.parade_text
 field_name: parade_text
 entity_type: paragraph

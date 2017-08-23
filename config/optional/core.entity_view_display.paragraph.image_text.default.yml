@@ -6,15 +6,17 @@ dependencies:
     - field.field.paragraph.image_text.parade_call_to_action
     - field.field.paragraph.image_text.parade_color_scheme
     - field.field.paragraph.image_text.parade_image
+    - field.field.paragraph.image_text.parade_layout
     - field.field.paragraph.image_text.parade_text
     - field.field.paragraph.image_text.parade_title
-    - field.field.paragraph.image_text.parade_layout
     - field.field.paragraph.image_text.parade_view_mode
     - paragraphs.paragraphs_type.image_text
   module:
     - image
     - link
     - text
+_core:
+  default_config_hash: FEGRENNV4PV56U8zLZ0tHe9LUcw2Ta3z606pXiXZEY8
 id: paragraph.image_text.default
 targetEntityType: paragraph
 bundle: image_text

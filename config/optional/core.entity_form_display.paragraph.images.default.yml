@@ -10,6 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.images
   module:
     - image
+_core:
+  default_config_hash: iPn8WxyL5-Xq37hpE97nYCzXHu0_zyj3GeXCLPxOeNg
 id: paragraph.images.default
 targetEntityType: paragraph
 bundle: images
@@ -24,13 +26,10 @@ content:
     type: string_textfield
     region: content
   parade_color_scheme:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 0
     region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   parade_images:
     weight: 3

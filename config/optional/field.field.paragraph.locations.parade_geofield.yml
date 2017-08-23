@@ -22,6 +22,8 @@ third_party_settings:
       handling: preserve
       status_message: true
       log: true
+_core:
+  default_config_hash: nl0DZz-9erSEVAYzBCExnVrEVkgTSpa1W_7mn8tCoPY
 id: paragraph.locations.parade_geofield
 field_name: parade_geofield
 entity_type: paragraph

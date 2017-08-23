@@ -4,12 +4,15 @@ dependencies:
   config:
     - field.storage.paragraph.parade_secondary_title
     - paragraphs.paragraphs_type.header
+third_party_settings: {  }
+_core:
+  default_config_hash: TdmjF6hAKxz58xeCawiKhgM-wC_gYkxXTI6MVGkTyQw
 id: paragraph.header.parade_secondary_title
 field_name: parade_secondary_title
 entity_type: paragraph
 bundle: header
-label: 'Secondary title'
-description: ''
+label: Slogan
+description: 'This text will appear above the main page title.'
 required: false
 translatable: true
 default_value: {  }

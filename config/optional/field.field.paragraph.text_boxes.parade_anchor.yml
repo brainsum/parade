@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.text_boxes
+_core:
+  default_config_hash: ooeMsxSInRMyA7gdNsafdkLkFrgMfPVUnnnatIdmy7M
 id: paragraph.text_boxes.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph

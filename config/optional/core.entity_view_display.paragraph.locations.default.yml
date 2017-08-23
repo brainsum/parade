@@ -12,6 +12,8 @@ dependencies:
   module:
     - aggregated_leaflet_map
     - text
+_core:
+  default_config_hash: l63DyW8CStymQaG2eB_vP8zTvLrhhOtgGMe-onSjyGs
 id: paragraph.locations.default
 targetEntityType: paragraph
 bundle: locations
@@ -42,7 +44,7 @@ content:
         popup_anchor:
           x: '0'
           'y': '0'
-      auto_zoom: false
+      auto_zoom: true
       source_field: parade_location
       minPossibleZoom: 0
       maxPossibleZoom: 18

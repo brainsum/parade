@@ -3,15 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.parade_call_to_action
-    - paragraphs.paragraphs_type.image_text
+    - paragraphs.paragraphs_type.text_box
   module:
     - link
-_core:
-  default_config_hash: 32soasqKN52YrLh2brd7aiBwXOl8ipGbIhk4w-VwneE
-id: paragraph.image_text.parade_call_to_action
+id: paragraph.text_box.parade_call_to_action
 field_name: parade_call_to_action
 entity_type: paragraph
-bundle: image_text
+bundle: text_box
 label: 'Call to action'
 description: ''
 required: false
@@ -20,5 +18,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 1
+  title: 2
 field_type: link

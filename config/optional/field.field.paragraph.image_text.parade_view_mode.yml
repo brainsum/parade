@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.image_text
   module:
     - view_mode_selector
+_core:
+  default_config_hash: npOrONnNT3_9b-m40RhDa2-zMTnR67oEL9Qaj89Ecsw
 id: paragraph.image_text.parade_view_mode
 field_name: parade_view_mode
 entity_type: paragraph
@@ -13,7 +15,7 @@ bundle: image_text
 label: 'View mode'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: default

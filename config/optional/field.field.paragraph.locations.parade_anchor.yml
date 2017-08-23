@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.locations
+_core:
+  default_config_hash: O5ck4EOwpBfZJmpJA5kBTztWcvSo03Fz9cFnzfoNl0s
 id: paragraph.locations.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph
@@ -11,7 +13,7 @@ bundle: locations
 label: Anchor
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

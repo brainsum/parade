@@ -5,19 +5,10 @@ dependencies:
     - field.storage.paragraph.parade_text
     - paragraphs.paragraphs_type.chart_box
   module:
-    - geocoder_field
     - text
-third_party_settings:
-  geocoder_field:
-    method: none
-    field: parent_id
-    plugins: {  }
-    dumper: wkt
-    delta_handling: default
-    failure:
-      handling: preserve
-      status_message: true
-      log: true
+third_party_settings: {  }
+_core:
+  default_config_hash: Ot5geRujy5DFNSGll3hT91i3oqCgqk2hVXKxpewRsLI
 id: paragraph.chart_box.parade_text
 field_name: parade_text
 entity_type: paragraph

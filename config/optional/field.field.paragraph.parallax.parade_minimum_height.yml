@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_minimum_height
     - paragraphs.paragraphs_type.parallax
+_core:
+  default_config_hash: gZZ8Flfe8CvoQlnN3x0QWWvn4qys3_XciBrXd9Jffzg
 id: paragraph.parallax.parade_minimum_height
 field_name: parade_minimum_height
 entity_type: paragraph
@@ -11,7 +13,7 @@ bundle: parallax
 label: 'Minimum height'
 description: 'If you wish to use a background image only, you must provide this value (in pixels) to ensure the correct display of the image.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

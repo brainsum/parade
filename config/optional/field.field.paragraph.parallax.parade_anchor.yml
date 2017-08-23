@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.parallax
+_core:
+  default_config_hash: 1xM3ruyp2ACzrfAbT8ztQrz3BmjjzxJbveXyzimc0Qs
 id: paragraph.parallax.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph

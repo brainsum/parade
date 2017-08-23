@@ -2,29 +2,37 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text_box.parade_call_to_action
     - field.field.paragraph.text_box.parade_color_scheme
     - field.field.paragraph.text_box.parade_image
     - field.field.paragraph.text_box.parade_text
     - field.field.paragraph.text_box.parade_title
-    - field.field.paragraph.text_box.parade_layout
     - image.style.thumbnail
     - paragraphs.paragraphs_type.text_box
   module:
     - image
+    - parade
     - text
+_core:
+  default_config_hash: Z0-M0XWDkYBPmCi1G_9fGt2R3wxDXge65wM7noLFpLI
 id: paragraph.text_box.default
 targetEntityType: paragraph
 bundle: text_box
 mode: default
 content:
-  parade_color_scheme:
-    type: entity_reference_autocomplete
-    weight: 1
-    region: content
+  parade_call_to_action:
+    weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
+      open_on_new_tab: false
+    third_party_settings: {  }
+    type: link_cta
+  parade_color_scheme:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
     third_party_settings: {  }
   parade_image:
     weight: 3
@@ -49,15 +57,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  parade_layout:
-    weight: 0
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   translation:
     weight: 10

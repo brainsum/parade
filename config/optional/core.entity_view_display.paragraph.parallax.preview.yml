@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.parallax.parade_anchor
     - field.field.paragraph.parallax.parade_background
     - field.field.paragraph.parallax.parade_color_scheme
@@ -10,33 +11,38 @@ dependencies:
     - field.field.paragraph.parallax.parade_text
     - field.field.paragraph.parallax.parade_title
     - paragraphs.paragraphs_type.parallax
-  module:
-    - text
 _core:
   default_config_hash: T9GL0hzLdGpfp8L445u7kN0-GQPFTe12T5RGuuAWZTo
-id: paragraph.parallax.default
+id: paragraph.parallax.preview
 targetEntityType: paragraph
 bundle: parallax
-mode: default
+mode: preview
 content:
-  parade_text:
+  parade_anchor:
+    type: string
     weight: 1
-    label: hidden
-    settings: {  }
+    label: inline
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+  parade_color_scheme:
+    type: entity_reference_label
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   parade_title:
     weight: 0
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
 hidden:
   created: true
-  parade_anchor: true
   parade_background: true
-  parade_color_scheme: true
   parade_enable_parallax: true
   parade_minimum_height: true
+  parade_text: true
   uid: true

@@ -3,26 +3,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.custom
-    - field.field.paragraph.chart_box.parade_value
     - field.field.paragraph.chart_box.parade_text
     - field.field.paragraph.chart_box.parade_title
+    - field.field.paragraph.chart_box.parade_value
+    - field.field.paragraph.chart_box.parade_with_pie
     - paragraphs.paragraphs_type.chart_box
   module:
     - text
+_core:
+  default_config_hash: pCEir5LaMIaAanlmjY55E72D22goRhtWcXlnNtYuWho
 id: paragraph.chart_box.custom
 targetEntityType: paragraph
 bundle: chart_box
 mode: custom
 content:
-  parade_value:
-    weight: 2
-    label: hidden
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   parade_text:
     weight: 1
     label: hidden
@@ -38,4 +32,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+  parade_value:
+    weight: 2
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  parade_with_pie: true

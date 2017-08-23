@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_boxes_per_row
     - paragraphs.paragraphs_type.text_boxes
+_core:
+  default_config_hash: ogN3ACTRLxtIjxWIZlgjyx9acJ87gXD5ccQ42OyoW-c
 id: paragraph.text_boxes.parade_boxes_per_row
 field_name: parade_boxes_per_row
 entity_type: paragraph

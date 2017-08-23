@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: oY8EEYINnPxc20_E6bejIhag7BOme2txVlA38R6QE4w
 id: paragraph.view_mode_selector
 label: 'View mode selector'
 targetEntityType: paragraph

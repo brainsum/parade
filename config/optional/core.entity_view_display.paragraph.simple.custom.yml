@@ -5,12 +5,15 @@ dependencies:
     - core.entity_view_mode.paragraph.custom
     - field.field.paragraph.simple.parade_anchor
     - field.field.paragraph.simple.parade_color_scheme
+    - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.parade_text
     - field.field.paragraph.simple.parade_title
     - field.field.paragraph.simple.parade_view_mode
     - paragraphs.paragraphs_type.simple
   module:
     - text
+_core:
+  default_config_hash: mOHmmzxlG1O5bACq3q2dbI0m0MJYFaGQmiqhe_8aMB4
 id: paragraph.simple.custom
 targetEntityType: paragraph
 bundle: simple
@@ -34,6 +37,8 @@ content:
 hidden:
   created: true
   parade_anchor: true
+  parade_call_to_action: true
   parade_color_scheme: true
+  parade_layout: true
   parade_view_mode: true
   uid: true

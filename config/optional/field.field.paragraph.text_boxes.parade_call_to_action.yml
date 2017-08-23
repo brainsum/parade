@@ -3,15 +3,13 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.parade_call_to_action
-    - paragraphs.paragraphs_type.image_text
+    - paragraphs.paragraphs_type.text_boxes
   module:
     - link
-_core:
-  default_config_hash: 32soasqKN52YrLh2brd7aiBwXOl8ipGbIhk4w-VwneE
-id: paragraph.image_text.parade_call_to_action
+id: paragraph.text_boxes.parade_call_to_action
 field_name: parade_call_to_action
 entity_type: paragraph
-bundle: image_text
+bundle: text_boxes
 label: 'Call to action'
 description: ''
 required: false

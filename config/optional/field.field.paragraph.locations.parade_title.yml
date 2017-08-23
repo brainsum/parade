@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.locations
+_core:
+  default_config_hash: INXW0Z0m37-yFkBxqx6M_jfcbBLwGpDd_Gv2BYiSxeM
 id: paragraph.locations.parade_title
 field_name: parade_title
 entity_type: paragraph
@@ -11,7 +13,7 @@ bundle: locations
 label: Title
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

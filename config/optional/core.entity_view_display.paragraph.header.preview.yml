@@ -6,18 +6,33 @@ dependencies:
     - field.field.paragraph.header.parade_anchor
     - field.field.paragraph.header.parade_background
     - field.field.paragraph.header.parade_call_to_action
+    - field.field.paragraph.header.parade_color_scheme
     - field.field.paragraph.header.parade_enable_parallax
     - field.field.paragraph.header.parade_lead_text
     - field.field.paragraph.header.parade_secondary_title
     - field.field.paragraph.header.parade_title
     - paragraphs.paragraphs_type.header
-  module:
-    - parade
+_core:
+  default_config_hash: YhU-LpCiTrysYEkYxW6j6ZOAc8TYnh7GMpXWJpSsy6c
 id: paragraph.header.preview
 targetEntityType: paragraph
 bundle: header
 mode: preview
 content:
+  parade_anchor:
+    type: string
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  parade_color_scheme:
+    type: entity_reference_label
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   parade_title:
     weight: 0
     label: inline
@@ -27,7 +42,6 @@ content:
     type: string
 hidden:
   created: true
-  parade_anchor: true
   parade_background: true
   parade_call_to_action: true
   parade_enable_parallax: true

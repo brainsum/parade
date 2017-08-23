@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.header
   module:
     - link
+_core:
+  default_config_hash: _MOqwkggHfGkjcw1B-ID8XOpZ0gsrsR_j7ZX1be21LQ
 id: paragraph.header.parade_call_to_action
 field_name: parade_call_to_action
 entity_type: paragraph

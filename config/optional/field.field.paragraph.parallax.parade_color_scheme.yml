@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_color_scheme
     - paragraphs.paragraphs_type.parallax
+_core:
+  default_config_hash: i58BSlv0_GPZfcrh9ppky8HoEN32GKbwZA4Sicg83I4
 id: paragraph.parallax.parade_color_scheme
 field_name: parade_color_scheme
 entity_type: paragraph
@@ -15,8 +17,12 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:classy_paragraphs_style'
+  handler: classy_paragraphs
   handler_settings:
-    target_bundles: null
-    auto_create: false
+    filter:
+      type: target_bundles
+      target_bundles: null
+      negate: 0
+    sort:
+      field: _none
 field_type: entity_reference

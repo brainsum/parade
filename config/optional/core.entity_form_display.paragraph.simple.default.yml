@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.simple.parade_anchor
+    - field.field.paragraph.simple.parade_call_to_action
     - field.field.paragraph.simple.parade_color_scheme
     - field.field.paragraph.simple.parade_layout
     - field.field.paragraph.simple.parade_text
@@ -10,38 +11,43 @@ dependencies:
     - field.field.paragraph.simple.parade_view_mode
     - paragraphs.paragraphs_type.simple
   module:
+    - parade
     - text
     - view_mode_selector
+_core:
+  default_config_hash: XuORQcQ9ErlrbRZLIQDp-d6cLj8NrS5gAlXH9tEPNGQ
 id: paragraph.simple.default
 targetEntityType: paragraph
 bundle: simple
 mode: default
 content:
   parade_anchor:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  parade_color_scheme:
-    type: entity_reference_autocomplete
-    weight: 3
-    region: content
+  parade_call_to_action:
+    weight: 7
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
+      open_on_new_tab: false
+    third_party_settings: {  }
+    type: link_cta
+  parade_color_scheme:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
     third_party_settings: {  }
   parade_layout:
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 1
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   parade_text:
     weight: 5
@@ -60,14 +66,15 @@ content:
     type: string_textfield
     region: content
   parade_view_mode:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: view_mode_selector_select
     region: content
   translation:
-    weight: 10
-    region: content
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

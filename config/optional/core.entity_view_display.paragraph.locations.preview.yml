@@ -4,11 +4,14 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.locations.parade_anchor
+    - field.field.paragraph.locations.parade_color_scheme
     - field.field.paragraph.locations.parade_geofield
     - field.field.paragraph.locations.parade_location
     - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
+_core:
+  default_config_hash: iVbQ4-JHhYnv6kNY-TlrmVcGlzUrn_ai6s2L5phZfGk
 id: paragraph.locations.preview
 targetEntityType: paragraph
 bundle: locations
@@ -20,6 +23,13 @@ content:
     label: inline
     settings:
       link_to_entity: false
+    third_party_settings: {  }
+  parade_color_scheme:
+    type: entity_reference_label
+    weight: 2
+    label: inline
+    settings:
+      link: false
     third_party_settings: {  }
   parade_title:
     weight: 0
