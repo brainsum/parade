@@ -127,14 +127,15 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
     $enabled = $just_disabled = $just_enabled = [];
     $settings = $this->config('parade_demo.settings')->get('bundles');
     foreach ($form_state->getValue('bundles') as $bundle => $data) {
-      if ($data['enabled']) {
+      if (isset($data['enabled']) && $data['enabled']) {
         $enabled[$bundle] = $data;
         unset($enabled[$bundle]['enabled']);
+
+        if (!isset($settings[$bundle], $settings[$bundle]['enabled']) || !$settings[$bundle]['enabled']) {
+          $just_enabled[$bundle] = $data;
+        }
       }
-      if ($data['enabled'] && (!isset($settings[$bundle]) || !$settings[$bundle]['enabled'])) {
-        $just_enabled[$bundle] = $data;
-      }
-      if (!$data['enabled'] && isset($settings[$bundle]) && $settings[$bundle]['enabled']) {
+      elseif (isset($settings[$bundle], $settings[$bundle]['enabled']) && $settings[$bundle]['enabled']) {
         $disabled[$bundle] = $data;
       }
     }
