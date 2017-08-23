@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.marketo_form
-  module:
-    - marketo_form
   enforced:
     module:
       - marketo_form
+_core:
+  default_config_hash: jX4ywhGROXedFdr7SAk2H9wQjcr-44pGA-QNNzXzTf4
 id: paragraph.marketo_form.parade_title
 field_name: parade_title
 entity_type: paragraph

@@ -4,12 +4,19 @@ dependencies:
   config:
     - field.storage.paragraph.parade_image
     - paragraphs.paragraphs_type.marketo_form
-  module:
-    - image
-    - marketo_form
   enforced:
     module:
       - marketo_form
+  module:
+    - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
+_core:
+  default_config_hash: gXU27JuMTX2tnGFT7vtPMkNCT-w4rZPDqSwbx6kh-Zg
 id: paragraph.marketo_form.parade_image
 field_name: parade_image
 entity_type: paragraph
@@ -17,7 +24,7 @@ bundle: marketo_form
 label: Cover
 description: 'Upload an image of the attached whitepaper.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.parade_layout
     - paragraphs.paragraphs_type.marketo_form
+_core:
+  default_config_hash: a5efWZqLIoye3uumsXtn5yp-PiPJ45GheVGTiT1QLQE
 id: paragraph.marketo_form.parade_layout
 field_name: parade_layout
 entity_type: paragraph
@@ -11,12 +13,18 @@ bundle: marketo_form
 label: Layout
 description: ''
 required: false
-translatable: true
-default_value: {  }
+translatable: false
+default_value:
+  -
+    target_uuid: ef95238c-59b5-45f9-98dc-d0b8839c38c4
 default_value_callback: ''
 settings:
-  handler: 'default:classy_paragraphs_style'
+  handler: classy_paragraphs
   handler_settings:
-    target_bundles: null
-    auto_create: false
+    filter:
+      type: target_bundles
+      target_bundles: null
+      negate: 0
+    sort:
+      field: _none
 field_type: entity_reference

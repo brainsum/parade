@@ -7,11 +7,11 @@ dependencies:
     - field.field.paragraph.marketo_form.parade_enable_confirm_message
     - field.field.paragraph.marketo_form.parade_enable_linkedin_autofill
     - field.field.paragraph.marketo_form.parade_image
+    - field.field.paragraph.marketo_form.parade_layout
     - field.field.paragraph.marketo_form.parade_lead_text
     - field.field.paragraph.marketo_form.parade_marketo_form
     - field.field.paragraph.marketo_form.parade_text
     - field.field.paragraph.marketo_form.parade_title
-    - field.field.paragraph.marketo_form.parade_layout
     - image.style.whitepaper_a4
     - paragraphs.paragraphs_type.marketo_form
   enforced:
@@ -21,6 +21,8 @@ dependencies:
     - image
     - marketo_form
     - text
+_core:
+  default_config_hash: uPg0nY4lT_vXfzv-yjoV5L3VUJJUicBHHzW9-J5Rkcc
 id: paragraph.marketo_form.default
 targetEntityType: paragraph
 bundle: marketo_form

@@ -4,11 +4,11 @@ dependencies:
   config:
     - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.marketo_form
-  module:
-    - marketo_form
   enforced:
     module:
       - marketo_form
+_core:
+  default_config_hash: a5hExy4OtAtrKB96I6AvA9paU5uW0xWCfkhpi_iP-7U
 id: paragraph.marketo_form.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph

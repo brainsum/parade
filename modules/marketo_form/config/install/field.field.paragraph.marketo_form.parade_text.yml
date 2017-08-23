@@ -4,18 +4,19 @@ dependencies:
   config:
     - field.storage.paragraph.parade_text
     - paragraphs.paragraphs_type.marketo_form
-  module:
-    - text
-    - marketo_form
   enforced:
     module:
       - marketo_form
+  module:
+    - text
+_core:
+  default_config_hash: 8Lj4OnOKrRqgDlXW4RL51hn1hG4gaHJenugxeAAirt0
 id: paragraph.marketo_form.parade_text
 field_name: parade_text
 entity_type: paragraph
 bundle: marketo_form
 label: 'Confirmation message'
-description: 'After the user submits the form, this text will replace the form.'
+description: 'After the user submits the form, this text will replace it.'
 required: false
 translatable: true
 default_value: {  }
