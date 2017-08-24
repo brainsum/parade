@@ -9,11 +9,13 @@
  * Implements hook_install().
  *
  * Sets module weight.
+ * Removes the image_optimalization module.
+ * Sets image toolkit to imagemagick.
  */
 function parade_image_optimize_install() {
   // Get weight of Parade.
   // @todo Replace these two lines when module_get_weight implemented
-  $extension_config = Drupal::configFactory()->getEditable('core.extension');
+  $extension_config = \Drupal::configFactory()->getEditable('core.extension');
   $parade_weight = $extension_config->get('module.parade');
   $imagemagick_weight = $extension_config->get('module.imagemagick');
 
