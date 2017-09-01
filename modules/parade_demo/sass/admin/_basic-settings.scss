@@ -1,0 +1,36 @@
+
+body.user-logged-in.page-node-type-parade-onepage {
+  background-color: rgb(240, 240, 240);
+  font-weight: 600;
+}
+.page-node-type-parade-onepage {
+  input.form-autocomplete,
+  input.form-text,
+  input.form-tel,
+  input.form-email,
+  input.form-url,
+  input.form-search,
+  input.form-number,
+  input.form-color,
+  input.form-file,
+  input.form-date,
+  input.form-time,
+  textarea.form-textarea {
+    background-color: rgb(246, 246, 246);
+    border-color: rgb(219, 219, 219);
+    border-width: 1px;
+    color: rgb(86, 84, 84);
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    border-radius: 2px;
+    border-style: solid;
+    box-shadow: none;
+  }
+}
+
+
+
+
+

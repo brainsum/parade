@@ -64,6 +64,13 @@
 @import "theme/wysiwyg";
 @import "theme/error-pages";
 
+// Admin
+@import 'admin/basic-settings';
+@import 'admin/colors';
+@import 'admin/fields';
+@import 'admin/menu';
+@import 'admin/add-buttons';
+
 // Vendor
 @import "vendor/hamburgers";
 
