@@ -69,6 +69,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     /** @var \Drupal\paragraphs\Entity\Paragraph $paragraphs_entity */
     $paragraphs_entity = $widget_state['paragraphs'][$delta]['entity'];
 
+    // Add paragraphs bundle wrapper.
+    $label = $paragraphs_entity->type->entity->label();
+    $element['#prefix'] .= '<div class="paragraphs-type paragraphs-type-' . $paragraphs_entity->getType() . '">' . $label . '</div>';
+    unset($element['top']['paragraph_type_title']);
+
     // Locations paragraph type review is bugged.
     $previewBlacklist = [
       'locations',
@@ -110,9 +115,9 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
     ];
 
     // Set the dialog title.
-    if (isset($element['top']['paragraph_type_title']['info']['#markup'])) {
+    if (isset($label)) {
       $preview_button['#dialog_title'] = t('Preview of @type', [
-        '@type' => strip_tags($element['top']['paragraph_type_title']['info']['#markup']),
+        '@type' => $label,
       ]);
     }
 
