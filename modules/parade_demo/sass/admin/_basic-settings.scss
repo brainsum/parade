@@ -3,6 +3,14 @@ body.user-logged-in.page-node-type-parade-onepage {
   background-color: rgb(240, 240, 240);
   font-weight: 600;
 }
+
+.layout-region-node-main {
+  width: 75%;
+}
+.layout-region-node-secondary {
+  width: 25%;
+}
+
 .page-node-type-parade-onepage {
   input.form-autocomplete,
   input.form-text,
@@ -37,6 +45,60 @@ body.user-logged-in.page-node-type-parade-onepage {
     background: #ffffff;
   }
 }
+
+a.tabledrag-handle .handle {
+  background: none;
+  content: $fa-var-ellipsis-v;
+  color: red;
+}
+
+.paragraphs-type {
+  text-align: center;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 70px;
+  &-header {
+    background-image: url('../../../images/header.png');
+  }
+  &-simple {
+    background-image: url('../../../images/simple.png');
+  }
+  &-parallax {
+    background-image: url('../../../images/background.png');
+  }
+  &-images {
+    background-image: url('../../../images/images.png');
+  }
+  &-image_text {
+    background-image: url('../../../images/text-and-image.png');
+  }
+  &-text_boxes {
+    background-image: url('../../../images/textboxes.png');
+  }
+  &-locations {
+    background-image: url('../../../images/locations.png');
+  }
+  &-social_links {
+    background-image: url('../../../images/social-links.png');
+  }
+  &-marketo_poll {
+    background-image: url('../../../images/poll.png');
+  }
+  &-marketo_form {
+    background-image: url('../../../images/form.png');
+  }
+}
+
+.form-wrapper {
+  .paragraph-type-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none !important;
+  }
+}
+
 
 
 

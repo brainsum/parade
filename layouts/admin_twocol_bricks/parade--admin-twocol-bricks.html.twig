@@ -30,15 +30,15 @@
     {% endif %}
 
     {% if content.first or content.second %}
-      <div class="layout__region layout__region--below">
+      <div class="layout__region layout__region--bottom">
           {% if content.first %}
-              <div class="layout__region layout__region--below-first">
+              <div class="layout__region layout__region--bottom-first">
                   {{ content.first }}
               </div>
           {% endif %}
 
           {% if content.second %}
-              <div class="layout__region layout__region--below-second">
+              <div class="layout__region layout__region--bottom-second">
                   {{ content.second }}
               </div>
           {% endif %}
