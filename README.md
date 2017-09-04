@@ -1,6 +1,6 @@
 # README.md
 
-Parade is a module to create pre-customized paragraphs in your content.
+Parade is a module to create one page sites from pre-customized paragraphs in your content.
 It's based on https://www.drupal.org/project/paragraphs .
 
 ## INSTALLATION
