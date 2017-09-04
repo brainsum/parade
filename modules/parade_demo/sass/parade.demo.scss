@@ -65,9 +65,10 @@
 @import "theme/error-pages";
 
 // Admin
-@import 'admin/basic-settings';
 @import 'admin/colors';
+@import 'admin/basic-settings';
 @import 'admin/fields';
+@import 'admin/header';
 @import 'admin/menu';
 @import 'admin/add-buttons';
 
