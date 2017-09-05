@@ -13,8 +13,13 @@ dependencies:
     - field.field.paragraph.text_boxes.parade_title
     - field.field.paragraph.text_boxes.parade_view_mode
     - paragraphs.paragraphs_type.text_boxes
-_core:
-  default_config_hash: 4vMc5a1f3_9ESvHW6z6fHdjVXA2vdf6CggtTdzSYGno
+  module:
+    - field_layout
+    - parade
+third_party_settings:
+  field_layout:
+    id: parade_admin_twocol_bricks
+    settings: {  }
 id: paragraph.text_boxes.preview
 targetEntityType: paragraph
 bundle: text_boxes
@@ -22,25 +27,28 @@ mode: preview
 content:
   parade_anchor:
     type: string
-    weight: 1
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: second
   parade_color_scheme:
-    type: entity_reference_label
-    weight: 3
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-  parade_layout:
     type: entity_reference_label
     weight: 2
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    region: first
+  parade_layout:
+    type: entity_reference_label
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: first
   parade_title:
     weight: 0
     label: inline
@@ -48,7 +56,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: top
 hidden:
   created: true
   parade_boxes_per_row: true

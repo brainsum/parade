@@ -20,3 +20,4 @@ dependencies:
   - drupal:link
   - drupal:options
   - drupal:classy_paragraphs
+  - drupal:field_layout

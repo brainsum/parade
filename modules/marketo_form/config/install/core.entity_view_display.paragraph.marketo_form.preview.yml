@@ -17,8 +17,13 @@ dependencies:
   enforced:
     module:
       - marketo_form
-_core:
-  default_config_hash: 7Pn51aF-BKeVmYY-tmYWAmH5xpkItqGgu1KRDIUCohM
+  module:
+    - field_layout
+    - parade
+third_party_settings:
+  field_layout:
+    id: parade_admin_twocol_bricks
+    settings: {  }
 id: paragraph.marketo_form.preview
 targetEntityType: paragraph
 bundle: marketo_form
@@ -26,26 +31,28 @@ mode: preview
 content:
   parade_anchor:
     type: string
-    weight: 1
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    region: content
+    region: second
   parade_color_scheme:
-    type: entity_reference_label
-    weight: 3
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-  parade_layout:
     type: entity_reference_label
     weight: 2
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    region: first
+  parade_layout:
+    type: entity_reference_label
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: first
   parade_title:
     weight: 0
     label: inline
@@ -53,7 +60,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: top
 hidden:
   created: true
   parade_enable_confirm_message: true

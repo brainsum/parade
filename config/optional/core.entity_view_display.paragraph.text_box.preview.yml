@@ -9,8 +9,13 @@ dependencies:
     - field.field.paragraph.text_box.parade_text
     - field.field.paragraph.text_box.parade_title
     - paragraphs.paragraphs_type.text_box
-_core:
-  default_config_hash: BSgt1j_kGKQk-saX9dzzU17YVAMjItreH1nTy2HsEMs
+  module:
+    - field_layout
+    - parade
+third_party_settings:
+  field_layout:
+    id: parade_admin_twocol_bricks
+    settings: {  }
 id: paragraph.text_box.preview
 targetEntityType: paragraph
 bundle: text_box
@@ -18,11 +23,12 @@ mode: preview
 content:
   parade_color_scheme:
     type: entity_reference_label
-    weight: 2
+    weight: 1
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    region: first
   parade_title:
     weight: 0
     label: inline
@@ -30,7 +36,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: top
 hidden:
   created: true
   parade_call_to_action: true

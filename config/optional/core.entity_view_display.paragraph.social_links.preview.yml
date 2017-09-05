@@ -7,8 +7,13 @@ dependencies:
     - field.field.paragraph.social_links.parade_social_link
     - field.field.paragraph.social_links.parade_title
     - paragraphs.paragraphs_type.social_links
-_core:
-  default_config_hash: NuwiUb_Bdj1-XSqfI7zQw7Oqv93N6bgttl3aznl7j8Y
+  module:
+    - field_layout
+    - parade
+third_party_settings:
+  field_layout:
+    id: parade_admin_twocol_bricks
+    settings: {  }
 id: paragraph.social_links.preview
 targetEntityType: paragraph
 bundle: social_links
@@ -21,6 +26,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+    region: first
   parade_title:
     weight: 0
     label: inline
@@ -28,6 +34,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: top
 hidden:
   created: true
   parade_social_link: true

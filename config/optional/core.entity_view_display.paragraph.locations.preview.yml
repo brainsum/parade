@@ -10,8 +10,13 @@ dependencies:
     - field.field.paragraph.locations.parade_text
     - field.field.paragraph.locations.parade_title
     - paragraphs.paragraphs_type.locations
-_core:
-  default_config_hash: iVbQ4-JHhYnv6kNY-TlrmVcGlzUrn_ai6s2L5phZfGk
+  module:
+    - field_layout
+    - parade
+third_party_settings:
+  field_layout:
+    id: parade_admin_twocol_bricks
+    settings: {  }
 id: paragraph.locations.preview
 targetEntityType: paragraph
 bundle: locations
@@ -19,18 +24,20 @@ mode: preview
 content:
   parade_anchor:
     type: string
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: second
   parade_color_scheme:
     type: entity_reference_label
-    weight: 2
+    weight: 1
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    region: first
   parade_title:
     weight: 0
     label: inline
@@ -38,6 +45,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: top
 hidden:
   created: true
   parade_geofield: true

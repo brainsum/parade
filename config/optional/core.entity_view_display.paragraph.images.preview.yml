@@ -8,8 +8,13 @@ dependencies:
     - field.field.paragraph.images.parade_images
     - field.field.paragraph.images.parade_title
     - paragraphs.paragraphs_type.images
-_core:
-  default_config_hash: ZB0-6wz3KKVQAqS026qhbuJ4KZwYun9m7OwlYdLek4I
+  module:
+    - field_layout
+    - parade
+third_party_settings:
+  field_layout:
+    id: parade_admin_twocol_bricks
+    settings: {  }
 id: paragraph.images.preview
 targetEntityType: paragraph
 bundle: images
@@ -17,18 +22,20 @@ mode: preview
 content:
   parade_anchor:
     type: string
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: second
   parade_color_scheme:
     type: entity_reference_label
-    weight: 2
+    weight: 1
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    region: first
   parade_title:
     weight: 0
     label: inline
@@ -36,6 +43,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: top
 hidden:
   created: true
   parade_images: true
