@@ -8271,6 +8271,18 @@ a.tabledrag-handle:focus .handle {
   font-weight: 600;
 }
 
+.entity-meta {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.entity-meta__header,
+.entity-meta details {
+  background-color: #f0f0f0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
 .paragraphs-dropbutton-wrapper .button.parade-button {
   width: calc(20% - .5em) !important;
   margin-left: .25em;
