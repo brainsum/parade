@@ -7956,6 +7956,10 @@ h3.tieto-lead {
   position: relative;
 }
 
+.draggable > td:nth-child(2) > div > .form-wrapper {
+  width: 100%;
+}
+
 .layout--twocol-bricks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7976,6 +7980,33 @@ h3.tieto-lead {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
+  -webkit-box: 1;
+  -moz-box: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flexbox: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline {
+  -webkit-box: 1;
+  -moz-box: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flexbox: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second {
+  -webkit-box: 1;
+  -moz-box: 1;
+  -webkit-flex: 1 2 auto;
+  -ms-flexbox: 1 2 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 2 auto;
+          flex: 1 2 auto;
 }
 
 .layout--twocol-bricks > .layout__region {
@@ -8041,10 +8072,40 @@ body.user-logged-in.page-node-type-parade-onepage {
   background: #ffffff;
 }
 
+.form-wrapper .paragraph-type-top {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions {
+  display: none;
+}
+
 a.tabledrag-handle .handle {
+  font-family: FontAwesome;
   background: none;
+}
+
+a.tabledrag-handle .handle:before {
+  display: none;
+}
+
+a.tabledrag-handle:hover .handle,
+a.tabledrag-handle:focus .handle {
+  background: none;
+}
+
+.node-parade-onepage-edit-form .field-multiple-table tr.even:hover a.tabledrag-handle .handle:before,
+.node-parade-onepage-edit-form .field-multiple-table tr.odd:hover a.tabledrag-handle .handle:before {
   content: "";
-  color: red;
+  color: #999999;
+  display: block;
+}
+
+.node-parade-onepage-edit-form .field-multiple-table tr.even:hover .parade-actions,
+.node-parade-onepage-edit-form .field-multiple-table tr.odd:hover .parade-actions {
+  display: block !important;
 }
 
 .paragraphs-type {
@@ -8052,7 +8113,9 @@ a.tabledrag-handle .handle {
   width: 100px;
   background-repeat: no-repeat;
   background-position: top;
-  padding-top: 70px;
+  padding-top: 60px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .paragraphs-type-header {
@@ -8095,16 +8158,19 @@ a.tabledrag-handle .handle {
   background-image: url("../../../images/form.png");
 }
 
-.form-wrapper .paragraph-type-top {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none !important;
+.node-parade-onepage-edit-form .field-multiple-table tr.even,
+.node-parade-onepage-edit-form .field-multiple-table tr.odd {
+  background-color: #ffffff;
+  padding: 0;
 }
 
-.node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr.even,
-.node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr.odd {
-  background-color: #ffffff;
+.node-parade-onepage-edit-form .field-multiple-table tr.even:hover,
+.node-parade-onepage-edit-form .field-multiple-table tr.odd:hover {
+  background-color: #f2faff;
+}
+
+#parade-onepage-sections-values tbody tr {
+  height: 140px;
 }
 
 .node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr {
@@ -8142,6 +8208,32 @@ a.tabledrag-handle .handle {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+.layout--parade-admin-twocol-bricks {
+  padding-top: 25px;
+}
+
+.layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline .field__label {
+  display: none;
+}
+
+.layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline .field__item {
+  font-size: 13px;
+  color: #999999;
+}
+
+.layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second .field--label-inline .field__label {
+  font-size: 13px;
+  color: #999999;
+  text-align: right;
+  font-weight: 600;
 }
 
 .paragraphs-dropbutton-wrapper .button.parade-button {

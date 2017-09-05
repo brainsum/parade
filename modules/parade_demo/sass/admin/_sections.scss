@@ -1,0 +1,41 @@
+
+.layout--parade-admin-twocol-bricks {
+  padding-top: 25px;
+  .layout__region--top {
+    .field--name-parade-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+  }
+  .layout__region--bottom {
+    .layout__region--bottom-first {
+      .field--label-inline {
+        .field__label {
+          display: none;
+        }
+        .field__item {
+          font-size: 13px;
+          color: $grey-text;
+        }
+      }
+    }
+    .layout__region--bottom-second {
+      .field--label-inline {
+        .field__label {
+          font-size: 13px;
+          color: $grey-text;
+          text-align: right;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

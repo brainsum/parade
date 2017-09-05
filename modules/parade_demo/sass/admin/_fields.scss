@@ -1,6 +1,14 @@
-.node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr.even,
-.node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr.odd {
-  background-color: #ffffff;
+
+.node-parade-onepage-edit-form .field-multiple-table tr.even,
+.node-parade-onepage-edit-form .field-multiple-table tr.odd {
+  background-color: $white;
+  padding: 0;
+  &:hover {
+    background-color: $lightblue-bgr;
+  }
+}
+#parade-onepage-sections-values tbody tr {
+  height: 140px;
 }
 
 .node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr {

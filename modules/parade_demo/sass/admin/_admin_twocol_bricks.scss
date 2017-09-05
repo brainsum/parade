@@ -9,6 +9,9 @@
 .draggable > td:nth-child(2) > div {
   @include flexbox;
   position: relative;
+  >.form-wrapper {
+    width: 100%;
+  }
 }
 
 .layout--twocol-bricks {
@@ -21,6 +24,14 @@
     @include flexbox;
     .layout__region--bottom-first {
       @include flexbox;
+      @include flex(1, 1, auto);
+      .field--label-inline {
+        @include flex(1, 1, auto);
+      }
+    }
+    .layout__region--bottom-second {
+      @include flex(1, 2, auto)
+
     }
   }
 }
