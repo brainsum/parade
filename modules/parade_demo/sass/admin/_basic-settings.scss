@@ -42,7 +42,18 @@ body.user-logged-in.page-node-type-parade-onepage {
   }
 
   .field--name-title {
-    background: $white;
+    background: transparent;
+    input {
+      font-size: 32px;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      font-weight: 300;
+      &:hover,
+      &:active {
+        border-bottom: 1px solid $grey-text;
+      }
+    }
   }
 }
 

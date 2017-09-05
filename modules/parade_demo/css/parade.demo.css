@@ -8069,7 +8069,19 @@ body.user-logged-in.page-node-type-parade-onepage {
 }
 
 .page-node-type-parade-onepage .field--name-title {
-  background: #ffffff;
+  background: transparent;
+}
+
+.page-node-type-parade-onepage .field--name-title input {
+  font-size: 32px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-weight: 300;
+}
+
+.page-node-type-parade-onepage .field--name-title input:hover, .page-node-type-parade-onepage .field--name-title input:active {
+  border-bottom: 1px solid #999999;
 }
 
 .form-wrapper .paragraph-type-top {
