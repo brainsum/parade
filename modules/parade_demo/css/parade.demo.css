@@ -8070,6 +8070,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 
 .page-node-type-parade-onepage .field--name-title {
   background: transparent;
+  padding: 0 25px 15px;
 }
 
 .page-node-type-parade-onepage .field--name-title input {
@@ -8082,6 +8083,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 
 .page-node-type-parade-onepage .field--name-title input:hover, .page-node-type-parade-onepage .field--name-title input:active {
   border-bottom: 1px solid #999999;
+  border-radius: 0;
 }
 
 .form-wrapper .paragraph-type-top {

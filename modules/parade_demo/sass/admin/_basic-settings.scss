@@ -43,6 +43,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 
   .field--name-title {
     background: transparent;
+    padding: 0 25px 15px;
     input {
       font-size: 32px;
       padding: 0;
@@ -52,6 +53,7 @@ body.user-logged-in.page-node-type-parade-onepage {
       &:hover,
       &:active {
         border-bottom: 1px solid $grey-text;
+        border-radius: 0;
       }
     }
   }
