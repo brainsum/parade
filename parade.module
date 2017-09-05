@@ -173,6 +173,12 @@ function parade_theme($existing, $type, $theme, $path) {
     'parade_preview' => [
       'variables' => ['paragraph' => NULL],
     ],
+    'parade__paragraphs_dropbutton_wrapper' => [
+      'variables' => [
+        'label' => NULL,
+        'children' => NULL,
+      ],
+    ],
   ];
 }
 
