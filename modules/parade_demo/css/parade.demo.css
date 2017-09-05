@@ -8245,6 +8245,11 @@ a.tabledrag-handle:focus .handle {
   margin-top: 15px;
 }
 
+.node-parade-onepage-form .field-multiple-table td,
+.node-parade-onepage-edit-form .field-multiple-table td {
+  padding: 5px 1px !important;
+}
+
 .layout--parade-admin-twocol-bricks {
   padding-top: 25px;
 }
