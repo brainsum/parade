@@ -57,9 +57,13 @@ body.user-logged-in.page-node-type-parade-onepage {
   }
 }
 
+
 a.tabledrag-handle .handle {
   font-family: FontAwesome;
   background: none;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
   &:before {
     display: none;
   }
@@ -79,6 +83,15 @@ a.tabledrag-handle:focus .handle {
   }
   .parade-actions {
     display: block !important;
+  }
+}
+
+#parade-onepage-menu-values {
+  a.tabledrag-handle .handle {
+    &:before {
+      display: block !important;
+      color: $white;
+    }
   }
 }
 

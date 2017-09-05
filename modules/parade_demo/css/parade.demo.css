@@ -8085,6 +8085,9 @@ body.user-logged-in.page-node-type-parade-onepage {
 a.tabledrag-handle .handle {
   font-family: FontAwesome;
   background: none;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
 }
 
 a.tabledrag-handle .handle:before {
@@ -8106,6 +8109,11 @@ a.tabledrag-handle:focus .handle {
 .node-parade-onepage-edit-form .field-multiple-table tr.even:hover .parade-actions,
 .node-parade-onepage-edit-form .field-multiple-table tr.odd:hover .parade-actions {
   display: block !important;
+}
+
+#parade-onepage-menu-values a.tabledrag-handle .handle:before {
+  display: block !important;
+  color: #ffffff;
 }
 
 .paragraphs-type {
@@ -8208,6 +8216,19 @@ a.tabledrag-handle:focus .handle {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
+  margin-left: 17px;
+}
+
+.field--name-parade-onepage-menu #edit-parade-onepage-menu--description {
+  color: #f0f0f0;
+  font-size: 11px;
+  font-weight: 400;
+  padding-left: 30px;
+}
+
+.field--name-parade-onepage-menu #edit-parade-onepage-menu-add-more {
+  margin-left: 30px;
+  margin-top: 15px;
 }
 
 .layout--parade-admin-twocol-bricks {
