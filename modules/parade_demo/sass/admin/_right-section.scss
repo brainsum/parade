@@ -1,6 +1,14 @@
 .entity-meta {
   border: none !important;
   box-shadow: none !important;
+  h3 {
+    font-size: 20px;
+    color: $green;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: none;
+    margin-bottom: 28px;
+  }
 }
 
 .entity-meta__header,

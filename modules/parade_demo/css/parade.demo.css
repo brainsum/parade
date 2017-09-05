@@ -8081,7 +8081,7 @@ body.user-logged-in.page-node-type-parade-onepage {
   font-weight: 300;
 }
 
-.page-node-type-parade-onepage .field--name-title input:hover, .page-node-type-parade-onepage .field--name-title input:active {
+.page-node-type-parade-onepage .field--name-title input:hover, .page-node-type-parade-onepage .field--name-title input:active, .page-node-type-parade-onepage .field--name-title input:focus {
   border-bottom: 1px solid #999999;
   border-radius: 0;
 }
@@ -8274,6 +8274,15 @@ a.tabledrag-handle:focus .handle {
 .entity-meta {
   border: none !important;
   box-shadow: none !important;
+}
+
+.entity-meta h3 {
+  font-size: 20px;
+  color: #5cb85c;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: none;
+  margin-bottom: 28px;
 }
 
 .entity-meta__header,
