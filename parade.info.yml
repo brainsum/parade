@@ -21,3 +21,4 @@ dependencies:
   - drupal:options
   - drupal:classy_paragraphs
   - drupal:field_layout
+  - drupal:field_group
