@@ -8378,6 +8378,17 @@ a.tabledrag-handle:focus .handle {
   color: #999999;
 }
 
+.layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second .field--label-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-right: 25px;
+}
+
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second .field--label-inline .field__label {
   font-size: 13px;
   color: #999999;

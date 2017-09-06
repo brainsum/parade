@@ -22,6 +22,9 @@
     }
     .layout__region--bottom-second {
       .field--label-inline {
+        @include flexbox;
+        @include justify-content(flex-end);
+        padding-right: 25px;
         .field__label {
           font-size: 13px;
           color: $grey-text;
