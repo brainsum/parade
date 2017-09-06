@@ -38,6 +38,11 @@ class LinkWithSelectedAttributeWidget extends LinkWidget {
       '#default_value' => !empty($attributes[$attribute]) ? TRUE : FALSE,
     ];
 
+    // Reorder items: title, uri, highlight.
+    $element['title']['#weight'] = isset($element['title']['#weight']) ? $element['title']['#weight'] : 0;
+    $element['uri']['#weight'] = $element['title']['#weight'] + 1;
+    $element['options']['#weight'] = $element['uri']['#weight'] + 1;
+
     return $element;
   }
 
