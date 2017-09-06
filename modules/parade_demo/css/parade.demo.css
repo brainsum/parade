@@ -8418,6 +8418,17 @@ a.tabledrag-handle:focus .handle {
   background-image: none !important;
 }
 
+.paragraphs-add_more-wrapper {
+  padding-top: 55px;
+}
+
+.paragraphs-add_more-wrapper .paragraphs-add_more-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
 .paragraphs-dropbutton-wrapper .button.parade-button {
   width: calc(20% - .5em) !important;
   margin-left: .25em;
@@ -8431,6 +8442,11 @@ a.tabledrag-handle:focus .handle {
   font-weight: normal;
   text-transform: uppercase;
   border-color: #e7e8e9;
+  height: 130px;
+}
+
+.paragraphs-dropbutton-wrapper .button.parade-button:hover {
+  background-color: #f2faff;
 }
 
 /*!
