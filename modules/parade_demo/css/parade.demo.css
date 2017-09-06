@@ -8308,6 +8308,7 @@ a.tabledrag-handle:focus .handle {
   background-color: #f0f0f0 !important;
   border: 0 !important;
   box-shadow: none !important;
+  background-image: none !important;
 }
 
 .paragraphs-dropbutton-wrapper .button.parade-button {
