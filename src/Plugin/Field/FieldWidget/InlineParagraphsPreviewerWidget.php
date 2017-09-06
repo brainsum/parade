@@ -126,6 +126,43 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
   }
 
   /**
+   * Overrides parent::formMultipleElements().
+   *
+   * Remove field label - added in buildButtonsAddMode().
+   */
+  public function formMultipleElements(FieldItemListInterface $items, array &$form, FormStateInterface $form_state) {
+    $elements = parent::formMultipleElements($items, $form, $form_state);
+    if (isset($elements['title'])) {
+      unset($elements['title']);
+    }
+
+    return $elements;
+  }
+
+  /**
+   * Builds dropdown button for adding new paragraph.
+   *
+   * Display 'Add @title' before buttons. Buttons: display paragraphs type label
+   * only, without 'Add ' string.
+   *
+   * @return array
+   *   The form element array.
+   */
+  protected function buildButtonsAddMode() {
+    $add_more_elements = parent::buildButtonsAddMode();
+    foreach ($this->getAccessibleOptions() as $machine_name => $label) {
+      $add_more_elements['add_more_button_' . $machine_name]['#value'] = $label;
+    }
+    $add_more_elements['#theme_wrappers'] = ['parade__paragraphs_dropbutton_wrapper'];
+    $add_more_elements['#label'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'strong',
+      '#value' => $this->t('Add @title', ['@title' => $this->getSetting('title')]),
+    ];
+    return $add_more_elements;
+  }
+
+  /**
    * Previewer button submit callback.
    *
    * @param array $form
