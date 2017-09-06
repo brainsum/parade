@@ -1,6 +1,7 @@
 // @codingStandardsIgnoreFile
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var csscomb = require('gulp-csscomb');
 var eslint = require('gulp-eslint');
 var autoprefixer = require('gulp-autoprefixer');
@@ -10,21 +11,26 @@ var sassOptions = {
   outputStyle: 'expanded',
   includePaths: [
       process.cwd() + '/node_modules',
-      process.cwd() + '/node_modules/susy/sass',
-	]
+      process.cwd() + '/node_modules/susy/sass'
+	],
+  sourceMap: true
 };
 
 gulp.task('sass', function () {
   var parade = gulp
     .src('sass/**/*.{scss,sass}')
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write('css'))
     .pipe(gulp.dest('css'));
 
   var parade_demo = gulp
     .src('modules/parade_demo/sass/**/*.{scss,sass}')
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write('modules/parade_demo/css'))
     .pipe(gulp.dest('modules/parade_demo/css'));
 
   return merge(parade, parade_demo);

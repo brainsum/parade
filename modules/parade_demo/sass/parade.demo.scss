@@ -65,6 +65,7 @@
 @import "theme/error-pages";
 
 // Admin
+@import 'admin/mixins';
 @import 'admin/font-awesome';
 @import 'admin/flexbox';
 @import 'admin/admin_onecol'; // todo move to separated folder

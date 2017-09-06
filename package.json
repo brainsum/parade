@@ -16,6 +16,8 @@
     "susy": "^2.2.12"
   },
   "dependencies": {
+    "font-awesome-sass": "^4.7.0",
+    "gulp-sourcemaps": "^2.6.1",
     "iphone-inline-video": "^1.9.4",
     "rellax": "^1.0.0"
   }

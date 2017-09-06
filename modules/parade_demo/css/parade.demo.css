@@ -4889,6 +4889,15 @@ h3.tieto-lead {
   background-image: url(../images/403.jpg);
 }
 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -8039,6 +8048,12 @@ body.user-logged-in.page-node-type-parade-onepage {
   width: 25%;
 }
 
+.page-node-type-parade-onepage {
+  /*  .layout-container {
+    box-shadow: 0 20px 50px rgba(0,0,0,.05)
+  }*/
+}
+
 .page-node-type-parade-onepage input.form-autocomplete,
 .page-node-type-parade-onepage input.form-text,
 .page-node-type-parade-onepage input.form-tel,
@@ -8062,10 +8077,6 @@ body.user-logged-in.page-node-type-parade-onepage {
   border-radius: 2px;
   border-style: solid;
   box-shadow: none;
-}
-
-.page-node-type-parade-onepage .layout-container {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
 }
 
 .page-node-type-parade-onepage .field--name-title {
@@ -8131,9 +8142,13 @@ a.tabledrag-handle:focus .handle {
   color: #ffffff;
 }
 
+#parade-onepage-sections-values thead {
+  display: none;
+}
+
 .paragraphs-type {
   text-align: center;
-  width: 100px;
+  width: 130px;
   background-repeat: no-repeat;
   background-position: top;
   padding-top: 60px;
@@ -8181,8 +8196,21 @@ a.tabledrag-handle:focus .handle {
   background-image: url("../../../images/form.png");
 }
 
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-add-more-submit,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-add-more-submit {
+  background: #337ab7;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  width: 159px;
+  height: 39px;
+  font-size: 12px;
+}
+
 .node-parade-onepage-edit-form .field-multiple-table tr.even,
 .node-parade-onepage-edit-form .field-multiple-table tr.odd {
+  transition: background-color, 0.3s;
   background-color: #ffffff;
   padding: 0;
 }
@@ -8196,7 +8224,8 @@ a.tabledrag-handle:focus .handle {
   height: 140px;
 }
 
-.node-parade-onepage-form .field-multiple-table tr.even, .node-parade-onepage-edit-form .field-multiple-table tr {
+.node-parade-onepage-form .field-multiple-table tr.even,
+.node-parade-onepage-edit-form .field-multiple-table tr {
   border-color: #e7e8e9;
   border-radius: 3px;
 }
@@ -8226,6 +8255,12 @@ a.tabledrag-handle:focus .handle {
 .node-parade-onepage-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
 .node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
   background: transparent;
+}
+
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag {
+  width: 10px;
+  text-align: center;
 }
 
 .node-parade-onepage-edit-form #edit-title-wrapper label,
@@ -8475,3 +8510,5 @@ a.tabledrag-handle:focus .handle {
   background: #fff !important;
   color: #67afe1 !important;
 }
+
+/*# sourceMappingURL=modules/parade_demo/css/parade.demo.css.map */

@@ -37,9 +37,9 @@ body.user-logged-in.page-node-type-parade-onepage {
     box-shadow: none;
   }
 
-  .layout-container {
+/*  .layout-container {
     box-shadow: 0 20px 50px rgba(0,0,0,.05)
-  }
+  }*/
 
   .field--name-title {
     background: transparent;
@@ -110,9 +110,15 @@ a.tabledrag-handle:focus .handle {
   }
 }
 
+#parade-onepage-sections-values {
+  thead {
+    display: none;
+  }
+}
+
 .paragraphs-type {
   text-align: center;
-  width: 100px;
+  width: 130px;
   background-repeat: no-repeat;
   background-position: top;
   padding-top: 60px;
