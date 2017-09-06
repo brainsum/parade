@@ -16,6 +16,10 @@
   background-color: $light-grey !important;
   border: 0 !important;
   box-shadow: none !important;
-  background-image: none !important;
+  background-image: none !important; }
+
+
+.entity-meta details > summary {
+  text-shadow: none !important;
 }
 

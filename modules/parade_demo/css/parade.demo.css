@@ -8324,6 +8324,10 @@ a.tabledrag-handle:focus .handle {
   text-align: center;
 }
 
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag {
+  position: absolute;
+}
+
 .node-parade-onepage-edit-form #edit-title-wrapper label,
 .node-parade-onepage-form #edit-title-wrapper label {
   color: #999999;
@@ -8418,6 +8422,10 @@ a.tabledrag-handle:focus .handle {
   background-image: none !important;
 }
 
+.entity-meta details > summary {
+  text-shadow: none !important;
+}
+
 .paragraphs-add_more-wrapper {
   padding-top: 55px;
 }
@@ -8434,7 +8442,7 @@ a.tabledrag-handle:focus .handle {
   margin-left: .25em;
   margin-right: .25em;
   background-repeat: no-repeat !important;
-  background-position: center .7em !important;
+  background-position: center 15px !important;
   background-size: auto;
   background-color: #ffffff;
   box-shadow: none;
