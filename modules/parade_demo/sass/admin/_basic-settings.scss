@@ -64,10 +64,60 @@ body.user-logged-in.page-node-type-parade-onepage {
 .form-wrapper {
   .paragraph-type-top {
     position: absolute;
-    right: 0;
+    right: 30px;
     top: 0;
     .parade-actions {
-      display: none;
+      display: block;
+      margin-left: 0;
+      li {
+        margin-left: 5px;
+      }
+      li input {
+        border-color: transparent;
+        color: $white;
+        border-radius: 3px;
+        border-style: solid;
+        font-size: 13px;
+        font-style: normal;
+        text-align: center;
+        font-weight: 600;
+      }
+      .edit input {
+        background-color: $blue-bgr;
+        color: $white;
+        padding: 6px 25px;
+      }
+      .remove,
+      .preview {
+        position: relative;
+        input {
+          text-indent: -9999px;
+          width: 32px;
+          height: 32px;
+          background: $grey-button;
+          padding: 6px 10px;
+        }
+        &:after {
+          position: absolute;
+          font-family: FontAwesome;
+          display: block;
+          color: $white;
+          width: 16px;
+          height: 16px;
+          top: 8px;
+          left: 10px;
+        }
+      }
+      .remove {
+        &:after {
+          content: '\f00d';
+        }
+      }
+      .preview {
+        &:after {
+          content: '\f06e';
+        }
+      }
     }
   }
 }

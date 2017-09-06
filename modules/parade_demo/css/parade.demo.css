@@ -8100,12 +8100,68 @@ body.user-logged-in.page-node-type-parade-onepage {
 
 .form-wrapper .paragraph-type-top {
   position: absolute;
-  right: 0;
+  right: 30px;
   top: 0;
 }
 
 .form-wrapper .paragraph-type-top .parade-actions {
-  display: none;
+  display: block;
+  margin-left: 0;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions li {
+  margin-left: 5px;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions li input {
+  border-color: transparent;
+  color: #ffffff;
+  border-radius: 3px;
+  border-style: solid;
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions .edit input {
+  background-color: #62b3e5;
+  color: #ffffff;
+  padding: 6px 25px;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions .remove,
+.form-wrapper .paragraph-type-top .parade-actions .preview {
+  position: relative;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions .remove input,
+.form-wrapper .paragraph-type-top .parade-actions .preview input {
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  background: #bdbdbd;
+  padding: 6px 10px;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions .remove:after,
+.form-wrapper .paragraph-type-top .parade-actions .preview:after {
+  position: absolute;
+  font-family: FontAwesome;
+  display: block;
+  color: #ffffff;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 10px;
+}
+
+.form-wrapper .paragraph-type-top .parade-actions .remove:after {
+  content: '\f00d';
+}
+
+.form-wrapper .paragraph-type-top .parade-actions .preview:after {
+  content: '\f06e';
 }
 
 a.tabledrag-handle .handle {
