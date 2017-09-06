@@ -31,6 +31,17 @@
   background-color: rgb(98, 179, 229);
 }
 
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag,
+.node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag-previous,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag,
+.node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr.even.drag-previous {
+  background-color: transparent;
+}
+
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag abbr.tabledrag-changed {
+  background: transparent;
+}
 
 
 
