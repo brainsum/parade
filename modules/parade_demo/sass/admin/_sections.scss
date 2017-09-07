@@ -36,14 +36,19 @@
   }
 }
 
+#edit-parade-onepage-sections-wrapper .field-multiple-table td {
+  padding: 0 !important;
+}
+
 .item-mode-edit {
   .paragraphs-type-header {
     position: absolute;
+    top: 20px;
   }
   .layout__region.layout__region--top {
     background-color: $lightblue-bgr;
     border-bottom: 1px solid $light-grey-border;
-    padding: 20px 25px;
+    padding: 20px 25px 20px 130px;
   }
   .layout__region.layout__region--content {
     padding: 0 70px;

@@ -8427,8 +8427,7 @@ a.tabledrag-handle:focus .handle {
   margin-top: 15px;
 }
 
-.node-parade-onepage-form .field-multiple-table td,
-.node-parade-onepage-edit-form .field-multiple-table td {
+#edit-parade-onepage-menu-wrapper .field-multiple-table td {
   padding: 5px 1px !important;
 }
 
@@ -8469,14 +8468,19 @@ a.tabledrag-handle:focus .handle {
   font-weight: 600;
 }
 
+#edit-parade-onepage-sections-wrapper .field-multiple-table td {
+  padding: 0 !important;
+}
+
 .item-mode-edit .paragraphs-type-header {
   position: absolute;
+  top: 20px;
 }
 
 .item-mode-edit .layout__region.layout__region--top {
   background-color: #f2faff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 20px 25px;
+  padding: 20px 25px 20px 130px;
 }
 
 .item-mode-edit .layout__region.layout__region--content {
