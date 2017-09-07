@@ -11,18 +11,63 @@ dependencies:
     - field.field.paragraph.simple.parade_view_mode
     - paragraphs.paragraphs_type.simple
   module:
+    - field_group
+    - field_layout
+    - layout_discovery
     - parade
     - text
     - view_mode_selector
-_core:
-  default_config_hash: XuORQcQ9ErlrbRZLIQDp-d6cLj8NrS5gAlXH9tEPNGQ
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  field_group:
+    group_top:
+      children:
+        - parade_layout
+        - parade_color_scheme
+        - parade_anchor
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'layout__region layout__region--top'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: false
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Top
+    group_content:
+      children:
+        - parade_view_mode
+        - parade_title
+        - parade_text
+        - parade_call_to_action
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'layout__region layout__region--content'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: false
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
 id: paragraph.simple.default
 targetEntityType: paragraph
 bundle: simple
 mode: default
 content:
   parade_anchor:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -30,24 +75,25 @@ content:
     type: string_textfield
     region: content
   parade_call_to_action:
-    weight: 7
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
       open_on_new_tab: false
     third_party_settings: {  }
     type: link_cta
+    region: content
   parade_color_scheme:
     type: options_select
-    weight: 0
-    region: content
     settings: {  }
+    weight: 3
+    region: content
     third_party_settings: {  }
   parade_layout:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    settings: {  }
+    weight: 2
+    third_party_settings: {  }
     region: content
   parade_text:
     weight: 5
@@ -75,6 +121,7 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

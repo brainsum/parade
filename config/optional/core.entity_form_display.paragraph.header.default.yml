@@ -92,9 +92,9 @@ content:
     region: content
   parade_color_scheme:
     type: options_select
+    settings: {  }
     weight: 1
     region: content
-    settings: {  }
     third_party_settings: {  }
   parade_enable_parallax:
     weight: 7
