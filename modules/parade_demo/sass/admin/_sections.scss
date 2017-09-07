@@ -41,9 +41,19 @@
 }
 
 .item-mode-edit {
+  .paragraph-type-top {
+    position: absolute;
+    right: 30px;
+    top: 55px;
+  }
   .paragraphs-type-header {
     position: absolute;
-    top: 20px;
+    top: 25px;
+    .form-wrapper .paragraph-type-top .parade-actions {
+      @include transition(opacity, .3s);
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
   }
   .layout__region.layout__region--top {
     background-color: $lightblue-bgr;

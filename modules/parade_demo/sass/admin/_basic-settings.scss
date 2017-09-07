@@ -61,7 +61,7 @@ body.user-logged-in.page-node-type-parade-onepage {
   }
 }
 
-.form-wrapper {
+.item-mode-preview {
   .paragraph-type-top {
     position: absolute;
     right: 30px;
@@ -70,6 +70,15 @@ body.user-logged-in.page-node-type-parade-onepage {
       @include transition(opacity, .3s);
       @include opacity(0);
       visibility: hidden;
+    }
+  }
+}
+
+
+.item-mode-preview,
+.item-mode-edit {
+  .paragraph-type-top {
+    .parade-actions {
       margin-left: 0;
       li {
         margin-left: 5px;
@@ -84,7 +93,8 @@ body.user-logged-in.page-node-type-parade-onepage {
         text-align: center;
         font-weight: 600;
       }
-      .edit input {
+      .edit input,
+      .collapse input {
         background-color: $blue-bgr;
         color: $white;
         padding: 6px 25px;

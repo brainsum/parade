@@ -8098,25 +8098,31 @@ body.user-logged-in.page-node-type-parade-onepage {
   border-radius: 0;
 }
 
-.form-wrapper .paragraph-type-top {
+.item-mode-preview .paragraph-type-top {
   position: absolute;
   right: 30px;
   top: 23px;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions {
+.item-mode-preview .paragraph-type-top .parade-actions {
   transition: opacity, 0.3s;
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: hidden;
+}
+
+.item-mode-preview .paragraph-type-top .parade-actions,
+.item-mode-edit .paragraph-type-top .parade-actions {
   margin-left: 0;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions li {
+.item-mode-preview .paragraph-type-top .parade-actions li,
+.item-mode-edit .paragraph-type-top .parade-actions li {
   margin-left: 5px;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions li input {
+.item-mode-preview .paragraph-type-top .parade-actions li input,
+.item-mode-edit .paragraph-type-top .parade-actions li input {
   border-color: transparent;
   color: #ffffff;
   border-radius: 3px;
@@ -8127,19 +8133,26 @@ body.user-logged-in.page-node-type-parade-onepage {
   font-weight: 600;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions .edit input {
+.item-mode-preview .paragraph-type-top .parade-actions .edit input,
+.item-mode-preview .paragraph-type-top .parade-actions .collapse input,
+.item-mode-edit .paragraph-type-top .parade-actions .edit input,
+.item-mode-edit .paragraph-type-top .parade-actions .collapse input {
   background-color: #62b3e5;
   color: #ffffff;
   padding: 6px 25px;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions .remove,
-.form-wrapper .paragraph-type-top .parade-actions .preview {
+.item-mode-preview .paragraph-type-top .parade-actions .remove,
+.item-mode-preview .paragraph-type-top .parade-actions .preview,
+.item-mode-edit .paragraph-type-top .parade-actions .remove,
+.item-mode-edit .paragraph-type-top .parade-actions .preview {
   position: relative;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions .remove input,
-.form-wrapper .paragraph-type-top .parade-actions .preview input {
+.item-mode-preview .paragraph-type-top .parade-actions .remove input,
+.item-mode-preview .paragraph-type-top .parade-actions .preview input,
+.item-mode-edit .paragraph-type-top .parade-actions .remove input,
+.item-mode-edit .paragraph-type-top .parade-actions .preview input {
   text-indent: -9999px;
   width: 32px;
   height: 32px;
@@ -8147,8 +8160,10 @@ body.user-logged-in.page-node-type-parade-onepage {
   padding: 6px 10px;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions .remove:after,
-.form-wrapper .paragraph-type-top .parade-actions .preview:after {
+.item-mode-preview .paragraph-type-top .parade-actions .remove:after,
+.item-mode-preview .paragraph-type-top .parade-actions .preview:after,
+.item-mode-edit .paragraph-type-top .parade-actions .remove:after,
+.item-mode-edit .paragraph-type-top .parade-actions .preview:after {
   position: absolute;
   font-family: FontAwesome;
   display: block;
@@ -8159,12 +8174,14 @@ body.user-logged-in.page-node-type-parade-onepage {
   left: 10px;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions .remove:after {
+.item-mode-preview .paragraph-type-top .parade-actions .remove:after,
+.item-mode-edit .paragraph-type-top .parade-actions .remove:after {
   content: '\f00d';
   left: 11px;
 }
 
-.form-wrapper .paragraph-type-top .parade-actions .preview:after {
+.item-mode-preview .paragraph-type-top .parade-actions .preview:after,
+.item-mode-edit .paragraph-type-top .parade-actions .preview:after {
   content: '\f06e';
 }
 
@@ -8472,9 +8489,21 @@ a.tabledrag-handle:focus .handle {
   padding: 0 !important;
 }
 
+.item-mode-edit .paragraph-type-top {
+  position: absolute;
+  right: 30px;
+  top: 55px;
+}
+
 .item-mode-edit .paragraphs-type-header {
   position: absolute;
-  top: 20px;
+  top: 25px;
+}
+
+.item-mode-edit .paragraphs-type-header .form-wrapper .paragraph-type-top .parade-actions {
+  transition: opacity, 0.3s;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .item-mode-edit .layout__region.layout__region--top {
