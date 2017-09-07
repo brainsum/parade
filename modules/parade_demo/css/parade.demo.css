@@ -7957,7 +7957,7 @@ h3.tieto-lead {
  * @todo Using display: flex requires https://www.drupal.org/node/2842298 to be
  * in before this can be marked as stable.
  */
-#parade-onepage-sections-values tbody .draggable > td:nth-child(2) > div {
+.field--name-parade-onepage-sections table tbody .draggable > td:nth-child(2) > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -7965,7 +7965,7 @@ h3.tieto-lead {
   position: relative;
 }
 
-#parade-onepage-sections-values tbody .draggable > td:nth-child(2) > div > .form-wrapper {
+.field--name-parade-onepage-sections table tbody .draggable > td:nth-child(2) > div > .form-wrapper {
   width: 100%;
 }
 
@@ -8101,7 +8101,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 .form-wrapper .paragraph-type-top {
   position: absolute;
   right: 30px;
-  top: 0;
+  top: 23px;
 }
 
 .form-wrapper .paragraph-type-top .parade-actions {
@@ -8161,6 +8161,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 
 .form-wrapper .paragraph-type-top .parade-actions .remove:after {
   content: '\f00d';
+  left: 11px;
 }
 
 .form-wrapper .paragraph-type-top .parade-actions .preview:after {
@@ -8269,6 +8270,27 @@ a.tabledrag-handle:focus .handle {
   font-size: 12px;
 }
 
+.node-parade-onepage-form .field-multiple-table .field-multiple-drag a.tabledrag-handle .handle,
+.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag a.tabledrag-handle .handle {
+  margin: 0;
+}
+
+#edit-parade-onepage-menu-wrapper .clearfix > input {
+  border: none;
+  background-color: #3399cc;
+  color: #ffffff;
+  font-weight: normal;
+  padding: 6px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  width: 166px;
+  height: 30px;
+  text-shadow: none;
+  box-shadow: none;
+}
+
 .node-parade-onepage-edit-form .field-multiple-table tr.even,
 .node-parade-onepage-edit-form .field-multiple-table tr.odd {
   transition: background-color, 0.3s;
@@ -8281,7 +8303,7 @@ a.tabledrag-handle:focus .handle {
   background-color: #f2faff;
 }
 
-#parade-onepage-sections-values tbody tr {
+.field--name-parade-onepage-sections table tbody tr {
   height: 140px;
 }
 
@@ -8324,10 +8346,6 @@ a.tabledrag-handle:focus .handle {
   text-align: center;
 }
 
-.node-parade-onepage-edit-form .field-multiple-table .field-multiple-drag {
-  position: absolute;
-}
-
 .node-parade-onepage-edit-form #edit-title-wrapper label,
 .node-parade-onepage-form #edit-title-wrapper label {
   color: #999999;
@@ -8338,23 +8356,23 @@ a.tabledrag-handle:focus .handle {
   color: #ffffff;
 }
 
-.field--name-parade-onepage-menu .field-label h4 {
+#edit-parade-onepage-menu-wrapper .field-label h4 {
   color: #ffffff;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  margin-left: 17px;
+  margin-left: 4px;
 }
 
-.field--name-parade-onepage-menu #edit-parade-onepage-menu--description {
+#edit-parade-onepage-menu-wrapper .description {
   color: #f0f0f0;
   font-size: 11px;
   font-weight: 400;
-  padding-left: 30px;
+  padding-left: 18px;
 }
 
-.field--name-parade-onepage-menu #edit-parade-onepage-menu-add-more {
-  margin-left: 30px;
+#edit-parade-onepage-menu-wrapper .clearfix > input {
+  margin-left: 18px;
   margin-top: 15px;
 }
 
