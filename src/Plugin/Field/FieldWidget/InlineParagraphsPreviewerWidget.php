@@ -71,6 +71,8 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
 
     // Add paragraphs bundle wrapper.
     $label = $paragraphs_entity->type->entity->label();
+    // Uff.
+    $element['#prefix'] = str_replace('id=', 'class="item-mode-' . $item_mode . '" id=', $element['#prefix']);
     $element['#prefix'] .= '<div class="paragraphs-type paragraphs-type-' . $paragraphs_entity->getType() . '">' . $label . '</div>';
     unset($element['top']['paragraph_type_title']);
 
