@@ -336,6 +336,7 @@ function parade_field_widget_boolean_checkbox_form_alter(&$element, &$form_state
   if ('parade_enable_parallax' === $field_definition->getName()) {
     $element['#type'] = 'checkboxes';
     $element['#title'] = t('Parallax');
+    $element['#options'] = [];
     unset($element['#description']);
   }
 }
