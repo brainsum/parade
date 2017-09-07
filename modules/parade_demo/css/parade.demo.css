@@ -8291,6 +8291,49 @@ a.tabledrag-handle:focus .handle {
   box-shadow: none;
 }
 
+.js-form-item label {
+  font-size: 13px;
+  font-weight: 600;
+  color: gray;
+}
+
+.field--name-parade-secondary-title {
+  margin-top: 30px;
+}
+
+.field--name-parade-title,
+.field--name-parade-secondary-title {
+  margin-bottom: 40px;
+}
+
+.field--name-parade-title .js-form-item input,
+.field--name-parade-secondary-title .js-form-item input {
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #e0e0e0;
+  border-color: #e0e0e0;
+  border-radius: 0;
+  padding-left: 0;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field--name-parade-title .js-form-item input {
+  font-size: 16px;
+}
+
+.field--name-parade-lead-text .js-form-item textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #e0e0e0;
+  border-color: #e0e0e0;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .node-parade-onepage-edit-form .field-multiple-table tr.even,
 .node-parade-onepage-edit-form .field-multiple-table tr.odd {
   transition: background-color, 0.3s;
