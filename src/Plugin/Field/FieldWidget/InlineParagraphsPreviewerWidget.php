@@ -71,9 +71,15 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
 
     // Add paragraphs bundle wrapper.
     $label = $paragraphs_entity->type->entity->label();
-    // Uff.
-    $element['#prefix'] = str_replace('id=', 'class="item-mode-' . $item_mode . '" id=', $element['#prefix']);
-    $element['#prefix'] .= '<div class="paragraphs-type paragraphs-type-' . $paragraphs_entity->getType() . '">' . $label . '</div>';
+
+    // @todo - refactor str_replace.
+    $class_item_mode = 'item-mode-' . $item_mode;
+    // Class for parade_condition_field.
+    $bundle = $paragraphs_entity->getType();
+    $class_bundle = 'paragraphs-wrapper-bundle-' . $bundle;
+    $element['#prefix'] = str_replace('id=', 'class="' . $class_item_mode . ' ' . $class_bundle . '" id=', $element['#prefix']);
+
+    $element['#prefix'] .= '<div class="paragraphs-type paragraphs-type-' . $bundle . '">' . $label . '</div>';
     unset($element['top']['paragraph_type_title']);
 
     // Locations paragraph type review is bugged.

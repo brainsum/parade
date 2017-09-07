@@ -42,6 +42,10 @@ If Layout hasn't configured values then:
 ## Limitations
 
 #### Layout (parade_layout) field
+Works only with parade's 'Paragraphs with preview' entity_reference_revisions
+widget.
+
+#### Layout (parade_layout) field
 Allowed number of values: Limited = 1
 
 Form widget should be one of these:
