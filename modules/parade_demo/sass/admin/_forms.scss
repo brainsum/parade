@@ -1,11 +1,11 @@
 .js-form-item {
-  label {
+  label,
+  .fieldset-legend {
     font-size: 13px;
     font-weight: 600;
     color: $dark-grey-text;
   }
 }
-
 .field--name-parade-title,
 .field--name-parade-secondary-title{
   margin-bottom: 40px;
@@ -47,6 +47,37 @@
     border: 0;
     border-radius: 0;
   }
+}
+
+.field--name-parade-call-to-action {
+  text-align: left !important;
+}
+
+.field--name-parade-background {
+  margin-bottom: 30px;
+  .button,
+  .button:hover {
+    background-color: rgb(189, 189, 189);
+    background-image: none;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    padding: 6px 10px;
+    border-width: 0px;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 13px;
+    font-style: normal;
+    text-align: center;
+    width: 83px;
+    height: 30px;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 0 !important;
 }
 
 

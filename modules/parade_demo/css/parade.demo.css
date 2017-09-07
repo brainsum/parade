@@ -8308,7 +8308,8 @@ a.tabledrag-handle:focus .handle {
   box-shadow: none;
 }
 
-.js-form-item label {
+.js-form-item label,
+.js-form-item .fieldset-legend {
   font-size: 13px;
   font-weight: 600;
   color: gray;
@@ -8351,6 +8352,38 @@ a.tabledrag-handle:focus .handle {
   background-color: #f0f0f0 !important;
   border: 0;
   border-radius: 0;
+}
+
+.field--name-parade-call-to-action {
+  text-align: left !important;
+}
+
+.field--name-parade-background {
+  margin-bottom: 30px;
+}
+
+.field--name-parade-background .button,
+.field--name-parade-background .button:hover {
+  background-color: #bdbdbd;
+  background-image: none;
+  color: white;
+  font-weight: normal;
+  padding: 6px 10px;
+  border-width: 0px;
+  border-radius: 3px;
+  border-style: solid;
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  width: 83px;
+  height: 30px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 0 !important;
 }
 
 .node-parade-onepage-edit-form .field-multiple-table tr.even,
@@ -8532,7 +8565,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .item-mode-edit .layout__region.layout__region--content {
-  padding: 30px 70px 0;
+  padding: 30px 70px;
 }
 
 .entity-meta {
