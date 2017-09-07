@@ -8475,6 +8475,8 @@ a.tabledrag-handle:focus .handle {
 
 .item-mode-edit .layout__region.layout__region--top {
   background-color: #f2faff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 25px;
 }
 
 .item-mode-edit .layout__region.layout__region--content {
