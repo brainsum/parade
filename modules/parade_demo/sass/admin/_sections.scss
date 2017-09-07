@@ -46,7 +46,7 @@
     right: 30px;
     top: 55px;
   }
-  .paragraphs-type-header {
+  .paragraphs-type {
     position: absolute;
     top: 25px;
     .form-wrapper .paragraph-type-top .parade-actions {
@@ -58,24 +58,27 @@
   .layout__region.layout__region--top {
     background-color: $lightblue-bgr;
     border-bottom: 1px solid $light-grey-border;
-    padding: 20px 25px 20px 130px;
-    height: 140px;
+    padding: 20px 25px 15px 130px;
+    min-height: 140px;
     .js-form-item {
       @include flexbox;
       margin-bottom: 5px;
       label {
         width: 100px;
+        line-height: 30px;
       }
       input,
       select {
-        background-color: $white;
         width: 200px;
+        height: 30px;
         box-shadow: none;
+        background: none;
+        background-color: $white;
       }
     }
   }
   .layout__region.layout__region--content {
-    padding: 0 70px;
+    padding: 30px 70px 0;
   }
 }
 
