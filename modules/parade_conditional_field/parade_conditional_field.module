@@ -42,7 +42,8 @@ function parade_conditional_fields_element_after_build($element, FormStateInterf
     $elementEntity = $form_state->getStorage()['field_storage']['#parents']['#fields']['parade_onepage_sections']['paragraphs'][$element['#weight']]['entity'];
     if (!empty($elementEntity) && method_exists($elementEntity, 'getType')) {
       $bundle = $elementEntity->getType();
-      $element['#prefix'] = str_replace('<div ', '<div class="paragraphs-wrapper-bundle-' . $bundle . '" ', $element['#prefix']);
+      // @todo - refactor, patch for paragraphs widgets.
+      $element['#prefix'] = str_replace('id="parade-onepage-sections', 'class="paragraphs-wrapper-bundle-' . $bundle . '" id="parade-onepage-sections', $element['#prefix']);
     }
   }
   return $element;
