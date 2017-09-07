@@ -8481,6 +8481,26 @@ a.tabledrag-handle:focus .handle {
   background-color: #f2faff;
   border-bottom: 1px solid #e0e0e0;
   padding: 20px 25px 20px 130px;
+  height: 140px;
+}
+
+.item-mode-edit .layout__region.layout__region--top .js-form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.item-mode-edit .layout__region.layout__region--top .js-form-item label {
+  width: 100px;
+}
+
+.item-mode-edit .layout__region.layout__region--top .js-form-item input,
+.item-mode-edit .layout__region.layout__region--top .js-form-item select {
+  background-color: #ffffff;
+  width: 200px;
+  box-shadow: none;
 }
 
 .item-mode-edit .layout__region.layout__region--content {
