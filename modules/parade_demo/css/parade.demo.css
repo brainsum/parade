@@ -8334,15 +8334,23 @@ a.tabledrag-handle:focus .handle {
   font-weight: 600;
 }
 
+.field--name-parade-call-to-action fieldset {
+  background-color: #f0f0f0 !important;
+  border: 0;
+  border-radius: 0;
+}
+
 .node-parade-onepage-edit-form .field-multiple-table tr.even,
 .node-parade-onepage-edit-form .field-multiple-table tr.odd {
   transition: background-color, 0.3s;
   background-color: #ffffff;
   padding: 0;
+  /*  &:hover {
+    background-color: $lightblue-bgr;
+  }*/
 }
 
-.node-parade-onepage-edit-form .field-multiple-table tr.even:hover,
-.node-parade-onepage-edit-form .field-multiple-table tr.odd:hover {
+#parade-onepage-sections-values .draggable:hover {
   background-color: #f2faff;
 }
 
@@ -8459,6 +8467,18 @@ a.tabledrag-handle:focus .handle {
   color: #999999;
   text-align: right;
   font-weight: 600;
+}
+
+.item-mode-edit .paragraphs-type-header {
+  position: absolute;
+}
+
+.item-mode-edit .layout__region.layout__region--top {
+  background-color: #f2faff;
+}
+
+.item-mode-edit .layout__region.layout__region--content {
+  padding: 0 70px;
 }
 
 .entity-meta {

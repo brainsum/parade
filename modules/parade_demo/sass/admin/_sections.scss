@@ -36,6 +36,18 @@
   }
 }
 
+.item-mode-edit {
+  .paragraphs-type-header {
+    position: absolute;
+  }
+  .layout__region.layout__region--top {
+    background-color: $lightblue-bgr;
+  }
+  .layout__region.layout__region--content {
+    padding: 0 70px;
+  }
+}
+
 
 
 
