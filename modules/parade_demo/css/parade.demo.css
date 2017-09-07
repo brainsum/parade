@@ -7957,7 +7957,7 @@ h3.tieto-lead {
  * @todo Using display: flex requires https://www.drupal.org/node/2842298 to be
  * in before this can be marked as stable.
  */
-.draggable > td:nth-child(2) > div {
+#parade-onepage-sections-values tbody .draggable > td:nth-child(2) > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -7965,7 +7965,7 @@ h3.tieto-lead {
   position: relative;
 }
 
-.draggable > td:nth-child(2) > div > .form-wrapper {
+#parade-onepage-sections-values tbody .draggable > td:nth-child(2) > div > .form-wrapper {
   width: 100%;
 }
 

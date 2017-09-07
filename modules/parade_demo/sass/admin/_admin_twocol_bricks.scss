@@ -6,7 +6,7 @@
  * in before this can be marked as stable.
  */
 
-.draggable > td:nth-child(2) > div {
+#parade-onepage-sections-values tbody .draggable > td:nth-child(2) > div {
   @include flexbox;
   position: relative;
   >.form-wrapper {
