@@ -106,7 +106,7 @@ function parade_demo_field_widget_form_alter(&$element, FormStateInterface $form
   $field_name = $context['items']->getFieldDefinition()->getName();
 
   // Change dropbuttons to normal list in Paragraphs inline forms.
-  if ($field_name === 'parade_onepage_sections') {
+  if (in_array($field_name, ['parade_onepage_sections', 'parade_paragraphs'])) {
     unset($element['top']['links']['#theme_wrappers']);
     $element['top']['links']['prefix']['#markup'] = '<ul class="parade-actions">';
   }
