@@ -8176,7 +8176,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 
 .item-mode-preview .paragraph-type-top .parade-actions .remove:after,
 .item-mode-edit .paragraph-type-top .parade-actions .remove:after {
-  content: '\f00d';
+  content: '\f1f8';
   left: 11px;
 }
 
@@ -8485,6 +8485,7 @@ a.tabledrag-handle:focus .handle {
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 6px;
+  max-width: 65%;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline .field__label {
@@ -8555,13 +8556,26 @@ a.tabledrag-handle:focus .handle {
   line-height: 30px;
 }
 
-.item-mode-edit .layout__region.layout__region--top .js-form-item input,
-.item-mode-edit .layout__region.layout__region--top .js-form-item select {
+.item-mode-edit .layout__region.layout__region--top .js-form-item select,
+.item-mode-edit .layout__region.layout__region--top .js-form-item input.text-full {
+  font-family: FontAwesome;
   width: 200px;
   height: 30px;
   box-shadow: none;
-  background: none;
+  background: url("../images/caret-down.svg") no-repeat 99% 63%, #ffffff;
   background-color: #ffffff;
+}
+
+.item-mode-edit .layout__region.layout__region--top .js-form-item input[type="radio"] {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.item-mode-edit .layout__region.layout__region--top .form-radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
 }
 
 .item-mode-edit .layout__region.layout__region--content {

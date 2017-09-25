@@ -6,6 +6,7 @@
       font-size: 16px;
       font-weight: 600;
       margin: 0 0 6px;
+      max-width: 65%;
     }
   }
   .layout__region--bottom {
@@ -67,14 +68,23 @@
         width: 100px;
         line-height: 30px;
       }
-      input,
-      select {
+      select,
+      input.text-full {
+        font-family: FontAwesome;
         width: 200px;
         height: 30px;
         box-shadow: none;
-        background: none;
+        background: url('../images/caret-down.svg') no-repeat 99% 63%, #ffffff;
         background-color: $white;
       }
+
+      input[type="radio"] {
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+    .form-radios {
+      @include flexbox;
     }
   }
   .layout__region.layout__region--content {
