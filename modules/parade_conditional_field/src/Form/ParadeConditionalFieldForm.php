@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityReferenceSelection\SelectionPluginManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Routing\CurrentRouteMatch;
 
 /**
  * Class ParadeConditionalFieldForm.
@@ -39,13 +40,21 @@ class ParadeConditionalFieldForm extends EntityForm {
   protected $entityDisplayRepository;
 
   /**
+   * Route matcher service.
+   *
+   * @var \Drupal\Core\Routing\CurrentRouteMatch
+   */
+  protected $routeMatch;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('entity_field.manager'),
       $container->get('plugin.manager.entity_reference_selection'),
-      $container->get('entity_display.repository')
+      $container->get('entity_display.repository'),
+      $container->get('current_route_match')
     );
   }
 
@@ -58,15 +67,19 @@ class ParadeConditionalFieldForm extends EntityForm {
    *   Entity reference selection plugin manager.
    * @param \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entityDisplayRepository
    *   The entity display repository service.
+   * @param \Drupal\Core\Routing\CurrentRouteMatch $routeMatch
+   *   Route matcher service.
    */
   public function __construct(
     EntityFieldManagerInterface $entityFieldManager,
     SelectionPluginManagerInterface $selectionPluginManager,
-    EntityDisplayRepositoryInterface $entityDisplayRepository
+    EntityDisplayRepositoryInterface $entityDisplayRepository,
+    CurrentRouteMatch $routeMatch
   ) {
     $this->entityFieldManager = $entityFieldManager;
     $this->selectionPluginManager = $selectionPluginManager;
     $this->entityDisplayRepository = $entityDisplayRepository;
+    $this->routeMatch = $routeMatch;
   }
 
   /**
