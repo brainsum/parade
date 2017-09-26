@@ -3,7 +3,6 @@
 namespace Drupal\parade_conditional_field\Controller;
 
 use Drupal\Core\Entity\Controller\EntityListController;
-use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Defines a controller to list parade conditional field instances.

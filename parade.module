@@ -253,7 +253,6 @@ function _parade_add_template_variable(array &$variables, array $data = NULL) {
   // Example usage:
   // {{ parade.background.url }}
   // {{ parade.layout }}.
-
   $variables['parade'] = $data;
 
   return $data;
