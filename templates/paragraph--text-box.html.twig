@@ -9,8 +9,8 @@ set classes = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'col',
-'col-' ~ parade.columns|default('3')
+view_mode != 'preview' ? 'col',
+view_mode != 'preview' ? 'col-' ~ parade.columns|default('3')
 ]
 %}
 
