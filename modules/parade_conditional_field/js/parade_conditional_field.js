@@ -48,7 +48,7 @@ Drupal.behaviors.paradeConditionalFields = {
               if (typeof d_data.options != "undefined") {
                 $("#" + first_parent_wrapper_id + " :input[name*='[" + d_field + "]']" + " option").each(function () {
                   var option = $(this);
-                  if (option.val() in d_data.options || option.val() == "_none") {
+                  if (d_data.options.length === 0 || option.val() in d_data.options || option.val() == "_none") {
                     option.show();
                   }
                   else {
