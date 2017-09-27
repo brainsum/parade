@@ -64,7 +64,8 @@
     .js-form-item {
       @include flexbox;
       margin-bottom: 5px;
-      label {
+      label,
+      legend {
         width: 100px;
         line-height: 30px;
       }
@@ -74,10 +75,14 @@
         width: 200px;
         height: 30px;
         box-shadow: none;
-        background: url('../images/caret-down.svg') no-repeat 99% 63%, #ffffff;
         background-color: $white;
       }
-
+      select {
+        background: url('../images/caret-down.svg') no-repeat 99% 63%, #ffffff;
+      }
+      .fieldset-wrapper {
+        max-width: 250px;
+      }
       input[type="radio"] {
         height: 30px;
         margin-right: 10px;

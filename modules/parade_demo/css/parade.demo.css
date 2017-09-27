@@ -8119,6 +8119,15 @@ body.user-logged-in.page-node-type-parade-onepage {
   /*font-weight: 600;*/
 }
 
+body.user-logged-in.page-node-type-parade-onepage fieldset {
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
 .layout-region-node-main {
   width: 75%;
 }
@@ -8632,7 +8641,8 @@ a.tabledrag-handle:focus .handle {
   margin-bottom: 5px;
 }
 
-.item-mode-edit .layout__region.layout__region--top .js-form-item label {
+.item-mode-edit .layout__region.layout__region--top .js-form-item label,
+.item-mode-edit .layout__region.layout__region--top .js-form-item legend {
   width: 100px;
   line-height: 30px;
 }
@@ -8643,8 +8653,15 @@ a.tabledrag-handle:focus .handle {
   width: 200px;
   height: 30px;
   box-shadow: none;
-  background: url("../images/caret-down.svg") no-repeat 99% 63%, #ffffff;
   background-color: #ffffff;
+}
+
+.item-mode-edit .layout__region.layout__region--top .js-form-item select {
+  background: url("../images/caret-down.svg") no-repeat 99% 63%, #ffffff;
+}
+
+.item-mode-edit .layout__region.layout__region--top .js-form-item .fieldset-wrapper {
+  max-width: 250px;
 }
 
 .item-mode-edit .layout__region.layout__region--top .js-form-item input[type="radio"] {
