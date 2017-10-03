@@ -76,9 +76,9 @@ body.user-logged-in.page-node-type-parade-onepage {
     right: 30px;
     top: 23px;
     .parade-actions {
-      @include transition(opacity, .3s);
+/*      @include transition(opacity, .3s);
       @include opacity(0);
-      visibility: hidden;
+      visibility: hidden;*/
     }
   }
 }
@@ -169,9 +169,8 @@ a.tabledrag-handle:focus .handle {
     display: block;
   }
   .parade-actions {
-    @include opacity(1);
-    visibility: visible;
-
+/*    @include opacity(1);
+    visibility: visible;*/
   }
 }
 
