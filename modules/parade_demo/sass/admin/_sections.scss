@@ -1,14 +1,14 @@
 
 .layout--parade-admin-twocol-bricks {
-  padding-top: 25px;
-  .layout__region--top {
+  // padding-top: 25px;
+/*  .layout__region--top {
     .field--name-parade-title {
       font-size: 16px;
       font-weight: 600;
       margin: 0 0 6px;
       max-width: 65%;
     }
-  }
+  }*/
   .layout__region--bottom {
     .layout__region--bottom-first {
       .field--label-inline {
@@ -42,18 +42,11 @@
 }
 
 .item-mode-edit {
-  .paragraph-type-top {
-    position: absolute;
-    right: 30px;
-    top: 55px;
-  }
   .paragraphs-type {
     position: absolute;
     top: 25px;
     .form-wrapper .paragraph-type-top .parade-actions {
       @include transition(opacity, .3s);
-      opacity: 1 !important;
-      visibility: visible !important;
     }
   }
   .layout__region.layout__region--top {
@@ -95,10 +88,4 @@
     padding: 30px 70px;
   }
 }
-
-
-
-
-
-
 

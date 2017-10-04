@@ -8404,13 +8404,64 @@ a.tabledrag-handle:focus .handle {
   background-color: #f2faff;
 }
 
-.field--name-parade-onepage-sections table tbody tr {
+.field--name-parade-onepage-sections table.parade_onepage_sections > tbody > tr {
   height: 140px;
-}
-
-.node-parade-onepage-edit-form .field-multiple-table tr {
   border-radius: 0;
   border-bottom: 10px solid #f0f0f0;
+}
+
+.field--name-parade-onepage-sections table.parade_onepage_sections > tbody > tr .paragraph-type-top {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+}
+
+.field--name-parade-onepage-sections table.parade_onepage_sections > tbody > tr .layout--parade-admin-twocol-bricks {
+  padding-top: 25px;
+}
+
+.field--name-parade-onepage-sections table.parade_onepage_sections > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  max-width: 65%;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr {
+  height: 75px;
+  border-radius: 0;
+  background: #f0f0f0;
+  border-bottom: 10px solid #ffffff;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .paragraph-type-top {
+  position: absolute;
+  right: 35px;
+  top: 23px;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .paragraphs-type {
+  display: none;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .layout--parade-admin-twocol-bricks {
+  padding-top: 0;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top {
+  background-color: #f0f0f0;
+  padding: 0 35px;
+  min-height: 75px;
+  border-bottom: 0;
+  border-left: 3px solid #337ab7;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 65%;
+  line-height: 75px;
 }
 
 .node-parade-onepage-form .field--name-parade-onepage-menu,
@@ -8481,14 +8532,14 @@ a.tabledrag-handle:focus .handle {
 }
 
 .layout--parade-admin-twocol-bricks {
-  padding-top: 25px;
-}
-
-.layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 6px;
-  max-width: 65%;
+  /*  .layout__region--top {
+    .field--name-parade-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 6px;
+      max-width: 65%;
+    }
+  }*/
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline .field__label {
@@ -8522,12 +8573,6 @@ a.tabledrag-handle:focus .handle {
   padding: 0 !important;
 }
 
-.item-mode-edit .paragraph-type-top {
-  position: absolute;
-  right: 30px;
-  top: 55px;
-}
-
 .item-mode-edit .paragraphs-type {
   position: absolute;
   top: 25px;
@@ -8535,8 +8580,6 @@ a.tabledrag-handle:focus .handle {
 
 .item-mode-edit .paragraphs-type .form-wrapper .paragraph-type-top .parade-actions {
   transition: opacity, 0.3s;
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
 .item-mode-edit .layout__region.layout__region--top {
