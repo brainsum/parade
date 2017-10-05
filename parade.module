@@ -137,6 +137,9 @@ function parade_preprocess_paragraph__text_boxes(&$variables) {
  */
 function parade_theme($existing, $type, $theme, $path) {
   return [
+    'paragraph__parade' => [
+      'base hook' => 'paragraph',
+    ],
     'paragraph__header' => [
       'base hook' => 'paragraph',
     ],
@@ -194,15 +197,15 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
     $attributes->get('_entity_form') !== "node.edit" &&
     $attributes->has('node') &&
     method_exists($node, 'hasField') &&
-    $node->hasField('parade_machine_name')
+    $node->hasField('parade_onepage_id')
   ) {
-    if (is_object($node) && ($machine_name = $node->get('parade_machine_name')->value)) {
+    if (is_object($node) && ($machine_name = $node->get('parade_onepage_id')->value)) {
       /** @var string[] $suggestions */
       $parade_suggestions = [];
       foreach ($suggestions as $suggestion) {
         $parade_suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
       }
-      $suggestions = array_merge($suggestions, $parade_suggestions);
+      $suggestions = array_merge(['paragraph__parade'], $suggestions, $parade_suggestions);
     }
   }
 }
