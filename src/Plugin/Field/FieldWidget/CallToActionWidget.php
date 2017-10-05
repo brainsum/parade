@@ -47,6 +47,11 @@ class CallToActionWidget extends LinkWidget {
       ];
     }
 
+    // Don't render as fieldset, label added as span without label tag.
+    unset($element['#type']);
+    $element['uri']['#prefix'] = '<span class="fieldset-legend">' . $element['#title'] . '</span><div class="fieldset-wrapper">';
+    $element['title']['#suffix'] = '</div>';
+
     return $element;
   }
 
