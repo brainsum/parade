@@ -8109,14 +8109,8 @@ body.user-logged-in.page-node-type-parade-onepage fieldset {
 
 .item-mode-preview .paragraph-type-top {
   position: absolute;
-  right: 30px;
+  right: 35px;
   top: 23px;
-}
-
-.item-mode-preview .paragraph-type-top .parade-actions {
-  /*      @include transition(opacity, .3s);
-      @include opacity(0);
-      visibility: hidden;*/
 }
 
 .item-mode-preview .paragraph-type-top .parade-actions,
@@ -8143,18 +8137,15 @@ body.user-logged-in.page-node-type-parade-onepage fieldset {
 
 .item-mode-preview .paragraph-type-top .parade-actions .edit input,
 .item-mode-preview .paragraph-type-top .parade-actions .collapse input,
+.item-mode-preview .paragraph-type-top .parade-actions .confirm-remove input,
+.item-mode-preview .paragraph-type-top .parade-actions .restore input,
 .item-mode-edit .paragraph-type-top .parade-actions .edit input,
-.item-mode-edit .paragraph-type-top .parade-actions .collapse input {
+.item-mode-edit .paragraph-type-top .parade-actions .collapse input,
+.item-mode-edit .paragraph-type-top .parade-actions .confirm-remove input,
+.item-mode-edit .paragraph-type-top .parade-actions .restore input {
   background-color: #62b3e5;
   color: #ffffff;
   padding: 6px 25px;
-}
-
-.item-mode-preview .paragraph-type-top .parade-actions .remove,
-.item-mode-preview .paragraph-type-top .parade-actions .preview,
-.item-mode-edit .paragraph-type-top .parade-actions .remove,
-.item-mode-edit .paragraph-type-top .parade-actions .preview {
-  position: relative;
 }
 
 .item-mode-preview .paragraph-type-top .parade-actions .remove input,
@@ -8165,32 +8156,19 @@ body.user-logged-in.page-node-type-parade-onepage fieldset {
   width: 32px;
   height: 32px;
   background: #bdbdbd;
-  padding: 6px 10px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.item-mode-preview .paragraph-type-top .parade-actions .remove:after,
-.item-mode-preview .paragraph-type-top .parade-actions .preview:after,
-.item-mode-edit .paragraph-type-top .parade-actions .remove:after,
-.item-mode-edit .paragraph-type-top .parade-actions .preview:after {
-  position: absolute;
-  font-family: FontAwesome;
-  display: block;
-  color: #ffffff;
-  width: 16px;
-  height: 16px;
-  top: 8px;
-  left: 10px;
+.item-mode-preview .paragraph-type-top .parade-actions .remove input,
+.item-mode-edit .paragraph-type-top .parade-actions .remove input {
+  background-image: url("../images/trash.png");
 }
 
-.item-mode-preview .paragraph-type-top .parade-actions .remove:after,
-.item-mode-edit .paragraph-type-top .parade-actions .remove:after {
-  content: '\f1f8';
-  left: 11px;
-}
-
-.item-mode-preview .paragraph-type-top .parade-actions .preview:after,
-.item-mode-edit .paragraph-type-top .parade-actions .preview:after {
-  content: '\f06e';
+.item-mode-preview .paragraph-type-top .parade-actions .preview input,
+.item-mode-edit .paragraph-type-top .parade-actions .preview input {
+  background-image: url("../images/eye.png");
 }
 
 a.tabledrag-handle .handle {
@@ -8215,12 +8193,6 @@ a.tabledrag-handle:focus .handle {
   content: "";
   color: #999999;
   display: block;
-}
-
-.node-parade-onepage-edit-form .field-multiple-table tr.even:hover .parade-actions,
-.node-parade-onepage-edit-form .field-multiple-table tr.odd:hover .parade-actions {
-  /*    @include opacity(1);
-    visibility: visible;*/
 }
 
 #parade-onepage-menu-values a.tabledrag-handle .handle:before {
@@ -8355,14 +8327,47 @@ a.tabledrag-handle:focus .handle {
   font-weight: 600;
 }
 
+.field--name-parade-call-to-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  text-align: left !important;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+.field--name-parade-call-to-action > span {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  width: 25%;
+  text-align: center;
+  padding-top: 65px;
+}
+
+.field--name-parade-call-to-action .fieldset-wrapper {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  -ms-flex-positive: 2;
+      flex-grow: 2;
+  width: 65%;
+}
+
+.field--name-parade-call-to-action > .form-type-checkbox {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  width: 15%;
+  padding: 15px;
+}
+
 .field--name-parade-call-to-action fieldset {
   background-color: #f0f0f0 !important;
   border: 0;
   border-radius: 0;
-}
-
-.field--name-parade-call-to-action {
-  text-align: left !important;
 }
 
 .field--name-parade-background {
@@ -8531,17 +8536,6 @@ a.tabledrag-handle:focus .handle {
   padding: 5px 1px !important;
 }
 
-.layout--parade-admin-twocol-bricks {
-  /*  .layout__region--top {
-    .field--name-parade-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 6px;
-      max-width: 65%;
-    }
-  }*/
-}
-
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline .field__label {
   display: none;
 }
@@ -8604,7 +8598,8 @@ a.tabledrag-handle:focus .handle {
 }
 
 .item-mode-edit .layout__region.layout__region--top .js-form-item select,
-.item-mode-edit .layout__region.layout__region--top .js-form-item input.text-full {
+.item-mode-edit .layout__region.layout__region--top .js-form-item input.text-full,
+.item-mode-edit .layout__region.layout__region--top .js-form-item input.form-number {
   width: 200px;
   height: 30px;
   box-shadow: none;
@@ -8670,6 +8665,36 @@ a.tabledrag-handle:focus .handle {
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
+}
+
+.layout__region--content .field--name-parade-paragraphs .paragraphs-add_more-wrapper {
+  padding-top: 20px;
+}
+
+.layout__region--content .field--name-parade-paragraphs .paragraphs-add_more-wrapper .paragraphs-add_more-label {
+  display: none;
+}
+
+.layout__region--content .field--name-parade-paragraphs .paragraphs-add_more-wrapper .paragraphs-dropbutton-wrapper {
+  margin-top: 0;
+}
+
+.layout__region--content .field--name-parade-paragraphs .paragraphs-add_more-wrapper .paragraphs-dropbutton-wrapper input.button {
+  margin-top: 0;
+  border-color: transparent;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+  background-color: #62b3e5;
+  padding: 6px 25px;
+  box-shadow: none;
+  border: 0;
+  background-image: none;
+  text-shadow: none;
+  float: left;
 }
 
 .paragraphs-dropbutton-wrapper .button.parade-button {

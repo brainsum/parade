@@ -1,14 +1,6 @@
 
 .layout--parade-admin-twocol-bricks {
-  // padding-top: 25px;
-/*  .layout__region--top {
-    .field--name-parade-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 6px;
-      max-width: 65%;
-    }
-  }*/
+
   .layout__region--bottom {
     .layout__region--bottom-first {
       .field--label-inline {
@@ -63,7 +55,8 @@
         line-height: 30px;
       }
       select,
-      input.text-full {
+      input.text-full,
+      input.form-number {
         width: 200px;
         height: 30px;
         box-shadow: none;
