@@ -61,7 +61,6 @@
     .form-type-textfield {
     }
   }
-
   > .form-type-checkbox {
     @include flex-grow(1);
     width: 15%;
@@ -76,6 +75,7 @@
 }
 
 .field--name-parade-background {
+  margin-top: 30px;
   margin-bottom: 30px;
   .button,
   .button:hover {

@@ -78,7 +78,6 @@ body.user-logged-in.page-node-type-parade-onepage {
   }
 }
 
-
 .item-mode-preview,
 .item-mode-edit {
   .paragraph-type-top {
@@ -104,6 +103,9 @@ body.user-logged-in.page-node-type-parade-onepage {
         background-color: $blue-bgr;
         color: $white;
         padding: 6px 25px;
+        &:hover {
+          background-color: darken($blue-bgr, 15%) ;
+        }
       }
       .remove,
       .preview {
@@ -111,10 +113,16 @@ body.user-logged-in.page-node-type-parade-onepage {
           text-indent: -9999px;
           width: 32px;
           height: 32px;
-          background: $grey-button;
+          background-color: $grey-button;
           background-size: 16px 16px;
           background-repeat: no-repeat;
           background-position: center;
+          &:hover {
+            background-color: darken($grey-button, 15%) ;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
         }
       }
       .remove input {
@@ -125,9 +133,20 @@ body.user-logged-in.page-node-type-parade-onepage {
       }
     }
   }
+  .paragraph-type-subform {
+    input.button {
+      background-color: $grey-button;
+      border-color: transparent;
+      color: $white;
+      border-radius: 3px;
+      border-style: solid;
+      font-size: 13px;
+      font-style: normal;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
 }
-
-
 
 a.tabledrag-handle .handle {
   font-family: FontAwesome;

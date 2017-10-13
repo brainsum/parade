@@ -8148,6 +8148,17 @@ body.user-logged-in.page-node-type-parade-onepage fieldset {
   padding: 6px 25px;
 }
 
+.item-mode-preview .paragraph-type-top .parade-actions .edit input:hover,
+.item-mode-preview .paragraph-type-top .parade-actions .collapse input:hover,
+.item-mode-preview .paragraph-type-top .parade-actions .confirm-remove input:hover,
+.item-mode-preview .paragraph-type-top .parade-actions .restore input:hover,
+.item-mode-edit .paragraph-type-top .parade-actions .edit input:hover,
+.item-mode-edit .paragraph-type-top .parade-actions .collapse input:hover,
+.item-mode-edit .paragraph-type-top .parade-actions .confirm-remove input:hover,
+.item-mode-edit .paragraph-type-top .parade-actions .restore input:hover {
+  background-color: #2492d7;
+}
+
 .item-mode-preview .paragraph-type-top .parade-actions .remove input,
 .item-mode-preview .paragraph-type-top .parade-actions .preview input,
 .item-mode-edit .paragraph-type-top .parade-actions .remove input,
@@ -8155,7 +8166,17 @@ body.user-logged-in.page-node-type-parade-onepage fieldset {
   text-indent: -9999px;
   width: 32px;
   height: 32px;
-  background: #bdbdbd;
+  background-color: #bdbdbd;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-mode-preview .paragraph-type-top .parade-actions .remove input:hover,
+.item-mode-preview .paragraph-type-top .parade-actions .preview input:hover,
+.item-mode-edit .paragraph-type-top .parade-actions .remove input:hover,
+.item-mode-edit .paragraph-type-top .parade-actions .preview input:hover {
+  background-color: #979797;
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: center;
@@ -8169,6 +8190,19 @@ body.user-logged-in.page-node-type-parade-onepage fieldset {
 .item-mode-preview .paragraph-type-top .parade-actions .preview input,
 .item-mode-edit .paragraph-type-top .parade-actions .preview input {
   background-image: url("../images/eye.png");
+}
+
+.item-mode-preview .paragraph-type-subform input.button,
+.item-mode-edit .paragraph-type-subform input.button {
+  background-color: #bdbdbd;
+  border-color: transparent;
+  color: #ffffff;
+  border-radius: 3px;
+  border-style: solid;
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
 }
 
 a.tabledrag-handle .handle {
@@ -8371,6 +8405,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-background {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
