@@ -11,8 +11,6 @@
     "drupal/geofield": "~1.0",
     "drupal/leaflet": "~1.0",
     "drupal/geocoder_autocomplete": "~1.0",
-    "drupal/imageapi_optimize": "~2.0",
-    "drupal/imagemagick": "~1.0",
     "drupal/classy_paragraphs": "~1.0",
     "drupal/view_mode_selector": "~1.0",
     "drupal/field_group": "~1.0"
