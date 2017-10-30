@@ -166,3 +166,25 @@ function parade_update_8202() {
     }
   }
 }
+
+/**
+ * Disable the image optimize modules.
+ */
+function parade_update_8203() {
+  $modules = ['image_optimalization', 'parade_image_optimize'];
+
+  $database = \Drupal::database();
+  /** @var \Drupal\Core\Extension\ModuleInstallerInterface $moduleInstaller */
+  $moduleInstaller = \Drupal::service('module_installer');
+
+  foreach ($modules as $module) {
+    // Try to uninstall the modules.
+    // If it fails, clean up possible stuck ones.
+    if (FALSE === $moduleInstaller->uninstall([$module])) {
+      $database->delete('key_value')
+        ->condition('collection', 'system.schema')
+        ->condition('name', $module)
+        ->execute();
+    }
+  }
+}
