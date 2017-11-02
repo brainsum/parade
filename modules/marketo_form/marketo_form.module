@@ -23,13 +23,8 @@ function marketo_form_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function marketo_form_theme($existing, $type, $theme, $path) {
+function marketo_form_theme() {
   return [
-    'paragraph__marketo_form' => [
-      'template' => 'paragraph',
-      'base hook' => 'paragraph',
-      'path' => drupal_get_path('module', 'parade') . '/templates',
-    ],
     'marketo_form_field' => [
       'variables' => [
         'forms' => NULL,
