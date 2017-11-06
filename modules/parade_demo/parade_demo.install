@@ -120,8 +120,11 @@ function _parade_demo_create_demo_layout() {
   ];
 
   foreach ($layouts as $layout) {
-    $classyStyle = $classyStorage->create($layout);
-    $classyStyle->save();
+    $existing = $classyStorage->load($layout['id']);
+    if (NULL === $existing) {
+      $classyStyle = $classyStorage->create($layout);
+      $classyStyle->save();
+    }
   }
 }
 
@@ -132,7 +135,7 @@ function _parade_demo_create_demo_color_schemes() {
   $entityTypeManager = \Drupal::entityTypeManager();
   $classyStorage = $entityTypeManager->getStorage('classy_paragraphs_style');
 
-  $layouts = [
+  $colors = [
     [
       'label' => 'Color clean',
       'id' => 'color_clean',
@@ -160,9 +163,12 @@ function _parade_demo_create_demo_color_schemes() {
     ],
   ];
 
-  foreach ($layouts as $layout) {
-    $classyStyle = $classyStorage->create($layout);
-    $classyStyle->save();
+  foreach ($colors as $color) {
+    $existing = $classyStorage->load($color['id']);
+    if (NULL === $existing) {
+      $classyStyle = $classyStorage->create($color);
+      $classyStyle->save();
+    }
   }
 }
 
