@@ -1,13 +1,6 @@
 
 .layout--parade-admin-twocol-bricks {
-  padding-top: 25px;
-  .layout__region--top {
-    .field--name-parade-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 0 6px;
-    }
-  }
+
   .layout__region--bottom {
     .layout__region--bottom-first {
       .field--label-inline {
@@ -41,18 +34,11 @@
 }
 
 .item-mode-edit {
-  .paragraph-type-top {
-    position: absolute;
-    right: 30px;
-    top: 55px;
-  }
   .paragraphs-type {
     position: absolute;
     top: 25px;
     .form-wrapper .paragraph-type-top .parade-actions {
       @include transition(opacity, .3s);
-      opacity: 1 !important;
-      visibility: visible !important;
     }
   }
   .layout__region.layout__region--top {
@@ -63,28 +49,36 @@
     .js-form-item {
       @include flexbox;
       margin-bottom: 5px;
-      label {
+      label,
+      legend {
         width: 100px;
         line-height: 30px;
       }
-      input,
-      select {
+      select,
+      input.text-full,
+      input.form-number {
         width: 200px;
         height: 30px;
         box-shadow: none;
-        background: none;
         background-color: $white;
       }
+      select {
+        background: url('../images/caret-down.svg') no-repeat 99% 63%, #ffffff;
+      }
+      .fieldset-wrapper {
+        max-width: 250px;
+      }
+      input[type="radio"] {
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+    .form-radios {
+      @include flexbox;
     }
   }
   .layout__region.layout__region--content {
     padding: 30px 70px;
   }
 }
-
-
-
-
-
-
 
