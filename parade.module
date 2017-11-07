@@ -199,11 +199,13 @@ function parade_theme_suggestions_paragraph_alter(array &$suggestions, array $va
     method_exists($node, 'hasField') &&
     $node->hasField('parade_onepage_id')
   ) {
-    if (is_object($node) && ($machine_name = $node->get('parade_onepage_id')->value)) {
-      /** @var string[] $suggestions */
+    if (is_object($node)) {
       $parade_suggestions = [];
-      foreach ($suggestions as $suggestion) {
-        $parade_suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
+      if ($machine_name = $node->get('parade_onepage_id')->value) {
+        /** @var string[] $suggestions */
+        foreach ($suggestions as $suggestion) {
+          $parade_suggestions[] = preg_replace("/^paragraph__/", 'paragraph__' . $machine_name . "__", $suggestion);
+        }
       }
       $suggestions = array_merge(['paragraph__parade'], $suggestions, $parade_suggestions);
     }
