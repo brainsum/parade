@@ -34,7 +34,6 @@
     border-bottom: 1px solid $light-grey-border;
     border-color: $light-grey-border;
     border-radius: 0;
-    background-color: transparent;
     color: $black;
     font-size: 13px;
     font-weight: 600;
@@ -42,6 +41,34 @@
 }
 
 .field--name-parade-call-to-action {
+  @include flexbox;
+  text-align: left !important;
+  /** Original.
+  background-color: rgb(240, 240, 240);
+  */
+  /** @fixme: compile */
+  background-color: transparent;  padding: 10px 0;
+
+  > span {
+    @include flex-grow(1);
+    width: 25%;
+    text-align: center;
+    padding-top: 65px;
+  }
+
+  .fieldset-wrapper {
+    @include flex-grow(2);
+    width: 65%;
+
+    .form-type-textfield {
+    }
+  }
+  > .form-type-checkbox {
+    @include flex-grow(1);
+    width: 15%;
+    padding: 15px;
+  }
+
   fieldset {
     background-color: $fieldset-background !important;
     border: 0;
@@ -49,11 +76,8 @@
   }
 }
 
-.field--name-parade-call-to-action {
-  text-align: left !important;
-}
-
 .field--name-parade-background {
+  margin-top: 30px;
   margin-bottom: 30px;
   .button,
   .button:hover {

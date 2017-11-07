@@ -2,6 +2,15 @@
 body.user-logged-in.page-node-type-parade-onepage {
   background-color: rgb(240, 240, 240);
   /*font-weight: 600;*/
+  fieldset {
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+  }
+
 }
 
 .layout-region-node-main {
@@ -64,16 +73,10 @@ body.user-logged-in.page-node-type-parade-onepage {
 .item-mode-preview {
   .paragraph-type-top {
     position: absolute;
-    right: 30px;
+    right: 35px;
     top: 23px;
-    .parade-actions {
-      @include transition(opacity, .3s);
-      @include opacity(0);
-      visibility: hidden;
-    }
   }
 }
-
 
 .item-mode-preview,
 .item-mode-edit {
@@ -94,47 +97,56 @@ body.user-logged-in.page-node-type-parade-onepage {
         font-weight: 600;
       }
       .edit input,
-      .collapse input {
+      .collapse input,
+      .confirm-remove input,
+      .restore input {
         background-color: $blue-bgr;
         color: $white;
         padding: 6px 25px;
+        &:hover {
+          background-color: darken($blue-bgr, 15%) ;
+        }
       }
       .remove,
       .preview {
-        position: relative;
         input {
           text-indent: -9999px;
           width: 32px;
           height: 32px;
-          background: $grey-button;
-          padding: 6px 10px;
-        }
-        &:after {
-          position: absolute;
-          font-family: FontAwesome;
-          display: block;
-          color: $white;
-          width: 16px;
-          height: 16px;
-          top: 8px;
-          left: 10px;
+          background-color: $grey-button;
+          background-size: 16px 16px;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-color: darken($grey-button, 15%) ;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
         }
       }
-      .remove {
-        &:after {
-          content: '\f00d';
-          left: 11px;
-        }
+      .remove input {
+        background-image: url('../images/trash.png');
       }
-      .preview {
-        &:after {
-          content: '\f06e';
-        }
+      .preview input {
+        background-image: url('../images/eye.png');
       }
     }
   }
+  .paragraph-type-subform {
+    input.button {
+      background-color: $grey-button;
+      border-color: transparent;
+      color: $white;
+      border-radius: 3px;
+      border-style: solid;
+      font-size: 13px;
+      font-style: normal;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
 }
-
 
 a.tabledrag-handle .handle {
   font-family: FontAwesome;
@@ -158,11 +170,6 @@ a.tabledrag-handle:focus .handle {
     content: $fa-var-ellipsis-v;
     color: $grey-text;
     display: block;
-  }
-  .parade-actions {
-    @include opacity(1);
-    visibility: visible;
-
   }
 }
 
@@ -220,7 +227,6 @@ a.tabledrag-handle:focus .handle {
     background-image: url('../../../images/form.png');
   }
 }
-
 
 
 
