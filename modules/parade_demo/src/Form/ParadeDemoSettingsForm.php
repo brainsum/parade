@@ -73,7 +73,8 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
     $header = [
       'bundle' => $this->t('Content type'),
       'enabled' => $this->t('Parade feature'),
-    // 'menu' => $this->t('Parade One-page menu'),.
+      'css_enabled' => $this->t('Parade demo css'),
+      // 'menu' => $this->t('Parade One-page menu'),.
     ];
 
     $form['bundles'] = [
@@ -98,6 +99,11 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             '#type' => 'checkbox',
             '#default_value' => isset($settings[$contentTypeId]) ? 1 : 0,
           ],
+          'css_enabled' => [
+            '#title' => $this->t('Load'),
+            '#type' => 'checkbox',
+            '#default_value' => (isset($settings[$contentTypeId]) && isset($settings[$contentTypeId]['css_enabled']) && $settings[$contentTypeId]['css_enabled']) ? 1 : 0,
+          ],
           // 'menu' => [
           //   '#title' => 'Add menu field on Save',
           //   '#type' => 'checkbox',
@@ -108,12 +114,14 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
       if (isset($form['bundles']['parade_onepage'])) {
         $form['bundles']['parade_onepage']['enabled']['#value'] = 1;
         $form['bundles']['parade_onepage']['enabled']['#disabled'] = TRUE;
+        $form['bundles']['parade_onepage']['css_enabled']['#value'] = 1;
+        $form['bundles']['parade_onepage']['css_enabled']['#disabled'] = TRUE;
         // $form['bundles']['parade_onepage']['menu']['#value'] = 1;
         // $form['bundles']['parade_onepage']['menu']['#disabled'] = TRUE;.
       }
 
       $form['description'] = [
-        '#markup' => $this->t("For enabled content types on 'Save configuration' parade field will be added: parade_onepage_sections. Field should be deleted manually."),
+        '#markup' => $this->t("For enabled content types on 'Save configuration' parade field will be added: parade_onepage_sections. Field should be deleted manually.<br />You can disable loading parade.demo.css file on enabled content type node view pages."),
       ];
     }
 
@@ -145,8 +153,8 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
       $source = new FileStorage($configPath);
 
       $field_names = [
-      // 'parade_onepage_id',
-      // 'parade_onepage_menu',.
+        // 'parade_onepage_id',
+        // 'parade_onepage_menu',.
         'parade_onepage_sections',
       ];
       foreach ($just_enabled as $bundle => $data) {

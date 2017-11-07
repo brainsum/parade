@@ -1,8 +1,11 @@
-parade_onepage:
-  version: VERSION
+parade_onepage_css:
+  version: v1
   css:
     theme:
       css/parade.demo.css: {}
+
+parade_onepage_js:
+  version: v1
   js:
     js/global.js: {}
 

@@ -761,3 +761,17 @@ function parade_demo_update_8201() {
   $editable->set('settings.handler_settings', $handlerSettings)
     ->save();
 }
+
+/**
+ * Set css_enabled for enabled entities.
+ */
+function parade_demo_update_8202() {
+  $config_factory = \Drupal::configFactory();
+  $settings = $config_factory->getEditable('parade_demo.settings');
+  $bundles = [];
+  foreach ($settings->get('bundles') as $bundle => $data) {
+    $bundles[$bundle]['css_enabled'] = 1;
+  }
+  $settings->set('bundles', $bundles);
+  $settings->save(TRUE);
+}
