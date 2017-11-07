@@ -8367,7 +8367,8 @@ a.tabledrag-handle:focus .handle {
   display: -ms-flex;
   display: flex;
   text-align: left !important;
-  background-color: #f0f0f0;
+  /*background-color: #f0f0f0;*/
+  background-color: transparent;
   padding: 10px 0;
 }
 
