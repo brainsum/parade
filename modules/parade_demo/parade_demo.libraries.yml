@@ -1,8 +1,14 @@
-parade_onepage_css:
-  version: v1
+parade_demo_css:
+  version: 1.0
   css:
     theme:
       css/parade.demo.css: {}
+
+parade_demo_admin_css:
+  version: 1.0
+  css:
+    theme:
+      css/parade.demo.admin.css: {}
 
 parade_onepage_js:
   version: v1
