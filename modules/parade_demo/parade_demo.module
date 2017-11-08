@@ -68,7 +68,8 @@ function parade_demo_page_attachments(array &$page) {
     $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
     if (in_array($attributes->get('node')->getType(), array_keys($bundles))) {
       $page['#attached']['library'][] = 'parade_demo/parade_onepage_js';
-      if ($bundles[$attributes->get('node')->getType()]['css_enabled']) {
+      $bundle_settings = $bundles[$attributes->get('node')->getType()];
+      if (!isset($bundle_settings['css_disabled']) || !$bundle_settings['css_disabled']) {
         $page['#attached']['library'][] = 'parade_demo/parade_demo_css';
       }
       $page['#attached']['library'][] = 'parade_demo/scrollspy';
