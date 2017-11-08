@@ -99,10 +99,10 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             '#type' => 'checkbox',
             '#default_value' => isset($settings[$contentTypeId]) ? 1 : 0,
           ],
-          'css_enabled' => [
-            '#title' => $this->t('Load'),
+          'css_disabled' => [
+            '#title' => $this->t('Disabled'),
             '#type' => 'checkbox',
-            '#default_value' => (isset($settings[$contentTypeId]) && isset($settings[$contentTypeId]['css_enabled']) && $settings[$contentTypeId]['css_enabled']) ? 1 : 0,
+            '#default_value' => (isset($settings[$contentTypeId]) && isset($settings[$contentTypeId]['css_disabled']) && $settings[$contentTypeId]['css_disabled']) ? 1 : 0,
           ],
           // 'menu' => [
           //   '#title' => 'Add menu field on Save',
@@ -114,8 +114,8 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
       if (isset($form['bundles']['parade_onepage'])) {
         $form['bundles']['parade_onepage']['enabled']['#value'] = 1;
         $form['bundles']['parade_onepage']['enabled']['#disabled'] = TRUE;
-        $form['bundles']['parade_onepage']['css_enabled']['#value'] = 1;
-        $form['bundles']['parade_onepage']['css_enabled']['#disabled'] = TRUE;
+        $form['bundles']['parade_onepage']['css_disabled']['#value'] = 0;
+        $form['bundles']['parade_onepage']['css_disabled']['#disabled'] = TRUE;
         // $form['bundles']['parade_onepage']['menu']['#value'] = 1;
         // $form['bundles']['parade_onepage']['menu']['#disabled'] = TRUE;.
       }

@@ -775,3 +775,23 @@ function parade_demo_update_8202() {
   $settings->set('bundles', $bundles);
   $settings->save(TRUE);
 }
+
+/**
+ * Set css_disabled for entities.
+ */
+function parade_demo_update_8203() {
+  $config_factory = \Drupal::configFactory();
+  $settings = $config_factory->getEditable('parade_demo.settings');
+  $bundles = $settings->get('bundles');
+  foreach ($bundles as $bundle => $data) {
+    if (isset($data['css_enabled'])) {
+      $bundles[$bundle]['css_disabled'] = 0;
+      if (!$data['css_enabled']) {
+        $bundles[$bundle]['css_disabled'] = 1;
+      }
+      unset($bundles[$bundle]['css_enabled']);
+    }
+  }
+  $settings->set('bundles', $bundles);
+  $settings->save(TRUE);
+}
