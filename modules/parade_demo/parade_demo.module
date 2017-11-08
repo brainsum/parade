@@ -88,7 +88,7 @@ function parade_demo_form_alter(&$form, FormStateInterface $form_state, $form_id
   foreach ($bundles as $bundle => $data) {
     if (!$attach && in_array($form_id, ['node_' . $bundle . '_form', 'node_' . $bundle . '_edit_form'], FALSE)) {
       $attach = TRUE;
-      if ($data['css_disabled']) {
+      if (isset($data['css_disabled']) && $data['css_disabled']) {
         $css_disabled = TRUE;
       }
     }
