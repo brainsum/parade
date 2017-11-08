@@ -73,7 +73,7 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
     $header = [
       'bundle' => $this->t('Content type'),
       'enabled' => $this->t('Parade feature'),
-      'css_enabled' => $this->t('Parade demo css'),
+      'css_disabled' => $this->t('Parade demo css'),
       // 'menu' => $this->t('Parade One-page menu'),.
     ];
 
