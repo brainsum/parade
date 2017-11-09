@@ -4838,15 +4838,6 @@ body.user-logged-in.page-node-type-parade-onepage {
   /*font-weight: 600;*/
 }
 
-body.user-logged-in.page-node-type-parade-onepage fieldset {
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
 .layout-region-node-main {
   width: 75%;
 }
@@ -5547,6 +5538,7 @@ a.tabledrag-handle:focus .handle {
   text-transform: uppercase;
   border-color: #e7e8e9;
   height: 130px;
+  white-space: normal;
 }
 
 .paragraphs-dropbutton-wrapper .button.parade-button:hover {

@@ -52,6 +52,7 @@
     text-transform: uppercase;
     border-color: rgb(231, 232, 233);
     height: 130px;
+    white-space: normal;
     &:hover {
       background-color: $lightblue-bgr;
     }
