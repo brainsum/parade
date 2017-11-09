@@ -44,7 +44,7 @@ class MarketoFormWidget extends WidgetBase {
     $element['form_id'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Form ID'),
-      '#description' => $this->t('E.g.: 2865'),
+      '#description' => $this->t('E.g.: 5371'),
       '#default_value' => $item->form_id,
       '#maxlength' => 255,
       '#required' => $element['#required'],
