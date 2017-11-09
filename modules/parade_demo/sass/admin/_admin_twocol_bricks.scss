@@ -20,6 +20,9 @@
 }
 
 .layout--parade-admin-twocol-bricks {
+  .layout__region--top {
+    min-height: 36px;
+  }
   .layout__region--bottom {
     @include flexbox;
     .layout__region--bottom-first {

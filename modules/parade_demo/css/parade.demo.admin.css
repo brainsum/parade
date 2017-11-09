@@ -4771,6 +4771,10 @@ details summary:hover {
       flex-wrap: wrap;
 }
 
+.layout--parade-admin-twocol-bricks .layout__region--top {
+  min-height: 36px;
+}
+
 .layout--parade-admin-twocol-bricks .layout__region--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
