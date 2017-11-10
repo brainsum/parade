@@ -5,7 +5,7 @@ parade_demo_css:
       css/parade.demo.css: {}
 
 parade_demo_admin_css:
-  version: 1.1
+  version: 1.2
   css:
     theme:
       css/parade.demo.admin.css: {}

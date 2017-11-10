@@ -5038,43 +5038,43 @@ a.tabledrag-handle:focus .handle {
 }
 
 .paragraphs-type-header {
-  background-image: url("../../../images/header.png");
+  background-image: url("../../../images/header.png?v2");
 }
 
 .paragraphs-type-simple {
-  background-image: url("../../../images/simple.png");
+  background-image: url("../../../images/simple.png?v2");
 }
 
 .paragraphs-type-parallax {
-  background-image: url("../../../images/background.png");
+  background-image: url("../../../images/background.png?v2");
 }
 
 .paragraphs-type-images {
-  background-image: url("../../../images/images.png");
+  background-image: url("../../../images/images.png?v2");
 }
 
 .paragraphs-type-image_text {
-  background-image: url("../../../images/text-and-image.png");
+  background-image: url("../../../images/text-and-image.png?v2");
 }
 
 .paragraphs-type-text_boxes {
-  background-image: url("../../../images/textboxes.png");
+  background-image: url("../../../images/textboxes.png?v2");
 }
 
 .paragraphs-type-locations {
-  background-image: url("../../../images/locations.png");
+  background-image: url("../../../images/locations.png?v2");
 }
 
 .paragraphs-type-social_links {
-  background-image: url("../../../images/social-links.png");
+  background-image: url("../../../images/social-links.png?v2");
 }
 
 .paragraphs-type-marketo_poll {
-  background-image: url("../../../images/poll.png");
+  background-image: url("../../../images/poll.png?v2");
 }
 
 .paragraphs-type-marketo_form {
-  background-image: url("../../../images/form.png");
+  background-image: url("../../../images/form.png?v2");
 }
 
 .node-parade-onepage-form .field--name-parade-onepage-menu .field-add-more-submit,
