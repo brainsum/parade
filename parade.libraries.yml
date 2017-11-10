@@ -15,7 +15,7 @@ preview:
     - core/drupal.dialog.ajax
 
 buttons:
-  version: VERSION
+  version: 2.0
   css:
     component:
       css/buttons.css: {}
