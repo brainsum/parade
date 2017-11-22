@@ -98,6 +98,6 @@ $parade-logo-transform: rotate(16.5deg) skew(-29deg);
 $parade-red: #EBCCCC;
 $parade-orange: #FFE69F;
 $link-color: $parade-blue;
-$link-color-hover: $parade-red;
+$link-color-hover: lighten($parade-blue, 10%);
 
 

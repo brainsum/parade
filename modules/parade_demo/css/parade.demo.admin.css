@@ -134,7 +134,7 @@ a:focus,
 .link:focus {
   text-decoration: none;
   outline: 0;
-  color: #EBCCCC;
+  color: #0897ef;
 }
 
 hr {
@@ -1430,6 +1430,11 @@ details summary:hover {
 .node-parade-onepage-form .button--red:disabled:hover {
   background-color: #e56385;
   border-color: #e56385;
+}
+
+.node-parade-onepage-form .field--name-parade-call-to-action {
+  padding: 20px;
+  background-color: #ddd;
 }
 
 .field--type-entity-reference-revisions .field--name-parade-paragraphs .paragraph-type-top .paragraphs-dropbutton-wrapper {
@@ -5137,6 +5142,7 @@ a.tabledrag-handle:focus .handle {
 
 .field--name-parade-title .js-form-item input {
   font-size: 16px;
+  width: 100%;
 }
 
 .field--name-parade-lead-text .js-form-item textarea {
@@ -5154,6 +5160,8 @@ a.tabledrag-handle:focus .handle {
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   text-align: left !important;
   /** Original.
   background-color: rgb(240, 240, 240);
@@ -5168,9 +5176,10 @@ a.tabledrag-handle:focus .handle {
   -ms-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
-  width: 25%;
-  text-align: center;
-  padding-top: 65px;
+  width: 100%;
+  text-align: left;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .field--name-parade-call-to-action .fieldset-wrapper {
@@ -5178,7 +5187,11 @@ a.tabledrag-handle:focus .handle {
   -ms-flex: 2;
   -ms-flex-positive: 2;
       flex-grow: 2;
-  width: 65%;
+  width: 100%;
+}
+
+.field--name-parade-call-to-action .fieldset-wrapper input {
+  width: 100%;
 }
 
 .field--name-parade-call-to-action > .form-type-checkbox {
@@ -5186,8 +5199,8 @@ a.tabledrag-handle:focus .handle {
   -ms-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
-  width: 15%;
-  padding: 15px;
+  width: 100%;
+  padding: 15px 0;
 }
 
 .field--name-parade-call-to-action fieldset {

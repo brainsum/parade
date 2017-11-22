@@ -25,6 +25,7 @@
 .field--name-parade-title {
   .js-form-item input {
     font-size: 16px;
+    width: 100%;
   }
 }
 
@@ -42,6 +43,7 @@
 
 .field--name-parade-call-to-action {
   @include flexbox;
+  flex-wrap: wrap;
   text-align: left !important;
   /** Original.
   background-color: rgb(240, 240, 240);
@@ -51,22 +53,23 @@
 
   > span {
     @include flex-grow(1);
-    width: 25%;
-    text-align: center;
-    padding-top: 65px;
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
 
   .fieldset-wrapper {
     @include flex-grow(2);
-    width: 65%;
-
-    .form-type-textfield {
+    width: 100%;
+    input {
+      width: 100%;
     }
   }
   > .form-type-checkbox {
     @include flex-grow(1);
-    width: 15%;
-    padding: 15px;
+    width: 100%;
+    padding: 15px 0;
   }
 
   fieldset {

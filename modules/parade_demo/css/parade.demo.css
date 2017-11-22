@@ -134,7 +134,7 @@ a:focus,
 .link:focus {
   text-decoration: none;
   outline: 0;
-  color: #EBCCCC;
+  color: #0897ef;
 }
 
 hr {
@@ -3166,6 +3166,11 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 .node-parade-onepage-form .button--red:disabled:hover {
   background-color: #e56385;
   border-color: #e56385;
+}
+
+.node-parade-onepage-form .field--name-parade-call-to-action {
+  padding: 20px;
+  background-color: #ddd;
 }
 
 .field--type-entity-reference-revisions .field--name-parade-paragraphs .paragraph-type-top .paragraphs-dropbutton-wrapper {
