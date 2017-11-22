@@ -30,6 +30,20 @@ class CallToActionWidget extends LinkWidget {
   }
 
   /**
+   * Form element validation handler for the 'uri' element.
+   *
+   * Conditionally requires the URL value if a link title was filled in.
+   */
+  public static function validateEmptyUriElement(&$element, FormStateInterface $form_state, $form) {
+    if ($element['uri']['#value'] === '' && $element['title']['#value'] !== '') {
+      $element['uri']['#required'] = TRUE;
+      // We expect the field name placeholder value to be wrapped in t() here,
+      // so it won't be escaped again as it's already marked safe.
+      $form_state->setError($element['uri'], t('@name field is required.', ['@name' => $element['uri']['#title']]));
+    }
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
@@ -46,6 +60,8 @@ class CallToActionWidget extends LinkWidget {
         '#default_value' => isset($options['open_on_new_tab']) ? (bool) $options['open_on_new_tab'] : $this->getSetting('open_on_new_tab'),
       ];
     }
+
+    $element['#element_validate'][] = [get_called_class(), 'validateEmptyUriElement'];
 
     // Don't render as fieldset, label added as span without label tag.
     unset($element['#type']);
