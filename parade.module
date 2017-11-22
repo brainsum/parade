@@ -29,6 +29,15 @@ function parade_preprocess_paragraph(&$variables) {
     return;
   }
 
+  // Some templates maybe needs to determinate it was called from an edit page
+  // or not.
+  $path = \Drupal::request()->getpathInfo();
+  $arg  = explode('/',$path);
+  $variables['isEditPage'] = FALSE;
+  if ($arg[3] == "edit") {
+    $variables['isEditPage'] = TRUE;
+  }
+
   // Pass the Anchor field value for the template.
   if ($paragraph->hasField('parade_anchor') && $anchor = $paragraph->get('parade_anchor')->value) {
     $variables['attributes']['id'] = Html::getId($anchor);
