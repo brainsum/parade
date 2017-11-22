@@ -12,6 +12,7 @@
     width: 60%;
   }
   .field--name-parade-title {
+    color: white;
     @include campaign-title;
   }
   .field--name-parade-text {
