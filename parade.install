@@ -188,3 +188,13 @@ function parade_update_8203() {
     }
   }
 }
+
+/**
+ * Add new option (add_text_needed) default value.
+ */
+function parade_update_8204() {
+  $config_factory = \Drupal::configFactory();
+  $config_factory->getEditable('core.entity_form_display.paragraph.text_boxes.default')
+    ->set('content.parade_paragraphs.settings.add_text_needed', '1')
+    ->save();
+}

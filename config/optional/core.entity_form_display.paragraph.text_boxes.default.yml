@@ -116,6 +116,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      add_text_needed: '1'
     third_party_settings: {  }
     region: content
   parade_text:

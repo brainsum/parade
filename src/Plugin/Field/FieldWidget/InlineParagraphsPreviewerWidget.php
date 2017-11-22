@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget;
+use Drupal\parade\Plugin\Field\FieldWidget\InlineParagraphsWidget;
 
 /**
  * Plugin implementation of the 'Paragraphs with preview' widget.
@@ -158,8 +158,11 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
    */
   protected function buildButtonsAddMode() {
     $add_more_elements = parent::buildButtonsAddMode();
-    foreach ($this->getAccessibleOptions() as $machine_name => $label) {
-      $add_more_elements['add_more_button_' . $machine_name]['#value'] = $label;
+    // Do not run this, if we need the 'Add ' string.
+    if (!$this->getSetting('add_text_needed')) {
+      foreach ($this->getAccessibleOptions() as $machine_name => $label) {
+        $add_more_elements['add_more_button_' . $machine_name]['#value'] = $label;
+      }
     }
     $add_more_elements['#theme_wrappers'] = ['parade__paragraphs_dropbutton_wrapper'];
     $add_more_elements['#label'] = [
