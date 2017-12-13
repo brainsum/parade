@@ -133,7 +133,7 @@ class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
 
     // Fix layout issue when viewing a translated node edit page (or other pages
     // where missing li tag).
-    if (!isset($element['top']['links']['edit_button']['#prefix']) || empty($element['top']['links']['edit_button']['#prefix'])) {
+    if (isset($element['top']['links']['edit_button']) && (!isset($element['top']['links']['edit_button']['#prefix']) || empty($element['top']['links']['edit_button']['#prefix']))) {
       $element['top']['links']['edit_button']['#prefix'] = '<li class="edit">';
       $element['top']['links']['edit_button']['#suffix'] = '</li>';
     }
