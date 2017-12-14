@@ -5558,4 +5558,13 @@ a.tabledrag-handle:focus .handle {
   background-color: #f2faff;
 }
 
+.paragraphs-wrapper-bundle-locations .form-item {
+  width: 100%;
+}
+
+.paragraphs-wrapper-bundle-locations input.ui-autocomplete-input {
+  margin: 10px 0;
+  width: 100%;
+}
+
 /*# sourceMappingURL=modules/parade_demo/css/parade.demo.admin.css.map */
