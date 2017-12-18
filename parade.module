@@ -270,14 +270,16 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['parade_onepage_sections'])) {
     $form['#attached']['library'][] = 'parade/buttons';
 
-    foreach ($form['parade_onepage_sections']['widget']['add_more'] as $key => $item) {
-      if (strpos($key, 'add_more') === FALSE) {
-        continue;
-      }
-      $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
-      if (isset($item['#bundle_machine_name'])) {
-        $type = Html::getClass($item['#bundle_machine_name']);
-        $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+    if (isset($form['parade_onepage_sections']['widget']['add_more'])) {
+      foreach ($form['parade_onepage_sections']['widget']['add_more'] as $key => $item) {
+        if (strpos($key, 'add_more') === FALSE) {
+          continue;
+        }
+        $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button';
+        if (isset($item['#bundle_machine_name'])) {
+          $type = Html::getClass($item['#bundle_machine_name']);
+          $form['parade_onepage_sections']['widget']['add_more'][$key]['#attributes']['class'][] = 'parade-button-' . $type;
+        }
       }
     }
 
