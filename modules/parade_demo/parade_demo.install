@@ -568,7 +568,7 @@ function _parade_demo_create_demo_content() {
     ],
   ];
 
-  $locationRequirementsCheck = class_exists('Ivory\HttpAdapter\CurlHttpAdapter');
+  $locationRequirementsCheck = class_exists('Ivory\HttpAdapter\CurlHttpAdapter') && function_exists('geophp_load');
 
   if ($locationRequirementsCheck) {
     $paragraphsData[] = [
