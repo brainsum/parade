@@ -4893,10 +4893,6 @@ body.user-logged-in.page-node-type-parade-onepage {
   background: transparent;
   border: 0;
   font-weight: 300;
-  border-bottom: 1px solid transparent;
-}
-
-.page-node-type-parade-onepage .field--name-title input:hover, .page-node-type-parade-onepage .field--name-title input:active, .page-node-type-parade-onepage .field--name-title input:focus {
   border-bottom: 1px solid #999999;
   border-radius: 0;
 }
