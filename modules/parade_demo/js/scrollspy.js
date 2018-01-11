@@ -291,7 +291,7 @@
         }
     });
 
-    $(document).ready(function () { targets.trigger('scroll.scrollspy'); });
+    $(document).ready(function () { targets.addClass('not-fixed'); targets.trigger('scroll.scrollspy'); /* It has no effect if scroll pos less than min value. */});
 
 })(jQuery);
 
