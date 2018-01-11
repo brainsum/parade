@@ -417,6 +417,15 @@ details summary:hover {
 }
 
 /**
+ * Presentational styles for Drupal dialogs.
+ */
+.ajax-progress-throbber .throbber {
+  background: url(../images/throbber.png) no-repeat 0px center;
+  background-size: 20px;
+  padding: 1px 9px 2px;
+}
+
+/**
  * Add spacing to bottom of pages
  */
 .page-content {
