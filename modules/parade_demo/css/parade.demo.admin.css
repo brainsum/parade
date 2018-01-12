@@ -5127,6 +5127,12 @@ a.tabledrag-handle:focus .handle {
   color: gray;
 }
 
+.field--name-parade-view-mode,
+.field--name-parade-boxes-per-row,
+.field--name-parade-image {
+  margin-bottom: 40px;
+}
+
 .field--name-parade-title,
 .field--name-parade-secondary-title {
   margin-bottom: 40px;
@@ -5408,8 +5414,12 @@ a.tabledrag-handle:focus .handle {
   font-weight: 600;
 }
 
-#edit-parade-onepage-sections-wrapper .field-multiple-table td {
-  padding: 0 !important;
+#edit-parade-onepage-sections-wrapper .field-multiple-table td td {
+  padding: 1.2em 0;
+}
+
+#edit-parade-onepage-sections-wrapper .field-multiple-table > * > tr > td {
+  padding: 0;
 }
 
 .item-mode-edit .paragraphs-type {
