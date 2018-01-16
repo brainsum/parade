@@ -55,8 +55,9 @@ function parade_demo_uninstall() {
 
   // Remove the site branding block.
   $blockStorage = \Drupal::entityTypeManager()->getStorage('block');
-  $siteBrandingBlock = $blockStorage->load('system_branding_block');
-  $siteBrandingBlock->delete();
+  if ($siteBrandingBlock = $blockStorage->load('system_branding_block')) {
+    $siteBrandingBlock->delete();
+  }
 }
 
 /**
