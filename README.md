@@ -39,6 +39,17 @@ See: https://www.drupal.org/node/2858115
 Use this patch:
 https://www.drupal.org/files/issues/missing-schema-2858115-2.patch
 
+Add them to the extra section of the composer.json file:
+
+       "patches": {
+           "drupal/geocoder_autocomplete": {
+               "fix missing schema": "https://www.drupal.org/files/issues/missing-schema-2858115-2.patch"
+           },
+          "drupal/geocoder": {
+               "fix schema": "https://www.drupal.org/files/issues/2824802-geocoder-schema-fix-2.patch"
+           }
+       }
+
 ### Without composer
 @todo
 
