@@ -1769,8 +1769,6 @@ li.tabs__tab a {
   display: block;
   z-index: 501;
   position: fixed;
-  top: 0;
-  left: 0;
   padding-left: 15px;
   width: 100%;
   border-bottom: 0;
@@ -2292,8 +2290,22 @@ body.toolbar-vertical .parade-campaign-page, body.toolbar-horizontal .parade-cam
   }
 }
 
+body.toolbar-vertical .parade-campaign-page .logo, body.toolbar-vertical .parade-campaign-page .site-branding__logo.not-fixed {
+  top: 62px;
+}
+
 body.toolbar-vertical .parade-campaign-page .logo, body.toolbar-vertical .parade-campaign-page .site-branding__logo {
   top: 39px;
+}
+
+body.toolbar-vertical .parade-campaign-page .campaign-menu.not-fixed {
+  top: 73px;
+}
+
+@media (min-width: 767px) {
+  body.toolbar-vertical .parade-campaign-page .campaign-menu.not-fixed {
+    top: 62px;
+  }
 }
 
 body.toolbar-vertical .parade-campaign-page .campaign-menu {
@@ -2306,8 +2318,16 @@ body.toolbar-vertical .parade-campaign-page .campaign-menu {
   }
 }
 
+body.toolbar-horizontal .parade-campaign-page .logo, body.toolbar-horizontal .parade-campaign-page .site-branding__logo.not-fixed, body.toolbar-horizontal .parade-campaign-page .campaign-menu.not-fixed {
+  top: 62px;
+}
+
 body.toolbar-horizontal .parade-campaign-page .logo, body.toolbar-horizontal .parade-campaign-page .site-branding__logo, body.toolbar-horizontal .parade-campaign-page .campaign-menu {
   top: 39px;
+}
+
+body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .site-branding__logo.not-fixed, body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .campaign-menu.not-fixed {
+  top: 102px;
 }
 
 body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .site-branding__logo, body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .campaign-menu {
