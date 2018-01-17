@@ -1,0 +1,9 @@
+name: Parade Edit
+description: 'Parade edit feature.'
+package: Parade
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:parade
+  - drupal:geysir

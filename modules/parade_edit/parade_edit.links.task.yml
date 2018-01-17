@@ -1,0 +1,5 @@
+entity.node.parade_edit:
+  route_name: entity.node.parade_edit
+  base_route: entity.node.canonical
+  title: 'Parade edit'
+  weight: -1
