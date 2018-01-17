@@ -1,6 +1,6 @@
 entity.node.parade_edit:
   path: '/node/{node}/parade_edit'
-  title: 'Parade edit'
+  title: 'New editor'
   defaults:
     _controller: '\Drupal\node\Controller\NodeViewController::view'
     _title_callback: '\Drupal\node\Controller\NodeViewController::title'

@@ -17,16 +17,26 @@ function parade_edit_preprocess_field(&$vars) {
   }
 
   if (isset($vars['attributes']['data-geysir-field-paragraph-field-wrapper'])) {
+    $disable_geysir = FALSE;
     $route_match = \Drupal::routeMatch();
-    if ($route_match->getRouteName() == 'entity.node.canonical') {
-      unset($vars['attributes']['data-geysir-field-paragraph-field-wrapper']);
+    if (in_array($route_match->getRouteName(), ['entity.node.canonical', 'entity.node.parade_edit'])) {
+      // Disable on node view.
+      if ($route_match->getRouteName() === 'entity.node.canonical') {
+        unset($vars['attributes']['data-geysir-field-paragraph-field-wrapper']);
+        $disable_geysir = TRUE;
+      }
       $element = &$vars['element'];
       $delta = 0;
       while (!empty($element[$delta])) {
-        if (($key = array_search('geysir_field_paragraph_wrapper', $vars['items'][$delta]['content']['#theme_wrappers'])) !== FALSE) {
-          unset($vars['items'][$delta]['content']['#theme_wrappers'][$key]);
+        $entity = $element[$delta]['#paragraph'];
+        // Disable on node view, or on parade_edit for specific paragraph types.
+        // @todo manage dynamically, e.g. via reference field.
+        if ($disable_geysir || ($route_match->getRouteName() === 'entity.node.parade_edit' && in_array($entity->bundle(), ['text_box']))) {
+          if (($key = array_search('geysir_field_paragraph_wrapper', $vars['items'][$delta]['content']['#theme_wrappers'])) !== FALSE) {
+            unset($vars['items'][$delta]['content']['#theme_wrappers'][$key]);
+          }
+          unset($vars['items'][$delta]['content']['#geysir_field_paragraph_links']);
         }
-        unset($vars['items'][$delta]['content']['#geysir_field_paragraph_links']);
         $delta++;
       }
     }
