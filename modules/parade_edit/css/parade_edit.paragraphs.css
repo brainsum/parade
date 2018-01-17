@@ -1,0 +1,33 @@
+.geysir-field-paragraph-links li.edit {
+    top: 50%;
+    transform: translate(-350%,-50%);
+}
+
+.geysir-field-paragraph-links li.up {
+    top: 50%;
+    transform: translate(50%,-50%);
+}
+
+.geysir-field-paragraph-links li.down {
+    top: 50%;
+    transform: translate(250%,-50%);
+}
+
+.geysir-field-paragraph-links li.up a {
+  background-image: url(../images/geysir-up.svg);
+}
+.geysir-field-paragraph-links li.down a {
+  background-image: url(../images/geysir-down.svg);
+}
+
+ul.geysir-field-paragraph-links {
+	list-style-type: none;
+}
+
+#geysir-modal-form  .js-form-item-paragraph.radio img {
+	height: 24px;
+}
+
+#geysir-modal-form .js-form-item-paragraph.radio label {
+	width: 100%;
+}

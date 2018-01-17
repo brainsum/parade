@@ -1,0 +1,5 @@
+paragraphs:
+  version: 1.x
+  css:
+    theme:
+      css/parade_edit.paragraphs.css: {}
