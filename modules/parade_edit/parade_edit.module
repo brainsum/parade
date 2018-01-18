@@ -9,6 +9,23 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Url;
 
 /**
+ * Implements hook_page_attachments_alter().
+ *
+ * Disable Quick edit functionality on node/ID page.
+ */
+function parade_edit_page_attachments_alter(array &$attachments) {
+  $route_match = \Drupal::routeMatch();
+  if ($route_match->getRouteName() === 'entity.node.canonical') {
+    if ($index = array_search('quickedit/quickedit', $attachments['#attached']['library'])) {
+      unset($attachments['#attached']['library'][$index]);
+    }
+    if ($index = array_search('contextual/drupal.contextual-links', $attachments['#attached']['library'])) {
+      unset($attachments['#attached']['library'][$index]);
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  *
  * Using hook_preprocess_field().
