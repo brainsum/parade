@@ -1,0 +1,5 @@
+services:
+  parade_edit.route_subscriber:
+    class: Drupal\parade_edit\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

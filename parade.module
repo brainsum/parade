@@ -267,6 +267,25 @@ function parade_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Modify the Paragraphs field.
   // @todo Check the field formatter instead!
   /** @var \Drupal\Core\Form\FormStateInterface $form */
+  if ($form_id === "geysir.modal.add_select_type_form") {
+
+    $form['actions']['#attributes']['class'][] = 'paragraphs-dropbutton-wrapper';
+    foreach ($form['actions'] as $key => &$action) {
+      if (strpos($key, "#") !== 0) {
+        $type = str_replace("_", "-", $key);
+        if (!isset($action['#attributes'])) {
+          $action['#attributes'] = [];
+        }
+        if (!isset($action['#attributes']['class'])) {
+          $action['#attributes']['class'] = [];
+        }
+        $action['#attributes']['class'][] = 'button';
+        $action['#attributes']['class'][] = 'parade-button';
+        $action['#attributes']['class'][] = 'parade-button-' . $type;
+      }
+    }
+  }
+
   if (isset($form['parade_onepage_sections'])) {
     $form['#attached']['library'][] = 'parade/buttons';
 

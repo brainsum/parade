@@ -47,6 +47,8 @@ function parade_edit_preprocess_field(&$vars) {
     }
   }
 
+  // Copied from geyzir to override geyzir buttons and add move up/down buttons.
+  // TODO: rewrite this and patch geyzir, do this with service.
   $element = &$vars['element'];
   /** @var \Drupal\Core\Entity\FieldableEntityInterface $parent */
   $parent = $element['#object'];
@@ -87,7 +89,6 @@ function parade_edit_preprocess_field(&$vars) {
       ]),
       'attributes' => [
         'class' => ['use-ajax', 'geysir-button'],
-        //'data-dialog-type' => 'modal',
       ],
     ];
 
@@ -107,7 +108,6 @@ function parade_edit_preprocess_field(&$vars) {
       ]),
       'attributes' => [
         'class' => ['use-ajax', 'geysir-button'],
-        //'data-dialog-type' => 'modal',
       ],
     ];
 
@@ -197,7 +197,7 @@ function parade_edit_preprocess_field(&$vars) {
       '#theme'    => 'links',
       '#links'    => $links,
       '#attributes' => ['class' => ['geysir-field-paragraph-links', 'links']],
-      '#attached' => ['library' => ['core/drupal.dialog.ajax', 'geysir/paragraphs', 'parade_edit/paragraphs']],
+      '#attached' => ['library' => ['core/drupal.dialog.ajax', 'parade_edit/paragraphs']],
     ];
 
     $vars['items'][$delta]['content']['#geysir_field_paragraph_links'] = \Drupal::service('renderer')->render($links_array);
@@ -207,4 +207,15 @@ function parade_edit_preprocess_field(&$vars) {
 
   // Attach the field wrapper ID in a data-attribute.
   $vars['attributes']['data-geysir-field-paragraph-field-wrapper'] = $field_wrapper_id;
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function parade_edit_library_info_alter(&$libraries, $extension) {
+  // TODO: rewrite this and patch geyzir, do this with service.
+  if ($extension == "geysir") {
+    // Remove stupid css.
+    $libraries['paragraphs']['css'] = [];
+  }
 }
