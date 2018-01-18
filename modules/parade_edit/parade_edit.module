@@ -12,7 +12,7 @@ use Drupal\Core\Url;
  * Implements hook_preprocess_HOOK().
  *
  * Using hook_preprocess_field().
- * Disable Geysir functionality on node/ID page.
+ * Disable Geysir functionality on node/ID page and for nested paragraphs.
  */
 function parade_edit_preprocess_field(&$vars) {
   if (empty($vars['field_type']) || $vars['field_type'] !== 'entity_reference_revisions') {
@@ -22,7 +22,11 @@ function parade_edit_preprocess_field(&$vars) {
   if (isset($vars['attributes']['data-geysir-field-paragraph-field-wrapper'])) {
     $disable_geysir = FALSE;
     $route_match = \Drupal::routeMatch();
-    if (in_array($route_match->getRouteName(), ['entity.node.canonical', 'entity.node.parade_edit'])) {
+    if (in_array($route_match->getRouteName(), [
+      'entity.node.canonical',
+      'entity.node.parade_edit',
+      'geysir.modal.edit_form',
+    ])) {
       // Disable on node view.
       if ($route_match->getRouteName() === 'entity.node.canonical') {
         unset($vars['attributes']['data-geysir-field-paragraph-field-wrapper']);
@@ -31,10 +35,8 @@ function parade_edit_preprocess_field(&$vars) {
       $element = &$vars['element'];
       $delta = 0;
       while (!empty($element[$delta])) {
-        $entity = $element[$delta]['#paragraph'];
-        // Disable on node view, or on parade_edit for specific paragraph types.
-        // @todo manage dynamically, e.g. via reference field.
-        if ($disable_geysir || ($route_match->getRouteName() === 'entity.node.parade_edit' && in_array($entity->bundle(), ['text_box']))) {
+        // Disable on node view and for parade_paragraphs nested field.
+        if ($disable_geysir || $vars['field_name'] === 'parade_paragraphs') {
           if (($key = array_search('geysir_field_paragraph_wrapper', $vars['items'][$delta]['content']['#theme_wrappers'])) !== FALSE) {
             unset($vars['items'][$delta]['content']['#theme_wrappers'][$key]);
           }
