@@ -9,8 +9,12 @@ dependencies:
     - geofield
 third_party_settings:
   geocoder_field:
+    weight: '0'
     method: source
-    field: parade_location
+    geocode_field: parade_location
+    reverse_geocode_field: {  }
+    hidden: 0
+    disabled: 0
     plugins:
       - googlemaps
       - bingmaps
