@@ -90,6 +90,18 @@
   .paragraphs-button-wrapper {
     margin: 2em 0;
   }
+  .field--name-parade-location td {
+    .ajax-new-content {
+      display: block !important;
+    }
+    .form-type-textfield {
+      padding: 5px;
+
+      .form-autocomplete.form-text {
+        width: 100%;
+      }
+    }
+  }
   .parade-button-marketo-form {
     background-image: url('../../images/form.png');
   }
