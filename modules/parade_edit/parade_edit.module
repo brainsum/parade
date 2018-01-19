@@ -239,3 +239,13 @@ function parade_edit_library_info_alter(&$libraries, $extension) {
     $libraries['paragraphs']['css'] = [];
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function parade_edit_preprocess_node(&$variables) {
+  // Remove Work moderation control form from the last version page...
+  if (\Drupal::routeMatch()->getRouteName() === "geysir.modal.add_form") {
+    $variables['content']['_field_layout']['content']['workbench_moderation_control']['#access'] = FALSE;
+  }
+}
