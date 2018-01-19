@@ -245,7 +245,7 @@ function parade_edit_library_info_alter(&$libraries, $extension) {
  */
 function parade_edit_preprocess_node(&$variables) {
   // Remove Work moderation control form from the last version page...
-  if (\Drupal::routeMatch()->getRouteName() === "geysir.modal.add_form") {
+  if (\Drupal::routeMatch()->getRouteName() === "entity.node.latest_version") {
     $variables['content']['_field_layout']['content']['workbench_moderation_control']['#access'] = FALSE;
   }
 }
