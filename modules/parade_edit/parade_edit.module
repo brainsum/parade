@@ -44,7 +44,6 @@ function parade_edit_preprocess_field(&$vars) {
     $route_match = \Drupal::routeMatch();
     if (in_array($route_match->getRouteName(), [
       'entity.node.canonical',
-      'entity.node.parade_edit',
       'geysir.modal.edit_form',
       'entity.node.latest_version',
       'parade_edit.up',

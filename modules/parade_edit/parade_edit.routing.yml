@@ -1,13 +1,3 @@
-entity.node.parade_edit:
-  path: '/node/{node}/parade_edit'
-  title: 'New editor'
-  defaults:
-    _controller: '\Drupal\node\Controller\NodeViewController::view'
-    _title_callback: '\Drupal\node\Controller\NodeViewController::title'
-  requirements:
-    _entity_access: node.view
-  options:
-    _node_operation_route: TRUE
 parade_edit.up:
   path: 'geysir/modal/up/{parent_entity_type}/{parent_entity_bundle}/{parent_entity_revision}/{field}/{field_wrapper_id}/{delta}/{paragraph}/{paragraph_revision}/{js}'
   defaults:
