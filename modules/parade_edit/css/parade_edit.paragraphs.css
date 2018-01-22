@@ -171,3 +171,7 @@ ul.geysir-field-paragraph-links {
 #geysir-modal-form .js-form-item-paragraph.radio label {
 	width: 100%;
 }
+
+article.node--unpublished {
+    padding: 0;
+}
