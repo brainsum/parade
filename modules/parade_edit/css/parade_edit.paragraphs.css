@@ -1,3 +1,83 @@
+*[data-geysir-field-paragraph-field-wrapper] .field--item,
+.geysir-field-paragraph-wrapper > * {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.geysir-field-paragraph-wrapper {
+    position: relative;
+    clear: both;
+}
+
+.geysir-field-paragraph-wrapper:hover {
+    outline: 5px solid rgba(85, 142, 213, 0.5);
+}
+
+.geysir-field-paragraph-wrapper:hover .geysir-field-paragraph-wrapper:hover {
+    outline-color: rgba(0, 0, 0, 0.5);
+}
+
+.geysir-field-paragraph-links {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+.geysir-field-paragraph-wrapper:hover .geysir-field-paragraph-links {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.geysir-field-paragraph-wrapper .geysir-field-paragraph-links li {
+    z-index: 101;
+}
+
+.geysir-field-paragraph-wrapper > .geysir-field-paragraph-links li {
+    z-index: 100;
+}
+
+.geysir-field-paragraph-links li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+}
+
+.geysir-field-paragraph-links li.add-after a,
+.geysir-field-paragraph-links li.add-before a {
+    background-image: url(../images/geysir-add.svg);
+}
+
+.geysir-field-paragraph-links li.delete a {
+    background-image: url(../images/geysir-trash.svg);
+    background-color: #bdbdbd;
+}
+
+.geysir-field-paragraph-links li.edit a {
+    background-image: url(../images/geysir-pencil.svg);
+    width: 118px;
+}
+
+.geysir-field-paragraph-links li.up a {
+    background-image: url(../images/geysir-up.svg);
+    background-color: rgba(86, 84, 84, 0.88);
+    border: 1px solid white;
+}
+
+.geysir-field-paragraph-links li.down a {
+    background-image: url(../images/geysir-down.svg);
+    background-color: rgba(86, 84, 84, 0.88);
+    border: 1px solid white;
+}
+
 .geysir-field-paragraph-links li.edit {
     top: 50%;
     transform: translate(-350%,-50%);
@@ -5,19 +85,79 @@
 
 .geysir-field-paragraph-links li.up {
     top: 50%;
-    transform: translate(50%,-50%);
+    transform: translate(-100%,-50%);
 }
 
 .geysir-field-paragraph-links li.down {
     top: 50%;
-    transform: translate(250%,-50%);
+    transform: translate(10%,-50%);
 }
 
-.geysir-field-paragraph-links li.up a {
-  background-image: url(../images/geysir-up.svg);
+.geysir-field-paragraph-links li.edit {
+    top: 50%;
+    transform: translate(-170%, -50%);
 }
-.geysir-field-paragraph-links li.down a {
-  background-image: url(../images/geysir-down.svg);
+
+.geysir-field-paragraph-links li.delete {
+    top: 50%;
+    transform: translate(120%, -50%);
+}
+
+.geysir-field-paragraph-links li.add-after {
+    bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+.geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-after {
+    bottom: auto;
+    top: 50%;
+    transform: translate(250%, -50%);
+}
+
+.geysir-field-paragraph-links li.add-before {
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-before {
+    top: 50%;
+    transform: translate(-350%, -50%);
+}
+
+.geysir-field-paragraph-links .ajax-progress {
+    left: 50%;
+    margin: -5px 0 0 -8px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+}
+
+.geysir-field-paragraph-links .ajax-progress-throbber .throbber {
+    display: block;
+    height: 13px;
+    padding: 0;
+    width: 17px;
+}
+
+.geysir-field-paragraph-links a {
+    background-color: #3399cc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    height: 40px;
+    padding: 35px;
+    text-indent: -9999px;
+    width: 75px;
+}
+
+.geysir-field-paragraph-links a:hover {
+    background-color: #0065A0;
+    border: none;
 }
 
 ul.geysir-field-paragraph-links {
@@ -30,4 +170,8 @@ ul.geysir-field-paragraph-links {
 
 #geysir-modal-form .js-form-item-paragraph.radio label {
 	width: 100%;
+}
+
+article.node--unpublished {
+    padding: 0;
 }

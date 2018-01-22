@@ -64,7 +64,7 @@ function parade_demo_theme_registry_alter(&$theme_registry) {
  */
 function parade_demo_page_attachments(array &$page) {
   $attributes = Drupal::request()->attributes;
-  if ($attributes->has('node') &&  $attributes->get('_route') === 'entity.node.canonical') {
+  if ($attributes->has('node') && $attributes->get('_route') === 'entity.node.canonical') {
     $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
     if (in_array($attributes->get('node')->getType(), array_keys($bundles))) {
       $page['#attached']['library'][] = 'parade_demo/parade_onepage_js';
@@ -75,6 +75,21 @@ function parade_demo_page_attachments(array &$page) {
       $page['#attached']['library'][] = 'parade_demo/scrollspy';
       $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
       $page['#attached']['library'][] = 'parade_demo/smooth-scroll';
+    }
+  }
+  elseif ($attributes->has('node') && $attributes->get('_route') === 'entity.node.latest_version') {
+    $node_type = $attributes->get('node')->getType();
+    $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
+    if (in_array($node_type, array_keys($bundles))) {
+      if (!isset($bundles[$node_type]['css_disabled']) || !$bundles[$node_type]['css_disabled']) {
+        $page['#attached']['library'][] = 'parade_demo/parade_demo_css';
+      }
+      $page['#attached']['library'][] = 'parade_demo/parade_demo_admin_css';
+      $page['#attached']['library'][] = 'parade_demo/parade_onepage_js';
+      $page['#attached']['library'][] = 'parade_demo/scrollspy';
+      $page['#attached']['library'][] = 'parade_demo/responsive_tabs';
+      $page['#attached']['library'][] = 'parade_demo/smooth-scroll';
+      $page['#attached']['library'][] = 'parade/buttons';
     }
   }
 }

@@ -68,167 +68,31 @@ function parade_edit_preprocess_field(&$vars) {
       }
     }
   }
+}
 
-  $element = &$vars['element'];
-  /** @var \Drupal\Core\Entity\FieldableEntityInterface $parent */
-  $parent = $element['#object'];
-
-  // Check update access for current node + permission to use Geysir.
-  if (!$parent->access('update') || !\Drupal::currentUser()->hasPermission('geysir manage paragraphs from front-end')) {
-    return;
+/**
+ * Implements hook_library_info_alter().
+ */
+function parade_edit_library_info_alter(&$libraries, $extension) {
+  // TODO: rewrite this and patch geyzir, do this with service.
+  if ($extension == "geysir") {
+    // Remove stupid css.
+    $libraries['paragraphs']['css'] = [];
   }
+}
 
-  /** @var \Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList $field */
-  $field = $element['#items'];
-  $field_definition = $field->getFieldDefinition();
-  $field_storage_definition = $field_definition->getFieldStorageDefinition();
-  if ($field_storage_definition->getSetting('target_type') !== 'paragraph') {
-    return;
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function parade_edit_preprocess_node(&$variables) {
+  // Remove Work moderation control form from the last version page...
+  if (\Drupal::routeMatch()->getRouteName() === "entity.node.latest_version") {
+    $variables['content']['_field_layout']['content']['workbench_moderation_control']['#access'] = FALSE;
+
+    // Just attach to this page's content our geysir styles.
+    // TODO: rewrite this and patch geyzir, do this with service.
+    $variables['content']['_field_layout']['content']['#attached']['library'][] = 'parade_edit/paragraphs';
   }
-
-  $field_wrapper_id = Html::getUniqueId('geysir--' . $vars['field_name']);
-
-  $delta = 0;
-  while (!empty($element[$delta])) {
-    $links = [];
-    $entity = $element[$delta]['#paragraph'];
-
-    // Up link.
-    $links['up'] = [
-      'title'      => t('Up'),
-      'url'        => Url::fromRoute('parade_edit.up', [
-        'parent_entity_type'     => $parent->getEntityType()->id(),
-        'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
-        'field'                  => $vars['field_name'],
-        'field_wrapper_id'       => $field_wrapper_id,
-        'delta'                  => $delta,
-        'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
-        'js'                     => 'nojs',
-      ]),
-      'attributes' => [
-        'class' => ['use-ajax', 'geysir-button'],
-        //'data-dialog-type' => 'modal',
-      ],
-    ];
-
-    // Down link.
-    $links['down'] = [
-      'title'      => t('Down'),
-      'url'        => Url::fromRoute('parade_edit.down', [
-        'parent_entity_type'     => $parent->getEntityType()->id(),
-        'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
-        'field'                  => $vars['field_name'],
-        'field_wrapper_id'       => $field_wrapper_id,
-        'delta'                  => $delta,
-        'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
-        'js'                     => 'nojs',
-      ]),
-      'attributes' => [
-        'class' => ['use-ajax', 'geysir-button'],
-        //'data-dialog-type' => 'modal',
-      ],
-    ];
-
-    // Add link - before.
-    $links['add_before'] = [
-      'title'      => t('Add before'),
-      'url'        => Url::fromRoute('geysir.modal.add_form', [
-        'parent_entity_type'     => $parent->getEntityType()->id(),
-        'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
-        'field'                  => $vars['field_name'],
-        'field_wrapper_id'       => $field_wrapper_id,
-        'delta'                  => $delta,
-        'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
-        'position'               => 'before',
-        'js'                     => 'nojs',
-      ]),
-      'attributes' => [
-        'class'            => ['use-ajax', 'geysir-button'],
-        'data-dialog-type' => 'modal',
-      ],
-    ];
-
-    // Add link - after.
-    $links['add_after'] = [
-      'title' => t('Add after'),
-      'url' => Url::fromRoute('geysir.modal.add_form', [
-        'parent_entity_type'     => $parent->getEntityType()->id(),
-        'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
-        'field'                  => $vars['field_name'],
-        'field_wrapper_id'       => $field_wrapper_id,
-        'delta'                  => $delta,
-        'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
-        'position'               => 'after',
-        'js'                     => 'nojs',
-      ]),
-      'attributes' => [
-        'class' => ['use-ajax', 'geysir-button'],
-        'data-dialog-type' => 'modal',
-      ],
-    ];
-
-    // Edit link.
-    $links['edit'] = [
-      'title' => t('Edit'),
-      'url' => Url::fromRoute('geysir.modal.edit_form', [
-        'parent_entity_type'     => $parent->getEntityType()->id(),
-        'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
-        'field'                  => $vars['field_name'],
-        'field_wrapper_id'       => $field_wrapper_id,
-        'delta'                  => $delta,
-        'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
-        'js'                     => 'nojs',
-      ]),
-      'attributes' => [
-        'class' => ['use-ajax', 'geysir-button'],
-        'data-dialog-type' => 'modal',
-      ],
-    ];
-
-    // Delete link.
-    $links['delete'] = [
-      'title' => t('Delete'),
-      'url' => Url::fromRoute('geysir.modal.delete_form', [
-        'parent_entity_type'     => $parent->getEntityType()->id(),
-        'parent_entity_bundle'   => $parent->bundle(),
-        'parent_entity_revision' => $parent->getRevisionId(),
-        'field'                  => $vars['field_name'],
-        'field_wrapper_id'       => $field_wrapper_id,
-        'delta'                  => $delta,
-        'paragraph'              => $entity->id(),
-        'paragraph_revision'     => $entity->getRevisionId(),
-        'js'                     => 'nojs',
-      ]),
-      'attributes' => [
-        'class' => ['use-ajax', 'geysir-button'],
-        'data-dialog-type' => 'modal',
-      ],
-    ];
-
-    $links_array = [
-      '#theme'    => 'links',
-      '#links'    => $links,
-      '#attributes' => ['class' => ['geysir-field-paragraph-links', 'links']],
-      '#attached' => ['library' => ['core/drupal.dialog.ajax', 'geysir/paragraphs', 'parade_edit/paragraphs']],
-    ];
-
-    $vars['items'][$delta]['content']['#geysir_field_paragraph_links'] = \Drupal::service('renderer')->render($links_array);
-
-    $delta++;
-  }
-
-  // Attach the field wrapper ID in a data-attribute.
-  $vars['attributes']['data-geysir-field-paragraph-field-wrapper'] = $field_wrapper_id;
 }
 
 /**
