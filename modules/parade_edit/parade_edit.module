@@ -7,6 +7,9 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Url;
+use Drupal\parade_edit\Plugin\Menu\ViewTab;
+use Drupal\parade_edit\Plugin\Menu\EditTab;
+use Drupal\parade_edit\Plugin\Menu\ParadeEditorTab;
 
 /**
  * Implements hook_page_attachments_alter().
@@ -227,4 +230,23 @@ function parade_edit_preprocess_field(&$vars) {
 
   // Attach the field wrapper ID in a data-attribute.
   $vars['attributes']['data-geysir-field-paragraph-field-wrapper'] = $field_wrapper_id;
+}
+
+/**
+ * Implements hook_local_tasks_alter().
+ *
+ * Alter View, Edit, Latest version TABs for nodes.
+ */
+function parade_edit_local_tasks_alter(&$local_tasks) {
+  // View, Edit, Latest version TAB rename for our bundles.
+  $local_tasks['entity.node.canonical']['class'] = ViewTab::class;
+  $local_tasks['entity.node.canonical']['entity_type_id'] = 'node';
+
+  $local_tasks['entity.node.edit_form']['class'] = EditTab::class;
+  $local_tasks['entity.node.edit_form']['entity_type_id'] = 'node';
+  $local_tasks['entity.node.edit_form']['weight'] = -1.1;
+
+  $local_tasks['moderation_state.entities:node.latest_version_tab']['class'] = ParadeEditorTab::class;
+  $local_tasks['moderation_state.entities:node.latest_version_tab']['entity_type_id'] = 'node';
+  $local_tasks['moderation_state.entities:node.latest_version_tab']['weight'] = -1;
 }

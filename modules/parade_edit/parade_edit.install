@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains install/update hooks for parade_edit.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function parade_edit_install() {
+  // Set the weight of the parade_edit.module to run after workbench_moderation.
+  $weight = \Drupal::configFactory()->get('core.extension')->get('module')['workbench_moderation'];
+  module_set_weight('parade_edit', $weight + 1);
+}
