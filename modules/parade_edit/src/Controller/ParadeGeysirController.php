@@ -3,6 +3,7 @@
 namespace Drupal\parade_edit\Controller;
 
 use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Entity\EntityFieldManager;
@@ -98,7 +99,7 @@ class ParadeGeysirController extends GeysirModalController {
       $response = new AjaxResponse();
       // Refresh the paragraphs field.
       $response->addCommand(
-        new HtmlCommand(
+        new ReplaceCommand(
           '[data-geysir-field-paragraph-field-wrapper=' . $field_wrapper_id . ']',
           $entity->get($field)->view('default')));
       return $response;
@@ -130,7 +131,7 @@ class ParadeGeysirController extends GeysirModalController {
       $response = new AjaxResponse();
       // Refresh the paragraphs field.
       $response->addCommand(
-        new HtmlCommand(
+        new ReplaceCommand(
           '[data-geysir-field-paragraph-field-wrapper=' . $field_wrapper_id . ']',
           $entity->get($field)->view('default')));
       return $response;
