@@ -9,6 +9,7 @@ use Drupal\parade_edit\Plugin\Menu\ViewTab;
 use Drupal\parade_edit\Plugin\Menu\EditTab;
 use Drupal\parade_edit\Plugin\Menu\ParadeEditorTab;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\geysir\Form\GeysirParagraphForm;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\geysir\Ajax\GeysirCloseModalDialogCommand;
 
@@ -116,33 +117,39 @@ function parade_edit_local_tasks_alter(&$local_tasks) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_alter().
  *
  * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
  */
-function parade_edit_form_paragraph_simple_geysir_modal_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (isset($form['actions']['submit'])) {
-    $route_match = \Drupal::routeMatch();
-    $parent_entity_type = $route_match->getParameter('parent_entity_type');
-    $temporary_data = $form_state->getTemporary();
-    $parent_entity_revision_id = isset($temporary_data['parent_entity_revision']) ?
-      $temporary_data['parent_entity_revision'] : $route_match->getParameter('parent_entity_revision');
-    $parent_entity_revision = \Drupal::entityTypeManager()->getStorage($parent_entity_type)->loadRevision($parent_entity_revision_id);
-    $state = $parent_entity_revision->moderation_state->target_id;
-    $form['actions']['submit']['#value'] = t('Save as @state', ['@state' => $state]);
-    $form['actions']['submit']['#attributes']['class'][] = "parade_edit parade_edit-$state";
-  }
-  if (!isset($form['actions']['cancel'])) {
-    $form['actions']['cancel'] = [
-      '#type'   => 'button',
-      '#value'  => t('Cancel'),
-      '#ajax' => [
-        'callback' => '_parade_edit_geysir_ajax_cancel',
-        'event'    => 'click',
-      ],
-      '#weight' => isset($form['actions']['submit']['#weight']) ? $form['actions']['submit']['#weight'] + 1 : 0,
-      '#attributes' => ['class' => ["parade_edit parade_edit-cancel"]],
-    ];
+function parade_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof GeysirParagraphForm && 'geysir_modal_edit' === $form_object->getOperation()) {
+    if (isset($form['actions']['submit'])) {
+
+      $route_match = \Drupal::routeMatch();
+      $parent_entity_type = $route_match->getParameter('parent_entity_type');
+      $temporary_data = $form_state->getTemporary();
+      $parent_entity_revision_id = isset($temporary_data['parent_entity_revision']) ?
+        $temporary_data['parent_entity_revision'] : $route_match->getParameter('parent_entity_revision');
+      $parent_entity_revision = \Drupal::entityTypeManager()
+        ->getStorage($parent_entity_type)
+        ->loadRevision($parent_entity_revision_id);
+      $state = $parent_entity_revision->moderation_state->target_id;
+      $form['actions']['submit']['#value'] = t('Save as @state', ['@state' => $state]);
+      $form['actions']['submit']['#attributes']['class'][] = "parade_edit parade_edit-$state";
+    }
+    if (!isset($form['actions']['cancel'])) {
+      $form['actions']['cancel'] = [
+        '#type' => 'button',
+        '#value' => t('Cancel'),
+        '#ajax' => [
+          'callback' => '_parade_edit_geysir_ajax_cancel',
+          'event' => 'click',
+        ],
+        '#weight' => isset($form['actions']['submit']['#weight']) ? $form['actions']['submit']['#weight'] + 1 : 0,
+        '#attributes' => ['class' => ["parade_edit parade_edit-cancel"]],
+      ];
+    }
   }
 }
 
