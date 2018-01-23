@@ -3,3 +3,10 @@ paragraphs:
   css:
     theme:
       css/parade_edit.paragraphs.css: {}
+
+quickedit:
+  version: 1.0
+  js:
+    js/parade_edit.quickedit.js: {}
+  dependencies:
+    - core/jquery
