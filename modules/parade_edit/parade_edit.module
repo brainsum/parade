@@ -5,11 +5,12 @@
  * Code for Parade Edit.
  */
 
-use Drupal\Component\Utility\Html;
-use Drupal\Core\Url;
 use Drupal\parade_edit\Plugin\Menu\ViewTab;
 use Drupal\parade_edit\Plugin\Menu\EditTab;
 use Drupal\parade_edit\Plugin\Menu\ParadeEditorTab;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\geysir\Ajax\GeysirCloseModalDialogCommand;
 
 /**
  * Implements hook_page_attachments_alter().
@@ -112,4 +113,46 @@ function parade_edit_local_tasks_alter(&$local_tasks) {
   $local_tasks['moderation_state.entities:node.latest_version_tab']['class'] = ParadeEditorTab::class;
   $local_tasks['moderation_state.entities:node.latest_version_tab']['entity_type_id'] = 'node';
   $local_tasks['moderation_state.entities:node.latest_version_tab']['weight'] = -1;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ */
+function parade_edit_form_paragraph_simple_geysir_modal_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['actions']['submit'])) {
+    $route_match = \Drupal::routeMatch();
+    $parent_entity_type = $route_match->getParameter('parent_entity_type');
+    $temporary_data = $form_state->getTemporary();
+    $parent_entity_revision_id = isset($temporary_data['parent_entity_revision']) ?
+      $temporary_data['parent_entity_revision'] : $route_match->getParameter('parent_entity_revision');
+    $parent_entity_revision = \Drupal::entityTypeManager()->getStorage($parent_entity_type)->loadRevision($parent_entity_revision_id);
+    $state = $parent_entity_revision->moderation_state->target_id;
+    $form['actions']['submit']['#value'] = t('Save as @state', ['@state' => $state]);
+    $form['actions']['submit']['#attributes']['class'][] = "parade_edit parade_edit-$state";
+  }
+  if (!isset($form['actions']['cancel'])) {
+    $form['actions']['cancel'] = [
+      '#type'   => 'button',
+      '#value'  => t('Cancel'),
+      '#ajax' => [
+        'callback' => '_parade_edit_geysir_ajax_cancel',
+        'event'    => 'click',
+      ],
+      '#weight' => isset($form['actions']['submit']['#weight']) ? $form['actions']['submit']['#weight'] + 1 : 0,
+      '#attributes' => ['class' => ["parade_edit parade_edit-cancel"]],
+    ];
+  }
+}
+
+/**
+ * Ajax callbcak for cancel button in geysir modal.
+ *
+ * @see parade_edit_form_paragraph_simple_geysir_modal_edit_form_alter
+ */
+function _parade_edit_geysir_ajax_cancel(array $form, FormStateInterface $form_state) {
+  $response = new AjaxResponse();
+  $response->addCommand(new GeysirCloseModalDialogCommand());
+  return $response;
 }

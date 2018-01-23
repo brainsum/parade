@@ -5,7 +5,7 @@ namespace Drupal\parade_edit\Plugin\Menu;
 use Drupal\workbench_moderation\Plugin\Menu\EditTab as WorkbenchModerationEditTab;
 
 /**
- * Defines a class for altering the Last version tab to 'Try new editor'.
+ * Defines a class for altering the edit tab text.
  */
 class EditTab extends WorkbenchModerationEditTab {
 
