@@ -48,8 +48,8 @@ function parade_edit_preprocess_field(&$vars) {
       'entity.node.canonical',
       'geysir.modal.edit_form',
       'entity.node.latest_version',
-      'parade_edit.up',
-      'parade_edit.down',
+      'geysir.modal.up',
+      'geysir.modal.down',
     ])) {
       // Disable on node view.
       if ($route_match->getRouteName() === 'entity.node.canonical') {
@@ -78,7 +78,7 @@ function parade_edit_preprocess_field(&$vars) {
 function parade_edit_library_info_alter(&$libraries, $extension) {
   // TODO: rewrite this and patch geyzir, do this with service.
   if ($extension == "geysir") {
-    // Remove stupid css.
+    // Remove useless css. This will prevent to overwrite css rules.
     $libraries['paragraphs']['css'] = [];
   }
 }
