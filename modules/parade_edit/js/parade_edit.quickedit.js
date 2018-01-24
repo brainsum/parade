@@ -28,7 +28,7 @@
                 for (var mutation of mutationsList) {
                     if (mutation.type == 'childList') {
                         // Trigger on quickedit close.
-                        $("#quickedit-entity-toolbar").once("button.action-cancel").click(function() {
+                        $("#quickedit-entity-toolbar .quickedit-toolgroup").once(".quickedit-button").click(function() {
                             $(".quickedit-entity-active").closest(".geysir-field-paragraph-wrapper").removeClass("quickedit-active");
                         });
                     }
