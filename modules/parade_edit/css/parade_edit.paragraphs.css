@@ -13,10 +13,7 @@
     outline: 1px solid #ffffff;
     z-index: 1;
     border: 5px solid #3399cc;
-}
-
-.geysir-field-paragraph-wrapper:hover > div {
-    padding: 35px 1em !important;
+    margin: -5px 0;
 }
 
 .geysir-field-paragraph-links {
