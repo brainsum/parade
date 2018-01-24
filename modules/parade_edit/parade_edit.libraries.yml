@@ -10,3 +10,9 @@ quickedit:
     js/parade_edit.quickedit.js: {}
   dependencies:
     - core/jquery
+
+tabs:
+  version: VERSION
+  css:
+    theme:
+      css/tabs.css: {}
