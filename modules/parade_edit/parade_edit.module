@@ -179,7 +179,7 @@ function parade_edit_preprocess_links(&$variables) {
       $new_links[$key] = $link;
       if ('edit' === $key) {
         $my_link['links']['parade_edit-quickedit'] = [
-          'title' => 'Quick edit',
+          'title' => 'Inplace edit',
           'attributes' => [
             'class' => ['button', 'geysir-button'],
           ],

@@ -10,11 +10,10 @@
 }
 
 .geysir-field-paragraph-wrapper:hover {
-    outline: 5px solid rgba(85, 142, 213, 0.5);
-}
-
-.geysir-field-paragraph-wrapper:hover .geysir-field-paragraph-wrapper:hover {
-    outline-color: rgba(0, 0, 0, 0.5);
+    outline: 1px solid #ffffff;
+    z-index: 1;
+    border: 5px solid #3399cc;
+    margin: -5px 0;
 }
 
 .geysir-field-paragraph-links {
@@ -54,28 +53,48 @@
 .geysir-field-paragraph-links li.add-after a,
 .geysir-field-paragraph-links li.add-before a {
     background-image: url(../images/geysir-add.svg);
+    padding: 25px;
+    width: 50px;
 }
 
 .geysir-field-paragraph-links li.delete a {
     background-image: url(../images/geysir-trash.svg);
-    background-color: #bdbdbd;
+    background-color: rgba(86, 84, 84, 0.60);
 }
 
 .geysir-field-paragraph-links li.edit a {
     background-image: url(../images/geysir-pencil.svg);
     width: 118px;
+    background-size: 35px 35px;
+}
+
+.geysir-field-paragraph-links li.parade-edit-quickedit span {
+    width: 148px;
+    text-indent: initial;
+    padding: 20px;
+    display: inline-block;
+    background-image: none;
+    height: auto;
+    font-size: 20px;
+    font-weight: normal;
 }
 
 .geysir-field-paragraph-links li.up a {
     background-image: url(../images/geysir-up.svg);
-    background-color: rgba(86, 84, 84, 0.88);
+    background-color: rgba(86, 84, 84, 0.60);
     border: 1px solid white;
 }
 
 .geysir-field-paragraph-links li.down a {
     background-image: url(../images/geysir-down.svg);
-    background-color: rgba(86, 84, 84, 0.88);
+    background-color: rgba(86, 84, 84, 0.60);
     border: 1px solid white;
+}
+
+.geysir-field-paragraph-links li.delete a:hover,
+.geysir-field-paragraph-links li.up a:hover,
+.geysir-field-paragraph-links li.down a:hover {
+    background-color: rgba(86, 84, 84, 0.88);
 }
 
 .geysir-field-paragraph-links li.edit {
@@ -96,6 +115,11 @@
 .geysir-field-paragraph-links li.edit {
     top: 50%;
     transform: translate(-170%, -50%);
+}
+
+.geysir-field-paragraph-links li.parade-edit-quickedit {
+    top: 50%;
+    transform: translate(-242%, -50%);
 }
 
 .geysir-field-paragraph-links li.delete {
@@ -139,7 +163,8 @@
     width: 17px;
 }
 
-.geysir-field-paragraph-links a {
+.geysir-field-paragraph-links a,
+.geysir-field-paragraph-links span {
     background-color: #3399cc;
     background-position: center;
     background-repeat: no-repeat;
@@ -153,10 +178,13 @@
     padding: 35px;
     text-indent: -9999px;
     width: 75px;
+    transition: all 0.3s ease 0s;
 }
 
-.geysir-field-paragraph-links a:hover {
+.geysir-field-paragraph-links a:hover,
+.geysir-field-paragraph-links span:hover {
     background-color: #0065A0;
+    color: white;
     border: none;
 }
 
