@@ -9,7 +9,7 @@
     clear: both;
 }
 
-.geysir-field-paragraph-wrapper:hover {
+.geysir-field-paragraph-wrapper:not(.quickedit-active):hover {
     outline: 1px solid #ffffff;
     z-index: 1;
     border: 5px solid #3399cc;
@@ -23,7 +23,7 @@
     position: static;
 }
 
-.geysir-field-paragraph-wrapper:hover .geysir-field-paragraph-links {
+.geysir-field-paragraph-wrapper:not(.quickedit-active):hover .geysir-field-paragraph-links {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
