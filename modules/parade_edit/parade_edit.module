@@ -159,6 +159,17 @@ function parade_edit_form_alter(&$form, FormStateInterface $form_state, $form_id
         '#attributes' => ['class' => ["parade_edit parade_edit-cancel"]],
       ];
     }
+
+    // Add class to edit forms.
+    if (!isset($form['#attributes'])) {
+      $form['#attributes'] = ['class' => []];
+    }
+    elseif (!isset($form['#attributes']['class'])) {
+      $form['#attributes']['class'] = [];
+    }
+    $form['#attributes']['class'][] = 'node-parade-onepage-edit-form';
+    $form['#attributes']['class'][] = 'node-form';
+    $form['#attributes']['class'][] = 'node-parade-onepage-form';
   }
 }
 
