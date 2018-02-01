@@ -33,7 +33,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 }
 
 .block-local-tasks-block .tabs li.is-active {
-  line-height: 25px;
+  line-height: 22px;
   border: none;
   border-bottom: 1px solid white;
 }
@@ -45,6 +45,7 @@ body.user-logged-in.page-node-type-parade-onepage {
 
 .block-local-tasks-block li.bordered {
   border: 1px solid #d1d1d1;
+  border-bottom: none;
   background-color: #dddddd;
 }
 
