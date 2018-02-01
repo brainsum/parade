@@ -89,7 +89,6 @@ function parade_edit_library_info_alter(&$libraries, $extension) {
   }
   elseif ($extension == "seven") {
     $route_name = \Drupal::routeMatch()->getRouteName();
-    kint($libraries);
     if (in_array($route_name, ['entity.node.edit_form'])) {
       unset($libraries['global-styling']['css']['component']['css/components/tabs.css']);
     }
