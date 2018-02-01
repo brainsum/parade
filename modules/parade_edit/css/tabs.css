@@ -1,4 +1,7 @@
 /* TODO: redo with SASS and connect to micro system */
+body.user-logged-in.page-node-type-parade-onepage {
+  background-color: #f2f2f2;
+}
 
 .block-local-tasks-block > .tabs {
   max-height: none !important;
@@ -10,7 +13,7 @@
   float: left;
   height: auto;
   width: auto;
-  margin: 0 0 -1px;
+  margin: 0 2px -1px;
   text-align: center;
   display: block;
   padding: 0;
@@ -23,9 +26,16 @@
 }
 
 .block-local-tasks-block .tabs li a {
+  font-size: 14px;
   background: none;
   padding: 7px 2em 7px 2em;
-  border-bottom: inherit;
+  border-bottom: none;
+}
+
+.block-local-tasks-block .tabs li.is-active {
+  line-height: 25px;
+  border: none;
+  border-bottom: 1px solid white;
 }
 
 .block-local-tasks-block .tabs li:hover {
@@ -34,22 +44,26 @@
 }
 
 .block-local-tasks-block li.bordered {
-  border: 1px solid #a6a6a6;
+  border: 1px solid #d1d1d1;
   background-color: #dddddd;
+}
+
+.block-system-main-block {
+  border-top: 7px solid #ffffff;
 }
 
 /* Overwrite demo stuff */
 
 body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .site-branding__logo.not-fixed, body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .campaign-menu.not-fixed {
-  top: 137px;
+  top: 141px;
 }
 
 body.toolbar-horizontal .parade-campaign-page .logo, body.toolbar-horizontal .parade-campaign-page .site-branding__logo.not-fixed, body.toolbar-horizontal .parade-campaign-page .campaign-menu.not-fixed {
-  top: 97px;
+  top: 101px;
 }
 
 body.toolbar-vertical .parade-campaign-page .logo, body.toolbar-vertical .parade-campaign-page .site-branding__logo.not-fixed {
-  top: 97px;
+  top: 101px;
 }
 
 .block-system-branding-block {
