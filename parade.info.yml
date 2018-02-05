@@ -11,6 +11,7 @@ dependencies:
   - drupal:image
   - drupal:text
   - drupal:geocoder
+  - drupal:geophp
   - drupal:geocoder_autocomplete
   - drupal:geofield
   - drupal:leaflet
