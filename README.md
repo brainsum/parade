@@ -35,12 +35,20 @@ See: https://www.drupal.org/node/2858115
 Use this patch for the 8.x-1.0 version OR use the 8.x-dev version:
 https://www.drupal.org/files/issues/missing-schema-2858115-2.patch
 
+There is a bug in geocoder 8.x-2.0 version that causes an error if geocoder
+module has not been configured.
+Use this patch for the 8.x-2.0 version OR use the 8.x-2.0-beta2 version:
+https://www.drupal.org/files/issues/null_third_arg_error_calling_geocode_2937492-11.diff
+
 Add them to the extra section of the composer.json file:
 
        "patches": {
            "drupal/geocoder_autocomplete": {
                "fix missing schema": "https://www.drupal.org/files/issues/missing-schema-2858115-2.patch"
            },
+           "drupal/geocoder": {
+               "fix null third arg error" : "https://www.drupal.org/files/issues/null_third_arg_error_calling_geocode_2937492-11.diff"
+           }
        }
 
 ### Without composer
