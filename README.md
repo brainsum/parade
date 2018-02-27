@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brainsum/parade.svg?branch=8.x-2.x)](https://travis-ci.org/brainsum/parade)
+
 # README.md
 
 Parade is a module to create one page sites from pre-customized paragraphs in your content.
