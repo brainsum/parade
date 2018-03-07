@@ -5282,7 +5282,7 @@ a.tabledrag-handle:focus .handle {
 .field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .paragraph-type-top {
   position: absolute;
   right: 35px;
-  top: 23px;
+  top: 25px;
 }
 
 .field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .paragraphs-type {
@@ -5291,11 +5291,15 @@ a.tabledrag-handle:focus .handle {
 
 .field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .layout--parade-admin-twocol-bricks {
   padding-top: 0;
+  display: table;
+  width: 100%;
 }
 
 .field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top {
+  display: table-cell;
+  vertical-align: middle;
   background-color: #f0f0f0;
-  padding: 0 35px;
+  padding: 25px 35px;
   min-height: 75px;
   border-bottom: 0;
   border-left: 3px solid #337ab7;
@@ -5306,7 +5310,6 @@ a.tabledrag-handle:focus .handle {
   font-weight: 600;
   margin: 0;
   max-width: 65%;
-  line-height: 75px;
 }
 
 .node-parade-onepage-form .field--name-parade-onepage-menu,

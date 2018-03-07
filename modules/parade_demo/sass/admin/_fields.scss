@@ -47,7 +47,7 @@
     .paragraph-type-top {
       position: absolute;
       right: 35px;
-      top: 23px;
+      top: 25px;
     }
 
     .paragraphs-type {
@@ -56,9 +56,13 @@
 
     .layout--parade-admin-twocol-bricks {
       padding-top: 0;
+      display: table;
+      width: 100%;
       .layout__region--top {
+        display: table-cell;
+        vertical-align: middle;
         background-color: rgb(240, 240, 240);
-        padding: 0 35px;
+        padding: 25px 35px;
         min-height: 75px;
         border-bottom: 0;
         border-left: 3px solid rgb(51, 122, 183);
@@ -67,7 +71,6 @@
           font-weight: 600;
           margin: 0;
           max-width: 65%;
-          line-height: 75px;
         }
       }
     }
