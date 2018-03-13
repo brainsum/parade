@@ -715,6 +715,21 @@ details summary:hover {
   margin: 2em 0;
 }
 
+.node-parade-onepage-form .field--name-parade-location td .ajax-new-content,
+.node-parade-onepage-edit-form .field--name-parade-location td .ajax-new-content {
+  display: block !important;
+}
+
+.node-parade-onepage-form .field--name-parade-location td .form-type-textfield,
+.node-parade-onepage-edit-form .field--name-parade-location td .form-type-textfield {
+  padding: 5px;
+}
+
+.node-parade-onepage-form .field--name-parade-location td .form-type-textfield .form-autocomplete.form-text,
+.node-parade-onepage-edit-form .field--name-parade-location td .form-type-textfield .form-autocomplete.form-text {
+  width: 100%;
+}
+
 .node-parade-onepage-form .parade-button-marketo-form,
 .node-parade-onepage-edit-form .parade-button-marketo-form {
   background-image: url("../../images/form.png");

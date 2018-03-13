@@ -9,6 +9,7 @@
     "drupal/machine_name": "~1.0",
     "drupal/geocoder": "~2.0",
     "drupal/geofield": "~1.0",
+    "drupal/geophp": "~1.0",
     "drupal/leaflet": "~1.0",
     "drupal/geocoder_autocomplete": "~1.0",
     "drupal/classy_paragraphs": "~1.0",
