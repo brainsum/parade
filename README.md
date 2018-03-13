@@ -39,6 +39,27 @@ See: https://www.drupal.org/node/2858115
 Use this patch:
 https://www.drupal.org/files/issues/missing-schema-2858115-2.patch
 
+There are field groups compatibility issues with field layout regarding
+field_group and paragraphs module.
+
+See: https://www.drupal.org/project/field_group/issues/2878359
+Use the ~3.0 version of field_group and patch:
+https://www.drupal.org/files/issues/null_third_arg_error_calling_geocode_2937492-11.diff
+
+See: https://www.drupal.org/node/2907094
+Use the ~1.0 version of paragraphs and patch:
+https://www.drupal.org/files/issues/2907094_7_field_group_support.patch
+
+Add them to the extra section of the composer.json file:
+
+       "patches": {
+            "drupal/field_group": {
+                "Field groups are not compatible with field layout": "https://www.drupal.org/files/issues/field-layout-support-2878359-36.patch"
+            },
+            "drupal/paragraphs": {
+                "Fix support for field_group module in combination with field_layout module patch": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
+            }
+
 ### Without composer
 @todo
 

@@ -13,6 +13,6 @@
     "drupal/geocoder_autocomplete": "~1.0",
     "drupal/classy_paragraphs": "~1.0",
     "drupal/view_mode_selector": "~1.0",
-    "drupal/field_group": "~1.0"
+    "drupal/field_group": "~3.0"
   }
 }
