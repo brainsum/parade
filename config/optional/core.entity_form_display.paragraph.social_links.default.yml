@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.social_links.parade_anchor
     - field.field.paragraph.social_links.parade_color_scheme
     - field.field.paragraph.social_links.parade_social_link
     - field.field.paragraph.social_links.parade_title
@@ -19,6 +20,7 @@ third_party_settings:
     group_top:
       children:
         - parade_color_scheme
+        - parade_anchor
       parent_name: ''
       weight: 0
       format_type: html_element
@@ -56,6 +58,14 @@ targetEntityType: paragraph
 bundle: social_links
 mode: default
 content:
+  parade_anchor:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   parade_color_scheme:
     type: options_select
     settings: {  }
