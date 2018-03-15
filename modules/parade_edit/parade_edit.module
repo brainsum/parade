@@ -138,7 +138,7 @@ function parade_edit_local_tasks_alter(&$local_tasks) {
  */
 function parade_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $form_object = $form_state->getFormObject();
-  if ($form_object instanceof GeysirParagraphForm && 'geysir_modal_edit' === $form_object->getOperation()) {
+  if ($form_object instanceof GeysirParagraphForm && in_array($form_object->getOperation(), ['geysir_modal_add', 'geysir_modal_edit'])) {
     if (isset($form['actions']['submit'])) {
       $route_match = \Drupal::routeMatch();
       $parent_entity_type = $route_match->getParameter('parent_entity_type');
