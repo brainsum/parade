@@ -3,9 +3,22 @@
 Drupal.behaviors.paradeConditionalFields = {
   attach: function (context, settings) {
     // AJAX is not updating settings.paradeConditionalFields correctly.
-    var conditionalFields = settings.paradeConditionalFields || "undefined";
+    var conditionalFields = settings.paradeConditionalFields.conditions || "undefined";
+    var formType = settings.paradeConditionalFields.formType;
     if (conditionalFields === "undefined") {
       return;
+    }
+
+    /**
+     *
+     * @param field_name
+     * @returns {string}
+     */
+    function fieldSelector(field_name) {
+      if (formType === "subform") {
+        return ":input[name*='[" + field_name + "]']";
+      }
+      return ":input[name^='" + field_name + "']";
     }
 
     /**
@@ -44,13 +57,13 @@ Drupal.behaviors.paradeConditionalFields = {
             value_set = true;
             $.each(condition[event.data.field_name].dependents, function (d_field, d_data) {
               // Set value(s).
-              var element_selector = "#" + first_parent_wrapper_id + " :input[name*='[" + d_field + "]']";
+              var element_selector = "#" + first_parent_wrapper_id + " " + fieldSelector(d_field);
               if (typeof d_data.values != "undefined" && typeof d_data.values[0] != "undefined") {
                 setValueForField(element_selector, d_data.values[0]);
               }
               // Set enabled selectable value(s).
               if (typeof d_data.options != "undefined") {
-                $("#" + first_parent_wrapper_id + " :input[name*='[" + d_field + "]']" + " option").each(function () {
+                $("#" + first_parent_wrapper_id + " " + fieldSelector(d_field) + " option").each(function () {
                   var option = $(this);
                   if (d_data.options.length === 0 || option.val() in d_data.options || option.val() == "_none") {
                     option.show();
@@ -70,7 +83,7 @@ Drupal.behaviors.paradeConditionalFields = {
             if (!default_value_set) {
               $.each(condition[event.data.field_name].dependents, function (d_field, d_data) {
                 default_value_set = true;
-                var element_selector = "#" + first_parent_wrapper_id + " :input[name*='[" + d_field + "]']";
+                var element_selector = "#" + first_parent_wrapper_id + " " + fieldSelector(d_field);
                 if (d_field == "parade_view_mode") {
                   setValueForField(element_selector, "default");
                 }
@@ -88,7 +101,7 @@ Drupal.behaviors.paradeConditionalFields = {
       $.each(conditions, function (id, condition) {
         $.each(condition, function (field_name, condition_data) {
           var wrapper = ".paragraphs-wrapper-bundle-" + bundle;
-          $(wrapper + " :input[name*='[" + field_name + "]']", context).on("change", {bundle: bundle, wrapper: wrapper, field_name: field_name}, onChangeParadeField).trigger("change");
+          $(wrapper + " " + fieldSelector(field_name)).on("change", {bundle: bundle, wrapper: wrapper, field_name: field_name}, onChangeParadeField).trigger("change");
           // Hide view mode selector.
           $(wrapper + " .field--type-view-mode-selector.field--name-parade-view-mode").hide();
         });

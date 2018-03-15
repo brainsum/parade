@@ -16,7 +16,8 @@ use Drupal\parade_conditional_field\Entity\ParadeConditionalField;
  * Add parade conditional field settings if there is paragraphs reference field.
  */
 function parade_conditional_field_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (isset($form['parade_onepage_sections'])) {
+  // @refactor
+  if (isset($form['parade_onepage_sections']) || isset($form['parade_layout'])) {
     _parade_conditional_field_add_parade_field_conditions($form, $form_state);
   }
 }
@@ -36,7 +37,8 @@ function _parade_conditional_field_add_parade_field_conditions(array &$form, For
   }
 
   $form['#attached']['library'][] = 'parade_conditional_field/conditional_field';
-  $form['#attached']['drupalSettings']['paradeConditionalFields'] = $conditions;
+  $form['#attached']['drupalSettings']['paradeConditionalFields']['conditions'] = $conditions;
+  $form['#attached']['drupalSettings']['paradeConditionalFields']['formType'] = isset($form['parade_onepage_sections']) ? 'subform' : NULL;
 }
 
 /**
