@@ -140,7 +140,6 @@ function parade_edit_form_alter(&$form, FormStateInterface $form_state, $form_id
   $form_object = $form_state->getFormObject();
   if ($form_object instanceof GeysirParagraphForm && 'geysir_modal_edit' === $form_object->getOperation()) {
     if (isset($form['actions']['submit'])) {
-
       $route_match = \Drupal::routeMatch();
       $parent_entity_type = $route_match->getParameter('parent_entity_type');
       $temporary_data = $form_state->getTemporary();
@@ -167,6 +166,7 @@ function parade_edit_form_alter(&$form, FormStateInterface $form_state, $form_id
     }
 
     // Add class to edit forms.
+    // @refactor - extend GeysirModalParagraphForm:buildform
     if (!isset($form['#attributes'])) {
       $form['#attributes'] = ['class' => []];
     }
@@ -176,6 +176,18 @@ function parade_edit_form_alter(&$form, FormStateInterface $form_state, $form_id
     $form['#attributes']['class'][] = 'node-parade-onepage-edit-form';
     $form['#attributes']['class'][] = 'node-form';
     $form['#attributes']['class'][] = 'node-parade-onepage-form';
+
+    // Add custom prefix, parade_icon.
+    $paragraphs_entity = $node = $form_state->getFormObject()->getEntity();
+    $label = $paragraphs_entity->type->entity->label();
+    $bundle = $paragraphs_entity->getType();
+    $form['#attributes']['class'][] = 'node-parade-onepage-form item-mode-edit';
+    $form['parade_icon'] = [
+      '#markup' => '<div class="paragraphs-type paragraphs-type-' . $bundle . '">' . $label . '</div>',
+      '#weight' => -1,
+    ];
+
+    $form['#prefix'] = '<div id="geysir-modal-form" class="paragraphs-wrapper-bundle-' . $bundle . '">';
   }
 }
 
