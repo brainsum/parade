@@ -8,16 +8,20 @@ Drupal.behaviors.paradeConditionalFields = {
       return;
     }
 
-    $.each(conditionalFields, function (bundle, conditions) {
-      $.each(conditions, function (id, condition) {
-        $.each(condition, function (field_name, condition_data) {
-          var wrapper = ".paragraphs-wrapper-bundle-" + bundle;
-          $(wrapper + " :input[name*='[" + field_name + "]']", context).on("change", {bundle: bundle, wrapper: wrapper, field_name: field_name}, onChangeParadeField).trigger("change");
-          // Hide view mode selector.
-          $(wrapper + " .field--type-view-mode-selector.field--name-parade-view-mode").hide();
-        });
-      });
-    });
+    /**
+     * Set value depends on type (radio or other)
+     *
+     * @param element_selector
+     * @param value
+     */
+    function setValueForField(element_selector, value) {
+      if ($(element_selector + "[value='" + value + "']").attr("type") === "radio") {
+        $(element_selector + "[value='" + value + "']").prop("checked", true);
+      }
+      else {
+        $(element_selector).val(value);
+      }
+    }
 
     /**
      * @param condition.event.data.field_name.on_values
@@ -80,20 +84,16 @@ Drupal.behaviors.paradeConditionalFields = {
       });
     }
 
-    /**
-     * Set value depends on type (radio or other)
-     *
-     * @param element_selector
-     * @param value
-     */
-    function setValueForField(element_selector, value) {
-      if ($(element_selector + "[value='" + value + "']").attr("type") === "radio") {
-        $(element_selector + "[value='" + value + "']").prop("checked", true);
-      }
-      else {
-        $(element_selector).val(value);
-      }
-    }
+    $.each(conditionalFields, function (bundle, conditions) {
+      $.each(conditions, function (id, condition) {
+        $.each(condition, function (field_name, condition_data) {
+          var wrapper = ".paragraphs-wrapper-bundle-" + bundle;
+          $(wrapper + " :input[name*='[" + field_name + "]']", context).on("change", {bundle: bundle, wrapper: wrapper, field_name: field_name}, onChangeParadeField).trigger("change");
+          // Hide view mode selector.
+          $(wrapper + " .field--type-view-mode-selector.field--name-parade-view-mode").hide();
+        });
+      });
+    });
   }
 };
 
