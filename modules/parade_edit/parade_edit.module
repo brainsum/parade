@@ -12,8 +12,18 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\geysir\Form\GeysirParagraphForm;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\geysir\Ajax\GeysirCloseModalDialogCommand;
+use Drupal\Core\Url;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function parade_edit_entity_type_build(array &$entity_types) {
+  // Add custom form display for preferences modal.
+  $node_type = $entity_types['node'];
+  $node_type->setFormClass('preferences', '\Drupal\parade_edit\Form\ParadeEditModalPreferencesForm');
+}
 
 /**
  * Implements hook_page_attachments_alter().
@@ -124,6 +134,23 @@ function parade_edit_preprocess_node(&$variables) {
 
     // Add our quick edit js.
     $variables['#attached']['library'][] = 'parade_edit/quickedit';
+
+    $preferences = [
+      '#type' => 'link',
+      '#title' => 'Edit menu and preferences',
+      '#url' => Url::fromRoute('parade_edit.modal.preferences', [
+        'entity_type' => $variables['node']->getEntityType()->id(),
+        'node' => $variables['node']->id(),
+        'js' => 'nojs',
+      ]),
+      '#attributes' => [
+        'class' => ['button', 'geysir-button', 'use-ajax'],
+      ],
+      '#weight' => -50,
+      '#prefix' => '<div id="parade-edit-preferences-wrapper">',
+      '#suffix' => '</div>',
+    ];
+    $variables['content']['_field_layout']['content']['parade_edit-preferences'] = $preferences;
   }
 }
 

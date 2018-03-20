@@ -1,5 +1,8 @@
 /* TODO: refactor this whole file into SASS and crate a micro system for all modules to easy way to change/refer some values */
 
+#parade-edit-preferences-wrapper {
+    text-align: center;
+}
 *[data-geysir-field-paragraph-field-wrapper] .field--item,
 .geysir-field-paragraph-wrapper > * {
     margin-bottom: 0 !important;

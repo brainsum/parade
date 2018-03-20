@@ -1,0 +1,13 @@
+parade_edit.modal.preferences:
+  path: 'parade_edit/modal/preferences/{entity_type}/{node}/{js}'
+  defaults:
+    _title: 'Preferences'
+    _controller: '\Drupal\parade_edit\Controller\ParadeGeysirController::preferences'
+  requirements:
+    _permission: 'geysir manage paragraphs from front-end'
+    js: 'nojs|ajax'
+  options:
+    _admin_route: TRUE
+    parameters:
+      node:
+        type: 'entity:node'

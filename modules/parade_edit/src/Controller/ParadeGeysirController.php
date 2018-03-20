@@ -2,8 +2,9 @@
 
 namespace Drupal\parade_edit\Controller;
 
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\workbench_moderation\ModerationInformationInterface;
 use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Entity\EntityFieldManager;
 use Drupal\geysir\Ajax\GeysirOpenModalDialogCommand;
 use Drupal\geysir\Controller\GeysirModalController;
@@ -22,11 +23,29 @@ class ParadeGeysirController extends GeysirModalController {
   private $entityFieldManager;
 
   /**
+   * The moderation information.
+   *
+   * @var \Drupal\workbench_moderation\ModerationInformationInterface
+   */
+  private $moderationInformation;
+
+  /**
    * {@inheritdoc}
    */
-  public function __construct(EntityFieldManager $entityFieldManager) {
+  public function __construct(EntityFieldManager $entityFieldManager, ModerationInformationInterface $moderation_information) {
     parent::__construct($entityFieldManager);
     $this->entityFieldManager = $entityFieldManager;
+    $this->moderationInformation = $moderation_information;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('entity_field.manager'),
+      $container->get('workbench_moderation.moderation_information')
+    );
   }
 
   /**
@@ -72,6 +91,32 @@ class ParadeGeysirController extends GeysirModalController {
     }
 
     return $this->t('Javascript is required for this functionality to work properly.');
+  }
+
+  /**
+   * Preferencies modal - node edit without paragraph reference field.
+   *
+   * {@inheritdoc}
+   */
+  public function preferences($entity_type, $node, $js = 'nojs') {
+    if ($js == 'ajax') {
+      $options = [
+        'width' => '60%',
+        'modal' => TRUE,
+      ];
+      $response = new AjaxResponse();
+      $entity_revision = $this->moderationInformation->getLatestRevision($entity_type, $node->id());
+      $form = $this->entityFormBuilder()->getForm($entity_revision, 'preferences', []);
+      $form['#attributes']['class'][] = 'node-parade-onepage-edit-form';
+      $form['#attributes']['class'][] = 'node-parade-onepage-form';
+      $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Edit %label', ['%label' => $node->label()]), render($form), $options));
+
+      return $response;
+    }
+
+    return [
+      '#markup' => $this->t('Javascript is required for this functionality to work properly.'),
+    ];
   }
 
 }

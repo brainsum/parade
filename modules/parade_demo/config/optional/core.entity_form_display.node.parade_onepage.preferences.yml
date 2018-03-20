@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.preferences
+    - field.field.node.parade_onepage.field_computed_image
+    - field.field.node.parade_onepage.field_thumbnail
+    - field.field.node.parade_onepage.parade_onepage_id
+    - field.field.node.parade_onepage.parade_onepage_menu
+    - field.field.node.parade_onepage.parade_onepage_sections
+    - image.style.thumbnail
+    - node.type.parade_onepage
+  enforced:
+    module:
+      - parade
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - machine_name
+    - parade
+    - path
+    - workbench_moderation
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.parade_onepage.preferences
+targetEntityType: node
+bundle: parade_onepage
+mode: preferences
+content:
+  created:
+    type: datetime_timestamp
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_thumbnail:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+  parade_onepage_id:
+    type: machine_name
+    weight: 2
+    region: content
+    settings:
+      editable: '1'
+    third_party_settings: {  }
+  parade_onepage_menu:
+    weight: 3
+    settings:
+      placeholder_url: 'Anchor or URL'
+      placeholder_title: 'Link text'
+    third_party_settings: {  }
+    type: link_with_selected_attribute
+    region: content
+  path:
+    type: path
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_computed_image: true
+  parade_onepage_sections: true
+  status: true
