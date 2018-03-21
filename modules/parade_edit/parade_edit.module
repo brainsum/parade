@@ -75,6 +75,7 @@ function parade_edit_preprocess_field(&$vars) {
       'entity.node.latest_version',
       'geysir.modal.up',
       'geysir.modal.down',
+      'parade_edit.modal.preferences',
     ])) {
       // Disable on node view.
       if ($route_match->getRouteName() === 'entity.node.canonical') {
