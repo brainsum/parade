@@ -208,3 +208,71 @@ ul.geysir-field-paragraph-links {
 article.node--unpublished {
     padding: 0;
 }
+
+
+/* These are popup fixes for edit forms */
+
+.geysir-dialog .node-form .form-wrapper {
+    margin: 0;
+}
+
+.geysir-dialog .item-mode-edit .layout__region.layout__region--top .js-form-item {
+    margin-bottom: 0;
+}
+
+.geysir-dialog .form-item, .geysir-dialog .form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.geysir-dialog .layout.layout--onecol {
+    /* @todo: this should be hidden from backend */
+    display: none;
+}
+
+.geysir-dialog .paragraph.paragraph--view-mode--custom .field--name-parade-call-to-action,
+.geysir-dialog .paragraph.paragraph--view-mode--default .field--name-parade-call-to-action,
+.geysir-dialog .paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action,
+.geysir-dialog .node-parade-onepage-edit-form .field--name-parade-call-to-action,
+.geysir-dialog .node-parade-onepage-form .field--name-parade-call-to-action {
+    margin: 30px 0;
+}
+
+/* This needs score 30, so at lest 3 class needed */
+.geysir-dialog .node-form .field--name-parade-title,
+.geysir-dialog .node-form .field--name-parade-secondary-title {
+    margin-bottom: 40px;
+}
+
+.geysir-dialog .node-form .field--name-parade-background {
+    margin: 30px 0;
+}
+
+.geysir-dialog .node-form .field--name-parade-view-mode,
+.geysir-dialog .node-form .field--name-parade-boxes-per-row,
+.geysir-dialog .node-form .field--name-parade-image {
+    margin-bottom: 40px;
+}
+
+.geysir-dialog .field--name-parade-call-to-action .fieldset-legend {
+    font-size: 13px;
+    font-weight: 600;
+    color: gray;
+}
+
+.geysir-dialog a,
+.geysir-dialog .link {
+    color: #0074bd;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.geysir-dialog a:hover,
+.geysir-dialog .link:hover,
+.geysir-dialog a:focus,
+.geysir-dialog .link:focus,
+.geysir-dialog a:active,
+.geysir-dialog .link:active {
+    text-decoration: underline;
+    border-bottom: none;
+}
