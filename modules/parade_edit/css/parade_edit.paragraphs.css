@@ -211,6 +211,13 @@ article.node--unpublished {
 
 
 /* These are popup fixes for edit forms */
+.geysir-dialog {
+    color: #777;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: normal;
+    line-height: 1.5;
+}
 
 .geysir-dialog .node-form .form-wrapper {
     margin: 0;
@@ -288,6 +295,7 @@ article.node--unpublished {
     border-radius: 0;
 }
 
+.geysir-dialog table > tbody > tr .paragraphs-type,
 .geysir-dialog thead {
     display: none;
 }
@@ -345,6 +353,57 @@ article.node--unpublished {
     content: "";
     color: #999999;
     display: block;
+}
+
+.geysir-dialog .field--name-parade-background .button,
+.geysir-dialog .field--name-parade-background .button:hover {
+    background-color: #bdbdbd;
+    background-image: none;
+    color: white;
+    font-weight: normal;
+    padding: 6px 10px;
+    border-width: 0px;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 13px;
+    font-style: normal;
+    text-align: center;
+    width: 83px;
+    height: 30px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.geysir-dialog table tbody .draggable > td:nth-child(2) > div {
+    position: relative;
+}
+
+.geysir-dialog table > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top {
+    background-color: #f0f0f0;
+    padding: 0 35px;
+    min-height: 75px;
+    border-bottom: 0;
+    border-left: 3px solid #337ab7;
+}
+
+.geysir-dialog .item-mode-preview .paragraph-type-top {
+    z-index: 1;
+}
+
+.geysir-dialog table > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    max-width: 65%;
+    line-height: 75px;
+    color: #777;
+}
+
+.geysir-dialog table > tbody > tr {
+    height: 75px;
+    border-radius: 0;
+    background: #f0f0f0;
+    border-bottom: 10px solid #ffffff;
 }
 
 /* Popup window's buttons */
