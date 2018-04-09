@@ -276,3 +276,105 @@ article.node--unpublished {
     text-decoration: underline;
     border-bottom: none;
 }
+
+.geysir-dialog summary {
+    background: none;
+    color: #777;
+}
+
+.geysir-dialog details,
+.geysir-dialog fieldset,
+.geysir-dialog .filter-wrapper {
+    border-radius: 0;
+}
+
+.geysir-dialog thead {
+    display: none;
+}
+
+.geysir-dialog tr.odd,
+.geysir-dialog tr,
+.geysir-dialog tr.odd:hover,
+.geysir-dialog tr:hover {
+    background: none;
+}
+
+.geysir-dialog td {
+    padding: 1.2em 0;
+}
+
+.geysir-dialog .form-wrapper .field-multiple-table > * > tr > td {
+    padding: 0;
+}
+
+.geysir-dialog .field-multiple-table tr td,
+.geysir-dialog .field-multiple-table tr td {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.geysir-dialog .paragraph.paragraph--view-mode--custom .button,
+.geysir-dialog .paragraph.paragraph--view-mode--default .button,
+.geysir-dialog .paragraph.paragraph--view-mode--inverse .button,
+.geysir-dialog .node-parade-onepage-edit-form .button,
+.geysir-dialog .node-parade-onepage-form .button {
+    display: inline-block;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.25rem 1rem;
+    font-size: 1rem;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    color: #5e5e5e;
+    background-color: #eeeeee;
+    border-color: #999999;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.geysir-dialog tr.even:hover a.tabledrag-handle .handle:before,
+.geysir-dialog tr.odd:hover a.tabledrag-handle .handle:before {
+    content: "";
+    color: #999999;
+    display: block;
+}
+
+/* Popup window's buttons */
+.geysir-dialog .ui-dialog-buttonpane .button {
+    color: #ffffff;
+    padding: 6px 25px;
+    border-color: transparent;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 13px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0;
+    background-color: #dfdfdf;
+    box-shadow: none;
+    border: 0;
+    background-image: none;
+    text-shadow: none;
+    float: left;
+}
+
+.geysir-dialog .ui-dialog-buttonpane .button.parade_edit-cancel {
+    background-color: #62b3e5;
+}
+
+.geysir-dialog .ui-dialog-buttonpane .button.parade_edit-draft {
+    background-color: #62ccd1;
+}
+
+.geysir-dialog .ui-dialog .ui-dialog-buttonpane button {
+    margin: 0;
+}
