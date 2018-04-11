@@ -14,6 +14,7 @@ use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\geysir\Ajax\GeysirCloseModalDialogCommand;
 use Drupal\Core\Url;
 use Drupal\paragraphs\ParagraphInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 /**
@@ -23,6 +24,9 @@ function parade_edit_entity_type_build(array &$entity_types) {
   // Add custom form display for preferences modal.
   $node_type = $entity_types['node'];
   $node_type->setFormClass('preferences', '\Drupal\parade_edit\Form\ParadeEditModalPreferencesForm');
+
+  // Override Geysir forms to our.
+  $entity_types['paragraph']->setFormClass('geysir_modal_edit', '\Drupal\parade_edit\Form\ParadeEditGeysirModalParagraphForm');
 }
 
 /**
@@ -153,6 +157,20 @@ function parade_edit_preprocess_node(&$variables) {
     ];
     $variables['content']['_field_layout']['content']['parade_edit-preferences'] = $preferences;
   }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function parade_edit_entity_extra_field_info() {
+  return \Drupal::service('parade_edit.entity_type')->entityExtraFieldInfo();
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function parade_edit_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  \Drupal::service('parade_edit.entity_operations')->entityView($build, $entity, $display, $view_mode);
 }
 
 /**
