@@ -21,6 +21,8 @@ class ParadeEntityRevisionConverter extends WorkbenchModerationEntityRevisionCon
     // version route.
     if ('entity.node.latest_version' === $route_match->getRouteName() && $entity && $this->moderationInformation->isModeratableEntity($entity) && $this->moderationInformation->isLiveRevision($entity)) {
       $entity->setNewRevision(TRUE);
+      $entity->setRevisionCreationTime(\Drupal::time()->getRequestTime());
+      $entity->setRevisionUserId(\Drupal::currentUser()->id());
       $bundle = \Drupal::entityTypeManager()->getStorage('node_type')->load($entity->bundle());
       $default_moderation_state = $bundle->getThirdPartySetting('workbench_moderation', 'default_moderation_state');
       $entity->moderation_state->target_id = $default_moderation_state;
