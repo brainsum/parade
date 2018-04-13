@@ -86,12 +86,9 @@ class EntityTypeInfo {
    */
   public function entityExtraFieldInfo() {
     $return = [];
-    // @todo - check parade_demo enabled bundles.
-    $bundles = [
-      'node' => 'parade_onepage',
-    ];
-    foreach ($bundles as $entity => $bundle) {
-      $return[$entity][$bundle]['display']['parade_edit_moderation_control'] = [
+    $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
+    foreach (array_keys($bundles) as $bundle) {
+      $return['node'][$bundle]['display']['parade_edit_moderation_control'] = [
         'label' => $this->t('Parade edit moderation control'),
         'description' => $this->t("Status listing and form for the entitiy's moderation state."),
         'weight' => -20,

@@ -35,9 +35,9 @@ class LatestRevisionCheck extends WorkbenchModerationLatestRevisionCheck {
   public function access(Route $route, RouteMatchInterface $route_match) {
     $entity = $this->loadEntity($route, $route_match);
 
-    // @todo - check parade_demo enabled bundles.
     // Always show this TAB for parade_demo enabled moderatable entity.
-    if ('parade_onepage' === $entity->bundle()) {
+    $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
+    if (in_array($entity->bundle(), array_keys($bundles))) {
       return $this->moderationInfo->isModeratableEntity($entity)
         ? AccessResult::allowed()->addCacheableDependency($entity)
         : AccessResult::forbidden()->addCacheableDependency($entity);

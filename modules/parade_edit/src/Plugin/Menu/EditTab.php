@@ -13,8 +13,8 @@ class EditTab extends WorkbenchModerationEditTab {
    * {@inheritdoc}
    */
   public function getTitle() {
-    // @todo - check parade_demo enabled bundles.
-    if ($this->moderationInfo->isModeratableEntity($this->entity) && 'parade_onepage' === $this->entity->bundle()) {
+    $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
+    if ($this->moderationInfo->isModeratableEntity($this->entity) && in_array($this->entity->bundle(), array_keys($bundles))) {
       return $this->t('Edit');
     }
 
