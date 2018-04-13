@@ -431,8 +431,34 @@ article.node--unpublished {
 .geysir-dialog table > tbody > tr {
     height: 75px;
     border-radius: 0;
-    background: #f0f0f0;
     border-bottom: 10px solid #ffffff;
+}
+
+.geysir-dialog .paragraphs-subform > .form-wrapper {
+    margin: 1em 0;
+}
+
+.geysir-dialog .js-form-item label,
+.geysir-dialog .js-form-item .fieldset-legend {
+    font-size: 13px;
+    font-weight: 600;
+    color: gray;
+}
+
+.geysir-dialog select.form-select {
+    border: 1px solid #b8b8b8;
+    border-top-color: #999;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+    font-size: 1em;
+    color: #595959;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.geysir-dialog table.parade_paragraphs > tbody > tr .paragraph-type-top {
+    position: absolute;
+    right: 35px;
+    top: 4px;
 }
 
 /* Popup window's buttons */
