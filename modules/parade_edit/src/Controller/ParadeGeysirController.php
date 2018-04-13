@@ -94,7 +94,7 @@ class ParadeGeysirController extends GeysirModalController {
   }
 
   /**
-   * Preferencies modal - node edit without paragraph reference field.
+   * Preferences modal - node edit without paragraph reference field.
    *
    * {@inheritdoc}
    */
