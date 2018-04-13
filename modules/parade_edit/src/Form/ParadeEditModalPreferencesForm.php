@@ -105,6 +105,14 @@ class ParadeEditModalPreferencesForm extends NodeForm {
           '[data-history-node-id="' . $node->id() . '"]',
           \Drupal::entityTypeManager()->getViewBuilder($entity_type)->view($node, 'full')));
 
+      $node_revision = \Drupal::service('workbench_moderation.moderation_information')->getLatestRevision($entity_type, $node->id());
+      $moderationForm = \Drupal::formBuilder()
+        ->getForm(EntityModerationForm::class, $node_revision);
+      $response->addCommand(
+        new ReplaceCommand(
+          '#parade-edit-moderation-wrapper',
+          $moderationForm));
+
       $response->addCommand(new GeysirCloseModalDialogCommand());
     }
 
