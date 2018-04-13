@@ -261,7 +261,7 @@ article.node--unpublished {
     margin-bottom: 0;
 }
 
-.geysir-dialog .layout.layout--onecol {
+.geysir-dialog .paragraph-form .layout.layout--onecol {
     /* @todo: this should be hidden from backend */
     display: none;
 }
