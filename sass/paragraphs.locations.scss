@@ -2,10 +2,17 @@
 .paragraph--type--locations.paragraph--view-mode--default {
     &.layout--none {
         .field--name-parade-title,
+        .field--name-parade-title--wrapper,
         .field--name-parade-text,
         .field--name-parade-geofield {
             @media (min-width: 767px) {
                 width: 50%;
+            }
+        }
+
+        .field--name-parade-title--wrapper > .field--name-parade-title {
+            @media (min-width: 767px) {
+                width: 100%;
             }
         }
 
@@ -20,9 +27,13 @@
 
         @media (min-width: 767px) {
             .field--name-parade-title,
+            .field--name-parade-title--wrapper,
             .field--name-parade-text {
                 text-align: left;
                 float: left;
+            }
+            .field--name-parade-title--wrapper > .field--name-parade-title {
+                float: none;
             }
             // Map
             .field--name-parade-geofield {

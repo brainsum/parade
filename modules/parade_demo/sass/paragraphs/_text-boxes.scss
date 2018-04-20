@@ -27,7 +27,7 @@
   &.layout--contacts {
     // @fixme this is mess but was quick
     @media screen and (min-width: 768px) {
-      > .paragraph-inner > .field--name-parade-title {
+      > .paragraph-inner > .field--name-parade-title--wrapper {
         width: 33%;
         float: left;
       }
@@ -61,7 +61,7 @@
       .field--name-parade-title {
         margin-bottom: 0;
       }
-      .field--name-parade-title,
+      .field--name-parade-title--wrapper,
       .field--name-parade-text,
       .field--name-parade-call-to-action {
         width: 66%;

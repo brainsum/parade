@@ -32,6 +32,9 @@
           font-size: 16px;
           font-weight: 600;
           margin: 0 0 6px;
+        }
+
+        .field--name-parade-title--wrapper {
           max-width: 65%;
         }
       }
@@ -66,8 +69,11 @@
           font-size: 13px;
           font-weight: 600;
           margin: 0;
-          max-width: 65%;
           line-height: 75px;
+        }
+
+        field--name-parade-title--wrapper {
+          max-width: 65%;
         }
       }
     }

@@ -28,7 +28,7 @@
 
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social:hover {
   -webkit-transform: scale(1.1) translateZ(0);
-  transform: scale(1.1) translateZ(0);
+          transform: scale(1.1) translateZ(0);
   background-color: #ddd;
 }
 
@@ -51,3 +51,5 @@
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social-youtube {
   background: url("../images/youtube.svg") no-repeat center center;
 }
+
+/*# sourceMappingURL=css/paragraphs.social-links.css.map */

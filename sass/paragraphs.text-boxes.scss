@@ -15,9 +15,14 @@
         }
       }
       .field--name-parade-title,
+      .field--name-parade-title--wrapper,
       .field--name-parade-text {
         float: right;
         width: 66%;
+      }
+      .field--name-parade-title--wrapper > .field--name-parade-title {
+        float: none;
+        width: 100%;
       }
       .field--name-parade-title {
         padding: 20px 15px 0;
@@ -52,6 +57,7 @@
         }
 
         .field--name-parade-title,
+        .field--name-parade-title--wrapper,
         .field--name-parade-text {
           float: none;
           width: 100%;

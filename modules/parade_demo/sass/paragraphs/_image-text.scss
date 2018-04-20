@@ -39,7 +39,7 @@
       }
     }
 
-    .field--name-parade-title,
+    .field--name-parade-title--wrapper,
     .field--name-parade-text,
     .field--name-parade-call-to-action {
       @include md {
@@ -70,7 +70,7 @@
   &.layout--image_1st {
     @include md {
       // Title and Text
-      .field--name-parade-title,
+      .field--name-parade-title--wrapper,
       .field--name-parade-text,
       .field--name-parade-call-to-action{
         float: right;
@@ -92,8 +92,10 @@
   &.layout--image_1st_enhanced {
 
     // Title
-    .field--name-parade-title {
-      @include campaign-title-center;
+    .field--name-parade-title--wrapper {
+      .field--name-parade-title {
+        @include campaign-title-center;
+      }
       width: 100%;
     }
 
@@ -141,8 +143,10 @@
   &.layout--text_1st_enhanced {
 
     // Title
-    .field--name-parade-title {
-      @include campaign-title-center;
+    .field--name-parade-title--wrapper {
+      .field--name-parade-title {
+        @include campaign-title-center;
+      }
       width: 100%;
     }
 
@@ -197,7 +201,7 @@
       }
     }
 
-    .field--name-parade-title,
+    .field--name-parade-title--wrapper,
     .field--name-parade-text,
     .field--name-parade-call-to-action {
       @include md {
@@ -230,7 +234,7 @@
 
     @include md {
       // Title and Text
-      .field--name-parade-title,
+      .field--name-parade-title--wrapper,
       .field--name-parade-text,
       .field--name-parade-call-to-action {
         float: left;

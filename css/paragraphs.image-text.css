@@ -1,22 +1,32 @@
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title--wrapper,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title--wrapper,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title--wrapper,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title--wrapper,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     width: calc(50% - 0.8em);
   }
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image,
-.paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
+@media screen and (min-width: 768px) {
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title--wrapper > .field--name-parade-title, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title--wrapper > .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title--wrapper > .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title--wrapper > .field--name-parade-title {
+    width: 100%;
+  }
+}
+
+.paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
 .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image,
 .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
   margin: 1em 0 0;
@@ -24,8 +34,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     margin: 0;
@@ -35,8 +44,7 @@
 
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--image_1st .field--name-parade-text,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-title,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-text,
@@ -54,8 +62,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image,
-  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--none .field--name-parade-image, .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--none .field--name-parade-image,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--text_1st .field--name-parade-image {
     padding-left: 1.5em;
@@ -82,9 +89,7 @@
   border-radius: 3px;
 }
 
-.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action a:hover,
-.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action a:focus,
-.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action a:active,
+.paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action a:hover, .paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action a:focus, .paragraph--type--image-text.paragraph--view-mode--inverse .field--name-parade-call-to-action a:active,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-parade-call-to-action a:hover,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-parade-call-to-action a:focus,
 .paragraph--type--image-text.paragraph--view-mode--default .field--name-parade-call-to-action a:active {
@@ -93,8 +98,12 @@
 
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title--wrapper,
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-text {
     float: left;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-title--wrapper > .field--name-parade-title {
+    float: none;
   }
   .paragraph--type--image-text.paragraph--view-mode--inverse.layout--text_1st .field--name-parade-image {
     float: right;
@@ -104,8 +113,12 @@
 
 @media screen and (min-width: 768px) {
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title,
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title--wrapper,
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-text {
     float: right;
+  }
+  .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-title--wrapper > .field--name-parade-title {
+    float: none;
   }
   .paragraph--type--image-text.paragraph--view-mode--default.layout--image_1st .field--name-parade-image {
     float: left;
@@ -144,7 +157,7 @@
     margin: 2em 0 0 0;
     padding: 0;
     -webkit-transform: translateX(-2em);
-    transform: translateX(-2em);
+            transform: translateX(-2em);
     text-align: left;
     background: 0;
   }
@@ -184,7 +197,7 @@
     margin: 2em 0 0 0;
     padding: 0;
     -webkit-transform: translateX(-2em);
-    transform: translateX(-2em);
+            transform: translateX(-2em);
     text-align: left;
     background: 0;
   }
@@ -196,3 +209,5 @@
   margin-top: -1.5em;
   text-align: center;
 }
+
+/*# sourceMappingURL=css/paragraphs.image-text.css.map */

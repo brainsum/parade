@@ -17,11 +17,19 @@
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title--wrapper,
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title--wrapper,
 .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text {
   float: right;
   width: 66%;
+}
+
+.paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title--wrapper > .field--name-parade-title,
+.paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title--wrapper > .field--name-parade-title {
+  float: none;
+  width: 100%;
 }
 
 .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
@@ -60,8 +68,10 @@
     margin: 0 auto;
   }
   .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+  .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title--wrapper,
   .paragraph--type--text-boxes.paragraph--view-mode--custom.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text,
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title,
+  .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-title--wrapper,
   .paragraph--type--text-boxes.paragraph--view-mode--default.layout--rounded_image .field--name-parade-paragraphs .field--name-parade-text {
     float: none;
     width: 100%;
@@ -100,3 +110,5 @@
     width: calc(100% / 5 - 2 * 1em);
   }
 }
+
+/*# sourceMappingURL=css/paragraphs.text-boxes.css.map */

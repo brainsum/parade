@@ -4,10 +4,17 @@
   &.layout--text_1st,
   &.layout--image_1st {
     .field--name-parade-title,
+    .field--name-parade-title--wrapper,
     .field--name-parade-text,
     .field--name-parade-image {
       @media screen and (min-width: 768px) {
         width: calc(50% - 0.8em);
+      }
+    }
+
+    .field--name-parade-title--wrapper > .field--name-parade-title {
+      @media screen and (min-width: 768px) {
+        width: 100%;
       }
     }
 
@@ -77,8 +84,12 @@
     @media screen and (min-width: 768px) {
       // Title and Text
       .field--name-parade-title,
+      .field--name-parade-title--wrapper,
       .field--name-parade-text {
         float: left;
+      }
+      .field--name-parade-title--wrapper > .field--name-parade-title {
+        float: none;
       }
       // Image
       .field--name-parade-image {
@@ -96,8 +107,12 @@
     @media screen and (min-width: 768px) {
       // Title and Text
       .field--name-parade-title,
+      .field--name-parade-title--wrapper,
       .field--name-parade-text {
         float: right;
+      }
+      .field--name-parade-title--wrapper > .field--name-parade-title {
+        float: none;
       }
       // Image
       .field--name-parade-image {

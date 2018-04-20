@@ -1,18 +1,28 @@
 .paragraph--type--simple.paragraph--view-mode--inverse {
   &.layout--two-column-title-1st-inverse {
     .field--name-parade-title,
+    .field--name-parade-title--wrapper,
     .field--name-parade-text {
       @media screen and (min-width: 768px) {
         width: 50%;
+      }
+    }
+    .field--name-parade-title--wrapper > .field--name-parade-title {
+      @media screen and (min-width: 768px) {
+        width: 100%;
       }
     }
   }
 
   @media screen and (min-width: 768px) {
     &.layout--two-column-title-1st-inverse {
-      .field--name-parade-title {
+      .field--name-parade-title,
+      .field--name-parade-title--wrapper {
         float: left;
         text-align: left;
+      }
+      .field--name-parade-title--wrapper > .field--name-parade-title {
+        float: none;
       }
       .field--name-parade-text {
         float: right;
@@ -26,18 +36,28 @@
   // Inverse layout
   &.layout--two-column-content-1st-inverse {
     .field--name-parade-title,
+    .field--name-parade-title--wrapper,
     .field--name-parade-text {
       @media screen and (min-width: 768px) {
         width: 50%;
+      }
+    }
+    .field--name-parade-title--wrapper > .field--name-parade-title {
+      @media screen and (min-width: 768px) {
+        width: 100%;
       }
     }
   }
 
   @media screen and (min-width: 768px) {
     &.layout--two-column-content-1st-inverse {
-      .field--name-parade-title {
+      .field--name-parade-title,
+      .field--name-parade-title--wrapper {
         float: right;
         text-align: right;
+      }
+      .field--name-parade-title--wrapper > .field--name-parade-title {
+        float: none;
       }
       .field--name-parade-text {
         float: left;

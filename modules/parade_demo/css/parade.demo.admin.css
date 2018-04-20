@@ -1528,7 +1528,7 @@ details summary:hover {
 }
 
 @media (min-width: 767px) {
-  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-title,
+  .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-title--wrapper,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-lead-text,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-marketo-form,
   .paragraph--type--marketo-form.paragraph--view-mode--default .field--name-parade-text {
@@ -5295,6 +5295,9 @@ a.tabledrag-handle:focus .handle {
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 6px;
+}
+
+.field--name-parade-onepage-sections table.parade_onepage_sections > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title--wrapper {
   max-width: 65%;
 }
 
@@ -5331,8 +5334,11 @@ a.tabledrag-handle:focus .handle {
   font-size: 13px;
   font-weight: 600;
   margin: 0;
-  max-width: 65%;
   line-height: 75px;
+}
+
+.field--name-parade-onepage-sections table.parade_paragraphs > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top field--name-parade-title--wrapper {
+  max-width: 65%;
 }
 
 .node-parade-onepage-form .field--name-parade-onepage-menu,
