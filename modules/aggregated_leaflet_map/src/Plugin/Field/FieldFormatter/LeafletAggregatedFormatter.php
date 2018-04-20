@@ -6,6 +6,7 @@ use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\leaflet\Plugin\Field\FieldFormatter\LeafletDefaultFormatter;
+use Drupal\leaflet\LeafletService;
 
 /**
  * Plugin implementation of the 'leaflet_default' formatter.
@@ -32,8 +33,8 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
    *
    * {@inheritdoc}
    */
-  public function __construct($pluginId, $pluginDefinition, FieldDefinitionInterface $fieldDefinition, array $settings, $label, $viewMode, array $thirdPartySettings) {
-    parent::__construct($pluginId, $pluginDefinition, $fieldDefinition, $settings, $label, $viewMode, $thirdPartySettings);
+  public function __construct($pluginId, $pluginDefinition, FieldDefinitionInterface $fieldDefinition, array $settings, $label, $viewMode, array $thirdPartySettings, LeafletService $leaflet_service) {
+    parent::__construct($pluginId, $pluginDefinition, $fieldDefinition, $settings, $label, $viewMode, $thirdPartySettings, $leaflet_service);
 
     // @todo: Proper dependency injection.
     $this->entityFieldManager = \Drupal::service('entity_field.manager');
@@ -116,7 +117,7 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
     }
 
     foreach ($items as $delta => $item) {
-      $features = leaflet_process_geofield($item->value);
+      $features = $this->leafletService->leafletProcessGeofield($item->value);
 
       // Set the fallback popup.
       $features[0]['popup'] = $this->t('Location @delta', ['@delta' => $delta]);
