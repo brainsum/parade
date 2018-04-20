@@ -117,12 +117,6 @@ function parade_edit_library_info_alter(&$libraries, $extension) {
       unset($libraries['global-styling']['css']['component']['css/components/tabs.css']);
     }
   }
-  elseif ($extension == "seven") {
-    $route_name = \Drupal::routeMatch()->getRouteName();
-    if (in_array($route_name, ['entity.node.edit_form'])) {
-      unset($libraries['global-styling']['css']['component']['css/components/tabs.css']);
-    }
-  }
 }
 
 /**
@@ -293,32 +287,8 @@ function parade_edit_preprocess_links(&$variables) {
  */
 function parade_edit_page_attachments(array &$page) {
   $attributes = Drupal::request()->attributes;
-  if (in_array($attributes->get('_route'), ['entity.node.canonical', 'entity.node.edit_form', 'entity.node.latest_version'])) {
+  if (in_array($attributes->get('_route'), ['entity.node.canonical', 'entity.node.latest_version'])) {
     $page['#attached']['library'][] = 'parade_edit/tabs';
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function parade_edit_preprocess_menu_local_task(&$variables) {
-  /* @var Drupal\Core\Url $url */
-  $url = $variables['link']['#url'];
-  switch ($url->getRouteName()) {
-    case "entity.node.canonical":
-      $variables['attributes']['class'][] = 'view';
-      $variables['attributes']['class'][] = 'bordered';
-      break;
-
-    case "entity.node.edit_form":
-      $variables['attributes']['class'][] = 'normal-edit';
-      $variables['attributes']['class'][] = 'bordered';
-      break;
-
-    case "entity.node.latest_version":
-      $variables['attributes']['class'][] = 'geysir-edit';
-      $variables['attributes']['class'][] = 'bordered';
-      break;
   }
 }
 
