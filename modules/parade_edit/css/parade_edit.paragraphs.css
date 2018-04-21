@@ -492,3 +492,60 @@ article.node--unpublished {
 .geysir-dialog .ui-dialog .ui-dialog-buttonpane button {
     margin: 0;
 }
+
+
+/* Preferencies popup fixes. */
+#geysir-modal {
+    background-color: #f0f0f0;
+    font-size: 13px;
+}
+
+.geysir-dialog input.form-autocomplete,
+.geysir-dialog input.form-text,
+.geysir-dialog input.form-tel,
+.geysir-dialog input.form-email,
+.geysir-dialog input.form-url,
+.geysir-dialog input.form-search,
+.geysir-dialog input.form-number,
+.geysir-dialog input.form-color,
+.geysir-dialog input.form-file,
+.geysir-dialog input.form-date,
+.geysir-dialog input.form-time,
+.geysir-dialog textarea.form-textarea {
+    background-color: #f6f6f6;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #565454;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    border-radius: 2px;
+    border-style: solid;
+    box-shadow: none;
+}
+
+.geysir-dialog .node-campaign-preferences-form .field--name-title {
+    background: transparent;
+    padding: 0 25px 15px;
+}
+
+.geysir-dialog .node-campaign-preferences-form .field--name-title input {
+    font-size: 32px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    font-weight: 300;
+    border-bottom: 1px solid #999999;
+    border-radius: 0;
+}
+
+.geysir-dialog .node-campaign-preferences-form .form-item {
+    margin: 0.75em 0;
+}
+
+.geysir-dialog .node-campaign-preferences-form .form-wrapper details {
+    border: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
