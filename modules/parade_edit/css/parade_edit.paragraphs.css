@@ -492,34 +492,3 @@ article.node--unpublished {
 .geysir-dialog .ui-dialog .ui-dialog-buttonpane button {
     margin: 0;
 }
-
-/* Preferences */
-#parade-edit-preferences-wrapper {
-    position: fixed;
-    top: 159px;
-    z-index: 600;
-    background-color: white;
-    width: 100%;
-    padding: 13.5px 0;
-}
-
-#parade-edit-preferences-wrapper a {
-    font-size: 13px;
-    color: white;
-    padding: 13.5px 52px 13.5px 16px;
-    font-weight: normal;
-    position: relative;
-}
-
-#parade-edit-preferences-wrapper a:after {
-    content: " ";
-    background-image: url(../images/geysir-prefs.svg);
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    background-size: 22px;
-    position: absolute;
-    top: 10px;
-    right: 16px;
-}
