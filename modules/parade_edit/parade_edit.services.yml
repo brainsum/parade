@@ -5,6 +5,7 @@ services:
       - { name: event_subscriber }
   parade_edit.entity_type:
     class: Drupal\parade_edit\EntityTypeInfo
+    arguments: ['@current_user']
   parade_edit.entity_operations:
     class: Drupal\parade_edit\EntityOperations
     arguments: ['@workbench_moderation.moderation_information', '@form_builder']

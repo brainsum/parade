@@ -105,7 +105,7 @@ class EntityModerationForm extends FormBase {
         $form['actions'][$group][$stateId] = [
           '#type' => 'submit',
           '#name' => 'state_' . $stateId,
-          '#value' => $label,
+          '#value' => current($label),
         ];
       }
     }
