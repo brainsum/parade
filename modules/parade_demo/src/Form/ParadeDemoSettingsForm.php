@@ -228,6 +228,8 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
       ->save();
 
     parent::submitForm($form, $form_state);
+
+    \Drupal::cache('render')->deleteAll();
   }
 
 }
