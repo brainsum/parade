@@ -16,6 +16,7 @@ use Drupal\Core\Url;
 use Drupal\paragraphs\ParagraphInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\devel\EntityTypeInfo;
 
 /**
  * Implements hook_entity_type_build().
@@ -166,6 +167,13 @@ function parade_edit_preprocess_node(&$variables) {
     ];
     $variables['content']['_field_layout']['content']['parade_edit-preferences'] = $preferences;
   }
+}
+
+/**
+ * Implements hook_entity_operation().
+ */
+function parade_edit_entity_operation(EntityInterface $entity) {
+  return \Drupal::service('parade_edit.entity_type')->entityOperation($entity);
 }
 
 /**

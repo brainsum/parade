@@ -2,7 +2,12 @@
 
 namespace Drupal\parade_edit;
 
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\Session\AccountInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Url;
 
 /**
  * Service class for manipulating entity type information.
@@ -10,26 +15,34 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
  * This class contains primarily bridged hooks for compile-time or
  * cache-clear-time hooks. Runtime hooks should be placed in EntityOperations.
  */
-class EntityTypeInfo {
+class EntityTypeInfo implements ContainerInjectionInterface {
 
   use StringTranslationTrait;
 
   /**
-   * Adds devel links to appropriate entity types.
+   * The current user.
    *
-   * This is an alter hook bridge.
-   *
-   * @param \Drupal\Core\Entity\EntityTypeInterface[] $entity_types
-   *   The master entity type list to alter.
-   *
-   * @see hook_entity_type_alter()
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $currentUser;
 
-  public function entityTypeAlter(array &$entity_types) {
-    foreach ($entity_types as $entity_type_id => $entity_type) {
-      if (($entity_type->getFormClass('default') || $entity_type->getFormClass('edit')) && $entity_type->hasLinkTemplate('edit-form')) {
-        $entity_type->setLinkTemplate('devel-load', "/devel/$entity_type_id/{{$entity_type_id}}");
-      }
-    }
+  /**
+   * EntityTypeInfo constructor.
+   *
+   * @param \Drupal\Core\Session\AccountInterface $current_user
+   *   Current user.
+   */
+  public function __construct(AccountInterface $current_user) {
+    $this->currentUser = $current_user;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('current_user')
+    );
   }
 
   /**
@@ -42,20 +55,21 @@ class EntityTypeInfo {
    *   An array of operation definitions.
    *
    * @see hook_entity_operation()
-
+   */
   public function entityOperation(EntityInterface $entity) {
-    $operations = [];dpm('1');
-//    if ($this->currentUser->hasPermission('view latest version')) {dpm('2');
-//      if ('node' === $entity->getEntityType()->id() && 'parade_onepage' === $entity->bundle()) {
+    $operations = [];
+    if ($this->currentUser->hasPermission('view latest version')) {
+      $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
+      if ('node' === $entity->getEntityType()->id() && in_array($entity->bundle(), array_keys($bundles))) {
         $operations['parade_edit'] = [
-          'title' => $this->t('Try new editor'),
-          'weight' => 100,
+          'title' => $this->t('Edit with the new editor'),
+          'weight' => 10,
           'url' => Url::fromRoute('entity.node.latest_version', ['node' => $entity->id()]),
         ];
-//      }
-//    }
+      }
+    }
     return $operations;
-  }   */
+  }
 
   /**
    * Gets the "extra fields" for a bundle.
@@ -80,9 +94,9 @@ class EntityTypeInfo {
    *   - edit: (optional) String containing markup (normally a link) used as the
    *     element's 'edit' operation in the administration interface. Only for
    *     'form' context.
-   *   - delete: (optional) String containing markup (normally a link) used as the
-   *     element's 'delete' operation in the administration interface. Only for
-   *     'form' context.
+   *   - delete: (optional) String containing markup (normally a link) used as
+   *     the element's 'delete' operation in the administration interface. Only
+   *     for 'form' context.
    */
   public function entityExtraFieldInfo() {
     $return = [];
