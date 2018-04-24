@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\TypedData\TranslatableInterface;
 
 /**
- * Defines a class for Latest version TAB to autocreating draft version if needed.
+ * Defines a class for Latest version TAB to autocreating draft.
  */
 class ParadeEntityRevisionConverter extends WorkbenchModerationEntityRevisionConverter {
 
@@ -16,10 +16,11 @@ class ParadeEntityRevisionConverter extends WorkbenchModerationEntityRevisionCon
    */
   public function convert($value, $definition, $name, array $defaults) {
     $entity = parent::convert($value, $definition, $name, $defaults);
-    $route_match = \Drupal::routeMatch();
-    // Create new draft revision if doesn't exist and we are on the latest
-    // version route.
-    if ('entity.node.latest_version' === $route_match->getRouteName() && $entity && $this->moderationInformation->isModeratableEntity($entity) && $this->moderationInformation->isLiveRevision($entity)) {
+    // Create new draft revision if doesn't exist.
+    /* @todo - refactor: create only on latest route, doesn't work:
+     * \Drupal::routeMatch()->getRouteName() === 'entity.node.latest_version'
+     */
+    if ($entity && $this->moderationInformation->isModeratableEntity($entity) && $this->moderationInformation->isLiveRevision($entity)) {
       $entity->setNewRevision(TRUE);
       $entity->setRevisionCreationTime(\Drupal::time()->getRequestTime());
       $entity->setRevisionUserId(\Drupal::currentUser()->id());
