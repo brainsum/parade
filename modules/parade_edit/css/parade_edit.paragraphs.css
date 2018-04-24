@@ -69,11 +69,11 @@
 }
 
 .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li {
-    z-index: 101;
+    z-index: 501;
 }
 
 .geysir-field-paragraph-wrapper > .geysir-field-paragraph-links li {
-    z-index: 100;
+    z-index: 500;
 }
 
 .geysir-field-paragraph-links li {
