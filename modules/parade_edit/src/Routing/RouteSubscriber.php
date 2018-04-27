@@ -19,5 +19,11 @@ class RouteSubscriber extends RouteSubscriberBase {
       $defaults['_controller'] = '\Drupal\parade_edit\Controller\ParadeGeysirController::add';
       $route->setDefaults($defaults);
     }
+    // Override "geysir.modal.edit_form" route with custom controller.
+    if ($route = $collection->get('geysir.modal.edit_form')) {
+      $defaults = $route->getDefaults();
+      $defaults['_controller'] = '\Drupal\parade_edit\Controller\ParadeGeysirController::edit';
+      $route->setDefaults($defaults);
+    }
   }
 }

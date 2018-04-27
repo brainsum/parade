@@ -49,7 +49,7 @@ class ParadeGeysirController extends GeysirModalController {
   }
 
   /**
-   * Override default to add empty button array.
+   * Override default to add empty button array and overwrite class.
    *
    * {@inheritdoc}
    */
@@ -60,32 +60,55 @@ class ParadeGeysirController extends GeysirModalController {
 
       if ($bundle) {
         $newParagraph = Paragraph::create(['type' => $bundle]);
-        $form = $this->entityFormBuilder()->getForm($newParagraph, 'geysir_modal_add', []);
+        $form = $this->entityFormBuilder()
+          ->getForm($newParagraph, 'geysir_modal_add', []);
 
-        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => []]));
+        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => [], 'dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
       }
       else {
-        $entity = $this->entityTypeManager()->getStorage($parent_entity_type)->loadRevision($parent_entity_revision);
+        $entity = $this->entityTypeManager()
+          ->getStorage($parent_entity_type)
+          ->loadRevision($parent_entity_revision);
         $bundle_fields = $this->entityFieldManager->getFieldDefinitions($parent_entity_type, $entity->bundle());
         $field_definition = $bundle_fields[$field];
         $bundles = $field_definition->getSetting('handler_settings')['target_bundles'];
 
         $routeParams = [
-          'parent_entity_type'   => $parent_entity_type,
-          'parent_entity_bundle' => $parent_entity_bundle,
+          'parent_entity_type'     => $parent_entity_type,
+          'parent_entity_bundle'   => $parent_entity_bundle,
           'parent_entity_revision' => $parent_entity_revision,
-          'field'                => $field,
-          'field_wrapper_id'     => $field_wrapper_id,
-          'delta'                => $delta,
-          'paragraph'            => $paragraph->id(),
-          'paragraph_revision'   => $paragraph->getRevisionId(),
-          'position'             => $position,
-          'js'                   => $js,
+          'field'                  => $field,
+          'field_wrapper_id'       => $field_wrapper_id,
+          'delta'                  => $delta,
+          'paragraph'              => $paragraph->id(),
+          'paragraph_revision'     => $paragraph->getRevisionId(),
+          'position'               => $position,
+          'js'                     => $js,
         ];
 
-        $form = \Drupal::formBuilder()->getForm('\Drupal\geysir\Form\GeysirModalParagraphAddSelectTypeForm', $routeParams, $bundles);
-        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => []]));
+        $form = \Drupal::formBuilder()
+          ->getForm('\Drupal\geysir\Form\GeysirModalParagraphAddSelectTypeForm', $routeParams, $bundles);
+        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => [], 'dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
       }
+
+      return $response;
+    }
+
+    return $this->t('Javascript is required for this functionality to work properly.');
+  }
+
+  /**
+   * Overwrite class.
+   *
+   * {@inheritdoc}
+   */
+  public function edit($parent_entity_type, $parent_entity_bundle, $parent_entity_revision, $field, $field_wrapper_id, $delta, $paragraph, $paragraph_revision, $js = 'nojs') {
+    if ($js == 'ajax') {
+      $response = new AjaxResponse();
+      $form = $this->entityFormBuilder()
+        ->getForm($paragraph, 'geysir_modal_edit', []);
+      $paragraph_title = $this->getParagraphTitle($parent_entity_type, $parent_entity_bundle, $field);
+      $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Edit @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ['dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
 
       return $response;
     }
@@ -106,7 +129,8 @@ class ParadeGeysirController extends GeysirModalController {
       ];
       $response = new AjaxResponse();
       $entity_revision = $this->moderationInformation->getLatestRevision($entity_type, $node->id());
-      $form = $this->entityFormBuilder()->getForm($entity_revision, 'preferences', []);
+      $form = $this->entityFormBuilder()
+        ->getForm($entity_revision, 'preferences', []);
       $form['#attributes']['class'][] = 'node-parade-onepage-edit-form';
       $form['#attributes']['class'][] = 'node-parade-onepage-form';
       $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Edit %label', ['%label' => $node->label()]), render($form), $options));
