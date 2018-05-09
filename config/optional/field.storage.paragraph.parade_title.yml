@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: mqRxj53aI69yo4G7fH5hPX6QvSrt5l16yOUYF3o-GJc
 id: paragraph.parade_title
 field_name: parade_title
 entity_type: paragraph

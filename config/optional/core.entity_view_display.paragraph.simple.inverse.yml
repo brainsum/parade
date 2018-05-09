@@ -14,8 +14,6 @@ dependencies:
   module:
     - parade
     - text
-_core:
-  default_config_hash: SDBKgp1gB5x36hioDWEYblxXLqeQwvU_0Kk0nZ0xxJg
 id: paragraph.simple.inverse
 targetEntityType: paragraph
 bundle: simple

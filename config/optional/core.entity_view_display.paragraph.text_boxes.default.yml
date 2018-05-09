@@ -16,8 +16,6 @@ dependencies:
     - entity_reference_revisions
     - parade
     - text
-_core:
-  default_config_hash: cU_EEl_OnMMXYzgmtFdQbYzJo9jTAmrIsF3Qm-L2ZS4
 id: paragraph.text_boxes.default
 targetEntityType: paragraph
 bundle: text_boxes

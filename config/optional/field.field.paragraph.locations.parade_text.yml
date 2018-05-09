@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.locations
   module:
     - text
-_core:
-  default_config_hash: ugoNyjs6_2PMwzhDo3gzggE90-y2IVzyq319qvHeGzE
 id: paragraph.locations.parade_text
 field_name: parade_text
 entity_type: paragraph

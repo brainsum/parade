@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_box
   module:
     - text
-_core:
-  default_config_hash: sfnOpn3zxKWELX3Hg_CG1iKq4p0uoHvxAvZ6AWSA51Y
 id: paragraph.text_box.parade_text
 field_name: parade_text
 entity_type: paragraph

@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_layout
     - paragraphs.paragraphs_type.text_boxes
-_core:
-  default_config_hash: SH-q2OV7NRz6m-pl9ItZXUWq8ZpcmbjtV5_rHZbrjRQ
 id: paragraph.text_boxes.parade_layout
 field_name: parade_layout
 entity_type: paragraph

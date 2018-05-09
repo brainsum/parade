@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: cdRbfs7Ni9ZzUkkmIR_MAI1XX9koDARGDnQX_qvZTBE
 id: paragraph.parade_boxes_per_row
 field_name: parade_boxes_per_row
 entity_type: paragraph

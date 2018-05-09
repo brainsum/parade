@@ -8,8 +8,6 @@ dependencies:
     - field.field.paragraph.chart_box.parade_value
     - field.field.paragraph.chart_box.parade_with_pie
     - paragraphs.paragraphs_type.chart_box
-_core:
-  default_config_hash: vlyNaPsc6npHBm2AMkXt_CjIvI4MXmsK5wvREXSk02k
 id: paragraph.chart_box.preview
 targetEntityType: paragraph
 bundle: chart_box

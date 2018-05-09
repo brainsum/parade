@@ -9,8 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.chart_box
   module:
     - text
-_core:
-  default_config_hash: sDZzzB7BstiteicdXX2a0LfRc2pNZ-7Rte2sJsQHEZU
 id: paragraph.chart_box.default
 targetEntityType: paragraph
 bundle: chart_box

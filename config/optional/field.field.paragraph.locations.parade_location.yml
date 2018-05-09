@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_location
     - paragraphs.paragraphs_type.locations
-_core:
-  default_config_hash: E3nPVO2B-t4QAsJGrZSO41YZfRC1ZuQ2GvQD1qe1Yac
 id: paragraph.locations.parade_location
 field_name: parade_location
 entity_type: paragraph

@@ -12,8 +12,6 @@ dependencies:
     - image
     - parade
     - text
-_core:
-  default_config_hash: jSrJQ8FL4odiU0M_KlH8xZueFCaOYcoi808LNPtDLMg
 id: paragraph.text_box.default
 targetEntityType: paragraph
 bundle: text_box

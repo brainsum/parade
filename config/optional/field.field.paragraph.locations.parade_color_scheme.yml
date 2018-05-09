@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_color_scheme
     - paragraphs.paragraphs_type.locations
-_core:
-  default_config_hash: z7dAgO4i0HJf0v6FU9TRNygGkonVPR_NfDEPrDbuvtE
 id: paragraph.locations.parade_color_scheme
 field_name: parade_color_scheme
 entity_type: paragraph

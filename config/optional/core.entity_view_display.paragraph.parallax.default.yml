@@ -12,8 +12,6 @@ dependencies:
     - paragraphs.paragraphs_type.parallax
   module:
     - text
-_core:
-  default_config_hash: T9GL0hzLdGpfp8L445u7kN0-GQPFTe12T5RGuuAWZTo
 id: paragraph.parallax.default
 targetEntityType: paragraph
 bundle: parallax

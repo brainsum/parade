@@ -4,8 +4,6 @@ dependencies:
   module:
     - classy_paragraphs
     - paragraphs
-_core:
-  default_config_hash: KrbupiNQjQ-GWzldFq8Bn7gO5Yb7ufo3fFvW9c_jOhw
 id: paragraph.parade_color_scheme
 field_name: parade_color_scheme
 entity_type: paragraph

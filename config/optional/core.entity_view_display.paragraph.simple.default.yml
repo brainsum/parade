@@ -13,8 +13,6 @@ dependencies:
   module:
     - parade
     - text
-_core:
-  default_config_hash: qwHtYXNPNEeXZcsSCRRhP4z57-zmnj1Jb6N1j9_wupU
 id: paragraph.simple.default
 targetEntityType: paragraph
 bundle: simple

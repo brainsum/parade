@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: 6EnBTw5kP3QRpuLAKjLcL_3kVRfFa7D6pL1fP8swiOw
 id: paragraph.parade_enable_parallax
 field_name: parade_enable_parallax
 entity_type: paragraph

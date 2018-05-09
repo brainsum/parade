@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_boxes
   module:
     - view_mode_selector
-_core:
-  default_config_hash: _vj8zKXid-q3lO4m39vaZkEtiuB1IAW4jzgKLmHxXuM
 id: paragraph.text_boxes.parade_view_mode
 field_name: parade_view_mode
 entity_type: paragraph

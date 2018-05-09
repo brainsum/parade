@@ -12,8 +12,6 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: v9wHgG9EVwGW7GNC_swo4mz06Gq9AelHFhzc_8LZxZ4
 id: paragraph.image_text.parade_image
 field_name: parade_image
 entity_type: paragraph

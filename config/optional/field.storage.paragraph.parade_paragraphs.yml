@@ -4,8 +4,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-_core:
-  default_config_hash: 24_7Z1A7s8twgaB0rJpIfG0DImLye6OzSvJQeJSu1Tc
 id: paragraph.parade_paragraphs
 field_name: parade_paragraphs
 entity_type: paragraph

@@ -14,8 +14,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_boxes
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: WrTNNXLcpa7jx7Ntt8ZLbjBpU1VfLBTwionCQu8EGKg
 id: paragraph.text_boxes.custom
 targetEntityType: paragraph
 bundle: text_boxes

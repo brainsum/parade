@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.image_text
-_core:
-  default_config_hash: 9zqPsFO5KS6Kt3TK7TYULNDCn-_3ZPTmLe70j0N6ho0
 id: paragraph.image_text.parade_title
 field_name: parade_title
 entity_type: paragraph

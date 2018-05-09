@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.header
   module:
     - file
-_core:
-  default_config_hash: hG_r3SrIMUT7XJzBJcDaWDVtdncIBq7oR83Tmnu0sxg
 id: paragraph.header.parade_background
 field_name: parade_background
 entity_type: paragraph

@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.text_box
-_core:
-  default_config_hash: bUD_MRQRB563FdLppNR31MVcWLYVo1wnIRgX4z9L3pc
 id: paragraph.text_box.parade_title
 field_name: parade_title
 entity_type: paragraph
