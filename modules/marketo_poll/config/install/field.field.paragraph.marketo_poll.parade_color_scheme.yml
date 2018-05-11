@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - marketo_poll
-_core:
-  default_config_hash: 9J_RNGsZe_rCn6LOylib2PqNhEjqW4JLwld9THjhujg
 id: paragraph.marketo_poll.parade_color_scheme
 field_name: parade_color_scheme
 entity_type: paragraph

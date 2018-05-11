@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - marketo_poll
-_core:
-  default_config_hash: 0MW08gGEJtdfTcfR-1QEQbISw9tJfvA7IIGFwYIcIQE
 id: paragraph.marketo_poll.parade_title
 field_name: parade_title
 entity_type: paragraph

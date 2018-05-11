@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_layout
     - paragraphs.paragraphs_type.marketo_form
-_core:
-  default_config_hash: a5efWZqLIoye3uumsXtn5yp-PiPJ45GheVGTiT1QLQE
 id: paragraph.marketo_form.parade_layout
 field_name: parade_layout
 entity_type: paragraph

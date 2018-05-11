@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - marketo_form
-_core:
-  default_config_hash: J0WNgiMojo9YkbyYNtwfozn4Zn5oy-8HSkkn335FlWc
 id: paragraph.marketo_form.parade_enable_confirm_message
 field_name: parade_enable_confirm_message
 entity_type: paragraph

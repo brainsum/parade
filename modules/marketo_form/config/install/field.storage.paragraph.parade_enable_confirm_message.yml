@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: MRTz156kM_Hah83A-fQTbCfYVUMMLd-xeVv0SjPOuKY
 id: paragraph.parade_enable_confirm_message
 field_name: parade_enable_confirm_message
 entity_type: paragraph

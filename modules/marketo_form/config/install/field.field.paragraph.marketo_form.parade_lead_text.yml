@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - marketo_form
-_core:
-  default_config_hash: Anrbp2Q3XH2BkSoyYmhbkBcitlwTJlGjG9-Js-86aD0
 id: paragraph.marketo_form.parade_lead_text
 field_name: parade_lead_text
 entity_type: paragraph

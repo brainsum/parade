@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_enable_linkedin_autofill
     - paragraphs.paragraphs_type.marketo_form
-_core:
-  default_config_hash: pcV8-ZRkE0Rvib1DEI5pZ8lBpatDMe9U8EmGSm7l9tU
 id: paragraph.marketo_form.parade_enable_linkedin_autofill
 field_name: parade_enable_linkedin_autofill
 entity_type: paragraph

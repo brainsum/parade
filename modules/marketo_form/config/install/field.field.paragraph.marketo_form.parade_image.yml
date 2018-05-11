@@ -15,8 +15,6 @@ third_party_settings:
       file: file
       alt: '0'
       title: '0'
-_core:
-  default_config_hash: gXU27JuMTX2tnGFT7vtPMkNCT-w4rZPDqSwbx6kh-Zg
 id: paragraph.marketo_form.parade_image
 field_name: parade_image
 entity_type: paragraph
