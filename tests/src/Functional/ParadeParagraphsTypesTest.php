@@ -48,6 +48,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Tests that the Paragraphs types exist.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   public function testParagraphTypesPage() {
     $this->drupalGet('admin/structure/paragraphs_type');
@@ -63,9 +65,15 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
    * Generic 'Check type' function.
    *
    * @param string $type
+   *   Paragraph type machine name.
    * @param array $expectedFields
+   *   Expected fields.
    * @param array $expectedViews
+   *   Expected view displays.
    * @param array $expectedForms
+   *   Expected form displays.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkParagraphTypeConfig($type, array $expectedFields, array $expectedViews, array $expectedForms) {
     $this->drupalGet('admin/structure/paragraphs_type/' . $type . '/fields');
@@ -93,6 +101,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Header'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkHeaderParagraphTypeConfig() {
     $typeData = get_parade_header_paragraphs_type_data();
@@ -101,6 +111,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Images'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkImagesParagraphTypeConfig() {
     $typeData = get_parade_images_paragraphs_type_data();
@@ -109,6 +121,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Locations'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkLocationsParagraphTypeConfig() {
     $typeData = get_parade_locations_paragraphs_type_data();
@@ -117,6 +131,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Parallax'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkParallaxParagraphTypeConfig() {
     $typeData = get_parade_parallax_paragraphs_type_data();
@@ -125,6 +141,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Simple'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkSimpleParagraphTypeConfig() {
     $typeData = get_parade_simple_paragraphs_type_data();
@@ -133,6 +151,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Social Links'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkSocialLinksParagraphTypeConfig() {
     $typeData = get_parade_social_links_paragraphs_type_data();
@@ -141,6 +161,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Text & Image'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkTextAndImageParagraphTypeConfig() {
     $typeData = get_parade_image_text_paragraphs_type_data();
@@ -149,6 +171,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Text Box'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkTextBoxParagraphTypeConfig() {
     $typeData = get_parade_text_box_paragraphs_type_data();
@@ -157,6 +181,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Check config for 'Text Boxes'.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkTextBoxesParagraphTypeConfig() {
     $typeData = get_parade_text_boxes_paragraphs_type_data();
@@ -165,6 +191,8 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
 
   /**
    * Tests that the Paragraphs types are configured correctly.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   public function testParagraphTypesConfiguration() {
     $this->checkHeaderParagraphTypeConfig();
