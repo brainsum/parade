@@ -4,8 +4,6 @@ dependencies:
   enforced:
     module:
       - marketo_form
-_core:
-  default_config_hash: P1fv22LTS1vk1qsDhOskRnd0MO9Ef2M7-ItvL0X1WMw
 name: whitepaper_a4
 label: 'Whitepaper (A4)'
 effects:

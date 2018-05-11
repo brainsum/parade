@@ -6,14 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.images
   module:
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
-_core:
-  default_config_hash: TvqtclXWDCxo9QSnoTua1XRP0P60yaRX7RhvraeRCOI
 id: paragraph.images.parade_images
 field_name: parade_images
 entity_type: paragraph

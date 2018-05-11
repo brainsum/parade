@@ -4,8 +4,6 @@ dependencies:
   module:
     - classy_paragraphs
     - paragraphs
-_core:
-  default_config_hash: s_aFqaGxMCjkoUd3aF2rKj8xpCuy9W8r3cqOYkukPIU
 id: paragraph.parade_layout
 field_name: parade_layout
 entity_type: paragraph

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_text
   module:
     - link
-_core:
-  default_config_hash: 32soasqKN52YrLh2brd7aiBwXOl8ipGbIhk4w-VwneE
 id: paragraph.image_text.parade_call_to_action
 field_name: parade_call_to_action
 entity_type: paragraph

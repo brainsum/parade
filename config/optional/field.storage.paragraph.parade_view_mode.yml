@@ -4,8 +4,6 @@ dependencies:
   module:
     - paragraphs
     - view_mode_selector
-_core:
-  default_config_hash: dWVymoxCZF8MnvlzG5sHm8XKnFvwENQyV4K8rA5LRbc
 id: paragraph.parade_view_mode
 field_name: parade_view_mode
 entity_type: paragraph

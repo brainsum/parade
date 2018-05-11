@@ -48,7 +48,6 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
 
     // Create a user with permissions to manage the Parade onepage content type.
     $permissions = [
-      'administer parade settings',
       'administer site configuration',
       'administer content types',
       'administer node fields',
@@ -67,6 +66,8 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
 
   /**
    * Tests the Parade onepage content type.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   public function testParadeOnepageContentType() {
     $contentType = 'parade_onepage';
@@ -81,6 +82,8 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
 
   /**
    * Checks whether the hook_install() created the default content.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   public function testParadeOnepageDefaultContent() {
     self::drupalGet('admin/content', [
@@ -117,9 +120,15 @@ class ParadeDemoContentTypeTest extends ParadeTestBase {
    * Generic 'Check type' function.
    *
    * @param string $type
+   *   Content type machine name.
    * @param array $expectedFields
+   *   Expected fields.
    * @param array $expectedViews
+   *   Expected view displays.
    * @param array $expectedForms
+   *   Expected form displays.
+   *
+   * @throws \Behat\Mink\Exception\ExpectationException
    */
   private function checkContentTypeConfig($type, array $expectedFields, array $expectedViews, array $expectedForms) {
     $this->drupalGet('admin/structure/types/manage/' . $type . '/fields');

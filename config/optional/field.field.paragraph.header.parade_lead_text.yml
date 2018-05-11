@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_lead_text
     - paragraphs.paragraphs_type.header
-_core:
-  default_config_hash: Xamj2ttCGfSOHbWc26LxET5538zRguiiXgmuRpYdQ64
 id: paragraph.header.parade_lead_text
 field_name: parade_lead_text
 entity_type: paragraph

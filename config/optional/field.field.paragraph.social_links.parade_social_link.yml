@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.social_links
   module:
     - link
-_core:
-  default_config_hash: AvLRHS2giehk5NHllPr36-4I9uxpG8aAIsgKtCXTxvU
 id: paragraph.social_links.parade_social_link
 field_name: parade_social_link
 entity_type: paragraph

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.parallax
   module:
     - text
-_core:
-  default_config_hash: b8uPZDbYiAJ5uRalPeUuCi45vklcEqrjQ6dNhvzct6g
 id: paragraph.parallax.parade_text
 field_name: parade_text
 entity_type: paragraph

@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_color_scheme
     - paragraphs.paragraphs_type.header
-_core:
-  default_config_hash: eGERNct7LsjLEccyS_oFP6WJ5xZcoG822Pd2o7OQX4Y
 id: paragraph.header.parade_color_scheme
 field_name: parade_color_scheme
 entity_type: paragraph
@@ -21,8 +19,8 @@ settings:
   handler_settings:
     filter:
       type: target_bundles
-      target_bundles: null
-      negate: 0
+      target_bundles: {  }
+      negate: false
     sort:
       field: _none
 field_type: entity_reference

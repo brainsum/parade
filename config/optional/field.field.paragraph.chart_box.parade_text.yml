@@ -7,8 +7,6 @@ dependencies:
   module:
     - text
 third_party_settings: {  }
-_core:
-  default_config_hash: Ot5geRujy5DFNSGll3hT91i3oqCgqk2hVXKxpewRsLI
 id: paragraph.chart_box.parade_text
 field_name: parade_text
 entity_type: paragraph

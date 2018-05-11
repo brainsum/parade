@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.parallax
   module:
     - file
-_core:
-  default_config_hash: E5DZPahIsfJ6HfQ9er_X5TVnRZXJKAIVXz1DCjKFCdY
 id: paragraph.parallax.parade_background
 field_name: parade_background
 entity_type: paragraph

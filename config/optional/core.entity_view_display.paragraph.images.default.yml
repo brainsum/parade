@@ -10,8 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.images
   module:
     - image
-_core:
-  default_config_hash: TUi-O3slrMy0WqO7ZBSH_M6sOiEdE9l760hi-LAdKMs
 id: paragraph.images.default
 targetEntityType: paragraph
 bundle: images

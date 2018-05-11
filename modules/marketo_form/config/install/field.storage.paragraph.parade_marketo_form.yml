@@ -7,8 +7,6 @@ dependencies:
   module:
     - marketo_form
     - paragraphs
-_core:
-  default_config_hash: 6pfK-kqqTATpJD3ovbLqQL_OoC33uFOu35gO9wTzpC4
 id: paragraph.parade_marketo_form
 field_name: parade_marketo_form
 entity_type: paragraph

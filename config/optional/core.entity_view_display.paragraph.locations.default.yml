@@ -12,8 +12,6 @@ dependencies:
   module:
     - aggregated_leaflet_map
     - text
-_core:
-  default_config_hash: l63DyW8CStymQaG2eB_vP8zTvLrhhOtgGMe-onSjyGs
 id: paragraph.locations.default
 targetEntityType: paragraph
 bundle: locations

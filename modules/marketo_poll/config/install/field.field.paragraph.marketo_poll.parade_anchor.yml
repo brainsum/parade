@@ -7,8 +7,6 @@ dependencies:
   enforced:
     module:
       - marketo_poll
-_core:
-  default_config_hash: QXNjiYNXl0ry7JRwjkOk2SzefU346fqFEI3iq3D6rvA
 id: paragraph.marketo_poll.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph

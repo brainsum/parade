@@ -13,8 +13,6 @@ dependencies:
     - paragraphs.paragraphs_type.header
   module:
     - link
-_core:
-  default_config_hash: UqHMr0pX7uJ88hLOPGyt9PqUMgo7x2C64LrgX0tYnA4
 id: paragraph.header.default
 targetEntityType: paragraph
 bundle: header

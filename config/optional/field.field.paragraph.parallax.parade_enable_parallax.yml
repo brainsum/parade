@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_enable_parallax
     - paragraphs.paragraphs_type.parallax
-_core:
-  default_config_hash: '-B4C_K7HxMcUhkv_ltyqfNVsDE_D1rIQxkBwu3NAVdM'
 id: paragraph.parallax.parade_enable_parallax
 field_name: parade_enable_parallax
 entity_type: paragraph

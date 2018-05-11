@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_text
   module:
     - text
-_core:
-  default_config_hash: tpGcmKRjU08tfLAe03VZ4kzICNKpw5RMMunD8mSkeLQ
 id: paragraph.image_text.parade_text
 field_name: parade_text
 entity_type: paragraph

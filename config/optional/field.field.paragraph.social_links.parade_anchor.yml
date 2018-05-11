@@ -4,23 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.parade_anchor
     - paragraphs.paragraphs_type.social_links
-  module:
-    - geocoder_field
-third_party_settings:
-  geocoder_field:
-    method: none
-    weight: '0'
-    geocode_field: parent_id
-    reverse_geocode_field: {  }
-    hidden: 0
-    disabled: 0
-    plugins: {  }
-    dumper: wkt
-    delta_handling: default
-    failure:
-      handling: preserve
-      status_message: true
-      log: true
 id: paragraph.social_links.parade_anchor
 field_name: parade_anchor
 entity_type: paragraph

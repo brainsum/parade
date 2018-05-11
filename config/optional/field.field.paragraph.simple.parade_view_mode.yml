@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.simple
   module:
     - view_mode_selector
-_core:
-  default_config_hash: PGCc5RlrG0n3Xr94yeQXMNW8zUNXmA6MST_BF7DribE
 id: paragraph.simple.parade_view_mode
 field_name: parade_view_mode
 entity_type: paragraph

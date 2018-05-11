@@ -9,11 +9,15 @@ dependencies:
     - field.field.paragraph.text_box.parade_title
     - paragraphs.paragraphs_type.text_box
   module:
+    - field_layout
     - image
+    - layout_discovery
     - parade
     - text
-_core:
-  default_config_hash: jSrJQ8FL4odiU0M_KlH8xZueFCaOYcoi808LNPtDLMg
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: paragraph.text_box.default
 targetEntityType: paragraph
 bundle: text_box
@@ -23,13 +27,14 @@ content:
     weight: 3
     label: hidden
     settings:
-      trim_length: '32'
+      trim_length: 32
       url_only: false
       url_plain: false
-      rel: 0
-      target: 0
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     type: link_call_to_action
+    region: content
   parade_image:
     weight: 1
     label: hidden

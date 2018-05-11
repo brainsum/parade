@@ -8,8 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.social_links
   module:
     - link
-_core:
-  default_config_hash: NuwiUb_Bdj1-XSqfI7zQw7Oqv93N6bgttl3aznl7j8Y
 id: paragraph.social_links.default
 targetEntityType: paragraph
 bundle: social_links

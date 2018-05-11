@@ -11,7 +11,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\parade\Plugin\Field\FieldWidget\InlineParagraphsWidget;
 
 /**
  * Plugin implementation of the 'Paragraphs with preview' widget.

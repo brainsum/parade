@@ -9,12 +9,12 @@ dependencies:
     - geofield
 third_party_settings:
   geocoder_field:
-    weight: '0'
+    weight: 0
     method: source
     geocode_field: parade_location
     reverse_geocode_field: {  }
-    hidden: 0
-    disabled: 0
+    hidden: false
+    disabled: false
     plugins:
       - googlemaps
       - bingmaps
@@ -26,8 +26,6 @@ third_party_settings:
       handling: preserve
       status_message: true
       log: true
-_core:
-  default_config_hash: nl0DZz-9erSEVAYzBCExnVrEVkgTSpa1W_7mn8tCoPY
 id: paragraph.locations.parade_geofield
 field_name: parade_geofield
 entity_type: paragraph

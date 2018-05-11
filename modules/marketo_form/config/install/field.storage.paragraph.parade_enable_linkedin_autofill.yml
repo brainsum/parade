@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: sAlRIOHQHGQ4hU8tmio8P5BqRruRofJDkMBvpkL47Ko
 id: paragraph.parade_enable_linkedin_autofill
 field_name: parade_enable_linkedin_autofill
 entity_type: paragraph

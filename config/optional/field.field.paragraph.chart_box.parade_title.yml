@@ -5,8 +5,6 @@ dependencies:
     - field.storage.paragraph.parade_title
     - paragraphs.paragraphs_type.chart_box
 third_party_settings: {  }
-_core:
-  default_config_hash: uIRgDWUJyvIn_IP9axEPK1E6Jco3ydaJb3nsMeeOHI8
 id: paragraph.chart_box.parade_title
 field_name: parade_title
 entity_type: paragraph

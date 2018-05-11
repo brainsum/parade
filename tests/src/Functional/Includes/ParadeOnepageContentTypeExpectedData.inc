@@ -22,6 +22,7 @@ function get_parade_onepage_content_type_data() {
 
   $views = [
     'default' => [
+      ['Content'],
       ['Menu', '- Hidden -', 'Link'],
       ['Sections', '- Hidden -', 'Rendered entity'],
       ['Machine name', 'Above', 'Machine name'],
