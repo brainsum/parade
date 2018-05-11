@@ -12,8 +12,14 @@ dependencies:
     - field.field.paragraph.simple.parade_view_mode
     - paragraphs.paragraphs_type.simple
   module:
+    - field_layout
+    - layout_discovery
     - parade
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: paragraph.simple.inverse
 targetEntityType: paragraph
 bundle: simple
@@ -24,12 +30,13 @@ content:
     weight: 2
     label: hidden
     settings:
-      trim_length: '32'
-      url_only: ''
-      url_plain: ''
-      rel: 0
-      target: 0
+      trim_length: 32
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
+    region: content
   parade_text:
     weight: 0
     label: hidden

@@ -6,12 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.image_text
   module:
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
 id: paragraph.image_text.parade_image
 field_name: parade_image
 entity_type: paragraph
