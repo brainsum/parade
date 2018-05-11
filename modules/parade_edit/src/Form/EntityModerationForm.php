@@ -84,10 +84,8 @@ class EntityModerationForm extends FormBase {
 
     if ($current_state) {
       $form['current'] = [
-        '#markup' => t('All changes saved as %moderation_state on %changed.', [
+        '#markup' => t('All changes saved as %moderation_state.', [
           '%moderation_state' => strtolower($current_state->label()),
-          '%changed' => \Drupal::service('date.formatter')
-            ->format($entity->getRevisionCreationTime(), 'short'),
         ]),
       ];
     }
