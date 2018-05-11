@@ -137,9 +137,15 @@ abstract class ParadeTestBase extends BrowserTestBase {
    *   The expected array.
    * @param array $actualArray
    *   The actual array.
+   * @param string $infoMessage
+   *   Optionally info message for fail result report.
    */
-  protected function assertArraysAreEqual(array $expectedArray, array $actualArray) {
-    self::assertCount(count($expectedArray), $actualArray, "Arrays don't have the same amount of values.");
+  protected function assertArraysAreEqual(array $expectedArray, array $actualArray, $infoMessage = NULL) {
+    if (!empty($infoMessage)) {
+      $infoMessage = ' at: ' . $infoMessage;
+    }
+
+    self::assertCount(count($expectedArray), $actualArray, "Arrays don't have the same amount of values." . $infoMessage);
 
     /** @var array $row */
     foreach ($expectedArray as $rInd => $row) {
@@ -152,10 +158,11 @@ abstract class ParadeTestBase extends BrowserTestBase {
           continue;
         }
 
-        self::fail(new FormattableMarkup('The expected value "@expVal" does not exist in row @rind. Actual value is "@actVal"', [
+        self::fail(new FormattableMarkup('The expected value "@expVal" does not exist in row @rind. Actual value is "@actVal"@infoMessage', [
           '@expVal' => $column,
           '@rind' => $rInd,
           '@actVal' => $actualArray[$rInd][$cInd],
+          '@infoMessage' => $infoMessage,
         ]));
       }
     }

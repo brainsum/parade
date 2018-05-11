@@ -81,7 +81,7 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
     $this->assertSession()->pageTextContains('Manage fields');
 
     $actualFields = $this->getFieldsTableBodyAsArray('//table');
-    $this->assertArraysAreEqual($expectedFields, $actualFields);
+    $this->assertArraysAreEqual($expectedFields, $actualFields, $type . '/fields');
 
     foreach ($expectedViews as $viewMode => $expectedView) {
       $mode = ($viewMode === 'default') ? '' : ('/' . $viewMode);
@@ -91,7 +91,7 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
       $this->assertSession()->pageTextContains('Manage display');
 
       $actualView = $this->getViewsTableAsArray('//table');
-      $this->assertArraysAreEqual($expectedView, $actualView);
+      $this->assertArraysAreEqual($expectedView, $actualView, $type . '/display:' . $viewMode);
     }
 
     // Foreach ($expectedForms as $formMode => $expectedForm) {
