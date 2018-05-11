@@ -13,6 +13,8 @@ field.widget.settings.entity_reference_paragraphs_preview:
       type: string
     default_paragraph_type:
       type: string
+    add_text_needed:
+      type: string
 
 field.formatter.settings.parade_entity_reference_revisions_entity_view:
   type: mapping
@@ -37,6 +39,12 @@ field.widget.settings.link_cta:
       type: string
     placeholder_title:
       type: label
+    open_on_new_tab:
+      type: boolean
+
+field.formatter.settings.link_call_to_action:
+  type: field.formatter.settings.link
+  label: 'Call to action link format settings'
 
 field.formatter.settings.leaflet_formatter_default:
   type: mapping
