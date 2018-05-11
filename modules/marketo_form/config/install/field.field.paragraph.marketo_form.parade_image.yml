@@ -9,12 +9,6 @@ dependencies:
       - marketo_form
   module:
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      file: file
-      alt: '0'
-      title: '0'
 id: paragraph.marketo_form.parade_image
 field_name: parade_image
 entity_type: paragraph
