@@ -4,6 +4,7 @@ namespace Drupal\parade_demo\Form;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,12 +25,20 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
   protected $entityTypeManager;
 
   /**
+   * The render cache bin.
+   *
+   * @var \Drupal\Core\Cache\CacheBackendInterface
+   */
+  protected $renderCache;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('config.factory'),
-      $container->get('entity_type.manager')
+      $container->get('entity_type.manager'),
+      $container->get('cache.render')
     );
   }
 
@@ -40,14 +49,18 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
    *   The config factory.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    *   The entity type manager.
+   * @param \Drupal\Core\Cache\CacheBackendInterface $render_cache
+   *   The render cache service.
    */
   public function __construct(
     ConfigFactoryInterface $configFactory,
-    EntityTypeManagerInterface $entityTypeManager
+    EntityTypeManagerInterface $entityTypeManager,
+    CacheBackendInterface $render_cache
   ) {
     parent::__construct($configFactory);
 
     $this->entityTypeManager = $entityTypeManager;
+    $this->renderCache = $render_cache;
   }
 
   /**
@@ -66,6 +79,8 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    */
   public function buildForm(array $form, FormStateInterface $form_state, Request $request = NULL) {
     $settings = $this->config('parade_demo.settings')->get('bundles');
@@ -130,9 +145,12 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
 
   /**
    * Add parade_ fields to bundle save enabled bundles to settings.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Core\Entity\EntityStorageException
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $enabled = $just_disabled = $just_enabled = [];
+    $enabled = $just_enabled = [];
     $settings = $this->config('parade_demo.settings')->get('bundles');
     foreach ($form_state->getValue('bundles') as $bundle => $data) {
       if (isset($data['enabled']) && $data['enabled']) {
@@ -142,9 +160,6 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
         if (!isset($settings[$bundle], $settings[$bundle]['enabled']) || !$settings[$bundle]['enabled']) {
           $just_enabled[$bundle] = $data;
         }
-      }
-      elseif (isset($settings[$bundle], $settings[$bundle]['enabled']) && $settings[$bundle]['enabled']) {
-        $disabled[$bundle] = $data;
       }
     }
 
@@ -229,7 +244,7 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
 
     parent::submitForm($form, $form_state);
 
-    \Drupal::cache('render')->deleteAll();
+    $this->renderCache->deleteAll();
   }
 
 }

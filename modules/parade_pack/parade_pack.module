@@ -9,7 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
 function parade_pack_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Get rewrite settings.

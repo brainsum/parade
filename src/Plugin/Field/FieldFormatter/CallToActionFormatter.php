@@ -29,7 +29,7 @@ class CallToActionFormatter extends LinkFormatter {
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = parent::viewElements($items, $langcode);
 
-    foreach ($elements as $delta => &$element) {
+    foreach ($elements as &$element) {
       if (!empty($element['#options']['open_on_new_tab'])) {
         $element['#options']['attributes']['target'] = '_blank';
         $element['#options']['attributes']['rel'] = 'noreferrer noopener';
