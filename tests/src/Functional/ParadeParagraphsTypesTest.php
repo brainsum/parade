@@ -94,9 +94,9 @@ class ParadeParagraphsTypesTest extends ParadeTestBase {
       $this->assertArraysAreEqual($expectedView, $actualView, $type . '/display:' . $viewMode);
     }
 
-    // Foreach ($expectedForms as $formMode => $expectedForm) {
-    //      // @todo
-    //    }
+    // @todo.
+    // foreach ($expectedForms as $formMode => $expectedForm) {
+    // }
   }
 
   /**
