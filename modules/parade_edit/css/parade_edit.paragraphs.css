@@ -246,6 +246,7 @@ article.node--unpublished {
     font-family: "Open Sans", sans-serif !important;
     font-weight: normal;
     line-height: 1.5;
+    max-width: 743px;
 }
 
 .geysir-dialog .node-form .form-wrapper {
@@ -498,6 +499,7 @@ article.node--unpublished {
 #geysir-modal {
     background-color: #f0f0f0;
     font-size: 13px;
+    position: relative;
 }
 
 .geysir-dialog input.form-autocomplete,
@@ -548,4 +550,10 @@ article.node--unpublished {
     border: 1px solid #ccc;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+
+/* Discard dialog button fix */
+.ui-dialog-buttonset .button:last-of-type {
+    margin-right: 0;
 }
