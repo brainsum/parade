@@ -551,3 +551,9 @@ article.node--unpublished {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+
+/* Discard dialog button fix */
+.ui-dialog-buttonset .button:last-of-type {
+    margin-right: 0;
+}
