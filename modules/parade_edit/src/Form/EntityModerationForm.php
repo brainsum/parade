@@ -128,6 +128,9 @@ class EntityModerationForm extends FormBase {
     $form['#attributes']['class'][] = $current_state->isPublishedState() ? 'published' : 'unpublished';
     $form['#prefix'] = '<div id="parade-edit-moderation-wrapper">';
     $form['#suffix'] = '</div>';
+
+    // Set action - needed after ajax rebuild.
+    $form['#action'] = Url::fromRoute('entity.node.latest_version', ['node' => $entity->id()])->toString();
     return $form;
   }
 
