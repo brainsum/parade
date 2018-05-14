@@ -12,7 +12,6 @@ third_party_settings:
     weight: 0
     method: source
     geocode_field: parade_location
-    reverse_geocode_field: {  }
     hidden: false
     disabled: false
     plugins:

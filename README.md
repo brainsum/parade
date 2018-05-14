@@ -62,7 +62,7 @@ Add them to the extra section of the composer.json file:
                 "Fix support for field_group module in combination with field_layout module patch": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
             "drupal/geocoder": {
                 "geocoder_field schema is not up to date": "https://www.drupal.org/files/issues/2018-03-18/2954070-2.patch",
-                "Invalid geocoder_field schema": "https://www.drupal.org/files/issues/2018-05-10/invalid-geocoder_field-schema-2971970-2-D8.patch"
+                "Invalid geocoder_field schema": "https://www.drupal.org/files/issues/2018-05-14/invalid-geocoder_field-schema-2971970-5-D8.patch"
             },
            "drupal/geocoder_autocomplete": {
                "fix missing schema": "https://www.drupal.org/files/issues/missing-schema-2858115-2.patch"
