@@ -10,6 +10,7 @@ use Drupal\workbench_moderation\Entity\ModerationStateTransition;
 use Drupal\workbench_moderation\ModerationInformationInterface;
 use Drupal\workbench_moderation\StateTransitionValidation;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Url;
 
 /**
  * Class EntityModerationForm
@@ -81,6 +82,22 @@ class EntityModerationForm extends FormBase {
     if (!count($target_states)) {
       return $form;
     }
+
+    $form['preferences'] = [
+      '#type' => 'link',
+      '#title' => 'Edit menu and preferences',
+      '#url' => Url::fromRoute('parade_edit.modal.preferences', [
+        'entity_type' => $entity->getEntityType()->id(),
+        'node' => $entity->id(),
+        'js' => 'nojs',
+      ]),
+      '#attributes' => [
+        'class' => ['button', 'geysir-button', 'use-ajax'],
+      ],
+      '#weight' => -50,
+      '#prefix' => '<div id="parade-edit-preferences-wrapper">',
+      '#suffix' => '</div>',
+    ];
 
     if ($current_state) {
       $form['current'] = [
