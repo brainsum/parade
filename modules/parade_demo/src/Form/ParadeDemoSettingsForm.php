@@ -119,11 +119,14 @@ class ParadeDemoSettingsForm extends ConfigFormBase {
             '#type' => 'checkbox',
             '#default_value' => (isset($settings[$contentTypeId]) && isset($settings[$contentTypeId]['css_disabled']) && $settings[$contentTypeId]['css_disabled']) ? 1 : 0,
           ],
-          // 'menu' => [
-          //   '#title' => 'Add menu field on Save',
-          //   '#type' => 'checkbox',
-          //   '#default_value' => (isset($settings[$contentType->id()]) && $settings[$contentType->id()]['menu']) ? 1 : 0,
-          // ],.
+          /*
+          'menu' => [
+             '#title' => 'Add menu field on Save',
+             '#type' => 'checkbox',
+             '#default_value' => (isset($settings[$contentType->id()])
+                && $settings[$contentType->id()]['menu']) ? 1 : 0,
+          ],
+           */
         ];
       }
       if (isset($form['bundles']['parade_onepage'])) {

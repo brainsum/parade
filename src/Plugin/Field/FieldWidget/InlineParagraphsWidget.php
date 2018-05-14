@@ -2,6 +2,7 @@
 
 namespace Drupal\parade\Plugin\Field\FieldWidget;
 
+use Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget as ParagraphsInlineParagraphsWidget;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -19,7 +20,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   }
  * )
  */
-class InlineParagraphsWidget extends \Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget {
+class InlineParagraphsWidget extends ParagraphsInlineParagraphsWidget {
 
   /**
    * {@inheritdoc}
@@ -40,12 +41,12 @@ class InlineParagraphsWidget extends \Drupal\paragraphs\Plugin\Field\FieldWidget
     $elements = parent::settingsForm($form, $form_state);
 
     // New values.
-    $elements['add_text_needed'] = array(
+    $elements['add_text_needed'] = [
       '#type' => 'checkbox',
       '#title' => $this->t("Add 'Add ' text before title on entity add buttons."),
       '#default_value' => $this->getSetting('add_text_needed'),
       '#weight' => 2,
-    );
+    ];
 
     return $elements;
   }
@@ -61,4 +62,5 @@ class InlineParagraphsWidget extends \Drupal\paragraphs\Plugin\Field\FieldWidget
 
     return $summary;
   }
+
 }
