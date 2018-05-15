@@ -88,6 +88,7 @@ class ParadeGeysirController extends GeysirModalController {
 
         $form = \Drupal::formBuilder()
           ->getForm('\Drupal\geysir\Form\GeysirModalParagraphAddSelectTypeForm', $routeParams, $bundles);
+        hide($form['description']);
         $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => [], 'dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
       }
 
