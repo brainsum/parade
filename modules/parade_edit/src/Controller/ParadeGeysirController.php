@@ -63,7 +63,7 @@ class ParadeGeysirController extends GeysirModalController {
         $form = $this->entityFormBuilder()
           ->getForm($newParagraph, 'geysir_modal_add', []);
 
-        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => [], 'dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
+        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ['dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
       }
       else {
         $entity = $this->entityTypeManager()
