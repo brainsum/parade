@@ -99,10 +99,11 @@ class ParadeEditModalPreferencesForm extends NodeForm {
       $route_match = $this->getRouteMatch();
       $entity_type = $route_match->getParameter('entity_type');
 
+      // @todo add custom selector.
       $node = $this->entity;
       $response->addCommand(
         new ReplaceCommand(
-          '[data-history-node-id="' . $node->id() . '"]',
+          '[data-quickedit-entity-id="node/' . $node->id() . '"]',
           \Drupal::entityTypeManager()->getViewBuilder($entity_type)->view($node, 'full')));
 
       $node_revision = \Drupal::service('workbench_moderation.moderation_information')->getLatestRevision($entity_type, $node->id());
