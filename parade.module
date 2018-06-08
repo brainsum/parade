@@ -360,3 +360,16 @@ function parade_preprocess_field_multiple_value_form(&$variables) {
     $variables['table']['#attributes']['class'][] = $variables['element']['#field_name'];
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function parade_preprocess_html(&$variables) {
+  $attributes = Drupal::request()->attributes;
+  if ($attributes->has('node') && $attributes->get('_route') === 'entity.node.edit_form') {
+    $bundles = \Drupal::config('parade_demo.settings')->get('bundles');
+    if (in_array($attributes->get('node')->getType(), array_keys($bundles))) {
+      $variables['attributes']['class'][] = 'parade-node-edit';
+    }
+  }
+}

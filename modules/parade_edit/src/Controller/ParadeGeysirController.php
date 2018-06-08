@@ -63,7 +63,7 @@ class ParadeGeysirController extends GeysirModalController {
         $form = $this->entityFormBuilder()
           ->getForm($newParagraph, 'geysir_modal_add', []);
 
-        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ['dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
+        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ['dialogClass' => 'geysir-dialog parade-node-edit page-node-type-parade-onepage']));
       }
       else {
         $entity = $this->entityTypeManager()
@@ -89,7 +89,7 @@ class ParadeGeysirController extends GeysirModalController {
         $form = \Drupal::formBuilder()
           ->getForm('\Drupal\geysir\Form\GeysirModalParagraphAddSelectTypeForm', $routeParams, $bundles);
         hide($form['description']);
-        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => [], 'dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
+        $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Add @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ["buttons" => [], 'dialogClass' => 'geysir-dialog parade-node-edit page-node-type-parade-onepage']));
       }
 
       return $response;
@@ -109,7 +109,7 @@ class ParadeGeysirController extends GeysirModalController {
       $form = $this->entityFormBuilder()
         ->getForm($paragraph, 'geysir_modal_edit', []);
       $paragraph_title = $this->getParagraphTitle($parent_entity_type, $parent_entity_bundle, $field);
-      $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Edit @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ['dialogClass' => 'geysir-dialog page-node-type-parade-onepage']));
+      $response->addCommand(new GeysirOpenModalDialogCommand($this->t('Edit @paragraph_title', ['@paragraph_title' => $paragraph_title]), render($form), ['dialogClass' => 'geysir-dialog parade-node-edit page-node-type-parade-onepage']));
 
       return $response;
     }
@@ -127,6 +127,7 @@ class ParadeGeysirController extends GeysirModalController {
       $options = [
         'width' => '60%',
         'modal' => TRUE,
+        'dialogClass' => 'geysir-dialog parade-node-edit parade-preferences-popup',
       ];
       $response = new AjaxResponse();
       $entity_revision = $this->moderationInformation->getLatestRevision($entity_type, $node->id());
