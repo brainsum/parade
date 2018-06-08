@@ -140,27 +140,27 @@
 
 .geysir-field-paragraph-links li.up {
     top: 50%;
-    transform: translate(-100%,-50%);
+    transform: translate(27%,-50%);
 }
 
 .geysir-field-paragraph-links li.down {
     top: 50%;
-    transform: translate(10%,-50%);
+    transform: translate(135%,-50%);
 }
 
 .geysir-field-paragraph-links li.edit {
     top: 50%;
-    transform: translate(-170%, -50%);
+    transform: translate(-89%,-50%);
 }
 
 .geysir-field-paragraph-links li.parade-edit-quickedit {
     top: 50%;
-    transform: translate(-242%, -50%);
+    transform: translate(-177%,-50%);
 }
 
 .geysir-field-paragraph-links li.delete {
     top: 50%;
-    transform: translate(120%, -50%);
+    transform: translate(244%,-50%);
 }
 
 .geysir-field-paragraph-links li.add-after {
@@ -476,7 +476,7 @@ article.node--unpublished {
     text-align: center;
     font-weight: 600;
     margin-top: 0;
-    background-color: #dfdfdf;
+    background-color: #bdbdbd;
     box-shadow: none;
     border: 0;
     background-image: none;
