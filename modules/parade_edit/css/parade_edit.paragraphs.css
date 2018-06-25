@@ -43,13 +43,15 @@
     clear: both;
 }
 
-.geysir-field-paragraph-wrapper:not(.quickedit-active):hover
+.geysir-field-paragraph-wrapper:not(.quickedit-active):hover,
 .geysir-field-paragraph-wrapper:not(.quickedit-active).hover {
     outline: 1px solid #ffffff;
     z-index: 1;
     border: 5px solid #3399cc;
     margin: -5px 0;
 }
+
+/* Overwrite geysir links */
 
 .geysir-field-paragraph-links {
     display: none;
@@ -243,25 +245,15 @@ article.node--unpublished {
 
 /* These are popup fixes for edit forms */
 .geysir-dialog {
-    color: #777;
-    font-size: 1rem;
-    font-family: "Open Sans", sans-serif !important;
-    font-weight: normal;
-    line-height: 1.5;
     max-width: 743px;
 }
 
-.geysir-dialog .node-form .form-wrapper {
-    margin: 0;
+.parade-preferences-popup {
+    max-width: 1142px;
 }
 
-.geysir-dialog .item-mode-edit .layout__region.layout__region--top .js-form-item {
-    margin-bottom: 0;
-}
-
-.geysir-dialog .form-item, .geysir-dialog .form-actions {
-    margin-top: 0;
-    margin-bottom: 0;
+.parade-preferences-popup #geysir-modal {
+    background-color: #f0f0f0;
 }
 
 .geysir-dialog .paragraph-form .layout.layout--onecol {
@@ -269,183 +261,12 @@ article.node--unpublished {
     display: none;
 }
 
-.geysir-dialog .paragraph.paragraph--view-mode--custom .field--name-parade-call-to-action,
-.geysir-dialog .paragraph.paragraph--view-mode--default .field--name-parade-call-to-action,
-.geysir-dialog .paragraph.paragraph--view-mode--inverse .field--name-parade-call-to-action,
-.geysir-dialog .node-parade-onepage-edit-form .field--name-parade-call-to-action,
-.geysir-dialog .node-parade-onepage-form .field--name-parade-call-to-action {
-    margin: 30px 0;
-}
-
-/* This needs score 30, so at lest 3 class needed */
-.geysir-dialog .node-form .field--name-parade-title,
-.geysir-dialog .node-form .field--name-parade-secondary-title {
-    margin-bottom: 40px;
-}
-
-.geysir-dialog .node-form .field--name-parade-background {
-    margin: 30px 0;
-}
-
-.geysir-dialog .node-form .field--name-parade-view-mode,
-.geysir-dialog .node-form .field--name-parade-boxes-per-row,
-.geysir-dialog .node-form .field--name-parade-image {
-    margin-bottom: 40px;
-}
-
-.geysir-dialog .field--name-parade-call-to-action .fieldset-legend {
-    font-size: 13px;
-    font-weight: 600;
-    color: gray;
-}
-
-.geysir-dialog a,
-.geysir-dialog .link {
-    color: #0074bd;
-    text-decoration: none;
-    border-bottom: none;
-}
-
-.geysir-dialog a:hover,
-.geysir-dialog .link:hover,
-.geysir-dialog a:focus,
-.geysir-dialog .link:focus,
-.geysir-dialog a:active,
-.geysir-dialog .link:active {
-    text-decoration: underline;
-    border-bottom: none;
-}
-
-.geysir-dialog summary {
-    background: none;
-    color: #777;
-}
-
-.geysir-dialog details,
-.geysir-dialog fieldset,
-.geysir-dialog .filter-wrapper {
-    border-radius: 0;
-}
-
-.geysir-dialog table > tbody > tr .paragraphs-type,
-.geysir-dialog thead {
-    display: none;
-}
-
-.geysir-dialog tr.odd,
-.geysir-dialog tr,
-.geysir-dialog tr.odd:hover,
-.geysir-dialog tr:hover {
-    background: none;
-}
-
-.geysir-dialog td {
-    padding: 1.2em 0;
-}
-
-.geysir-dialog .form-wrapper .field-multiple-table > * > tr > td {
-    padding: 0;
-}
-
-.geysir-dialog .field-multiple-table tr td,
-.geysir-dialog .field-multiple-table tr td {
-    border-bottom: 1px solid #e3e3e3;
-}
-
-.geysir-dialog .paragraph.paragraph--view-mode--custom .button,
-.geysir-dialog .paragraph.paragraph--view-mode--default .button,
-.geysir-dialog .paragraph.paragraph--view-mode--inverse .button,
-.geysir-dialog .node-parade-onepage-edit-form .button,
-.geysir-dialog .node-parade-onepage-form .button {
-    display: inline-block;
-    font-weight: bold;
-    font-family: sans-serif;
-    line-height: 1.25;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: 0.25rem 1rem;
-    font-size: 1rem;
-    border-radius: 2px;
-    transition: all 0.2s ease-in-out;
-    color: #5e5e5e;
-    background-color: #eeeeee;
-    border-color: #999999;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-}
-
-.geysir-dialog tr.even:hover a.tabledrag-handle .handle:before,
-.geysir-dialog tr.odd:hover a.tabledrag-handle .handle:before {
-    content: "";
-    color: #999999;
-    display: block;
-}
-
-.geysir-dialog .field--name-parade-background .button,
-.geysir-dialog .field--name-parade-background .button:hover {
-    background-color: #bdbdbd;
-    background-image: none;
-    color: white;
-    font-weight: normal;
-    padding: 6px 10px;
-    border-width: 0px;
-    border-radius: 3px;
-    border-style: solid;
-    font-size: 13px;
-    font-style: normal;
-    text-align: center;
-    width: 83px;
-    height: 30px;
-    box-shadow: none;
-    text-shadow: none;
-}
-
-.geysir-dialog table tbody .draggable > td:nth-child(2) > div {
-    position: relative;
-}
-
-.geysir-dialog table > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top {
-    background-color: #f0f0f0;
-    padding: 0 35px;
-    min-height: 75px;
-    border-bottom: 0;
-    border-left: 3px solid #337ab7;
-}
-
 .geysir-dialog .item-mode-preview .paragraph-type-top {
     z-index: 1;
 }
 
-.geysir-dialog table > tbody > tr .layout--parade-admin-twocol-bricks .layout__region--top .field--name-parade-title {
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0;
-    max-width: 65%;
-    line-height: 75px;
-    color: #777;
-}
-
-.geysir-dialog table > tbody > tr {
-    height: 75px;
-    border-radius: 0;
-    border-bottom: 10px solid #ffffff;
-}
-
 .geysir-dialog .paragraphs-subform > .form-wrapper {
     margin: 1em 0;
-}
-
-.geysir-dialog .js-form-item label,
-.geysir-dialog .js-form-item .fieldset-legend {
-    font-size: 13px;
-    font-weight: 600;
-    color: gray;
 }
 
 .geysir-dialog select.form-select {
@@ -453,15 +274,9 @@ article.node--unpublished {
     border-top-color: #999;
     border-radius: 2px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
-    font-size: 1em;
+    font-size: 0.875rem;
     color: #595959;
     transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-
-.geysir-dialog table.parade_paragraphs > tbody > tr .paragraph-type-top {
-    position: absolute;
-    right: 35px;
-    top: 4px;
 }
 
 /* Popup window's buttons */
@@ -498,60 +313,10 @@ article.node--unpublished {
 
 
 /* Preferencies popup fixes. */
+
 #geysir-modal {
-    background-color: #f0f0f0;
-    font-size: 13px;
+    /*font-size: 13px;*/
     position: relative;
-}
-
-.geysir-dialog input.form-autocomplete,
-.geysir-dialog input.form-text,
-.geysir-dialog input.form-tel,
-.geysir-dialog input.form-email,
-.geysir-dialog input.form-url,
-.geysir-dialog input.form-search,
-.geysir-dialog input.form-number,
-.geysir-dialog input.form-color,
-.geysir-dialog input.form-file,
-.geysir-dialog input.form-date,
-.geysir-dialog input.form-time,
-.geysir-dialog textarea.form-textarea {
-    background-color: #f6f6f6;
-    border-color: #dbdbdb;
-    border-width: 1px;
-    color: #565454;
-    padding: 3px 10px;
-    font-size: 13px;
-    font-weight: normal;
-    font-style: normal;
-    border-radius: 2px;
-    border-style: solid;
-    box-shadow: none;
-}
-
-.geysir-dialog .node-campaign-preferences-form .field--name-title {
-    background: transparent;
-    padding: 0 25px 15px;
-}
-
-.geysir-dialog .node-campaign-preferences-form .field--name-title input {
-    font-size: 32px;
-    padding: 0;
-    background: transparent;
-    border: 0;
-    font-weight: 300;
-    border-bottom: 1px solid #999999;
-    border-radius: 0;
-}
-
-.geysir-dialog .node-campaign-preferences-form .form-item {
-    margin: 0.75em 0;
-}
-
-.geysir-dialog .node-campaign-preferences-form .form-wrapper details {
-    border: 1px solid #ccc;
-    margin-top: 1em;
-    margin-bottom: 1em;
 }
 
 

@@ -52,6 +52,7 @@
     min-height: 140px;
     .js-form-item {
       @include flexbox;
+      margin-top: 0;
       margin-bottom: 5px;
       label,
       legend {

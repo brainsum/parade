@@ -11,7 +11,7 @@ body.user-logged-in.page-node-type-parade-onepage {
   width: 25%;
 }
 
-.page-node-type-parade-onepage {
+.parade-node-edit {
   input.form-autocomplete,
   input.form-text,
   input.form-tel,
@@ -168,6 +168,7 @@ a.tabledrag-handle:focus .handle {
   }
 }
 
+.page-node-type-parade-onepage.geysir-dialog,
 .field--name-parade-onepage-sections {
   thead {
     display: none;

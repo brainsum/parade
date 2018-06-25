@@ -17,7 +17,7 @@
 }
 
 
-#edit-parade-onepage-menu-wrapper {
+.field--name-parade-onepage-menu:not(.navigation-menu) {
   .clearfix > input {
     border: none;
     background-color: rgb(51, 153, 204);

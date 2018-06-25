@@ -125,8 +125,6 @@ class ParadeGeysirController extends GeysirModalController {
   public function preferences($entity_type, $node, $js = 'nojs') {
     if ($js == 'ajax') {
       $options = [
-        'width' => '60%',
-        'modal' => TRUE,
         'dialogClass' => 'geysir-dialog parade-node-edit parade-preferences-popup',
       ];
       $response = new AjaxResponse();
