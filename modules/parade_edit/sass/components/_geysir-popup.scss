@@ -1,0 +1,68 @@
+/* These are popup fixes for edit forms */
+.geysir-dialog {
+  max-width: 743px;
+  &.parade-preferences-popup {
+    max-width: 1142px;
+    #geysir-modal {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .paragraph-form .layout.layout--onecol {
+    /* @todo: this should be hidden from backend */
+    display: none;
+  }
+  .item-mode-preview .paragraph-type-top {
+    z-index: 1;
+  }
+  .paragraphs-subform > .form-wrapper {
+    margin: 1em 0;
+  }
+  select.form-select {
+    border: 1px solid #b8b8b8;
+    border-top-color: #999;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+    font-size: 0.875rem;
+    color: #595959;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+  }
+  .ui-dialog-buttonpane .button {
+    color: #ffffff;
+    padding: 6px 25px;
+    border-color: transparent;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 13px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0;
+    background-color: #bdbdbd;
+    box-shadow: none;
+    border: 0;
+    background-image: none;
+    text-shadow: none;
+    float: left;
+    &.parade_edit-cancel {
+      background-color: #62b3e5;
+    }
+    &.parade_edit-draft {
+      background-color: #62ccd1;
+    }
+  }
+  .ui-dialog .ui-dialog-buttonpane button {
+    margin: 0;
+  }
+}
+
+/* Preferencies popup fixes. */
+#geysir-modal {
+  /*font-size: 13px;*/
+  position: relative;
+}
+
+/* Discard dialog button fix */
+.ui-dialog-buttonset .button:last-of-type {
+  margin-right: 0;
+}

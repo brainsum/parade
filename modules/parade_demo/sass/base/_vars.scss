@@ -72,6 +72,7 @@ $text-color-strong: #333;
 $box-shadow-1: 0 10px 10px -10px rgba(0, 0, 0, .3);
 
 // Sizes
+// Note: this is used at parade_edit too.
 $footer-height: 100px;
 $form-element-height: 40px;
 $input-border-radius: 3px;
@@ -79,6 +80,7 @@ $header-line-height: 3em;
 $sidebar-width: 220px;
 $toolbar-height: 39px;
 $local-task-menu-height: 23px;
+$moderation-toolbar-height: 20px;
 
 $icon-edit: "\e901";
 $icon-delete: "\e900";

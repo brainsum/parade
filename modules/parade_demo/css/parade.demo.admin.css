@@ -4875,12 +4875,6 @@ body.user-logged-in.page-node-type-parade-onepage {
   width: 25%;
 }
 
-.parade-node-edit {
-  /*  .layout-container {
-    box-shadow: 0 20px 50px rgba(0,0,0,.05)
-  }*/
-}
-
 .parade-node-edit input.form-autocomplete,
 .parade-node-edit input.form-text,
 .parade-node-edit input.form-tel,
@@ -5596,4 +5590,4 @@ a.tabledrag-handle:focus .handle {
   background-color: #f2faff;
 }
 
-/*# sourceMappingURL=modules/parade_demo/css/parade.demo.admin.css.map */
+/*# sourceMappingURL=parade.demo.admin.css.map */

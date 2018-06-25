@@ -30,10 +30,18 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write('modules/parade_demo/css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('modules/parade_demo/css'));
 
-  return merge(parade, parade_demo);
+  var parade_edit = gulp
+    .src('modules/parade_edit/sass/**/*.{scss,sass}')
+    .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('modules/parade_edit/css'));
+
+  return merge(parade, parade_demo, parade_edit);
 });
 
 // gulp.task('csscomb', function () {
@@ -61,7 +69,12 @@ gulp.task('eslint', function () {
     .pipe(eslint())
     .pipe(eslint.format());
 
-  return merge(parade, parade_demo);
+  var parade_edit = gulp
+    .src('modules/parade_edit/js/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format());
+
+  return merge(parade, parade_demo, parade_edit);
 });
 
 gulp.task('copy:js', function () {

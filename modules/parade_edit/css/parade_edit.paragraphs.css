@@ -1,326 +1,333 @@
-/* TODO: refactor this whole file into SASS and crate a micro system for all modules to easy way to change/refer some values */
-
 #parade-edit-moderation-wrapper {
-    width: 100%;
-    height: 48px;
-    color: rgb(86, 86, 86);
-    font-size: 14px;
-    font-family: Arial;
-    text-align: center;
-    text-decoration: inherit;
-    vertical-align: middle;
-    white-space: nowrap;
-    line-height: 10px;
-    font-weight: normal;
-    text-decoration: none;
+  width: 100%;
+  height: 48px;
+  color: #565656;
+  font-size: 14px;
+  font-family: Arial;
+  text-align: center;
+  text-decoration: inherit;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 10px;
+  font-weight: normal;
+  text-decoration: none;
 }
+
 #parade-edit-moderation-wrapper form.published {
-    background-color: rgb(117, 199, 151);
+  background-color: #75c797;
 }
+
 #parade-edit-moderation-wrapper form.unpublished {
-    background-color: #fff4f4;
+  background-color: #fff4f4;
 }
+
 #parade-edit-preferences-wrapper {
-    text-align: center;
+  text-align: center;
 }
+
 #parade-edit-preferences-wrapper a {
-    opacity: 1;
-    padding: 0px 16px;
-    border-width: 1px;
-    border-radius: 2px;
-    border-color: rgb(46, 109, 164);
-    border-style: none;
-    background-color: rgb(51, 153, 204);
+  opacity: 1;
+  padding: 0px 16px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #2e6da4;
+  border-style: none;
+  background-color: #3399cc;
 }
-*[data-geysir-field-paragraph-field-wrapper] .field--item,
-.geysir-field-paragraph-wrapper > * {
-    margin-bottom: 0 !important;
-    margin-top: 0 !important;
+
+*[data-geysir-field-paragraph-field-wrapper] .field--item {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 
 .geysir-field-paragraph-wrapper {
-    position: relative;
-    clear: both;
+  position: relative;
+  clear: both;
 }
 
-.geysir-field-paragraph-wrapper:not(.quickedit-active):hover,
-.geysir-field-paragraph-wrapper:not(.quickedit-active).hover {
-    outline: 1px solid #ffffff;
-    z-index: 1;
-    border: 5px solid #3399cc;
-    margin: -5px 0;
+.geysir-field-paragraph-wrapper > * {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.geysir-field-paragraph-wrapper:not(.quickedit-active):hover, .geysir-field-paragraph-wrapper:not(.quickedit-active).hover {
+  outline: 1px solid #ffffff;
+  z-index: 1;
+  border: 5px solid #3399cc;
+  margin: -5px 0;
 }
 
 /* Overwrite geysir links */
-
 .geysir-field-paragraph-links {
-    display: none;
-    margin: 0;
-    padding: 0;
-    position: static;
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: static;
 }
 
-.geysir-field-paragraph-wrapper:not(.quickedit-active):hover .geysir-field-paragraph-links,
-.geysir-field-paragraph-wrapper:not(.quickedit-active).hover .geysir-field-paragraph-links {
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
+.geysir-field-paragraph-wrapper:not(.quickedit-active):hover .geysir-field-paragraph-links, .geysir-field-paragraph-wrapper:not(.quickedit-active).hover .geysir-field-paragraph-links {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li {
-    z-index: 501;
+  z-index: 501;
 }
 
 .geysir-field-paragraph-wrapper > .geysir-field-paragraph-links li {
-    z-index: 500;
+  z-index: 500;
 }
 
 .geysir-field-paragraph-links li {
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 50%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
 }
 
-.geysir-field-paragraph-links li.add-after a,
-.geysir-field-paragraph-links li.add-before a {
-    background-image: url(../images/geysir-add.svg);
-    padding: 25px;
-    width: 50px;
+.geysir-field-paragraph-links li.add-after a, .geysir-field-paragraph-links li.add-before a {
+  background-image: url(../images/geysir-add.svg);
+  padding: 25px;
+  width: 50px;
 }
 
 .geysir-field-paragraph-links li.delete a {
-    background-image: url(../images/geysir-trash.svg);
-    background-color: rgba(86, 84, 84, 0.60);
+  background-image: url(../images/geysir-trash.svg);
+  background-color: rgba(86, 84, 84, 0.6);
 }
 
 .geysir-field-paragraph-links li.edit a {
-    background-image: url(../images/geysir-pencil.svg);
-    width: 118px;
-    background-size: 35px 35px;
+  background-image: url(../images/geysir-pencil.svg);
+  width: 118px;
+  background-size: 35px 35px;
 }
 
 .geysir-field-paragraph-links li.parade-edit-quickedit span {
-    width: 148px;
-    text-indent: initial;
-    padding: 20px;
-    display: inline-block;
-    background-image: none;
-    height: auto;
-    font-size: 20px;
-    font-weight: normal;
+  width: 148px;
+  text-indent: initial;
+  padding: 20px;
+  display: inline-block;
+  background-image: none;
+  height: auto;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .geysir-field-paragraph-links li.up a {
-    background-image: url(../images/geysir-up.svg);
-    background-color: rgba(86, 84, 84, 0.60);
-    border: 1px solid white;
+  background-image: url(../images/geysir-up.svg);
+  background-color: rgba(86, 84, 84, 0.6);
+  border: 1px solid white;
 }
 
 .geysir-field-paragraph-links li.down a {
-    background-image: url(../images/geysir-down.svg);
-    background-color: rgba(86, 84, 84, 0.60);
-    border: 1px solid white;
+  background-image: url(../images/geysir-down.svg);
+  background-color: rgba(86, 84, 84, 0.6);
+  border: 1px solid white;
 }
 
-.geysir-field-paragraph-links li.delete a:hover,
-.geysir-field-paragraph-links li.up a:hover,
-.geysir-field-paragraph-links li.down a:hover {
-    background-color: rgba(86, 84, 84, 0.88);
+.geysir-field-paragraph-links li.delete a:hover, .geysir-field-paragraph-links li.up a:hover, .geysir-field-paragraph-links li.down a:hover {
+  background-color: rgba(86, 84, 84, 0.88);
 }
 
 .geysir-field-paragraph-links li.edit {
-    top: 50%;
-    transform: translate(-350%,-50%);
+  top: 50%;
+  -webkit-transform: translate(-350%, -50%);
+          transform: translate(-350%, -50%);
 }
 
 .geysir-field-paragraph-links li.up {
-    top: 50%;
-    transform: translate(27%,-50%);
+  top: 50%;
+  -webkit-transform: translate(27%, -50%);
+          transform: translate(27%, -50%);
 }
 
 .geysir-field-paragraph-links li.down {
-    top: 50%;
-    transform: translate(135%,-50%);
+  top: 50%;
+  -webkit-transform: translate(135%, -50%);
+          transform: translate(135%, -50%);
 }
 
 .geysir-field-paragraph-links li.edit {
-    top: 50%;
-    transform: translate(-89%,-50%);
+  top: 50%;
+  -webkit-transform: translate(-89%, -50%);
+          transform: translate(-89%, -50%);
 }
 
 .geysir-field-paragraph-links li.parade-edit-quickedit {
-    top: 50%;
-    transform: translate(-177%,-50%);
+  top: 50%;
+  -webkit-transform: translate(-177%, -50%);
+          transform: translate(-177%, -50%);
 }
 
 .geysir-field-paragraph-links li.delete {
-    top: 50%;
-    transform: translate(244%,-50%);
+  top: 50%;
+  -webkit-transform: translate(244%, -50%);
+          transform: translate(244%, -50%);
 }
 
 .geysir-field-paragraph-links li.add-after {
-    bottom: 0;
-    transform: translate(-50%, 50%);
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
 }
 
 .geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-after {
-    bottom: auto;
-    top: 50%;
-    transform: translate(250%, -50%);
+  bottom: auto;
+  top: 50%;
+  -webkit-transform: translate(250%, -50%);
+          transform: translate(250%, -50%);
 }
 
 .geysir-field-paragraph-links li.add-before {
-    top: 0;
-    transform: translate(-50%, -50%);
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-before {
-    top: 50%;
-    transform: translate(-350%, -50%);
+  top: 50%;
+  -webkit-transform: translate(-350%, -50%);
+          transform: translate(-350%, -50%);
 }
 
 .geysir-field-paragraph-links .ajax-progress {
-    left: 50%;
-    margin: -5px 0 0 -8px;
-    padding: 0;
-    position: absolute;
-    top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -8px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
 }
 
 .geysir-field-paragraph-links .ajax-progress-throbber .throbber {
-    display: block;
-    height: 13px;
-    padding: 0;
-    width: 17px;
+  display: block;
+  height: 13px;
+  padding: 0;
+  width: 17px;
 }
 
-.geysir-field-paragraph-links a,
-.geysir-field-paragraph-links span {
-    background-color: #3399cc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    height: 40px;
-    padding: 35px;
-    text-indent: -9999px;
-    width: 75px;
-    transition: all 0.3s ease 0s;
+.geysir-field-paragraph-links a, .geysir-field-paragraph-links span {
+  background-color: #3399cc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  height: 40px;
+  padding: 35px;
+  text-indent: -9999px;
+  width: 75px;
+  transition: all 0.3s ease 0s;
 }
 
-.geysir-field-paragraph-links a:hover,
-.geysir-field-paragraph-links span:hover {
-    background-color: #0065A0;
-    color: white;
-    border: none;
+.geysir-field-paragraph-links a:hover, .geysir-field-paragraph-links span:hover {
+  background-color: #0065A0;
+  color: white;
+  border: none;
 }
 
 ul.geysir-field-paragraph-links {
-	list-style-type: none;
+  list-style-type: none;
 }
 
-#geysir-modal-form  .js-form-item-paragraph.radio img {
-	height: 24px;
+#geysir-modal-form .js-form-item-paragraph.radio img {
+  height: 24px;
 }
 
 #geysir-modal-form .js-form-item-paragraph.radio label {
-	width: 100%;
+  width: 100%;
 }
 
 article.node--unpublished {
-    padding: 0;
+  padding: 0;
 }
-
 
 /* These are popup fixes for edit forms */
 .geysir-dialog {
-    max-width: 743px;
+  max-width: 743px;
 }
 
-.parade-preferences-popup {
-    max-width: 1142px;
+.geysir-dialog.parade-preferences-popup {
+  max-width: 1142px;
 }
 
-.parade-preferences-popup #geysir-modal {
-    background-color: #f0f0f0;
+.geysir-dialog.parade-preferences-popup #geysir-modal {
+  background-color: #f0f0f0;
 }
 
 .geysir-dialog .paragraph-form .layout.layout--onecol {
-    /* @todo: this should be hidden from backend */
-    display: none;
+  /* @todo: this should be hidden from backend */
+  display: none;
 }
 
 .geysir-dialog .item-mode-preview .paragraph-type-top {
-    z-index: 1;
+  z-index: 1;
 }
 
 .geysir-dialog .paragraphs-subform > .form-wrapper {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 .geysir-dialog select.form-select {
-    border: 1px solid #b8b8b8;
-    border-top-color: #999;
-    border-radius: 2px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
-    font-size: 0.875rem;
-    color: #595959;
-    transition: border linear 0.2s, box-shadow linear 0.2s;
+  border: 1px solid #b8b8b8;
+  border-top-color: #999;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125);
+  font-size: 0.875rem;
+  color: #595959;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-/* Popup window's buttons */
 .geysir-dialog .ui-dialog-buttonpane .button {
-    color: #ffffff;
-    padding: 6px 25px;
-    border-color: transparent;
-    border-radius: 3px;
-    border-style: solid;
-    font-size: 13px;
-    font-style: normal;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 0;
-    background-color: #bdbdbd;
-    box-shadow: none;
-    border: 0;
-    background-image: none;
-    text-shadow: none;
-    float: left;
+  color: #ffffff;
+  padding: 6px 25px;
+  border-color: transparent;
+  border-radius: 3px;
+  border-style: solid;
+  font-size: 13px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0;
+  background-color: #bdbdbd;
+  box-shadow: none;
+  border: 0;
+  background-image: none;
+  text-shadow: none;
+  float: left;
 }
 
 .geysir-dialog .ui-dialog-buttonpane .button.parade_edit-cancel {
-    background-color: #62b3e5;
+  background-color: #62b3e5;
 }
 
 .geysir-dialog .ui-dialog-buttonpane .button.parade_edit-draft {
-    background-color: #62ccd1;
+  background-color: #62ccd1;
 }
 
 .geysir-dialog .ui-dialog .ui-dialog-buttonpane button {
-    margin: 0;
+  margin: 0;
 }
-
 
 /* Preferencies popup fixes. */
-
 #geysir-modal {
-    /*font-size: 13px;*/
-    position: relative;
+  /*font-size: 13px;*/
+  position: relative;
 }
-
 
 /* Discard dialog button fix */
 .ui-dialog-buttonset .button:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
+
+/*# sourceMappingURL=parade_edit.paragraphs.css.map */
