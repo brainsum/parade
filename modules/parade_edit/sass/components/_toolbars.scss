@@ -53,6 +53,7 @@
       z-index: 1;
       border: 5px solid #3399cc;
       margin: -5px 0;
+      transition: margin 100ms, border 100ms;
     }
   }
 }

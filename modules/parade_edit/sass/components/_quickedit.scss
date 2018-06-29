@@ -1,0 +1,13 @@
+// Originally called quickedit by drupal, however we call it somewhy inplace-edit.
+
+.quickedit-field.quickedit-highlighted,
+.quickedit-form.quickedit-highlighted,
+.quickedit-field .quickedit-highlighted {
+  box-shadow: 0 0 0 5px #007fff;
+  transition: 200ms box-shadow;
+  
+  &.quickedit-editing {
+    box-shadow: 0 0 0 5px #3e42c3;
+    transition: 200ms box-shadow;
+  }
+}

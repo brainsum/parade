@@ -55,6 +55,7 @@
   z-index: 1;
   border: 5px solid #3399cc;
   margin: -5px 0;
+  transition: margin 100ms, border 100ms;
 }
 
 /* Overwrite geysir links */
@@ -328,6 +329,20 @@ article.node--unpublished {
 /* Discard dialog button fix */
 .ui-dialog-buttonset .button:last-of-type {
   margin-right: 0;
+}
+
+.quickedit-field.quickedit-highlighted,
+.quickedit-form.quickedit-highlighted,
+.quickedit-field .quickedit-highlighted {
+  box-shadow: 0 0 0 5px #007fff;
+  transition: 200ms box-shadow;
+}
+
+.quickedit-field.quickedit-highlighted.quickedit-editing,
+.quickedit-form.quickedit-highlighted.quickedit-editing,
+.quickedit-field .quickedit-highlighted.quickedit-editing {
+  box-shadow: 0 0 0 5px #3e42c3;
+  transition: 200ms box-shadow;
 }
 
 /*# sourceMappingURL=parade_edit.paragraphs.css.map */
