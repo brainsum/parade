@@ -59,13 +59,6 @@
 }
 
 /* Overwrite geysir links */
-.geysir-field-paragraph-links {
-  display: none;
-  margin: 0;
-  padding: 0;
-  position: static;
-}
-
 .geysir-field-paragraph-wrapper:not(.quickedit-active):hover .geysir-field-paragraph-links, .geysir-field-paragraph-wrapper:not(.quickedit-active).hover .geysir-field-paragraph-links {
   -ms-flex-align: center;
   -webkit-box-align: center;
@@ -86,12 +79,18 @@
   z-index: 500;
 }
 
+.geysir-field-paragraph-links {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+
 .geysir-field-paragraph-links li {
   display: block;
   margin: 0;
   padding: 0;
   position: absolute;
-  left: 50%;
 }
 
 .geysir-field-paragraph-links li.add-after a, .geysir-field-paragraph-links li.add-before a {
@@ -138,28 +137,19 @@
   background-color: rgba(86, 84, 84, 0.88);
 }
 
-.geysir-field-paragraph-links li.edit {
-  top: 50%;
-  -webkit-transform: translate(-350%, -50%);
-          transform: translate(-350%, -50%);
-}
-
 .geysir-field-paragraph-links li.up {
-  top: 50%;
-  -webkit-transform: translate(27%, -50%);
-          transform: translate(27%, -50%);
+  bottom: 4px;
+  right: 165px;
 }
 
 .geysir-field-paragraph-links li.down {
-  top: 50%;
-  -webkit-transform: translate(135%, -50%);
-          transform: translate(135%, -50%);
+  bottom: 4px;
+  right: 85px;
 }
 
 .geysir-field-paragraph-links li.edit {
-  top: 50%;
-  -webkit-transform: translate(-89%, -50%);
-          transform: translate(-89%, -50%);
+  bottom: 5px;
+  right: 246px;
 }
 
 .geysir-field-paragraph-links li.parade-edit-quickedit {
@@ -169,34 +159,20 @@
 }
 
 .geysir-field-paragraph-links li.delete {
-  top: 50%;
-  -webkit-transform: translate(244%, -50%);
-          transform: translate(244%, -50%);
+  bottom: 5px;
+  right: 5px;
 }
 
 .geysir-field-paragraph-links li.add-after {
   bottom: 0;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-}
-
-.geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-after {
-  bottom: auto;
-  top: 50%;
-  -webkit-transform: translate(250%, -50%);
-          transform: translate(250%, -50%);
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 
 .geysir-field-paragraph-links li.add-before {
   top: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-before {
-  top: 50%;
-  -webkit-transform: translate(-350%, -50%);
-          transform: translate(-350%, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .geysir-field-paragraph-links .ajax-progress {

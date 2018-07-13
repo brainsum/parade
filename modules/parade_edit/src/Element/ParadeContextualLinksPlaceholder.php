@@ -35,7 +35,7 @@ class ParadeContextualLinksPlaceholder extends ContextualLinksPlaceholder {
     $routeName = \Drupal::routeMatch()->getRouteName();
     if (in_array($routeName, ['entity.node.latest_version']) || strstr($routeName, 'geysir.modal.')
       || strstr($routeName, 'parade_edit.modal.')) {
-      $attributes['class'] = 'visually-hidden';
+      //$attributes['class'] = 'visually-hidden';
     }
     $element['#markup'] = new FormattableMarkup('<div@attributes></div>', ['@attributes' => new Attribute($attributes)]);
 

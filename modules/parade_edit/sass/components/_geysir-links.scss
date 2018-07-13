@@ -1,11 +1,4 @@
 /* Overwrite geysir links */
-.geysir-field-paragraph-links {
-  display: none;
-  margin: 0;
-  padding: 0;
-  position: static;
-}
-
 .geysir-field-paragraph-wrapper {
   &:not(.quickedit-active) {
     &:hover .geysir-field-paragraph-links, &.hover .geysir-field-paragraph-links {
@@ -27,93 +20,82 @@
   }
 }
 
-.geysir-field-paragraph-links li {
-  display: block;
+.geysir-field-paragraph-links {
+  display: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  left: 50%;
-  &.add-after a, &.add-before a {
-    background-image: url(../images/geysir-add.svg);
-    padding: 25px;
-    width: 50px;
+  position: static;
+  li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    &.add-after a, &.add-before a {
+      background-image: url(../images/geysir-add.svg);
+      padding: 25px;
+      width: 50px;
+    }
+    &.delete a {
+      background-image: url(../images/geysir-trash.svg);
+      background-color: rgba(86, 84, 84, 0.6);
+    }
+    &.edit a {
+      background-image: url(../images/geysir-pencil.svg);
+      width: 118px;
+      background-size: 35px 35px;
+    }
+    &.parade-edit-quickedit span {
+      width: 148px;
+      text-indent: initial;
+      padding: 20px;
+      display: inline-block;
+      background-image: none;
+      height: auto;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    &.up a {
+      background-image: url(../images/geysir-up.svg);
+      background-color: rgba(86, 84, 84, 0.6);
+      border: 1px solid white;
+    }
+    &.down a {
+      background-image: url(../images/geysir-down.svg);
+      background-color: rgba(86, 84, 84, 0.6);
+      border: 1px solid white;
+    }
+    &.delete a:hover, &.up a:hover, &.down a:hover {
+      background-color: rgba(86, 84, 84, 0.88);
+    }
+    &.up {
+      bottom: 4px;
+      right: 165px;
+    }
+    &.down {
+      bottom: 4px;
+      right: 85px;
+    }
+    &.edit {
+      bottom: 5px;
+      right: 246px;
+    }
+    &.parade-edit-quickedit {
+      top: 50%;
+      transform: translate(-177%, -50%);
+    }
+    &.delete {
+      bottom: 5px;
+      right: 5px;
+    }
+    &.add-after {
+      bottom: 0;
+      transform: translate(0, 50%);
+    }
+    &.add-before {
+      top: 0;
+      transform: translate(0, -50%);
+    }
   }
-  &.delete a {
-    background-image: url(../images/geysir-trash.svg);
-    background-color: rgba(86, 84, 84, 0.6);
-  }
-  &.edit a {
-    background-image: url(../images/geysir-pencil.svg);
-    width: 118px;
-    background-size: 35px 35px;
-  }
-  &.parade-edit-quickedit span {
-    width: 148px;
-    text-indent: initial;
-    padding: 20px;
-    display: inline-block;
-    background-image: none;
-    height: auto;
-    font-size: 20px;
-    font-weight: normal;
-  }
-  &.up a {
-    background-image: url(../images/geysir-up.svg);
-    background-color: rgba(86, 84, 84, 0.6);
-    border: 1px solid white;
-  }
-  &.down a {
-    background-image: url(../images/geysir-down.svg);
-    background-color: rgba(86, 84, 84, 0.6);
-    border: 1px solid white;
-  }
-  &.delete a:hover, &.up a:hover, &.down a:hover {
-    background-color: rgba(86, 84, 84, 0.88);
-  }
-  &.edit {
-    top: 50%;
-    transform: translate(-350%, -50%);
-  }
-  &.up {
-    top: 50%;
-    transform: translate(27%, -50%);
-  }
-  &.down {
-    top: 50%;
-    transform: translate(135%, -50%);
-  }
-  &.edit {
-    top: 50%;
-    transform: translate(-89%, -50%);
-  }
-  &.parade-edit-quickedit {
-    top: 50%;
-    transform: translate(-177%, -50%);
-  }
-  &.delete {
-    top: 50%;
-    transform: translate(244%, -50%);
-  }
-  &.add-after {
-    bottom: 0;
-    transform: translate(-50%, 50%);
-  }
-}
-
-.geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-after {
-  bottom: auto;
-  top: 50%;
-  transform: translate(250%, -50%);
-}
-
-.geysir-field-paragraph-links li.add-before {
-  top: 0;
-  transform: translate(-50%, -50%);
-}
-
-.geysir-field-paragraph-wrapper .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li.add-before {
-  top: 50%;
-  transform: translate(-350%, -50%);
 }
 
 .geysir-field-paragraph-links {
