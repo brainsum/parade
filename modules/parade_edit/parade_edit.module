@@ -76,8 +76,14 @@ function parade_edit_preprocess_field(&$vars) {
     'parade-images',
     'parade_geofield',
     'parade_social_link',
+    'parade_marketo_form',
+    'parade_marketo_poll',
   ];
   if (isset($vars['attributes']['data-quickedit-field-id']) && in_array($vars['field_name'], $disable_quickedit)) {
+    unset($vars['attributes']['data-quickedit-field-id']);
+  }
+  // Disable quick edit for parade_text on specific paragraphs.
+  if ($vars['field_name'] === 'parade_text' && in_array($vars['element']['#bundle'], ['marketo_form', 'marketo_poll'])) {
     unset($vars['attributes']['data-quickedit-field-id']);
   }
 
