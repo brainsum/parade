@@ -76,15 +76,15 @@
   }
   &.up {
     top: 50%;
-    transform: translate(27%, -50%);
+    transform: translate(-67%, -50%);
   }
   &.down {
     top: 50%;
-    transform: translate(135%, -50%);
+    transform: translate(43%, -50%);
   }
   &.edit {
     top: 50%;
-    transform: translate(-89%, -50%);
+    transform: translate(-149%, -50%);
   }
   &.parade-edit-quickedit {
     top: 50%;
@@ -92,7 +92,7 @@
   }
   &.delete {
     top: 50%;
-    transform: translate(244%, -50%);
+    transform: translate(154%, -50%);
   }
   &.add-after {
     bottom: 0;
