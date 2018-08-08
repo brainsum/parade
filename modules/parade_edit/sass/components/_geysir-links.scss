@@ -25,24 +25,87 @@
   margin: 0;
   padding: 0;
   position: static;
+  list-style-type: none;
   li {
     display: block;
     margin: 0;
     padding: 0;
     position: absolute;
-    &.add-after a, &.add-before a {
-      background-image: url(../images/geysir-add.svg);
-      padding: 25px;
-      width: 50px;
+    a, span {
+      // background-color: #3399cc;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      display: block;
+      font-weight: bold;
+      height: 40px;
+      width: 40px;
+      text-indent: -9999px;
+      transition: all 0.3s ease 0s;
     }
-    &.delete a {
-      background-image: url(../images/geysir-trash.svg);
-      background-color: rgba(86, 84, 84, 0.6);
+    a:hover, span:hover {
+      background-color: #0065A0;
+      color: white;
+      border: none;
     }
-    &.edit a {
-      background-image: url(../images/geysir-pencil.svg);
-      width: 118px;
-      background-size: 35px 35px;
+    &.add-after {
+      transform: translate(0, 50%);
+      bottom: 0;
+    }
+    &.add-before {
+      transform: translate(0, -50%);
+      top: 0;
+    }
+    &.add-after,
+    &.add-before {
+      a {
+        background-color: #3399cc;
+        background-image: url('../images/geysir-add.svg');
+        background-size: 15px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &.edit,
+    &.delete,
+    &.up,
+    &.down {
+      transform: translate(0, 50%);
+      bottom: 50%;
+      a {
+        background-color: rgba(86, 84, 84, 0.6);
+        &:hover {
+          background-color: rgba(86, 84, 84, 0.88);
+        }
+      }
+    }
+    &.edit {
+      right: 131px;
+      a {
+        background-image: url('../images/geysir-gear.png');
+        background-size: 23px 23px;
+      }
+    }
+    &.up {
+      right: 89px;
+      a {
+        background-image: url('../images/geysir-up.svg');
+      }
+    }
+    &.down {
+      right: 47px;
+      a {
+        background-image: url('../images/geysir-down.svg');
+      }
+    }
+    &.delete {
+      right: 5px;
+      a {
+        background-image: url('../images/geysir-trash.svg');
+      }
     }
     &.parade-edit-quickedit span {
       width: 148px;
@@ -54,51 +117,11 @@
       font-size: 20px;
       font-weight: normal;
     }
-    &.up a {
-      background-image: url(../images/geysir-up.svg);
-      background-color: rgba(86, 84, 84, 0.6);
-      border: 1px solid white;
-    }
-    &.down a {
-      background-image: url(../images/geysir-down.svg);
-      background-color: rgba(86, 84, 84, 0.6);
-      border: 1px solid white;
-    }
-    &.delete a:hover, &.up a:hover, &.down a:hover {
-      background-color: rgba(86, 84, 84, 0.88);
-    }
-    &.up {
-      bottom: 4px;
-      right: 165px;
-    }
-    &.down {
-      bottom: 4px;
-      right: 85px;
-    }
-    &.edit {
-      bottom: 5px;
-      right: 246px;
-    }
     &.parade-edit-quickedit {
       top: 50%;
       transform: translate(-177%, -50%);
     }
-    &.delete {
-      bottom: 5px;
-      right: 5px;
-    }
-    &.add-after {
-      bottom: 0;
-      transform: translate(0, 50%);
-    }
-    &.add-before {
-      top: 0;
-      transform: translate(0, -50%);
-    }
   }
-}
-
-.geysir-field-paragraph-links {
   .ajax-progress {
     left: 50%;
     margin: -5px 0 0 -8px;
@@ -112,31 +135,6 @@
     padding: 0;
     width: 17px;
   }
-  a, span {
-    background-color: #3399cc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    height: 40px;
-    padding: 35px;
-    text-indent: -9999px;
-    width: 75px;
-    transition: all 0.3s ease 0s;
-  }
-  a:hover, span:hover {
-    background-color: #0065A0;
-    color: white;
-    border: none;
-  }
-}
-
-ul.geysir-field-paragraph-links {
-  list-style-type: none;
 }
 
 #geysir-modal-form .js-form-item-paragraph.radio {
@@ -150,4 +148,16 @@ ul.geysir-field-paragraph-links {
 
 article.node--unpublished {
   padding: 0;
+}
+
+.geysir-field-paragraph-wrapper {
+  .contextual .trigger {
+    background-image: url('../images/geysir-pencil.svg');
+    background-color: #3399cc;
+    border-radius: 3px;
+    width: 53px !important;
+    height: 53px !important;
+    border: 0;
+    background-size: 25px;
+  }
 }

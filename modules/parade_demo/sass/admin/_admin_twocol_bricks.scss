@@ -6,7 +6,21 @@
  * in before this can be marked as stable.
  */
 
+/*.page-node-type-parade-onepage table tbody .draggable > td:nth-child(2) > div {  ************* Bugfix by Zé see in line 18. **************
+  @include flexbox;
+  position: relative;
+  >.form-wrapper {
+    width: 100%;
+  }
+}*/
 .page-node-type-parade-onepage table tbody .draggable > td:nth-child(2) > div {
+  position: relative;
+  >.form-wrapper {
+    width: 100%;
+  }
+}
+
+.page-node-type-parade-onepage table tbody .draggable .item-mode-preview {
   @include flexbox;
   position: relative;
   >.form-wrapper {

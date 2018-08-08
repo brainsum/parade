@@ -82,6 +82,10 @@
     border: 0;
     border-radius: 0;
   }
+
+  &.field--type-link {
+    @include justify-content(center);
+  }
 }
 
 .field--name-parade-background {

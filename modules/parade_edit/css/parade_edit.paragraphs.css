@@ -61,14 +61,11 @@
 /* Overwrite geysir links */
 .geysir-field-paragraph-wrapper:not(.quickedit-active):hover .geysir-field-paragraph-links, .geysir-field-paragraph-wrapper:not(.quickedit-active).hover .geysir-field-paragraph-links {
   -ms-flex-align: center;
-  -webkit-box-align: center;
   align-items: center;
   display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .geysir-field-paragraph-wrapper .geysir-field-paragraph-links li {
@@ -84,6 +81,7 @@
   margin: 0;
   padding: 0;
   position: static;
+  list-style-type: none;
 }
 
 .geysir-field-paragraph-links li {
@@ -93,21 +91,89 @@
   position: absolute;
 }
 
-.geysir-field-paragraph-links li.add-after a, .geysir-field-paragraph-links li.add-before a {
-  background-image: url(../images/geysir-add.svg);
-  padding: 25px;
-  width: 50px;
+.geysir-field-paragraph-links li a, .geysir-field-paragraph-links li span {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  height: 40px;
+  width: 40px;
+  text-indent: -9999px;
+  transition: all 0.3s ease 0s;
 }
 
-.geysir-field-paragraph-links li.delete a {
-  background-image: url(../images/geysir-trash.svg);
+.geysir-field-paragraph-links li a:hover, .geysir-field-paragraph-links li span:hover {
+  background-color: #0065A0;
+  color: white;
+  border: none;
+}
+
+.geysir-field-paragraph-links li.add-after {
+  transform: translate(0, 50%);
+  bottom: 0;
+}
+
+.geysir-field-paragraph-links li.add-before {
+  transform: translate(0, -50%);
+  top: 0;
+}
+
+.geysir-field-paragraph-links li.add-after a, .geysir-field-paragraph-links li.add-before a {
+  background-color: #3399cc;
+  background-image: url("../images/geysir-add.svg");
+  background-size: 15px;
+  width: 35px;
+  height: 35px;
+}
+
+.geysir-field-paragraph-links li.edit, .geysir-field-paragraph-links li.delete, .geysir-field-paragraph-links li.up, .geysir-field-paragraph-links li.down {
+  transform: translate(0, 50%);
+  bottom: 50%;
+}
+
+.geysir-field-paragraph-links li.edit a, .geysir-field-paragraph-links li.delete a, .geysir-field-paragraph-links li.up a, .geysir-field-paragraph-links li.down a {
   background-color: rgba(86, 84, 84, 0.6);
 }
 
+.geysir-field-paragraph-links li.edit a:hover, .geysir-field-paragraph-links li.delete a:hover, .geysir-field-paragraph-links li.up a:hover, .geysir-field-paragraph-links li.down a:hover {
+  background-color: rgba(86, 84, 84, 0.88);
+}
+
+.geysir-field-paragraph-links li.edit {
+  right: 131px;
+}
+
 .geysir-field-paragraph-links li.edit a {
-  background-image: url(../images/geysir-pencil.svg);
-  width: 118px;
-  background-size: 35px 35px;
+  background-image: url("../images/geysir-gear.png");
+  background-size: 23px 23px;
+}
+
+.geysir-field-paragraph-links li.up {
+  right: 89px;
+}
+
+.geysir-field-paragraph-links li.up a {
+  background-image: url("../images/geysir-up.svg");
+}
+
+.geysir-field-paragraph-links li.down {
+  right: 47px;
+}
+
+.geysir-field-paragraph-links li.down a {
+  background-image: url("../images/geysir-down.svg");
+}
+
+.geysir-field-paragraph-links li.delete {
+  right: 5px;
+}
+
+.geysir-field-paragraph-links li.delete a {
+  background-image: url("../images/geysir-trash.svg");
 }
 
 .geysir-field-paragraph-links li.parade-edit-quickedit span {
@@ -121,58 +187,9 @@
   font-weight: normal;
 }
 
-.geysir-field-paragraph-links li.up a {
-  background-image: url(../images/geysir-up.svg);
-  background-color: rgba(86, 84, 84, 0.6);
-  border: 1px solid white;
-}
-
-.geysir-field-paragraph-links li.down a {
-  background-image: url(../images/geysir-down.svg);
-  background-color: rgba(86, 84, 84, 0.6);
-  border: 1px solid white;
-}
-
-.geysir-field-paragraph-links li.delete a:hover, .geysir-field-paragraph-links li.up a:hover, .geysir-field-paragraph-links li.down a:hover {
-  background-color: rgba(86, 84, 84, 0.88);
-}
-
-.geysir-field-paragraph-links li.up {
-  bottom: 4px;
-  right: 165px;
-}
-
-.geysir-field-paragraph-links li.down {
-  bottom: 4px;
-  right: 85px;
-}
-
-.geysir-field-paragraph-links li.edit {
-  bottom: 5px;
-  right: 246px;
-}
-
 .geysir-field-paragraph-links li.parade-edit-quickedit {
   top: 50%;
-  -webkit-transform: translate(-177%, -50%);
-          transform: translate(-177%, -50%);
-}
-
-.geysir-field-paragraph-links li.delete {
-  bottom: 5px;
-  right: 5px;
-}
-
-.geysir-field-paragraph-links li.add-after {
-  bottom: 0;
-  -webkit-transform: translate(0, 50%);
-          transform: translate(0, 50%);
-}
-
-.geysir-field-paragraph-links li.add-before {
-  top: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(-177%, -50%);
 }
 
 .geysir-field-paragraph-links .ajax-progress {
@@ -190,33 +207,6 @@
   width: 17px;
 }
 
-.geysir-field-paragraph-links a, .geysir-field-paragraph-links span {
-  background-color: #3399cc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  display: block;
-  font-weight: bold;
-  height: 40px;
-  padding: 35px;
-  text-indent: -9999px;
-  width: 75px;
-  transition: all 0.3s ease 0s;
-}
-
-.geysir-field-paragraph-links a:hover, .geysir-field-paragraph-links span:hover {
-  background-color: #0065A0;
-  color: white;
-  border: none;
-}
-
-ul.geysir-field-paragraph-links {
-  list-style-type: none;
-}
-
 #geysir-modal-form .js-form-item-paragraph.radio img {
   height: 24px;
 }
@@ -227,6 +217,16 @@ ul.geysir-field-paragraph-links {
 
 article.node--unpublished {
   padding: 0;
+}
+
+.geysir-field-paragraph-wrapper .contextual .trigger {
+  background-image: url("../images/geysir-pencil.svg");
+  background-color: #3399cc;
+  border-radius: 3px;
+  width: 53px !important;
+  height: 53px !important;
+  border: 0;
+  background-size: 25px;
 }
 
 /* These are popup fixes for edit forms */
