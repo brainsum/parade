@@ -21,8 +21,7 @@
 .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   left: 0;
   right: 0;
   width: 100%;

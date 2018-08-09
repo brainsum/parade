@@ -110,7 +110,6 @@ html {
 .parade-node-edit {
   color: #777;
   background: #fff;
-  font-size: 1rem;
   font-family: "Open Sans", sans-serif !important;
   font-weight: normal;
   line-height: 1.5;
@@ -1834,64 +1833,44 @@ details summary:hover {
 }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -1900,8 +1879,7 @@ details summary:hover {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .fa-stack {
@@ -4780,11 +4758,14 @@ details summary:hover {
  * @todo Using display: flex requires https://www.drupal.org/node/2842298 to be
  * in before this can be marked as stable.
  */
+/*.page-node-type-parade-onepage table tbody .draggable > td:nth-child(2) > div {  ************* Bugfix by Zé see in line 18. **************
+  @include flexbox;
+  position: relative;
+  >.form-wrapper {
+    width: 100%;
+  }
+}*/
 .page-node-type-parade-onepage table tbody .draggable > td:nth-child(2) > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
   position: relative;
 }
 
@@ -4792,8 +4773,18 @@ details summary:hover {
   width: 100%;
 }
 
+.page-node-type-parade-onepage table tbody .draggable .item-mode-preview {
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  position: relative;
+}
+
+.page-node-type-parade-onepage table tbody .draggable .item-mode-preview > .form-wrapper {
+  width: 100%;
+}
+
 .layout--twocol-bricks {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -4805,14 +4796,12 @@ details summary:hover {
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
@@ -4820,9 +4809,8 @@ details summary:hover {
   -moz-box: 1;
   -webkit-flex: 1 1 auto;
   -ms-flexbox: 1 1 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline {
@@ -4830,9 +4818,8 @@ details summary:hover {
   -moz-box: 1;
   -webkit-flex: 1 1 auto;
   -ms-flexbox: 1 1 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second {
@@ -4840,15 +4827,13 @@ details summary:hover {
   -moz-box: 1;
   -webkit-flex: 1 2 auto;
   -ms-flexbox: 1 2 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 2 auto;
-          flex: 1 2 auto;
+  -ms-flex: 1 2 auto;
+      flex: 1 2 auto;
 }
 
 .layout--twocol-bricks > .layout__region {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
 }
 
 @media screen and (min-width: 40em) {
@@ -4856,9 +4841,8 @@ details summary:hover {
   .layout--twocol-bricks > .layout__region--second-above,
   .layout--twocol-bricks > .layout__region--first-below,
   .layout--twocol-bricks > .layout__region--second-below {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
   }
 }
 
@@ -5177,7 +5161,6 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
@@ -5193,7 +5176,6 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action > span {
-  -webkit-box-flex: 1;
   -ms-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -5204,7 +5186,6 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action .fieldset-wrapper {
-  -webkit-box-flex: 2;
   -ms-flex: 2;
   -ms-flex-positive: 2;
       flex-grow: 2;
@@ -5216,7 +5197,6 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action > .form-type-checkbox {
-  -webkit-box-flex: 1;
   -ms-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -5228,6 +5208,11 @@ a.tabledrag-handle:focus .handle {
   background-color: #f0f0f0 !important;
   border: 0;
   border-radius: 0;
+}
+
+.field--name-parade-call-to-action.field--type-link {
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .field--name-parade-background {
@@ -5413,11 +5398,9 @@ a.tabledrag-handle:focus .handle {
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second .field--label-inline {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding-right: 25px;
@@ -5455,7 +5438,6 @@ a.tabledrag-handle:focus .handle {
 }
 
 .item-mode-edit .layout__region.layout__region--top .js-form-item {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
@@ -5492,7 +5474,6 @@ a.tabledrag-handle:focus .handle {
 }
 
 .item-mode-edit .layout__region.layout__region--top .form-radios {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;

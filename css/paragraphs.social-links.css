@@ -21,14 +21,11 @@
   height: 42px;
   background-color: #aaa;
   border-radius: 50%;
-  transition: -webkit-transform .2s;
   transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
 }
 
 .paragraph--type--social-links.paragraph--view-mode--default .field--name-parade-social-link .social:hover {
-  -webkit-transform: scale(1.1) translateZ(0);
-          transform: scale(1.1) translateZ(0);
+  transform: scale(1.1) translateZ(0);
   background-color: #ddd;
 }
 

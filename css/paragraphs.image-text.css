@@ -156,8 +156,7 @@
     width: 40%;
     margin: 2em 0 0 0;
     padding: 0;
-    -webkit-transform: translateX(-2em);
-            transform: translateX(-2em);
+    transform: translateX(-2em);
     text-align: left;
     background: 0;
   }
@@ -196,8 +195,7 @@
     width: 40%;
     margin: 2em 0 0 0;
     padding: 0;
-    -webkit-transform: translateX(-2em);
-            transform: translateX(-2em);
+    transform: translateX(-2em);
     text-align: left;
     background: 0;
   }
