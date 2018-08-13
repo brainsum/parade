@@ -53,7 +53,7 @@
         }
         else {
           // Trigger 'click' event on 'quickedit' link when contextual link is open.
-          $(".contextual-region", context).find(".contextual").once('mySecondBehavior').click(function(el) {
+          $(".contextual-region", context).find(".contextual").once("ParadeEditQuickEdit").click(function(el) {
             var qelm = $(el.target).siblings(".contextual-links").find(".quickedit a");
             $(qelm).click();
             $(el.target).parent("div").closest(".geysir-field-paragraph-wrapper").addClass("quickedit-active");
