@@ -151,6 +151,9 @@ article.node--unpublished {
 }
 
 .geysir-field-paragraph-wrapper {
+  .contextual {
+    z-index: 1001;
+  }
   .contextual .trigger {
     background-image: url('../images/geysir-pencil.svg');
     background-color: #3399cc;

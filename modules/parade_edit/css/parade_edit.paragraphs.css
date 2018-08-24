@@ -219,6 +219,10 @@ article.node--unpublished {
   padding: 0;
 }
 
+.geysir-field-paragraph-wrapper .contextual {
+  z-index: 1001;
+}
+
 .geysir-field-paragraph-wrapper .contextual .trigger {
   background-image: url("../images/geysir-pencil.svg");
   background-color: #3399cc;

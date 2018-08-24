@@ -82,9 +82,13 @@
     border: 0;
     border-radius: 0;
   }
+}
 
-  &.field--type-link {
-    @include justify-content(center);
+.layout--text_1st_enhanced {
+  .field--name-parade-call-to-action {
+    &.field--type-link {
+      @include justify-content(center);
+    }
   }
 }
 

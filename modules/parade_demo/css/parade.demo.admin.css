@@ -1879,7 +1879,8 @@ details summary:hover {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
 }
 
 .fa-stack {
@@ -5210,7 +5211,7 @@ a.tabledrag-handle:focus .handle {
   border-radius: 0;
 }
 
-.field--name-parade-call-to-action.field--type-link {
+.layout--text_1st_enhanced .field--name-parade-call-to-action.field--type-link {
   -ms-flex-pack: center;
   justify-content: center;
 }

@@ -59,6 +59,14 @@
           data.$el[0].style.display = "none";
         }
       });
+
+      $('.contextual-region.paragraph.paragraph--type--text-box').on('mouseenter', function () {
+        $(this).addClass('focus');
+      });
+      $('.contextual-region.paragraph.paragraph--type--text-box').on('mouseleave', function () {
+        $(this).removeClass('focus');
+      })
+
     }
   };
 
