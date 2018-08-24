@@ -45,18 +45,19 @@
       // Start observing the target node for configured mutations.
       observer.observe(targetNode, config);
 
-      // Trigger 'click' event on 'quickedit' link when contextual link is open.
-      $(".contextual-region").find(".contextual").click(function(el) {
-        var qelm = $(el.target).siblings(".contextual-links").find(".quickedit a");
-        $(qelm).click();
-        $(el.target).parent("div").closest(".geysir-field-paragraph-wrapper").addClass("quickedit-active");
-      });
-
       // Hide all contextual links menu without Quick edit link.
       $(document).on("drupalContextualLinkAdded", function (event, data) {
         var items = data.$el[0].children[1];
         if (!$(items.children[0]).hasClass("quickedit")) {
           data.$el[0].style.display = "none";
+        }
+        else {
+          // Trigger 'click' event on 'quickedit' link when contextual link is open.
+          $(".contextual-region", context).find(".contextual").once("ParadeEditQuickEdit").click(function(el) {
+            var qelm = $(el.target).siblings(".contextual-links").find(".quickedit a");
+            $(qelm).click();
+            $(el.target).parent("div").closest(".geysir-field-paragraph-wrapper").addClass("quickedit-active");
+          });
         }
       });
 

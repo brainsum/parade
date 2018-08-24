@@ -311,6 +311,10 @@ article.node--unpublished {
   margin-right: 0;
 }
 
+#geysir-modal-form .contextual button {
+  display: none;
+}
+
 .quickedit-field.quickedit-highlighted,
 .quickedit-form.quickedit-highlighted,
 .quickedit-field .quickedit-highlighted {
