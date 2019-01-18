@@ -52,8 +52,7 @@ class MarketoPoll extends FieldItemBase {
     $subscription_url = $this->get('subscription_url')->getValue();
     $poll_class = $this->get('poll_class')->getValue();
     $poll_id = $this->get('poll_id')->getValue();
-    return
-      !isset($subscription_url) || $subscription_url === '' ||
+    return !isset($subscription_url) || $subscription_url === '' ||
       !isset($poll_class) || $poll_class === '' ||
       !isset($poll_id) || $poll_id === '';
   }
