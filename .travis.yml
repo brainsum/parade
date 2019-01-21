@@ -38,10 +38,15 @@ before_install:
 script:
   - echo "Running against $(php -v).."
   - ${COMPOSER_BIN_DIR}/parallel-lint .
-  - ${COMPOSER_BIN_DIR}/phpcs --standard=phpcs.xml .
 
 jobs:
   include:
+    - stage: phpcs
+      php:
+        - 7.2
+      script:
+        - ${COMPOSER_BIN_DIR}/phpcs --standard=phpcs.xml .
+
     # @todo: Currently only runs on php7.2 as the used docker image is 7.2 as well.
     # @todo: Update, so docker image tags can be set dynamically.
     # Job/Stage for dynamic checks, e.g PHPUnit.
