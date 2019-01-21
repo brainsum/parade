@@ -2,7 +2,7 @@
   "name": "drupal/parade",
   "description": "Provides the parade module",
   "type": "drupal-module",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
   "require": {
     "drupal/paragraphs": "~1.5",
