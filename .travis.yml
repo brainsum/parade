@@ -1,21 +1,55 @@
+dist: xenial
 sudo: required
 
 language: php
 
 php:
+  - 5.6
   - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
 
 env:
-  matrix:
-  - CODE_REVIEW=1 REVIEW_STANDARD="Drupal"
-  - CODE_REVIEW=1 REVIEW_STANDARD="DrupalPractice"
+  - TEST_SITE_DIR=docker
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: 7.3
 
 services:
   - docker
 
 before_install:
-  - sudo chmod +x ci-scripts -R
-  - "$TRAVIS_BUILD_DIR/ci-scripts/travis--before_install.sh"
+  # Pre-validate the composer.json file.
+  - composer validate
+  # Speed up the build.
+  - composer global require hirak/prestissimo
+  - phpenv config-rm xdebug.ini || echo "xdebug not available"
+  # Add phpcs.xml.
+  - cp phpcs.dist.xml phpcs.xml
+  # Make sure there are no script permission issues.
+  - sudo chmod +x .travis-ci -R
 
-script:
-  - "$TRAVIS_BUILD_DIR/ci-scripts/travis--static_tests.sh"
+stages:
+  # Stage for static checks, e.g PHP lint, PHPCS.
+  - static_checks
+  # Stage for dynamic checks, e.g PHPUnit.
+  - dynamic_checks
+
+jobs:
+  include:
+    - stage: static_checks
+      before_install:
+        - .travis-ci/install-global-packages
+      script:
+        - parallel-lint
+        - phpcs --standard=phpcs.xml .
+
+    - stage: dynamic_checks
+      before_install:
+        - .travis-ci/create-project.sh
+        - .travis-ci/install-docker-site.sh
+      script:
+        - .travis-ci/start-dynamic-tests.sh
