@@ -27,6 +27,11 @@ enable it in your site.
 
 @todo
 
+## Notes
+The "locations" section type uses [Geocoder autocomplete](https://www.drupal.org/project/geocoder_autocomplete) which internally uses the Google Maps API.
+That requires an API key to work. This is not yet possible with the module.
+Follow [Geocoder autocomplete issue #2989952](https://www.drupal.org/project/geocoder_autocomplete/issues/2989952) for updates and possible patches for D8.
+
 ## ISSUES
 
 @todo
