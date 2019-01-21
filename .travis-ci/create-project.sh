@@ -12,4 +12,4 @@ cp ../.travis-ci/* .
 # Ensure simpletest folder.
 sudo mkdir -m 777 -p web/sites/simpletest/browser_output
 # Fix permissions.
-sudo chown 1000:1000 . -R
+sudo chown 1000:82 . -R
