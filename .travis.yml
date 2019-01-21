@@ -3,8 +3,16 @@ sudo: required
 
 language: php
 
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+
 env:
-  - TEST_SITE_DIR=docker
+  global:
+    - COMPOSER_BIN_DIR=/home/travis/.config/composer/bin
 
 matrix:
   fast_finish: true
@@ -24,34 +32,25 @@ before_install:
   - cp phpcs.dist.xml phpcs.xml
   # Make sure there are no script permission issues.
   - sudo chmod +x .travis-ci -R
+  - .travis-ci/install-global-packages.sh
 
-stages:
-  # Stage for static checks, e.g PHP lint, PHPCS.
-  - static_checks
-  # Stage for dynamic checks, e.g PHPUnit.
-  - dynamic_checks
+# These run in the default "Test" stage.
+script:
+  - echo "Running against $(php -v).."
+  - ${COMPOSER_BIN_DIR}/parallel-lint .
+  - ${COMPOSER_BIN_DIR}/phpcs --standard=phpcs.xml .
 
 jobs:
   include:
-    - stage: static_checks
-      php:
-        - 5.6
-        - 7.0
-        - 7.1
-        - 7.2
-        - 7.3
-      before_install:
-        - .travis-ci/install-global-packages.sh
-      script:
-        - parallel-lint
-        - phpcs --standard=phpcs.xml .
-
     # @todo: Currently only runs on php7.2 as the used docker image is 7.2 as well.
     # @todo: Update, so docker image tags can be set dynamically.
+    # Job/Stage for dynamic checks, e.g PHPUnit.
     - stage: dynamic_checks
+      env:
+        - TEST_SITE_DIR=docker
       php:
         - 7.2
-      before_install:
+      install:
         - .travis-ci/create-project.sh
         - .travis-ci/install-docker-site.sh
       script:
