@@ -9,16 +9,17 @@ dependencies:
     - geofield
 third_party_settings:
   geocoder_field:
-    weight: 0
     method: source
+    weight: 0
     geocode_field: parade_location
+    reverse_geocode_field: ''
     hidden: false
     disabled: false
     plugins:
+      - openstreetmap
+      - geonames
       - googlemaps
-      - bingmaps
-      - geoplugin
-      - geoip
+      - mapquest
     dumper: wkt
     delta_handling: default
     failure:
@@ -35,5 +36,6 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  backend: geofield_backend_default
 field_type: geofield
