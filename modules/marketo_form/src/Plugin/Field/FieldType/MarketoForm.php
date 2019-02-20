@@ -52,8 +52,7 @@ class MarketoForm extends FieldItemBase {
     $subscription_url = $this->get('subscription_url')->getValue();
     $munchkin_id = $this->get('munchkin_id')->getValue();
     $form_id = $this->get('form_id')->getValue();
-    return
-      !isset($subscription_url) || $subscription_url === '' ||
+    return !isset($subscription_url) || $subscription_url === '' ||
       !isset($munchkin_id) || $munchkin_id === '' ||
       !isset($form_id) || $form_id === '';
   }

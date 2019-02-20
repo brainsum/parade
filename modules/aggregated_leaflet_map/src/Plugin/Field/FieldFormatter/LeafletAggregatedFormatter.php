@@ -2,11 +2,15 @@
 
 namespace Drupal\aggregated_leaflet_map\Plugin\Field\FieldFormatter;
 
+use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\leaflet\Plugin\Field\FieldFormatter\LeafletDefaultFormatter;
+use Drupal\core\Render\Renderer;
+use Drupal\Core\Utility\LinkGeneratorInterface;
+use Drupal\Core\Utility\Token;
 use Drupal\leaflet\LeafletService;
+use Drupal\leaflet\Plugin\Field\FieldFormatter\LeafletDefaultFormatter;
 
 /**
  * Plugin implementation of the 'leaflet_default' formatter.
@@ -33,8 +37,34 @@ class LeafletAggregatedFormatter extends LeafletDefaultFormatter {
    *
    * {@inheritdoc}
    */
-  public function __construct($pluginId, $pluginDefinition, FieldDefinitionInterface $fieldDefinition, array $settings, $label, $viewMode, array $thirdPartySettings, LeafletService $leaflet_service) {
-    parent::__construct($pluginId, $pluginDefinition, $fieldDefinition, $settings, $label, $viewMode, $thirdPartySettings, $leaflet_service);
+  public function __construct(
+    $pluginId,
+    $pluginDefinition,
+    FieldDefinitionInterface $fieldDefinition,
+    array $settings,
+    $label,
+    $viewMode,
+    array $thirdPartySettings,
+    LeafletService $leafletService,
+    Token $token,
+    Renderer $renderer,
+    ModuleHandlerInterface $moduleHandler,
+    LinkGeneratorInterface $linkGenerator
+  ) {
+    parent::__construct(
+      $pluginId,
+      $pluginDefinition,
+      $fieldDefinition,
+      $settings,
+      $label,
+      $viewMode,
+      $thirdPartySettings,
+      $leafletService,
+      $token,
+      $renderer,
+      $moduleHandler,
+      $linkGenerator
+    );
 
     // @todo: Proper dependency injection.
     $this->entityFieldManager = \Drupal::service('entity_field.manager');

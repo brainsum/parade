@@ -5,7 +5,7 @@ type: module
 core: 8.x
 
 dependencies:
-  - drupal:parade
+  - parade:parade
   - drupal:node
-  - drupal:marketo_form
-  - drupal:marketo_poll
+  - parade:marketo_form
+  - parade:marketo_poll

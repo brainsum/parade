@@ -1,8 +1,8 @@
-name: Parade conditional field
+name: Parade Conditional Field
 description: Conditional field to manage view mode, classy paragraph styles.
 package: Paragraphs
 type: module
 core: 8.x
 
 dependencies:
-  - drupal:parade
+  - parade:parade
