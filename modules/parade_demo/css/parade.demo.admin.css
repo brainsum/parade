@@ -1662,7 +1662,8 @@ details summary:hover {
 
 .node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td div:nth-child(2),
 .node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td div:nth-child(2) {
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td input.form-checkbox,
@@ -1868,30 +1869,35 @@ details summary:hover {
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -4781,7 +4787,7 @@ details summary:hover {
  * in before this can be marked as stable.
  */
 .field--name-parade-onepage-sections table tbody .draggable > td:nth-child(2) > div {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
@@ -4793,11 +4799,12 @@ details summary:hover {
 }
 
 .layout--twocol-bricks {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--top {
@@ -4805,14 +4812,14 @@ details summary:hover {
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
@@ -4820,9 +4827,8 @@ details summary:hover {
   -moz-box: 1;
   -webkit-flex: 1 1 auto;
   -ms-flexbox: 1 1 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-first .field--label-inline {
@@ -4830,9 +4836,8 @@ details summary:hover {
   -moz-box: 1;
   -webkit-flex: 1 1 auto;
   -ms-flexbox: 1 1 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second {
@@ -4840,13 +4845,12 @@ details summary:hover {
   -moz-box: 1;
   -webkit-flex: 1 2 auto;
   -ms-flexbox: 1 2 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 2 auto;
-          flex: 1 2 auto;
+  -ms-flex: 1 2 auto;
+      flex: 1 2 auto;
 }
 
 .layout--twocol-bricks > .layout__region {
-  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 100%;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
 }
@@ -4856,7 +4860,7 @@ details summary:hover {
   .layout--twocol-bricks > .layout__region--second-above,
   .layout--twocol-bricks > .layout__region--first-below,
   .layout--twocol-bricks > .layout__region--second-below {
-    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
@@ -5182,12 +5186,13 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   text-align: left !important;
   /** Original.
   background-color: rgb(240, 240, 240);
@@ -5198,7 +5203,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action > span {
-  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
   -ms-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -5209,7 +5214,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action .fieldset-wrapper {
-  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
   -ms-flex: 2;
   -ms-flex-positive: 2;
       flex-grow: 2;
@@ -5221,7 +5226,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .field--name-parade-call-to-action > .form-type-checkbox {
-  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
   -ms-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -5412,12 +5417,12 @@ a.tabledrag-handle:focus .handle {
 }
 
 .layout--parade-admin-twocol-bricks .layout__region--bottom .layout__region--bottom-second .field--label-inline {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  -webkit-box-pack: end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   padding-right: 25px;
 }
@@ -5454,7 +5459,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .item-mode-edit .layout__region.layout__region--top .js-form-item {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
@@ -5490,7 +5495,7 @@ a.tabledrag-handle:focus .handle {
 }
 
 .item-mode-edit .layout__region.layout__region--top .form-radios {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;

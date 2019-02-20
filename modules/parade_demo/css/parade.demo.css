@@ -1338,7 +1338,7 @@ td {
 
 th > a {
   position: relative;
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -2218,6 +2218,7 @@ li.tabs__tab a {
   outline: 1px solid transparent;
   bottom: 0;
   -webkit-transform-origin: 100%;
+      -ms-transform-origin: 100%;
           transform-origin: 100%;
 }
 
@@ -2243,6 +2244,7 @@ li.tabs__tab a {
   outline: 1px solid transparent;
   top: 0;
   -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 
@@ -3396,6 +3398,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
     padding: 0;
     margin: 2em 0 0 0;
     -webkit-transform: translateX(-2em);
+        -ms-transform: translateX(-2em);
             transform: translateX(-2em);
     width: 40%;
     float: right;
@@ -3455,6 +3458,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
     padding: 0;
     margin: 2em 0 0 0;
     -webkit-transform: translateX(-2em);
+        -ms-transform: translateX(-2em);
             transform: translateX(-2em);
     width: 40%;
     float: right;
@@ -3598,6 +3602,7 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 @media (max-width: 1199px) {
   .paragraph--type--header.paragraph--view-mode--default .paragraph-inner {
     -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     text-align: center;
   }
@@ -4319,7 +4324,8 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 .node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td div:nth-child(2),
 .node-parade-onepage-edit-form .field--name-parade-onepage-menu .field-multiple-table tr td div:nth-child(2) {
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .node-parade-onepage-form .field--name-parade-onepage-menu .field-multiple-table tr td input.form-checkbox,
@@ -4468,10 +4474,10 @@ body.toolbar-horizontal.toolbar-tray-open .parade-campaign-page .logo, body.tool
 
 @media (min-width: 850px) {
   .savings-calculator {
-    display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
+    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -4875,17 +4881,16 @@ h3.tieto-lead {
 }
 
 .error-page__content {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
@@ -5036,7 +5041,8 @@ h3.tieto-lead {
 .hamburger--collapse.is-active .hamburger-inner::before {
   top: 0;
   -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
