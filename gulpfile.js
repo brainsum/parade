@@ -29,7 +29,7 @@ gulp.task('sass', function () {
     .src('modules/parade_demo/sass/**/*.{scss,sass}')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({browsers: ['last 10 version', 'ie >= 10']}))
     .pipe(sourcemaps.write('modules/parade_demo/css'))
     .pipe(gulp.dest('modules/parade_demo/css'));
 
