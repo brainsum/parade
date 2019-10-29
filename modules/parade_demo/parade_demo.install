@@ -191,11 +191,15 @@ function _parade_demo_create_demo_content() {
     'public://image/box/' . date('Y-m'),
 
   ];
+
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+
   foreach ($dirs as $dir) {
-    file_prepare_directory($dir, FILE_CREATE_DIRECTORY);
+    $file_system->prepareDirectory($dir, FILE_CREATE_DIRECTORY);
   }
 
-  $headerBackgroundUri = file_unmanaged_copy($paradeDemoPath . '/images/parade-default-header-video-cut-720p-web.mp4',
+  $headerBackgroundUri = $file_system->copy($paradeDemoPath . '/images/parade-default-header-video-cut-720p-web.mp4',
     'public://paragraphs/background/parade-default-header-video-cut-720p-web.mp4',
     FILE_EXISTS_REPLACE);
   $headerBackgroundFile = $entityTypeManager->getStorage('file')->create([
@@ -203,49 +207,49 @@ function _parade_demo_create_demo_content() {
   ]);
   $headerBackgroundFile->save();
 
-  $parallaxBackgroundUri = file_unmanaged_copy($paradeDemoPath . '/images/building.jpg',
+  $parallaxBackgroundUri = $file_system->copy($paradeDemoPath . '/images/building.jpg',
     'public://paragraphs/background/building.jpg', FILE_EXISTS_REPLACE);
   $parallaxBackgroundFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $parallaxBackgroundUri,
   ]);
   $parallaxBackgroundFile->save();
 
-  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/guitar.jpg',
+  $imageUri = $file_system->copy($paradeDemoPath . '/images/guitar.jpg',
     'public://image/' . date('Y-m') . '/guitar.jpg', FILE_EXISTS_REPLACE);
   $imageFile_1 = $entityTypeManager->getStorage('file')->create([
     'uri' => $imageUri,
   ]);
   $imageFile_1->save();
 
-  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/hut.jpg',
+  $imageUri = $file_system->copy($paradeDemoPath . '/images/hut.jpg',
     'public://image/' . date('Y-m') . '/hut.jpg', FILE_EXISTS_REPLACE);
   $imageFile_2 = $entityTypeManager->getStorage('file')->create([
     'uri' => $imageUri,
   ]);
   $imageFile_2->save();
 
-  $imageUri = file_unmanaged_copy($paradeDemoPath . '/images/woman-sample.jpg',
+  $imageUri = $file_system->copy($paradeDemoPath . '/images/woman-sample.jpg',
     'public://image/' . date('Y-m') . '/woman-sample.jpg', FILE_EXISTS_REPLACE);
   $imageFile_3 = $entityTypeManager->getStorage('file')->create([
     'uri' => $imageUri,
   ]);
   $imageFile_3->save();
 
-  $textImageUri = file_unmanaged_copy($paradeDemoPath . '/images/melbourne.jpg',
+  $textImageUri = $file_system->copy($paradeDemoPath . '/images/melbourne.jpg',
     'public://image/' . date('Y-m') . '/melbourne.jpg', FILE_EXISTS_REPLACE);
   $textImageFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $textImageUri,
   ]);
   $textImageFile->save();
 
-  $textBoxImageUri = file_unmanaged_copy($paradeDemoPath . '/images/guitar.jpg',
+  $textBoxImageUri = $file_system->copy($paradeDemoPath . '/images/guitar.jpg',
     'public://image/box/' . date('Y-m') . '/guitar.jpg', FILE_EXISTS_REPLACE);
   $textBoxImageFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $textBoxImageUri,
   ]);
   $textBoxImageFile->save();
 
-  $defaultIconUri = file_unmanaged_copy($paradeDemoPath . '/images/default-icon.png',
+  $defaultIconUri = $file_system->copy($paradeDemoPath . '/images/default-icon.png',
     'public://image/box/' . date('Y-m') . '/default-icon.png',
     FILE_EXISTS_REPLACE);
   $defaultIconFile = $entityTypeManager->getStorage('file')->create([
@@ -253,7 +257,7 @@ function _parade_demo_create_demo_content() {
   ]);
   $defaultIconFile->save();
 
-  $roundedImageUri = file_unmanaged_copy($paradeDemoPath . '/images/people-sample.jpg',
+  $roundedImageUri = $file_system->copy($paradeDemoPath . '/images/people-sample.jpg',
     'public://image/box/' . date('Y-m') . '/people-sample.jpg',
     FILE_EXISTS_REPLACE);
   $roundedImageFile = $entityTypeManager->getStorage('file')->create([
@@ -261,7 +265,7 @@ function _parade_demo_create_demo_content() {
   ]);
   $roundedImageFile->save();
 
-  $textImageDrupalUri = file_unmanaged_copy($paradeDemoPath . '/images/drupal-8.png',
+  $textImageDrupalUri = $file_system->copy($paradeDemoPath . '/images/drupal-8.png',
     'public://image/' . date('Y-m') . '/drupal-8.png', FILE_EXISTS_REPLACE);
   $textImageDrupalFile = $entityTypeManager->getStorage('file')->create([
     'uri' => $textImageDrupalUri,
@@ -678,7 +682,7 @@ function _parade_demo_create_demo_content() {
   $demoContent = $entityTypeManager->getStorage('node')->create($nodeData);
 
   $demoContent->save();
-  drupal_set_message(t('Demo content available at node/@nid', ['@nid' => $demoContent->id()]),
+  \Drupal::service('messenger')->addMessage(t('Demo content available at node/@nid', ['@nid' => $demoContent->id()]),
     'status');
 }
 

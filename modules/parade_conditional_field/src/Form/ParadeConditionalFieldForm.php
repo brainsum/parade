@@ -239,14 +239,14 @@ class ParadeConditionalFieldForm extends EntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %bundle #%numeric_id condition.', [
+        $this->messenger()->addMessage($this->t('Created the %bundle #%numeric_id condition.', [
           '%bundle' => $condition->getBundle(),
           '%numeric_id' => $condition->getNumericId(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %bundle #%numeric_id condition.', [
+        $this->messenger()->addMessage($this->t('Saved the %bundle #%numeric_id condition.', [
           '%bundle' => $condition->getBundle(),
           '%numeric_id' => $condition->getNumericId(),
         ]));

@@ -41,7 +41,7 @@ class ParadeConditionalFieldDeleteForm extends EntityConfirmFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->entity->delete();
 
-    drupal_set_message($this->t('Deleted the the %bundle #%numeric_id condition.', [
+    $this->messenger()->addMessage($this->t('Deleted the the %bundle #%numeric_id condition.', [
       '%bundle' => $this->entity->getBundle(),
       '%numeric_id' => $this->entity->getNumericId(),
     ]));
